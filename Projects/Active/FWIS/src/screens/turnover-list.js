@@ -4,7 +4,8 @@
    filterable by status and date, linking into Screen B.
    ============================================================================ */
 
-import { CONFIG, propertyById, userName, workflow } from "../config.js";
+import { propertyById, userName, workflow } from "../config.js";
+import * as identity from "../identity.js";
 import * as db from "../db.js";
 import * as T from "../turnover.js";
 import { esc, statusBadge, optionsHtml, formatDate, emptyState } from "../ui.js";
@@ -12,7 +13,7 @@ import { esc, statusBadge, optionsHtml, formatDate, emptyState } from "../ui.js"
 const filters = { propertyId: "", status: "", from: "", to: "" };
 
 export async function listScreen(_params, view) {
-  if (!filters.propertyId) filters.propertyId = CONFIG.session.propertyId;
+  if (!filters.propertyId) filters.propertyId = identity.current().propertyId;
 
   const all = await db.all({ type: T.TYPE });
   const rows = all.filter(matches);
@@ -31,7 +32,7 @@ export async function listScreen(_params, view) {
       <label class="field"><span class="lbl">Property</span>
         <select name="propertyId">
           <option value="">All properties</option>
-          ${CONFIG.properties.map((p) =>
+          ${identity.properties().map((p) =>
             `<option value="${p.id}"${p.id === filters.propertyId ? " selected" : ""}>${esc(p.name)}</option>`).join("")}
         </select></label>
       <label class="field"><span class="lbl">Status</span>

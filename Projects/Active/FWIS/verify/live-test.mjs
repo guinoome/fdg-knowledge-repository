@@ -326,6 +326,22 @@ section("Row Level Security (FBPOIS-ROLE-0005)");
     `carol saw ${rows.length} row(s): ${JSON.stringify(rows).slice(0, 160)}`);
 }
 
+/* The identity layer reads memberships through this call, so what it returns
+   is what the UI will offer as switchable properties. A member must see the
+   property and its role; the non-member must see nothing at all, because an
+   empty result is what makes an orphaned account detectable rather than
+   silently broken. */
+{
+  const mine = await alice.memberships();
+  ok("Member reads own memberships", mine.length > 0, `got ${mine.length}`);
+  ok("Membership names the property", mine.some((m) => m.property_id === PROPERTY),
+    JSON.stringify(mine).slice(0, 160));
+  ok("Membership carries a role", mine.every((m) => typeof m.role_id === "string" && m.role_id));
+
+  const none = await carol.memberships();
+  eq("Non-member reads no memberships", none.length, 0);
+}
+
 /* ----------------------------------------------- cross-user collaboration -- */
 
 section("Second member editing a shared record");

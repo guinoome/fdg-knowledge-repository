@@ -126,24 +126,25 @@ Recorded as deviations, not as proposed amendments.
 |---|---|---|
 | D1 | Attachments record metadata only; file bytes are not persisted | Storing blobs locally is cheap but meaningless without sync; deferred with the rest of the storage story |
 | D2 | Incidents and concerns are read-only fixtures | Stand in for Incident Management (SPEC-0013) and Concerns Tracker (SPEC-0007), both unimplemented |
-| D3 | Identity in the user interface is configured, not authenticated | Sync uses the real authenticated user; screens still read a configured session user for authoring. Reconcile when roles derive from membership rather than configuration |
+| ~~D3~~ | ~~Identity in the user interface is configured, not authenticated~~ | **Closed.** A dedicated identity layer derives the acting user and their available properties from membership when signed in, and falls back to configuration when sync is unconfigured so the local-only install still has an author |
 | D4 | Conflicts are surfaced, not resolved | A conflicted record preserves both copies and shows a banner, but no merge interface exists. The amendment workflow that would own reconciliation is itself unbuilt |
 | D5 | SLA and repeat-clarification escalation evaluate on demand only | No scheduler exists to fire them in the background |
 | D6 | Propagation latency up to 60 seconds | Polling rather than realtime. Adequate for shift handover; revisit if a use case requires sub-minute propagation |
+| D7 | Role-based authorization is not enforced | Membership assigns a role and the interface displays it, but no action is gated on it. Any signed-in member may accept a turnover regardless of the level FBPOIS-ROLE-0004 requires |
 
-D3 and D4 are the two that touch approved behaviour and should be closed before this module is considered specification-complete.
+Closing D3 surfaced D7 rather than resolving it. Knowing a user's role is a precondition for enforcing it, not the enforcement itself — and the enforcement belongs in the database, beside the rules the client is already not trusted to police. D4 and D7 are now the two that touch approved behaviour and gate specification-completeness.
 
 ---
 
 # Verification Record
 
-**159 assertions**, each exiting non-zero on failure.
+**169 assertions**, each exiting non-zero on failure.
 
 | Suite | Assertions | Covers |
 |---|---|---|
-| Application | 76 | Routing, configuration-driven behaviour, field gating, escalation, full lifecycle, persistence, offline operation, PWA installability, WCAG AA contrast in both themes, the local-only contract, zero console errors |
+| Application | 82 | Routing, configuration-driven behaviour, field gating, escalation, full lifecycle, persistence, offline operation, PWA installability, WCAG AA contrast in both themes, the local-only contract, identity fallback, zero console errors |
 | Sync engine | 34 | Merge policy, clean pull and push, no-op re-sync, divergence and immutability conflicts, stale-revision refusal, tombstone propagation, two-device round trip |
-| Live backend | 49 | Authentication, server-side stamping, revision guard, tenant isolation, cross-member editing, incremental pull, acceptance immutability, tombstones, token refresh |
+| Live backend | 53 | Authentication, server-side stamping, revision guard, tenant isolation, membership reads, cross-member editing, incremental pull, acceptance immutability, tombstones, token refresh |
 
 The live suite runs against a real hosted project using only the public client key — never the service key — because a suite that proved tenant isolation while holding a key that bypasses it would prove nothing.
 

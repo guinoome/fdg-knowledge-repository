@@ -3,9 +3,10 @@
    ============================================================================ */
 
 import { CONFIG } from "./config.js";
-import { route, setNotFound, startRouter, navigate } from "./router.js";
+import { route, setNotFound, startRouter, navigate, refresh } from "./router.js";
 import { initTheme, toggleTheme, initConnectivity, esc } from "./ui.js";
 import * as sync from "./sync/index.js";
+import * as identity from "./identity.js";
 
 import { dashboardScreen } from "./screens/dashboard.js";
 import { listScreen } from "./screens/turnover-list.js";
@@ -80,6 +81,11 @@ boot();
 // Sync starts after the first render so a slow or failing network never delays
 // the UI. A signed-out or unconfigured install simply does nothing here.
 sync.start().catch((err) => console.warn("[fwis] sync did not start:", err.message));
+
+// Identity follows sync: it resolves to the configured session until a signed-in
+// user's memberships arrive, then re-renders whatever is on screen.
+identity.initIdentity().catch((err) => console.warn("[fwis] identity:", err.message));
+identity.onIdentityChange(() => refresh());
 
 /* -------------------------------------------------------- service worker -- */
 // Registered after boot so a failure here never blocks the app rendering.

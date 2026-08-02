@@ -5,14 +5,15 @@
    is still awaiting the incoming shift.
    ============================================================================ */
 
-import { CONFIG, propertyById, roleName, userName, nameIn, workflow, severityClassFor } from "../config.js";
+import { propertyById, roleName, userName, nameIn, workflow, severityClassFor } from "../config.js";
+import * as identity from "../identity.js";
 import * as db from "../db.js";
 import * as T from "../turnover.js";
 import { esc, statusBadge, enumOptions, formatDate, formatDateTime, toast } from "../ui.js";
 import { navigate, refresh } from "../router.js";
 
 export async function detailScreen(params, view) {
-  const userId = CONFIG.session.userId;
+  const userId = identity.current().userId;
   const record = await db.get(params.id);
 
   if (!record) {

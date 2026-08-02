@@ -9,13 +9,14 @@
    — an empty vault shows an empty dashboard, not placeholder numbers.
    ============================================================================ */
 
-import { CONFIG, propertyById, userName, severityClassFor } from "../config.js";
+import { propertyById, userName, severityClassFor } from "../config.js";
+import * as identity from "../identity.js";
 import * as db from "../db.js";
 import * as T from "../turnover.js";
 import { esc, statusBadge, formatDate, relativeDays, emptyState } from "../ui.js";
 
 export async function dashboardScreen(_params, view) {
-  const propertyId = CONFIG.session.propertyId;
+  const propertyId = identity.current().propertyId;
   const prop = propertyById(propertyId);
   const records = await db.all({ type: T.TYPE, propertyId });
 

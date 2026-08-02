@@ -154,6 +154,14 @@ export class SupabaseClient {
     return Array.isArray(out) ? out[0] : out;
   }
 
+  /** The caller's property memberships — the multi-tenant boundary made
+   *  readable. RLS restricts this to the caller's own rows, so no filter is
+   *  needed here and adding one would imply the client enforces it. */
+  async memberships() {
+    const q = new URLSearchParams({ select: "property_id,role_id", order: "property_id.asc" });
+    return (await this.#rest(`property_members?${q}`)) || [];
+  }
+
   /** Development helper — grants demo property membership to the new user. */
   async joinDemoProperties() {
     return this.#rest("rpc/dev_join_demo_properties", { method: "POST", body: {} });

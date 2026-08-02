@@ -7,13 +7,14 @@
 import {
   CONFIG, propertyById, roleName, userName, nameIn, workflow, severityClassFor
 } from "../config.js";
+import * as identity from "../identity.js";
 import * as db from "../db.js";
 import * as T from "../turnover.js";
 import { esc, optionsHtml, enumOptions, toast, formatDate } from "../ui.js";
 import { navigate } from "../router.js";
 
 export async function composeScreen(params, view) {
-  const userId = CONFIG.session.userId;
+  const { userId, propertyId } = identity.current();
 
   let record = null;
   if (params.id) {
@@ -26,7 +27,7 @@ export async function composeScreen(params, view) {
     }
   }
 
-  const t = record ? record.data : T.blankTurnover(CONFIG.session.propertyId, userId);
+  const t = record ? record.data : T.blankTurnover(propertyId, userId);
   let step = 1;
 
   view.innerHTML = shell();
@@ -444,7 +445,7 @@ function step1(t) {
   <fieldset class="grid-2">
     <legend>Shift information</legend>
     <label class="field"><span class="lbl">Property <em>required</em></span>
-      <select name="propertyId">${CONFIG.properties.map((p) =>
+      <select name="propertyId">${identity.properties().map((p) =>
         `<option value="${p.id}"${p.id === t.meta.propertyId ? " selected" : ""}>${esc(p.name)}</option>`).join("")}</select></label>
     <label class="field"><span class="lbl">Building <em>required</em></span>
       <select name="buildingId">${prop.buildings.map((b) =>

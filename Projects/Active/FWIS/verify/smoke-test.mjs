@@ -100,6 +100,31 @@ await page.waitForSelector(".signin");
 ok("Account screen explains local-only rather than offering a dead form",
   (await page.textContent(".signin")).includes("Sync is not configured"));
 ok("No sign-in form is shown when unconfigured", !(await page.isVisible('input[name="email"]')));
+
+// Identity holds the same contract. Signed out, it must resolve to the
+// configured session and offer every configured property — Stage 0 has no
+// membership concept, and an operator running several properties still needs
+// to switch between them.
+const localIdentity = await page.evaluate(async () => {
+  const id = await import("./src/identity.js");
+  const { CONFIG } = await import("./src/config.js");
+  return {
+    current: id.current(),
+    propertyIds: id.properties().map((p) => p.id),
+    configured: CONFIG.properties.map((p) => p.id),
+    sessionUser: CONFIG.session.userId,
+    orphaned: id.isOrphaned(),
+    label: id.displayName()
+  };
+});
+check("Identity falls back to the configured session", localIdentity.current.source, "config");
+check("Identity user is the configured user", localIdentity.current.userId, localIdentity.sessionUser);
+ok("Identity offers every configured property when local-only",
+  localIdentity.propertyIds.join() === localIdentity.configured.join());
+ok("Local-only identity is never orphaned", localIdentity.orphaned === false);
+ok("Identity resolves a display name from the roster", localIdentity.label.length > 0);
+ok("Local-only identity carries no role", localIdentity.current.roleId === null);
+
 await page.goto(BASE + "#/");
 await page.waitForSelector("#view .empty-state, #view .kpis");
 

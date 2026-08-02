@@ -47,6 +47,7 @@ assets/               app icons (SVG, incl. maskable)
 src/
   main.js             entry point, routes, boot
   config.js           SINGLE SOURCE OF TRUTH — org, enums, workflow, limits
+  identity.js         who is acting and where — membership, or config when local
   db.js               IndexedDB + sync-ready record envelope
   router.js           hash router
   ui.js               shared render helpers, theme, toasts, connectivity
@@ -101,18 +102,18 @@ The app works without a network once loaded. Theme follows the OS preference and
 ```bash
 npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
-node verify/smoke-test.mjs          # 76 assertions — the application
+node verify/smoke-test.mjs          # 82 assertions — the application
 node verify/sync-test.mjs           # 34 assertions — the sync engine
 ```
 
-**110 assertions total**, each exiting non-zero on failure. Neither needs a backend.
+**116 assertions total**, each exiting non-zero on failure. Neither needs a backend.
 
 A third suite runs against a real hosted Supabase project and is therefore opt-in:
 
 ```bash
 SUPABASE_URL=https://<ref>.supabase.co \
 SUPABASE_ANON_KEY=<anon key> \
-node verify/live-test.mjs           # 49 assertions — the database contract
+node verify/live-test.mjs           # 53 assertions — the database contract
 ```
 
 Credentials come from the environment only; they are never written to disk or to `config.js`. The `service_role` key is deliberately unused — everything the suite proves is provable with the same key the browser ships, which is the point. If a caller holding only the anon key could reach another tenant's rows, RLS would have failed.
@@ -135,7 +136,7 @@ Credentials come from the environment only; they are never written to disk or to
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-02 — 76/76, 34/34, and 49/49 live passed.
+**Last verified:** 2026-08-02 — 82/82, 34/34, and 53/53 live passed.
 
 Playwright is a dependency of the tests only; the app itself has none. `live-test.mjs` uses `fetch` and the real `src/sync/client.js`, so it has none either.
 
@@ -154,11 +155,11 @@ Residue on the project: three `fwis-live-*@example.com` users and tombstoned rec
 
 - **Attachments record metadata, not bytes.** File name, size, type, and caption are stored; the file itself is not persisted. Storing blobs is cheap in IndexedDB but meaningless without sync — deferred to Stage 1 with the rest of the storage story.
 - **Incidents and concerns are read-only config fixtures** (`config.mockFeeds`), standing in for Incident Management and the Concerns Tracker. Live intake is Stage 1.
-- **Single user.** `config.session` stands in for authentication.
+- **Identity is real, roles are not yet enforced.** `src/identity.js` derives the acting user and their properties from `property_members` when signed in, falling back to `config.session` when sync is unconfigured so Stage 0 still has an author. The role that membership assigns is read and displayed, but no screen gates an action on it — the approval chain in FBPOIS-ROLE-0004 is still evaluated from config.
 - **The SLA and repeat-clarification escalation triggers are defined but only evaluated on demand** — with no backend there is no scheduler to fire them in the background.
 - **PWA icons are SVG.** Installable in Chromium browsers; add PNG fallbacks if a target platform rejects SVG icons.
 - **Conflicts are surfaced, not resolved.** A conflicted record shows a banner and preserves the local version under `conflict.localData`, but there is no merge UI to reconcile the two copies. Deliberate: the amendment workflow that would own this is itself unbuilt.
-- **`config.session` still stands in for identity in the UI.** Sync uses the real authenticated user, but screens still read the configured session user for authoring. Reconcile when roles come from `property_members` rather than config.
+- **Role-based authorization is unbuilt.** Membership assigns a role and identity exposes it, but nothing consumes it: any signed-in member can accept a turnover regardless of the level FBPOIS-ROLE-0004 requires. Enforcement belongs in the database alongside the other rules the client is not trusted to police, not in a screen.
 - **Sync polls every 60s.** No realtime. Adequate for shift handovers; revisit if a use case needs sub-minute propagation.
 
 ## Source documents
