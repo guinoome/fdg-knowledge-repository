@@ -203,6 +203,17 @@ export class SyncEngine {
         if (stored.server_seq) writeCursor(Math.max(readCursor(), stored.server_seq));
         stats.pushed++;
       } catch (err) {
+        // RLS refused the write outright — the caller is not (or is no longer)
+        // a member of the record's property. Permanent: pulling the remote
+        // copy would fail too, and retrying every 60s forever helps nobody.
+        // Park it honestly instead of calling it an immutability conflict,
+        // which is what a shared 42501 used to make this look like.
+        if (err.isForbidden) {
+          await db.put({ ...rec, syncState: SYNC_STATE.CONFLICT,
+            conflict: { kind: "forbidden", at: new Date().toISOString(), message: err.message } });
+          stats.conflicts++;
+          continue;
+        }
         // The database rejected the write. Both cases mean the server holds a
         // version this client never saw, so pull it and record a conflict
         // rather than retrying into the same wall.

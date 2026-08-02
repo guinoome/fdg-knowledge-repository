@@ -68,10 +68,35 @@ The client is not trusted to police any of this.
 |---|---|---|
 | A user sees only their properties' records | RLS via `is_member()` | FBPOIS-ROLE-0005 |
 | `server_seq` and `updated_at` are server-assigned | `stamp_record` trigger | sync correctness |
+| `created_by` / `updated_by` are server-assigned from `auth.uid()` | `stamp_record` trigger | authorship cannot be forged |
 | `created_at` / `created_by` are never rewritten | `stamp_record` trigger | auditability |
 | An update must carry a strictly greater revision | `guard_revision` trigger | optimistic concurrency |
 | Accepted/Closed records are content-immutable | `guard_accepted_immutable` trigger | FWIS-SPEC-0003 Business Rules |
 | No hard deletes — deletion is a tombstone | `records_no_delete` policy | deletions must sync |
+
+Authorship is **assigned**, not validated. The RLS policies deliberately do not
+test `created_by = auth.uid()`, because `push()` is an upsert and an
+`INSERT ... ON CONFLICT DO UPDATE` applies the INSERT policy's `WITH CHECK` to
+the proposed row even when the UPDATE path is taken. A policy demanding
+`created_by = auth.uid()` therefore rejects every edit to a record somebody
+else authored — which is precisely the handover the product exists to support.
+
+### Error codes
+
+The guards raise `WF001` (immutable after acceptance) and `WF002` (stale
+revision) rather than the standard `42501` and `40001`. `42501` is also what
+PostgreSQL raises for any RLS denial, so sharing it made the client report
+"you are not a member of this property" as "this turnover is accepted, file an
+amendment". `src/sync/client.js` reads these codes — change one, change both.
+
+Measured against a live project by `verify/live-test.mjs`, the codes survive
+PostgREST's error mapping intact:
+
+| Condition | HTTP | `code` |
+|---|---|---|
+| Stale revision | 400 | `WF002` |
+| Accepted/Closed content edit | 400 | `WF001` |
+| RLS denial (not a member) | 403 | `42501` |
 
 ## Sync model
 

@@ -2,7 +2,7 @@
 
 Facility Workspace Intelligence System. The Chief Engineer's operational workspace: plant status, incidents, and open engineering work in one place.
 
-**Status:** Stage 0 complete · Stage 1a (sync) complete, pending live verification · **Phase:** Phase 1
+**Status:** Stage 0 complete · Stage 1a (sync) complete and verified against live Supabase · **Phase:** Phase 1
 
 Governed by `../FWIS-Shift-Turnover-Prototype/CLAUDE.md`. Read that before changing anything here.
 
@@ -64,6 +64,7 @@ verify/
   smoke-test.mjs      application tests
   sync-test.mjs       sync engine tests
   sync-harness.html   loads the real engine for the sync tests
+  live-test.mjs       the real client against a real Supabase project
 ```
 
 ### No hardcoding
@@ -104,7 +105,17 @@ node verify/smoke-test.mjs          # 76 assertions — the application
 node verify/sync-test.mjs           # 34 assertions — the sync engine
 ```
 
-**110 assertions total**, each exiting non-zero on failure.
+**110 assertions total**, each exiting non-zero on failure. Neither needs a backend.
+
+A third suite runs against a real hosted Supabase project and is therefore opt-in:
+
+```bash
+SUPABASE_URL=https://<ref>.supabase.co \
+SUPABASE_ANON_KEY=<anon key> \
+node verify/live-test.mjs           # 49 assertions — the database contract
+```
+
+Credentials come from the environment only; they are never written to disk or to `config.js`. The `service_role` key is deliberately unused — everything the suite proves is provable with the same key the browser ships, which is the point. If a caller holding only the anon key could reach another tenant's rows, RLS would have failed.
 
 `smoke-test.mjs` covers:
 
@@ -124,20 +135,20 @@ node verify/sync-test.mjs           # 34 assertions — the sync engine
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-02 — 76/76 and 34/34 passed.
+**Last verified:** 2026-08-02 — 76/76, 34/34, and 49/49 live passed.
 
-Playwright is a dependency of the tests only; the app itself has none.
+Playwright is a dependency of the tests only; the app itself has none. `live-test.mjs` uses `fetch` and the real `src/sync/client.js`, so it has none either.
 
-### Not verified
+### What the live run settled
 
-**No live Supabase round trip.** `supabase start` needs Docker, which is not installed on this machine, so the following remain unproven by test and rest on the schema being read carefully rather than executed:
+`live-test.mjs` self-provisions three users — two members of `prop-riverside`, one deliberately in no property — and drives the real client through GoTrue and PostgREST. It confirmed what previously rested on reading the schema rather than executing it: the schema applies cleanly, RLS genuinely isolates tenants, the wire format matches what `client.js` sends and `fromRow` parses, and sign-in, token refresh and re-authorisation work against real GoTrue.
 
-- That `schema.sql` applies cleanly to a real Postgres
-- That the RLS policies actually isolate tenants
-- That the real PostgREST wire format matches what `client.js` sends and `fromRow` parses
-- Auth: sign-in, token refresh, and session expiry against real GoTrue
+Two findings are worth keeping, because both were design decisions made without a database to check them against:
 
-The fake backend reproduces the trigger *behaviour* (server-side sequencing, revision guard, acceptance immutability), so the engine's logic is genuinely tested — but a faithful fake is not the same as the real thing. Install Docker and run `npx supabase start` to close this gap.
+- **The custom SQLSTATEs survive the round trip.** The revision guard arrives as HTTP 400 with `code: "WF002"` and immutability as HTTP 400 `WF001`, while an RLS denial arrives as HTTP 403 `42501`. Distinguishable, which is exactly why the guards no longer borrow the standard codes. The suite asserts the negatives too — an RLS denial must not be read as immutability or staleness.
+- **Authorship is unforgeable without being validated.** A client that posts someone else's `created_by` or `updated_by` is not rejected; the value is overwritten by `stamp_record` with `auth.uid()`. This is what lets the RLS policies omit `created_by = auth.uid()` — an omission the upsert path requires, and the reason a second member can edit a record they did not author.
+
+Residue on the project: three `fwis-live-*@example.com` users and tombstoned records per run. Records cannot be hard-deleted by design, so clearing them needs the dashboard.
 
 ## Known gaps
 

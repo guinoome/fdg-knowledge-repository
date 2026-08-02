@@ -68,6 +68,22 @@ create index if not exists records_updated_idx  on public.records (updated_at de
 -- ------------------------------------------------------- server-side stamping
 -- server_seq and updated_at are assigned by the database on every write so a
 -- misbehaving or clock-skewed client cannot corrupt pull ordering.
+--
+-- Authorship is assigned here too, rather than validated by an RLS check.
+-- Two reasons, and the second is not optional:
+--
+--   1. Assignment is strictly stronger than validation. A client may send any
+--      created_by/updated_by it likes; the database overwrites it with the
+--      caller. There is no forgery to reject because there is no forgery.
+--
+--   2. An `INSERT ... ON CONFLICT DO UPDATE` evaluates the INSERT policy's
+--      WITH CHECK against the *proposed* row even when the UPDATE path is
+--      taken ("for all rows proposed for insertion, regardless of whether or
+--      not they end up being inserted" — CREATE POLICY). client.js push() is
+--      exactly such an upsert. So a policy demanding `created_by = auth.uid()`
+--      rejects every edit to a record somebody else authored — which is the
+--      entire shift-turnover handover: outgoing engineer writes, incoming
+--      engineer acknowledges and accepts.
 create or replace function public.stamp_record()
 returns trigger
 language plpgsql
@@ -75,8 +91,12 @@ as $$
 begin
   new.server_seq := nextval('public.records_server_seq_seq');
   new.updated_at := now();
+  -- coalesce so service_role and SQL-editor seeding (auth.uid() is null there)
+  -- can still supply an author explicitly.
+  new.updated_by := coalesce(auth.uid(), new.updated_by);
   if tg_op = 'INSERT' then
     new.created_at := coalesce(new.created_at, now());
+    new.created_by := coalesce(auth.uid(), new.created_by);
   else
     new.created_at := old.created_at;   -- never rewritten
     new.created_by := old.created_by;
@@ -102,7 +122,7 @@ begin
   if new.revision <= old.revision then
     raise exception 'stale revision: incoming % is not newer than stored %',
       new.revision, old.revision
-      using errcode = '40001';          -- serialization_failure
+      using errcode = 'WF002';          -- see "Error codes" at the foot of this file
   end if;
   return new;
 end;
@@ -128,11 +148,11 @@ begin
       raise exception
         'record % is % and its content is immutable; file an amendment instead',
         old.id, old.status
-        using errcode = '42501';        -- insufficient_privilege
+        using errcode = 'WF001';        -- NOT 42501: see "Error codes" below
     end if;
     if new.status not in ('Accepted', 'Closed') and new.deleted_at is null then
       raise exception 'record % cannot leave % state', old.id, old.status
-        using errcode = '42501';
+        using errcode = 'WF001';
     end if;
   end if;
   return new;
@@ -176,22 +196,22 @@ create policy records_select_member
   on public.records for select
   using (public.is_member(property_id));
 
+-- Membership is the whole test. Authorship is NOT checked here: stamp_record
+-- assigns created_by/updated_by from auth.uid() on every write, so there is
+-- nothing left to validate. Re-adding `created_by = auth.uid()` would also
+-- break co-editing via the upsert path — see the note on stamp_record.
 drop policy if exists records_insert_member on public.records;
 create policy records_insert_member
   on public.records for insert
-  with check (
-    public.is_member(property_id)
-    and created_by = auth.uid()
-    and updated_by = auth.uid()
-  );
+  with check (public.is_member(property_id));
 
--- A row cannot be moved to a property the caller does not belong to, and the
--- caller must stamp themselves as the last writer.
+-- A row cannot be moved to, or out of, a property the caller does not belong
+-- to. USING tests the stored row, WITH CHECK the resulting one.
 drop policy if exists records_update_member on public.records;
 create policy records_update_member
   on public.records for update
   using (public.is_member(property_id))
-  with check (public.is_member(property_id) and updated_by = auth.uid());
+  with check (public.is_member(property_id));
 
 -- No hard deletes. Deletion is a tombstone (deleted_at) so it can sync.
 drop policy if exists records_no_delete on public.records;
@@ -215,3 +235,26 @@ as $$
          (auth.uid(), 'prop-harbour',   'duty-engineer')
   on conflict (user_id, property_id) do nothing;
 $$;
+
+-- ==========================================================================
+-- Error codes
+-- --------------------------------------------------------------------------
+-- The guards raise application-specific SQLSTATEs rather than borrowing
+-- standard ones, because the standard ones are ambiguous at the client:
+--
+--   WF001  content is immutable after acceptance   (was 42501)
+--   WF002  stale revision, optimistic-lock failure (was 40001)
+--
+-- 42501 insufficient_privilege is also what PostgreSQL raises for *any* Row
+-- Level Security denial. Sharing it meant the client could not tell "this
+-- turnover is accepted, file an amendment" from "you are not a member of this
+-- property" — and it told the user the former in both cases. 40001 is
+-- similarly what a genuine serialization failure raises under concurrency.
+--
+-- Class 'WF' is safe: the SQL standard reserves classes beginning 5-9 and I-Z
+-- for implementation- and application-defined conditions.
+--
+-- PostgREST surfaces the SQLSTATE as `code` in its JSON error body, which is
+-- what SupabaseError.isImmutable / isStaleRevision read in src/sync/client.js.
+-- Change one and you must change the other.
+-- ==========================================================================

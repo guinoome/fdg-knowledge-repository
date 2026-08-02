@@ -45,13 +45,13 @@ export class FakeBackend {
       // guard_accepted_immutable
       if (["Accepted", "Closed"].includes(existing.status) &&
           JSON.stringify(existing.data) !== JSON.stringify(row.data)) {
-        throw new SupabaseError("record is accepted and immutable", { status: 400, code: "42501" });
+        throw new SupabaseError("record is accepted and immutable", { status: 400, code: "WF001" });
       }
       // guard_revision
       if (row.revision <= existing.revision) {
         throw new SupabaseError(
           `stale revision: incoming ${row.revision} is not newer than stored ${existing.revision}`,
-          { status: 409, code: "40001" });
+          { status: 409, code: "WF002" });
       }
       // created_at / created_by are never rewritten
       return { ...this.#store({ ...row, created_at: existing.created_at, created_by: existing.created_by }) };

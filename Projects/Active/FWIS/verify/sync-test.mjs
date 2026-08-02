@@ -200,7 +200,7 @@ const stale = await page.evaluate(async () => {
   return { refused, code };
 });
 ok("Backend refuses a non-advancing revision", stale.refused);
-check("Refusal uses the serialization_failure code", stale.code, "40001");
+check("Refusal uses the stale-revision code", stale.code, "WF002");
 
 /* -- 8. tombstones propagate ----------------------------------------------- */
 

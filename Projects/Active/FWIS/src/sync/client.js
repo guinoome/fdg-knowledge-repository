@@ -24,9 +24,14 @@ export class SupabaseError extends Error {
     this.details = details;
   }
   /** Optimistic-concurrency rejection raised by the guard_revision trigger. */
-  get isStaleRevision() { return this.code === "40001"; }
+  get isStaleRevision() { return this.code === "WF002"; }
   /** Immutability rejection raised by guard_accepted_immutable. */
-  get isImmutable() { return this.code === "42501"; }
+  get isImmutable() { return this.code === "WF001"; }
+  /** Row Level Security refused the write: the caller is not a member of the
+   *  property. Permanent, unlike the two above — retrying cannot fix it.
+   *  Distinct SQLSTATEs exist precisely so this is not mistaken for
+   *  immutability; see "Error codes" in supabase/schema.sql. */
+  get isForbidden() { return this.code === "42501" || this.status === 403; }
 }
 
 export class SupabaseClient {
