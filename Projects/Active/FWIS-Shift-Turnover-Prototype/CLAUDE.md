@@ -33,17 +33,40 @@ Founder decisions:
 
 None blocking. The backend question is resolved: **Supabase**, chosen because Postgres row-level security maps directly onto the FBPOIS-ROLE-0005 multi-tenant model, and because it is open source and self-hostable — the private-data-center direction in `FWIS_VISION.md` stays available rather than being traded away.
 
-Next decision, due before Stage 1b: **which communication source to integrate first**, and whether intake is read-only at the start.
+### First intake source — RESOLVED 2026-08-02
+
+**Microsoft Outlook mail via Microsoft Graph, read-only, delegated permissions.** Decision delegated to Claude by the Founder; revisit if the operating assumption below is wrong.
+
+| Question | Resolution |
+|---|---|
+| Which source first | **Outlook mail** (Microsoft Graph) |
+| Read-only at the start | **Yes.** Scope `Mail.Read` only |
+| Permission type | **Delegated**, per signed-in user — not application-wide mailbox access |
+
+Why Outlook rather than Gmail, Teams, or Viber:
+
+- **Email is where the operational record already exists.** The intake pipeline in `FWIS_VISION.md` converts "Pump 3 stopped" into a structured record; email carries the highest volume of exactly that traffic and already has stable threading, timestamps, and sender identity to derive it from.
+- **Graph covers the second integration too.** Outlook and Teams are one OAuth application, one consent, one token store. Teams then costs a scope change rather than a new provider — which matters because SPEC-0005 Group Communications is the next intake module. Gmail would buy Gmail alone.
+- **The operating assumption:** facility operators in this portfolio run Microsoft 365. If a target property is Google-first, this decision inverts — and the intake layer must stay provider-shaped so that inversion is a new adapter, not a rewrite.
+
+Why read-only:
+
+- Intake is one-directional in the pipeline as drawn. Write scopes buy nothing for the milestone.
+- `Mail.Read` clears tenant admin consent far more easily than `Mail.ReadWrite` or `Mail.Send`. The integration that ships is worth more than the one still awaiting approval.
+- Priority 3 (data integrity & auditability) outranks 7 (scalability): read-only means FWIS cannot corrupt the source of truth it ingests from. Nothing about the record model prevents adding write scopes later.
+- Delegated rather than application permissions keeps the blast radius at one mailbox and matches the per-user multi-tenant boundary already enforced by RLS.
+
+**Before Stage 1b can start, the Founder must supply:** an Azure app registration (tenant ID, client ID, client secret) with `Mail.Read` delegated and admin consent granted, plus the redirect URI for the deployed app. The secret goes in Supabase Edge Function environment variables and never in `config.js` or the repository — same rule as the `service_role` key, for the same reason.
 
 ### Stage 0 / Stage 1 — read this before scoping anything
 
 Phase 1 keeps the full spec as its **target**. It is delivered in two stages because "full spec, no backend" is not buildable: live intake from Outlook/Gmail/Teams needs OAuth, OAuth needs server-side token storage, and offline-first sync needs something to sync with.
 
-**Stage 0 — no backend. COMPLETE 2026-08-02, see `../FWIS/`.** PWA shell, local persistence (IndexedDB), manual record entry. Shift Turnover (compose/review/list), Dashboard, Search. Single-user, single-device. Verified by 72 assertions including offline operation and WCAG AA in both themes.
+**Stage 0 — no backend. COMPLETE 2026-08-02, see `../FWIS/`.** PWA shell, local persistence (IndexedDB), manual record entry. Shift Turnover (compose/review/list), Dashboard, Search. Single-user, single-device. Verified by 82 assertions including offline operation and WCAG AA in both themes.
 
 **Stage 1 — backend arrives (Supabase).** Sliced so sync lands before intake.
 
-- **Stage 1a — sync only. COMPLETE 2026-08-02.** Multi-user, multi-device sync with conflict resolution, plus auth. Verified by 34 sync assertions against an in-memory backend; **not yet verified against a live Supabase** (needs Docker).
+- **Stage 1a — sync only. COMPLETE 2026-08-02, live-verified.** Multi-user, multi-device sync with conflict resolution, plus auth. Verified by 34 sync assertions against an in-memory backend **and 53 against a real hosted Supabase project** — schema, RLS tenant isolation, wire format, and GoTrue token refresh all confirmed. Docker was never needed; a free hosted project closed the gap.
 - **Stage 1b — communication-source intake.** OAuth against Outlook/Gmail/Teams, source by source. Not started.
 
 Sync is additive: with no credentials in `src/config.js` the app is exactly Stage 0. That contract is asserted, not assumed — do not break it.
@@ -97,8 +120,14 @@ Stage 0 (`../FWIS/`) — must be **served**, since service workers need a secure
 
 ```bash
 python -m http.server 8792      # from ../FWIS/
-node verify/smoke-test.mjs      # 76 assertions — the application
+node verify/smoke-test.mjs      # 82 assertions — the application
 node verify/sync-test.mjs       # 34 assertions — the sync engine
+```
+
+Against a real backend, credentials from the environment only — never written to disk:
+
+```bash
+SUPABASE_URL=… SUPABASE_ANON_KEY=… node verify/live-test.mjs   # 53 assertions
 ```
 
 Never commit a Supabase `service_role` key. The anon key in `config.js` is a publishable client key; RLS is what protects the data.
