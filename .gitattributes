@@ -1,0 +1,22 @@
+# Normalize line endings to LF in the repository and in the working tree.
+# The vault is edited by Obsidian (handles LF fine) and by tooling that writes
+# LF; without this every file churns between CRLF and LF on each touch.
+* text=auto eol=lf
+
+# Obsidian formats that are text but worth naming explicitly.
+*.md    text eol=lf
+*.base  text eol=lf
+*.canvas text eol=lf
+
+# Binary — never diff or convert.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.mp4  binary
+*.ttf  binary
+*.woff  binary
+*.woff2 binary
+*.xlsx binary
+*.docx binary

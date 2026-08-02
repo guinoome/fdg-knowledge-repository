@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Shift Turnover · FWIS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-id">
+    <span class="topbar-system">FWIS</span>
+    <span class="topbar-sep">/</span>
+    <h1 class="topbar-title">Shift Turnover</h1>
+  </div>
+  <div class="topbar-meta">
+    <span class="record-id" id="record-id">DRAFT-NEW</span>
+    <span class="status-badge" id="status-badge">
+      <span class="led"></span><span class="status-label">Draft</span>
+    </span>
+    <button type="button" class="btn btn-ghost" id="theme-btn">Light</button>
+    <button type="button" class="btn btn-ghost" id="save-draft-btn">Save draft</button>
+  </div>
+</header>
+
+<div class="app-shell">
+
+  <nav class="step-rail" aria-label="Turnover steps">
+    <ol id="step-rail-list">
+      <li data-step="1"><button type="button" class="step-btn" data-goto="1"><span class="led" data-led="1"></span><span class="step-no">1</span><span class="step-label">Shift &amp; Personnel</span></button></li>
+      <li data-step="2"><button type="button" class="step-btn" data-goto="2"><span class="led" data-led="2"></span><span class="step-no">2</span><span class="step-label">Plant Status</span></button></li>
+      <li data-step="3"><button type="button" class="step-btn" data-goto="3"><span class="led" data-led="3"></span><span class="step-no">3</span><span class="step-label">Utilities</span></button></li>
+      <li data-step="4"><button type="button" class="step-btn" data-goto="4"><span class="led" data-led="4"></span><span class="step-no">4</span><span class="step-label">Outstanding Tasks</span></button></li>
+      <li data-step="5"><button type="button" class="step-btn" data-goto="5"><span class="led" data-led="5"></span><span class="step-no">5</span><span class="step-label">Incidents &amp; Concerns</span></button></li>
+      <li data-step="6"><button type="button" class="step-btn" data-goto="6"><span class="led" data-led="6"></span><span class="step-no">6</span><span class="step-label">Room Status</span></button></li>
+      <li data-step="7"><button type="button" class="step-btn" data-goto="7"><span class="led" data-led="7"></span><span class="step-no">7</span><span class="step-label">Notes &amp; Attachments</span></button></li>
+    </ol>
+    <div class="flag-board" id="flag-board" aria-live="polite">
+      <div class="flag-board-title">Flagged critical</div>
+      <div class="flag-count" id="flag-count">0</div>
+      <div class="flag-board-note" id="escalation-criteria"></div>
+    </div>
+  </nav>
+
+  <main class="wizard">
+    <form id="turnover-form" novalidate>
+
+      <!-- STEP 1 — Shift Information & Personnel Handover -->
+      <section class="step" data-step="1" id="step-1">
+        <div class="step-head">
+          <span class="step-eyebrow">Step 1 of 7</span>
+          <h2>Shift &amp; Personnel</h2>
+          <p class="step-sub">Confirm the shift being handed over and who was on duty.</p>
+        </div>
+
+        <fieldset class="field-grid">
+          <legend>Shift information</legend>
+
+          <label class="field">
+            <span class="field-label">Property <em>required</em></span>
+            <select name="propertyId" required></select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Building <em>required</em></span>
+            <select name="buildingId" required></select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Department <em>required</em></span>
+            <select name="departmentId" required></select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Shift name <em>required</em></span>
+            <select name="shiftName" required></select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Date <em>required</em></span>
+            <input type="date" name="date" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Shift start <em>required</em></span>
+            <input type="time" name="shiftStart" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Shift end <em>required</em></span>
+            <input type="time" name="shiftEnd" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Outgoing shift leader <em>required</em></span>
+            <input type="text" name="outgoingLeader" required readonly />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Incoming shift leader <em>required</em></span>
+            <select name="incomingLeader" required></select>
+          </label>
+        </fieldset>
+
+        <fieldset class="field-block">
+          <legend>Personnel handover</legend>
+
+          <div class="tag-field">
+            <span class="field-label">Personnel present <em>required, min 1</em></span>
+            <div class="tag-list" data-tag-list="present"></div>
+            <div class="tag-add-row">
+              <select data-tag-select="present" aria-label="Add personnel present"></select>
+              <button type="button" class="btn btn-small" data-tag-add="present">Add</button>
+            </div>
+          </div>
+
+          <div class="tag-field">
+            <span class="field-label">Personnel absent</span>
+            <div class="tag-list" data-tag-list="absent"></div>
+            <div class="tag-add-row">
+              <select data-tag-select="absent" aria-label="Add personnel absent"></select>
+              <button type="button" class="btn btn-small" data-tag-add="absent">Add</button>
+            </div>
+          </div>
+
+          <div class="tag-field">
+            <span class="field-label">Overtime personnel</span>
+            <div class="tag-list" data-tag-list="overtime"></div>
+            <div class="tag-add-row">
+              <select data-tag-select="overtime" aria-label="Add overtime personnel"></select>
+              <button type="button" class="btn btn-small" data-tag-add="overtime">Add</button>
+            </div>
+          </div>
+
+          <div class="tag-field">
+            <span class="field-label">Relief personnel</span>
+            <div class="tag-list" data-tag-list="relief"></div>
+            <div class="tag-add-row">
+              <select data-tag-select="relief" aria-label="Add relief personnel"></select>
+              <button type="button" class="btn btn-small" data-tag-add="relief">Add</button>
+            </div>
+          </div>
+
+          <div class="repeat-field">
+            <span class="field-label">Contractor presence</span>
+            <div class="repeat-rows" id="contractor-rows"></div>
+            <button type="button" class="btn btn-small" id="add-contractor-btn">+ Add contractor</button>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- STEP 2 — Plant Status -->
+      <section class="step" data-step="2" id="step-2" hidden>
+        <div class="step-head">
+          <span class="step-eyebrow">Step 2 of 7</span>
+          <h2>Plant status</h2>
+          <p class="step-sub">One row per plant configured for this property. Plants at Critical or Shutdown are flagged automatically.</p>
+        </div>
+        <div class="panel-rows" id="plant-rows"></div>
+        <button type="button" class="btn btn-small" id="add-plant-btn">+ Add plant</button>
+      </section>
+
+      <!-- STEP 3 — Utilities Status -->
+      <section class="step" data-step="3" id="step-3" hidden>
+        <div class="step-head">
+          <span class="step-eyebrow">Step 3 of 7</span>
+          <h2>Utilities status</h2>
+          <p class="step-sub">Record the latest reading for each utility configured at this property.</p>
+        </div>
+        <div class="panel-rows" id="utility-rows"></div>
+      </section>
+
+      <!-- STEP 4 — Outstanding Tasks -->
+      <section class="step" data-step="4" id="step-4" hidden>
+        <div class="step-head">
+          <span class="step-eyebrow">Step 4 of 7</span>
+          <h2>Outstanding tasks</h2>
+          <p class="step-sub">Incomplete operational activities the incoming shift needs to continue. No tasks outstanding is valid.</p>
+        </div>
+        <div class="repeat-rows" id="task-rows"></div>
+        <button type="button" class="btn btn-small" id="add-task-btn">+ Add task</button>
+      </section>
+
+      <!-- STEP 5 — Active Incidents & Engineering Concerns -->
+      <section class="step" data-step="5" id="step-5" hidden>
+        <div class="step-head">
+          <span class="step-eyebrow">Step 5 of 7</span>
+          <h2>Incidents &amp; concerns</h2>
+          <p class="step-sub">Carried in from Incident Management and the Concerns Tracker as of shift end. Add a note for the next shift where needed.</p>
+        </div>
+
+        <h3 class="subsection-title">Active incidents</h3>
+        <div class="card-rows" id="incident-rows"></div>
+
+        <h3 class="subsection-title">Engineering concerns</h3>
+        <div class="card-rows" id="concern-rows"></div>
+      </section>
+
+      <!-- STEP 6 — Room Engineering Status -->
+      <section class="step" data-step="6" id="step-6" hidden>
+        <div class="step-head">
+          <span class="step-eyebrow">Step 6 of 7</span>
+          <h2>Room engineering status</h2>
+          <p class="step-sub">Rooms out of order, out of service, or under repair.</p>
+        </div>
+        <div class="repeat-rows" id="room-rows"></div>
+        <button type="button" class="btn btn-small" id="add-room-btn">+ Add room</button>
+      </section>
+
+      <!-- STEP 7 — Engineering Notes & Attachments -->
+      <section class="step" data-step="7" id="step-7" hidden>
+        <div class="step-head">
+          <span class="step-eyebrow">Step 7 of 7</span>
+          <h2>Notes &amp; attachments</h2>
+          <p class="step-sub">Operational observations for the incoming shift, plus any supporting files.</p>
+        </div>
+
+        <h3 class="subsection-title">Engineering notes</h3>
+        <div class="repeat-rows" id="note-rows"></div>
+        <button type="button" class="btn btn-small" id="add-note-btn">+ Add note</button>
+
+        <h3 class="subsection-title">Attachments</h3>
+        <label class="file-drop" for="attachment-input">
+          <input type="file" id="attachment-input" multiple hidden />
+          <span>Choose files</span>
+          <span class="file-drop-hint" id="attachment-hint"></span>
+        </label>
+        <div class="repeat-rows" id="attachment-rows"></div>
+      </section>
+
+    </form>
+
+    <div class="wizard-nav">
+      <div class="wizard-validation" id="validation-msg" role="alert" aria-live="assertive"></div>
+      <div class="wizard-nav-buttons">
+        <button type="button" class="btn btn-ghost" id="back-btn">← Back</button>
+        <button type="button" class="btn btn-primary" id="next-btn">Next →</button>
+        <button type="button" class="btn btn-submit" id="submit-btn" hidden>Submit turnover</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="confirmation" id="confirmation" hidden>
+  <div class="confirmation-card" role="dialog" aria-modal="true" aria-labelledby="confirmation-title">
+    <span class="led led-lg on-green"></span>
+    <h2 id="confirmation-title">Turnover submitted</h2>
+    <p id="confirmation-summary"></p>
+    <div class="confirmation-escalation" id="confirmation-escalation" hidden></div>
+    <details class="confirmation-json">
+      <summary>View assembled record</summary>
+      <pre id="confirmation-json"></pre>
+    </details>
+    <button type="button" class="btn btn-ghost" id="new-turnover-btn">Start new turnover</button>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
