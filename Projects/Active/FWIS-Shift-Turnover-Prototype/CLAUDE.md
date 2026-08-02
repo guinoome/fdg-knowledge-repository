@@ -24,16 +24,16 @@ Founder decisions:
 | Decision | Resolution |
 |---|---|
 | Target stack | **Web-first PWA.** One codebase, installable on Windows and Android, offline via service worker + IndexedDB. |
-| Where OAuth tokens and background sync run | **Nowhere in Stage 0 — there is no backend.** Stage 1 introduces one. Which backend is the one open decision left (see below). |
+| Where OAuth tokens and background sync run | **Supabase** (decided 2026-08-02). Nothing in Stage 0; Stage 1a introduces it. Edge Functions will hold OAuth tokens server-side in Stage 1b. |
 | Platform count | **One codebase covering all three surfaces**, via the PWA. Not three separate builds. |
 | Phase 1 boundary | **Full spec is the Phase 1 target, delivered in two stages.** See below. |
 | Existing Shift Turnover prototype | **Disposable validation.** Port the schema and rules into the real stack; the HTML/CSS/JS does not carry over. |
 
-### The one decision still open
+### Open decisions
 
-**Which backend, when Stage 1 begins.** Deferred by choice, not overlooked. Candidates carried forward: Supabase (named in the vault's Repository Strategy; Postgres + row-level security suits the FBPOIS-ROLE-0005 multi-tenant model) or a self-hosted Node/.NET service (cleaner path to the private-data-center vision in `FWIS_VISION.md`).
+None blocking. The backend question is resolved: **Supabase**, chosen because Postgres row-level security maps directly onto the FBPOIS-ROLE-0005 multi-tenant model, and because it is open source and self-hostable — the private-data-center direction in `FWIS_VISION.md` stays available rather than being traded away.
 
-Do not infer this one. It must be resolved before any Stage 1 work starts.
+Next decision, due before Stage 1b: **which communication source to integrate first**, and whether intake is read-only at the start.
 
 ### Stage 0 / Stage 1 — read this before scoping anything
 
@@ -41,7 +41,12 @@ Phase 1 keeps the full spec as its **target**. It is delivered in two stages bec
 
 **Stage 0 — no backend. COMPLETE 2026-08-02, see `../FWIS/`.** PWA shell, local persistence (IndexedDB), manual record entry. Shift Turnover (compose/review/list), Dashboard, Search. Single-user, single-device. Verified by 72 assertions including offline operation and WCAG AA in both themes.
 
-**Stage 1 — backend arrives.** Multi-user and multi-device sync with conflict resolution, then communication-source intake, source by source. Everything here is blocked on the backend decision above.
+**Stage 1 — backend arrives (Supabase).** Sliced so sync lands before intake.
+
+- **Stage 1a — sync only. COMPLETE 2026-08-02.** Multi-user, multi-device sync with conflict resolution, plus auth. Verified by 34 sync assertions against an in-memory backend; **not yet verified against a live Supabase** (needs Docker).
+- **Stage 1b — communication-source intake.** OAuth against Outlook/Gmail/Teams, source by source. Not started.
+
+Sync is additive: with no credentials in `src/config.js` the app is exactly Stage 0. That contract is asserted, not assumed — do not break it.
 
 Stage 0 must not paint Stage 1 into a corner. Concretely: model records as if they will sync (stable IDs, timestamps, last-writer metadata) even though nothing syncs yet. Do not let local-only assumptions leak into the schema.
 
@@ -92,8 +97,11 @@ Stage 0 (`../FWIS/`) — must be **served**, since service workers need a secure
 
 ```bash
 python -m http.server 8792      # from ../FWIS/
-node verify/smoke-test.mjs      # 72 assertions; exits non-zero on failure
+node verify/smoke-test.mjs      # 76 assertions — the application
+node verify/sync-test.mjs       # 34 assertions — the sync engine
 ```
+
+Never commit a Supabase `service_role` key. The anon key in `config.js` is a publishable client key; RLS is what protects the data.
 
 Prototype (this folder):
 

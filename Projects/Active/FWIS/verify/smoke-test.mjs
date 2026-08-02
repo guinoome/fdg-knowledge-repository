@@ -89,6 +89,20 @@ ok("Empty dashboard states the truth rather than fake numbers",
 // A `hidden` element must actually be hidden — component display rules can
 // silently outrank the attribute.
 ok("Offline chip is hidden while online", !(await page.isVisible("#offline-chip")));
+
+// Sync is additive: with no Supabase credentials the app must be exactly
+// Stage 0 — no sync chip, no account link, no dead affordances.
+ok("Sync chip hidden when sync is unconfigured", !(await page.isVisible("#sync-chip")));
+ok("Account link hidden when sync is unconfigured", !(await page.isVisible("#account-link")));
+
+await page.goto(BASE + "#/account");
+await page.waitForSelector(".signin");
+ok("Account screen explains local-only rather than offering a dead form",
+  (await page.textContent(".signin")).includes("Sync is not configured"));
+ok("No sign-in form is shown when unconfigured", !(await page.isVisible('input[name="email"]')));
+await page.goto(BASE + "#/");
+await page.waitForSelector("#view .empty-state, #view .kpis");
+
 await page.screenshot({ path: `${SHOTS}/01-dashboard-empty.png` });
 
 /* -- 2. theme -------------------------------------------------------------- */

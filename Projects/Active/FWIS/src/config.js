@@ -18,7 +18,20 @@ export const CONFIG = {
   app: {
     name: "FWIS",
     longName: "Facility Workspace Intelligence System",
-    stage: "Stage 0"
+    stage: "Stage 1a"
+  },
+
+  /* -- Supabase (Stage 1a).
+        Leave url/anonKey empty and the app runs exactly as Stage 0: local
+        only, no sign-in, no sync. Sync is additive and must never be the
+        reason the app fails to start.
+
+        The anon key is a publishable client key, not a secret — Row Level
+        Security in supabase/schema.sql is what actually protects the data.
+        Never put a service_role key here. ---------------------------------- */
+  supabase: {
+    url: "",
+    anonKey: ""
   },
 
   /* -- Roles — FBPOIS-ROLE-0000; `level` orders the FBPOIS-ROLE-0004 chain -- */

@@ -14,7 +14,7 @@
    Records live in IndexedDB, not here — this only covers the application shell.
    ============================================================================ */
 
-const VERSION = "fwis-stage0-v1";
+const VERSION = "fwis-stage1a-v1";
 const SHELL = `${VERSION}-shell`;
 const RUNTIME = `${VERSION}-runtime`;
 
@@ -34,7 +34,11 @@ const PRECACHE = [
   "./src/screens/turnover-list.js",
   "./src/screens/turnover-compose.js",
   "./src/screens/turnover-detail.js",
-  "./src/screens/search.js"
+  "./src/screens/search.js",
+  "./src/screens/sign-in.js",
+  "./src/sync/index.js",
+  "./src/sync/client.js",
+  "./src/sync/engine.js"
 ];
 
 self.addEventListener("install", (event) => {

@@ -194,6 +194,28 @@ a { color: inherit; }
 .chip button { background: none; border: none; color: var(--faint); cursor: pointer; padding: 0; font-size: 1rem; line-height: 1; }
 .chip button:hover { color: var(--red); }
 .chip-offline { color: var(--amber); border-color: var(--amber); }
+.chip-sync[data-tone="ok"]    { color: var(--green); border-color: var(--green); }
+.chip-sync[data-tone="warn"]  { color: var(--amber); border-color: var(--amber); }
+.chip-sync[data-tone="error"] { color: var(--red);   border-color: var(--red); }
+.chip-sync[data-tone="info"]  { color: var(--blue);  border-color: var(--blue); }
+
+/* --------------------------------------------------------------- sign in */
+
+.signin { max-width: 420px; margin: 2rem auto; display: flex; flex-direction: column; gap: 0.9rem; }
+.signin-form { display: flex; flex-direction: column; gap: 0.8rem; }
+.signin-actions { display: flex; gap: 0.6rem; }
+.signin code {
+  font-family: var(--f-mono); font-size: 0.82rem;
+  background: var(--raised); padding: 0.1rem 0.3rem; border-radius: var(--r);
+}
+
+/* ------------------------------------------------------------- conflicts */
+
+.conflict-banner {
+  border: 1px solid var(--amber); border-radius: var(--r);
+  background: color-mix(in srgb, var(--amber) 12%, var(--surface));
+  padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.88rem;
+}
 
 .text-green { color: var(--green); }
 .text-amber { color: var(--amber); }

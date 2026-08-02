@@ -119,6 +119,17 @@ export async function get(id) {
   return r && !r.deletedAt ? r : null;
 }
 
+/* -- Raw accessors: include tombstones and every sync field. Sync must see
+      deletions and conflicts; the UI must not. ------------------------------ */
+
+export async function getRaw(id) {
+  return (await tx("readonly", (store) => request(store.get(id)))) || null;
+}
+
+export async function allRaw() {
+  return (await tx("readonly", (store) => request(store.getAll()))) || [];
+}
+
 export async function all({ type, propertyId, includeDeleted = false } = {}) {
   const rows = await tx("readonly", (store) => request(store.getAll()));
   return (rows || []).filter((r) => {

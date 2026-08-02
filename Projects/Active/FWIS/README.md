@@ -1,8 +1,8 @@
-# FWIS — Stage 0
+# FWIS — Stage 1a
 
 Facility Workspace Intelligence System. The Chief Engineer's operational workspace: plant status, incidents, and open engineering work in one place.
 
-**Status:** Stage 0 complete · **Phase:** Phase 1, Stage 0 of 2
+**Status:** Stage 0 complete · Stage 1a (sync) complete, pending live verification · **Phase:** Phase 1
 
 Governed by `../FWIS-Shift-Turnover-Prototype/CLAUDE.md`. Read that before changing anything here.
 
@@ -14,7 +14,12 @@ Phase 1 keeps the full spec as its target and delivers it in two stages, because
 
 **Stage 0 (this) — no backend.** Installable PWA, local persistence, manual record entry. Shift Turnover, Dashboard, Search. Single-user, single-device.
 
-**Stage 1 — backend arrives.** Multi-user and multi-device sync with conflict resolution, then communication-source intake. Blocked on the one architecture decision still open: *which* backend.
+**Stage 1 — backend arrives.** Backend decided: **Supabase**. Sliced so sync lands before intake.
+
+- **Stage 1a (this) — sync only.** Multi-user, multi-device sync with conflict resolution, plus auth. No intake.
+- **Stage 1b — communication-source intake.** OAuth against Outlook/Gmail/Teams, source by source. Not started.
+
+Sync is **additive**: with no credentials in `src/config.js` the app is exactly Stage 0 — local-only, fully functional, no sign-in, no sync chip. That contract is asserted in the test suite.
 
 ## What is built
 
@@ -25,8 +30,9 @@ Phase 1 keeps the full spec as its target and delivers it in two stages, because
 | Compose turnover | `#/turnover/new` | Screen A — 7-step wizard |
 | Turnover detail / review | `#/turnover/:id` | Screen B — incl. acceptance panel |
 | Search | `#/search` | FWIS_VISION §Search |
+| Account / sign-in | `#/account` | Stage 1a — hidden when sync is unconfigured |
 
-Plus: installable PWA (manifest, service worker, offline), light and dark themes, IndexedDB persistence.
+Plus: installable PWA (manifest, service worker, offline), light and dark themes, IndexedDB persistence, and Supabase sync.
 
 ## Architecture
 
@@ -46,7 +52,18 @@ src/
   ui.js               shared render helpers, theme, toasts, connectivity
   turnover.js         domain model — shape, validation, escalation
   screens/            one module per screen
-verify/smoke-test.mjs verification method
+  sync/
+    index.js          wiring — owns the client and engine, keeps sync optional
+    client.js         thin Supabase Auth + PostgREST over fetch (no dependency)
+    engine.js         pull/push, cursor, conflict policy
+    fake-backend.js   in-memory backend used by the sync tests
+supabase/
+  schema.sql          tables, triggers, RLS policies
+  README.md           setup steps
+verify/
+  smoke-test.mjs      application tests
+  sync-test.mjs       sync engine tests
+  sync-harness.html   loads the real engine for the sync tests
 ```
 
 ### No hardcoding
@@ -83,10 +100,13 @@ The app works without a network once loaded. Theme follows the OS preference and
 ```bash
 npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
-node verify/smoke-test.mjs
+node verify/smoke-test.mjs          # 76 assertions — the application
+node verify/sync-test.mjs           # 34 assertions — the sync engine
 ```
 
-**72 assertions**, exits non-zero on failure, covering:
+**110 assertions total**, each exiting non-zero on failure.
+
+`smoke-test.mjs` covers:
 
 - Routing, including the not-found screen
 - Config-driven options, and property-switch rebuilding plants/roster/feeds
@@ -99,11 +119,25 @@ node verify/smoke-test.mjs
 - PWA manifest, icon resolution, service worker registration
 - **Loading and reading records while offline**
 - WCAG AA contrast for eight text styles in **both** themes
+- The local-only contract: with sync unconfigured, no sync chip, no account link, no dead sign-in form
 - Zero console errors
 
-**Last verified:** 2026-08-02 — 72/72 passed.
+`sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-Playwright is a dependency of the test only; the app itself has none.
+**Last verified:** 2026-08-02 — 76/76 and 34/34 passed.
+
+Playwright is a dependency of the tests only; the app itself has none.
+
+### Not verified
+
+**No live Supabase round trip.** `supabase start` needs Docker, which is not installed on this machine, so the following remain unproven by test and rest on the schema being read carefully rather than executed:
+
+- That `schema.sql` applies cleanly to a real Postgres
+- That the RLS policies actually isolate tenants
+- That the real PostgREST wire format matches what `client.js` sends and `fromRow` parses
+- Auth: sign-in, token refresh, and session expiry against real GoTrue
+
+The fake backend reproduces the trigger *behaviour* (server-side sequencing, revision guard, acceptance immutability), so the engine's logic is genuinely tested — but a faithful fake is not the same as the real thing. Install Docker and run `npx supabase start` to close this gap.
 
 ## Known gaps
 
@@ -112,6 +146,9 @@ Playwright is a dependency of the test only; the app itself has none.
 - **Single user.** `config.session` stands in for authentication.
 - **The SLA and repeat-clarification escalation triggers are defined but only evaluated on demand** — with no backend there is no scheduler to fire them in the background.
 - **PWA icons are SVG.** Installable in Chromium browsers; add PNG fallbacks if a target platform rejects SVG icons.
+- **Conflicts are surfaced, not resolved.** A conflicted record shows a banner and preserves the local version under `conflict.localData`, but there is no merge UI to reconcile the two copies. Deliberate: the amendment workflow that would own this is itself unbuilt.
+- **`config.session` still stands in for identity in the UI.** Sync uses the real authenticated user, but screens still read the configured session user for authoring. Reconcile when roles come from `property_members` rather than config.
+- **Sync polls every 60s.** No realtime. Adequate for shift handovers; revisit if a use case needs sub-minute propagation.
 
 ## Source documents
 

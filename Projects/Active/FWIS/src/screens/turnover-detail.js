@@ -44,6 +44,16 @@ export async function detailScreen(params, view) {
       </div>
     </header>
 
+    ${record.syncState === "conflict" ? `<div class="conflict-banner">
+      <b>Sync conflict.</b>
+      ${record.conflict?.kind === "conflict-immutable"
+        ? `This turnover was accepted on another device while you were editing it. Accepted records
+           are immutable, so your edits were not applied — file an amendment instead.`
+        : `Another device saved a newer version (revision ${esc(record.conflict?.serverRevision)})
+           while this device held revision ${esc(record.conflict?.localRevision)}. The server copy is
+           shown below; your version has been kept and not discarded.`}
+    </div>` : ""}
+
     ${met.length ? `<div class="callout callout-warn">
       <b>Escalation required.</b> Triggered by ${esc(met.map((x) => x.label).join(" and "))}.
       Per FBPOIS-ROLE-0004 this routes through

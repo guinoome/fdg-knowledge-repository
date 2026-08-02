@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FWIS sync harness</title>
+</head>
+<body>
+<!--
+  Test harness. Loads the real sync engine and the real IndexedDB layer, driven
+  against the in-memory FakeBackend, and exposes them on window for the
+  Playwright test in verify/sync-test.mjs to drive.
+
+  Nothing here is part of the application.
+-->
+<pre id="out">sync harness ready</pre>
+<script type="module">
+  import * as db from "../src/db.js";
+  import { SyncEngine, toRow, fromRow, decideMerge, readCursor, writeCursor, resetCursor, SYNC_STATE }
+    from "../src/sync/engine.js";
+  import { FakeBackend } from "../src/sync/fake-backend.js";
+  import { SupabaseError } from "../src/sync/client.js";
+
+  window.FWIS_TEST = {
+    db, SyncEngine, FakeBackend, SupabaseError,
+    toRow, fromRow, decideMerge, readCursor, writeCursor, resetCursor, SYNC_STATE,
+
+    async reset() {
+      await db.clearAll();
+      resetCursor();
+    },
+
+    /** Builds a local record in the envelope shape db.createRecord produces. */
+    makeRecord({ id, status = "Draft", data = { note: "a" }, revision = 1, userId = "user-1", syncState = "local" }) {
+      const ts = new Date().toISOString();
+      return {
+        id, type: "shift-turnover", propertyId: "prop-riverside", status, data,
+        createdAt: ts, updatedAt: ts, createdBy: userId, updatedBy: userId,
+        revision, deletedAt: null, syncState
+      };
+    }
+  };
+  document.getElementById("out").textContent = "ready";
+</script>
+</body>
+</html>
