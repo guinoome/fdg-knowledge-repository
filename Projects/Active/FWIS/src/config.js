@@ -136,6 +136,19 @@ export const CONFIG = {
       { value: "Medium", severity: "info" },
       { value: "Low", severity: "ok" }
     ],
+    intakeStatus: [
+      { value: "New", severity: "warn", open: true, needsAttention: true },
+      { value: "Classified", severity: "info", open: true },
+      { value: "Linked", severity: "ok", open: false },
+      { value: "Dismissed", severity: "neutral", open: false }
+    ],
+    discipline: [
+      { value: "Electrical", severity: "info" },
+      { value: "Mechanical", severity: "info" },
+      { value: "Plumbing", severity: "info" },
+      { value: "Fire Protection", severity: "alarm" },
+      { value: "General", severity: "neutral" }
+    ],
     taskStatus: [
       { value: "Not Started", severity: "warn" },
       { value: "In Progress", severity: "info" },
@@ -237,6 +250,54 @@ export const CONFIG = {
   },
 
   /* -- Session context — stands in for authentication until Stage 1. ------- */
+  /* -- Stage 1b intake — FWIS_VISION §Communication sources.
+        Which sources exist, what they can do, and how raw text becomes a
+        structured record all live here. Adding a provider is a config entry
+        plus an adapter; it is never a change to the intake engine. ---------- */
+  intake: {
+    pollSeconds: 300,
+
+    /* `capability` is the honest part of this table. Not every platform on the
+       vision list exposes a way to read an individual's conversations, and
+       pretending otherwise would put a dead toggle in the UI. See
+       src/intake/adapter.js for what each capability means. */
+    sources: [
+      { id: "outlook", name: "Outlook Mail", provider: "microsoft-graph", kind: "email",
+        capability: "readable", enabled: false, readOnly: true, scopes: ["Mail.Read"] },
+      { id: "teams", name: "Microsoft Teams", provider: "microsoft-graph", kind: "chat",
+        capability: "readable", enabled: false, readOnly: true, scopes: ["Chat.Read"] },
+      { id: "gmail", name: "Gmail", provider: "google", kind: "email",
+        capability: "readable", enabled: false, readOnly: true, scopes: ["gmail.readonly"] },
+      { id: "viber", name: "Viber", provider: "viber", kind: "chat",
+        capability: "inbound-only", enabled: false, readOnly: true, scopes: [] },
+      { id: "messenger", name: "Messenger", provider: "meta", kind: "chat",
+        capability: "inbound-only", enabled: false, readOnly: true, scopes: [] },
+      { id: "sample", name: "Sample feed", provider: "sample", kind: "email",
+        capability: "readable", enabled: true, readOnly: true, scopes: [] }
+    ],
+
+    /* Classification rules, evaluated in order; first match wins. Keyword
+       matching is deliberately dumb — FWIS_VISION puts structured data before
+       AI, and a rule a Chief Engineer can read and correct beats a model
+       nobody can audit. Replaceable later without touching the engine. */
+    rules: [
+      { id: "r-electrical", match: ["breaker", "power", "voltage", "generator", "transformer"],
+        discipline: "Electrical", priority: "High" },
+      { id: "r-mechanical", match: ["chiller", "pump", "ahu", "compressor", "fan", "motor"],
+        discipline: "Mechanical", priority: "High" },
+      { id: "r-plumbing", match: ["leak", "drain", "water", "pipe", "flush"],
+        discipline: "Plumbing", priority: "Medium" },
+      { id: "r-fire", match: ["fire", "sprinkler", "smoke", "alarm panel"],
+        discipline: "Fire Protection", priority: "Critical" },
+      { id: "r-default", match: [], discipline: "General", priority: "Low" }
+    ],
+
+    /* Words that raise whatever a rule assigned. Urgency is orthogonal to
+       discipline: a leak and a fire alarm are different systems but "flooding
+       now" is urgent in both. */
+    escalators: ["urgent", "emergency", "immediately", "flooding", "no power", "evacuat"]
+  },
+
   session: {
     userId: "u-santos",
     propertyId: "prop-riverside"

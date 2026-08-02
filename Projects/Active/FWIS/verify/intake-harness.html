@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FWIS intake harness</title>
+</head>
+<body>
+<!--
+  Test harness. Loads the real intake engine, classifier and IndexedDB layer,
+  driven against the sample adapter, and exposes them on window for the
+  Playwright test in verify/intake-test.mjs to drive.
+
+  Nothing here is part of the application.
+-->
+<pre id="out">intake harness ready</pre>
+<script type="module">
+  import * as db from "../src/db.js";
+  import { CONFIG } from "../src/config.js";
+  import { IntakeEngine, TYPE, STATUS, dispose, queue, readCursors, resetCursors }
+    from "../src/intake/engine.js";
+  import { classify, toIntakeData, raisePriority, equipmentHint } from "../src/intake/classify.js";
+  import { sampleSource, unavailableSource } from "../src/intake/sample-source.js";
+  import { pollableSources, unavailableReason, validateAdapter, normalise, CAPABILITY }
+    from "../src/intake/adapter.js";
+
+  window.FWIS_TEST = {
+    db, CONFIG, IntakeEngine, TYPE, STATUS, dispose, queue, readCursors, resetCursors,
+    classify, toIntakeData, raisePriority, equipmentHint,
+    sampleSource, unavailableSource,
+    pollableSources, unavailableReason, validateAdapter, normalise, CAPABILITY,
+
+    async reset() {
+      await db.clearAll();
+      resetCursors();
+    },
+
+    newEngine(opts = {}) {
+      return new IntakeEngine({ propertyId: "prop-riverside", userId: "u-santos", ...opts });
+    }
+  };
+  document.getElementById("out").textContent = "ready";
+</script>
+</body>
+</html>

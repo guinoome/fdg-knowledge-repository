@@ -17,7 +17,7 @@ Phase 1 keeps the full spec as its target and delivers it in two stages, because
 **Stage 1 — backend arrives.** Backend decided: **Supabase**. Sliced so sync lands before intake.
 
 - **Stage 1a (this) — sync only.** Multi-user, multi-device sync with conflict resolution, plus auth. No intake.
-- **Stage 1b — communication-source intake.** OAuth against Outlook/Gmail/Teams, source by source. Not started.
+- **Stage 1b — communication-source intake.** Foundation built and tested: the adapter contract, classification, and a provider-agnostic engine, driven by a sample adapter. **No real provider is connected** — the first is Outlook via Microsoft Graph, read-only, and it is blocked on an Azure app registration, not on code.
 
 Sync is **additive**: with no credentials in `src/config.js` the app is exactly Stage 0 — local-only, fully functional, no sign-in, no sync chip. That contract is asserted in the test suite.
 
@@ -58,6 +58,11 @@ src/
     client.js         thin Supabase Auth + PostgREST over fetch (no dependency)
     engine.js         pull/push, cursor, conflict policy
     fake-backend.js   in-memory backend used by the sync tests
+  intake/
+    adapter.js        the contract every source implements + capability truth
+    classify.js       raw message → structured fields (rule-based, pure)
+    engine.js         poll, dedupe, store, dispose — provider-agnostic
+    sample-source.js  working adapter with no provider; the reference impl
 supabase/
   schema.sql          tables, triggers, RLS policies
   README.md           setup steps
@@ -104,9 +109,10 @@ npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
 node verify/smoke-test.mjs          # 82 assertions — the application
 node verify/sync-test.mjs           # 34 assertions — the sync engine
+node verify/intake-test.mjs         # 55 assertions — the intake engine
 ```
 
-**116 assertions total**, each exiting non-zero on failure. Neither needs a backend.
+**171 assertions total**, each exiting non-zero on failure. None needs a backend.
 
 A third suite runs against a real hosted Supabase project and is therefore opt-in:
 
@@ -136,7 +142,9 @@ Credentials come from the environment only; they are never written to disk or to
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-02 — 82/82, 34/34, and 53/53 live passed.
+**Last verified:** 2026-08-02 — 82/82, 34/34, 55/55, and 53/53 live passed. **224 assertions.**
+
+`intake-test.mjs` drives the **real** intake engine against the sample adapter, covering: the adapter contract and its rejection of malformed adapters, rule-based classification including escalation, deduplication by external id across a simulated crash, cursor advance ordering, per-source failure isolation, disposition, and that a second adapter with entirely different content needs no engine change.
 
 Playwright is a dependency of the tests only; the app itself has none. `live-test.mjs` uses `fetch` and the real `src/sync/client.js`, so it has none either.
 
