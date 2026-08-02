@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FWIS · Facility Workspace Intelligence System</title>
+<meta name="description" content="The Chief Engineer's operational workspace: plant status, incidents, and open engineering work in one place.">
+<meta name="theme-color" content="#14171a">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#view">Skip to content</a>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">FWIS</span>
+    <span class="brand-stage" id="app-stage"></span>
+  </div>
+
+  <nav class="mainnav" aria-label="Primary">
+    <a href="#/" data-nav="/">Dashboard</a>
+    <a href="#/turnovers" data-nav="/turnover">Turnovers</a>
+    <a href="#/search" data-nav="/search">Search</a>
+  </nav>
+
+  <div class="topbar-end">
+    <span class="chip chip-offline" id="offline-chip" hidden>Offline</span>
+    <button type="button" class="btn btn-ghost" id="theme-btn">Light</button>
+  </div>
+</header>
+
+<main id="view" class="view" aria-live="polite"></main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

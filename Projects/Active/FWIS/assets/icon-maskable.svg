@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="FWIS">
+  <title>FWIS</title>
+  <!-- Maskable: all content kept inside the safe zone (centre 80%), so platform
+       masks can crop to a circle or squircle without clipping the mark. -->
+  <rect width="512" height="512" fill="#14171a"/>
+  <circle cx="186" cy="186" r="22" fill="#3fb667"/>
+  <circle cx="256" cy="186" r="22" fill="#e8a33d"/>
+  <circle cx="326" cy="186" r="22" fill="#e5484d"/>
+  <rect x="156" y="248" width="200" height="14" rx="7" fill="#3a4149"/>
+  <rect x="156" y="248" width="122" height="14" rx="7" fill="#e8a33d"/>
+  <text x="256" y="360" text-anchor="middle"
+        font-family="Oswald, 'Arial Narrow', sans-serif" font-size="92"
+        font-weight="600" letter-spacing="3" fill="#e8eaec">FWIS</text>
+</svg>

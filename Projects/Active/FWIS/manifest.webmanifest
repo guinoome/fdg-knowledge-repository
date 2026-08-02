@@ -1,0 +1,39 @@
+{
+  "name": "FWIS · Facility Workspace Intelligence System",
+  "short_name": "FWIS",
+  "description": "The Chief Engineer's operational workspace: plant status, incidents, and open engineering work in one place.",
+  "id": "/fwis/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#14171a",
+  "theme_color": "#14171a",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New shift turnover",
+      "short_name": "New turnover",
+      "url": "./index.html#/turnover/new"
+    },
+    {
+      "name": "Search",
+      "short_name": "Search",
+      "url": "./index.html#/search"
+    }
+  ]
+}

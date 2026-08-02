@@ -1,0 +1,275 @@
+/* ============================================================================
+   FWIS — Configuration
+   ----------------------------------------------------------------------------
+   Single source of truth for organizational structure, enumerations, workflow
+   states, and approval routing. Per CLAUDE.md ("No hardcoding"): properties,
+   buildings, departments, plants, utilities, approval chains, and workflows
+   are config-driven, decided in the schema from the first commit.
+
+   Nothing outside this file may hardcode a value that appears in it.
+
+   Stage 1 replaces this module's export with a fetched payload; the shape is
+   deliberately JSON-serialisable so that swap is a one-line change.
+   ============================================================================ */
+
+export const CONFIG = {
+  schemaVersion: "2.0",
+
+  app: {
+    name: "FWIS",
+    longName: "Facility Workspace Intelligence System",
+    stage: "Stage 0"
+  },
+
+  /* -- Roles — FBPOIS-ROLE-0000; `level` orders the FBPOIS-ROLE-0004 chain -- */
+  roles: [
+    { id: "technician", name: "Technician", level: 1 },
+    { id: "supervisor", name: "Supervisor", level: 2 },
+    { id: "duty-engineer", name: "Duty Engineer", level: 3 },
+    { id: "engineering-manager", name: "Engineering Manager", level: 4 },
+    { id: "chief-engineer", name: "Chief Engineer", level: 5 },
+    { id: "director", name: "Director of Engineering", level: 6 }
+  ],
+
+  /* -- Org hierarchy — FBPOIS-SDP-0001.
+        Plants, utilities and roster are scoped PER PROPERTY: an operator runs
+        multiple properties with different plant inventories. Flattening this
+        would be a data migration later, not a refactor. -------------------- */
+  properties: [
+    {
+      id: "prop-riverside",
+      name: "Riverside Tower",
+      buildings: [
+        { id: "bld-main", name: "Main Building" },
+        { id: "bld-annex", name: "Annex" }
+      ],
+      departments: [
+        { id: "dept-engineering", name: "Engineering" },
+        { id: "dept-housekeeping", name: "Housekeeping" }
+      ],
+      plants: [
+        { id: "plant-chiller", name: "Chiller Plant" },
+        { id: "plant-generator", name: "Generator Sets" },
+        { id: "plant-boiler", name: "Boilers" },
+        { id: "plant-cooling-tower", name: "Cooling Towers" },
+        { id: "plant-stp", name: "STP" },
+        { id: "plant-fire", name: "Fire Protection" },
+        { id: "plant-water", name: "Water Distribution" },
+        { id: "plant-solar", name: "Solar PV" }
+      ],
+      utilities: [
+        { id: "util-electricity", name: "Electricity", unit: "kWh" },
+        { id: "util-water", name: "Water", unit: "m³" },
+        { id: "util-diesel", name: "Diesel", unit: "L" },
+        { id: "util-lpg", name: "LPG", unit: "kg" },
+        { id: "util-chilled-water", name: "Chilled Water", unit: "RT" },
+        { id: "util-solar", name: "Solar PV", unit: "kWh" }
+      ],
+      roster: [
+        { id: "u-santos", name: "J. Santos", roleId: "duty-engineer" },
+        { id: "u-reyes", name: "M. Reyes", roleId: "duty-engineer" },
+        { id: "u-cruz", name: "A. Cruz", roleId: "technician" },
+        { id: "u-tan", name: "R. Tan", roleId: "technician" },
+        { id: "u-villanueva", name: "D. Villanueva", roleId: "supervisor" },
+        { id: "u-lim", name: "K. Lim", roleId: "engineering-manager" }
+      ]
+    },
+    {
+      id: "prop-harbour",
+      name: "Harbour Plaza",
+      buildings: [
+        { id: "bld-tower-a", name: "Tower A" },
+        { id: "bld-tower-b", name: "Tower B" }
+      ],
+      departments: [{ id: "dept-engineering", name: "Engineering" }],
+      plants: [
+        { id: "plant-chiller", name: "Chiller Plant" },
+        { id: "plant-generator", name: "Generator Sets" },
+        { id: "plant-fire", name: "Fire Protection" },
+        { id: "plant-lifts", name: "Lift Systems" }
+      ],
+      utilities: [
+        { id: "util-electricity", name: "Electricity", unit: "kWh" },
+        { id: "util-water", name: "Water", unit: "m³" },
+        { id: "util-steam", name: "Steam", unit: "kg/h" }
+      ],
+      roster: [
+        { id: "u-ibrahim", name: "S. Ibrahim", roleId: "duty-engineer" },
+        { id: "u-chen", name: "L. Chen", roleId: "duty-engineer" },
+        { id: "u-navarro", name: "P. Navarro", roleId: "technician" },
+        { id: "u-oduya", name: "T. Oduya", roleId: "supervisor" }
+      ]
+    }
+  ],
+
+  /* -- Enumerations. Every value carries a `severity` token; presentation
+        derives from that token, never from a status name mapped in code. --- */
+  enums: {
+    shiftName: [
+      { value: "Morning Shift", defaultStart: "06:00", defaultEnd: "14:00" },
+      { value: "Afternoon Shift", defaultStart: "14:00", defaultEnd: "22:00" },
+      { value: "Night Shift", defaultStart: "22:00", defaultEnd: "06:00" }
+    ],
+    plantStatus: [
+      { value: "Normal", severity: "ok" },
+      { value: "Warning", severity: "warn" },
+      { value: "Critical", severity: "alarm" },
+      { value: "Shutdown", severity: "alarm" },
+      { value: "Maintenance", severity: "info" }
+    ],
+    taskPriority: [
+      { value: "Critical", severity: "alarm" },
+      { value: "High", severity: "warn" },
+      { value: "Medium", severity: "info" },
+      { value: "Low", severity: "ok" }
+    ],
+    taskStatus: [
+      { value: "Not Started", severity: "warn" },
+      { value: "In Progress", severity: "info" },
+      { value: "Blocked", severity: "alarm" },
+      { value: "Completed", severity: "ok" }
+    ],
+    roomStatus: [
+      { value: "OOO", severity: "warn" },
+      { value: "OOS", severity: "warn" },
+      { value: "Under Repair", severity: "info" },
+      { value: "Pending Inspection", severity: "warn" },
+      { value: "Released This Shift", severity: "ok" }
+    ],
+    noteCategory: [
+      { value: "Equipment Behavior" },
+      { value: "Temporary Operating Procedure" },
+      { value: "Monitoring Instruction" },
+      { value: "Recommendation" },
+      { value: "General" }
+    ],
+    attachmentType: [
+      { value: "Photograph" }, { value: "Video" }, { value: "Document" },
+      { value: "Inspection Form" }, { value: "Equipment Reading" }
+    ],
+    incidentSeverity: [
+      { value: "Critical", severity: "alarm" },
+      { value: "High", severity: "warn" },
+      { value: "Medium", severity: "info" },
+      { value: "Low", severity: "ok" }
+    ],
+    acceptanceStatus: [
+      { value: "Accepted", severity: "ok", requiresComment: false },
+      { value: "Clarification Requested", severity: "warn", requiresComment: true }
+    ]
+  },
+
+  attachments: {
+    maxFileSizeMb: 25,
+    maxFiles: 20,
+    acceptedExtensions: [".jpg", ".jpeg", ".png", ".pdf", ".mp4", ".docx", ".xlsx"]
+  },
+
+  /* -- Workflow — FWIS-SPEC-0003 v1.1 Status Model, specialising the generic
+        state machine in FBPOIS-WF-0000. Chain from FBPOIS-ROLE-0004. ------- */
+  workflows: {
+    "shift-turnover": {
+      id: "shift-turnover",
+      label: "Shift Turnover",
+      states: [
+        { value: "Draft", genericState: "Draft", severity: "warn", open: true },
+        { value: "Ready", genericState: "Draft", severity: "ok", open: true },
+        { value: "Submitted", genericState: "Submitted", severity: "ok", open: true },
+        { value: "Pending Acceptance", genericState: "Review", severity: "info", open: true, needsAttention: true },
+        { value: "Clarification Requested", genericState: "Review", severity: "warn", open: true, needsAttention: true },
+        { value: "Escalated", genericState: "Review", severity: "alarm", open: true, needsAttention: true },
+        { value: "Accepted", genericState: "Approved", severity: "ok", open: false },
+        { value: "Closed", genericState: "Closed", severity: "neutral", open: false },
+        { value: "Amended", genericState: "Draft", severity: "info", open: true }
+      ],
+      approvalChain: [
+        { step: "Submit", roleId: "duty-engineer" },
+        { step: "Review", roleId: "engineering-manager" },
+        { step: "Approve", roleId: "chief-engineer" }
+      ],
+      escalationTriggers: [
+        { id: "critical-plant", type: "plantStatusIn", values: ["Critical", "Shutdown"],
+          label: "a plant at Critical or Shutdown" },
+        { id: "critical-incident", type: "incidentSeverityIn", values: ["Critical"],
+          label: "a Critical-severity incident" },
+        { id: "acceptance-sla", type: "acceptanceSlaHours", value: 2,
+          label: "not accepted within 2 hours of shift start" },
+        { id: "repeat-clarification", type: "clarificationCountOver", value: 1,
+          label: "clarification requested more than once" }
+      ]
+    }
+  },
+
+  /* -- Stand-ins for live intake (Stage 1). Held as config so the read-only
+        sections render truthfully without inventing a sync layer. ---------- */
+  mockFeeds: {
+    incidents: {
+      "prop-riverside": [
+        { id: "INC-2026-0143", category: "Electrical", severity: "Medium", status: "In Progress", engineer: "R. Tan" },
+        { id: "INC-2026-0139", category: "Plumbing", severity: "Low", status: "Monitoring", engineer: "A. Cruz" }
+      ],
+      "prop-harbour": [
+        { id: "INC-2026-0151", category: "Mechanical", severity: "Critical", status: "Open", engineer: "P. Navarro" }
+      ]
+    },
+    concerns: {
+      "prop-riverside": [
+        { id: "CT-2026-0089", category: "Awaiting Spare Parts", status: "Open" },
+        { id: "CT-2026-0091", category: "Follow-up Inspection", status: "Open" }
+      ],
+      "prop-harbour": [
+        { id: "CT-2026-0102", category: "Pending Vendor", status: "Open" }
+      ]
+    }
+  },
+
+  /* -- Session context — stands in for authentication until Stage 1. ------- */
+  session: {
+    userId: "u-santos",
+    propertyId: "prop-riverside"
+  }
+};
+
+/* ============================================================================
+   Config accessors — the only sanctioned way to read config.
+   ============================================================================ */
+
+export const SEVERITY_CLASS = {
+  ok: "green", warn: "amber", alarm: "red", info: "blue", neutral: "grey"
+};
+
+export function workflow(id = "shift-turnover") { return CONFIG.workflows[id]; }
+
+export function enumEntry(name, value) {
+  return CONFIG.enums[name]?.find((e) => e.value === value);
+}
+
+export function enumValues(name) { return CONFIG.enums[name].map((e) => e.value); }
+
+export function severityClassFor(enumName, value) {
+  return SEVERITY_CLASS[enumEntry(enumName, value)?.severity] || "grey";
+}
+
+export function stateEntry(value, workflowId = "shift-turnover") {
+  return workflow(workflowId).states.find((s) => s.value === value);
+}
+
+export function stateClassFor(value, workflowId = "shift-turnover") {
+  return SEVERITY_CLASS[stateEntry(value, workflowId)?.severity] || "grey";
+}
+
+export function propertyById(id) { return CONFIG.properties.find((p) => p.id === id); }
+
+export function roleName(roleId) {
+  return CONFIG.roles.find((r) => r.id === roleId)?.name || "";
+}
+
+export function userName(userId) {
+  for (const p of CONFIG.properties) {
+    const u = p.roster.find((r) => r.id === userId);
+    if (u) return u.name;
+  }
+  return "";
+}
+
+export function nameIn(list, id) { return list.find((x) => x.id === id)?.name || ""; }

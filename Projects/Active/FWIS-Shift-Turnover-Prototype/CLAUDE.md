@@ -39,7 +39,7 @@ Do not infer this one. It must be resolved before any Stage 1 work starts.
 
 Phase 1 keeps the full spec as its **target**. It is delivered in two stages because "full spec, no backend" is not buildable: live intake from Outlook/Gmail/Teams needs OAuth, OAuth needs server-side token storage, and offline-first sync needs something to sync with.
 
-**Stage 0 — no backend.** PWA shell, local persistence (IndexedDB), manual record entry. Shift Turnover, Dashboard, Search. Single-user, single-device. Ships something the Chief Engineer can actually use.
+**Stage 0 — no backend. COMPLETE 2026-08-02, see `../FWIS/`.** PWA shell, local persistence (IndexedDB), manual record entry. Shift Turnover (compose/review/list), Dashboard, Search. Single-user, single-device. Verified by 72 assertions including offline operation and WCAG AA in both themes.
 
 **Stage 1 — backend arrives.** Multi-user and multi-device sync with conflict resolution, then communication-source intake, source by source. Everything here is blocked on the backend decision above.
 
@@ -79,18 +79,28 @@ Reference implementation: `config.js` in this prototype. The schema is the part 
 - Out-of-scope items get logged, not built. If something looks missing but wasn't asked for, flag it and stop, don't add it.
 - Accessibility is not polish. Both themes ship, and content-bearing text clears WCAG AA. The contrast assertions in the smoke test exist so this can't regress silently.
 
+## Where the code lives
+
+- **`../FWIS/`** — Stage 0, the live application. Work happens here.
+- **`./`** (this folder) — the Shift Turnover validation prototype. Superseded; kept as the validation artifact its schema was ported from. Do not build on it.
+
 ## Build / test commands
 
-The prototype has no dependencies and no build step. Playwright is a dev-time dependency of the test only.
+No dependencies, no build step, in either project. Playwright is a dev-time dependency of the tests only; first-time setup is `npm install playwright && npx playwright install chromium`.
+
+Stage 0 (`../FWIS/`) — must be **served**, since service workers need a secure context:
 
 ```bash
-python -m http.server 8791      # serve from the project root
-node verify/smoke-test.mjs      # 53 assertions; exits non-zero on failure
+python -m http.server 8792      # from ../FWIS/
+node verify/smoke-test.mjs      # 72 assertions; exits non-zero on failure
 ```
 
-First-time test setup: `npm install playwright && npx playwright install chromium`
+Prototype (this folder):
 
-Replace this section when Stage 0 scaffolding lands and real build commands exist.
+```bash
+python -m http.server 8791
+node verify/smoke-test.mjs      # 53 assertions
+```
 
 ## Repository etiquette
 
