@@ -103,9 +103,9 @@ ok("An adapter with no config entry is rejected", contract.unknownId.length > 0)
 ok("An adapter missing fetchSince is rejected", contract.missingFn.length > 0);
 ok("Only readable, enabled sources are pollable", eq(contract.pollable, ["sample"]),
   JSON.stringify(contract.pollable));
-ok("Viber explains why it cannot be polled", /no API for reading personal/.test(contract.viberReason),
+ok("Viber names the bridge as its route, not an API", /needs the FWIS bridge/.test(contract.viberReason),
   contract.viberReason);
-ok("Messenger explains why it cannot be polled", /no API for reading personal/.test(contract.messengerReason),
+ok("Messenger names the bridge as its route, not an API", /needs the FWIS bridge/.test(contract.messengerReason),
   contract.messengerReason);
 check("An available source has no unavailability reason", contract.sampleReason, "");
 check("normalise trims and stamps the source", contract.normaliseOk.subject, "Hi");
@@ -274,6 +274,95 @@ const agnostic = await page.evaluate(async () => {
 check("A different adapter needs no engine change", agnostic.created, 1);
 check("Its messages classify through the same rules", agnostic.discipline, "Electrical");
 check("Its content is stored unchanged", agnostic.subject, "Generator 1 failed to start");
+
+/* -- 8. session bridge ----------------------------------------------------- */
+
+section("Session bridge");
+
+const bridge = await page.evaluate(async () => {
+  const T = window.FWIS_TEST;
+  await T.reset();
+  const batch = (id, subject, body) => ({
+    fwisBridge: T.PROTOCOL, sourceId: "viber", batchId: "b1",
+    messages: [{ externalId: id, from: "Site WhatsApp Group", subject, body,
+      receivedAt: "2026-08-02T11:00:00.000Z" }]
+  });
+
+  // Disabled by default — a bridge that accepts payloads before anyone turned
+  // it on would be a hole, not a feature.
+  const whileDisabled = T.receive(batch("v-1", "Genset", "generator tripped"));
+
+  T.setBridge();
+  const wrongProtocol = T.receive({ fwisBridge: 99, sourceId: "viber", messages: [] });
+  const badOrigin = T.receive(batch("v-1", "x", "y"), { origin: "https://evil.example.com" });
+  const goodOrigin = T.receive(batch("v-1", "Genset", "generator tripped"),
+    { origin: "https://bridge.example.com" });
+  const notBridgeSource = T.receive({ ...batch("v-2", "a", "b"), sourceId: "outlook" });
+  const unknownSource = T.receive({ ...batch("v-3", "a", "b"), sourceId: "nope" });
+  const partlyBad = T.receive({ fwisBridge: T.PROTOCOL, sourceId: "viber",
+    messages: [{ externalId: "v-9", subject: "ok" }, { subject: "no id" }] });
+
+  return { whileDisabled, wrongProtocol, badOrigin, goodOrigin, notBridgeSource,
+    unknownSource, partlyBad, status: T.bridgeStatus() };
+});
+
+check("A disabled bridge accepts nothing", bridge.whileDisabled.accepted, 0);
+ok("A disabled bridge says why", /disabled/.test(bridge.whileDisabled.error || ""), bridge.whileDisabled.error);
+ok("A foreign protocol version is refused", bridge.wrongProtocol.error !== null);
+check("An unlisted origin is refused", bridge.badOrigin.accepted, 0);
+ok("An unlisted origin is named in the rejection", /origin not allowed/.test(bridge.badOrigin.error || ""),
+  bridge.badOrigin.error);
+check("An allowed origin is accepted", bridge.goodOrigin.accepted, 1);
+ok("An API source cannot be fed through the bridge",
+  /not a bridge source/.test(bridge.notBridgeSource.error || ""), bridge.notBridgeSource.error);
+ok("An unknown source is refused", /unknown source/.test(bridge.unknownSource.error || ""),
+  bridge.unknownSource.error);
+check("A malformed message is discarded, not the batch", bridge.partlyBad.accepted, 1);
+check("Discards are counted", bridge.partlyBad.discarded, 1);
+ok("Rejections are retained for diagnosis", bridge.status.rejected.length > 0);
+
+const bridged = await page.evaluate(async () => {
+  const T = window.FWIS_TEST;
+  await T.reset();
+  T.setBridge();
+  T.setSourceEnabled("viber", true);
+  T.setSourceEnabled("sample", false);
+
+  const engine = T.newEngine();
+  engine.register(T.bridgeSource("viber"));
+
+  // Nothing has checked in yet, so the source is not available.
+  const beforeCheckin = await engine.run();
+
+  T.receive({ fwisBridge: T.PROTOCOL, sourceId: "viber", messages: [
+    { externalId: "v-100", from: "Duty group", subject: "Chiller 2 alarm",
+      body: "chiller tripped on high pressure", receivedAt: "2026-08-02T12:00:00.000Z" }
+  ]});
+  const afterCheckin = await engine.run();
+  const rows = await T.db.all({ type: T.TYPE, propertyId: "prop-riverside" });
+
+  // Re-running drains nothing new; the same message must not double-ingest.
+  T.receive({ fwisBridge: T.PROTOCOL, sourceId: "viber", messages: [
+    { externalId: "v-100", from: "Duty group", subject: "Chiller 2 alarm",
+      body: "chiller tripped on high pressure", receivedAt: "2026-08-02T12:00:00.000Z" }
+  ]});
+  const replay = await engine.run();
+
+  T.setSourceEnabled("viber", false);
+  T.setSourceEnabled("sample", true);
+  return { beforeCheckin, afterCheckin, replay, count: rows.length,
+    discipline: rows[0]?.data?.derived?.discipline, origin: rows[0]?.data?.source?.sourceId };
+});
+
+check("A bridge that has not checked in is unavailable", bridged.beforeCheckin.polled, 0);
+ok("An idle bridge is reported as skipped", bridged.beforeCheckin.skipped.length === 1,
+  JSON.stringify(bridged.beforeCheckin.skipped));
+check("A bridged message is ingested", bridged.afterCheckin.created, 1);
+check("Bridged content classifies through the same rules", bridged.discipline, "Mechanical");
+check("The record remembers it came from the bridged source", bridged.origin, "viber");
+check("Replaying the same message creates nothing", bridged.replay.created, 0);
+check("The replay is recognised as a duplicate", bridged.replay.duplicates, 1);
+check("Only one record exists", bridged.count, 1);
 
 /* -- done ------------------------------------------------------------------ */
 

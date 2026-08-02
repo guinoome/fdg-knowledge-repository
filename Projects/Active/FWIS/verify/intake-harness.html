@@ -20,18 +20,33 @@
     from "../src/intake/engine.js";
   import { classify, toIntakeData, raisePriority, equipmentHint } from "../src/intake/classify.js";
   import { sampleSource, unavailableSource } from "../src/intake/sample-source.js";
-  import { pollableSources, unavailableReason, validateAdapter, normalise, CAPABILITY }
+  import { pollableSources, bridgeSources, unavailableReason, validateAdapter, normalise, CAPABILITY }
     from "../src/intake/adapter.js";
+  import { receive, bridgeSource, bridgeStatus, resetBridge, listen, PROTOCOL }
+    from "../src/intake/bridge.js";
 
   window.FWIS_TEST = {
     db, CONFIG, IntakeEngine, TYPE, STATUS, dispose, queue, readCursors, resetCursors,
     classify, toIntakeData, raisePriority, equipmentHint,
     sampleSource, unavailableSource,
-    pollableSources, unavailableReason, validateAdapter, normalise, CAPABILITY,
+    pollableSources, bridgeSources, unavailableReason, validateAdapter, normalise, CAPABILITY,
+    receive, bridgeSource, bridgeStatus, resetBridge, listen, PROTOCOL,
 
     async reset() {
       await db.clearAll();
       resetCursors();
+      resetBridge();
+    },
+
+    /** Bridge config is off by default, which is correct for the app and
+     *  useless for a test. Flipping it here keeps the default honest. */
+    setBridge({ enabled = true, allowedOrigins = ["https://bridge.example.com"] } = {}) {
+      CONFIG.intake.bridge.enabled = enabled;
+      CONFIG.intake.bridge.allowedOrigins = allowedOrigins;
+    },
+
+    setSourceEnabled(id, enabled) {
+      CONFIG.intake.sources.find((s) => s.id === id).enabled = enabled;
     },
 
     newEngine(opts = {}) {

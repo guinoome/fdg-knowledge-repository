@@ -31,46 +31,66 @@
                       Microsoft Graph, Gmail via the Google API. These can be
                       polled, and an adapter is the only work.
 
-     "inbound-only"   the platform offers no way to read an individual's
-                      conversations. Viber and Messenger are business/bot
-                      platforms: a message reaches you only if a user sends it
-                      to a channel you own, delivered by webhook. There is no
-                      OAuth scope that grants "read my chats", so no amount of
-                      adapter work produces one.
+     "session-bridge" the platform has no API for reading an individual's
+                      conversations, but the user can already see those
+                      messages in a logged-in browser tab. A bridge running
+                      where that tab lives reads what is on screen and posts it
+                      to FWIS. Viber and Messenger are here: both are
+                      business/bot platforms with no OAuth scope granting
+                      "read my chats", so a session bridge is the only route
+                      that does not require the other party to message a
+                      channel you own.
 
-   Sources marked inbound-only are therefore not pollable. They are kept in
-   config, and surfaced as unavailable with the reason, because a source that
-   is silently missing looks like a bug while a source that explains itself is
-   a decision. When a webhook receiver exists, those sources arrive through it
-   and land in the same record shape.
+     "inbound-only"   webhook-only. A message arrives solely because someone
+                      sent it to a channel you own. Nothing to poll and nothing
+                      to bridge; it either arrives or it does not.
+
+   Both readable and session-bridge sources run through the same loop below and
+   produce the same RawMessage. The engine cannot tell them apart, which is the
+   point: how a message was obtained is a transport detail, not a data model.
+
+   A source that cannot run states why. A source that is silently missing looks
+   like a bug; one that explains itself is a decision.
    ============================================================================ */
 
 import { CONFIG } from "../config.js";
 
 export const CAPABILITY = {
   READABLE: "readable",
+  SESSION_BRIDGE: "session-bridge",
   INBOUND_ONLY: "inbound-only"
 };
+
+/** Capabilities the engine can drive. Everything else arrives on its own. */
+const ACTIVE = [CAPABILITY.READABLE, CAPABILITY.SESSION_BRIDGE];
 
 /** Config entry for a source, or undefined. */
 export function sourceConfig(id) {
   return CONFIG.intake.sources.find((s) => s.id === id);
 }
 
-/** Sources an adapter could poll — enabled, and readable by the platform. */
+/** Sources the engine will drive this run — enabled, and reachable either by
+ *  provider API or by session bridge. One list, because the engine treats the
+ *  two transports identically. */
 export function pollableSources() {
-  return CONFIG.intake.sources.filter(
-    (s) => s.enabled && s.capability === CAPABILITY.READABLE
-  );
+  return CONFIG.intake.sources.filter((s) => s.enabled && ACTIVE.includes(s.capability));
 }
 
-/** Why a source cannot be polled, or "" when it can. Used by the UI so an
+/** Sources that need a bridge rather than an API. */
+export function bridgeSources() {
+  return CONFIG.intake.sources.filter((s) => s.capability === CAPABILITY.SESSION_BRIDGE);
+}
+
+/** Why a source cannot run, or "" when it can. Used by the UI so an
  *  unavailable source states its reason rather than just missing. */
 export function unavailableReason(id) {
   const s = sourceConfig(id);
   if (!s) return "Unknown source";
   if (s.capability === CAPABILITY.INBOUND_ONLY) {
-    return `${s.name} has no API for reading personal conversations; it can only receive messages sent to a channel you own`;
+    return `${s.name} can only receive messages sent to a channel you own`;
+  }
+  if (s.capability === CAPABILITY.SESSION_BRIDGE && !CONFIG.intake.bridge.enabled) {
+    return `${s.name} has no API for reading personal conversations; it needs the FWIS bridge running where you are signed in`;
   }
   if (!s.enabled) return `${s.name} is not enabled`;
   return "";

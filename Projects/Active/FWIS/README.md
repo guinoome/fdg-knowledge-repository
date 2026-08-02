@@ -62,6 +62,7 @@ src/
     adapter.js        the contract every source implements + capability truth
     classify.js       raw message → structured fields (rule-based, pure)
     engine.js         poll, dedupe, store, dispose — provider-agnostic
+    bridge.js         receiver for sources with no API (session bridge)
     sample-source.js  working adapter with no provider; the reference impl
 supabase/
   schema.sql          tables, triggers, RLS policies
@@ -109,10 +110,10 @@ npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
 node verify/smoke-test.mjs          # 82 assertions — the application
 node verify/sync-test.mjs           # 34 assertions — the sync engine
-node verify/intake-test.mjs         # 55 assertions — the intake engine
+node verify/intake-test.mjs         # 74 assertions — the intake engine and bridge
 ```
 
-**171 assertions total**, each exiting non-zero on failure. None needs a backend.
+**190 assertions total**, each exiting non-zero on failure. None needs a backend.
 
 A third suite runs against a real hosted Supabase project and is therefore opt-in:
 
@@ -142,9 +143,23 @@ Credentials come from the environment only; they are never written to disk or to
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-02 — 82/82, 34/34, 55/55, and 53/53 live passed. **224 assertions.**
+**Last verified:** 2026-08-02 — 82/82, 34/34, 74/74, and 53/53 live passed. **243 assertions.**
 
-`intake-test.mjs` drives the **real** intake engine against the sample adapter, covering: the adapter contract and its rejection of malformed adapters, rule-based classification including escalation, deduplication by external id across a simulated crash, cursor advance ordering, per-source failure isolation, disposition, and that a second adapter with entirely different content needs no engine change.
+`intake-test.mjs` drives the **real** intake engine against the sample adapter, covering: the adapter contract and its rejection of malformed adapters, rule-based classification including escalation, deduplication by external id across a simulated crash, cursor advance ordering, per-source failure isolation, disposition, and that a second adapter with entirely different content needs no engine change. It also covers the session bridge — origin allowlisting, protocol version, refusal of an API source fed through it, partial-batch discards, idle detection, and replay dedupe.
+
+### Two ways in, one engine
+
+Sources reach FWIS by whichever route their platform actually permits:
+
+| Capability | Sources | Route |
+|---|---|---|
+| `readable` | Outlook, Teams, Gmail | Provider API, polled. Sanctioned, no terms-of-service risk |
+| `session-bridge` | Viber, Messenger | No API exists for reading personal conversations. A bridge runs where the user is already signed in and posts what it reads |
+| `inbound-only` | — | Webhook only; nothing to poll or bridge |
+
+The engine cannot tell the two apart: both produce the same `RawMessage`, so dedupe, classification and storage are shared. How a message was obtained is a transport detail, not a data model.
+
+**The bridge's receiving half is built. The sending half cannot live in this app** — the Same-Origin Policy forbids a page reading another origin's tab, which is the browser's central security guarantee rather than an obstacle to route around. A sender must be a browser extension, a desktop shell, or local automation; choosing one amends the resolved "one codebase, via the PWA" decision and is logged as open in `CLAUDE.md`, along with the account-ban risk that Viber's and Meta's terms carry.
 
 Playwright is a dependency of the tests only; the app itself has none. `live-test.mjs` uses `fetch` and the real `src/sync/client.js`, so it has none either.
 

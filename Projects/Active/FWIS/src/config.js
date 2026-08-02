@@ -269,9 +269,9 @@ export const CONFIG = {
       { id: "gmail", name: "Gmail", provider: "google", kind: "email",
         capability: "readable", enabled: false, readOnly: true, scopes: ["gmail.readonly"] },
       { id: "viber", name: "Viber", provider: "viber", kind: "chat",
-        capability: "inbound-only", enabled: false, readOnly: true, scopes: [] },
+        capability: "session-bridge", enabled: false, readOnly: true, scopes: [] },
       { id: "messenger", name: "Messenger", provider: "meta", kind: "chat",
-        capability: "inbound-only", enabled: false, readOnly: true, scopes: [] },
+        capability: "session-bridge", enabled: false, readOnly: true, scopes: [] },
       { id: "sample", name: "Sample feed", provider: "sample", kind: "email",
         capability: "readable", enabled: true, readOnly: true, scopes: [] }
     ],
@@ -295,7 +295,16 @@ export const CONFIG = {
     /* Words that raise whatever a rule assigned. Urgency is orthogonal to
        discipline: a leak and a fire alarm are different systems but "flooding
        now" is urgent in both. */
-    escalators: ["urgent", "emergency", "immediately", "flooding", "no power", "evacuat"]
+    escalators: ["urgent", "emergency", "immediately", "flooding", "no power", "evacuat"],
+
+    /* Session bridge — for sources with no readable API. Off until a bridge
+       host exists; see src/intake/bridge.js for why the sender cannot live in
+       this app. allowedOrigins is the security boundary: an unlisted origin
+       cannot inject fabricated records into the engineering log. */
+    bridge: {
+      enabled: false,
+      allowedOrigins: []
+    }
   },
 
   session: {

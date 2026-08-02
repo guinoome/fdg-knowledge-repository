@@ -31,7 +31,21 @@ Founder decisions:
 
 ### Open decisions
 
-None blocking. The backend question is resolved: **Supabase**, chosen because Postgres row-level security maps directly onto the FBPOIS-ROLE-0005 multi-tenant model, and because it is open source and self-hostable — the private-data-center direction in `FWIS_VISION.md` stays available rather than being traded away.
+The backend question is resolved: **Supabase**, chosen because Postgres row-level security maps directly onto the FBPOIS-ROLE-0005 multi-tenant model, and because it is open source and self-hostable — the private-data-center direction in `FWIS_VISION.md` stays available rather than being traded away.
+
+**OPEN — where the session bridge runs.** Sources with no readable API (Viber, Messenger) can still be reached: the user is already signed in to them in a browser, and something running where that session lives can read what is on screen and post it to FWIS. The receiving half is built and tested (`src/intake/bridge.js`). The sending half cannot live in the PWA — the Same-Origin Policy forbids a page reading another origin's tab, and that is the browser's central security guarantee rather than a limitation to engineer around.
+
+That leaves three hosts, and picking one **amends the resolved decision "one codebase covering all three surfaces, via the PWA"**, so it is a Founder call:
+
+| Host | What it costs | What it buys |
+|---|---|---|
+| Browser extension | A second artifact, per-browser packaging, store review | The sanctioned mechanism; runs alongside the PWA; user grants specific origins at install |
+| Desktop shell (Electron/Tauri) | A third surface to build and ship; largest change to the resolved architecture | Full control of the webview; no store review; strongest reading capability |
+| Local automation (scripted browser profile) | Fragile, per-machine setup, no mobile | Fastest to prototype; no packaging |
+
+Recommendation when this is taken up: **browser extension**, because it is the only option that preserves the PWA as the product and adds the bridge as an accessory rather than a replacement.
+
+**Risk to weigh before building any of them.** Viber's and Meta's terms generally prohibit automated reading of their web clients, and Meta in particular detects and bans accounts for it. The exposure is an operational account being banned, not a legal abstraction. Outlook, Gmail and Teams have sanctioned APIs and carry none of this risk — which is a further reason the API sources ship first, and why the bridge should be scoped to sources that have no alternative.
 
 ### First intake source — RESOLVED 2026-08-02
 
