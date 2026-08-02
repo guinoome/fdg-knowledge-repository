@@ -14,12 +14,22 @@
 import { CONFIG, propertyById, userName, workflow } from "../config.js";
 import * as db from "../db.js";
 import * as T from "../turnover.js";
+import * as M from "../modules/model.js";
 import { esc, statusBadge, optionsHtml, formatDate, emptyState } from "../ui.js";
 
-const state = { q: "", propertyId: "", status: "", from: "", to: "" };
+const state = { q: "", propertyId: "", status: "", from: "", to: "", kind: "" };
 
 export async function searchScreen(_params, view) {
   const records = await db.all({ type: T.TYPE });
+
+  // Every operational module is searchable too — FWIS_VISION calls search a
+  // core function across incidents, concerns, rooms and plant, not a turnover
+  // feature. Each module already exposes a text projection, so this is a
+  // gather rather than a per-module special case.
+  const moduleHits = [];
+  for (const mod of M.allModules()) {
+    for (const r of await db.all({ type: mod.type })) moduleHits.push({ mod, record: r });
+  }
 
   view.innerHTML = `
   <div class="search-screen">
@@ -38,7 +48,12 @@ export async function searchScreen(_params, view) {
         <select name="propertyId"><option value="">All</option>
           ${CONFIG.properties.map((p) => `<option value="${p.id}"${p.id === state.propertyId ? " selected" : ""}>${esc(p.name)}</option>`).join("")}
         </select></label>
-      <label class="field"><span class="lbl">Status</span>
+      <label class="field"><span class="lbl">Record type</span>
+        <select name="kind"><option value="">All types</option>
+          <option value="shift-turnover"${state.kind === "shift-turnover" ? " selected" : ""}>Shift Turnovers</option>
+          ${M.allModules().map((m) => `<option value="${esc(m.type)}"${m.type === state.kind ? " selected" : ""}>${esc(m.plural)}</option>`).join("")}
+        </select></label>
+      <label class="field"><span class="lbl">Turnover status</span>
         <select name="status"><option value="">All</option>
           ${optionsHtml(workflow().states.map((s) => s.value), state.status, null)}
         </select></label>
@@ -56,12 +71,13 @@ export async function searchScreen(_params, view) {
   const input = view.querySelector("#q");
 
   function run() {
-    const hits = search(records);
-    results.innerHTML = renderResults(hits, records.length);
-    results.querySelectorAll("[data-goto-id]").forEach((el) => {
-      el.addEventListener("click", () => { location.hash = `/turnover/${el.dataset.gotoId}`; });
+    const hits = [...search(records), ...searchModules(moduleHits)];
+    results.innerHTML = renderResults(hits, records.length + moduleHits.length);
+    results.querySelectorAll("[data-goto]").forEach((el) => {
+      const go = () => { location.hash = el.dataset.goto; };
+      el.addEventListener("click", go);
       el.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); location.hash = `/turnover/${el.dataset.gotoId}`; }
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
       });
     });
   }
@@ -84,8 +100,11 @@ export async function searchScreen(_params, view) {
 
 /* ---------------------------------------------------------------- search -- */
 
+function terms() { return state.q.toLowerCase().split(/\s+/).filter(Boolean); }
+
 function search(records) {
-  const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  if (state.kind && state.kind !== T.TYPE) return [];
+  const t = terms();
 
   return records.filter((r) => {
     const d = r.data.meta.date;
@@ -93,11 +112,25 @@ function search(records) {
     if (state.status && r.status !== state.status) return false;
     if (state.from && d < state.from) return false;
     if (state.to && d > state.to) return false;
-    if (!terms.length) return true;
+    if (!t.length) return true;
 
     const text = T.searchableText(r.data);
-    return terms.every((term) => text.includes(term));  // AND across terms
-  }).map((r) => ({ record: r, matches: matchedFields(r.data, terms) }));
+    return t.every((term) => text.includes(term));  // AND across terms
+  }).map((r) => ({ kind: "turnover", record: r, matches: matchedFields(r.data, t) }));
+}
+
+function searchModules(entries) {
+  const t = terms();
+  return entries.filter(({ mod, record: r }) => {
+    if (state.kind && state.kind !== mod.type) return false;
+    if (state.propertyId && r.propertyId !== state.propertyId) return false;
+    const d = r.data.date || "";
+    if (state.from && d && d < state.from) return false;
+    if (state.to && d && d > state.to) return false;
+    if (!t.length) return true;
+    const text = M.searchableText(mod, r);
+    return t.every((term) => text.includes(term));
+  }).map(({ mod, record }) => ({ kind: "module", mod, record }));
 }
 
 /** Names the fields a term hit, so the result explains itself. */
@@ -124,27 +157,40 @@ function matchedFields(t, terms) {
 function renderResults(hits, total) {
   if (!total) {
     return emptyState("Nothing to search yet",
-      "Search reads the turnovers stored on this device. Create one first.",
+      "Search reads every record stored on this device — turnovers, incidents, concerns, availability, plant and utility logs. Create one first.",
       `<a class="btn btn-primary" href="#/turnover/new">+ New turnover</a>`);
   }
   if (!hits.length) {
     return emptyState("No matches",
-      "No turnover contains all of those terms. Try fewer words, or clear the filters.");
+      "No record contains all of those terms. Try fewer words, or clear the filters.");
   }
 
-  return `<p class="result-count">${hits.length} of ${total} turnover${total === 1 ? "" : "s"}</p>
+  return `<p class="result-count">${hits.length} of ${total} record${total === 1 ? "" : "s"}</p>
   <div class="results">
-    ${hits.map(({ record: r, matches }) => {
-      const t = r.data;
-      return `<div class="result" data-goto-id="${esc(r.id)}" tabindex="0" role="link">
-        <div class="result-main">
-          <b>${esc(t.meta.shiftName)} · ${esc(propertyById(r.propertyId)?.name || "—")}</b>
-          <span class="dim">${esc(formatDate(t.meta.date))}
-            · ${esc(userName(t.meta.outgoingLeaderId))} → ${esc(userName(t.meta.incomingLeaderId)) || "—"}</span>
-          ${matches.length ? `<p class="sm dim">Matched in ${esc(matches.join(", "))}</p>` : ""}
-        </div>
-        ${statusBadge(r.status)}
-      </div>`;
-    }).join("")}
+    ${hits.map((hit) => hit.kind === "turnover" ? turnoverResult(hit) : moduleResult(hit)).join("")}
+  </div>`;
+}
+
+function turnoverResult({ record: r, matches }) {
+  const t = r.data;
+  return `<div class="result" data-goto="/turnover/${esc(r.id)}" tabindex="0" role="link">
+    <div class="result-main">
+      <b>${esc(t.meta.shiftName)} · ${esc(propertyById(r.propertyId)?.name || "—")}</b>
+      <span class="dim">${esc(formatDate(t.meta.date))}
+        · ${esc(userName(t.meta.outgoingLeaderId))} → ${esc(userName(t.meta.incomingLeaderId)) || "—"}</span>
+      ${matches.length ? `<p class="sm dim">Matched in ${esc(matches.join(", "))}</p>` : ""}
+    </div>
+    <div class="result-end"><span class="pill">Turnover</span>${statusBadge(r.status)}</div>
+  </div>`;
+}
+
+function moduleResult({ mod, record: r }) {
+  const title = r.data.title || r.data.description || mod.label;
+  return `<div class="result" data-goto="/${esc(mod.route)}/${esc(r.id)}" tabindex="0" role="link">
+    <div class="result-main">
+      <b><span class="mono">${esc(r.data.ref || "—")}</span> · ${esc(String(title).slice(0, 80))}</b>
+      <span class="dim">${esc(formatDate(r.data.date))} · ${esc(propertyById(r.propertyId)?.name || "—")}</span>
+    </div>
+    <div class="result-end"><span class="pill">${esc(mod.label)}</span>${statusBadge(r.status, mod.workflow)}</div>
   </div>`;
 }

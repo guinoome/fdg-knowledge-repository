@@ -26,7 +26,8 @@ import * as identity from "../identity.js";
 import * as db from "../db.js";
 import * as T from "../turnover.js";
 import * as intake from "../intake/engine.js";
-import { esc, statusBadge, formatDate, relativeDays, emptyState } from "../ui.js";
+import * as M from "../modules/model.js";
+import { esc, statusBadge, formatDate, relativeDays, emptyState, severityPill } from "../ui.js";
 
 export async function dashboardScreen(_params, view) {
   const me = identity.current();
@@ -42,14 +43,23 @@ export async function dashboardScreen(_params, view) {
   const records = await db.all({ type: T.TYPE, propertyId });
   const queue = await intake.queue(propertyId).catch(() => []);
 
+  // Every operational module the dashboard consolidates. SPEC-0002 §Scope:
+  // the dashboard reads these, it does not own them.
+  const mods = Object.fromEntries(await Promise.all(
+    M.allModules().map(async (mod) => [mod.id, {
+      mod,
+      all: await M.list(mod, propertyId),
+      open: await M.openRecords(mod, propertyId)
+    }])));
+
   const ctx = {
-    me, prop, records, queue,
+    me, prop, records, queue, mods,
     level: identity.roleLevel(),
     open: records.filter((r) => T.isOpen(r.status)),
     attention: records.filter((r) => T.needsAttention(r.status)),
     escalated: records.filter((r) => T.requiresEscalation(r.data) && T.isOpen(r.status)),
-    plants: latestPlantStatus(records),
-    utilities: latestUtilities(records),
+    plants: mergePlantStatus(latestPlantStatus(records), mods["plant-log"].all, prop),
+    utilities: mergeUtilities(latestUtilities(records), mods["utility-reading"].all, prop),
     tasks: openTasks(records.filter((r) => T.isOpen(r.status)))
   };
 
@@ -133,14 +143,14 @@ function kpiPanel(ctx) {
     kpi("Active tasks", ctx.tasks.length, ctx.tasks.length ? "amber" : "green", "#/turnovers"),
     kpi("Needs attention", ctx.attention.length, ctx.attention.length ? "amber" : "green", "#/turnovers"),
     kpi("Escalated", ctx.escalated.length, ctx.escalated.length ? "red" : "green", "#/turnovers"),
-    kpi("Open concerns", countFixture("concerns", ctx.prop.id), "neutral"),
-    kpi("Critical incidents", criticalIncidents(ctx.prop.id), criticalIncidents(ctx.prop.id) ? "red" : "green"),
+    kpi("Open concerns", ctx.mods.concern.open.length, ctx.mods.concern.open.length ? "amber" : "green", "#/concerns"),
+    kpi("Active incidents", ctx.mods.incident.open.length, ctx.mods.incident.open.length ? "red" : "green", "#/incidents"),
     kpi("Intake queue", ctx.queue.length, ctx.queue.length ? "amber" : "green"),
     availability === null
       ? kpiUnmeasured("Plant availability")
-      : kpi("Plant availability", `${availability}%`, availability < 100 ? "amber" : "green"),
-    kpiUnmeasured("OOO rooms"),
-    kpiUnmeasured("OOS rooms")
+      : kpi("Plant availability", `${availability}%`, availability < 100 ? "amber" : "green", "#/plant-log"),
+    kpi("OOO rooms", countAvailability(ctx, "OOO"), countAvailability(ctx, "OOO") ? "red" : "green", "#/availability"),
+    kpi("OOS rooms", countAvailability(ctx, "OOS"), countAvailability(ctx, "OOS") ? "amber" : "green", "#/availability")
   ];
   return `<section class="kpis" aria-label="Key figures">${cards.join("")}</section>`;
 }
@@ -223,7 +233,7 @@ function plantPanel(ctx) {
     CONFIG.dashboard.modules["plant-operations"],
     `<table class="tbl"><thead><tr><th>Plant</th><th>Status</th><th>As of</th></tr></thead>
       <tbody>${rows}</tbody></table>
-     <p class="hint sm">Status is carried from shift turnovers. Live plant telemetry arrives with FWIS-SPEC-0012.</p>`,
+     <p class="hint sm">Latest report per plant, from shift turnovers or <a href="#/plant-log">plant log entries</a>. Live telemetry and alarm thresholds (SPEC-0012 §6) still need a device integration.</p>`,
     { wide: true });
 }
 
@@ -249,7 +259,7 @@ function utilityPanel(ctx) {
     `<table class="tbl">
        <thead><tr><th>Utility</th><th>Reading</th><th>As of</th><th>Daily</th><th>Cost</th></tr></thead>
        <tbody>${rows}</tbody></table>
-     <p class="hint sm">Consumption, cost and budget utilisation need metered history — FWIS-SPEC-0011. A single turnover reading cannot produce them.</p>`,
+     <p class="hint sm">Latest reading per utility, from turnovers or <a href="#/utility-readings">meter readings</a>. Cost and budget utilisation additionally need tariffs and cost centres (SPEC-0011 §6).</p>`,
     { wide: true });
 }
 
@@ -284,42 +294,90 @@ function assignmentPanel(ctx) {
 /* ---------------------------------------------------------- 7. concerns -- */
 
 function concernPanel(ctx) {
-  const list = CONFIG.mockFeeds.concerns[ctx.prop.id] || [];
-  return block("Concerns", "Open items awaiting resolution",
-    CONFIG.dashboard.modules["concerns-tracker"],
-    list.length
-      ? `<table class="tbl"><thead><tr><th>Reference</th><th>Category</th><th>Status</th></tr></thead>
-          <tbody>${list.map((c) => `<tr>
-            <td class="mono">${esc(c.id)}</td><td>${esc(c.category)}</td><td>${esc(c.status)}</td>
-          </tr>`).join("")}</tbody></table>`
-      : `<p class="hint">No open concerns for this property.</p>`);
+  return modulePanel(ctx, "concern", "Concerns", "Open items awaiting resolution",
+    ["ref", "category", "priority", "assigneeId", "status"],
+    "No open concerns for this property.");
 }
 
 /* --------------------------------------------------------- 8. incidents -- */
 
 function incidentPanel(ctx) {
-  const list = CONFIG.mockFeeds.incidents[ctx.prop.id] || [];
-  return block("Recent incidents", "Active and monitored events",
-    CONFIG.dashboard.modules["incident-management"],
-    list.length
-      ? `<table class="tbl"><thead><tr><th>Reference</th><th>Category</th><th>Severity</th><th>Status</th><th>Engineer</th></tr></thead>
-          <tbody>${list.map((i) => `<tr${T.isEscalatingIncident(i.severity) ? ' class="flagged"' : ""}>
-            <td class="mono">${esc(i.id)}</td>
-            <td>${esc(i.category)}</td>
-            <td><span class="pill text-${severityClassFor("incidentSeverity", i.severity) || "grey"}">${esc(i.severity)}</span></td>
-            <td>${esc(i.status)}</td>
-            <td class="dim">${esc(i.engineer)}</td>
-          </tr>`).join("")}</tbody></table>`
-      : `<p class="hint">No incidents recorded for this property.</p>`, { wide: true });
+  return modulePanel(ctx, "incident", "Recent incidents", "Active and monitored events",
+    ["ref", "date", "category", "severity", "assigneeId", "status"],
+    "No incidents recorded for this property.", { wide: true });
+}
+
+/** One panel renderer for every module-backed section. Columns are named
+ *  rather than taken from listColumns, because a dashboard summary and a full
+ *  index legitimately want different ones. */
+function modulePanel(ctx, moduleId, title, sub, columns, emptyText, opts = {}) {
+  const entry = ctx.mods[moduleId];
+  const mod = entry.mod;
+  const rows = entry.open.slice(0, CONFIG.dashboard.recentLimit);
+  const source = CONFIG.dashboard.modules[dashboardKeyFor(moduleId)] || "live";
+
+  if (!rows.length) {
+    return block(title, sub, source,
+      `<p class="hint">${esc(emptyText)} <a href="#/${esc(mod.route)}/new">Record one</a>.</p>`, opts);
+  }
+
+  const head = columns.map((c) => `<th>${esc(colLabel(mod, c))}</th>`).join("");
+  const body = rows.map((r) => `<tr data-goto="${esc(`${mod.route}/${r.id}`)}" tabindex="0" role="link">
+    ${columns.map((c) => `<td>${moduleCell(mod, c, r)}</td>`).join("")}
+  </tr>`).join("");
+
+  return block(title, sub, source,
+    `<div class="tbl-wrap"><table class="tbl tbl-linked">
+      <thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>
+     ${entry.open.length > rows.length
+        ? `<p class="hint sm"><a href="#/${esc(mod.route)}">${entry.open.length - rows.length} more open</a></p>` : ""}`,
+    opts);
+}
+
+function colLabel(mod, col) {
+  if (col === "ref") return "Reference";
+  if (col === "status") return "Status";
+  return mod.fields.find((f) => f.id === col)?.label || col;
+}
+
+function moduleCell(mod, col, r) {
+  if (col === "ref") return `<span class="mono">${esc(r.data.ref || "—")}</span>`;
+  if (col === "status") return statusBadge(r.status, mod.workflow);
+  const field = mod.fields.find((f) => f.id === col);
+  if (!field) return "";
+  const v = M.displayValue(mod, field, r.data, r.propertyId);
+  if (!v) return `<span class="dim">—</span>`;
+  if (field.type === "date") return esc(formatDate(r.data[col]));
+  if (field.type === "enum" && field.enumName === mod.severityEnum) return severityPill(field.enumName, r.data[col]);
+  return esc(v);
+}
+
+/** Maps a module id to its dashboard.modules key. They differ because the
+ *  dashboard names capabilities (what a Chief Engineer asks for) while modules
+ *  name record types (what the system stores). */
+function dashboardKeyFor(moduleId) {
+  return {
+    incident: "incident-management",
+    concern: "concerns-tracker",
+    availability: "room-status",
+    announcement: "announcements",
+    "plant-log": "plant-operations",
+    "utility-reading": "utilities-monitoring",
+    "daily-briefing": "daily-operations"
+  }[moduleId] || moduleId;
+}
+
+function countAvailability(ctx, type) {
+  return ctx.mods.availability.open.filter((r) => r.data.availabilityType === type).length;
 }
 
 /* ------------------------------------------------------------- 9. rooms -- */
 
-function roomPanel() {
-  return block("Room engineering status", "OOO, OOS, under repair, inspection required",
-    CONFIG.dashboard.modules["room-status"],
-    pending("FWIS-SPEC-0008 — OOO &amp; OOS Management",
-      "Room status is not derivable from turnovers: a turnover records the rooms touched during one shift, not the standing state of every room."));
+function roomPanel(ctx) {
+  return modulePanel(ctx, "availability", "Room engineering status",
+    "OOO, OOS, under repair, awaiting inspection",
+    ["ref", "assetRef", "availabilityType", "reason", "expectedRelease", "status"],
+    "No rooms or assets are out of order or out of service.", { wide: true });
 }
 
 /* --------------------------------------------------------- 10. turnover -- */
@@ -348,11 +406,27 @@ function turnoverPanel(ctx) {
 
 /* ---------------------------------------------------- 11. announcements -- */
 
-function announcementPanel() {
+/** §10: "Announcements may be pinned based on priority." Pinned first, then
+ *  most recent; expired ones drop out on their own. */
+function announcementPanel(ctx) {
+  const today = new Date().toISOString().slice(0, 10);
+  const live = ctx.mods.announcement.all
+    .filter((r) => r.status === "Published")
+    .filter((r) => !r.data.expiresOn || r.data.expiresOn >= today)
+    .sort((a, b) => (b.data.pinned ? 1 : 0) - (a.data.pinned ? 1 : 0));
+
   return block("Announcements", "Advisories, safety notices, planned shutdowns",
     CONFIG.dashboard.modules.announcements,
-    pending("FWIS-SPEC-0005 — Group Communications",
-      "Announcements are published, not derived. Nothing in FWIS currently publishes them."));
+    live.length
+      ? live.slice(0, CONFIG.dashboard.recentLimit).map((r) => `
+        <div class="dash-row" data-goto="announcements/${esc(r.id)}" tabindex="0" role="link">
+          <div>
+            <b>${r.data.pinned ? "📌 " : ""}${esc(r.data.title)}</b>
+            <span class="dim">${esc(formatDate(r.data.date))} · ${esc(userName(r.data.reporterId))}</span>
+          </div>
+          ${severityPill("announcementType", r.data.announcementType)}
+        </div>`).join("")
+      : `<p class="hint">Nothing published. <a href="#/announcements/new">Post an announcement</a>.</p>`);
 }
 
 /* ---------------------------------------------------------- 12. weather -- */
@@ -434,6 +508,35 @@ export function latestPlantStatus(records) {
   return latest;
 }
 
+/** Plant status can come from a shift turnover or from a Plant Operations log
+ *  entry. The most recent report wins regardless of which module produced it —
+ *  a Chief Engineer cares when it was reported, not which screen recorded it. */
+export function mergePlantStatus(fromTurnovers, logEntries, prop) {
+  const merged = new Map(fromTurnovers);
+  for (const r of logEntries) {
+    const name = prop.plants.find((p) => p.id === r.data.plantId)?.name;
+    if (!name || !r.data.plantStatus) continue;
+    const existing = merged.get(name);
+    if (!existing || String(r.data.date) >= String(existing.date)) {
+      merged.set(name, { status: r.data.plantStatus, date: r.data.date, remarks: r.data.description });
+    }
+  }
+  return merged;
+}
+
+export function mergeUtilities(fromTurnovers, readings, prop) {
+  const merged = new Map(fromTurnovers);
+  for (const r of readings) {
+    const u = prop.utilities.find((x) => x.id === r.data.utilityId);
+    if (!u || r.data.reading === "" || r.data.reading == null) continue;
+    const existing = merged.get(u.name);
+    if (!existing || String(r.data.date) >= String(existing.date)) {
+      merged.set(u.name, { reading: r.data.reading, unit: u.unit, abnormal: r.data.abnormal, date: r.data.date });
+    }
+  }
+  return merged;
+}
+
 export function latestUtilities(records) {
   const latest = new Map();
   for (const r of records) {
@@ -458,13 +561,15 @@ function rankPriority(p) {
 }
 
 function wireNavigation(view) {
-  view.querySelectorAll("[data-goto-id]").forEach((el) => {
-    const go = () => { location.hash = `/turnover/${el.dataset.gotoId}`; };
+  const bind = (el, path) => {
+    const go = () => { location.hash = path; };
     el.addEventListener("click", go);
     el.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
     });
-  });
+  };
+  view.querySelectorAll("[data-goto-id]").forEach((el) => bind(el, `/turnover/${el.dataset.gotoId}`));
+  view.querySelectorAll("[data-goto]").forEach((el) => bind(el, `/${el.dataset.goto}`));
 }
 
 function wirePropertySwitch(view) {

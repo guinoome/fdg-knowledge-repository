@@ -91,6 +91,16 @@ If a request implies Stage 1 work while Stage 0 is unfinished, say so and stop. 
 
 ---
 
+## Operational modules — read before adding one
+
+Nine of fifteen specifications are implemented. Seven of them (Incidents, Concerns, OOO/OOS, Announcements, Plant log, Meter readings, Daily briefings) are **declared in `config.modules`, not written as screens.** One model and three generic screens render all of them, and routes and navigation generate from the registry.
+
+So: **adding a module is a config entry, not a new screen.** If you find yourself writing a fourth module screen, stop — either the declaration needs a new field type, or the module is genuinely not the same shape as the others, and that is worth saying out loud rather than bending the framework around it.
+
+The framework guarantees three things every module inherits, and none of them should be reimplemented per-module: the lifecycle is a state machine with declared transitions, every status change is audited with who/when/from/to/why, and fields can be gated by `showFrom` so they appear only when their state is reached.
+
+Partial modules are partial in one consistent way — the operational record exists, the administrative builder does not. Plant Operations can log a chiller as Critical but cannot define what a chiller is.
+
 ## No hardcoding
 
 Properties, buildings, departments, plants, utilities, approval chains, and workflows are config-driven, not hardcoded. Decide this in the schema from the first commit — retrofitting it later is a data migration, not a refactor.
@@ -134,8 +144,10 @@ Stage 0 (`../FWIS/`) — must be **served**, since service workers need a secure
 
 ```bash
 python -m http.server 8792      # from ../FWIS/
-node verify/smoke-test.mjs      # 82 assertions — the application
+node verify/smoke-test.mjs      # 117 assertions — the application
 node verify/sync-test.mjs       # 34 assertions — the sync engine
+node verify/intake-test.mjs     # 74 assertions — intake and the session bridge
+node verify/module-test.mjs     # 53 assertions — the operational modules
 ```
 
 Against a real backend, credentials from the environment only — never written to disk:

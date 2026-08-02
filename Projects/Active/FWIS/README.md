@@ -29,8 +29,17 @@ Sync is **additive**: with no credentials in `src/config.js` the app is exactly 
 | Turnover list | `#/turnovers` | FWIS-SPEC-0003 v1.1 Screen C |
 | Compose turnover | `#/turnover/new` | Screen A — 7-step wizard |
 | Turnover detail / review | `#/turnover/:id` | Screen B — incl. acceptance panel |
-| Search | `#/search` | FWIS_VISION §Search |
+| Incidents | `#/incidents` | FWIS-SPEC-0013 |
+| Concerns | `#/concerns` | FWIS-SPEC-0007 |
+| OOO & OOS | `#/availability` | FWIS-SPEC-0008 |
+| Announcements | `#/announcements` | FWIS-SPEC-0005 |
+| Plant operations | `#/plant-log` | FWIS-SPEC-0012 |
+| Utilities monitoring | `#/utility-readings` | FWIS-SPEC-0011 |
+| Daily operations | `#/briefings` | FWIS-SPEC-0001 |
+| Search | `#/search` | FWIS_VISION §Search — across every record type |
 | Account / sign-in | `#/account` | Stage 1a — hidden when sync is unconfigured |
+
+The seven module screens above are **generated from declarations**, not written individually — see below.
 
 Plus: installable PWA (manifest, service worker, offline), light and dark themes, IndexedDB persistence, and Supabase sync.
 
@@ -49,6 +58,8 @@ src/
   config.js           SINGLE SOURCE OF TRUTH — org, enums, workflow, limits
   identity.js         who is acting and where — membership, or config when local
   db.js               IndexedDB + sync-ready record envelope
+  modules/
+    model.js          one model behind seven specifications
   router.js           hash router
   ui.js               shared render helpers, theme, toasts, connectivity
   turnover.js         domain model — shape, validation, escalation
@@ -108,12 +119,13 @@ The app works without a network once loaded. Theme follows the OS preference and
 ```bash
 npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
-node verify/smoke-test.mjs          # 102 assertions — the application
+node verify/smoke-test.mjs          # 117 assertions — the application
 node verify/sync-test.mjs           # 34 assertions — the sync engine
 node verify/intake-test.mjs         # 74 assertions — the intake engine and bridge
+node verify/module-test.mjs         # 53 assertions — the operational modules
 ```
 
-**210 assertions total**, each exiting non-zero on failure. None needs a backend.
+**278 assertions total**, each exiting non-zero on failure. None needs a backend.
 
 A third suite runs against a real hosted Supabase project and is therefore opt-in:
 
@@ -143,9 +155,42 @@ Credentials come from the environment only; they are never written to disk or to
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-03 — 102/102, 34/34, 74/74, and 53/53 live passed. **263 assertions.**
+**Last verified:** 2026-08-03 — 117/117, 34/34, 74/74, 53/53, and 53/53 live passed. **331 assertions.**
+
+`module-test.mjs` drives the real module model: the registry, state-machine integrity across every declared workflow, progressive field disclosure, reference numbering, the audit trail, per-property option scoping, and storage. `smoke-test.mjs` additionally drives one module end to end through the generated screens — create, gated submit, permitted transitions only, audited move, list, dashboard and search.
+
+### Specification coverage
+
+Nine of fifteen specifications are implemented, four of them partially. This table is the honest state, not the aspiration:
+
+| Spec | Module | State |
+|---|---|---|
+| SPEC-0002 Engineering Dashboard | Dashboard | Complete against its layout and components |
+| SPEC-0003 Shift Turnover | Turnovers | Complete |
+| SPEC-0007 Concerns Tracker | Concerns | Complete — registration, categories, priorities, assignment, status audit, resolution |
+| SPEC-0013 Incident Management | Incidents | Lifecycle, classification, severity, RCA and corrective actions. **Partial:** no response-time SLA tracking |
+| SPEC-0008 OOO & OOS | Availability | Lifecycle, reason codes, work reference, inspection, release. **Partial:** no asset registry — assets are typed, not selected |
+| SPEC-0001 Daily Operations | Briefings | **Partial:** briefing and shift priorities only. Assignments still come from turnovers |
+| SPEC-0005 Group Communications | Announcements | **Partial:** announcements only. No channels, threads, mentions or action conversion |
+| SPEC-0012 Plant Operations | Plant log | **Partial:** status and parameter logging. No plant builder, equipment registry, alarms or trends |
+| SPEC-0011 Utilities Monitoring | Meter readings | **Partial:** reading capture and abnormal flagging. No meter registry, tariffs, consumption maths or billing allocation |
+| SPEC-0004, -0006, -0009, -0010, -0014, -0015 | — | Not started: Operations Logbook, Engineering Notes, Room Engineering Status, Workflow Management, Reports, Analytics |
+
+The partial modules are partial in a consistent way: the **operational record** exists, and the **administrative configuration** around it does not. Plant Operations can log that a chiller is Critical but cannot yet define what a chiller is, because that is a builder UI rather than an operating one.
 
 `intake-test.mjs` drives the **real** intake engine against the sample adapter, covering: the adapter contract and its rejection of malformed adapters, rule-based classification including escalation, deduplication by external id across a simulated crash, cursor advance ordering, per-source failure isolation, disposition, and that a second adapter with entirely different content needs no engine change. It also covers the session bridge — origin allowlisting, protocol version, refusal of an API source fed through it, partial-batch discards, idle detection, and replay dedupe.
+
+### One framework, seven modules
+
+Incident Management, Concerns Tracker, OOO/OOS, Group Communications, Plant Operations, Utilities Monitoring and Daily Operations all specify the same skeleton: a numbered record, where it happened, a category, a priority, a description, a reporter, an owner, and a lifecycle whose every status change is audited. The differences are entirely data.
+
+So a module is **declared in `config.modules`** — its fields, enums, workflow and list columns — and [modules/model.js](Projects/Active/FWIS/src/modules/model.js) plus three generic screens render any of them. Routes and navigation are generated from the registry, so adding a module is a config entry, not a new screen. Seven bespoke implementations would have meant seven places to fix every future bug.
+
+Three properties fall out of doing it this way:
+
+- **The lifecycle is a state machine, not a dropdown.** Each workflow state declares its permitted `next` states, and both the UI and the model refuse anything else. An incident cannot jump from Reported to Closed. FBPOIS-WF-0000 specifies a state machine; a status reachable from anywhere would not be one. The suite asserts every state is reachable, every transition targets a real state, and no non-terminal state is a dead end.
+- **Every transition is audited** — who, when, from, to, why. FWIS-SPEC-0007 §5 requires that trail; every module inherits it rather than implementing its own.
+- **Fields appear progressively.** A field can declare `showFrom`, so nobody is asked for a root cause while reporting an incident — and entering that state is blocked until it is filled.
 
 ### The dashboard states its sources
 
@@ -153,9 +198,10 @@ FWIS-SPEC-0002 §Scope: *"The dashboard is a presentation layer only. It retriev
 
 | Badge | Meaning | Panels |
 |---|---|---|
-| *(none)* | A built module supplying real records | Needs attention, shift turnover, engineering assignments, quick actions |
-| **sample data** | Config fixtures standing in until the module is built | Concerns, recent incidents |
-| **no source yet** | No source at all — the panel names the spec it waits for | Room status (SPEC-0008), announcements (SPEC-0005), weather |
+| *(none)* | A built module supplying real records | Everything except weather |
+| **no source yet** | No source at all — the panel names what it waits for | Weather (external API, marked optional by §11) |
+
+Every panel except weather is now backed by a real module. No panel shows sample data.
 
 Two consequences are deliberate and asserted by the suite. A KPI with no source module renders **"not measured"** rather than `0`, because *none* and *not measured* are different answers and rendering them alike is how a dashboard lies. And a configured plant that has never been reported still appears, marked **Not reported** — a plant absent from the table reads as "fine" when it means "unknown", which is the more dangerous of the two.
 
@@ -191,7 +237,9 @@ Residue on the project: three `fwis-live-*@example.com` users and tombstoned rec
 ## Known gaps
 
 - **Attachments record metadata, not bytes.** File name, size, type, and caption are stored; the file itself is not persisted. Storing blobs is cheap in IndexedDB but meaningless without sync — deferred to Stage 1 with the rest of the storage story.
-- **Incidents and concerns are read-only config fixtures** (`config.mockFeeds`), standing in for Incident Management and the Concerns Tracker. Live intake is Stage 1.
+- **Reference numbers can collide offline.** `INC-2026-0007` is derived from what the device can see, so two devices creating a record while offline can mint the same number. Record ids stay unique and nothing is lost or overwritten, but the human-facing reference needs a server-side sequence to be authoritative.
+- **No administrative builders.** Plants, utilities, buildings and the roster are config, not editable in the app. This is why five modules are marked partial above — the operating half exists, the configuring half does not.
+- **`config.mockFeeds` is now unused by the dashboard** but still seeds the incidents and concerns sections of a new turnover, per SPEC-0003. Those should read from the real modules once turnover composition is revisited.
 - **Identity is real, roles are not yet enforced.** `src/identity.js` derives the acting user and their properties from `property_members` when signed in, falling back to `config.session` when sync is unconfigured so Stage 0 still has an author. The role that membership assigns is read and displayed, but no screen gates an action on it — the approval chain in FBPOIS-ROLE-0004 is still evaluated from config.
 - **The SLA and repeat-clarification escalation triggers are defined but only evaluated on demand** — with no backend there is no scheduler to fire them in the background.
 - **PWA icons are SVG.** Installable in Chromium browsers; add PNG fallbacks if a target platform rejects SVG icons.

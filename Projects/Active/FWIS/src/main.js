@@ -14,6 +14,10 @@ import { composeScreen } from "./screens/turnover-compose.js";
 import { detailScreen } from "./screens/turnover-detail.js";
 import { searchScreen } from "./screens/search.js";
 import { signInScreen } from "./screens/sign-in.js";
+import { moduleListScreen } from "./screens/module-list.js";
+import { moduleFormScreen } from "./screens/module-form.js";
+import { moduleDetailScreen } from "./screens/module-detail.js";
+import { allModules } from "./modules/model.js";
 
 /* ---------------------------------------------------------------- routes -- */
 
@@ -24,6 +28,16 @@ route("/turnover/:id", detailScreen);
 route("/turnover/:id/edit", composeScreen);
 route("/search", searchScreen);
 route("/account", signInScreen);
+
+// One set of routes per declared module. Registered before the not-found
+// handler so adding a module to config puts it in the app, with no route to
+// remember to add by hand.
+for (const mod of allModules()) {
+  route(`/${mod.route}`, moduleListScreen(mod.route));
+  route(`/${mod.route}/new`, moduleFormScreen(mod.route));
+  route(`/${mod.route}/:id`, moduleDetailScreen(mod.route));
+  route(`/${mod.route}/:id/edit`, moduleFormScreen(mod.route));
+}
 
 setNotFound((path) => `<div class="error-state">
   <h2>Page not found</h2>
@@ -37,6 +51,7 @@ function boot() {
   initTheme();
   initConnectivity();
   initSyncChip();
+  initModuleNav();
 
   document.getElementById("theme-btn").addEventListener("click", toggleTheme);
   document.getElementById("app-stage").textContent = CONFIG.app.stage;
@@ -51,6 +66,21 @@ function boot() {
   });
 
   return startRouter();
+}
+
+/** Builds the navigation from the module registry, so adding a module to
+ *  config puts it in the menu. Inserted after Turnovers and before Search. */
+function initModuleNav() {
+  const nav = document.querySelector(".mainnav");
+  const before = nav?.querySelector('[data-nav="/search"]');
+  if (!nav || !before) return;
+  for (const mod of allModules()) {
+    const a = document.createElement("a");
+    a.href = `#/${mod.route}`;
+    a.setAttribute("data-nav", `/${mod.route}`);
+    a.textContent = mod.plural;
+    nav.insertBefore(a, before);
+  }
 }
 
 /** Surfaces sync state, and hides itself entirely when sync is not configured

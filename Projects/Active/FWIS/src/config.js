@@ -182,6 +182,53 @@ export const CONFIG = {
     acceptanceStatus: [
       { value: "Accepted", severity: "ok", requiresComment: false },
       { value: "Clarification Requested", severity: "warn", requiresComment: true }
+    ],
+
+    /* FWIS-SPEC-0013 §Incident Classification */
+    incidentCategory: [
+      { value: "Operational" }, { value: "Utilities" }, { value: "Fire Protection" },
+      { value: "Safety" }, { value: "Environmental" }, { value: "Security" },
+      { value: "Facility" }, { value: "IT / Automation" }
+    ],
+
+    /* FWIS-SPEC-0007 §2. Administrator configurable, per the spec. */
+    concernCategory: [
+      { value: "Mechanical" }, { value: "Electrical" }, { value: "Plumbing" },
+      { value: "HVAC" }, { value: "Civil" }, { value: "Architectural" },
+      { value: "Fire Protection" }, { value: "Utilities" }, { value: "Safety" },
+      { value: "Environmental" }, { value: "Housekeeping Support" }, { value: "Vendor Coordination" }
+    ],
+
+    /* FWIS-SPEC-0008 §3, grouped as the spec groups them. */
+    availabilityReason: [
+      { value: "Mechanical Failure", group: "Engineering" },
+      { value: "Electrical Failure", group: "Engineering" },
+      { value: "Plumbing", group: "Engineering" },
+      { value: "HVAC", group: "Engineering" },
+      { value: "Civil Works", group: "Engineering" },
+      { value: "Deep Cleaning", group: "Operations" },
+      { value: "VIP Reservation", group: "Operations" },
+      { value: "Safety Closure", group: "Operations" },
+      { value: "Event Preparation", group: "Operations" },
+      { value: "Security Restriction", group: "Operations" },
+      { value: "Inventory", group: "Administrative" },
+      { value: "Inspection", group: "Administrative" },
+      { value: "Audit", group: "Administrative" },
+      { value: "Renovation", group: "Administrative" }
+    ],
+
+    availabilityType: [
+      { value: "OOO", severity: "alarm" },
+      { value: "OOS", severity: "warn" }
+    ],
+
+    /* FWIS-SPEC-0005 §Communication Types */
+    announcementType: [
+      { value: "Operational Advisory", severity: "info" },
+      { value: "Safety Notice", severity: "alarm" },
+      { value: "Management Instruction", severity: "warn" },
+      { value: "Planned Shutdown", severity: "warn" },
+      { value: "General", severity: "neutral" }
     ]
   },
 
@@ -194,6 +241,82 @@ export const CONFIG = {
   /* -- Workflow — FWIS-SPEC-0003 v1.1 Status Model, specialising the generic
         state machine in FBPOIS-WF-0000. Chain from FBPOIS-ROLE-0004. ------- */
   workflows: {
+    /* FWIS-SPEC-0013 §Incident Lifecycle, verbatim. `next` lists the permitted
+       transitions — FBPOIS-WF-0000 is a state machine, so a status the user can
+       reach from anywhere is not a state machine, it is a dropdown. */
+    incident: {
+      id: "incident",
+      label: "Incident",
+      states: [
+        { value: "Reported", genericState: "Draft", severity: "alarm", open: true, needsAttention: true, next: ["Acknowledged", "Closed"] },
+        { value: "Acknowledged", genericState: "Submitted", severity: "warn", open: true, needsAttention: true, next: ["Under Investigation", "Closed"] },
+        { value: "Under Investigation", genericState: "Review", severity: "warn", open: true, next: ["Containment Actions", "Root Cause Analysis"] },
+        { value: "Containment Actions", genericState: "Review", severity: "warn", open: true, next: ["Root Cause Analysis"] },
+        { value: "Root Cause Analysis", genericState: "Review", severity: "info", open: true, next: ["Corrective Actions"] },
+        { value: "Corrective Actions", genericState: "Review", severity: "info", open: true, next: ["Verification"] },
+        { value: "Verification", genericState: "Approved", severity: "info", open: true, next: ["Closed", "Corrective Actions"] },
+        { value: "Closed", genericState: "Closed", severity: "neutral", open: false, terminal: true, next: [] }
+      ],
+      initial: "Reported"
+    },
+
+    /* FWIS-SPEC-0007 §Concern Lifecycle. The spec adds: "Organizations may
+       configure additional workflow states" — which is why this is data. */
+    concern: {
+      id: "concern",
+      label: "Concern",
+      states: [
+        { value: "New", genericState: "Draft", severity: "warn", open: true, needsAttention: true, next: ["Assigned", "Closed"] },
+        { value: "Assigned", genericState: "Submitted", severity: "info", open: true, next: ["In Progress", "Waiting"] },
+        { value: "In Progress", genericState: "Review", severity: "info", open: true, next: ["Waiting", "Completed"] },
+        { value: "Waiting", genericState: "Review", severity: "warn", open: true, needsAttention: true, next: ["In Progress", "Completed"] },
+        { value: "Completed", genericState: "Approved", severity: "ok", open: true, next: ["Verified", "In Progress"] },
+        { value: "Verified", genericState: "Approved", severity: "ok", open: true, next: ["Closed"] },
+        { value: "Closed", genericState: "Closed", severity: "neutral", open: false, terminal: true, next: [] }
+      ],
+      initial: "New"
+    },
+
+    /* FWIS-SPEC-0008 §Availability Lifecycle. "Released" returns the asset to
+       Available, which is the absence of a record rather than a state. */
+    availability: {
+      id: "availability",
+      label: "Availability",
+      states: [
+        { value: "Requested", genericState: "Draft", severity: "warn", open: true, needsAttention: true, next: ["Review", "Released"] },
+        { value: "Review", genericState: "Review", severity: "info", open: true, needsAttention: true, next: ["Approved", "Requested"] },
+        { value: "Approved", genericState: "Approved", severity: "info", open: true, next: ["Work in Progress"] },
+        { value: "Work in Progress", genericState: "Review", severity: "warn", open: true, next: ["Inspection"] },
+        { value: "Inspection", genericState: "Review", severity: "info", open: true, needsAttention: true, next: ["Released", "Work in Progress"] },
+        { value: "Released", genericState: "Closed", severity: "ok", open: false, terminal: true, next: [] }
+      ],
+      initial: "Requested"
+    },
+
+    /* FWIS-SPEC-0005 §2. Announcements are published, not approved. */
+    announcement: {
+      id: "announcement",
+      label: "Announcement",
+      states: [
+        { value: "Draft", genericState: "Draft", severity: "neutral", open: true, next: ["Published"] },
+        { value: "Published", genericState: "Approved", severity: "ok", open: true, next: ["Archived"] },
+        { value: "Archived", genericState: "Closed", severity: "neutral", open: false, terminal: true, next: [] }
+      ],
+      initial: "Draft"
+    },
+
+    /* Data-entry modules. FWIS-SPEC-0011 and -0012 describe administrator setup
+       followed by recurring entry — there is no approval chain to model, so a
+       logged reading is either recorded or superseded by a later one. */
+    "log-entry": {
+      id: "log-entry",
+      label: "Log entry",
+      states: [
+        { value: "Recorded", genericState: "Closed", severity: "ok", open: false, terminal: true, next: [] }
+      ],
+      initial: "Recorded"
+    },
+
     "shift-turnover": {
       id: "shift-turnover",
       label: "Shift Turnover",
@@ -307,6 +430,157 @@ export const CONFIG = {
     }
   },
 
+  /* ==========================================================================
+     Operational modules — FWIS-SPEC-0001, -0005, -0007, -0008, -0011, -0012, -0013
+     --------------------------------------------------------------------------
+     Every one of these specifications describes the same skeleton: a numbered
+     record, where it happened, a category, a priority, a description, who
+     reported it, who owns it, and a lifecycle with audited status changes.
+     Building seven near-identical screens would have meant seven places to fix
+     every future bug, so a module is declared here and rendered generically.
+
+     `fields` drives the form, the detail view, validation and search. Field
+     types resolve against this same config — `user` reads the property roster,
+     `building` its buildings — so a module inherits per-property scoping for
+     free and no module hardcodes an organisational value.
+     ========================================================================== */
+  modules: {
+    incident: {
+      id: "incident", type: "incident", route: "incidents",
+      label: "Incident", plural: "Incidents", prefix: "INC",
+      spec: "FWIS-SPEC-0013", workflow: "incident",
+      severityField: "severity", severityEnum: "incidentSeverity",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "time", label: "Time", type: "time" },
+        { id: "buildingId", label: "Building", type: "building", required: true },
+        { id: "departmentId", label: "Department", type: "department" },
+        { id: "location", label: "Location", type: "text" },
+        { id: "category", label: "Category", type: "enum", enumName: "incidentCategory", required: true },
+        { id: "severity", label: "Severity", type: "enum", enumName: "incidentSeverity", required: true },
+        { id: "description", label: "Description", type: "textarea", required: true },
+        { id: "reporterId", label: "Reporter", type: "user", required: true },
+        { id: "assigneeId", label: "Assigned engineer", type: "user" },
+        { id: "immediateActions", label: "Immediate actions", type: "textarea" },
+        { id: "rootCause", label: "Root cause", type: "textarea", showFrom: "Root Cause Analysis" },
+        { id: "correctiveActions", label: "Corrective actions", type: "textarea", showFrom: "Corrective Actions" },
+        { id: "preventiveActions", label: "Preventive actions", type: "textarea", showFrom: "Corrective Actions" },
+        { id: "lessonsLearned", label: "Lessons learned", type: "textarea", showFrom: "Verification" }
+      ],
+      listColumns: ["ref", "date", "category", "severity", "assigneeId", "status"]
+    },
+
+    concern: {
+      id: "concern", type: "concern", route: "concerns",
+      label: "Concern", plural: "Concerns", prefix: "CT",
+      spec: "FWIS-SPEC-0007", workflow: "concern",
+      severityField: "priority", severityEnum: "taskPriority",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "time", label: "Time", type: "time" },
+        { id: "buildingId", label: "Building", type: "building", required: true },
+        { id: "departmentId", label: "Department", type: "department" },
+        { id: "location", label: "Location", type: "text" },
+        { id: "equipment", label: "Equipment", type: "text" },
+        { id: "category", label: "Category", type: "enum", enumName: "concernCategory", required: true },
+        { id: "priority", label: "Priority", type: "enum", enumName: "taskPriority", required: true },
+        { id: "description", label: "Description", type: "textarea", required: true },
+        { id: "reporterId", label: "Reporter", type: "user", required: true },
+        { id: "assigneeId", label: "Assigned to", type: "user" },
+        { id: "resolution", label: "Resolution", type: "textarea", showFrom: "Completed" }
+      ],
+      listColumns: ["ref", "date", "category", "priority", "assigneeId", "status"]
+    },
+
+    availability: {
+      id: "availability", type: "availability", route: "availability",
+      label: "OOO / OOS record", plural: "OOO & OOS", prefix: "AV",
+      spec: "FWIS-SPEC-0008", workflow: "availability",
+      severityField: "availabilityType", severityEnum: "availabilityType",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "buildingId", label: "Building", type: "building", required: true },
+        { id: "assetRef", label: "Room / asset", type: "text", required: true },
+        { id: "availabilityType", label: "Status", type: "enum", enumName: "availabilityType", required: true },
+        { id: "reason", label: "Reason code", type: "enum", enumName: "availabilityReason", required: true },
+        { id: "workReference", label: "Work reference", type: "text" },
+        { id: "expectedRelease", label: "Expected release", type: "date" },
+        { id: "description", label: "Details", type: "textarea", required: true },
+        { id: "reporterId", label: "Raised by", type: "user", required: true },
+        { id: "assigneeId", label: "Assigned to", type: "user" },
+        { id: "inspectionNotes", label: "Inspection notes", type: "textarea", showFrom: "Inspection" }
+      ],
+      listColumns: ["ref", "date", "assetRef", "availabilityType", "reason", "status"]
+    },
+
+    announcement: {
+      id: "announcement", type: "announcement", route: "announcements",
+      label: "Announcement", plural: "Announcements", prefix: "ANN",
+      spec: "FWIS-SPEC-0005", workflow: "announcement",
+      severityField: "announcementType", severityEnum: "announcementType",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "announcementType", label: "Type", type: "enum", enumName: "announcementType", required: true },
+        { id: "title", label: "Title", type: "text", required: true },
+        { id: "description", label: "Message", type: "textarea", required: true },
+        { id: "buildingId", label: "Building", type: "building" },
+        { id: "reporterId", label: "Issued by", type: "user", required: true },
+        { id: "pinned", label: "Pin to dashboard", type: "boolean" },
+        { id: "expiresOn", label: "Expires on", type: "date" }
+      ],
+      listColumns: ["ref", "date", "announcementType", "title", "status"]
+    },
+
+    "plant-log": {
+      id: "plant-log", type: "plant-log", route: "plant-log",
+      label: "Plant log entry", plural: "Plant operations", prefix: "PL",
+      spec: "FWIS-SPEC-0012", workflow: "log-entry",
+      severityField: "plantStatus", severityEnum: "plantStatus",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "time", label: "Time", type: "time" },
+        { id: "plantId", label: "Plant", type: "plant", required: true },
+        { id: "plantStatus", label: "Status", type: "enum", enumName: "plantStatus", required: true },
+        { id: "runningHours", label: "Running hours", type: "number" },
+        { id: "parameters", label: "Parameter readings", type: "textarea" },
+        { id: "description", label: "Remarks", type: "textarea" },
+        { id: "reporterId", label: "Recorded by", type: "user", required: true }
+      ],
+      listColumns: ["ref", "date", "plantId", "plantStatus", "reporterId"]
+    },
+
+    "utility-reading": {
+      id: "utility-reading", type: "utility-reading", route: "utility-readings",
+      label: "Meter reading", plural: "Utilities monitoring", prefix: "UR",
+      spec: "FWIS-SPEC-0011", workflow: "log-entry",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "utilityId", label: "Utility", type: "utility", required: true },
+        { id: "meterRef", label: "Meter", type: "text" },
+        { id: "reading", label: "Reading", type: "number", required: true },
+        { id: "abnormal", label: "Flag as abnormal", type: "boolean" },
+        { id: "description", label: "Remarks", type: "textarea" },
+        { id: "reporterId", label: "Recorded by", type: "user", required: true }
+      ],
+      listColumns: ["ref", "date", "utilityId", "reading", "reporterId"]
+    },
+
+    "daily-briefing": {
+      id: "daily-briefing", type: "daily-briefing", route: "briefings",
+      label: "Daily briefing", plural: "Daily operations", prefix: "DO",
+      spec: "FWIS-SPEC-0001", workflow: "log-entry",
+      fields: [
+        { id: "date", label: "Date", type: "date", required: true },
+        { id: "shiftName", label: "Shift", type: "enum", enumName: "shiftName", required: true },
+        { id: "buildingId", label: "Building", type: "building" },
+        { id: "description", label: "Briefing", type: "textarea", required: true },
+        { id: "priorities", label: "Priorities for the shift", type: "textarea" },
+        { id: "reporterId", label: "Briefed by", type: "user", required: true }
+      ],
+      listColumns: ["ref", "date", "shiftName", "reporterId"]
+    }
+  },
+
   /* -- Engineering Dashboard — FWIS-SPEC-0002.
         §Scope is explicit that the dashboard is a presentation layer and owns
         no operational data. So every panel declares which module feeds it, and
@@ -320,14 +594,14 @@ export const CONFIG = {
       "shift-turnover": "live",
       search: "live",
       intake: "live",
-      "incident-management": "fixture",
-      "concerns-tracker": "fixture",
-      "plant-operations": "pending",
-      "utilities-monitoring": "pending",
-      "room-status": "pending",
+      "incident-management": "live",
+      "concerns-tracker": "live",
+      "plant-operations": "live",
+      "utilities-monitoring": "live",
+      "room-status": "live",
+      "daily-operations": "live",
+      announcements: "live",
       "operations-logbook": "pending",
-      "daily-operations": "pending",
-      announcements: "pending",
       weather: "pending",
       reports: "pending"
     },
@@ -340,10 +614,13 @@ export const CONFIG = {
       { id: "qa-turnover", label: "Start shift turnover", href: "#/turnover/new", minLevel: 1, module: "shift-turnover" },
       { id: "qa-search", label: "Search records", href: "#/search", minLevel: 1, module: "search" },
       { id: "qa-logbook", label: "Add logbook entry", href: "", minLevel: 1, module: "operations-logbook" },
-      { id: "qa-concern", label: "Create concern", href: "", minLevel: 2, module: "concerns-tracker" },
-      { id: "qa-incident", label: "Create incident", href: "", minLevel: 2, module: "incident-management" },
-      { id: "qa-plant", label: "Open plant operations", href: "", minLevel: 3, module: "plant-operations" },
-      { id: "qa-utilities", label: "Open utilities monitoring", href: "", minLevel: 3, module: "utilities-monitoring" },
+      { id: "qa-concern", label: "Create concern", href: "#/concerns/new", minLevel: 2, module: "concerns-tracker" },
+      { id: "qa-incident", label: "Create incident", href: "#/incidents/new", minLevel: 2, module: "incident-management" },
+      { id: "qa-ooo", label: "Raise OOO / OOS", href: "#/availability/new", minLevel: 2, module: "room-status" },
+      { id: "qa-briefing", label: "Record daily briefing", href: "#/briefings/new", minLevel: 2, module: "daily-operations" },
+      { id: "qa-plant", label: "Log plant status", href: "#/plant-log/new", minLevel: 3, module: "plant-operations" },
+      { id: "qa-utilities", label: "Record meter reading", href: "#/utility-readings/new", minLevel: 3, module: "utilities-monitoring" },
+      { id: "qa-announce", label: "Post announcement", href: "#/announcements/new", minLevel: 4, module: "announcements" },
       { id: "qa-report", label: "Generate report", href: "", minLevel: 4, module: "reports" }
     ],
 

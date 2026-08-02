@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FWIS module harness</title>
+</head>
+<body>
+<!--
+  Test harness. Loads the real operational-module model and the real IndexedDB
+  layer, and exposes them on window for verify/module-test.mjs to drive.
+
+  Nothing here is part of the application.
+-->
+<pre id="out">module harness ready</pre>
+<script type="module">
+  import * as db from "../src/db.js";
+  import { CONFIG } from "../src/config.js";
+  import * as M from "../src/modules/model.js";
+
+  window.FWIS_TEST = {
+    db, CONFIG, M,
+    async reset() { await db.clearAll(); },
+    prop: "prop-riverside",
+    user: "u-santos"
+  };
+  document.getElementById("out").textContent = "ready";
+</script>
+</body>
+</html>

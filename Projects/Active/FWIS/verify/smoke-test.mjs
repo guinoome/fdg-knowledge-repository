@@ -89,10 +89,10 @@ ok("Dashboard renders", await page.isVisible("#view"));
 const emptyDash = await page.textContent("#view");
 ok("Empty dashboard states the truth rather than fake numbers",
   emptyDash.includes("No turnover records on this device yet"));
-ok("Unmeasured KPIs are distinguished from zero", emptyDash.includes("not measured"));
-ok("Panels with no source module name the specification they wait for",
-  emptyDash.includes("FWIS-SPEC-0008") && emptyDash.includes("FWIS-SPEC-0005"));
-ok("Sample-data panels are labelled as such", emptyDash.includes("sample data"));
+// Weather is the last panel with no source at all, and it must still say so
+// rather than render an empty box.
+ok("A panel with no source still states its absence", emptyDash.includes("no source yet"));
+ok("No panel is backed by sample data any more", !emptyDash.includes("sample data"));
 // With nothing reported, every configured plant must still be listed and shown
 // as unreported: a plant absent from the table reads as "fine" when it means
 // "unknown", which is the more dangerous of the two.
@@ -365,8 +365,8 @@ const dashDetail = await page.evaluate(() => {
 
 ok("KPI cards are rendered", dashDetail.kpiCount >= 8, String(dashDetail.kpiCount));
 ok("KPIs support drill-down", dashDetail.drillDowns > 0, String(dashDetail.drillDowns));
-ok("KPIs without a source module are marked unmeasured", dashDetail.unmeasured >= 2,
-  String(dashDetail.unmeasured));
+// Every KPI now has a module behind it, so none should be unmeasured.
+check("Every KPI has a source module", dashDetail.unmeasured, 0);
 // An unreported plant must still appear: absent from the table reads as "fine"
 // when it actually means "unknown".
 check("Every configured plant is listed", dashDetail.plantRows, 8);
@@ -374,13 +374,84 @@ ok("Quick actions for built modules are enabled", dashDetail.quickEnabled >= 2,
   String(dashDetail.quickEnabled));
 ok("Quick actions for unbuilt modules are disabled", dashDetail.quickDisabled >= 1,
   String(dashDetail.quickDisabled));
-ok("Panels with no source render a stated absence", dashDetail.pendingPanels >= 3,
-  String(dashDetail.pendingPanels));
-ok("Fixture-backed panels carry a sample-data badge", dashDetail.fixtureBadges >= 2,
-  String(dashDetail.fixtureBadges));
+check("Only weather remains without a source", dashDetail.pendingPanels, 1);
+check("No sample-data badges remain", dashDetail.fixtureBadges, 0);
 ok("Context bar shows the current shift", dashDetail.shiftShown);
 
 await page.screenshot({ path: `${SHOTS}/08-dashboard.png`, fullPage: true });
+
+/* -- 8b. an operational module end to end ---------------------------------- */
+// Drives the generic module screens through a full lifecycle. The model has
+// its own suite; this proves the screens built from a config declaration
+// actually work.
+
+await page.goto(BASE + "#/incidents");
+await page.waitForSelector("#view .screen-head");
+ok("Module list renders from its declaration",
+  (await page.textContent("#view")).includes("Incidents"));
+
+await page.goto(BASE + "#/incidents/new");
+await page.waitForSelector("#mod-form");
+
+// Submitting empty must be refused by the generated form.
+await page.click('#mod-form button[type="submit"]');
+ok("Generated form gates on required fields",
+  await page.isVisible("#form-error"));
+
+await page.selectOption('#mod-form [name="buildingId"]', { index: 1 });
+await page.selectOption('#mod-form [name="category"]', "Utilities");
+await page.selectOption('#mod-form [name="severity"]', "Critical");
+await page.fill('#mod-form [name="description"]', "Generator 2 failed to start on weekly test");
+await page.selectOption('#mod-form [name="reporterId"]', "u-santos");
+ok("Later-stage fields are absent from the create form",
+  !(await page.isVisible('#mod-form [name="rootCause"]')));
+await page.click('#mod-form button[type="submit"]');
+
+await page.waitForSelector("#transition");
+const detail = await page.textContent("#view");
+ok("Created record gets a reference number", /INC-\d{4}-\d{4}/.test(detail), detail.slice(0, 120));
+ok("Created record opens in its initial state", detail.includes("Reported"));
+ok("Detail cites the governing specification", detail.includes("FWIS-SPEC-0013"));
+
+// The workflow, not a free dropdown: Closed must not be reachable from Reported.
+const offered = await page.$$eval('#transition [name="to"] option', (os) =>
+  os.map((o) => o.value).filter(Boolean));
+ok("Only declared transitions are offered", offered.includes("Acknowledged"),
+  offered.join());
+ok("An illegal jump is not offered", !offered.includes("Verification"), offered.join());
+
+await page.selectOption('#transition [name="to"]', "Acknowledged");
+await page.fill('#transition [name="comment"]', "duty engineer attending");
+await page.click('#transition button[type="submit"]');
+// Wait for the audit entry, not the status name — "Acknowledged" is already on
+// the page as a dropdown option, so waiting for it would race the re-render.
+await page.waitForFunction(() =>
+  document.querySelector("#view")?.textContent.includes("duty engineer attending"));
+
+const afterMove = await page.textContent("#view");
+ok("Transition is applied", afterMove.includes("Acknowledged"));
+ok("Transition is audited with its comment", afterMove.includes("duty engineer attending"));
+ok("Audit records the originating state", afterMove.includes("Reported"));
+
+// A required field that only appears later must block entry to that state.
+await page.goto(BASE + "#/incidents");
+await page.waitForSelector(".tbl-linked");
+const listText = await page.textContent("#view");
+ok("New record appears in the module list", /INC-\d{4}-\d{4}/.test(listText));
+ok("List shows the record's current status", listText.includes("Acknowledged"));
+
+await page.goto(BASE + "#/");
+await page.waitForSelector(".kpis");
+const dashWithIncident = await page.textContent("#view");
+ok("Dashboard consolidates the new incident", /INC-\d{4}-\d{4}/.test(dashWithIncident));
+ok("Incident KPI reflects it", dashWithIncident.includes("Active incidents"));
+
+await page.goto(BASE + "#/search");
+await page.waitForSelector("#q");
+await page.fill("#q", "generator");
+await page.waitForFunction(() => document.querySelector("#results")?.textContent.includes("INC-"));
+ok("Search reaches module records, not just turnovers",
+  (await page.textContent("#results")).includes("INC-"));
 
 /* -- 9. search ------------------------------------------------------------- */
 

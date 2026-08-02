@@ -48,8 +48,10 @@ export function enumOptions(name, selected, placeholder) {
 
 /* ---------------------------------------------------------------- badge --- */
 
-export function statusBadge(status) {
-  return `<span class="badge"><span class="led on-${stateClassFor(status)}"></span>${esc(status)}</span>`;
+/** Workflow-aware: the same status name can carry different severity in
+ *  different workflows, so the badge must be told which one it is reading. */
+export function statusBadge(status, workflowId = "shift-turnover") {
+  return `<span class="badge"><span class="led on-${stateClassFor(status, workflowId)}"></span>${esc(status)}</span>`;
 }
 
 export function severityPill(enumName, value) {
