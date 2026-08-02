@@ -33,10 +33,13 @@ let loadError = null;
  *  every screen needs an author and a property to render at all. */
 export function current() {
   if (!authoritative()) {
+    // The roster assigns a role even without an account, and role-gated UI has
+    // to resolve to something in Stage 0 or every gate silently closes.
+    const p = propertyById(CONFIG.session.propertyId);
     return {
       userId: CONFIG.session.userId,
       propertyId: CONFIG.session.propertyId,
-      roleId: null,
+      roleId: p?.roster?.find((r) => r.id === CONFIG.session.userId)?.roleId || null,
       email: null,
       source: "config"
     };
@@ -85,6 +88,13 @@ export function displayName() {
 export function roleLabel() {
   const { roleId } = current();
   return roleId ? roleName(roleId) : "";
+}
+
+/** Numeric seniority for role-gated UI, 0 when no role is known. Reads the
+ *  ladder from config rather than ranking role ids in code. */
+export function roleLevel() {
+  const { roleId } = current();
+  return CONFIG.roles.find((r) => r.id === roleId)?.level || 0;
 }
 
 /** True once a signed-in user is known to belong to nothing. RLS will show

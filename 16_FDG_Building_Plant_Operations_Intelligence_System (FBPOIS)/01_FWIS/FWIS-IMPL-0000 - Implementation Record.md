@@ -60,7 +60,9 @@ The Validated Evidence section below is a **proposal input** to Controlled Evolu
 
 Covers the Shift Turnover implementation at `Projects/Active/FWIS/`. Does not cover the earlier validation prototype at `Projects/Active/FWIS-Shift-Turnover-Prototype/`, whose schema carried forward but whose code did not.
 
-The other fourteen FWIS specifications (SPEC-0001, SPEC-0002, SPEC-0004 … SPEC-0015) are unimplemented and out of scope.
+Also covers **FWIS-SPEC-0002 Engineering Dashboard**, implemented as a presentation layer over whatever modules exist.
+
+The other thirteen FWIS specifications (SPEC-0001, SPEC-0004 … SPEC-0015) are unimplemented and out of scope.
 
 ---
 
@@ -138,12 +140,13 @@ Closing D3 surfaced D7 rather than resolving it. Knowing a user's role is a prec
 
 # Verification Record
 
-**169 assertions**, each exiting non-zero on failure.
+**263 assertions**, each exiting non-zero on failure.
 
 | Suite | Assertions | Covers |
 |---|---|---|
-| Application | 82 | Routing, configuration-driven behaviour, field gating, escalation, full lifecycle, persistence, offline operation, PWA installability, WCAG AA contrast in both themes, the local-only contract, identity fallback, zero console errors |
+| Application | 102 | Routing, configuration-driven behaviour, field gating, escalation, full lifecycle, persistence, offline operation, PWA installability, WCAG AA contrast in both themes, the local-only contract, identity fallback, all twelve dashboard components and their source honesty, zero console errors |
 | Sync engine | 34 | Merge policy, clean pull and push, no-op re-sync, divergence and immutability conflicts, stale-revision refusal, tombstone propagation, two-device round trip |
+| Intake | 74 | Adapter contract, rule-based classification and escalation, dedupe across a simulated crash, per-source failure isolation, disposition, provider independence, session bridge origin allowlisting and replay dedupe |
 | Live backend | 53 | Authentication, server-side stamping, revision guard, tenant isolation, membership reads, cross-member editing, incremental pull, acceptance immutability, tombstones, token refresh |
 
 The live suite runs against a real hosted project using only the public client key — never the service key — because a suite that proved tenant isolation while holding a key that bypasses it would prove nothing.

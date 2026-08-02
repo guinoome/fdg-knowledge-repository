@@ -25,7 +25,7 @@ Sync is **additive**: with no credentials in `src/config.js` the app is exactly 
 
 | Screen | Route | Source |
 |---|---|---|
-| Dashboard | `#/` | FWIS_VISION §Chief Engineer dashboard |
+| Engineering Dashboard | `#/` | FWIS-SPEC-0002 — all 12 functional components |
 | Turnover list | `#/turnovers` | FWIS-SPEC-0003 v1.1 Screen C |
 | Compose turnover | `#/turnover/new` | Screen A — 7-step wizard |
 | Turnover detail / review | `#/turnover/:id` | Screen B — incl. acceptance panel |
@@ -108,12 +108,12 @@ The app works without a network once loaded. Theme follows the OS preference and
 ```bash
 npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
-node verify/smoke-test.mjs          # 82 assertions — the application
+node verify/smoke-test.mjs          # 102 assertions — the application
 node verify/sync-test.mjs           # 34 assertions — the sync engine
 node verify/intake-test.mjs         # 74 assertions — the intake engine and bridge
 ```
 
-**190 assertions total**, each exiting non-zero on failure. None needs a backend.
+**210 assertions total**, each exiting non-zero on failure. None needs a backend.
 
 A third suite runs against a real hosted Supabase project and is therefore opt-in:
 
@@ -143,9 +143,23 @@ Credentials come from the environment only; they are never written to disk or to
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-02 — 82/82, 34/34, 74/74, and 53/53 live passed. **243 assertions.**
+**Last verified:** 2026-08-03 — 102/102, 34/34, 74/74, and 53/53 live passed. **263 assertions.**
 
 `intake-test.mjs` drives the **real** intake engine against the sample adapter, covering: the adapter contract and its rejection of malformed adapters, rule-based classification including escalation, deduplication by external id across a simulated crash, cursor advance ordering, per-source failure isolation, disposition, and that a second adapter with entirely different content needs no engine change. It also covers the session bridge — origin allowlisting, protocol version, refusal of an API source fed through it, partial-batch discards, idle detection, and replay dedupe.
+
+### The dashboard states its sources
+
+FWIS-SPEC-0002 §Scope: *"The dashboard is a presentation layer only. It retrieves information from other FWIS modules but does not own operational data."* Most of those modules are unbuilt, so every panel declares where its data comes from:
+
+| Badge | Meaning | Panels |
+|---|---|---|
+| *(none)* | A built module supplying real records | Needs attention, shift turnover, engineering assignments, quick actions |
+| **sample data** | Config fixtures standing in until the module is built | Concerns, recent incidents |
+| **no source yet** | No source at all — the panel names the spec it waits for | Room status (SPEC-0008), announcements (SPEC-0005), weather |
+
+Two consequences are deliberate and asserted by the suite. A KPI with no source module renders **"not measured"** rather than `0`, because *none* and *not measured* are different answers and rendering them alike is how a dashboard lies. And a configured plant that has never been reported still appears, marked **Not reported** — a plant absent from the table reads as "fine" when it means "unknown", which is the more dangerous of the two.
+
+Plant availability is `null`, not 100%, when nothing has been reported. Averaging unknowns into a healthy percentage would be the most dangerous number on the screen.
 
 ### Two ways in, one engine
 

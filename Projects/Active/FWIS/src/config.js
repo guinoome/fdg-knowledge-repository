@@ -307,6 +307,61 @@ export const CONFIG = {
     }
   },
 
+  /* -- Engineering Dashboard — FWIS-SPEC-0002.
+        §Scope is explicit that the dashboard is a presentation layer and owns
+        no operational data. So every panel declares which module feeds it, and
+        a module that does not exist yet produces a stated absence rather than
+        an invented number. `modules` below is the honest inventory. --------- */
+  dashboard: {
+    /* live    — a built module supplying real records
+       fixture — config data standing in until the module is built
+       pending — no source at all; the panel says so */
+    modules: {
+      "shift-turnover": "live",
+      search: "live",
+      intake: "live",
+      "incident-management": "fixture",
+      "concerns-tracker": "fixture",
+      "plant-operations": "pending",
+      "utilities-monitoring": "pending",
+      "room-status": "pending",
+      "operations-logbook": "pending",
+      "daily-operations": "pending",
+      announcements: "pending",
+      weather: "pending",
+      reports: "pending"
+    },
+
+    /* Quick Actions, §12 — "configurable by role". minLevel matches roles[].level.
+       An action whose module is not live still renders, disabled, naming what
+       it waits for: a Chief Engineer should be able to see what the system will
+       do, not just what it does. */
+    quickActions: [
+      { id: "qa-turnover", label: "Start shift turnover", href: "#/turnover/new", minLevel: 1, module: "shift-turnover" },
+      { id: "qa-search", label: "Search records", href: "#/search", minLevel: 1, module: "search" },
+      { id: "qa-logbook", label: "Add logbook entry", href: "", minLevel: 1, module: "operations-logbook" },
+      { id: "qa-concern", label: "Create concern", href: "", minLevel: 2, module: "concerns-tracker" },
+      { id: "qa-incident", label: "Create incident", href: "", minLevel: 2, module: "incident-management" },
+      { id: "qa-plant", label: "Open plant operations", href: "", minLevel: 3, module: "plant-operations" },
+      { id: "qa-utilities", label: "Open utilities monitoring", href: "", minLevel: 3, module: "utilities-monitoring" },
+      { id: "qa-report", label: "Generate report", href: "", minLevel: 4, module: "reports" }
+    ],
+
+    /* §Personalization — widget order. Kept in config so reordering the
+       dashboard is a config change, and so a future per-user override has an
+       obvious default to override. */
+    widgetOrder: [
+      "kpis", "attention", "plants", "utilities", "assignments",
+      "concerns", "incidents", "rooms", "turnovers", "announcements",
+      "weather", "quickActions"
+    ],
+
+    /* A plant counts as available unless its reported status is one of these. */
+    plantUnavailableStatuses: ["Critical", "Shutdown"],
+
+    recentLimit: 6
+  },
+
   session: {
     userId: "u-santos",
     propertyId: "prop-riverside"

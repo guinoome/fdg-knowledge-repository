@@ -84,8 +84,20 @@ await page.waitForSelector(".topbar");
 
 await page.waitForSelector("#view .empty-state, #view .kpis");
 ok("Dashboard renders", await page.isVisible("#view"));
+// SPEC-0002 §Scope: the dashboard owns no data. With nothing recorded and most
+// source modules unbuilt, it must say so rather than render confident zeros.
+const emptyDash = await page.textContent("#view");
 ok("Empty dashboard states the truth rather than fake numbers",
-  (await page.textContent("#view")).includes("Nothing recorded yet"));
+  emptyDash.includes("No turnover records on this device yet"));
+ok("Unmeasured KPIs are distinguished from zero", emptyDash.includes("not measured"));
+ok("Panels with no source module name the specification they wait for",
+  emptyDash.includes("FWIS-SPEC-0008") && emptyDash.includes("FWIS-SPEC-0005"));
+ok("Sample-data panels are labelled as such", emptyDash.includes("sample data"));
+// With nothing reported, every configured plant must still be listed and shown
+// as unreported: a plant absent from the table reads as "fine" when it means
+// "unknown", which is the more dangerous of the two.
+check("Unreported plants are shown as unreported, not omitted",
+  (emptyDash.match(/Not reported/g) || []).length >= 8, true);
 // A `hidden` element must actually be hidden — component display rules can
 // silently outrank the attribute.
 ok("Offline chip is hidden while online", !(await page.isVisible("#offline-chip")));
@@ -123,7 +135,9 @@ ok("Identity offers every configured property when local-only",
   localIdentity.propertyIds.join() === localIdentity.configured.join());
 ok("Local-only identity is never orphaned", localIdentity.orphaned === false);
 ok("Identity resolves a display name from the roster", localIdentity.label.length > 0);
-ok("Local-only identity carries no role", localIdentity.current.roleId === null);
+// The roster assigns a role even without an account; role-gated UI has to
+// resolve to something in Stage 0 or every gate silently closes.
+check("Local-only identity resolves its roster role", localIdentity.current.roleId, "duty-engineer");
 
 await page.goto(BASE + "#/");
 await page.waitForSelector("#view .empty-state, #view .kpis");
@@ -313,9 +327,59 @@ ok("Record carries a syncState for Stage 1", envelope.syncState === "local");
 await page.goto(BASE + "#/");
 await page.waitForSelector(".kpis");
 const dash = await page.textContent("#view");
-ok("Dashboard reports plant status", dash.includes("Plant status"));
-ok("Dashboard reports outstanding tasks", dash.includes("Outstanding tasks"));
-ok("Dashboard lists recent turnovers", dash.includes("Recent turnovers"));
+
+// Every functional component of FWIS-SPEC-0002 §Layout is present.
+for (const [label, heading] of [
+  ["plant operations", "Plant operations"],
+  ["utilities monitoring", "Utilities monitoring"],
+  ["engineering assignments", "Engineering assignments"],
+  ["concerns", "Concerns"],
+  ["recent incidents", "Recent incidents"],
+  ["room engineering status", "Room engineering status"],
+  ["shift turnover", "Shift turnover"],
+  ["announcements", "Announcements"],
+  ["weather", "Weather"],
+  ["quick actions", "Quick actions"]
+]) {
+  ok(`Dashboard has a ${label} panel`, dash.includes(heading));
+}
+
+const dashDetail = await page.evaluate(() => {
+  const view = document.getElementById("view");
+  const text = view.textContent;
+  const heading = [...view.querySelectorAll(".dash-block h3")]
+    .find((h) => h.textContent.includes("Plant operations"));
+  return {
+    kpiCount: view.querySelectorAll(".kpi").length,
+    drillDowns: view.querySelectorAll(".kpi-link").length,
+    unmeasured: view.querySelectorAll(".kpi-muted").length,
+    plantRows: heading?.closest(".dash-block")?.querySelectorAll("tbody tr").length || 0,
+    notReported: (text.match(/Not reported/g) || []).length,
+    quickEnabled: view.querySelectorAll(".quick-actions a.btn").length,
+    quickDisabled: view.querySelectorAll(".quick-actions button[disabled]").length,
+    pendingPanels: view.querySelectorAll(".pending-panel").length,
+    fixtureBadges: view.querySelectorAll(".src-fixture").length,
+    shiftShown: /Morning Shift|Afternoon Shift|Night Shift/.test(text)
+  };
+});
+
+ok("KPI cards are rendered", dashDetail.kpiCount >= 8, String(dashDetail.kpiCount));
+ok("KPIs support drill-down", dashDetail.drillDowns > 0, String(dashDetail.drillDowns));
+ok("KPIs without a source module are marked unmeasured", dashDetail.unmeasured >= 2,
+  String(dashDetail.unmeasured));
+// An unreported plant must still appear: absent from the table reads as "fine"
+// when it actually means "unknown".
+check("Every configured plant is listed", dashDetail.plantRows, 8);
+ok("Quick actions for built modules are enabled", dashDetail.quickEnabled >= 2,
+  String(dashDetail.quickEnabled));
+ok("Quick actions for unbuilt modules are disabled", dashDetail.quickDisabled >= 1,
+  String(dashDetail.quickDisabled));
+ok("Panels with no source render a stated absence", dashDetail.pendingPanels >= 3,
+  String(dashDetail.pendingPanels));
+ok("Fixture-backed panels carry a sample-data badge", dashDetail.fixtureBadges >= 2,
+  String(dashDetail.fixtureBadges));
+ok("Context bar shows the current shift", dashDetail.shiftShown);
+
 await page.screenshot({ path: `${SHOTS}/08-dashboard.png`, fullPage: true });
 
 /* -- 9. search ------------------------------------------------------------- */

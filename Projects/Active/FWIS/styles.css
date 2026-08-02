@@ -369,6 +369,41 @@ legend {
 .dash-row b { display: block; font-weight: 600; font-size: 0.9rem; }
 .dash-row-end { display: flex; align-items: center; gap: 0.5rem; }
 
+/* Panels whose tables need the full width rather than half of it. */
+.dash-grid > .span-2 { grid-column: 1 / -1; }
+
+/* A KPI that links to its detail — §2 requires drill-down. */
+.kpi-link { text-decoration: none; color: inherit; }
+.kpi-link:hover { background: var(--raised); border-color: var(--accent); }
+
+/* A KPI with no source module. Visibly not a zero: "none" and "not measured"
+   are different answers, and a dashboard that renders them alike is lying. */
+.kpi-muted { border-style: dashed; }
+.kpi-note { font-size: 0.66rem; color: var(--muted); letter-spacing: 0.02em; text-transform: uppercase; }
+
+/* Names a panel's data source when it is not a built module. */
+.src-badge {
+  font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 0.12rem 0.4rem; border-radius: var(--r-sm); vertical-align: middle;
+  margin-left: 0.4rem; border: 1px solid transparent;
+}
+.src-fixture { color: var(--amber); border-color: color-mix(in srgb, var(--amber) 40%, transparent); }
+.src-pending { color: var(--muted); border-color: var(--border); }
+
+.pending-panel { padding: 0.85rem 0; }
+.pending-panel p { margin: 0 0 0.35rem; }
+.pending-panel p:last-child { margin-bottom: 0; }
+
+.quick-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.quick-actions .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+.inline-select {
+  background: transparent; color: inherit; border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: 0.05rem 0.3rem; font: inherit;
+}
+
+.tbl tr.muted td { opacity: 0.6; }
+
 /* ---------------------------------------------------------------- detail */
 
 .detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
