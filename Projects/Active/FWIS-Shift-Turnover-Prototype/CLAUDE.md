@@ -93,13 +93,26 @@ If a request implies Stage 1 work while Stage 0 is unfinished, say so and stop. 
 
 ## Operational modules — read before adding one
 
-Nine of fifteen specifications are implemented. Seven of them (Incidents, Concerns, OOO/OOS, Announcements, Plant log, Meter readings, Daily briefings) are **declared in `config.modules`, not written as screens.** One model and three generic screens render all of them, and routes and navigation generate from the registry.
+All fifteen specifications now have an implementation or a stated reason (see `FWIS-IMPL-0001`). Ten record types (Incidents, Concerns, OOO/OOS, Announcements, Plant log, Meter readings, Daily briefings, Logbook, Notes, Room status) are **declared in `config.modules`, not written as screens.** One model and three generic screens render all of them, and routes and navigation generate from the registry.
 
 So: **adding a module is a config entry, not a new screen.** If you find yourself writing a fourth module screen, stop — either the declaration needs a new field type, or the module is genuinely not the same shape as the others, and that is worth saying out loud rather than bending the framework around it.
 
-The framework guarantees three things every module inherits, and none of them should be reimplemented per-module: the lifecycle is a state machine with declared transitions, every status change is audited with who/when/from/to/why, and fields can be gated by `showFrom` so they appear only when their state is reached.
+Three specifications were **declined** rather than declared, and that is the framework working. Workflow Management (SPEC-0010), Reports (SPEC-0014) and Analytics (SPEC-0015) own no records and have no lifecycle; their content is a query, not a body somebody typed. They are bespoke screens and `FWIS-IMPL-0001` records why. Use that precedent: declining is a legitimate outcome, and saying so beats bending the declaration.
 
-Partial modules are partial in one consistent way — the operational record exists, the administrative builder does not. Plant Operations can log a chiller as Critical but cannot define what a chiller is.
+The framework guarantees four things every module inherits, and none should be reimplemented per-module: the lifecycle is a state machine with declared transitions, every status change is audited with who/when/from/to/why **and the acting role**, fields can be gated by `showFrom`, and every transition is authorized against FBPOIS-ROLE-0004.
+
+The administrative builders exist now (`#/admin`), so a property's plants, utilities, buildings, rooms, departments and roster are editable rather than shipped. Plant Operations can define what a chiller is.
+
+## Authorization — read before touching a workflow
+
+`property_members.role_id` is no longer decorative. It decides what a user may **do**, not only what they may see.
+
+- Authority is declared **once**, in `src/config.js`: the FBPOIS-ROLE-0004 Approval Matrix as data, plus an `authority` block on every workflow giving each transition a stage, a required role, and whether the author is barred.
+- It is enforced in `supabase/schema.sql` by `guard_role_authority`. That is the enforcement. `src/authz.js` mirrors it so the interface can explain a refusal, and has no authority at all.
+- `supabase/authority.sql` is **generated** — `node supabase/generate-authority.mjs`. Never hand-edit it. `verify/role-test.mjs` regenerates and compares, so a config change nobody regenerated fails the suite.
+- **Adding a workflow state means adding its authority rules.** An undeclared transition is refused by default (FBPOIS-ROLE-0003, Default Deny) and `role-test.mjs` fails if any declared transition lacks a rule.
+- **Enforced through Chief Engineer only.** Director and above are deliberately out of scope. Do not extend past the ceiling without a work package that says to.
+- Escalation is what routes a turnover into the ROLE-0004 chain (FWIS-SPEC-0003 §Status Model). A peer Duty Engineer accepts a routine handover; a Chief Engineer accepts an escalated one. Requiring a Chief Engineer for every shift change would make the matrix unusable.
 
 ## No hardcoding
 
@@ -138,23 +151,71 @@ Reference implementation: `config.js` in this prototype. The schema is the part 
 
 ## Build / test commands
 
-No dependencies, no build step, in either project. Playwright is a dev-time dependency of the tests only; first-time setup is `npm install playwright && npx playwright install chromium`.
+No dependencies, no build step, in either project. Playwright is a dev-time dependency of the tests only.
+
+> **Do not run `npm install` inside the vault.** The documented setup used to be
+> `npm install playwright && npx playwright install chromium`, run from `../FWIS/`.
+> On 2026-08-10 that command was observed to hang for 25 minutes producing no
+> output and no `node_modules`. The same install into a directory outside the
+> vault completed in **3 seconds**.
+>
+> Writing many small files anywhere under the vault is pathologically slow —
+> almost certainly Obsidian's file watcher, real-time antivirus scanning, or both.
+> Reads are unaffected, which is why this is easy to misdiagnose as a network or
+> registry problem. It is not: the npm registry answered HTTP 200 throughout, and
+> `npm config get proxy` was null.
+>
+> Also observed failing on these paths, so do not reach for them as workarounds:
+> `cmd /c mklink /J`, PowerShell `New-Item -ItemType Junction`, and
+> `Copy-Item -Recurse` (the last needs the destination to already exist).
+> `robocopy` into the vault timed out after 3 minutes having created nothing.
+>
+> **Working procedure — run the tests outside the vault:**
+>
+> ```bash
+> # 1. install playwright once, somewhere outside the vault
+> mkdir /tmp/pwroot && cd /tmp/pwroot
+> npm init -y && npm install playwright
+> npx playwright install chromium --only-shell
+>
+> # 2. copy FWIS out to fast storage, excluding node_modules and .git
+> robocopy "<vault>/Projects/Active/FWIS" /tmp/fwis-run /E /XD node_modules .git
+> robocopy /tmp/pwroot/node_modules /tmp/fwis-run/node_modules /E
+>
+> # 3. serve and test from the copy
+> cd /tmp/fwis-run && python -m http.server 8795
+> node verify/smoke-test.mjs
+> ```
+>
+> The copy is byte-identical, so assertions hold. `NODE_PATH` is **not** a
+> shortcut here — it is CommonJS-only and ESM ignores it, so the suites still
+> fail with `ERR_MODULE_NOT_FOUND`.
+>
+> All five suites were verified passing this way on 2026-08-10 (see below).
 
 Stage 0 (`../FWIS/`) — must be **served**, since service workers need a secure context:
 
 ```bash
 python -m http.server 8792      # from ../FWIS/
-node verify/smoke-test.mjs      # 117 assertions — the application
-node verify/sync-test.mjs       # 34 assertions — the sync engine
+node verify/smoke-test.mjs      # 147 assertions — the application
+node verify/role-test.mjs       # 119 assertions — workflow authorization
+node verify/module-test.mjs     # 65 assertions — the operational modules
 node verify/intake-test.mjs     # 74 assertions — intake and the session bridge
-node verify/module-test.mjs     # 53 assertions — the operational modules
+node verify/sync-test.mjs       # 34 assertions — the sync engine
 ```
 
-Against a real backend, credentials from the environment only — never written to disk:
+**All five verified passing 2026-08-10**, each `exit=0`, run from a scratch copy
+per the procedure above: smoke ("All checks passed", no console errors, including
+offline operation and the role gate both opening and closing), role, module,
+intake, and sync ("All … checks passed", no page errors in every case).
+
+Against a real backend, credentials from the environment only — never written to disk. Apply `schema.sql` **then** `authority.sql` first, or every write is refused with `WF003`:
 
 ```bash
-SUPABASE_URL=… SUPABASE_ANON_KEY=… node verify/live-test.mjs   # 53 assertions
+SUPABASE_URL=… SUPABASE_ANON_KEY=… node verify/live-test.mjs
 ```
+
+**`live-test.mjs` has not been run since role enforcement landed.** The SQL added for it is written and reviewed but never executed against PostgreSQL. Running it is the first outstanding item in `FWIS-IMPL-0001`.
 
 Never commit a Supabase `service_role` key. The anon key in `config.js` is a publishable client key; RLS is what protects the data.
 
