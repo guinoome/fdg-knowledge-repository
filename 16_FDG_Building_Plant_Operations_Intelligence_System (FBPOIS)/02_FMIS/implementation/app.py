@@ -7,14 +7,19 @@ from fmis.services import FMISService
 
 
 class FMISApp:
-    def __init__(self, root: tk.Tk):
+    def __init__(self, root: tk.Tk, database_path: str | None = None):
         self.root = root
         self.root.title("FDG FMIS")
         self.root.geometry("1500x900")
-        local_appdata = os.getenv("LOCALAPPDATA")
-        base_dir = Path(local_appdata) / "FDG_FMIS" if local_appdata else Path.home() / ".fdg_fmis"
-        base_dir.mkdir(parents=True, exist_ok=True)
-        self.service = FMISService(database_path=str(base_dir / "fmis_local.db"))
+        # database_path is injectable so tests can run against a temporary
+        # database instead of the operator's real one. Left unset, behaviour
+        # is unchanged: the local per-user application data directory.
+        if database_path is None:
+            local_appdata = os.getenv("LOCALAPPDATA")
+            base_dir = Path(local_appdata) / "FDG_FMIS" if local_appdata else Path.home() / ".fdg_fmis"
+            base_dir.mkdir(parents=True, exist_ok=True)
+            database_path = str(base_dir / "fmis_local.db")
+        self.service = FMISService(database_path=database_path)
         self.service.initialize()
         self.plant_id_map = {}
         self.equipment_id_map = {}
