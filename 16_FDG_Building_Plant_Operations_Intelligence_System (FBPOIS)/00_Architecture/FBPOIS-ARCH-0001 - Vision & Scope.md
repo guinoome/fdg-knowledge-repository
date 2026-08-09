@@ -300,9 +300,7 @@ Parent:
 
 Child:
 
-- FBPOIS-ARCH-0002 – Enterprise Architecture
 - FWIS-ARCH-0000 – Facility Workspace Intelligence System
-- FMIS-ARCH-0000 – Facility Maintenance Intelligence System
 
 ---
 
@@ -311,12 +309,11 @@ Child:
 Per FBPOIS-AGENT-ENGINEERING-INSTRUCTIONS §5.3, this section entry point links down to every FBPOIS subsystem's own Master Index so the section is graph-connected from a single starting point.
 
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01_FWIS — Facility Workspace Intelligence System]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|02_FMIS — Facility Maintenance Intelligence System]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/03_Sharing_Data_Platform_Master_Index|03_Sharing_Data_Platform]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/04_User_Roles_Master_Index|04_User_Roles]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04A_Workflow_Engine/04A_Workflow_Engine_Master_Index|04A_Workflow_Engine]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/05_API/05_API_Master_Index|05_API]]
-
-02_FMIS is not yet included: its folder and Master Index are untracked in this repository as of 2026-08-09 and pending a Founder decision. See the C.1 findings report.
 
 ---
 
