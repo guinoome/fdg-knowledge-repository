@@ -23,7 +23,7 @@
 
 - **No internet at runtime.** Every workflow must complete with the machine disconnected (FBPOIS §3, FMIS §3).
 - **No build step for FWIS.** `index.html` opens and runs; no bundler, no transpiler, no `npm run build` as a prerequisite (FBPOIS §3).
-- **Never `npm install` or build inside the vault.** It hangs — install outside, copy the project out, run there. Full procedure in `Projects/Active/FWIS-Shift-Turnover-Prototype/CLAUDE.md` §Build / test commands. Rationale in `Candidates/vault-is-not-a-build-directory.md`.
+- **Never `npm install` or build inside the vault.** It hangs — 25 minutes with no output, measured. Install outside, copy the project out, run there; the exact commands are in Task 7 Step 3. Full procedure also in `Projects/Active/FWIS-Shift-Turnover-Prototype/CLAUDE.md` §Build / test commands, rationale in `Candidates/vault-is-not-a-build-directory.md`. Do not reach for `mklink /J`, `New-Item -ItemType Junction`, `Copy-Item -Recurse`, or `NODE_PATH` — all four were tried and all four fail here.
 - **Authorization is enforced at the service layer, never by hiding UI** (FMIS §23). Every permission test asserts the service decision *and* the UI reflection separately, so a UI-only gate cannot pass alone.
 - **Preserve history.** Never delete a superseded document; mark it and keep provenance (mission directive, and `NEX-BOOTSTRAP.md` "Extend architecture. Do not redesign architecture.").
 - **Commit messages:** imperative, ≤72-char subject, area prefix — `fwis: …`, `fmis: …`, `fbpois: …` (vault `CLAUDE.md` §Repository etiquette).
@@ -439,7 +439,14 @@ class BackupRestoreTests(unittest.TestCase):
     def test_backup_then_restore_into_a_clean_directory(self):
         from fmis.backup import backup_database, restore_database
 
-        self.service.create_plant(name="Chiller Plant", plant_type="Cooling", location="Basement")
+        self.service.create_plant(
+            name="Chiller Plant",
+            code="CHP-01",
+            category="Cooling",
+            location="Basement",
+            status="Running",
+            criticality="High",
+        )
         plants_before = self.service.list_plants()
         audit_before = self.service.get_audit_log(limit=50)
         self.assertGreater(len(plants_before), 0)
@@ -478,7 +485,14 @@ class BackupRestoreTests(unittest.TestCase):
         """sqlite3 online backup must not require closing the live connection."""
         from fmis.backup import backup_database
 
-        self.service.create_plant(name="Boilers", plant_type="Heating", location="Roof")
+        self.service.create_plant(
+            name="Boilers",
+            code="BLR-01",
+            category="Heating",
+            location="Roof",
+            status="Running",
+            criticality="Medium",
+        )
         backup_path = os.path.join(self.tmp.name, "hot.db")
         backup_database(self.db_path, backup_path)
 
@@ -495,7 +509,15 @@ class BackupRestoreTests(unittest.TestCase):
                 restored.close()
 ```
 
-**Note on `create_plant`:** confirm its exact signature before running — read `fmis/services.py` around the `def create_plant` definition and match the keyword names. If they differ, fix the test call, not the service.
+**`create_plant` signature, verified 2026-08-10** at `fmis/services.py:520` — use exactly these keywords:
+
+```python
+def create_plant(self, name: str, code: str, category: str, location: str,
+                 status: str, criticality: str, description: Optional[str] = None,
+                 property_id: Optional[int] = None, building_id: Optional[int] = None) -> int
+```
+
+The first six are required. `status` and `criticality` are free strings at this layer, so the values above are illustrative rather than enum-constrained.
 
 - [ ] **Step 2: Run it to make sure it fails**
 
@@ -829,11 +851,13 @@ Expected: 13 tests, OK.
 
 - [ ] **Step 5: Add the UI controls**
 
-In `app.py`, inside `_build_dashboard`, after the existing dashboard widgets are gridded, add an export bar. Place it in the next free grid row of `self.dashboard_frame` — read the method first and use the actual next row index rather than guessing:
+In `app.py`, inside `_build_dashboard`, append after the last widget in the method (the `procurement_tree.grid(...)` call at roughly line 216).
+
+**Row index verified 2026-08-10:** `self.dashboard_frame` grids only two children — `summary_frame` at `row=0` (line 105) and `content` at `row=1` (line 114). Everything else in the method grids into `content`, not `dashboard_frame`. So the next free row on `dashboard_frame` is **2**.
 
 ```python
         export_bar = ttk.LabelFrame(self.dashboard_frame, text="Export & Backup", padding=10)
-        export_bar.grid(row=<next_free_row>, column=0, sticky="ew", pady=(12, 0))
+        export_bar.grid(row=2, column=0, sticky="ew", pady=(12, 0))
         self.export_bar = export_bar
 
         ttk.Label(export_bar, text="Equipment:").grid(row=0, column=0, sticky="w", padx=(0, 6))
@@ -903,13 +927,16 @@ Append to `tests/test_fmis_ui.py`, inside `FMISUITests`:
         self.assertTrue(self.app.export_bar.winfo_exists())
         # Service is the authority; assert it before the UI.
         self.assertFalse(self.app.service.can_perform("Chief Engineer", "manage_users"))
+        self.assertTrue(self.app.service.can_perform("Chief Engineer", "view_dashboard"))
 
         self._rebuild_app()
         self._sign_in("superadmin")
         self.assertTrue(self.app.service.can_perform("Super Admin", "manage_users"))
 ```
 
-If `can_perform("Chief Engineer", "manage_users")` is actually `True` in this build, invert that assertion to match the real permission matrix — read `services.py` `can_perform` and the role table first. Do not change the service to satisfy the test.
+**Permission matrix verified 2026-08-10** at `fmis/services.py:447-454`. `manage_users` belongs to **`Super Admin` only** — `Chief Engineer` has `create_plant`, `create_equipment`, `create_work_order`, `create_pm_plan` and `view_dashboard` but *not* `manage_users`. The assertions above match that, so they should pass as written.
+
+This is worth noticing rather than passing over: it means a Chief Engineer cannot take a database backup under the gating chosen in Step 5. If that is wrong operationally — FMIS §19 gives the Chief Engineer executive-level visibility — the fix is a Founder decision about the permission matrix, not a quiet loosening of the gate. Log it and continue.
 
 - [ ] **Step 7: Run the whole suite**
 
@@ -975,7 +1002,7 @@ const a = await first.newPage();
 const errors = [];
 a.on("pageerror", (e) => errors.push(e.message));
 await a.goto(`${BASE}/index.html`);
-await a.waitForFunction(() => window.__fwisReady === true, null, { timeout: 15000 });
+await a.waitForFunction(() => window.FWIS_TEST);
 
 const doc = await a.evaluate(async () => {
   const { exportAll } = await import("/src/backup.js");
@@ -989,7 +1016,7 @@ ok("Export names the stores it covers", doc.stores && Object.keys(doc.stores).le
 const second = await browser.newContext();
 const b = await second.newPage();
 await b.goto(`${BASE}/index.html`);
-await b.waitForFunction(() => window.__fwisReady === true, null, { timeout: 15000 });
+await b.waitForFunction(() => window.FWIS_TEST);
 
 const restored = await b.evaluate(async (payload) => {
   const { importAll, exportAll } = await import("/src/backup.js");
@@ -1012,18 +1039,36 @@ console.log(fail === 0 ? "\nAll backup checks passed." : `\n${fail} failed.`);
 process.exit(fail === 0 ? 0 : 1);
 ```
 
-**`window.__fwisReady` may not exist.** Check `src/main.js` for whatever readiness signal the existing suites wait on and use that instead — copy the pattern from `module-test.mjs`.
+**Readiness signal verified 2026-08-10:** the existing suites use `await page.waitForFunction(() => window.FWIS_TEST);` — see `verify/module-test.mjs:40`. That is the signal used above. No timeout argument is passed, matching the existing suites.
 
 - [ ] **Step 3: Run it to make sure it fails**
 
 Per the Global Constraints, run from a scratch copy, not the vault:
 
-```bash
-robocopy "<vault>/Projects/Active/FWIS" /tmp/fwis-run /E /XD node_modules .git
-robocopy /tmp/pwroot/node_modules /tmp/fwis-run/node_modules /E
-cd /tmp/fwis-run && python -m http.server 8795 &
+Paths below are the real ones on this machine, verified working 2026-08-10. `$SCRATCH` is any directory outside the vault; the session that wrote this plan used its own scratchpad.
+
+```powershell
+$VAULT   = "C:\Users\FraNc!s\Documents\Obsidian\FDG Knowledge Repository"
+$SCRATCH = "$env:LOCALAPPDATA\Temp\fbpois-work"
+
+# one-time: playwright outside the vault
+New-Item -ItemType Directory -Force "$SCRATCH\pwroot" | Out-Null
+Set-Location "$SCRATCH\pwroot"
+'{"name":"pwroot","private":true,"version":"1.0.0"}' | Out-File package.json -Encoding utf8
+npm install playwright --no-audit --no-fund --loglevel=error
+npx --yes playwright install chromium --only-shell
+
+# per-run: copy FWIS out, bring playwright alongside
+robocopy "$VAULT\Projects\Active\FWIS" "$SCRATCH\fwis-run" /E /XD node_modules .git /NFL /NDL /NJH /NJS /NP
+robocopy "$SCRATCH\pwroot\node_modules" "$SCRATCH\fwis-run\node_modules" /E /NFL /NDL /NJH /NJS /NP
+
+# serve and test from the copy
+Set-Location "$SCRATCH\fwis-run"
+Start-Process python -ArgumentList "-m","http.server","8795" -WorkingDirectory "$SCRATCH\fwis-run" -WindowStyle Hidden
 node verify/backup-test.mjs
 ```
+
+`robocopy` exit codes 0–7 are success; 1 means files were copied. Treat 8 or higher as failure.
 
 Expected: FAIL — `Failed to fetch dynamically imported module: /src/backup.js`.
 
@@ -1118,18 +1163,68 @@ And its handler beside the CSV handler:
 
 - [ ] **Step 7: Add backup controls to admin.js**
 
-Read `src/screens/admin.js` for its existing section pattern, then add a matching section with two controls: a "Download backup" button calling `exportAll()` and passing the result through the same `download` helper as JSON, and a file input whose change handler parses the file and calls `importAll`, reporting failure through the screen's existing error affordance rather than a bare `alert`.
+Pattern verified 2026-08-10. `admin.js` renders via `view.innerHTML` template strings and wires handlers in a `bind(view, section, items, usage, property, me)` function at line 204, using `view.querySelector("#id")?.addEventListener(...)`, a `#add-error` element held as `const err`, plus `toast()` and `refresh()`. The code below follows that shape.
+
+Add to the markup, after the closing tag of the last existing section block in `view.innerHTML`:
+
+```javascript
+      <section class="admin-section" data-section="backup">
+        <h3>Backup &amp; restore</h3>
+        <p class="hint">A backup is the whole local dataset as one JSON document.
+          Restoring replaces every record on this device — it is how a profile that
+          has never seen this data is rebuilt.</p>
+        <button class="btn" id="backup-download">Download backup</button>
+        <label class="btn" for="backup-file">Restore from file…</label>
+        <input type="file" id="backup-file" accept="application/json" hidden />
+        <p class="error" id="backup-error" hidden></p>
+      </section>
+```
+
+Add to `bind()`, after the existing `err` declaration:
+
+```javascript
+  const backupErr = view.querySelector("#backup-error");
+
+  view.querySelector("#backup-download")?.addEventListener("click", async () => {
+    const { exportAll } = await import("../backup.js");
+    const doc = await exportAll();
+    const stamp = new Date().toISOString().slice(0, 10);
+    download(`fwis-backup-${property.name}-${stamp}.json`, "application/json",
+      JSON.stringify(doc, null, 2));
+    toast("Backup downloaded");
+  });
+
+  view.querySelector("#backup-file")?.addEventListener("change", async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    backupErr.hidden = true;
+    try {
+      const { importAll } = await import("../backup.js");
+      await importAll(JSON.parse(await file.text()));
+      toast("Backup restored");
+      refresh();
+    } catch (cause) {
+      // Surfaced in the screen's own error affordance, not an alert — a failed
+      // restore must stay readable while the operator decides what to do.
+      backupErr.hidden = false;
+      backupErr.textContent = `Restore failed: ${cause.message}`;
+    } finally {
+      e.target.value = "";
+    }
+  });
+```
+
+Two details that matter. `download` lives in `reports.js`, not `admin.js` — add `import { download } from "./reports.js";` to the imports at the top of `admin.js`, and **export `download`** from `reports.js`, which currently declares it as a module-private `function download(...)` at line 297. Change that line to `export function download(...)`.
+
+Restore is deliberately **not** gated behind `identity.can()` beyond the screen's existing `admin.plants`-class gate, because reaching this screen at all already requires an Engineering Manager tier. Do not add a second, weaker gate here.
 
 - [ ] **Step 8: Run every FWIS suite**
 
-```bash
-cd /tmp/fwis-run
-node verify/smoke-test.mjs
-node verify/role-test.mjs
-node verify/module-test.mjs
-node verify/intake-test.mjs
-node verify/sync-test.mjs
-node verify/backup-test.mjs
+```powershell
+Set-Location "$SCRATCH\fwis-run"
+foreach ($t in @("smoke-test.mjs","role-test.mjs","module-test.mjs","intake-test.mjs","sync-test.mjs","backup-test.mjs")) {
+  "===== $t ====="; & node "verify/$t"; "exit=$LASTEXITCODE"
+}
 ```
 
 Expected: all six `exit=0`. Record each result. If `smoke-test.mjs` now fails on a console error from the new code, fix the code — do not relax the assertion.
