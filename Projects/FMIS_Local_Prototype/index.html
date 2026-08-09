@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FDG FMIS Dashboard</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #111c2e;
+      --panel-2: #18253d;
+      --text: #e5eefb;
+      --muted: #8fa2bf;
+      --accent: #38bdf8;
+      --danger: #f87171;
+      --warning: #fbbf24;
+      --ok: #34d399;
+      --border: #24344d;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .app { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    .header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+    .header h1 { margin: 0; font-size: 1.6rem; }
+    .header .sub { color: var(--muted); margin-top: 4px; }
+    .header .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    button, .file-btn {
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    button:hover, .file-btn:hover { border-color: var(--accent); }
+    .file-btn input { display: none; }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+    .stat .label { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .stat .value { font-size: 1.25rem; font-weight: 700; margin-top: 6px; }
+    .layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; margin-bottom: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .card h2 { margin: 0 0 12px; font-size: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .form-row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+    .form-row label { color: var(--muted); font-size: 0.9rem; }
+    input, select, textarea {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 8px;
+      font: inherit;
+    }
+    textarea { min-height: 70px; resize: vertical; }
+    .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+    .pill.ok { background: rgba(52,211,153,.16); color: var(--ok); }
+    .pill.warn { background: rgba(251,191,36,.16); color: var(--warning); }
+    .pill.danger { background: rgba(248,113,113,.16); color: var(--danger); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    th { color: var(--muted); font-weight: 600; }
+    .table-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+    .table-actions button { padding: 5px 8px; font-size: 0.8rem; }
+    .footer { margin-top: 12px; color: var(--muted); font-size: 0.9rem; }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div>
+        <h1>FDG FMIS — Local Maintenance Intelligence</h1>
+        <div class="sub">A working local-first FMIS console with persistent state and action controls</div>
+      </div>
+      <div class="actions">
+        <button id="resetBtn">Reset demo data</button>
+        <button id="exportBtn">Export JSON</button>
+        <label class="file-btn">
+          Import JSON
+          <input type="file" id="importInput" accept="application/json" />
+        </label>
+      </div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="layout">
+      <div class="card">
+        <h2>Operations forms</h2>
+        <div class="grid-2">
+          <form id="plantForm">
+            <h3>Plant</h3>
+            <div class="form-row">
+              <label>Plant name</label>
+              <input name="name" required />
+            </div>
+            <div class="form-row">
+              <label>Status</label>
+              <select name="status">
+                <option>Normal</option>
+                <option>Running</option>
+                <option>Degraded</option>
+                <option>Under Maintenance</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Criticality</label>
+              <select name="criticality">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </div>
+            <button type="submit">Create plant</button>
+          </form>
+
+          <form id="equipmentForm">
+            <h3>Equipment</h3>
+            <div class="form-row">
+              <label>Plant</label>
+              <select name="plantId" id="equipmentPlantSelect"></select>
+            </div>
+            <div class="form-row">
+              <label>Equipment name</label>
+              <input name="name" required />
+            </div>
+            <div class="form-row">
+              <label>Status</label>
+              <select name="status">
+                <option>Running</option>
+                <option>Normal</option>
+                <option>Degraded</option>
+                <option>Under Maintenance</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Criticality</label>
+              <select name="criticality">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </div>
+            <button type="submit">Create equipment</button>
+          </form>
+        </div>
+
+        <div class="grid-2" style="margin-top: 12px;">
+          <form id="materialForm">
+            <h3>Material</h3>
+            <div class="form-row">
+              <label>Item number</label>
+              <input name="itemNumber" required />
+            </div>
+            <div class="form-row">
+              <label>Description</label>
+              <input name="description" required />
+            </div>
+            <div class="form-row">
+              <label>Category</label>
+              <input name="category" value="Spare" />
+            </div>
+            <div class="form-row">
+              <label>On hand</label>
+              <input name="onHand" type="number" value="0" />
+            </div>
+            <button type="submit">Add material</button>
+          </form>
+
+          <form id="procurementForm">
+            <h3>Procurement</h3>
+            <div class="form-row">
+              <label>Material</label>
+              <select name="materialId" id="procurementMaterialSelect"></select>
+            </div>
+            <div class="form-row">
+              <label>Requester</label>
+              <input name="requester" required />
+            </div>
+            <div class="form-row">
+              <label>Quantity</label>
+              <input name="quantity" type="number" value="1" min="1" />
+            </div>
+            <div class="form-row">
+              <label>Supplier</label>
+              <input name="supplier" />
+            </div>
+            <button type="submit">Create request</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Plants & equipment</h2>
+        <div class="section-title">Plants</div>
+        <table>
+          <thead>
+            <tr><th>Plant</th><th>Status</th><th>Criticality</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="plantsBody"></tbody>
+        </table>
+
+        <div class="section-title" style="margin-top: 16px;">Equipment</div>
+        <table>
+          <thead>
+            <tr><th>Equipment</th><th>Status</th><th>Criticality</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="equipmentBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 16px;">
+      <h2>Materials & procurement</h2>
+      <div class="grid-2">
+        <div>
+          <div class="section-title">Materials</div>
+          <table>
+            <thead>
+              <tr><th>Item</th><th>On Hand</th><th>Reorder</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="materialsBody"></tbody>
+          </table>
+        </div>
+        <div>
+          <div class="section-title">Procurement</div>
+          <table>
+            <thead>
+              <tr><th>Requester</th><th>Supplier</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="procurementBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 16px;">
+      <h2>Hierarchy & resources</h2>
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Name</th><th>Details</th></tr>
+        </thead>
+        <tbody id="hierarchyBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Audit trail</h2>
+      <table>
+        <thead>
+          <tr><th>Event</th><th>Actor</th><th>Details</th></tr>
+        </thead>
+        <tbody id="auditBody"></tbody>
+      </table>
+      <div class="footer">Changes are stored in your browser so the dashboard remains usable offline.</div>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'fdg-fmis-browser-state-v1';
+
+    const defaultState = {
+      plants: [
+        { id: 1, name: 'Chiller Plant', status: 'Running', criticality: 'High' },
+        { id: 2, name: 'Cooling Tower', status: 'Normal', criticality: 'Medium' }
+      ],
+      equipment: [
+        { id: 1, plantId: 1, name: 'Chiller 1', status: 'Running', criticality: 'High' },
+        { id: 2, plantId: 2, name: 'Cooling Tower Fan', status: 'Running', criticality: 'Medium' },
+        { id: 3, plantId: 1, name: 'Primary Pump', status: 'Degraded', criticality: 'High' }
+      ],
+      materials: [
+        { id: 1, itemNumber: 'M-100', description: 'Pump seal kit', category: 'Spare', onHand: 4, reorderPoint: 6 },
+        { id: 2, itemNumber: 'M-200', description: 'Vibration sensor', category: 'Sensor', onHand: 2, reorderPoint: 3 }
+      ],
+      procurement: [
+        { id: 1, materialId: 1, requester: 'Chief Engineer', quantity: 2, supplier: 'MRO Supply', status: 'Requested' },
+        { id: 2, materialId: 2, requester: 'Maintenance Lead', quantity: 1, supplier: 'Local Vendor', status: 'Approved' }
+      ],
+      organizations: [
+        { id: 1, name: 'FDG Holdings', status: 'Active' }
+      ],
+      properties: [
+        { id: 1, name: 'North Tower', code: 'NT-01', status: 'Active' }
+      ],
+      buildings: [
+        { id: 1, name: 'Mechanical Wing', code: 'MW-01', status: 'Active' }
+      ],
+      areas: [
+        { id: 1, name: 'Mechanical Room', floor: '3', code: 'MR-301' }
+      ],
+      assets: [
+        { id: 1, name: 'Chiller Unit A', assetType: 'Chiller', status: 'Running' }
+      ],
+      contractors: [
+        { id: 1, name: 'MRO Supply', category: 'Vendor', status: 'Active' }
+      ],
+      personnel: [
+        { id: 1, name: 'Alex Chen', role: 'Technician', trade: 'HVAC', status: 'Active' }
+      ],
+      parameters: [
+        { id: 1, name: 'vibration', unit: 'mm/s', normalRange: '0-2' }
+      ],
+      audit: [
+        { id: 1, eventType: 'plant.created', actor: 'chief', details: 'Seeded Chiller Plant' },
+        { id: 2, eventType: 'equipment.created', actor: 'chief', details: 'Seeded Primary Pump' }
+      ]
+    };
+
+    let state = loadState();
+
+    function loadState() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        return stored ? JSON.parse(stored) : JSON.parse(JSON.stringify(defaultState));
+      } catch (error) {
+        return JSON.parse(JSON.stringify(defaultState));
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function addAudit(eventType, actor, details) {
+      state.audit.unshift({ id: Date.now(), eventType, actor, details });
+      state.audit = state.audit.slice(0, 50);
+      saveState();
+    }
+
+    function nextId(items) {
+      return items.reduce((max, item) => Math.max(max, item.id), 0) + 1;
+    }
+
+    function cycleStatus(value) {
+      const sequence = ['Normal', 'Running', 'Degraded', 'Under Maintenance'];
+      const index = sequence.indexOf(value);
+      return sequence[(index + 1) % sequence.length];
+    }
+
+    function renderStats() {
+      const stats = document.getElementById('stats');
+      const degraded = state.equipment.filter(item => item.status === 'Degraded').length;
+      const openRequests = state.procurement.filter(item => item.status !== 'Received').length;
+      const criticalPlants = state.plants.filter(item => item.criticality === 'High').length;
+      const lowStock = state.materials.filter(item => item.onHand <= item.reorderPoint).length;
+      stats.innerHTML = [
+        ['Plants', state.plants.length],
+        ['Equipment', state.equipment.length],
+        ['Open requests', openRequests],
+        ['Low stock', lowStock]
+      ].map(([label, value]) => `<div class="stat"><div class="label">${label}</div><div class="value">${value}</div></div>`).join('');
+    }
+
+    function renderPlants() {
+      const body = document.getElementById('plantsBody');
+      body.innerHTML = state.plants.map(plant => `
+        <tr>
+          <td>${plant.name}</td>
+          <td><span class="pill ${plant.status === 'Degraded' || plant.status === 'Under Maintenance' ? 'warn' : 'ok'}">${plant.status}</span></td>
+          <td>${plant.criticality}</td>
+          <td><div class="table-actions"><button data-action="toggle-plant" data-id="${plant.id}">Cycle status</button></div></td>
+        </tr>`).join('');
+    }
+
+    function renderEquipment() {
+      const body = document.getElementById('equipmentBody');
+      body.innerHTML = state.equipment.map(item => `
+        <tr>
+          <td>${item.name}</td>
+          <td><span class="pill ${item.status === 'Degraded' || item.status === 'Under Maintenance' ? 'warn' : 'ok'}">${item.status}</span></td>
+          <td>${item.criticality}</td>
+          <td><div class="table-actions"><button data-action="toggle-equipment" data-id="${item.id}">Cycle status</button></div></td>
+        </tr>`).join('');
+    }
+
+    function renderMaterials() {
+      const body = document.getElementById('materialsBody');
+      body.innerHTML = state.materials.map(item => `
+        <tr>
+          <td>${item.itemNumber} - ${item.description}</td>
+          <td>${item.onHand}</td>
+          <td>${item.reorderPoint}</td>
+          <td><div class="table-actions"><button data-action="restock-material" data-id="${item.id}">Restock +1</button></div></td>
+        </tr>`).join('');
+    }
+
+    function renderProcurement() {
+      const body = document.getElementById('procurementBody');
+      body.innerHTML = state.procurement.map(item => {
+        const material = state.materials.find(m => m.id === item.materialId);
+        const statusClass = item.status === 'Received' ? 'ok' : item.status === 'Approved' ? 'warn' : 'danger';
+        return `
+          <tr>
+            <td>${item.requester}</td>
+            <td>${item.supplier || '-'}</td>
+            <td><span class="pill ${statusClass}">${item.status}</span></td>
+            <td><div class="table-actions"><button data-action="advance-procurement" data-id="${item.id}">Advance</button></div></td>
+          </tr>`;
+      }).join('');
+    }
+
+    function renderHierarchy() {
+      const body = document.getElementById('hierarchyBody');
+      const rows = [
+        ...state.organizations.map(item => ({ category: 'Organization', name: item.name, details: `Status: ${item.status}` })),
+        ...state.properties.map(item => ({ category: 'Property', name: item.name, details: `Code: ${item.code} | Status: ${item.status}` })),
+        ...state.buildings.map(item => ({ category: 'Building', name: item.name, details: `Code: ${item.code} | Status: ${item.status}` })),
+        ...state.areas.map(item => ({ category: 'Area', name: item.name, details: `Floor: ${item.floor || '-'} | Code: ${item.code}` })),
+        ...state.assets.map(item => ({ category: 'Asset', name: item.name, details: `Type: ${item.assetType} | Status: ${item.status}` })),
+        ...state.contractors.map(item => ({ category: 'Contractor', name: item.name, details: `Category: ${item.category || '-'} | Status: ${item.status}` })),
+        ...state.personnel.map(item => ({ category: 'Personnel', name: item.name, details: `Role: ${item.role} | Trade: ${item.trade || '-'}` })),
+        ...state.parameters.map(item => ({ category: 'Parameter', name: item.name, details: `Unit: ${item.unit || '-'} | Range: ${item.normalRange || '-'}` }))
+      ];
+      body.innerHTML = rows.map(row => `
+        <tr>
+          <td>${row.category}</td>
+          <td>${row.name}</td>
+          <td>${row.details}</td>
+        </tr>`).join('');
+    }
+
+    function renderAudit() {
+      const body = document.getElementById('auditBody');
+      body.innerHTML = state.audit.map(entry => `
+        <tr>
+          <td>${entry.eventType}</td>
+          <td>${entry.actor}</td>
+          <td>${entry.details}</td>
+        </tr>`).join('');
+    }
+
+    function refreshSelects() {
+      const plantSelect = document.getElementById('equipmentPlantSelect');
+      const materialSelect = document.getElementById('procurementMaterialSelect');
+      plantSelect.innerHTML = state.plants.map(plant => `<option value="${plant.id}">${plant.name}</option>`).join('');
+      materialSelect.innerHTML = state.materials.map(item => `<option value="${item.id}">${item.itemNumber} - ${item.description}</option>`).join('');
+    }
+
+    function render() {
+      renderStats();
+      renderPlants();
+      renderEquipment();
+      renderMaterials();
+      renderProcurement();
+      renderHierarchy();
+      renderAudit();
+      refreshSelects();
+    }
+
+    document.getElementById('plantForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const newPlant = {
+        id: nextId(state.plants),
+        name: formData.get('name').toString().trim(),
+        status: formData.get('status').toString(),
+        criticality: formData.get('criticality').toString()
+      };
+      if (!newPlant.name) return;
+      state.plants.push(newPlant);
+      addAudit('plant.created', 'browser', `Created ${newPlant.name}`);
+      this.reset();
+      render();
+    });
+
+    document.getElementById('equipmentForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const newEquipment = {
+        id: nextId(state.equipment),
+        plantId: Number(formData.get('plantId')),
+        name: formData.get('name').toString().trim(),
+        status: formData.get('status').toString(),
+        criticality: formData.get('criticality').toString()
+      };
+      if (!newEquipment.name) return;
+      state.equipment.push(newEquipment);
+      addAudit('equipment.created', 'browser', `Created ${newEquipment.name}`);
+      this.reset();
+      render();
+    });
+
+    document.getElementById('materialForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const newMaterial = {
+        id: nextId(state.materials),
+        itemNumber: formData.get('itemNumber').toString().trim(),
+        description: formData.get('description').toString().trim(),
+        category: formData.get('category').toString().trim() || 'Spare',
+        onHand: Number(formData.get('onHand')) || 0,
+        reorderPoint: 3
+      };
+      state.materials.push(newMaterial);
+      addAudit('material.created', 'browser', `Added ${newMaterial.itemNumber}`);
+      this.reset();
+      render();
+    });
+
+    document.getElementById('procurementForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const newRequest = {
+        id: nextId(state.procurement),
+        materialId: Number(formData.get('materialId')),
+        requester: formData.get('requester').toString().trim(),
+        quantity: Number(formData.get('quantity')) || 1,
+        supplier: formData.get('supplier').toString().trim(),
+        status: 'Requested'
+      };
+      state.procurement.push(newRequest);
+      addAudit('procurement.created', 'browser', `Requested ${newRequest.quantity} units`);
+      this.reset();
+      render();
+    });
+
+    document.addEventListener('click', function (event) {
+      const button = event.target.closest('button[data-action]');
+      if (!button) return;
+      const { action, id } = button.dataset;
+      const numericId = Number(id);
+
+      if (action === 'toggle-plant') {
+        const plant = state.plants.find(item => item.id === numericId);
+        if (plant) {
+          plant.status = cycleStatus(plant.status);
+          addAudit('plant.updated', 'browser', `Updated ${plant.name} to ${plant.status}`);
+          render();
+        }
+      }
+
+      if (action === 'toggle-equipment') {
+        const item = state.equipment.find(entry => entry.id === numericId);
+        if (item) {
+          item.status = cycleStatus(item.status);
+          addAudit('equipment.updated', 'browser', `Updated ${item.name}`);
+          render();
+        }
+      }
+
+      if (action === 'restock-material') {
+        const item = state.materials.find(entry => entry.id === numericId);
+        if (item) {
+          item.onHand += 1;
+          addAudit('material.restocked', 'browser', `Restocked ${item.itemNumber}`);
+          render();
+        }
+      }
+
+      if (action === 'advance-procurement') {
+        const item = state.procurement.find(entry => entry.id === numericId);
+        if (item) {
+          const flow = ['Requested', 'Approved', 'Received'];
+          const nextIndex = (flow.indexOf(item.status) + 1) % flow.length;
+          item.status = flow[nextIndex];
+          if (item.status === 'Received') {
+            const material = state.materials.find(entry => entry.id === item.materialId);
+            if (material) {
+              material.onHand += item.quantity;
+            }
+          }
+          addAudit('procurement.updated', 'browser', `Updated request to ${item.status}`);
+          render();
+        }
+      }
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', function () {
+      state = JSON.parse(JSON.stringify(defaultState));
+      saveState();
+      render();
+      addAudit('state.reset', 'browser', 'Reset to demo seed data');
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', function () {
+      const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'fmis-state.json';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('importInput').addEventListener('change', async function (event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const text = await file.text();
+      try {
+        state = JSON.parse(text);
+        saveState();
+        render();
+        addAudit('state.imported', 'browser', `Imported ${file.name}`);
+      } catch (error) {
+        alert('The selected file was not valid FMIS JSON.');
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
