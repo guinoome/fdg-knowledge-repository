@@ -7,6 +7,7 @@
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-ARCH-0000 - Facility Workspace Intelligence System|FWIS-ARCH-0000 – Facility Workspace Intelligence System]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-ARCH-0001 - Functional Architecture|FWIS-ARCH-0001 – Functional Architecture]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-IMPL-0000 - Implementation Record|FWIS-IMPL-0000 – Implementation Record]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-IMPL-0003 - Local Completion Record|FWIS-IMPL-0003 – Local Completion Record]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0001 - Daily Operations|FWIS-SPEC-0001 – Daily Operations]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0002 - Engineering Dashboard|FWIS-SPEC-0002 – Engineering Dashboard]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0003 - Shift Turnover|FWIS-SPEC-0003 – Shift Turnover]]

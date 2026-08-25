@@ -21,13 +21,13 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- Collaboration Framework
-- AGENTIC_FRAMEWORK.md
-- ENGINEERING_OBJECTIVE.md
-- AUTHORITY_LEVELS.md
-- AGENT_READINESS_5R.md
-- CONTEXT_REQUIREMENTS.md
-- AGENT_LIFECYCLE.md
+- [[02_Identity/COLLABORATION_FRAMEWORK|Collaboration Framework]]
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|AGENTIC_FRAMEWORK.md]]
+- [[03_Agentic Framework/ENGINEERING_OBJECTIVE|ENGINEERING_OBJECTIVE.md]]
+- [[03_Agentic Framework/AUTHORITY_LEVELS|AUTHORITY_LEVELS.md]]
+- [[03_Agentic Framework/AGENT_READINESS_5R|AGENT_READINESS_5R.md]]
+- [[03_Agentic Framework/CONTEXT_REQUIREMENTS|CONTEXT_REQUIREMENTS.md]]
+- [[03_Agentic Framework/AGENT_LIFECYCLE|AGENT_LIFECYCLE.md]]
 
 ---
 
@@ -202,3 +202,16 @@ It defines how objectives become engineering capability through intelligent orch
 ---
 
 End of Standard
+
+---
+
+## Contents — 03_Agentic Framework
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original content above unchanged; all 6 siblings were already named in "Related Documents" — converted to real links here.*
+
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|AGENTIC_FRAMEWORK.md]]
+- [[03_Agentic Framework/AGENT_LIFECYCLE|AGENT_LIFECYCLE.md]]
+- [[03_Agentic Framework/AGENT_READINESS_5R|AGENT_READINESS_5R.md]]
+- [[03_Agentic Framework/AUTHORITY_LEVELS|AUTHORITY_LEVELS.md]]
+- [[03_Agentic Framework/CONTEXT_REQUIREMENTS|CONTEXT_REQUIREMENTS.md]]
+- [[03_Agentic Framework/ENGINEERING_OBJECTIVE|ENGINEERING_OBJECTIVE.md]]

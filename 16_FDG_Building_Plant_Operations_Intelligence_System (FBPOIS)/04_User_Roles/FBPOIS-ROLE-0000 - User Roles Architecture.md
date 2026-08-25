@@ -392,13 +392,13 @@ Future capabilities may include:
 
 Parent:
 
-- FBPOIS-ARCH-0000
+- FBPOIS-ARCH-0000 *(currently missing from the repository as of this session's re-verification — see this Work Package's findings; not linked as a wikilink since it would resolve to nothing)*
 
 Related:
 
-- FBPOIS-ROLE-0001 – Permission Model
-- FBPOIS-ROLE-0002 – Organizational Hierarchy
-- FBPOIS-ROLE-0003 – Role-Based Access Control (RBAC)
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0001 - Permission Model|FBPOIS-ROLE-0001 – Permission Model]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0002 - Organizational Hierarchy|FBPOIS-ROLE-0002 – Organizational Hierarchy]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0003 - Role-Based Access Control (RBAC)|FBPOIS-ROLE-0003 – Role-Based Access Control (RBAC)]]
 
 ---
 
@@ -407,3 +407,15 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | User Roles Architecture |
+
+---
+
+## Contents — 16_FBPOIS/04_User_Roles
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original content above unchanged except converting the 3 already-cited siblings into real links in place. This adds the 2 that were missing from the original citation.*
+
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0001 - Permission Model|FBPOIS-ROLE-0001 – Permission Model]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0002 - Organizational Hierarchy|FBPOIS-ROLE-0002 – Organizational Hierarchy]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0003 - Role-Based Access Control (RBAC)|FBPOIS-ROLE-0003 – Role-Based Access Control (RBAC)]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0004 - Workflow Authorization Matrix|FBPOIS-ROLE-0004 – Workflow Authorization Matrix]] *(added — was cited nowhere in the original document despite existing)*
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0005 - Multi-Tenant Security Model|FBPOIS-ROLE-0005 – Multi-Tenant Security Model]] *(added — same)*

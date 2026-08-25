@@ -19,9 +19,9 @@
 **Classification:** Functional Specification
 
 **Parent Documents:**
-- FBPOIS-ARCH-0000 – FBPOIS Master Architecture
-- FWIS-ARCH-0000 – Facility Workspace Intelligence System
-- FWIS-ARCH-0001 – Functional Architecture
+- FBPOIS-ARCH-0000 – FBPOIS Master Architecture *(confirmed not present in repository this session — per Francis, planned for a future pass, not currently linked)*
+- FWIS-ARCH-0000 – Facility Workspace Intelligence System *(not found in any folder listing taken this session — different from FBPOIS-ARCH-0000; unconfirmed whether this ever existed, not just currently missing)*
+- FWIS-ARCH-0001 – Functional Architecture *(same note)*
 
 ---
 
@@ -378,14 +378,14 @@ Planned capabilities include:
 
 Parent:
 
-- FWIS-ARCH-0000 – Facility Workspace Intelligence System
-- FWIS-ARCH-0001 – Functional Architecture
+- FWIS-ARCH-0000 – Facility Workspace Intelligence System *(not found this session — see note in header)*
+- FWIS-ARCH-0001 – Functional Architecture *(same)*
 
 Related:
 
-- FWIS-SPEC-0002 – Engineering Dashboard
-- FWIS-SPEC-0003 – Shift Turnover
-- FWIS-SPEC-0004 – Operations Logbook
+- FWIS-SPEC-0002 – Engineering Dashboard *(confirmed not present this session)*
+- FWIS-SPEC-0003 – Shift Turnover *(confirmed not present this session)*
+- FWIS-SPEC-0004 – Operations Logbook *(confirmed not present this session)*
 
 ---
 
@@ -394,3 +394,21 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | Initial functional specification |
+
+---
+
+## Contents — 16_FBPOIS/01_FWIS
+
+*Added 2026-08-05 as part of Work Package Phase 1, extended scope per direct instruction. This folder has no dedicated "0000" entry document of its own — using SPEC-0001 as the practical entry point since it's the lowest-numbered file present. Links below cover only files confirmed to exist in this pass; specs 0002, 0003, 0004, 0012, and 0015 are cited above (in this document's own "Related Documents") but not linked, since they don't currently exist — linking them would just create new broken links.*
+
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0005 - Group Communications|FWIS-SPEC-0005 – Group Communications]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0006 - Engineering Notes|FWIS-SPEC-0006 – Engineering Notes]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0007 - Concerns Tracker|FWIS-SPEC-0007 – Concerns Tracker]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0008 - OOO & OOS Management|FWIS-SPEC-0008 – OOO & OOS Management]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0009 - Room Engineering Status|FWIS-SPEC-0009 – Room Engineering Status]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0010 - Workflow Management|FWIS-SPEC-0010 – Workflow Management]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0011 - Utilities Monitoring|FWIS-SPEC-0011 – Utilities Monitoring]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0013 - Incident Management|FWIS-SPEC-0013 – Incident Management]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0014 - Reports|FWIS-SPEC-0014 – Reports]]
+
+**Missing, referenced by this document, not linked:** SPEC-0002, SPEC-0003, SPEC-0004 (Engineering Dashboard, Shift Turnover, Operations Logbook). **Also missing per the confirmed current folder listing, not referenced by this document but expected by the numbering sequence:** SPEC-0012, SPEC-0015.

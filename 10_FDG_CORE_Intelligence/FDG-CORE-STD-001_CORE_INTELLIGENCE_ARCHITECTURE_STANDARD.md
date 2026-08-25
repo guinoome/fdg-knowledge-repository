@@ -14,11 +14,11 @@
 
 **Dependencies:**
 
-- NEX-STD-002 Document Control Standard
-- NEX-STD-003 Decision Evolution Standard
-- NEX-STD-004 Operating Principles
-- NEX-STD-005 Constitution
-- NEX-STD-006 Knowledge Governance Framework
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control Standard]]
+- [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|NEX-STD-003 Decision Evolution Standard]]
+- [[01_Governance/NEX-STD-004_OPERATING_PRINCIPLES|NEX-STD-004 Operating Principles]]
+- [[01_Governance/NEX-STD-005_CONSTITUTION|NEX-STD-005 Constitution]]
+- [[01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK|NEX-STD-006 Knowledge Governance Framework]]
 
 ---
 
@@ -27,8 +27,6 @@
 This standard defines the architecture of FDG CORE Intelligence.
 
 FDG CORE Intelligence is the intelligence layer of the FDG Ecosystem. It transforms validated organizational knowledge into transparent, evidence-based engineering reasoning and decision support.
-
-This document establishes the architectural foundation upon which all CORE Intelligence capabilities shall be implemented.
 
 ---
 
@@ -40,18 +38,7 @@ Deliver trustworthy engineering intelligence through evidence-based reasoning, t
 
 # Scope
 
-This standard governs:
-
-- Engineering reasoning
-- Engineering calculations
-- Decision intelligence
-- Optimization
-- Review and compliance
-- Knowledge utilization
-- Evidence evaluation
-- Context management
-- Continuous learning
-- Intelligence orchestration
+This standard governs: Engineering reasoning, calculations, decision intelligence, optimization, review and compliance, knowledge utilization, evidence evaluation, context management, continuous learning, and intelligence orchestration.
 
 This standard applies to every FDG platform utilizing CORE Intelligence.
 
@@ -65,69 +52,28 @@ FDG CORE Intelligence shall become the central engineering intelligence capabili
 
 # Design Objectives
 
-FDG CORE Intelligence shall be:
-
-- Engineering-first
-- Evidence-based
-- Explainable
-- Traceable
-- Auditable
-- Modular
-- Scalable
-- Extensible
-- Platform-independent
-- Technology-independent
+FDG CORE Intelligence shall be: Engineering-first, Evidence-based, Explainable, Traceable, Auditable, Modular, Scalable, Extensible, Platform-independent, Technology-independent.
 
 ---
 
 # Architectural Principles
 
-## Principle 1
-
-Engineering before automation.
-
+## Principle 1 — Engineering before automation
 Automation exists to strengthen engineering capability.
 
----
-
-## Principle 2
-
-Evidence before intelligence.
-
+## Principle 2 — Evidence before intelligence
 Intelligence shall always operate using validated knowledge.
 
----
-
-## Principle 3
-
-Transparency over black-box reasoning.
-
+## Principle 3 — Transparency over black-box reasoning
 Every recommendation shall be explainable.
 
----
-
-## Principle 4
-
-Governance before autonomy.
-
+## Principle 4 — Governance before autonomy
 CORE Intelligence operates under the Knowledge Governance Framework defined by NEX-STD-006.
 
----
+## Principle 5 — Organization before technology
+Technology may change. Organizational intelligence shall endure.
 
-## Principle 5
-
-Organization before technology.
-
-Technology may change.
-
-Organizational intelligence shall endure.
-
----
-
-## Principle 6
-
-Extend before replace.
-
+## Principle 6 — Extend before replace
 Existing organizational intelligence shall be improved rather than discarded whenever practical.
 
 ---
@@ -136,29 +82,17 @@ Existing organizational intelligence shall be improved rather than discarded whe
 
 ```text
 User
-
 ↓
-
 Platform
-
 ↓
-
 FDG CORE Intelligence
-
 ↓
-
 FDG Knowledge Repository
-
 ↓
-
 Validated Evidence
-
 ↓
-
 External Authorities
 ```
-
-Each layer has a clearly defined responsibility.
 
 ---
 
@@ -166,19 +100,14 @@ Each layer has a clearly defined responsibility.
 
 ```text
                     FDG CORE Intelligence
-
                              │
-
                   Intelligence Orchestrator
-
                              │
-
  ┌──────────────┬──────────────┬──────────────┬──────────────┐
  │              │              │              │
 Calculation   Optimization   Review &      Engineering
 Engine         Engine        Compliance     Intelligence
                               Engine          Engine
- │              │              │              │
  └──────────────┴──────────────┴──────────────┘
                              │
                  Decision Intelligence
@@ -196,138 +125,32 @@ Engine         Engine        Compliance     Intelligence
 
 # Engine Responsibilities
 
-## Calculation Engine
+**Calculation Engine** — deterministic engineering calculations (mechanical, electrical, structural, financial).
 
-Responsible for deterministic engineering calculations.
+**Optimization Engine** — identifying optimal engineering solutions (energy, cost, lifecycle, maintenance).
 
-Examples:
+**Review & Compliance Engine** — evaluating engineering outputs against standards and organizational requirements.
 
-- Mechanical calculations
-- Electrical calculations
-- Structural calculations
-- Financial engineering calculations
+**Engineering Intelligence Engine** — engineering reasoning and multidisciplinary analysis (tradeoff analysis, recommendations, risk identification, alternative evaluation).
 
----
+**Decision Intelligence** — supporting engineering decision making using evidence, organizational knowledge, and engineering judgment.
 
-## Optimization Engine
+**Memory & Context Engine** — retrieving only the context required for the current task while preserving architectural continuity.
 
-Responsible for identifying optimal engineering solutions.
+**Evidence & Provenance Engine** — ensuring every recommendation is supported by traceable evidence and organizational knowledge.
 
-Examples:
+**Knowledge Surveillance Engine** — monitoring approved authoritative sources for updates requiring engineering review. Never automatically modifies organizational knowledge.
 
-- Energy optimization
-- Cost optimization
-- Lifecycle optimization
-- Maintenance optimization
-
----
-
-## Review & Compliance Engine
-
-Responsible for evaluating engineering outputs against applicable standards and organizational requirements.
-
-Examples:
-
-- Standards compliance
-- Code verification
-- Internal policy verification
-- Engineering review
-
----
-
-## Engineering Intelligence Engine
-
-Responsible for engineering reasoning and multidisciplinary analysis.
-
-Examples:
-
-- Tradeoff analysis
-- Engineering recommendations
-- Risk identification
-- Alternative evaluation
-
----
-
-## Decision Intelligence
-
-Responsible for supporting engineering decision making using evidence, organizational knowledge, and engineering judgment.
-
----
-
-## Memory & Context Engine
-
-Responsible for retrieving only the context required for the current task while preserving architectural continuity.
-
----
-
-## Evidence & Provenance Engine
-
-Responsible for ensuring every recommendation is supported by traceable evidence and organizational knowledge.
-
----
-
-## Knowledge Surveillance Engine
-
-Responsible for monitoring approved authoritative sources for updates requiring engineering review.
-
-Knowledge Surveillance shall never automatically modify organizational knowledge.
-
----
-
-## Continuous Learning Engine
-
-Responsible for improving organizational intelligence through validated lessons learned, approved engineering knowledge, and continuous organizational improvement.
+**Continuous Learning Engine** — improving organizational intelligence through validated lessons learned and approved engineering knowledge.
 
 ---
 
 # Intelligence Processing Pipeline
 
 ```text
-Engineering Request
-
-↓
-
-Context Retrieval
-
-↓
-
-Knowledge Retrieval
-
-↓
-
-Evidence Evaluation
-
-↓
-
-Engineering Reasoning
-
-↓
-
-Calculation
-
-↓
-
-Optimization
-
-↓
-
-Compliance Review
-
-↓
-
-Decision Support
-
-↓
-
-Transparent Recommendation
-
-↓
-
-Engineering Feedback
-
-↓
-
-Organizational Learning
+Engineering Request → Context Retrieval → Knowledge Retrieval → Evidence Evaluation
+→ Engineering Reasoning → Calculation → Optimization → Compliance Review
+→ Decision Support → Transparent Recommendation → Engineering Feedback → Organizational Learning
 ```
 
 Every processing stage shall remain transparent and auditable.
@@ -336,13 +159,7 @@ Every processing stage shall remain transparent and auditable.
 
 # Knowledge Integration
 
-FDG CORE Intelligence shall use:
-
-- FDG Knowledge Repository
-- Approved Engineering Standards
-- Organizational Knowledge
-- Evidence Metadata
-- Knowledge Confidence Framework
+FDG CORE Intelligence shall use: FDG Knowledge Repository, Approved Engineering Standards, Organizational Knowledge, Evidence Metadata, Knowledge Confidence Framework.
 
 Conversation history shall never replace validated organizational knowledge.
 
@@ -350,90 +167,21 @@ Conversation history shall never replace validated organizational knowledge.
 
 # Governance Integration
 
-FDG CORE Intelligence shall comply with:
+FDG CORE Intelligence shall comply with: NEX-STD-006 Knowledge Governance Framework, Document Control, Decision Evolution, Operating Principles, Constitution.
 
-- NEX-STD-006 Knowledge Governance Framework
-- Document Control
-- Decision Evolution
-- Operating Principles
-- Constitution
-
-Governance constrains intelligence.
-
-Intelligence does not override governance.
+Governance constrains intelligence. Intelligence does not override governance.
 
 ---
 
 # Explainability
 
-Every recommendation shall identify, where applicable:
-
-- Objective
-- Inputs
-- Assumptions
-- Methodology
-- Supporting Evidence
-- Confidence
-- Risks
-- Tradeoffs
-- Recommendation
-
----
-
-# Security Principles
-
-CORE Intelligence shall protect:
-
-- Organizational knowledge
-- Intellectual property
-- Engineering calculations
-- Decision history
-- Evidence metadata
-
-Access shall follow organizational governance.
-
----
-
-# Scalability
-
-The architecture shall support:
-
-- Multiple FDG platforms
-- Multiple companies
-- Multiple engineering disciplines
-- Multiple collaborators
-- Multiple intelligence providers
-- Future technologies
-
-without architectural redesign.
-
----
-
-# Technology Independence
-
-FDG CORE Intelligence shall remain independent of:
-
-- Individual LLM providers
-- Individual databases
-- Individual software platforms
-- Individual programming languages
-
-Technology may evolve without requiring architectural replacement.
+Every recommendation shall identify: Objective, Inputs, Assumptions, Methodology, Supporting Evidence, Confidence, Risks, Tradeoffs, Recommendation.
 
 ---
 
 # Success Criteria
 
-FDG CORE Intelligence succeeds when it consistently produces engineering recommendations that are:
-
-- Evidence-based
-- Explainable
-- Traceable
-- Governed
-- Repeatable
-- Continuously improving
-
-while strengthening long-term organizational capability.
+FDG CORE Intelligence succeeds when it consistently produces engineering recommendations that are evidence-based, explainable, traceable, governed, repeatable, and continuously improving — while strengthening long-term organizational capability.
 
 ---
 
@@ -441,17 +189,17 @@ while strengthening long-term organizational capability.
 
 This standard establishes the architectural foundation for:
 
-- FDG-CORE-STD-002 Calculation Engine Standard
-- FDG-CORE-STD-003 Optimization Engine Standard
-- FDG-CORE-STD-004 Review & Compliance Engine Standard
-- FDG-CORE-STD-005 Engineering Intelligence Engine Standard
-- FDG-CORE-STD-006 Decision Intelligence Standard
-- FDG-CORE-STD-007 Memory & Context Engine Standard
-- FDG-CORE-STD-008 Evidence & Provenance Engine Standard
-- FDG-CORE-STD-009 Knowledge Surveillance Standard
-- FDG-CORE-STD-010 Intelligence Orchestration Standard
-- FDG-CORE-STD-011 Continuous Learning Standard
-- FDG-CORE-STD-012 CORE Intelligence Evolution Roadmap
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-002_CALCULATION_ENGINE_STANDARD|FDG-CORE-STD-002 Calculation Engine Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-003_OPTIMIZATION_ENGINE_STANDARD|FDG-CORE-STD-003 Optimization Engine Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-004_REVIEW_AND_COMPLIANCE_ENGINE_STANDARD|FDG-CORE-STD-004 Review & Compliance Engine Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-005_ENGINEERING_INTELLIGENCE_ENGINE_STANDARD|FDG-CORE-STD-005 Engineering Intelligence Engine Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-006_DECISION_INTELLIGENCE_STANDARD|FDG-CORE-STD-006 Decision Intelligence Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-007_MEMORY_AND_CONTEXT_ENGINE_STANDARD|FDG-CORE-STD-007 Memory & Context Engine Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-008_EVIDENCE_AND_PROVENANCE_ENGINE_STANDARD|FDG-CORE-STD-008 Evidence & Provenance Engine Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-009_KNOWLEDGE_SURVEILLANCE_STANDARD|FDG-CORE-STD-009 Knowledge Surveillance Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-010_INTELLIGENCE_ORCHESTRATION_STANDARD|FDG-CORE-STD-010 Intelligence Orchestration Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-011_CONTINUOUS_LEARNING_STANDARD|FDG-CORE-STD-011 Continuous Learning Standard]]
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-012_CORE_INTELLIGENCE_EVOLUTION_ROADMAP|FDG-CORE-STD-012 CORE Intelligence Evolution Roadmap]]
 
 ---
 
@@ -462,3 +210,33 @@ FDG CORE Intelligence transforms validated organizational knowledge into transpa
 ---
 
 **End of Standard**
+
+---
+
+## Contents — 10_FDG_CORE_Intelligence
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original content above unchanged — all 11 siblings were already named in "Relationship to Other Standards," and the "Dependencies" section already named its 5 governance cross-references; both converted to real links in place rather than duplicated in a separate list, since this document was already well-connected in prose.*
+
+---
+
+## Connected Intelligence Systems
+
+*Added 2026-08-11 — gap-fix pass. FDG CORE Intelligence is the source of truth and combined intelligence hub. All domain Intelligence Systems link here; this document links back to each of them. This is the hub of all intelligence, as architecturally intended per the 5-layer model.*
+
+**What FDG CORE is:** the combined intelligence engine powering every FDG platform. Nex reads from it. Every domain system feeds into it and receives intelligence from it. It does not replace domain systems — it connects and amplifies them.
+
+| System | Domain | Entry |
+|---|---|---|
+| FEIS / FEIP | Engineering Intelligence | [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD\|FEIP Architecture Standard]] |
+| FDG Ecosystem Integration Hub | Ecosystem integration | [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD\|Ecosystem Integration Hub Architecture]] |
+| FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home\|FSIS Home]] |
+| FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope\|FBPOIS Vision & Scope]] |
+| FPIS | Platform Intelligence | [[17_FDG_Platform_Intelligence_System/00_FPI_Home\|FPIS Home]] |
+| FBIS | Business Intelligence | *11_FDG_Business_Intelligence_System — folder not currently present in repository; link to be restored when it returns* |
+| FLIS | Legal Intelligence | *13 — not yet created* |
+| Service Intelligence | Service ops | *14 — not yet created* |
+| Collaboration Intelligence | Collaboration | *15 — not yet created* |
+
+## FDG Ecosystem
+
+[[FDG Ecosystem]]

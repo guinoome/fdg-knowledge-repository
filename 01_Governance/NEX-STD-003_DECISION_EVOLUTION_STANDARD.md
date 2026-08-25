@@ -21,8 +21,8 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- NEX-STD-001 Review Protocol
-- NEX-STD-002 Document Control
+- [[00_Nex/REVIEW_PROTOCOL|NEX-STD-001 Review Protocol]]
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
 
 ---
 

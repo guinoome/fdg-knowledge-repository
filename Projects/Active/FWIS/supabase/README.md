@@ -24,7 +24,19 @@ npx supabase link --project-ref <ref>
 npx supabase db push
 ```
 
-This creates `records` and `property_members`, the server-side stamping and guard triggers, and the RLS policies.
+This creates `records` and `property_members`, the three workflow-authorization tables, the server-side stamping and guard triggers, and the RLS policies.
+
+Then apply the generated authority seed, which fills those three tables:
+
+```bash
+node supabase/generate-authority.mjs      # only if config.js changed
+# then paste supabase/authority.sql into the SQL editor, or:
+npx supabase db push
+```
+
+`authority.sql` is **generated from `src/config.js`** and must not be hand-edited. It is the FBPOIS-ROLE-0004 matrix projected into rows the database can enforce; `verify/role-test.mjs` regenerates it and fails if the committed file and the configuration disagree. That check is what stops the interface and the database holding different opinions about who may accept a turnover — which is the failure this whole layer exists to prevent, so a hand-edit that made them agree by accident would still be a defect.
+
+Applying `schema.sql` **without** `authority.sql` fails closed, not open: `record_workflows` is empty, so `guard_role_authority` refuses every write with `WF003`. A blank authority table is a system that permits nothing, never a system that permits everything.
 
 ## 3. Point the app at it
 
@@ -56,7 +68,15 @@ insert into public.property_members (user_id, property_id, role_id)
 values ('<auth.users.id>', 'prop-riverside', 'duty-engineer');
 ```
 
-`dev_join_demo_properties` is a development convenience. Drop it before any real deployment.
+`role_id` is no longer decorative. It decides what the user may **do**, not only what they may see — see the authorization table below. Use a role id from `public.role_levels`: `technician`, `supervisor`, `duty-engineer`, `engineering-service-manager`, `engineering-manager`, `chief-engineer`, or `director`.
+
+To put yourself at a specific tier while testing:
+
+```sql
+select public.dev_join_property('prop-riverside', 'chief-engineer');
+```
+
+`dev_join_demo_properties` and `dev_join_property` are development conveniences. Drop both before any real deployment — `dev_join_property` in particular lets a signed-in user choose their own seniority, and role assignment is an Administration workflow in FBPOIS-ROLE-0004, not something a user does to themselves.
 
 ---
 
@@ -73,6 +93,11 @@ The client is not trusted to police any of this.
 | An update must carry a strictly greater revision | `guard_revision` trigger | optimistic concurrency |
 | Accepted/Closed records are content-immutable | `guard_accepted_immutable` trigger | FWIS-SPEC-0003 Business Rules |
 | No hard deletes — deletion is a tombstone | `records_no_delete` policy | deletions must sync |
+| Raising a record needs the workflow's create level | `guard_role_authority` trigger | FBPOIS-ROLE-0004 |
+| A status move needs the role the Approval Matrix assigns | `guard_role_authority` trigger | FBPOIS-ROLE-0004 §Approval Matrix |
+| An author cannot approve their own submission | `guard_role_authority` trigger | FBPOIS-ROLE-0004 §Separation of Duties |
+| An unmapped record type is refused outright | `guard_role_authority` trigger | FBPOIS-ROLE-0003 §Default Deny |
+| One organisation-configuration record per property | `records_one_org_config_per_property` index | two would fight over the overlay |
 
 Authorship is **assigned**, not validated. The RLS policies deliberately do not
 test `created_by = auth.uid()`, because `push()` is an upsert and an
@@ -97,6 +122,16 @@ PostgREST's error mapping intact:
 | Stale revision | 400 | `WF002` |
 | Accepted/Closed content edit | 400 | `WF001` |
 | RLS denial (not a member) | 403 | `42501` |
+| Role below what the transition requires | 400 | `WF003` |
+| Author barred by separation of duties | 400 | `WF004` |
+
+`WF003` and `WF004` are separated for the same reason `WF001` was separated from `42501`. "You are not senior enough" and "you are senior enough but you wrote this one" have different remedies — the first needs a Chief Engineer, the second needs a *different* Chief Engineer — and a client that cannot tell them apart will offer the wrong one.
+
+### Authorization, in one paragraph
+
+Membership answers *which property*; `role_levels` and `workflow_authority` answer *which action*. FBPOIS-ROLE-0004 draws exactly this line: approval authority is not access permission. Seniority is inclusive — the guard tests `level >= min_level` — because ROLE-0004's hierarchy is an escalation ladder. A Chief Engineer who could not accept a turnover a Duty Engineer can accept would make FWIS-SPEC-0003's escalation branch unreachable, and that branch exists precisely so a Chief Engineer accepts what a peer should not.
+
+Tiers above Chief Engineer are **not** enforced by this build. `director` carries `enforced = false` in `role_levels`; Organization Administrator and FDG Super Administrator have no row at all. That is scope, recorded, not an oversight.
 
 ## Sync model
 

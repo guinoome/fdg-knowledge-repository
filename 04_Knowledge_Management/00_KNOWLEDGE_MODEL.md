@@ -22,14 +22,14 @@ Supersedes: None
 
 Related Documents:
 
-- NEX-STD-005 Constitution
-- NEX-STD-017 Agentic Framework
-- KNOWLEDGE_LIFECYCLE.md
-- KNOWLEDGE_CAPTURE_STANDARD.md
-- KNOWLEDGE_REVIEW_STANDARD.md
-- KNOWLEDGE_APPROVAL_STANDARD.md
-- KNOWLEDGE_PRESERVATION_STANDARD.md
-- KNOWLEDGE_EVOLUTION_STANDARD.md
+- [[01_Governance/NEX-STD-005_CONSTITUTION|NEX-STD-005 Constitution]]
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|NEX-STD-017 Agentic Framework]]
+- [[04_Knowledge_Management/KNOWLEDGE_LIFECYCLE|KNOWLEDGE_LIFECYCLE.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|KNOWLEDGE_CAPTURE_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_REVIEW_STANDARD|KNOWLEDGE_REVIEW_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_APPROVAL_STANDARD|KNOWLEDGE_APPROVAL_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_PRESERVATION_STANDARD|KNOWLEDGE_PRESERVATION_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_EVOLUTION_STANDARD|KNOWLEDGE_EVOLUTION_STANDARD.md]]
 
 ---
 
@@ -200,3 +200,18 @@ Knowledge Management transforms engineering experience into continuously improvi
 ---
 
 End of Standard
+
+---
+
+## Contents — 04_Knowledge_Management
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original content above unchanged; all 6 siblings were already named in "Related Documents" — converted to real links here.*
+
+- [[04_Knowledge_Management/KNOWLEDGE_LIFECYCLE|KNOWLEDGE_LIFECYCLE.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|KNOWLEDGE_CAPTURE_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_REVIEW_STANDARD|KNOWLEDGE_REVIEW_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_APPROVAL_STANDARD|KNOWLEDGE_APPROVAL_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_PRESERVATION_STANDARD|KNOWLEDGE_PRESERVATION_STANDARD.md]]
+- [[04_Knowledge_Management/KNOWLEDGE_EVOLUTION_STANDARD|KNOWLEDGE_EVOLUTION_STANDARD.md]]
+
+**Also now the correct Master Index entry point for this section** — supersedes the earlier use of `KNOWLEDGE_LIFECYCLE.md`, since this file (`00_KNOWLEDGE_MODEL.md`, `NEX-STD-018`) didn't exist when the Master Index was first built.

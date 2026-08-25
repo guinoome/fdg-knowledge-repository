@@ -123,9 +123,19 @@ class AuditDurabilityTests(unittest.TestCase):
         """An audited action must still be readable from a new process-like session."""
         first = FMISService(database_path=self.db_path)
         first.initialize()
-        first.create_user(username="planner", password="password", role="Technician", active=True)
+        plant_id = first.create_plant(
+            name="Chiller Plant", code="CHP-01", category="Cooling",
+            location="Basement", status="Running", criticality="High",
+        )
+        equipment_id = first.create_equipment(
+            plant_id=plant_id, name="Chiller 1", asset_type="Chiller",
+            location="Basement", status="Running", criticality="High",
+        )
+        # update_equipment_status is the one service method that writes its own
+        # audit row (services.py:608). Most methods do not — see Task 5a.
+        first.update_equipment_status(equipment_id, "Critical")
         before = first.get_audit_log(limit=50)
-        self.assertGreater(len(before), 0, "creating a user should write an audit entry")
+        self.assertGreater(len(before), 0, "a status change must write an audit entry")
         first.close()
 
         # A fresh service against the same file stands in for an app restart.
@@ -153,7 +163,13 @@ Run from `02_FMIS/implementation/`:
 python -m unittest tests.test_fmis_backup -v
 ```
 
-Expected: PASS if audit writes are committed to disk. If it FAILS, the cause is almost certainly an uncommitted transaction — `services.py` writes the audit row but never calls `conn.commit()` on that path. Fix by adding the missing commit, then re-run. Do not change the test to match broken behaviour.
+Expected: PASS. `log_audit_event` at `services.py:826` already commits correctly, and `update_equipment_status` calls it, so this should pass without touching production code — which is the point of a characterization test.
+
+**Verified 2026-08-10, and the reason this task was retargeted.** The original version of this task called `create_user()` and asserted an audit row appeared. It does not. Audit logging in this codebase is **caller-driven**: `app.py` calls `log_audit_event` after operations, and `update_equipment_status` is the *only* service method that logs its own. So a direct service caller — a test, a script, a future non-UI consumer — silently writes no audit trail. That is a real coverage defect, now Task 5a. It is not a durability defect, which is what this task measures, so the two are separated rather than conflated.
+
+If this test fails, the cause would be a genuinely uncommitted transaction. Fix by adding the missing `conn.commit()`, then re-run. Do not change the test to match broken behaviour.
+
+**Signatures verified 2026-08-10.** `create_plant` at `services.py:520` takes `(name, code, category, location, status, criticality, ...)`. `create_equipment` at `services.py:543` takes `(plant_id, name, asset_type, location, status, criticality, ...)` — note it is `asset_type` and `location`, **not** `code` and `category`; the two constructors do not mirror each other. Both return an `int` id. The calls above match.
 
 - [ ] **Step 3: Commit**
 
@@ -743,6 +759,165 @@ git commit -m "fmis: export row data to PDF"
 
 ---
 
+### Task 5a: Move FMIS audit logging into the service layer
+
+**Added 2026-08-10 after Task 1 discovered the gap.** Not in the original plan.
+
+Audit logging is currently caller-driven: `app.py` calls `log_audit_event` after operations, and `update_equipment_status` (`services.py:608`) is the only service method that logs its own. A direct service caller therefore writes no audit trail at all.
+
+Two reasons this must land before Task 6. First, FMIS §24 lists **export** among the actions that must be audited, and Task 6 adds export methods to the service — built on the current pattern they would be unaudited unless `app.py` remembered to log them, repeating the defect in new code. Second, §23 already establishes the governing principle for this codebase: enforcement belongs in the service, not the UI, because the UI is bypassable. Audit is the same shape of concern.
+
+There is also a smaller defect to fix here: `services.py:608` hardcodes the actor as `"system"`, which discards the "Who" that §24 explicitly requires recording.
+
+**Files:**
+- Modify: `.../02_FMIS/implementation/fmis/services.py`
+- Modify: `.../02_FMIS/implementation/app.py`
+- Create: `.../02_FMIS/implementation/tests/test_fmis_audit.py`
+
+**Interfaces:**
+- Consumes: `log_audit_event(event_type, actor, details)` at `services.py:826`.
+- Produces: `FMISService.set_actor(username: str | None) -> None`, and audit rows written by the service for create, status-change and export actions.
+
+- [ ] **Step 1: Write the failing test**
+
+Create `tests/test_fmis_audit.py`:
+
+```python
+"""Audit coverage — the service writes its own audit trail.
+
+FMIS-AGENT-ENGINEERING-INSTRUCTIONS section 24 requires create, edit, status
+change and export to be audited, recording who acted. Section 23 establishes
+that enforcement belongs in the service rather than the UI because the UI is
+bypassable; audit is the same concern. These tests call the service directly,
+with no UI involved, and require the trail to exist anyway.
+"""
+
+import os
+import tempfile
+import unittest
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from fmis.services import FMISService  # noqa: E402
+
+
+class AuditCoverageTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.service = FMISService(database_path=os.path.join(self.tmp.name, "fmis.db"))
+        self.service.initialize()
+
+    def tearDown(self):
+        self.service.close()
+        self.tmp.cleanup()
+
+    def _events(self):
+        return [r["event_type"] for r in self.service.get_audit_log(limit=200)]
+
+    def test_creating_a_plant_is_audited_without_the_ui(self):
+        self.service.create_plant(
+            name="Chiller Plant", code="CHP-01", category="Cooling",
+            location="Basement", status="Running", criticality="High",
+        )
+        self.assertIn("plant.created", self._events())
+
+    def test_creating_a_user_is_audited_without_the_ui(self):
+        self.service.create_user(username="planner", password="password", role="Technician", active=True)
+        self.assertIn("user.created", self._events())
+
+    def test_the_acting_user_is_recorded_not_the_string_system(self):
+        """Section 24 requires Who. A hardcoded 'system' actor discards it."""
+        self.service.set_actor("chief")
+        self.service.create_plant(
+            name="Boilers", code="BLR-01", category="Heating",
+            location="Roof", status="Running", criticality="Medium",
+        )
+        rows = self.service.get_audit_log(limit=200)
+        created = [r for r in rows if r["event_type"] == "plant.created"]
+        self.assertTrue(created, "plant.created must be audited")
+        self.assertEqual(created[0]["actor"], "chief")
+
+    def test_actor_falls_back_to_system_when_unset(self):
+        self.service.create_plant(
+            name="STP", code="STP-01", category="Sanitation",
+            location="Yard", status="Running", criticality="Low",
+        )
+        created = [r for r in self.service.get_audit_log(limit=200) if r["event_type"] == "plant.created"]
+        self.assertEqual(created[0]["actor"], "system")
+
+    def test_no_duplicate_audit_rows_when_the_ui_path_is_used(self):
+        """app.py must no longer log what the service now logs."""
+        self.service.set_actor("superadmin")
+        self.service.create_user(username="tech2", password="password", role="Technician", active=True)
+        events = self._events()
+        self.assertEqual(events.count("user.created"), 1, "exactly one row per action")
+```
+
+- [ ] **Step 2: Run it to make sure it fails**
+
+```bash
+python -m unittest tests.test_fmis_audit -v
+```
+
+Expected: FAIL — `AttributeError: 'FMISService' object has no attribute 'set_actor'`, and the coverage assertions fail because the service does not log.
+
+- [ ] **Step 3: Add the actor and the service-side logging**
+
+In `fmis/services.py`, add to `__init__` (after `self.connection = None`):
+
+```python
+        self._actor = "system"
+```
+
+Add these methods next to `log_audit_event`:
+
+```python
+    def set_actor(self, username: Optional[str]) -> None:
+        """Record who subsequent audited actions belong to.
+
+        FMIS section 24 requires Who. The UI calls this at sign-in; a script or
+        test that never calls it gets "system", which is honest about the fact
+        that no human was identified rather than silently attributing the action.
+        """
+        self._actor = username or "system"
+
+    def _audit(self, event_type: str, details: str) -> None:
+        self.log_audit_event(event_type, self._actor, details)
+```
+
+Then add an `_audit` call at the end of each creating or mutating method — `create_user`, `create_plant`, `create_equipment`, `create_work_order`, `create_pm_plan`, `update_user_status`, and any other method that inserts or updates a row. Use the `noun.verb` naming already in use (`equipment.status.changed`), so: `user.created`, `plant.created`, `equipment.created`, `work_order.created`, `pm_plan.created`, `user.status.changed`.
+
+Change `services.py:608` from the hardcoded actor to the recorded one:
+
+```python
+        self._audit("equipment.status.changed", f"Equipment {equipment_id} moved to {status}")
+```
+
+- [ ] **Step 4: Remove the now-duplicated logging from app.py**
+
+Find every `log_audit_event` call in `app.py` (`app.py:526` is one) and delete the ones whose action the service now logs. Add a `self.service.set_actor(user["username"])` call in `do_login`, immediately after `self.current_user = user`, so the service knows who is acting.
+
+Leave any `app.py` audit call whose action the service does **not** perform — sign-in and sign-out are UI events and belong there. §24 lists login among the auditable actions, so do not delete that one; if `do_login` does not currently audit, add `self.service.log_audit_event("user.signed_in", user["username"], "Signed in")` after setting the actor.
+
+- [ ] **Step 5: Run the full suite**
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Expected: every test passes, including the pre-existing 16 and the Task 1 durability test. If `test_fmis_core.py:142` — which calls `log_audit_event` explicitly — now sees an extra row, that test's expectation may need updating; read it and decide whether it asserts a count. Fix the test only if the new behaviour is correct and its old expectation encoded the defect.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/fmis/services.py" "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/app.py" "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/tests/test_fmis_audit.py"
+git commit -m "fmis: audit in the service layer, not the caller"
+```
+
+---
+
 ### Task 6: Wire FMIS exports and backup into the service and UI
 
 **Files:**
@@ -794,6 +969,21 @@ class ServiceExportTests(unittest.TestCase):
         path = os.path.join(self.tmp.name, "backup.db")
         self.assertEqual(self.service.backup_to(path), path)
         self.assertGreater(os.path.getsize(path), 0)
+
+    def test_exports_and_backups_are_audited(self):
+        """Section 24 lists export among auditable actions."""
+        self.service.export_equipment(os.path.join(self.tmp.name, "e.csv"), "csv")
+        self.service.backup_to(os.path.join(self.tmp.name, "b.db"))
+        events = [r["event_type"] for r in self.service.get_audit_log(limit=200)]
+        self.assertIn("data.exported", events)
+        self.assertIn("database.backed_up", events)
+
+    def test_a_rejected_format_writes_no_audit_row(self):
+        """A failed export must not leave a trail claiming it happened."""
+        before = len(self.service.get_audit_log(limit=200))
+        with self.assertRaises(ValueError):
+            self.service.export_equipment(os.path.join(self.tmp.name, "x.doc"), "doc")
+        self.assertEqual(len(self.service.get_audit_log(limit=200)), before)
 ```
 
 - [ ] **Step 2: Run it to make sure it fails**
@@ -824,10 +1014,15 @@ Add to `fmis/services.py`, inside the `FMISService` class:
             raise ValueError(f"unsupported export format: {fmt!r} (expected csv, xlsx or pdf)")
         writer = getattr(exporters, writer_name)
         if fmt == "csv":
-            return writer(path, rows)
-        if fmt == "xlsx":
-            return writer(path, rows, sheet_title=title)
-        return writer(path, rows, title=title)
+            written = writer(path, rows)
+        elif fmt == "xlsx":
+            written = writer(path, rows, sheet_title=title)
+        else:
+            written = writer(path, rows, title=title)
+        # Section 24 lists export among the auditable actions. Audited here in
+        # the service, per Task 5a, so a non-UI caller cannot export unaudited.
+        self._audit("data.exported", f"{title} exported as {fmt} to {written}")
+        return written
 
     def export_equipment(self, path: str, fmt: str) -> str:
         return self._export_rows(path, fmt, self.list_equipment(), "Equipment")
@@ -838,8 +1033,12 @@ Add to `fmis/services.py`, inside the `FMISService` class:
     def backup_to(self, path: str) -> str:
         from fmis.backup import backup_database
 
-        return backup_database(self.database_path, path)
+        written = backup_database(self.database_path, path)
+        self._audit("database.backed_up", f"Backup written to {written}")
+        return written
 ```
+
+Note the ordering in `_export_rows`: the format is validated **before** anything is written, and the audit row is written **after** the file succeeds. An export that raises must not leave an audit row claiming it happened.
 
 - [ ] **Step 4: Run the tests and make sure they pass**
 

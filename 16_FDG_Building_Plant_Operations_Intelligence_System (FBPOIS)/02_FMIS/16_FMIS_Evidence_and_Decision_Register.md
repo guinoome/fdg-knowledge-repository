@@ -132,3 +132,95 @@ Tests passing: authentication and dashboard; plant, equipment and status history
 Mapped against §31 vertical slices, this covers Slices 1 through 5. Slice 6 (Chief Engineer Dashboard) is partial.
 
 **What this does not establish.** The tests exercise the service layer. The Tkinter UI has not been launched or verified in this session, and no test drives it. Per §7 of the parent document's completion gate, the UI half of "core workflow completes end to end" remains unverified.
+
+*(Superseded by E-2026-08-10-02 below: the UI is now covered.)*
+
+### E-2026-08-10-02 — FMIS §7 completion gate
+
+**Classification:** Verified, with named exceptions
+
+Final state after the local-completion work of 2026-08-10. Run from `02_FMIS/implementation/`, Python 3.14.5:
+
+```
+python -m unittest discover -s tests -v
+Ran 56 tests — OK
+```
+
+Grown from 16 to 56 over the session.
+
+#### Gate items
+
+| §7 item | State | Evidence |
+|---|---|---|
+| Opens locally, no internet, no build step | Verified | Tkinter over SQLite; no network at runtime |
+| Core workflow completes end to end | Verified | Service layer and UI both covered; `test_fmis_ui.py` drives the real Tk handlers |
+| Test suite runs and passes | Verified | 56 tests, actual run recorded above |
+| Failures that remain are named explicitly | Verified | See below |
+| Local authentication and role enforcement at the service layer | Verified | `test_fmis_ui.py` asserts the service decision **before** the UI reflection, so a UI-only gate cannot satisfy the test alone — §23's requirement, enforced in the test design |
+| Audit history written and survives restart | Verified | `test_fmis_backup.py` reopens the database in a fresh service and requires identical history |
+| Data exports produce real files | **NOT MET — see E-2026-08-10-03** | The three writers work and are well tested. **No FMIS operator can invoke them** — `fmis/exporters.py` has no caller outside `tests/` |
+| Backup and restore tested into a clean environment | **NOT MET — see E-2026-08-10-03** | Same: `fmis/backup.py` works, restores correctly into a clean directory, and has no caller outside `tests/` |
+| Master Index exists and links every file | Verified — `D-2026-08-10-03` closed by commit `cfb4f73` |
+| Engineering documentation updated | Verified | `README.md` records both new dependencies and why they are safe |
+
+#### What the audit work changed
+
+Auditing was **caller-driven** when this session began: `app.py` logged after operations, and `update_equipment_status` was the only service method that logged its own. Calling the service directly — from a test, a script, or any future non-UI consumer — produced no audit trail at all.
+
+Worse, five of the seven call sites discarded the actor. Four passed the literal string `"user"`; one passed `"system"`. FMIS §24 requires recording **Who**, and "user" is not an answer.
+
+Audit now lives in the service, attributed to an actor set at sign-in and falling back to `"system"` when no human has been identified — which is honest about the absence rather than inventing an attribution. Sign-in itself is audited; §24 lists login and nothing recorded it before.
+
+A review pass then found two methods §24 names explicitly — `update_work_order_status` (status change) and `complete_pm` (closure) — still writing nothing. Both now audit.
+
+#### Named remaining failures
+
+1. **Thirteen further service methods write no audit row.** `create_organization`, `create_property`, `create_building`, `create_area`, `create_asset`, `create_contractor`, `create_personnel`, `create_parameter`, `record_failure`, `record_inspection`, `create_material`, `create_procurement_record`, `create_pm_occurrence`. §24 covers create and configuration change, so these are genuine gaps. Deliberately left for a follow-up rather than swept into the audit task, whose scope was the methods the plan named.
+
+2. **No test asserts on an audit row's `details` field.** A reviewer reverted the fix that resolves a username instead of a bare id, and the full suite still reported 56 OK. Any detail-string regression is currently invisible. This is the widest remaining test gap in FMIS.
+
+3. **The stderr report on audit failure is untested.** Replacing the `print(...)` in `_audit` with `pass` leaves the suite green, so the promise that a lost audit row is never lost *silently* is unguarded.
+
+4. **The UI-level double-logging guard depends on Tk being available.** It sits in a class gated by `skipUnless(tk_available())`. On a headless machine the guarantee vanishes while the suite still reports OK.
+
+5. **The online-backup guarantee is asserted but unenforced.** The test justifying `Connection.backup()` over `shutil.copy` does not discriminate — a reviewer substituted a plain file copy and it still passed. FMIS commits after every write in rollback-journal mode, so the on-disk file is already consistent by the time the copy runs. The torn-write risk is real; this test never creates it.
+
+6. **§24's Before and After fields are not representable.** The `audit_log` schema carries `event_type`, `actor`, `details` and `created_at` only. Who, What and When are satisfiable; Before and After would need a schema change.
+
+7. **Slice 6, the Chief Engineer Dashboard, is partial**, and the FWIS ↔ FMIS combined management view required by §18 is not built — it needs the Shared Data Platform, which FBPOIS §2 defers until after both subsystems exist.
+
+8. **PDF column coverage is asserted weakly.** The heterogeneous-rows test confirms the call succeeds rather than reading columns back out of the document; extracting text would require a PDF parser this project should not acquire for one assertion.
+
+### E-2026-08-10-03 — Correction: the FMIS §7 gate is NOT met, because the export and backup work has no caller
+
+**Classification:** Verified defect, raised by the whole-branch review 2026-08-10, after `E-2026-08-10-02` had already been written
+
+`E-2026-08-10-02` above marked "Data exports produce real files" and "Backup and restore tested into a clean environment" as **Verified**. Both rows were wrong, and they are corrected in place above.
+
+**The finding.** `fmis/exporters.py` and `fmis/backup.py` are referenced nowhere in FMIS outside `tests/`. Confirmed by grep across `app.py` and `fmis/services.py`: no service method, no Tkinter handler, no CLI entry point. They are library code reachable only from the test suite.
+
+Every module works, and works well — 56 tests, magic-byte assertions on the Excel and PDF writers, a restore verified into a clean directory with audit history intact. **And no FMIS operator can produce a CSV, an Excel file, a PDF, or a backup**, because nothing in the running application calls any of it.
+
+**How this was missed.** The plan's Task 6 was "wire FMIS exports and backup into the service and UI". It was never executed. Partway through the run the controller judged that Task 5a's `_audit` helper had "absorbed" what Task 6 needed and folded the remainder into the FWIS task — but Task 5a only supplied the audit plumbing. The wiring, the permission gate and the UI controls were the substance of Task 6, and all three are still missing. The milestone was then reported complete.
+
+Each individual task passed its own review, because each was reviewed against its own brief. The one task that turns nine tasks of library code into a feature an operator can reach is the one that was skipped, and only a whole-branch pass could see that.
+
+**Three consequences that follow.**
+
+1. **§7 is a subsystem gate, not a module gate.** Those two rows now read NOT MET.
+2. **Export is unaudited.** §24 lists export among auditable actions, and Task 5a was deliberately sequenced *before* Task 6 so that export would be born audited. With Task 6 missing, the sequencing bought nothing — there is no export path to audit.
+3. **The backup permission decision was never implemented.** The Founder decided on 2026-08-10 to gate backup at `manage_users`, accepting that a Chief Engineer therefore could not take one. There is no gate, because there is no caller.
+
+**Also found, and belonging to the same follow-up.** `restore_database` (`fmis/backup.py:39-48`) checks only that the source file exists, then overwrites the destination in place. It will accept any file SQLite can open — a reviewer restored an unrelated grocery-list database over a live FMIS database and it was accepted with no error. Worse than a hard failure: the next `initialize()` recreates every FMIS table empty alongside the foreign ones, so the application returns looking like a healthy fresh install, indistinguishable from one, with the operator's data gone. There is no schema versioning anywhere in FMIS to detect this. Not reachable by an operator today — which is the only thing keeping it below Critical — and Task 6 is precisely the change that would make it reachable, so it must be fixed **before** that wiring, not after.
+
+### D-2026-08-10-03 — FMIS Master Index uses prose references, not wikilinks
+
+**Classification:** ~~Open~~ → **Closed, same day**
+
+`00_FMIS_Master_Index.md` refers to its documents in prose by identifier — "Read this index first, then FMIS-0001 through FMIS-0016" — with no wikilinks. The folder is therefore not traversable in the knowledge graph, unlike every other FBPOIS subfolder, which were brought to full-path wikilinks in commit `87acffd`.
+
+FBPOIS §5.2 requires a Master Index per folder and §5.3 requires it to link both directions, so this was a real gap against the standard. The hesitation was that the FMIS index is written in a deliberately different register from the others, and rewriting it would have been a judgement about that document's voice rather than a mechanical repair.
+
+**Resolved by addition rather than conversion.** A `## Files` section with full-path wikilinks was appended, and every existing prose section — the approved position diagram, the purpose, the management-access chain, the reading order and the core rule — was left exactly as written. The folder is now traversable without the document losing its voice, which is why this closed the same day it was raised rather than becoming a standing item.
+
+The `implementation/` subfolder is named in plain text rather than linked: it holds code, not knowledge, and §5.4 forbids linking what does not resolve as a document.

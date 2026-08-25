@@ -398,13 +398,13 @@ Master Data supports:
 
 Parent:
 
-- FBPOIS-SDP-0000 – Shared Data Platform Architecture
+- FBPOIS-SDP-0000 – Shared Data Platform Architecture *(confirmed not present this session)*
 
 Related:
 
 - FBPOIS-SDP-0002 – Operational Asset Model
-- FBPOIS-SDP-0003 – Organization & Property Hierarchy
-- FBPOIS-DB-0000 – Database Architecture
+- FBPOIS-SDP-0003 – Organization & Property Hierarchy *(confirmed not present this session)*
+- FBPOIS-DB-0000 – Database Architecture *(not found in any folder listing taken this session — different folder or never created; unconfirmed)*
 
 ---
 
@@ -413,3 +413,15 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | Master Data Architecture |
+
+---
+
+## Contents — 16_FBPOIS/03_Sharing_Data_Platform
+
+*Added 2026-08-05 as part of Work Package Phase 1, extended scope per direct instruction. This folder's own "0000" entry document (`FBPOIS-SDP-0000`) is confirmed not present — using SDP-0001 as the practical entry point since it's the lowest-numbered file present. Links below cover only files confirmed to exist in this pass.*
+
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0002 - Operational Asset Model|FBPOIS-SDP-0002 – Operational Asset Model]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0004 - Data Governance Standards|FBPOIS-SDP-0004 – Data Governance Standards]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0006 - Integration Architecture|FBPOIS-SDP-0006 – Integration Architecture]]
+
+**Missing, referenced by this document or expected by the numbering sequence, not linked:** SDP-0000 (Architecture, parent), SDP-0003 (Organization & Property Hierarchy), SDP-0005, SDP-0007.

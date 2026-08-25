@@ -21,9 +21,9 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- NEX-STD-001 Review Protocol
-- NEX-STD-002 Document Control
-- NEX-STD-003 Decision Evolution Standard
+- [[00_Nex/REVIEW_PROTOCOL|NEX-STD-001 Review Protocol]]
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
+- [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|NEX-STD-003 Decision Evolution Standard]]
 
 ---
 

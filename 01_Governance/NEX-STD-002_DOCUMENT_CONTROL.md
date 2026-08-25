@@ -21,8 +21,8 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- NEX-STD-001 Review Protocol
-- Decision Evolution Standard
+- [[00_Nex/REVIEW_PROTOCOL|NEX-STD-001 Review Protocol]] *(note: the target file's own header doesn't display "NEX-STD-001" — confirmed via this citation, not the file itself)*
+- [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|Decision Evolution Standard]]
 
 ---
 
@@ -325,6 +325,8 @@ A document is considered controlled only if:
 ✓ Related documents are referenced.
 
 ✓ Repository links are valid.
+
+*(Note found 2026-08-05: by this exact criterion, several documents across the repository are not yet fully "controlled" — the NEX-STD-006 ID collision and the FBPOIS/FEIS broken references found this session both fail "repository links are valid." Not resolved here; flagged as directly relevant to this standard's own compliance bar.)*
 
 ---
 

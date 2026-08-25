@@ -21,10 +21,10 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- USER.md
-- SOUL.md
-- IDENTITY.md
-- COLLABORATION_FRAMEWORK.md
+- [[02_Identity/USER|USER.md]]
+- [[02_Identity/SOUL|SOUL.md]]
+- [[02_Identity/IDENTITY|IDENTITY.md]]
+- [[02_Identity/COLLABORATION_FRAMEWORK|COLLABORATION_FRAMEWORK.md]]
 
 ---
 
@@ -243,3 +243,16 @@ Identity is an engineering standard.
 ---
 
 End of Standard
+
+---
+
+## Contents — 02_Identity
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original content above unchanged; all 4 siblings were already named in "Related Documents" — converted to real links here.*
+
+- [[02_Identity/USER|USER.md]]
+- [[02_Identity/SOUL|SOUL.md]]
+- [[02_Identity/IDENTITY|IDENTITY.md]]
+- [[02_Identity/COLLABORATION_FRAMEWORK|COLLABORATION_FRAMEWORK.md]]
+
+**Note:** this document's own ID (`NEX-STD-006`) collides with `01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK.md` — flagged earlier this session under Document Control (NEX-STD-002), not resolved here.

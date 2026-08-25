@@ -2,7 +2,7 @@
 
 Facility Workspace Intelligence System. The Chief Engineer's operational workspace: plant status, incidents, and open engineering work in one place.
 
-**Status:** Stage 0 complete · Stage 1a (sync) complete and verified against live Supabase · **Phase:** Phase 1
+**Status:** Stage 0 complete · Stage 1a (sync) complete and verified against live Supabase · role enforcement built, its database half not yet run against Postgres · **Phase:** Phase 1
 
 Governed by `../FWIS-Shift-Turnover-Prototype/CLAUDE.md`. Read that before changing anything here.
 
@@ -36,10 +36,19 @@ Sync is **additive**: with no credentials in `src/config.js` the app is exactly 
 | Plant operations | `#/plant-log` | FWIS-SPEC-0012 |
 | Utilities monitoring | `#/utility-readings` | FWIS-SPEC-0011 |
 | Daily operations | `#/briefings` | FWIS-SPEC-0001 |
+| Operations logbook | `#/logbook` | FWIS-SPEC-0004 — manual entries |
+| Logbook timeline | `#/logbook/timeline` | FWIS-SPEC-0004 — derived, never stored |
+| Engineering notes | `#/notes` | FWIS-SPEC-0006 |
+| Room engineering status | `#/rooms` | FWIS-SPEC-0009 |
+| Workflow management | `#/workflows` | FWIS-SPEC-0010 |
+| Reports | `#/reports` | FWIS-SPEC-0014 |
+| Analytics | `#/analytics` | FWIS-SPEC-0015 |
+| Configure | `#/admin` | Administrative builders — Engineering Manager and above |
+| Sync conflicts | `#/conflicts` | Field-by-field reconciliation |
 | Search | `#/search` | FWIS_VISION §Search — across every record type |
 | Account / sign-in | `#/account` | Stage 1a — hidden when sync is unconfigured |
 
-The seven module screens above are **generated from declarations**, not written individually — see below.
+The ten module screens above are **generated from declarations**, not written individually — see below. Workflow Management, Reports and Analytics are not: they own no records and have no lifecycle, so declaring them would have bent the framework rather than used it.
 
 Plus: installable PWA (manifest, service worker, offline), light and dark themes, IndexedDB persistence, and Supabase sync.
 
@@ -58,8 +67,14 @@ src/
   config.js           SINGLE SOURCE OF TRUTH — org, enums, workflow, limits
   identity.js         who is acting and where — membership, or config when local
   db.js               IndexedDB + sync-ready record envelope
+  authz.js            FBPOIS-ROLE-0004 in the client — explains, never enforces
+  workflow.js         SPEC-0010 surface: pending approvals, SLA, statistics
+  logbook.js          SPEC-0004 event derivation, shared by timeline and reports
+  org.js              the administrative builders' store (organisation overlay)
+  escalation.js       the scheduler D5 was missing
+  attachments.js      attachment bytes: IndexedDB now, Storage on next sync
   modules/
-    model.js          one model behind seven specifications
+    model.js          one model behind ten specifications
   router.js           hash router
   ui.js               shared render helpers, theme, toasts, connectivity
   turnover.js         domain model — shape, validation, escalation
@@ -76,10 +91,15 @@ src/
     bridge.js         receiver for sources with no API (session bridge)
     sample-source.js  working adapter with no provider; the reference impl
 supabase/
-  schema.sql          tables, triggers, RLS policies
-  README.md           setup steps
+  schema.sql              tables, triggers, RLS policies, workflow authority
+  authority.sql           GENERATED from config.js — the matrix as rows
+  generate-authority.mjs  writes it; --check fails if it is stale
+  README.md               setup steps
 verify/
   smoke-test.mjs      application tests
+  role-test.mjs       workflow authorization, both directions
+  role-harness.html   loads the real authz model for the role tests
+  module-test.mjs     the operational modules
   sync-test.mjs       sync engine tests
   sync-harness.html   loads the real engine for the sync tests
   live-test.mjs       the real client against a real Supabase project
@@ -119,21 +139,26 @@ The app works without a network once loaded. Theme follows the OS preference and
 ```bash
 npm install playwright && npx playwright install chromium
 python -m http.server 8792          # from this directory, in another shell
-node verify/smoke-test.mjs          # 117 assertions — the application
-node verify/sync-test.mjs           # 34 assertions — the sync engine
+node verify/smoke-test.mjs          # 147 assertions — the application
+node verify/role-test.mjs           # 119 assertions — workflow authorization
+node verify/module-test.mjs         # 65 assertions — the operational modules
 node verify/intake-test.mjs         # 74 assertions — the intake engine and bridge
-node verify/module-test.mjs         # 53 assertions — the operational modules
+node verify/sync-test.mjs           # 34 assertions — the sync engine
 ```
 
-**278 assertions total**, each exiting non-zero on failure. None needs a backend.
+**439 assertions total**, each exiting non-zero on failure. None needs a backend.
+
+`role-test.mjs` also regenerates `supabase/authority.sql` from `src/config.js` and fails if the committed file differs, which is what stops the interface and the database holding different opinions about who may accept a turnover.
 
 A third suite runs against a real hosted Supabase project and is therefore opt-in:
 
 ```bash
 SUPABASE_URL=https://<ref>.supabase.co \
 SUPABASE_ANON_KEY=<anon key> \
-node verify/live-test.mjs           # 53 assertions — the database contract
+node verify/live-test.mjs           # the database contract
 ```
+
+Apply `supabase/schema.sql` **and then** `supabase/authority.sql` first. Without the second, `record_workflows` is empty and every write is refused with `WF003` — the suite's preflight says so rather than letting the run fail one assertion at a time.
 
 Credentials come from the environment only; they are never written to disk or to `config.js`. The `service_role` key is deliberately unused — everything the suite proves is provable with the same key the browser ships, which is the point. If a caller holding only the anon key could reach another tenant's rows, RLS would have failed.
 
@@ -151,40 +176,81 @@ Credentials come from the environment only; they are never written to disk or to
 - **Loading and reading records while offline**
 - WCAG AA contrast for eight text styles in **both** themes
 - The local-only contract: with sync unconfigured, no sync chip, no account link, no dead sign-in form
+- The six specifications this work package built, through their real screens
+- Role gating opening as well as closing: a Duty Engineer refused the builders, a Chief Engineer admitted; a Technician refused announcement creation at both the list and the form
+- The escalation branch end to end: a turnover that escalates on a Critical plant, refused to its author with the tier named, then accepted by the property's Chief Engineer
 - Zero console errors
 
 `sync-test.mjs` drives the **real** sync engine and IndexedDB layer against an in-memory backend that reproduces the schema's triggers, covering: the merge policy in isolation, clean pull and push, no-op re-sync, divergence conflicts, accepted-record immutability conflicts, stale-revision refusal, tombstone propagation, and a two-device round trip.
 
-**Last verified:** 2026-08-03 — 117/117, 34/34, 74/74, 53/53, and 53/53 live passed. **331 assertions.**
+**Last verified:** 2026-08-03 — `role-test.mjs` 137/137, `module-test.mjs` 65/65, `intake-test.mjs` 74/74, `sync-test.mjs` 34/34, `smoke-test.mjs` 147/148. **458 assertions.**
+
+The one failure is the web-font fetch described under Known gaps: the app loads Google Fonts, so a host that blocks it produces a console error and the zero-console-errors assertion fails. Nothing else is affected — the app falls back and works offline once cached.
+
+**`live-test.mjs` has NOT been run since role enforcement was added.** It was rewritten for it and is unproven. Concretely: `guard_role_authority`, `assign_reference`, `evaluate_escalations`, the reference counter and the Storage policies have been written and reviewed but never executed against PostgreSQL. `role-test.mjs` proves the rules and the wire contract against a JavaScript reproduction of the trigger built from the same configuration; that is not the same as proving the SQL. Running it is the first item under Outstanding in `FWIS-IMPL-0001`.
+
+`role-test.mjs` is the suite this work package's highest-risk change needed. Role enforcement can fail closed — a correctly assigned Chief Engineer cannot accept, and a handover stops at 06:00 — or open, where the interface hides what the database permits, which is invisible from the screen and is the state FWIS was already in. So every rule is asserted **both** ways: the tier that must be refused is refused, and the tier that must succeed succeeds. An assertion that only proved refusal would pass on a system that refuses everyone.
 
 `module-test.mjs` drives the real module model: the registry, state-machine integrity across every declared workflow, progressive field disclosure, reference numbering, the audit trail, per-property option scoping, and storage. `smoke-test.mjs` additionally drives one module end to end through the generated screens — create, gated submit, permitted transitions only, audited move, list, dashboard and search.
 
 ### Specification coverage
 
-Nine of fifteen specifications are implemented, four of them partially. This table is the honest state, not the aspiration:
+All fifteen specifications now have either a working, tested implementation or a stated reason. This table is the honest state, not the aspiration:
 
 | Spec | Module | State |
 |---|---|---|
+| SPEC-0001 Daily Operations | Briefings | Complete — now carries the FBPOIS-ROLE-0004 Daily Operations approval chain |
 | SPEC-0002 Engineering Dashboard | Dashboard | Complete against its layout and components |
-| SPEC-0003 Shift Turnover | Turnovers | Complete |
-| SPEC-0007 Concerns Tracker | Concerns | Complete — registration, categories, priorities, assignment, status audit, resolution |
-| SPEC-0013 Incident Management | Incidents | Lifecycle, classification, severity, RCA and corrective actions. **Partial:** no response-time SLA tracking |
-| SPEC-0008 OOO & OOS | Availability | Lifecycle, reason codes, work reference, inspection, release. **Partial:** no asset registry — assets are typed, not selected |
-| SPEC-0001 Daily Operations | Briefings | **Partial:** briefing and shift priorities only. Assignments still come from turnovers |
+| SPEC-0003 Shift Turnover | Turnovers | Complete — acceptance is enforced, not merely displayed |
+| SPEC-0004 Operations Logbook | Logbook + timeline | Complete — manual entries as a module, plus a derived timeline over every other module |
+| SPEC-0006 Engineering Notes | Notes | Complete — SPEC-0006 §7 approval workflow, verbatim |
+| SPEC-0007 Concerns Tracker | Concerns | Complete |
+| SPEC-0008 OOO & OOS | Availability | Complete — the Buildings builder supplies the room registry it was partial for |
+| SPEC-0009 Room Engineering Status | Room status | Complete — ten-state lifecycle, defect tracking, release approval |
+| SPEC-0010 Workflow Management | Workflows | Complete against §Dashboard and §Workflow Definition. **No notifications, delegation or parallel approval** — see Known gaps |
+| SPEC-0013 Incident Management | Incidents | Complete — SLA is measured per stage by the workflow engine |
+| SPEC-0014 Reports | Reports | Complete against §Report Builder, §Filtering and §Report Archive. **No Power BI, nothing scheduled** — see Known gaps |
+| SPEC-0015 Analytics | Analytics | Complete against §KPI Library and §Trend Analysis. **No forecasting, no cross-property benchmarking** — see Known gaps |
 | SPEC-0005 Group Communications | Announcements | **Partial:** announcements only. No channels, threads, mentions or action conversion |
-| SPEC-0012 Plant Operations | Plant log | **Partial:** status and parameter logging. No plant builder, equipment registry, alarms or trends |
-| SPEC-0011 Utilities Monitoring | Meter readings | **Partial:** reading capture and abnormal flagging. No meter registry, tariffs, consumption maths or billing allocation |
-| SPEC-0004, -0006, -0009, -0010, -0014, -0015 | — | Not started: Operations Logbook, Engineering Notes, Room Engineering Status, Workflow Management, Reports, Analytics |
+| SPEC-0011 Utilities Monitoring | Meter readings | **Partial:** meter registry now buildable; no tariffs, consumption maths or billing allocation |
+| SPEC-0012 Plant Operations | Plant log | **Partial:** plant registry now buildable; no equipment registry beneath a plant, no alarms, no trends |
 
-The partial modules are partial in a consistent way: the **operational record** exists, and the **administrative configuration** around it does not. Plant Operations can log that a chiller is Critical but cannot yet define what a chiller is, because that is a builder UI rather than an operating one.
+The three that remain partial are partial for reasons, not for lack of attention: Group Communications needs a chat surface, and the other two need a commercial model and a SCADA/BMS integration respectively. `FWIS-IMPL-0001` records each as a deviation.
+
+Five modules were previously partial because "the operational record exists and the administrative configuration around it does not". That boundary is gone — Plant Operations can now define what a chiller is.
+
+### Role enforcement — what changed
+
+The gap this README recorded twice under Known gaps is closed. `property_members.role_id` was captured and seeded from the first commit and nothing read it: membership decided what a user could **see**, and nothing decided what they could **do**.
+
+Authorization is declared once, in `src/config.js` — the FBPOIS-ROLE-0004 Approval Matrix as data, plus a per-transition rule on every workflow — and enforced in two places from that one declaration:
+
+- **`supabase/schema.sql`** gains `role_levels`, `record_workflows`, `workflow_authority`, a `member_level()` function and a `guard_role_authority()` trigger. It refuses an insert below the workflow's create level, an edit below its edit level, and a status move below the level the matrix assigns. Where the matrix separates duties, it refuses the author regardless of seniority. `WF003` and `WF004` are new SQLSTATEs so "not senior enough" and "senior enough but you wrote this one" stay distinguishable — different problems with different remedies.
+- **`src/authz.js`** mirrors it so the interface can explain a refusal. It has no authority. Deleting it would change what FWIS displays and nothing about what it permits.
+
+`supabase/authority.sql` is **generated** from the configuration by `supabase/generate-authority.mjs`, and `role-test.mjs` regenerates and compares it. Two copies of a rule drift, and the direction they drift is the interface claiming an authority the database does not grant.
+
+Undeclared transitions are **refused**, not defaulted. FBPOIS-ROLE-0003 names Default Deny, and a permissive default is how a matrix acquires a silent hole.
+
+**The membership ladder is enforced through Chief Engineer.** Director of Engineering remains declared with `enforced: false`, by decision rather than oversight, and is stated on the Workflow Management screen rather than left to be inferred from an absence.
+
+**Above it sit two administrative tiers, and they differ in kind rather than degree.** Organization Administrator and FDG Super Administrator are defined by reach across properties, not by seniority within one, so they are not rows in `property_members` — a membership row names exactly one property. They are held in `organization_admins` and `platform_admins`, their levels in `admin_tiers`, and every records policy now asks `has_property_access()` — membership **or** an administrative grant that reaches.
+
+Separation of duties is **not** waived for them: a `notAuthor` rule refuses an administrator approving their own record exactly as it refuses anyone else, because that control asks about independence, not seniority.
+
+**Escalation is what reconciles the peer handover with the approval chain.** FWIS-SPEC-0003 §Status Model says so, and it is now enforced: an ordinary turnover is accepted by a peer Duty Engineer, and an escalated one takes a Chief Engineer. Requiring a Chief Engineer for every shift change would have made the matrix unusable three times a day per property.
+
+**Stage 0 gained an acting-identity control** as a direct consequence. Separation of duties needs two people, `CONFIG.session` named one, and without it no turnover could ever be accepted on a local-only install. It exists only while sync is unconfigured — the mode where identity was already a configuration value rather than a verified claim — and disappears the moment membership becomes authoritative.
 
 `intake-test.mjs` drives the **real** intake engine against the sample adapter, covering: the adapter contract and its rejection of malformed adapters, rule-based classification including escalation, deduplication by external id across a simulated crash, cursor advance ordering, per-source failure isolation, disposition, and that a second adapter with entirely different content needs no engine change. It also covers the session bridge — origin allowlisting, protocol version, refusal of an API source fed through it, partial-batch discards, idle detection, and replay dedupe.
 
-### One framework, seven modules
+### One framework, ten modules
 
-Incident Management, Concerns Tracker, OOO/OOS, Group Communications, Plant Operations, Utilities Monitoring and Daily Operations all specify the same skeleton: a numbered record, where it happened, a category, a priority, a description, a reporter, an owner, and a lifecycle whose every status change is audited. The differences are entirely data.
+Incident Management, Concerns Tracker, OOO/OOS, Group Communications, Plant Operations, Utilities Monitoring, Daily Operations, Operations Logbook, Engineering Notes and Room Engineering Status all specify the same skeleton: a numbered record, where it happened, a category, a priority, a description, a reporter, an owner, and a lifecycle whose every status change is audited. The differences are entirely data.
 
-So a module is **declared in `config.modules`** — its fields, enums, workflow and list columns — and [modules/model.js](Projects/Active/FWIS/src/modules/model.js) plus three generic screens render any of them. Routes and navigation are generated from the registry, so adding a module is a config entry, not a new screen. Seven bespoke implementations would have meant seven places to fix every future bug.
+So a module is **declared in `config.modules`** — its fields, enums, workflow and list columns — and [modules/model.js](Projects/Active/FWIS/src/modules/model.js) plus three generic screens render any of them. Routes and navigation are generated from the registry, so adding a module is a config entry, not a new screen. Ten bespoke implementations would have meant ten places to fix every future bug.
+
+Three specifications were **declined** rather than declared, and that is the framework working as intended. Workflow Management, Reports and Analytics own no records, have no lifecycle, no reporter and no audited status changes — their content is a query rather than a body somebody typed. Declaring them would have been the bent declaration this README warns against, so they are bespoke screens and `FWIS-IMPL-0001` records why.
 
 Three properties fall out of doing it this way:
 
@@ -236,20 +302,33 @@ Residue on the project: three `fwis-live-*@example.com` users and tombstoned rec
 
 ## Known gaps
 
-- **Attachments record metadata, not bytes.** File name, size, type, and caption are stored; the file itself is not persisted. Storing blobs is cheap in IndexedDB but meaningless without sync — deferred to Stage 1 with the rest of the storage story.
-- **Reference numbers can collide offline.** `INC-2026-0007` is derived from what the device can see, so two devices creating a record while offline can mint the same number. Record ids stay unique and nothing is lost or overwritten, but the human-facing reference needs a server-side sequence to be authoritative.
-- **No administrative builders.** Plants, utilities, buildings and the roster are config, not editable in the app. This is why five modules are marked partial above — the operating half exists, the configuring half does not.
-- **`config.mockFeeds` is now unused by the dashboard** but still seeds the incidents and concerns sections of a new turnover, per SPEC-0003. Those should read from the real modules once turnover composition is revisited.
-- **Identity is real, roles are not yet enforced.** `src/identity.js` derives the acting user and their properties from `property_members` when signed in, falling back to `config.session` when sync is unconfigured so Stage 0 still has an author. The role that membership assigns is read and displayed, but no screen gates an action on it — the approval chain in FBPOIS-ROLE-0004 is still evaluated from config.
-- **The SLA and repeat-clarification escalation triggers are defined but only evaluated on demand** — with no backend there is no scheduler to fire them in the background.
+Closed by this work: attachment bytes, administrative builders, offline reference collisions, role enforcement, conflict resolution, and background escalation. What remains:
+
+- **The database half of role enforcement has never been executed.** `guard_role_authority`, `assign_reference`, `evaluate_escalations`, the reference counter and the Storage policies are written and reviewed but have not been run against PostgreSQL — no Supabase credentials were available. `role-test.mjs` proves the rules against a JavaScript reproduction built from the same configuration, which proves the rules and the wire contract and not the SQL. **This is the largest open item.**
+- **Escalation runs where the app runs.** The client evaluates every minute and on every sync; `public.evaluate_escalations()` exists for a deployment with `pg_cron` but nothing schedules it here. A property whose engineers have all closed the app still needs that half.
+- **Conflicts on accepted records are shown, not merged.** SPEC-0003 says corrections after acceptance are amendments, so offering a merge would break the rule the immutability trigger enforces. The amendment workflow is still unbuilt — that is also why `Amended` is a declared, unimplemented state.
+- **Workflow Management has no notifications, no delegation, no parallel approval.** There is no mail transport and no push registration; every FWIS workflow is sequential so a majority-vote engine would have no caller; delegation needs effective and expiry dates and a record of its own. Digital acknowledgements record no IP address, which a browser cannot read without asking a third party.
+- **Reports export to Excel as SpreadsheetML 2003, not a true `.xlsx`, and produce no Power BI dataset; nothing is scheduled.** SpreadsheetML is plain XML that Excel opens natively with no bundled library; a true `.xlsx` is a ZIP container, which would mean a build step. Power BI needs the Stage 1b API surface this build does not have. A PWA that may not be running cannot honour a schedule, and offering one that silently never fired would be worse than not offering it.
+- **The Excel export types every cell as a string, including numbers, so its numeric columns cannot be summed or sorted.** CSV does not have this problem — Excel infers numeric types when it opens a CSV — which makes Download Excel worse than Download CSV on the one axis a spreadsheet exists for. Distinguishing a genuine number from an identifier that merely looks like one was not attempted, because getting it wrong would silently reformat data. Download CSV when a numeric column needs to be summed or sorted.
+- **Analytics does no forecasting and no cross-property benchmarking.** SPEC-0015 itself defers AI-assisted forecasting; the statistical models it would start from need a history this system has not accumulated. Benchmarking across properties is a Director-tier capability and that tier is out of scope. Two KPIs render "not measured" because their inputs are not captured — neither is estimated.
+- **Group Communications is announcements only.** Channels, threads, mentions and converting a message into an action need a chat surface, which was not in this work package.
+- **Utilities has no tariffs or cost allocation; Plant Operations has no equipment registry, alarms or trends.** The registries both were partial for now exist. What remains is a commercial model in one case and a SCADA/BMS integration in the other.
+- **Web fonts come from a third-party CDN.** `index.html` loads Google Fonts, so a host that blocks it produces a console error and fails the zero-console-errors assertion. Function is unaffected — the app falls back and works offline once cached — but it is a runtime network dependency in a system whose stated architecture has none. Pre-existing, outside this work package, recorded rather than quietly fixed.
+- **`Submitted` is declared but never entered.** SPEC-0003 declares it; compose moves a completed turnover directly to Pending Acceptance or Escalated. The state is kept because the specification is authoritative, and flagged so the Workflow Management screen can say so.
+- **`config.mockFeeds` still seeds the incidents and concerns sections of a new turnover**, per SPEC-0003. Those should read from the real modules once turnover composition is revisited.
 - **PWA icons are SVG.** Installable in Chromium browsers; add PNG fallbacks if a target platform rejects SVG icons.
-- **Conflicts are surfaced, not resolved.** A conflicted record shows a banner and preserves the local version under `conflict.localData`, but there is no merge UI to reconcile the two copies. Deliberate: the amendment workflow that would own this is itself unbuilt.
-- **Role-based authorization is unbuilt.** Membership assigns a role and identity exposes it, but nothing consumes it: any signed-in member can accept a turnover regardless of the level FBPOIS-ROLE-0004 requires. Enforcement belongs in the database alongside the other rules the client is not trusted to police, not in a screen.
 - **Sync polls every 60s.** No realtime. Adequate for shift handovers; revisit if a use case needs sub-minute propagation.
+- **Director of Engineering is not enforced.** Declared with `enforced: false` by decision, and visible in the running system. Organization Administrator and FDG Super Administrator ARE now enforced — see the administrative tiers above.
+- **The administrative tiers have never run against PostgreSQL either.** `has_property_access`, `is_org_admin`, `is_platform_admin`, `admin_level` and `effective_level` are written and covered by `role-test.mjs` against a JavaScript reproduction, on exactly the same terms — and with exactly the same limitation — as the role enforcement that preceded them. This inherits the largest open item rather than adding a second one.
+- **Administrative grants are issued out of band.** Neither `organization_admins` nor `platform_admins` has an insert, update or delete policy, so no grant can be written through the API by anyone holding any key — a grant an API call could write is a grant an API bug could forge. Issuing one means running `supabase/bootstrap-admin.sql` in the SQL editor, which also carries the audit query for who currently holds what. There is no administrative UI for this, deliberately, and the consequence is that the first Super Administrator must be created by hand.
+- **The Super Administrator's named capabilities are not built.** FWIS-SPEC-0010 §Super Administrator assigns it workflow templates, engine configuration, organization defaults, SLA policies, notification rules and workflow versioning. The tier's *authority* is enforced; those *features* are separate, and two of them depend on subsystems FWIS does not have — there is no notification transport and no workflow versioning. Recorded as deviation D19 in `FWIS-IMPL-0002`.
 
 ## Source documents
 
 - `FWIS-SPEC-0003 - Shift Turnover.md` v1.1 — fields, status model, screens
-- `FBPOIS-ROLE-0004 - Workflow Authorization Matrix.md` — approval chain, escalation routing
+- `FBPOIS-ROLE-0004 - Workflow Authorization Matrix.md` — approval chain, escalation routing, separation of duties
+- `FBPOIS-ROLE-0003 - Role-Based Access Control (RBAC).md` — Default Deny, defence in depth
+- `FWIS-IMPL-0001 - Implementation Record` — role enforcement through Chief Engineer: what it validated, deviated from, and left open
+- `FWIS-IMPL-0002 - Implementation Record` — the administrative tiers above it, and evidence E9 on why two correct layers composed into an incorrect system
 - `FBPOIS-WF-0000 - Workflow Engine Architecture.md` — generic state machine the status model specialises
 - `../FWIS-Shift-Turnover-Prototype/` — the validation prototype this ports from; its schema carried over, its code did not

@@ -14,7 +14,25 @@ From this directory:
 python app.py
 ```
 
+## Dependencies
+
+Python 3.14 with the standard library, plus:
+
+- `openpyxl` — Excel export
+- `reportlab` — PDF export
+
+Both are required for the reporting formats FMIS-AGENT-ENGINEERING-INSTRUCTIONS §27
+asks for. Install once:
+
+```powershell
+python -m pip install openpyxl reportlab
+```
+
+Neither is used for anything except writing export files, and neither needs network
+access once installed. The application itself stays fully local.
+
 ## Run tests
+
 ```powershell
 python -m unittest discover -s tests -v
 ```

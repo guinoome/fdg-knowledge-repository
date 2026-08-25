@@ -21,10 +21,9 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- NEX-STD-001 Review Protocol
-- NEX-STD-002 Document Control
-- NEX-STD-003 Decision Evolution Standard
-- NEX-STD-004 Operating Principles
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
+- [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|NEX-STD-003 Decision Evolution Standard]]
+- [[01_Governance/NEX-STD-004_OPERATING_PRINCIPLES|NEX-STD-004 Operating Principles]]
 
 ---
 
@@ -237,3 +236,14 @@ Its purpose is to help the organization make better engineering decisions over t
 ---
 
 End of Constitution
+
+---
+
+## Contents — 01_Governance
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original "Related Documents" list above is preserved unchanged; this section adds the one sibling it was missing and converts references to real links.*
+
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
+- [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|NEX-STD-003 Decision Evolution Standard]]
+- [[01_Governance/NEX-STD-004_OPERATING_PRINCIPLES|NEX-STD-004 Operating Principles]]
+- [[01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK|NEX-STD-006 FDG Knowledge Governance Framework]] — *note: this ID collides with `02_Identity/00_IDENTITY_MODEL.md`, flagged earlier this session, not yet resolved*

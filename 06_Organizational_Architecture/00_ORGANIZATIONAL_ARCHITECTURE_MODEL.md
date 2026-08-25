@@ -22,11 +22,11 @@ Supersedes: None
 
 Related Documents:
 
-- NEX-STD-003 FDG Constitution
-- NEX-STD-004 Engineering Principles
-- NEX-STD-017 Agentic Framework
-- NEX-STD-018 Knowledge Model
-- NEX-STD-025 Knowledge Architecture Model
+- [[01_Governance/NEX-STD-005_CONSTITUTION|NEX-STD-003 FDG Constitution]] *(note: link target is NEX-STD-005 Constitution — this citation's own number may be off; flagged, not corrected)*
+- [[01_Governance/NEX-STD-004_OPERATING_PRINCIPLES|NEX-STD-004 Engineering Principles]]
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|NEX-STD-017 Agentic Framework]]
+- [[04_Knowledge_Management/00_KNOWLEDGE_MODEL|NEX-STD-018 Knowledge Model]]
+- [[05_Knowledge_Architecture/00_ARCHITECTURE_MODEL|NEX-STD-025 Knowledge Architecture Model]]
 
 ---
 
@@ -241,3 +241,22 @@ The enduring competitive advantage of the FDG Ecosystem is its engineered organi
 ---
 
 End of Standard
+
+---
+
+## Contents — 06_Organizational_Architecture
+
+*Added 2026-08-05 as part of the repository graph-linking Work Package. Original content above unchanged. This document's own "Related Documents" list cited only cross-section references — none of its 10 actual siblings in this folder were named anywhere. Full list below, verified against a direct folder listing same session.*
+
+- [[06_Organizational_Architecture/COLLABORATION_STANDARD|COLLABORATION_STANDARD.md]]
+- [[06_Organizational_Architecture/CONTINUOUS_IMPROVEMENT_STANDARD|CONTINUOUS_IMPROVEMENT_STANDARD.md]]
+- [[06_Organizational_Architecture/DECISION_AUTHORITY_STANDARD|DECISION_AUTHORITY_STANDARD.md]]
+- [[06_Organizational_Architecture/DELEGATION_STANDARD|DELEGATION_STANDARD.md]]
+- [[06_Organizational_Architecture/ENGINEERING_CAPABILITY_STANDARD|ENGINEERING_CAPABILITY_STANDARD.md]]
+- [[06_Organizational_Architecture/ENGINEERING_ROLE_STANDARD|ENGINEERING_ROLE_STANDARD.md]]
+- [[06_Organizational_Architecture/INTERFACE_STANDARD|INTERFACE_STANDARD.md]]
+- [[06_Organizational_Architecture/RESPONSIBILITY_STANDARD|RESPONSIBILITY_STANDARD.md]]
+- [[06_Organizational_Architecture/SPECIALIZATION_STANDARD|SPECIALIZATION_STANDARD.md]]
+- [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|WORK_PACKAGE_STANDARD.md (NEX-STD-044)]]
+
+**Also noting:** this document's own "Organizational Layers" section describes a 9-layer model that differs from both `NEX-STD-026` (Repository Structure) and the 5-layer Candidate built earlier this session. Three different layer models now identified across the repository — flagged in this session's journal, not reconciled here.
