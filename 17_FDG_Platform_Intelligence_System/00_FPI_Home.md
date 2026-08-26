@@ -20,6 +20,18 @@ It does not replace FDG CORE Intelligence.
 
 > **FPIS continuously understands the condition, value, architecture, experience, lifecycle, and evolution of FDG platforms and provides evidence for their deliberate improvement.**
 
+## Platform Architecture Capabilities
+
+- [[17_FDG_Platform_Intelligence_System/00_Architecture/01_FPIS_Architecture|FPIS Architecture]]
+- [[17_FDG_Platform_Intelligence_System/00_Architecture/02_FPIS_Information_Flow|FPIS Information Flow]]
+- [[17_FDG_Platform_Intelligence_System/02_Platform_Architecture_Intelligence/02_FDGEI_Edge_Control_Plane_Architecture|FDG Edge and Control Plane Architecture]]
+- [[17_FDG_Platform_Intelligence_System/03_Platform_Lifecycle_Intelligence/02_Offline_First_Lifecycle|Offline-First Platform Lifecycle]]
+- [[17_FDG_Platform_Intelligence_System/04_Platform_Performance_Value_Intelligence/02_Continuous_Data_Protection_Model|Continuous Data Protection Model]]
+- [[17_FDG_Platform_Intelligence_System/05_User_Usage_Subscription_Intelligence/02_Entitlement_Notification_Model|Entitlement and Renewal Notification Model]]
+- [[17_FDG_Platform_Intelligence_System/06_Platform_Innovation_Evolution_Intelligence/02_Platform_Feedback_and_Telemetry_Boundary|Platform Feedback and Telemetry Boundary]]
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/02_Client_IT_Operational_Visibility|Client IT Operational Visibility]]
+- [[17_FDG_Platform_Intelligence_System/08_Platform_Decision_Intelligence/02_FPS_Implementation_Gate|FPS Implementation Gate]]
+
 ## FPIS Sections
 
 - [[17_FDG_Platform_Intelligence_System/00_Architecture/01_FPIS_Architecture|FPIS Architecture]]
@@ -41,19 +53,21 @@ Links go to each platform's own authoritative entry point — FPIS does not dupl
 
 | Platform | Domain | Entry | Current state |
 |---|---|---|---|
-| FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope\|FBPOIS Vision & Scope]] | Local-first build in progress |
-| — FWIS | Facility Workspace | [[Projects/Active/FWIS/README\|FWIS README]] | Production, 457/458 assertions passing |
-| FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index\|FBIS Master Index]] | Early-stage, 3 of 18 sections built |
-| FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home\|FSIS Home]] | Fully specified, not yet built |
-| FEIS / FEIP | Engineering Intelligence | [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD\|FEIP Architecture Standard]] | Specified, not yet built |
-| FDG Ecosystem Integration Hub | Ecosystem integration | [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD\|Ecosystem Integration Hub Architecture]] | Draft status |
+| FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS Vision & Scope]] | Local-first build in progress |
+| — FWIS | Facility Workspace | [[Projects/Active/FWIS/README|FWIS README]] | Production, 457/458 assertions passing |
+| FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index|FBIS Master Index]] | Early-stage, 3 of 18 sections built |
+| FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|FSIS Home]] | Fully specified, not yet built |
+| FEIS / FEIP | Engineering Intelligence | [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD|FEIP Architecture Standard]] | Specified, not yet built |
+| FDG Ecosystem Integration Hub | Ecosystem integration | [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD|Ecosystem Integration Hub Architecture]] | Draft status |
 | FLIS | Legal Intelligence | *13_FLIS — folder not yet created* | Planned |
 | Service Intelligence | Service ops | *14 — folder not yet created* | Planned |
 | Collaboration Intelligence | Collaboration | *15 — folder not yet created* | Planned |
 
 ## Current Boundary
 
-FPIS may analyze business, usage, subscription, financial, and user evidence **only to understand platform performance and evolution**.
+FPIS may analyze platform, usage, subscription, financial, and user evidence **only to understand platform performance and evolution**.
+
+Client business data remains client-owned. FPIS should prefer platform telemetry and aggregate/anonymized operational evidence where those are sufficient for platform improvement, rather than requiring client business transaction content.
 
 FPIS does not become the system of record for:
 - billing
