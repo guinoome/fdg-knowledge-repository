@@ -25,15 +25,6 @@ FDG ECOSYSTEM
     └── FPIS — Platform  ← this system
 ```
 
-## Links to existing systems (verified, not invented)
-
-- FDG CORE Intelligence: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD|CORE Intelligence Architecture Standard]]
-- FEIS / FEIP: [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD|FEIP Architecture Standard]]
-- FBIS: [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index|FBIS Master Index]]
-- FBPOIS: [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS Vision & Scope]]
-- FSIS: [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|FSIS Home]]
-- FLIS, FWFIS — planned, folders not yet created, not linked
-
 ## FPIS Domain
 
 FPIS focuses on:
@@ -52,6 +43,19 @@ FPIS focuses on:
 - platform decisions
 - platform knowledge
 - platform roadmap
+- edge/control-plane architecture
+- synchronization and recovery architecture
+- entitlement lifecycle
+- platform telemetry and feedback
+
+## Edge / Control Plane Architectural Pattern
+
+FDG platforms may use a reusable **FDG Edge + FDG Control Plane** pattern.
+
+- **FDG Edge Node:** client-local operation, local database, offline workflows, durable change capture, synchronization queue, cached entitlement/authentication state, local reporting, device integration, and permitted operational diagnostics.
+- **FDG Control Plane:** tenant management, subscription and license authority, synchronization coordination, cloud data protection, platform updates, security, telemetry, and FDG-controlled proprietary platform capabilities.
+
+See [[17_FDG_Platform_Intelligence_System/02_Platform_Architecture_Intelligence/02_FDGEI_Edge_Control_Plane_Architecture|FDG Edge and Control Plane Architecture]].
 
 ## Core Loop
 
@@ -64,3 +68,13 @@ FPIS provides intelligence and recommendations. Platform owners and FDG governan
 ## Information Boundary
 
 FPIS consumes evidence from other systems but does not silently take ownership of their source-of-truth responsibilities.
+
+## Related Existing Systems
+
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD|FDG CORE Intelligence Architecture Standard]]
+- [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD|FDG Platform Hub Architecture Standard]]
+- [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|FSIS]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/00_Architecture|FWAIS Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD|FEIP Architecture Standard]]
+- [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index|FBIS Master Index]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS Vision & Scope]]
