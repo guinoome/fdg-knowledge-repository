@@ -386,3 +386,5 @@ It is to make every engineering activity improve the next one.
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document

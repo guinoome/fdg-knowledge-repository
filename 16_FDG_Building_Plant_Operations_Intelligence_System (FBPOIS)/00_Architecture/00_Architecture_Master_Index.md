@@ -6,3 +6,5 @@
 ## Files
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0000 - FBPOIS Master Architecture|FBPOIS-ARCH-0000 – FBPOIS Master Architecture]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS-ARCH-0001 – Vision & Scope]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|16 FDG Building Plant Operations Intelligence System (FBPOIS) Master Index]] → this document

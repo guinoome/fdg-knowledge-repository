@@ -1,0 +1,41 @@
+﻿Existing Local Folder,Classification,Canonical Destination
+00_Architecture,MOVE + MERGE,06_Business_Architecture
+00_FBIS_Home,KEEP / REBUILD,00_FBIS_Home
+01_Business_Governance,KEEP / REBUILD,01_Business_Governance
+01_Business_Intelligence,MOVE + MERGE,05_Business_Knowledge_Architecture / 07_Business_Core_Intelligence / 11_Business_Frameworks
+02_Business_Identity,KEEP / REBUILD,02_Business_Identity
+02_Revenue_Intelligence,MOVE + MERGE,07_Business_Core_Intelligence
+03_Business_Principles,KEEP / REBUILD,03_Business_Principles
+03_Payment_Intelligence,MOVE + MERGE,07_Business_Core_Intelligence + 08_Business_Operating_System + 10_FDG_Business_Standards
+04_Business_Knowledge_Management,KEEP / REBUILD,04_Business_Knowledge_Management
+04_Pricing_Intelligence,MOVE + MERGE,07_Business_Core_Intelligence
+05_Business_Knowledge_Architecture,KEEP / REBUILD,05_Business_Knowledge_Architecture
+05_Voucher_Intelligence,MOVE + MERGE,07_Business_Core_Intelligence
+06_Business_Architecture,KEEP / REBUILD,06_Business_Architecture
+06_Customer_Commercial_Intelligence,MOVE + MERGE,07_Business_Core_Intelligence
+07_Business_Core_Intelligence,KEEP / REBUILD,07_Business_Core_Intelligence
+07_Sales_Intelligence,MOVE + MERGE,07_Business_Core_Intelligence
+08_Business_Operating_System,KEEP / REBUILD,08_Business_Operating_System
+08_Orders_Transactions,MOVE + MERGE,08_Business_Operating_System
+09_Business_Analytics_&_Decision_Support,KEEP / REBUILD,09_Business_Analytics_&_Decision_Support
+09_Refunds_Cancellations,MOVE + MERGE,08_Business_Operating_System
+10_Commercial_Dashboards,MOVE + MERGE,09_Business_Analytics_&_Decision_Support
+10_FDG_Business_Standards,KEEP / REBUILD,10_FDG_Business_Standards
+11_Business_Frameworks,KEEP / REBUILD,11_Business_Frameworks
+11_Reports,MOVE + MERGE,09_Business_Analytics_&_Decision_Support
+12_API,MOVE + MERGE,06_Business_Architecture
+12_Business_Playbooks,KEEP + PRESERVE UNIQUE,12_Business_Playbooks
+13_Case_Studies,KEEP / REBUILD,13_Case_Studies
+13_Database,MOVE + MERGE,05_Business_Knowledge_Architecture
+14_Security_Audit,MOVE + MERGE,01_Business_Governance
+14_Templates_&_Tools,KEEP / REBUILD,14_Templates_&_Tools
+15_Business_Library,KEEP / REBUILD,15_Business_Library
+15_Integrations,MOVE + MERGE,06_Business_Architecture
+16_Roadmap,MOVE + MERGE,16_Strategic_Roadmap
+16_Strategic_Roadmap,KEEP / REBUILD,16_Strategic_Roadmap
+17_Governance,MOVE + MERGE,01_Business_Governance
+18_Testing,MOVE + MERGE,10_FDG_Business_Standards
+19_Continuous_Learning,MOVE + MERGE,04_Business_Knowledge_Management
+20_Templates,MOVE + MERGE,14_Templates_&_Tools
+21_Reference,MOVE + MERGE,15_Business_Library
+99_Inbox,KEEP / REBUILD,99_Inbox

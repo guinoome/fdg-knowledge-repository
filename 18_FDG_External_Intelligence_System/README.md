@@ -42,3 +42,5 @@ FEXIS may continuously learn, but it shall not continuously redefine truth.
 ## Governance Boundary
 
 FEXIS may observe, analyze, learn, recommend, and optimize authorized external representations. Changes to authoritative organizational knowledge remain governed by FDG Knowledge Governance and applicable FDG CORE controls.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

@@ -10,3 +10,5 @@ FEXIS governs the intelligence requirements for external interfaces including:
 - Approved external platforms
 
 Interfaces should be replaceable implementation layers over governed FDG knowledge.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

@@ -215,3 +215,5 @@ End of Standard
 - [[03_Agentic Framework/AUTHORITY_LEVELS|AUTHORITY_LEVELS.md]]
 - [[03_Agentic Framework/CONTEXT_REQUIREMENTS|CONTEXT_REQUIREMENTS.md]]
 - [[03_Agentic Framework/ENGINEERING_OBJECTIVE|ENGINEERING_OBJECTIVE.md]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[03_Agentic Framework/03_Agentic Framework_Master_Index|03 Agentic Framework Master Index]] → this document

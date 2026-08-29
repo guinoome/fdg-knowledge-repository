@@ -16,3 +16,5 @@ Convert approved organizational knowledge into representations that can be relia
 ## Principle
 
 Machine-readable representation is a controlled projection of authoritative knowledge, not an independent source of truth.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

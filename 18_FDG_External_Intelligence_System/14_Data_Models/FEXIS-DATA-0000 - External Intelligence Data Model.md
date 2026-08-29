@@ -21,3 +21,5 @@ Core conceptual objects:
 - Provenance Record
 
 All material objects should support identifiers, timestamps, source/provenance, confidence, lifecycle state, and applicable governance controls.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

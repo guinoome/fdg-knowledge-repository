@@ -38,3 +38,5 @@ Problem → Evidence → Pattern → Opportunity → Proposal → Decision → E
 ## Principle
 
 Innovation is evidence-driven. FPIS recommends; authorized owners decide.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/06_Platform_Innovation_Evolution_Intelligence/00_Index|00 Index]] → this document

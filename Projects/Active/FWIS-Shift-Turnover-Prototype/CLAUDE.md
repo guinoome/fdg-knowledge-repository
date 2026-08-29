@@ -234,3 +234,5 @@ The vault is a git repository as of 2026-08-02. It holds both governance knowled
 - Commit subject: imperative, ≤72 chars, prefixed with the area — `fwis: add turnover review screen`, `vault: fix NEX-STD-001 references`.
 - Never commit `.obsidian/plugins/` (third-party bundles, ~28 MB) or anything holding a token or key. `.gitignore` covers both; check `git status` after a broad `git add` before committing.
 - Governance documents under `01_Governance/` and `07_Nex_Core_Intelligence/` are Founder-approved artifacts. Changing one is a governance change, not a code change — commit it separately from code, and note the approval in the message body.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Active/FWIS-Shift-Turnover-Prototype/README|README]] → this document

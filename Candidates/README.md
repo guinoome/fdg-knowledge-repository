@@ -29,3 +29,5 @@ Nothing skips a stage — that's the rule in NEX-STD-019, not a constraint added
 - `fdg-ecosystem-5-layer-model.md` — proposed complementary organizational model, alongside (not replacing) NEX-STD-026
 
 All three carry Founder approval-in-principle from conversation. None are promoted until each Approval line is explicitly completed.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Candidates/Candidates_Master_Index|Candidates Master Index]] → this document

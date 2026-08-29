@@ -88,3 +88,5 @@ The tutorial discusses bypassing permissions for convenience. FDG should not ado
 - Credential/configuration separation
 - Self-healing workflow
 - Tool-neutral capability selection
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

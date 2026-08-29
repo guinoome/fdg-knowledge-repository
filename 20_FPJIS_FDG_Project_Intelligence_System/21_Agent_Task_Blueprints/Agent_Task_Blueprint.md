@@ -48,3 +48,5 @@ Each task should include:
 - files/components out of scope
 - validation procedure
 - completion evidence
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

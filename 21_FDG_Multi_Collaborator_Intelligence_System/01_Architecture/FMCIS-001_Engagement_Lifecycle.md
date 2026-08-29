@@ -18,3 +18,5 @@ The final lifecycle shall define:
 - records produced by each state
 
 Do not add implementation details until the state machine is agreed.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS-0000 - FMCIS Master Index]] → this document

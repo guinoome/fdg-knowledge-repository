@@ -49,3 +49,11 @@ Each folder Master Index governs its folder structure.
 Individual FBIS documents contain the substantive business intelligence.
 
 Do not duplicate authoritative FDG knowledge merely to create links; reference the authoritative source.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
+
+## Direct Child Documents
+
+- [[claude-handoff-protocol|claude-handoff-protocol]]
+- [[notes|notes]]
+- [[Untitled|Untitled]]

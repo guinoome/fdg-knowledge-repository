@@ -30,3 +30,5 @@ Controls must be enforced at the system/service boundary where technically possi
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/03_Access_Control/FSIS-0301 - Least Privilege Standard|FSIS-0301 - Least Privilege Standard]]
 - [[12_FDG_Security_Intelligence_System/03_Access_Control/FSIS-0302 - Access Review Procedure|FSIS-0302 - Access Review Procedure]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

@@ -49,3 +49,5 @@ The architecture can consolidate multiple Chief Engineers/properties where autho
 ## Daily Snapshot
 
 The established engineering workflow includes a daily snapshot around 07:45. FMIS contributes critical maintenance, plant/equipment status, PM condition, major work orders, OOO/OOS maintenance impact, material/procurement risks, contractor delays, and priority actions.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

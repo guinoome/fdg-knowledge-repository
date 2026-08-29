@@ -14,3 +14,5 @@ Working notes only — what each collaborator is doing, open handoffs, follow-up
 - **Gemini** — add as it comes up
 
 #person/collaborators
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[People/People_Master_Index|People Master Index]] → this document

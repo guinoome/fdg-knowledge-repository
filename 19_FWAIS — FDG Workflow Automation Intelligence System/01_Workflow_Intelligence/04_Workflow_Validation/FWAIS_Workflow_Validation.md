@@ -32,3 +32,5 @@
 - Rollback/recovery
 
 A workflow is not production-ready merely because an automation engine reports successful deployment.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

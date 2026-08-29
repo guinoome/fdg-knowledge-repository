@@ -17,3 +17,5 @@ Protect the credibility and evidentiary integrity of FDG's external representati
 ## Rule
 
 Visibility, ranking, or citation frequency shall never be treated as proof of factual correctness.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

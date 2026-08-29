@@ -215,3 +215,5 @@ End of Standard
 - [[04_Knowledge_Management/KNOWLEDGE_EVOLUTION_STANDARD|KNOWLEDGE_EVOLUTION_STANDARD.md]]
 
 **Also now the correct Master Index entry point for this section** — supersedes the earlier use of `KNOWLEDGE_LIFECYCLE.md`, since this file (`00_KNOWLEDGE_MODEL.md`, `NEX-STD-018`) didn't exist when the Master Index was first built.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[04_Knowledge_Management/04_Knowledge_Management_Master_Index|04 Knowledge Management Master Index]] → this document

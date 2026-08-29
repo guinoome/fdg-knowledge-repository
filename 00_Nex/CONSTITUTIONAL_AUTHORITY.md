@@ -311,3 +311,5 @@ The Founder serves as the Constitutional Authority of the FDG Ecosystem, preserv
 ---
 
 **End of Document**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[00_Nex/00_Master Index|00 Master Index]] → this document

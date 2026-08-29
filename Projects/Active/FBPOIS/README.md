@@ -110,3 +110,5 @@ The decision requires the spatial interface be built for reuse, not hard-coded t
 ## Out of scope for Phase 1
 
 Authentication, subscriptions and external integrations, per the decision.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

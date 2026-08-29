@@ -1,0 +1,27 @@
+{
+  "package": "11_FDG_Business_Intelligence_System",
+  "purpose": "clean replacement",
+  "source_local_tree": "FBIS_LOCAL_TREE.txt",
+  "canonical_domains": [
+    "00_FBIS_Home",
+    "01_Business_Governance",
+    "02_Business_Identity",
+    "03_Business_Principles",
+    "04_Business_Knowledge_Management",
+    "05_Business_Knowledge_Architecture",
+    "06_Business_Architecture",
+    "07_Business_Core_Intelligence",
+    "08_Business_Operating_System",
+    "09_Business_Analytics_&_Decision_Support",
+    "10_FDG_Business_Standards",
+    "11_Business_Frameworks",
+    "12_Business_Playbooks",
+    "13_Case_Studies",
+    "14_Templates_&_Tools",
+    "15_Business_Library",
+    "16_Strategic_Roadmap",
+    "99_Inbox"
+  ],
+  "files": 86,
+  "paymongo_phase_1": true
+}

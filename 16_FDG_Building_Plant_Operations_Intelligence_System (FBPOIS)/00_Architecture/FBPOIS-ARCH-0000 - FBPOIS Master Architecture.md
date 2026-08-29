@@ -288,3 +288,5 @@ None
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Release | Master Architecture Established |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/00_Architecture_Master_Index|00 Architecture Master Index]] → this document

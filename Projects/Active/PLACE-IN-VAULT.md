@@ -64,3 +64,5 @@ health, because nothing knows it.
 
 Everything is on `fwis-rebuilt` on GitHub, which is `main` plus five commits.
 If you would rather pull than copy, that branch is the complete picture.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

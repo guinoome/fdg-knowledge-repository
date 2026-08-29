@@ -11,3 +11,5 @@ Search Intelligence covers conventional search discoverability, including:
 - Search performance measurement
 
 SEO is treated as one capability within FEXIS, not as the complete system.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

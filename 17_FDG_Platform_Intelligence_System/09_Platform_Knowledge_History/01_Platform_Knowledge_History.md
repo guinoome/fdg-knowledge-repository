@@ -21,3 +21,5 @@ FPIS maintains the longitudinal memory of FDG platforms.
 Do not erase historical knowledge merely because a platform changed.
 
 The current state should be clear while previous states remain recoverable and traceable.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/00_Index|00 Index]] → this document

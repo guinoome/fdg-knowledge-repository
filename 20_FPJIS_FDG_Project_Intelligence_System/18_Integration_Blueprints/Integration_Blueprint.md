@@ -16,3 +16,5 @@ Define:
 - replacement strategy
 
 External integrations are optional project capabilities, not assumptions.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

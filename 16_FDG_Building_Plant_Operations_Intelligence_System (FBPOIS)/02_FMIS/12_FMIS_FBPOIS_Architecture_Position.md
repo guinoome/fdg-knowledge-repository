@@ -46,3 +46,5 @@ FMIS may create and manage the related AHU diagnosis and maintenance work.
 FWIS remains owner of the operational concern/status.
 
 FMIS remains owner of the maintenance record/history.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

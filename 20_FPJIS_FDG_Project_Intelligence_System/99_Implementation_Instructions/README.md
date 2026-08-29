@@ -10,3 +10,9 @@
 8. Validate locally first.
 9. Record implementation evidence.
 10. Return discovered blueprint gaps for FPJIS review.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+## Direct Child Documents
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/Codex_Claude_Other_Collaborator_Instructions|Codex Claude Other Collaborator Instructions]]

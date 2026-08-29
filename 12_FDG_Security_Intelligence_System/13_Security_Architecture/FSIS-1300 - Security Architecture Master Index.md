@@ -27,3 +27,5 @@ No single layer should be assumed to provide complete security.
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/13_Security_Architecture/FSIS-1301 - FDG Trust Boundary Architecture|FSIS-1301 - FDG Trust Boundary Architecture]]
 - [[12_FDG_Security_Intelligence_System/13_Security_Architecture/FSIS-1302 - Knowledge Access Matrix|FSIS-1302 - Knowledge Access Matrix]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

@@ -25,3 +25,5 @@ External laws, regulations, contractual requirements, and recognized standards s
 
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/12_Security_Standards/FSIS-1201 - Security Review Checklist|FSIS-1201 - Security Review Checklist]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

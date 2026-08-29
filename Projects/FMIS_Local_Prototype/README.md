@@ -36,3 +36,5 @@ The claim was a stale reference, corrected 2026-08-10.
 
 Open `index.html` directly in a browser. It needs no server and no build step.
 Nothing in it is wired to the canonical SQLite core.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

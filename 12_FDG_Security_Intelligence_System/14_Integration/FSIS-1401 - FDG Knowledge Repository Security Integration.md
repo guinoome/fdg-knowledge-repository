@@ -17,3 +17,5 @@ Repository security should eventually support:
 - review status.
 
 Do not expose the entire repository to an external collaborator merely because a tool can index it.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/14_Integration/FSIS-1400 - FDG Security Integration Master Index|FSIS-1400 - FDG Security Integration Master Index]] → this document

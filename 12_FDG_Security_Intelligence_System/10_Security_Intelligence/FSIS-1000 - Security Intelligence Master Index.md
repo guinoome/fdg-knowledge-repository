@@ -24,3 +24,5 @@ The objective is detection and informed response, not surveillance for its own s
 
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/10_Security_Intelligence/FSIS-1001 - Security Risk Intelligence|FSIS-1001 - Security Risk Intelligence]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

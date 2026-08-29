@@ -21,7 +21,7 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- NEX-STD-006 Identity Model
+- NEX-STD-123 Identity Model
 - SOUL.md
 - IDENTITY.md
 - COLLABORATION_FRAMEWORK.md
@@ -200,3 +200,5 @@ The objective is to continuously improve the engineering capability of the FDG E
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[02_Identity/02_Identity_Master_Index|02 Identity Master Index]] → this document

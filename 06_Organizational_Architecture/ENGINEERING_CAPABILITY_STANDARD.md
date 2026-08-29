@@ -243,3 +243,5 @@ The long-term value of the FDG Ecosystem is measured by the engineering capabili
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document

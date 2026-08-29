@@ -39,3 +39,5 @@
 ## Current next step
 
 Design FMCIS-001 — Formal Engagement Lifecycle.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/README|README]] → this document

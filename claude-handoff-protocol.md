@@ -286,3 +286,5 @@ Verified against the actual text of `06_Organizational_Architecture/WORK_PACKAGE
 **What this means going forward:** don't hand a ChatGPT/Nex agent Section 2 or Section 12 of this document anymore — hand it NEX-STD-044 directly. The only live content from this document is the two Candidates above, and they stay Tier D (documented, reasoned, not yet standard) until they go through NEX-STD-019/020's Review and Approval stages, the same as anything else — including the fact that this document's own "Version 1" declaration should have gone through that path the first time and didn't.
 
 **§10 Knowledge Capture, wired:** every completed NEX-STD-044 work package should reference `Candidates/` in its Knowledge Capture section when the work surfaces a lesson, pattern, or standards gap worth carrying forward — "future improvements" in §10 language now has a concrete landing spot instead of staying implicit.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[README|README]] → this document

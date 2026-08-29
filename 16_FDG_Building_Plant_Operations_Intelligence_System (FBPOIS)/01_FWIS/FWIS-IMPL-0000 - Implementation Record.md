@@ -190,3 +190,5 @@ Building a system produces evidence that reading a specification cannot. That ev
 ---
 
 End of Record
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document

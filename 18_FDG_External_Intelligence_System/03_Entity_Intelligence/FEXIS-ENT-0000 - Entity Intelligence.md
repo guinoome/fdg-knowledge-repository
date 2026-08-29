@@ -18,3 +18,5 @@ Maintain consistent, authoritative representations of FDG entities across extern
 ## Principle
 
 Entity representations must trace back to authoritative FDG knowledge and approved external information.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

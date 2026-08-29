@@ -45,3 +45,5 @@ A future project may:
 
 Successful project blueprints should be candidates for promotion into:
 99_Blueprint_Library
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

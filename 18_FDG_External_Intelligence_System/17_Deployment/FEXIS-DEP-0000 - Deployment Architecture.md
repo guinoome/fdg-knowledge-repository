@@ -14,3 +14,5 @@ Deployment should support:
 - Monitoring and rollback
 
 Technology selection shall follow the approved architecture rather than define it.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

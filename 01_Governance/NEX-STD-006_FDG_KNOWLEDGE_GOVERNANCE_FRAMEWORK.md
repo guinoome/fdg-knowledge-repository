@@ -436,3 +436,5 @@ The strength of the FDG Ecosystem is determined not by how much knowledge it con
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[01_Governance/01_Governance_Master_Index|01 Governance Master Index]] → this document

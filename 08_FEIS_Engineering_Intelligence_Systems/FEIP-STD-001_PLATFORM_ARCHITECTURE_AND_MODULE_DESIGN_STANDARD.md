@@ -79,3 +79,5 @@ is an engineering business operating system designed to support:
 
 **Subsection:**
 - [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-0001|FEIS-MECH-0001]] and [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-ROADMAP|FEIS-MECH-ROADMAP]] — `00_Mechanical Engineering Intelligence/`. **Note:** `FEIS-MECH-0000.md` was recorded in this folder earlier this session but is not present as of this pass — flagged in the Work Package's Phase 1 findings, not linked here since it currently doesn't exist.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|08 FEIS Engineering Intelligence Systems Master Index]] → this document

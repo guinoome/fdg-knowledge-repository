@@ -26,3 +26,5 @@ Therefore the primary IP control is architectural separation:
 - expose controlled interfaces
 - use least privilege
 - never rely on obscurity alone
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

@@ -26,3 +26,5 @@ DECISION / REVISION
 
 The consulted intelligence system remains responsible for its domain.
 FPJIS remains responsible for the project blueprint.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

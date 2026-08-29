@@ -24,3 +24,5 @@ Core controls:
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/04_Knowledge_Security/FSIS-0401 - Knowledge Classification Standard|FSIS-0401 - Knowledge Classification Standard]]
 - [[12_FDG_Security_Intelligence_System/04_Knowledge_Security/FSIS-0402 - Knowledge Compartmentalization Standard|FSIS-0402 - Knowledge Compartmentalization Standard]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

@@ -30,3 +30,5 @@ FSIS is the security intelligence domain of the FDG Ecosystem.
 **Capability without disclosure.**
 
 The goal is not to prevent collaboration. The goal is to prevent unnecessary exposure of the FDG blueprint.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

@@ -23,3 +23,5 @@ Validated policies are automatically enforced.
 
 ### Level 8 — Ecosystem Security Intelligence
 FSIS continuously protects and learns across the FDG Ecosystem.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

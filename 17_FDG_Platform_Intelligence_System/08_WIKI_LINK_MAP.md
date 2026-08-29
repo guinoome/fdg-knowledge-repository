@@ -21,6 +21,8 @@ Important cross-system links:
 - [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD|FDG Platform Hub Architecture]]
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|FSIS]]
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/00_Architecture|FWAIS]]
-- [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index|FBIS]]
+- [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS]]
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD|FEIP]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

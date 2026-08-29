@@ -248,3 +248,5 @@ The FDG Ecosystem automates disciplined engineering processes rather than replac
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[03_Agentic Framework/03_Agentic Framework_Master_Index|03 Agentic Framework Master Index]] → this document

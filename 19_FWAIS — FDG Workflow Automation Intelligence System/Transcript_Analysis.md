@@ -125,3 +125,5 @@ The strategic lesson is:
 > FDG should be able to acquire, integrate, validate, replace, and continuously improve external capabilities without becoming structurally dependent on any particular technology provider.
 
 This directly supports the long-term resilience and adaptability of the FDG Ecosystem.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

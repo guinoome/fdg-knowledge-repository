@@ -57,3 +57,5 @@ Client IT receives operational visibility without unrestricted access to FDG int
 ## FPS
 
 FDG Platform Services (FPS) remains a future reusable implementation layer. FPIS defines requirements and architecture first.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

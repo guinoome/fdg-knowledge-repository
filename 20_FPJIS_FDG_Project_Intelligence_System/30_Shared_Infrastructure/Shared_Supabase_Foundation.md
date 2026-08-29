@@ -31,3 +31,5 @@ A project may later move to:
 - another cloud architecture
 
 without changing the FPJIS blueprint methodology.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

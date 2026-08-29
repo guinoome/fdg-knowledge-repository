@@ -17,3 +17,5 @@ Continuously measure external discoverability, representation quality, and inter
 - Optimization impact
 
 Metrics must be interpreted with evidence and context rather than treated as truth by themselves.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

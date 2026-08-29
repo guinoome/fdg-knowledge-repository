@@ -47,3 +47,5 @@ Examples:
 ## Boundary
 
 FPIS analyzes platform interaction and subscription evidence. It is not an HR surveillance system and is not the billing system of record.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/05_User_Usage_Subscription_Intelligence/00_Index|00 Index]] → this document

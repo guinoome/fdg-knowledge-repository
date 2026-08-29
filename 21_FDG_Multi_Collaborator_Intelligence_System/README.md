@@ -21,3 +21,10 @@ FMCIS is not a second Nex and not a replacement for the existing Agentic Framewo
 GitHub is reference-only. The working package is intended for the local Obsidian repository:
 
 `C:\Users\FraNc!s\Documents\Obsidian\FDG Knowledge Repository`
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS-0000 - FMCIS Master Index]] → this document
+
+## Direct Child Documents
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-CURRENT-DESIGN-RECAP|FMCIS-CURRENT-DESIGN-RECAP]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-INDEX-LINKING-MAP|FMCIS-INDEX-LINKING-MAP]]

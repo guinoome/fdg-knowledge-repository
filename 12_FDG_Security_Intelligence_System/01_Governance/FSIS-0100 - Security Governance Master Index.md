@@ -51,3 +51,5 @@ Define → Approve → Implement → Test → Operate → Review → Improve →
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/01_Governance/FSIS-0101 - FDG Security Constitution|FSIS-0101 - FDG Security Constitution]]
 - [[12_FDG_Security_Intelligence_System/01_Governance/FSIS-0102 - Security Decision Register|FSIS-0102 - Security Decision Register]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

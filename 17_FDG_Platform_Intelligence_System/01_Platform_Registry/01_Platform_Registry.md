@@ -40,3 +40,5 @@ Each platform should have:
 ## Rule
 
 The registry points to source records; it should not duplicate detailed domain data unnecessarily.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/01_Platform_Registry/00_Index|00 Index]] → this document

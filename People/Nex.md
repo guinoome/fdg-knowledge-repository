@@ -9,3 +9,5 @@ Engineering Intelligence Architect of the FDG Ecosystem. What Nex is: [[02_Ident
 Working notes only here — decisions made with Nex, open threads, follow-ups that shouldn't get lost.
 
 #person/nex
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[People/People_Master_Index|People Master Index]] → this document

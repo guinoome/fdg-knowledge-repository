@@ -45,3 +45,5 @@ The FEIP Integration Module shall support:
 ---
 
 # Integration Architecture
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|08 FEIS Engineering Intelligence Systems Master Index]] → this document

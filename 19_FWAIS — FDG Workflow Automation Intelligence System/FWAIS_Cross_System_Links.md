@@ -43,3 +43,5 @@ FWAIS integrations and automation must remain subject to FDG security governance
 - [[FSIS-0301 - Least Privilege Standard]]
 - [[FSIS-0801 - Credential and Secrets Protection Standard]]
 - [[FSIS-0901 - Security Audit Standard]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

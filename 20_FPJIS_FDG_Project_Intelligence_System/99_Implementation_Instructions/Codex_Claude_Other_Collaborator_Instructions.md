@@ -35,3 +35,5 @@ Do not silently invent architecture.
 
 Primary principle:
 The implementation agent should implement the blueprint, not redesign the project through improvisation.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/README|README]] → this document

@@ -1410,3 +1410,5 @@ into structured organizational knowledge.
 The current local FMIS is the foundation.
 
 The later FBPOIS integration is an expansion, not a reason to compromise the local system.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

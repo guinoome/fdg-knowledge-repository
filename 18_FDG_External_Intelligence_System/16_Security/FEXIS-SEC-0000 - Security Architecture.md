@@ -14,3 +14,5 @@ FEXIS must enforce:
 - Rollback
 
 No confidential or restricted FDG knowledge shall become externally discoverable merely because it improves visibility.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

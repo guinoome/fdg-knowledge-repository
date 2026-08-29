@@ -32,3 +32,5 @@ Corrective / Preventive Action
 ```
 
 FMIS must not optimize only for work-order closure or PM completion. The objective is equipment reliability, plant availability, maintenance effectiveness, operational continuity, and engineering decision quality.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

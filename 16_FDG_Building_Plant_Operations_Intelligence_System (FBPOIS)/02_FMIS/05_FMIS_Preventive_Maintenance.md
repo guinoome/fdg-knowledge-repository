@@ -25,3 +25,5 @@ PM compliance must not be treated as the sole measure of maintenance quality.
 ## Existing Concept
 
 Earlier engineering work includes PM examples for cooling tower fans, fire pump sets, chillers, elevators, emergency gensets, and STP blowers, with frequency, status, scheduling, completion, assignment, criticality, difficulty, and timeline concepts.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

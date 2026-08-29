@@ -38,3 +38,5 @@ Promote only patterns that remain valid across jurisdictions, industries, and te
 ## Demand principle
 
 The catalog must represent business problems, not fashionable AI features.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

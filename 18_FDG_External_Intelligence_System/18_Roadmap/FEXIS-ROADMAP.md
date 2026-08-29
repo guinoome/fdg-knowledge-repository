@@ -47,3 +47,5 @@
 - Agent interoperability at scale
 
 All autonomous capabilities remain bounded by FDG governance, evidence, security, and approval controls.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

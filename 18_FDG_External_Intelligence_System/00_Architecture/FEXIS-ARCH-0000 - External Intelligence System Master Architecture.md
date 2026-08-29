@@ -41,3 +41,4 @@ Correctness > Security > Auditability > Evidence > Maintainability > Scalability
 ## 5. Architectural Principle
 
 FEXIS shall optimize representation without compromising truth, evidence, security, governance, or organizational consistency.
+> **Knowledge path:** [[FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS Master Index]] → this document

@@ -48,3 +48,5 @@ FWAIS operationalizes approved workflows.
 Execution technologies are replaceable.
 
 The FDG Knowledge Repository preserves durable organizational knowledge.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

@@ -455,3 +455,5 @@ End of Constitution
 - [[07_Nex_Core_Intelligence/USER_CONTEXT_STANDARD|USER_CONTEXT_STANDARD]]
 
 **Note on this grouping:** these are naming-pattern groupings for readability only, not an official taxonomy — several files could reasonably sit in more than one group. Every file in the folder is linked exactly once above; verify count against the folder listing if in doubt, don't trust the grouping labels as authoritative.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document

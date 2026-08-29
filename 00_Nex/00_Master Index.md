@@ -132,7 +132,7 @@ Entry, verified, now with a full Contents block linking all siblings: [[01_Gover
 
 *Added 2026-08-05, same reason as above. 5 documents.*
 
-Entry, verified, Contents block already complete (all 4 siblings were already named in the source document): [[02_Identity/00_IDENTITY_MODEL|Identity Model]] (NEX-STD-006 — flagged elsewhere on this page as a colliding ID)
+Entry, verified, Contents block already complete (all 4 siblings were already named in the source document): [[02_Identity/00_IDENTITY_MODEL|Identity Model]] (NEX-STD-123; reassigned 2026-08-29 to resolve the duplicate NEX-STD-006 identifier)
 
 ## 03 Agentic Framework
 
@@ -202,7 +202,7 @@ Entry, verified: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_A
 
 Own domain platform for business-side organizational intelligence (governance, identity, strategy, decision support). Already well-built internally.
 
-Entry, verified: [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index|FBIS Master Index]]
+Entry, verified: [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS Master Index]]
 
 **Current build state, per the entry document's own roadmap:** only 3 of 18 planned subfolders exist yet — `00_FBIS_Home` (17 files), `01_Business_Governance` (16 files), `02_Business_Identity` (12 files). The other 15 sections are explicitly marked "To be developed" in the source document itself.
 
@@ -322,3 +322,9 @@ Future Work Begins Here
 **Status:** Approved
 
 **Knowledge Authority:** FDG Knowledge Repository
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
+
+## Direct Child Documents
+
+- [[00_Nex/00_Nex_Master_Index|00 Nex Master Index]]

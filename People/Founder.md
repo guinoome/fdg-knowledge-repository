@@ -11,3 +11,5 @@ Francis. Full formal identity, mission, philosophy, and priorities: [[02_Identit
 - [[Projects/CORE Engineering]]
 
 #person/founder
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[People/People_Master_Index|People Master Index]] → this document

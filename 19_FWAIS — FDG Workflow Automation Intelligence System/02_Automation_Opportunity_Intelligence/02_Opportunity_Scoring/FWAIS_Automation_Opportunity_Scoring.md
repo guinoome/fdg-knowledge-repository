@@ -40,3 +40,5 @@ Low ROI, weak evidence, excessive risk, or unnecessary complexity.
 ## Rule
 
 Do not automate simply because automation is technically possible.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

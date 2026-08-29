@@ -504,3 +504,5 @@ Future phases will integrate:
 - Private Data Center Deployment
 
 Every decision made during Phase 1 shall protect and support this long-term enterprise vision.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

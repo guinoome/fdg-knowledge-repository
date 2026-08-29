@@ -41,3 +41,5 @@ The FDG Ecosystem is never shared as a whole with an external collaborator by de
 ## Source alignment
 
 This folder incorporates the approved FSIS architecture baseline and the FDG engineering documentation principle that documents should reduce ambiguity rather than add generic content. The latter source emphasizes clear objectives, explicit constraints, testable success criteria, concrete decisions, and only the information needed for the work package.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

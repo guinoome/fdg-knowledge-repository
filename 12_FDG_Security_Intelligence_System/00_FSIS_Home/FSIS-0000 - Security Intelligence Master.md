@@ -85,3 +85,5 @@ Work Package
 ## Success Criteria
 
 FSIS succeeds when useful collaboration remains possible while unnecessary exposure is minimized, sensitive knowledge is classified, access is governed, important actions are traceable, and FDG-controlled repositories remain the authoritative organizational memory.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

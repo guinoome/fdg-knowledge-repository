@@ -332,3 +332,5 @@ Closed by this work: attachment bytes, administrative builders, offline referenc
 - `FWIS-IMPL-0002 - Implementation Record` — the administrative tiers above it, and evidence E9 on why two correct layers composed into an incorrect system
 - `FBPOIS-WF-0000 - Workflow Engine Architecture.md` — generic state machine the status model specialises
 - `../FWIS-Shift-Turnover-Prototype/` — the validation prototype this ports from; its schema carried over, its code did not
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

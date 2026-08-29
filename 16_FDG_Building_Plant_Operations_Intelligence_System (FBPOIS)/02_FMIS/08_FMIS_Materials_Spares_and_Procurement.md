@@ -29,3 +29,5 @@ An 80% reorder trigger exists as an established configurable example.
 ## Delay Intelligence
 
 Distinguish material, procurement, supplier, contractor, approval, access, and manpower delays.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

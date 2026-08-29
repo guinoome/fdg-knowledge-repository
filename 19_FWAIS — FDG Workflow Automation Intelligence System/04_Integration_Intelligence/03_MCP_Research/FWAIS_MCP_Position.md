@@ -30,3 +30,5 @@ Choose the mechanism that best satisfies capability fit, evidence, security, rel
 - [[FWAIS Integration Intelligence]]
 - [[FDG Capability-Over-Tool Principle]]
 - [[FEXIS External Intelligence System]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

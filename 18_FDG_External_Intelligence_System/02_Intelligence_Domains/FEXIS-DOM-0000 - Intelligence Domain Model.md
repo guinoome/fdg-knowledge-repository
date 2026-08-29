@@ -15,3 +15,5 @@ FEXIS is organized into specialized intelligence domains:
 11. Continuous External Learning Intelligence
 
 These domains share common FDG CORE capabilities for evidence, knowledge, reasoning, security, governance, and learning.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

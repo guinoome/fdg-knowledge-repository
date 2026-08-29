@@ -12,3 +12,5 @@
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0005 - Synchronization Architecture|FBPOIS-SDP-0005 – Synchronization Architecture]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0006 - Integration Architecture|FBPOIS-SDP-0006 – Integration Architecture]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0007 - Data Lifecycle Management|FBPOIS-SDP-0007 – Data Lifecycle Management]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|16 FDG Building Plant Operations Intelligence System (FBPOIS) Master Index]] → this document

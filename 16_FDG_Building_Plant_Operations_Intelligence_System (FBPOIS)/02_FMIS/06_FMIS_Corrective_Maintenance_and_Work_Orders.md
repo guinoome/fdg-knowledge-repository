@@ -20,3 +20,5 @@ Consider safety, life safety, critical equipment, revenue, guest/customer impact
 ## Repeat Defects
 
 Identify repeated work involving the same equipment, component, failure mode, location, or symptom. Repetition becomes reliability intelligence.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

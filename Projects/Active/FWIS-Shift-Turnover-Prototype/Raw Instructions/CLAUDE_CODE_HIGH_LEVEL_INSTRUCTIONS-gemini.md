@@ -110,3 +110,5 @@ Every code commit and feature implementation must include:
 
 ### 14. Long-Term Vision (FBPOIS Transition)
 FWIS is the operational vanguard of the Facility & Building Plant Operations Intelligence System (FBPOIS). Every architectural decision made in Phase 1 must actively protect the future integration of Asset Management, CAPEX/OPEX tracking, Preventive/Corrective Maintenance, and Energy Analytics.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

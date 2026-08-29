@@ -43,7 +43,7 @@ Links go to each platform's own authoritative entry point — FPIS does not dupl
 |---|---|---|---|
 | FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope\|FBPOIS Vision & Scope]] | Local-first build in progress |
 | — FWIS | Facility Workspace | [[Projects/Active/FWIS/README\|FWIS README]] | Production, 457/458 assertions passing |
-| FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index\|FBIS Master Index]] | Early-stage, 3 of 18 sections built |
+| FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index\|FBIS Master Index]] | Canonical 18-domain knowledge architecture under migration review |
 | FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home\|FSIS Home]] | Fully specified, not yet built |
 | FEIS / FEIP | Engineering Intelligence | [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD\|FEIP Architecture Standard]] | Specified, not yet built |
 | FDG Ecosystem Integration Hub | Ecosystem integration | [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD\|Ecosystem Integration Hub Architecture]] | Draft status |
@@ -72,3 +72,30 @@ Concept → Architecture → Prototype → Local Validation → Integration → 
 ## Working Rule
 
 > **Every FPIS record should reduce platform ambiguity, improve a decision, or support platform evolution.**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
+
+## Direct Child Documents
+
+- [[17_FDG_Platform_Intelligence_System/00_Architecture/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/00_REVIEW_SCOPE|00 REVIEW SCOPE]]
+- [[17_FDG_Platform_Intelligence_System/01_EDGE_CONTROL_PLANE/01_FDGEI_Edge_Control_Plane_Architecture|01 FDGEI Edge Control Plane Architecture]]
+- [[17_FDG_Platform_Intelligence_System/01_Platform_Registry/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/02_DATA_PROTECTION/01_Continuous_Data_Protection_Model|01 Continuous Data Protection Model]]
+- [[17_FDG_Platform_Intelligence_System/02_Platform_Architecture_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/03_LICENSING/01_Entitlement_Notification_Model|01 Entitlement Notification Model]]
+- [[17_FDG_Platform_Intelligence_System/03_Platform_Lifecycle_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/04_CLIENT_IT_IP/01_Client_IT_Operational_Visibility|01 Client IT Operational Visibility]]
+- [[17_FDG_Platform_Intelligence_System/04_Platform_Performance_Value_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/05_TELEMETRY_FEEDBACK/01_Platform_Feedback_and_Telemetry_Boundary|01 Platform Feedback and Telemetry Boundary]]
+- [[17_FDG_Platform_Intelligence_System/05_User_Usage_Subscription_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/06_FPS_GATE/01_FPS_Implementation_Gate|01 FPS Implementation Gate]]
+- [[17_FDG_Platform_Intelligence_System/06_Platform_Innovation_Evolution_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/07_ARCHITECTURAL_PRINCIPLES|07 ARCHITECTURAL PRINCIPLES]]
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/08_Platform_Decision_Intelligence/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/08_WIKI_LINK_MAP|08 WIKI LINK MAP]]
+- [[17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/09_REVIEW_STATUS|09 REVIEW STATUS]]
+- [[17_FDG_Platform_Intelligence_System/10_Platform_Roadmap/00_Index|00 Index]]
+- [[17_FDG_Platform_Intelligence_System/11_Standards_Governance_Links/00_Index|00 Index]]

@@ -25,3 +25,5 @@ Each assignment should specify the collaborator, task, required context, allowed
 
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/05_Collaborator_Security/FSIS-0501 - External Collaborator Security Protocol|FSIS-0501 - External Collaborator Security Protocol]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

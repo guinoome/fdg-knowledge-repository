@@ -64,3 +64,5 @@ Design → Use → Observe → Analyze → Improve → Validate → Learn
 ## Reuse
 
 FDG should maintain reusable design patterns rather than independently redesigning every platform.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|00 Index]] → this document

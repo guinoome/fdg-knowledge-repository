@@ -45,3 +45,5 @@ The Scalability Architecture shall enable:
 ---
 
 # Scalability Architecture Model
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[09_FDG_Ecosystem_Integration_Hub/09_FDG_Ecosystem_Integration_Hub_Master_Index|09 FDG Ecosystem Integration Hub Master Index]] → this document

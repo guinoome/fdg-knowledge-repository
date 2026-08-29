@@ -66,3 +66,5 @@ Any future work package that runs the FWIS suites, adds a dependency to a `Proje
 **Review notes:** (Nex / collaborator fills in against the Capture Validation Checklist, NEX-STD-020)
 
 **Approval:** (Francis — Approved / Revision Required / Rejected, with date)
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Candidates/Candidates_Master_Index|Candidates Master Index]] → this document

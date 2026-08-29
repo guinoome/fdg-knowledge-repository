@@ -23,3 +23,5 @@ Annual Benefit
 = Net Annual Value
 
 ROI and payback should use real client data where available. Estimates must be explicitly labeled as assumptions.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

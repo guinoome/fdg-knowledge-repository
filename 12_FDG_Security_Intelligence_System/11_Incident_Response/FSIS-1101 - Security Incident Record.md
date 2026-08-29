@@ -25,3 +25,5 @@ Related Decisions:
 ```
 
 Clearly distinguish observed facts from assumptions and conclusions.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1100 - Incident Response Master Index|FSIS-1100 - Incident Response Master Index]] → this document

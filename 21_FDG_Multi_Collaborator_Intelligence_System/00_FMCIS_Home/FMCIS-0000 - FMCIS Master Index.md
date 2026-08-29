@@ -144,7 +144,7 @@ Founder / Final Authority
 
 ### Existing Intelligence Systems
 
-- [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index|FBIS]]
+- [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS]]
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|FSIS]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS]]
 - [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS]]
@@ -172,3 +172,10 @@ No GitHub write is required for this package.
 ## Current Next Step
 
 Start with [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-001_Engagement_Lifecycle|FMCIS-001 — Formal Engagement Lifecycle]].
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
+
+## Direct Child Documents
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-000_Architecture_Foundation|FMCIS-000 Architecture Foundation]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/README|README]]

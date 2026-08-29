@@ -179,3 +179,5 @@ All test runs recorded in this document were therefore performed against a byte-
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | 2026-08-10 | Local completion recorded — export, backup, restore, and the §7 gate |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document

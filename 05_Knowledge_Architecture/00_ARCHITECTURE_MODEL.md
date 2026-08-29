@@ -210,3 +210,5 @@ End of Standard
 - [[05_Knowledge_Architecture/TAGGING_STANDARD|TAGGING_STANDARD.md]]
 
 **Found while building this:** the original "Related Documents" cites "NEX-STD-023" and "NEX-STD-024" for Preservation and Evolution — but those two standards actually live in `04_Knowledge_Management/`, not here, and I have not independently confirmed those are their real document IDs. Flagged, not corrected — worth checking against the source files directly rather than assumed either way.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[05_Knowledge_Architecture/05_Knowledge_Architecture_Master_Index|05 Knowledge Architecture Master Index]] → this document

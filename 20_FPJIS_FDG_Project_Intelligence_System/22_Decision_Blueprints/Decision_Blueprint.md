@@ -38,3 +38,5 @@ Customer Portal simplified.
 
 Important refinement:
 A visitor may still explore freely. Authentication can be required later for saved output, identity-linked data, entitlement, transaction, or another explicit requirement.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

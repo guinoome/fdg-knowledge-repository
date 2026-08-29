@@ -1231,3 +1231,5 @@ The recommended implementation sequence is:
 12. Build the FSIS roadmap.
 
 **Milestone boundary:** establish the governance and knowledge-security architecture first. Technical authentication, encryption, identity providers, automated policy engines, and external integrations should follow only after the security model is validated.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

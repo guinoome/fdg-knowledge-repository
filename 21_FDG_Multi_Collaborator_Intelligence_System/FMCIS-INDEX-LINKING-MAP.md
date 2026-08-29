@@ -63,3 +63,5 @@ These are proposed, not automatic changes to existing files:
 - Register FMCIS in FPIS once platform registry governance permits.
 
 No existing repository file is modified by this local package.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/README|README]] → this document

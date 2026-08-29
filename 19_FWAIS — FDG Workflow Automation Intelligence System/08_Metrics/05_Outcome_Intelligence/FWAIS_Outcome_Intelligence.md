@@ -16,3 +16,5 @@ FWAIS measures whether an automation actually improves the business.
 - Cost avoided
 
 Outcome data feeds the workflow learning cycle and determines whether a pattern should be retained, revised, or retired.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

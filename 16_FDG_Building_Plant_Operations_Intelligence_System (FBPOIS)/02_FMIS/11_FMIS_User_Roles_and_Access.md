@@ -43,3 +43,5 @@ Optional. May consolidate multiple Chief Engineers/properties when explicitly au
 Use role plus permission scope. Scope may define property, building, plant, data domain, create/read/update/approve/close/export/admin rights.
 
 Do not assume that a title automatically grants unrestricted data access.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

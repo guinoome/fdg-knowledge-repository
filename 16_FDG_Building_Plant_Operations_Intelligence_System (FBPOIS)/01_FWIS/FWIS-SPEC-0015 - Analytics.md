@@ -476,3 +476,5 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | Analytics Functional Specification |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document

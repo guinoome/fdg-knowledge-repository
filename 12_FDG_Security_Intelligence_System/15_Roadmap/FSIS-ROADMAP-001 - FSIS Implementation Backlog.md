@@ -39,3 +39,5 @@
 - [ ] Security intelligence dashboard.
 - [ ] Cross-system security monitoring.
 - [ ] Agent identity and policy gateway.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

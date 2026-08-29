@@ -51,3 +51,16 @@ For safety-critical or sensitive workflows:
 **5R + Safety → Automation Candidate**
 
 Technology is selected only after the business workflow and required capability are understood.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document
+
+## Direct Child Documents
+
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FDG_Capability_Over_Tool_Principle|FDG Capability Over Tool Principle]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FEXIS_FWAIS_Continuous_Learning|FEXIS FWAIS Continuous Learning]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Architecture|FWAIS Architecture]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Capability_Factory|FWAIS Capability Factory]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Cross_System_Links|FWAIS Cross System Links]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Integration_Intelligence|FWAIS Integration Intelligence]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/PACKAGE_NOTE|PACKAGE NOTE]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/Transcript_Analysis|Transcript Analysis]]

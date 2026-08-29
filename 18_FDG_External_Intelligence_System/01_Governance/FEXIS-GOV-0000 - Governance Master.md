@@ -27,3 +27,5 @@ Observation → Hypothesis → Evidence → Validated Knowledge → Approved Kno
 - High-impact organizational representation change
 
 Approval requirements shall increase with impact and risk.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

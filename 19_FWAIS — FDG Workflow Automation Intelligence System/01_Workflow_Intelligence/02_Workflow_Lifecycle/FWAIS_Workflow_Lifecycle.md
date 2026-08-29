@@ -49,3 +49,5 @@ Measure actual value against the original business case.
 ## Gate 8 — Learning
 
 Promote validated lessons into reusable organizational knowledge.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

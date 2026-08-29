@@ -58,3 +58,5 @@ Not yet established — this is a pre-code project. Run `/init` once initial sca
 ## Repository etiquette
 
 Not yet established. The first implementation session should propose branch naming and commit conventions and this section should be updated with the answer, not left generic.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

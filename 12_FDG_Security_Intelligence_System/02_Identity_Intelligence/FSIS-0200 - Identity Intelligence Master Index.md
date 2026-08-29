@@ -25,3 +25,5 @@ Identity is separate from authorization. Knowing who a collaborator is does not 
 
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/02_Identity_Intelligence/FSIS-0201 - Collaborator Identity Registry|FSIS-0201 - Collaborator Identity Registry]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

@@ -68,3 +68,5 @@ Workflow
 The adapter is replaceable.
 
 The workflow remains FDG-owned.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

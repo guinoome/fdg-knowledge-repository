@@ -37,3 +37,5 @@ Multi-collaborator orchestration; can use capability information from FWAIS/FEXI
 ## Important repository observation
 
 Folder 20 already contains an FWAIS integration link, and folder 18 contains FEXIS integration architecture. These links should remain explicit rather than duplicating responsibilities.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

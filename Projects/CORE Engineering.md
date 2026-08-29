@@ -17,3 +17,5 @@ Working notes go here — tags-first, sorted later, nothing needs to be polished
 - [[FDG Ecosystem]]
 
 #project/core-engineering
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

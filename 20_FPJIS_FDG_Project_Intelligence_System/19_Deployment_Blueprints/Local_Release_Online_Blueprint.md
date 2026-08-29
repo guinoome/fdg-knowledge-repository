@@ -48,3 +48,5 @@ Revision 1.2
 Revision 2.0
 
 No online deployment is implied by local development.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

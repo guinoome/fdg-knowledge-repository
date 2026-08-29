@@ -64,3 +64,5 @@ The Capability Factory makes the FDG Ecosystem adaptable.
 When a new technology appears:
 
 FDG should be able to evaluate it, acquire its useful capability, integrate it safely, and replace an inferior implementation without redesigning the entire workflow.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

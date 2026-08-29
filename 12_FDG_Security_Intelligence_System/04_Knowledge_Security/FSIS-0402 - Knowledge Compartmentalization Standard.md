@@ -26,3 +26,5 @@ Acceptance Criteria
 ```
 
 Compartmentalization reduces blast radius when an account, document, collaborator, or integration is compromised.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/04_Knowledge_Security/FSIS-0400 - Knowledge Security Master Index|FSIS-0400 - Knowledge Security Master Index]] → this document

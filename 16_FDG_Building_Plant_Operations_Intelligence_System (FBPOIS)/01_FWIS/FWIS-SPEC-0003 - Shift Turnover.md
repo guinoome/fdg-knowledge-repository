@@ -557,3 +557,5 @@ Related:
 |---------|------|-------------|
 | 1.0 | Initial Draft | Initial Shift Turnover Specification |
 | 1.1 | 2026-08-02 | Added field-level data model, status model (reconciled with FBPOIS-WF-0000 and FBPOIS-ROLE-0004), screen definitions, and a sample record, to make the module buildable as the first HTML prototype. Status remains Draft pending Founder review. |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document

@@ -17,3 +17,5 @@ Before sharing information externally:
 Foundational rule:
 
 > An external collaborator may receive sufficient information to perform an assigned task but shall not automatically receive sufficient information to understand, reproduce, or reconstruct the complete FDG Ecosystem.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/05_Collaborator_Security/FSIS-0500 - Collaborator Security Master Index|FSIS-0500 - Collaborator Security Master Index]] → this document

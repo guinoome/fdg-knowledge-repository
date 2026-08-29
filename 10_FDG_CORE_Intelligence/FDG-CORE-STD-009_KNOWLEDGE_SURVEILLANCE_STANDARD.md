@@ -463,3 +463,5 @@ The FDG Knowledge Surveillance Engine continuously monitors authoritative engine
 ---
 
 **End of Standard**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index|10 FDG CORE Intelligence Master Index]] → this document

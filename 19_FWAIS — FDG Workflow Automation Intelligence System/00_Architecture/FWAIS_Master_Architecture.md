@@ -47,3 +47,5 @@ The adapter is replaceable. The FDG-owned workflow remains stable.
 - [[FPJIS–FWAIS Integration]]
 - [[FDG Capability-Over-Tool Principle]]
 - [[FWAIS Workflow Pattern Library]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

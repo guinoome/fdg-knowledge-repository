@@ -15,3 +15,5 @@ Protect against:
 The organizational objective is:
 
 > **Useful collaboration without surrendering control of organizational intelligence.**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/07_Intellectual_Property/FSIS-0700 - Intellectual Property Security Master Index|FSIS-0700 - Intellectual Property Security Master Index]] → this document

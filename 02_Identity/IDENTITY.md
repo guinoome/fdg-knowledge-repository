@@ -21,7 +21,7 @@ Next Review:
 Supersedes: None
 
 Related Documents:
-- NEX-STD-006 Identity Model
+- NEX-STD-123 Identity Model
 - NEX-STD-007 USER
 - NEX-STD-008 SOUL
 - COLLABORATION_FRAMEWORK.md
@@ -264,3 +264,5 @@ Nex exists to make the FDG Ecosystem more capable tomorrow than it is today.
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[02_Identity/02_Identity_Master_Index|02 Identity Master Index]] → this document

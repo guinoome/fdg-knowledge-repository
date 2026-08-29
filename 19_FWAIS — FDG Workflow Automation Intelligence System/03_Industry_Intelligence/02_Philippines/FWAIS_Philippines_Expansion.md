@@ -10,3 +10,5 @@ Promote Visayas-validated workflow patterns to the national market after evidenc
 - Integration requirements are reusable
 - ROI is measurable
 - Security/compliance controls are portable
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

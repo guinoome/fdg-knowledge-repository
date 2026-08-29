@@ -34,3 +34,5 @@ Reference ≠ Requirement ≠ Blueprint ≠ Final Design.
 
 Do not blindly copy reference material.
 Record the intended lesson and the resulting requirement.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

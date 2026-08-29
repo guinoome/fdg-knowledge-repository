@@ -318,3 +318,5 @@ The value of engineering knowledge is measured not by how much is stored, but by
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[04_Knowledge_Management/04_Knowledge_Management_Master_Index|04 Knowledge Management Master Index]] → this document

@@ -72,3 +72,5 @@ The `implementation/` subfolder holds the canonical FMIS application — Python,
 ## Core Rule
 
 Do not convert FMIS into another AppSheet-like application and do not turn the current prototype directly into the production architecture. Reuse validated workflows and concepts while implementing the approved FBPOIS enterprise architecture.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|FBPOIS Master Index]] → this document

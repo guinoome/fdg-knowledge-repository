@@ -47,3 +47,5 @@ FPIS analyzes these measures to understand and improve the platform. Financial t
 - Which platform costs the most to operate?
 - Which capability produces measurable value?
 - Where should engineering resources be invested?
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/04_Platform_Performance_Value_Intelligence/00_Index|00 Index]] → this document

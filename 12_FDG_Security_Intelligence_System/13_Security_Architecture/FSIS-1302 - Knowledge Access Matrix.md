@@ -14,3 +14,5 @@ Baseline access model:
 | Credentials/secrets | - | - | - | - | Controlled |
 
 This is a governance baseline. Technical implementations must map the model to actual capabilities.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/13_Security_Architecture/FSIS-1300 - Security Architecture Master Index|FSIS-1300 - Security Architecture Master Index]] → this document

@@ -49,3 +49,5 @@ Future capabilities may include condition monitoring, anomaly detection, predict
 ## Core Principle
 
 > FMIS transforms maintenance activity and plant condition into structured, traceable engineering intelligence that improves reliability, operational continuity, and management decisions.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

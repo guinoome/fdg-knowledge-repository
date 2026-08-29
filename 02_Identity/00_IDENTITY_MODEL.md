@@ -1,10 +1,10 @@
 # IDENTITY MODEL
 
-Document ID: NEX-STD-006
+Document ID: NEX-STD-123
 
 Document Type: Identity Standard
 
-Version: 1.0
+Version: 1.0.1
 
 Status: Approved
 
@@ -255,4 +255,6 @@ End of Standard
 - [[02_Identity/IDENTITY|IDENTITY.md]]
 - [[02_Identity/COLLABORATION_FRAMEWORK|COLLABORATION_FRAMEWORK.md]]
 
-**Note:** this document's own ID (`NEX-STD-006`) collides with `01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK.md` — flagged earlier this session under Document Control (NEX-STD-002), not resolved here.
+**Document-control note (2026-08-29):** this document was reassigned to `NEX-STD-123`; `NEX-STD-006` remains assigned to the Knowledge Governance Framework.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[02_Identity/02_Identity_Master_Index|02 Identity Master Index]] → this document

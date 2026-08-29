@@ -32,3 +32,5 @@ What future engineering decision this should improve.
 **Review notes:** (Nex / collaborator fills in against the Capture Validation Checklist, NEX-STD-020)
 
 **Approval:** (Francis — Approved / Revision Required / Rejected, with date)
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Candidates/Candidates_Master_Index|Candidates Master Index]] → this document

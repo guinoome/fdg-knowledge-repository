@@ -10,3 +10,5 @@ Architecture proposed / requires validation before implementation.
 
 Core rule:
 Architecture first; reusable FPS implementation only after repeated requirements justify it.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

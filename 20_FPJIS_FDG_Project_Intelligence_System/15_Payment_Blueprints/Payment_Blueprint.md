@@ -40,3 +40,5 @@ Never promise live validation unless the payment method provides a reliable veri
 ## Architecture
 
 Projects should communicate with a payment abstraction layer rather than hard-code provider-specific logic throughout the product.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

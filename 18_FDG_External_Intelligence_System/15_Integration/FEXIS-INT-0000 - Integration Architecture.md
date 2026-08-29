@@ -13,3 +13,5 @@ Primary relationships:
 - FPIS → platform intelligence
 
 Integration shall minimize duplicated knowledge and preserve system boundaries.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

@@ -412,3 +412,5 @@ Related:
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0014 - Reports|FWIS-SPEC-0014 – Reports]]
 
 **Missing, referenced by this document, not linked:** SPEC-0002, SPEC-0003, SPEC-0004 (Engineering Dashboard, Shift Turnover, Operations Logbook). **Also missing per the confirmed current folder listing, not referenced by this document but expected by the numbering sequence:** SPEC-0012, SPEC-0015.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document

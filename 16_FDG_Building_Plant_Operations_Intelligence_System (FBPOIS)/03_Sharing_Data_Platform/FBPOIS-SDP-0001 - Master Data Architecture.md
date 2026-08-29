@@ -425,3 +425,5 @@ Related:
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0006 - Integration Architecture|FBPOIS-SDP-0006 – Integration Architecture]]
 
 **Missing, referenced by this document or expected by the numbering sequence, not linked:** SDP-0000 (Architecture, parent), SDP-0003 (Organization & Property Hierarchy), SDP-0005, SDP-0007.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/03_Sharing_Data_Platform_Master_Index|03 Sharing Data Platform Master Index]] → this document

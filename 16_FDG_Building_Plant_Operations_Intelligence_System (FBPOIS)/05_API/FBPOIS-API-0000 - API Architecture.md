@@ -437,3 +437,5 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | API Architecture |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/05_API/05_API_Master_Index|05 API Master Index]] → this document

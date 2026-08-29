@@ -260,3 +260,5 @@ End of Standard
 - [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|WORK_PACKAGE_STANDARD.md (NEX-STD-044)]]
 
 **Also noting:** this document's own "Organizational Layers" section describes a 9-layer model that differs from both `NEX-STD-026` (Repository Structure) and the 5-layer Candidate built earlier this session. Three different layer models now identified across the repository — flagged in this session's journal, not reconciled here.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document

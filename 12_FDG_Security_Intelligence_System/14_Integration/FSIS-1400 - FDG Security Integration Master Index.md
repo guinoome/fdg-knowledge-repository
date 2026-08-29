@@ -38,3 +38,5 @@ Domain System
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/14_Integration/FSIS-1401 - FDG Knowledge Repository Security Integration|FSIS-1401 - FDG Knowledge Repository Security Integration]]
 - [[12_FDG_Security_Intelligence_System/14_Integration/FSIS-1402 - Work Package Security Contract|FSIS-1402 - Work Package Security Contract]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

@@ -8,3 +8,15 @@
 - [[AUTHORITY_LEVELS]]
 - [[CONTEXT_REQUIREMENTS]]
 - [[ENGINEERING_OBJECTIVE]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
+
+## Direct Child Documents
+
+- [[03_Agentic Framework/00_AGENTIC_MODEL|00 AGENTIC MODEL]]
+- [[03_Agentic Framework/AGENT_LIFECYCLE|AGENT LIFECYCLE]]
+- [[03_Agentic Framework/AGENT_READINESS_5R|AGENT READINESS 5R]]
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|AGENTIC FRAMEWORK]]
+- [[03_Agentic Framework/AUTHORITY_LEVELS|AUTHORITY LEVELS]]
+- [[03_Agentic Framework/CONTEXT_REQUIREMENTS|CONTEXT REQUIREMENTS]]
+- [[03_Agentic Framework/ENGINEERING_OBJECTIVE|ENGINEERING OBJECTIVE]]

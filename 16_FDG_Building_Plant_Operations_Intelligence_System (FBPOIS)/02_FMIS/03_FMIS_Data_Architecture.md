@@ -31,3 +31,5 @@ Do not overwrite information required to reconstruct previous equipment conditio
 ## Shared Data
 
 FMIS may use shared FBPOIS identities for organization, property, building, location, users, assets, and documents. Shared data does not mean shared functional ownership.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

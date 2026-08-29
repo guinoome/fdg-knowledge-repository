@@ -247,3 +247,5 @@ End of Constitution
 - [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|NEX-STD-003 Decision Evolution Standard]]
 - [[01_Governance/NEX-STD-004_OPERATING_PRINCIPLES|NEX-STD-004 Operating Principles]]
 - [[01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK|NEX-STD-006 FDG Knowledge Governance Framework]] — *note: this ID collides with `02_Identity/00_IDENTITY_MODEL.md`, flagged earlier this session, not yet resolved*
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[01_Governance/01_Governance_Master_Index|01 Governance Master Index]] → this document

@@ -15,3 +15,5 @@ Self-healing must not bypass governance, security controls, or human approval re
 Known low-risk failures may be automatically recovered.
 
 Unknown or consequential failures must escalate.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

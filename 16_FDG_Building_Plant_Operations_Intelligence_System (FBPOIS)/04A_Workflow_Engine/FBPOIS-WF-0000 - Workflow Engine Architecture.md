@@ -384,3 +384,5 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | Workflow Engine Architecture |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04A_Workflow_Engine/04A_Workflow_Engine_Master_Index|04A Workflow Engine Master Index]] → this document

@@ -50,3 +50,5 @@ CONTACT ADMIN
 → AUTOMATION
 
 This standardized Communication/Request Blueprint can later become an FWAIS automation candidate.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

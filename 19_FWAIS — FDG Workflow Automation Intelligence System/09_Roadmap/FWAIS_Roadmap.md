@@ -41,3 +41,5 @@ Promote only patterns with demonstrated portability.
 - Continuous outcome intelligence
 - Automatic detection of obsolete integrations
 - Replacement without workflow redesign
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

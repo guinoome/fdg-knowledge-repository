@@ -48,3 +48,5 @@ Before creating a new capability:
 2. Search previous FDG projects.
 3. Identify reusable, extendable, or project-specific capabilities.
 4. Record the reuse decision.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

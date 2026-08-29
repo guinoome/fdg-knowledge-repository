@@ -84,3 +84,5 @@ FPJIS must be able to return:
 NOT READY — REVISION REQUIRED
 
 This is an engineering control, not an aesthetic preference.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

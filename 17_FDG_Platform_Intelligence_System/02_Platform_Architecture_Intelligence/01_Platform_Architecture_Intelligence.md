@@ -29,3 +29,5 @@ FPIS maintains the structural intelligence of each platform.
 ## Output
 
 Architecture maps, dependency intelligence, identified risks, and evidence-based architecture recommendations.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/02_Platform_Architecture_Intelligence/00_Index|00 Index]] → this document

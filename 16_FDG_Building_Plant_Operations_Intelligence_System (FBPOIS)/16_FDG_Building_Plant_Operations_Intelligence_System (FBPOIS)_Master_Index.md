@@ -8,3 +8,9 @@
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/04_User_Roles_Master_Index|04_User_Roles]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04A_Workflow_Engine/04A_Workflow_Engine_Master_Index|04A_Workflow_Engine]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/05_API/05_API_Master_Index|05_API]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
+
+## Direct Child Documents
+
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/README|README]]

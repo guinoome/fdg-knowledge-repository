@@ -34,3 +34,5 @@ FPIS preserves decisions that affect platform evolution.
 ## Principle
 
 A platform decision without recorded rationale becomes future ambiguity.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/08_Platform_Decision_Intelligence/00_Index|00 Index]] → this document

@@ -418,3 +418,5 @@ The FDG Review & Compliance Engine systematically verifies engineering outputs a
 ---
 
 **End of Standard**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index|10 FDG CORE Intelligence Master Index]] → this document

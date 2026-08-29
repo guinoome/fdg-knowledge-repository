@@ -15,3 +15,5 @@ Before approving a security-sensitive work package, verify:
 - [ ] Output review is defined.
 - [ ] Repository destination is defined.
 - [ ] Temporary access will be revoked when appropriate.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/12_Security_Standards/FSIS-1200 - Security Standards Master Index|FSIS-1200 - Security Standards Master Index]] → this document

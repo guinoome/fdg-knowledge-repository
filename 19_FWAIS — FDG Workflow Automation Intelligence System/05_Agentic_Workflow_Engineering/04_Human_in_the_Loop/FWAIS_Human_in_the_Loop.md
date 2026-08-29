@@ -14,3 +14,5 @@ Escalate when:
 - A workflow failure cannot be safely recovered
 
 Human review must receive complete context and the reason for escalation.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

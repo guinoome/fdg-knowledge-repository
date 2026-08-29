@@ -31,3 +31,5 @@
 29 Performance Review
 30 Knowledge Capture
 31 Blueprint Promotion / Project Closure
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

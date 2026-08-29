@@ -148,3 +148,5 @@ Derived from FWIS-SPEC-0003's Business Rules, not invented:
 - **Only one side advanced** → applied without ceremony.
 
 Conflicts surface as a banner on the turnover detail screen and a count in the sync chip.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document

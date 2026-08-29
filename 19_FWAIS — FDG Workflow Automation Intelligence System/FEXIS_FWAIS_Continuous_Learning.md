@@ -88,3 +88,5 @@ The result may be:
 **Knowledge Update Proposal**
 
 rather than an uncontrolled automatic knowledge modification.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

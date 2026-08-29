@@ -83,3 +83,5 @@ Root cause, confirmed by direct inspection: standard documents across `01`–`16
 **Review notes:** (Nex / collaborator fills in against the Work Package Quality Checklist, NEX-STD-044)
 
 **Approval:** (Francis — Approved / Revision Required / Rejected, with date)
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Candidates/Candidates_Master_Index|Candidates Master Index]] → this document

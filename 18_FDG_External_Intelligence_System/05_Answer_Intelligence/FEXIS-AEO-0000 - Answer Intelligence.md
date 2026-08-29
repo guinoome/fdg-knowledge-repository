@@ -10,3 +10,5 @@ Focus areas:
 - Concise factual representation
 - Evidence-backed answers
 - Answer consistency
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document

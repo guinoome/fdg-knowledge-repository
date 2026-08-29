@@ -48,3 +48,5 @@ Collaborators can perform authorized work at high capability while FDG retains c
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/15_Roadmap/FSIS-ROADMAP-001 - FSIS Implementation Backlog|FSIS-ROADMAP-001 - FSIS Implementation Backlog]]
 - [[12_FDG_Security_Intelligence_System/15_Roadmap/FSIS-ROADMAP-002 - FSIS Maturity Model|FSIS-ROADMAP-002 - FSIS Maturity Model]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

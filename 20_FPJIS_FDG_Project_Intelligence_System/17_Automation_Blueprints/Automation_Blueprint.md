@@ -14,3 +14,5 @@ Define:
 - escalation
 
 Automation should initially be identified as an opportunity. It does not need to be implemented in the first release unless validated as necessary.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

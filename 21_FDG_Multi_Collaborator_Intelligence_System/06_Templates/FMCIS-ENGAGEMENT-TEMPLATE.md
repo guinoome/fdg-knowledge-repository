@@ -38,3 +38,5 @@ To be defined after FMCIS-007.
 ## Learning
 
 To be defined after FMCIS-006.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/06_Templates/README|README]] → this document

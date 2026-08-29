@@ -33,3 +33,5 @@ FDG_PROJECT_PACKAGE/
 └── 99_IMPLEMENTATION_INSTRUCTIONS/
 
 The package should minimize unnecessary context and maximize deterministic instructions.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

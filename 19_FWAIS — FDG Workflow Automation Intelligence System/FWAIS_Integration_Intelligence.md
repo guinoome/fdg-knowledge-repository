@@ -173,3 +173,5 @@ The workflow itself should remain stable while the implementation adapter change
 ## Governing Principle
 
 > MCPs are replaceable integration artifacts. Integration Intelligence is the FDG capability responsible for researching, evaluating, creating, validating, maintaining, and replacing those artifacts.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]] → this document

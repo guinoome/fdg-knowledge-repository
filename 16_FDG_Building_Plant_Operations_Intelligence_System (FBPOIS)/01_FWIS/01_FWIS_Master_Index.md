@@ -23,3 +23,5 @@
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0013 - Incident Management|FWIS-SPEC-0013 – Incident Management]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0014 - Reports|FWIS-SPEC-0014 – Reports]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0015 - Analytics|FWIS-SPEC-0015 – Analytics]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|16 FDG Building Plant Operations Intelligence System (FBPOIS) Master Index]] → this document

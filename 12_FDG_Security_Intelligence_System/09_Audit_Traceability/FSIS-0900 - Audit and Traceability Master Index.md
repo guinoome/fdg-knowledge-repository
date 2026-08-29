@@ -26,3 +26,5 @@ Audit logs themselves require protection against unauthorized alteration.
 
 - [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home|← FSIS Home]]
 - [[12_FDG_Security_Intelligence_System/09_Audit_Traceability/FSIS-0901 - Security Audit Standard|FSIS-0901 - Security Audit Standard]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

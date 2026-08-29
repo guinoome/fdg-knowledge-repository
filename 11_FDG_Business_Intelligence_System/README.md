@@ -1,25 +1,11 @@
-# 11_FBIS — FDG Business Intelligence System
+# FBIS Final Replacement Package
 
-FBIS is the authoritative FDG intelligence system for business and commercial operations.
+This is the clean replacement package for `11_FDG_Business_Intelligence_System`.
 
-Scope:
-- Business intelligence
-- Sales intelligence
-- Orders and transactions
-- Pricing intelligence
-- Payment intelligence
-- Voucher and discount intelligence
-- Customer commercial intelligence
-- Revenue intelligence
-- Refunds and cancellations
-- Settlement and reconciliation
-- Commercial dashboards and reporting
-- Continuous commercial learning
+It is based on the uploaded local tree plus the previously audited GitHub FBIS content. It collapses the duplicate folder schemes into the authoritative canonical FBIS domains and preserves substantive unique business intelligence.
 
-Architectural rule:
-FBIS owns the commercial domain. FDG platforms consume FBIS capabilities instead of independently recreating commercial rules.
+**Do not merge this folder into the old FBIS folder.** Back up the old folder, delete or rename the old FBIS folder, then place this entire clean folder at the same repository location.
 
-Payment processing is an execution capability. Payment intelligence, validation, transaction governance, voucher logic, reconciliation, and payment analytics belong to FBIS.
+PayMongo remains the Phase 1 payment execution provider behind a provider-neutral abstraction; FBIS remains the commercial authority.
 
-Design priority:
-Correctness > security > auditability > maintainability > interoperability > automation > extensibility.
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|11 FDG Business Intelligence System Master Index]] → this document

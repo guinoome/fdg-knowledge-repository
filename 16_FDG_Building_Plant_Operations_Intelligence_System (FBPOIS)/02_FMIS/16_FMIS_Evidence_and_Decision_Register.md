@@ -224,3 +224,5 @@ FBPOIS §5.2 requires a Master Index per folder and §5.3 requires it to link bo
 **Resolved by addition rather than conversion.** A `## Files` section with full-path wikilinks was appended, and every existing prose section — the approved position diagram, the purpose, the management-access chain, the reading order and the core rule — was left exactly as written. The folder is now traversable without the document losing its voice, which is why this closed the same day it was raised rather than becoming a standing item.
 
 The `implementation/` subfolder is named in plain text rather than linked: it holds code, not knowledge, and §5.4 forbids linking what does not resolve as a document.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

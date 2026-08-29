@@ -275,3 +275,5 @@ Engineering quality begins before execution.
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[03_Agentic Framework/03_Agentic Framework_Master_Index|03 Agentic Framework Master Index]] → this document

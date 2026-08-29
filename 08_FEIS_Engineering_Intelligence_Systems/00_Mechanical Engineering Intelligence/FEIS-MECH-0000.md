@@ -492,3 +492,5 @@ Future companion specifications include:
 ---
 
 > **End of FEIS-MECH-0000**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/00_Mechanical Engineering Intelligence_Master_Index|00 Mechanical Engineering Intelligence Master Index]] → this document

@@ -16,3 +16,5 @@
 14. Device replacement should be a first-class recovery scenario.
 15. FPIS defines architecture and policy before FPS implementation.
 16. Shared infrastructure should be built only after repeated requirements establish real reuse.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

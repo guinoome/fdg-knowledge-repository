@@ -18,3 +18,5 @@ A generated workflow package should include:
 - Recovery strategy
 
 The transcript-derived lesson is that generation quality improves when the workflow, documentation, tests, and failure handling are treated as one engineering package.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

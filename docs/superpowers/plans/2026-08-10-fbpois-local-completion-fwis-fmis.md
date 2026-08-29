@@ -1552,3 +1552,5 @@ This plan is done when all of the following hold — each stated with its verifi
 ## Known Constraint on This Plan
 
 Tasks 7 and 9 assume the background task spun off on 2026-08-09 for the phantom `FWIS-IMPL-0001` / `-0002` citations has either completed or not started. If it is still running, Task 8 Step 1 is the checkpoint that detects a collision. Do not run Task 8 concurrently with it.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document

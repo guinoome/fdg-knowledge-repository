@@ -9,3 +9,5 @@ A workflow pattern may be promoted globally when:
 - Evidence supports demand
 - ROI is demonstrable
 - Security and compliance boundaries are explicit
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document

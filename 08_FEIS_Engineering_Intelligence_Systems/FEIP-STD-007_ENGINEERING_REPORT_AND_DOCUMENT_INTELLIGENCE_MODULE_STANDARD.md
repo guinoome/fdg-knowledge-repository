@@ -47,3 +47,5 @@ The FEIP Report and Document Intelligence Module shall support:
 ---
 
 # Document Intelligence Architecture
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|08 FEIS Engineering Intelligence Systems Master Index]] → this document

@@ -26,3 +26,5 @@ or organizational question:
 
 7. Every major evolution requires explicit Review & Approval
 before becoming the new baseline.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[00_Nex/00_Master Index|00 Master Index]] → this document

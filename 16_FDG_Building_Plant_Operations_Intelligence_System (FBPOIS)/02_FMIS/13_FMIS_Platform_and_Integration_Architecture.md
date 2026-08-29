@@ -39,3 +39,5 @@ Only implemented integrations may be represented as live.
 ## Synchronization
 
 The synchronization layer should support automatic/incremental sync, retries, duplicate detection, conflict handling, history, source health, and error logging.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

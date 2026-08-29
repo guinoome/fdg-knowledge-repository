@@ -41,3 +41,5 @@ External AI, software, services, and collaborators are not assumed to be inside 
 ### 10. Capability without disclosure
 
 A collaborator should receive enough information to perform the work, not enough information to reconstruct the whole ecosystem.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/01_Governance/FSIS-0100 - Security Governance Master Index|FSIS-0100 - Security Governance Master Index]] → this document

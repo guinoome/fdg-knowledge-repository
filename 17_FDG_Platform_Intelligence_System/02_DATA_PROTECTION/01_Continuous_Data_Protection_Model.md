@@ -46,3 +46,5 @@ Potentially separate:
 - protection frequency
 
 Retention candidates discussed include quarterly, semi-annual, annual, or other defined periods. Final tiers require validation.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

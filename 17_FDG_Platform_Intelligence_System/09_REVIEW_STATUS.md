@@ -34,3 +34,5 @@ The new architecture extends those existing boundaries rather than creating an u
 ## Important
 
 Exact technical intervals, retention policies, licensing grace periods, cloud technology, storage economics, legal wording, and implementation details remain validation work.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document

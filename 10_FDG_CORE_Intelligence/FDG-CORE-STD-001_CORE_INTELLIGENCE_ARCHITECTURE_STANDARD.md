@@ -240,3 +240,5 @@ FDG CORE Intelligence transforms validated organizational knowledge into transpa
 ## FDG Ecosystem
 
 [[FDG Ecosystem]]
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index|10 FDG CORE Intelligence Master Index]] → this document

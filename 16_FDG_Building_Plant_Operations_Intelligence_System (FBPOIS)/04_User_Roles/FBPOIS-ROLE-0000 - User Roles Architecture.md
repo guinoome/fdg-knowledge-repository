@@ -419,3 +419,5 @@ Related:
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0003 - Role-Based Access Control (RBAC)|FBPOIS-ROLE-0003 – Role-Based Access Control (RBAC)]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0004 - Workflow Authorization Matrix|FBPOIS-ROLE-0004 – Workflow Authorization Matrix]] *(added — was cited nowhere in the original document despite existing)*
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0005 - Multi-Tenant Security Model|FBPOIS-ROLE-0005 – Multi-Tenant Security Model]] *(added — same)*
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/04_User_Roles_Master_Index|04 User Roles Master Index]] → this document

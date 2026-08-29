@@ -382,3 +382,5 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | Multi-Tenant Security Model |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/04_User_Roles_Master_Index|04 User Roles Master Index]] → this document

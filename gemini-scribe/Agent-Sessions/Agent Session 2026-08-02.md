@@ -13,3 +13,4 @@ model: gemini-pro-latest
 ---
 # Agent Session 2026-08-02
 
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document

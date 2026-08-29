@@ -66,3 +66,5 @@ Engineering data comes first, AI comes later. This milestone builds clean, struc
 FWIS is the operational foundation of the Facility & Building Plant Operations Intelligence System, within the FDG Ecosystem. Future integration targets: FMIS (Facility Maintenance Intelligence System), Asset Management, Preventive/Corrective Maintenance, OPEX/CAPEX, Spare Parts Management, Utilities Monitoring, Energy Analytics, Sustainability & ESG, AI collaborators, Digital Twin, enterprise synchronization, private data center deployment.
 
 Every Phase 1 decision should protect this direction without building toward it prematurely — see `CLAUDE.md`'s Stage 0 / Stage 1 distinction.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Active/FWIS-Shift-Turnover-Prototype/README|README]] → this document

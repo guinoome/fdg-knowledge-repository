@@ -31,3 +31,5 @@ or
 NOT READY — REVISION REQUIRED
 
 FPJIS is allowed to recommend not building something yet.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

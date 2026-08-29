@@ -22,7 +22,7 @@ Supersedes: None
 
 Related Documents:
 - NEX-STD-005 Constitution
-- NEX-STD-006 Identity Model
+- NEX-STD-123 Identity Model
 - NEX-STD-007 USER
 - NEX-STD-008 SOUL
 - NEX-STD-009 IDENTITY
@@ -374,3 +374,5 @@ The purpose is to continuously increase the engineering capability of the FDG Ec
 ---
 
 End of Standard
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[02_Identity/02_Identity_Master_Index|02 Identity Master Index]] → this document

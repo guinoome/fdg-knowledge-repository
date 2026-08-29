@@ -14,7 +14,7 @@ All links below go to the authoritative entry point of each system. FPIS does no
 |---|---|---|---|
 | FDG CORE Intelligence | Ecosystem coordination | [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD\|CORE Intelligence Architecture]] | Active |
 | FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope\|FBPOIS Vision & Scope]] | In development |
-| FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS-0000 - FBIS Master Index\|FBIS Master Index]] | Early-stage |
+| FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index\|FBIS Master Index]] | Migration review |
 | FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home\|FSIS Home]] | Specified |
 | FEIS / FEIP | Engineering Intelligence | [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD\|FEIP Architecture Standard]] | Specified |
 | FDG Ecosystem Integration Hub | Platform integration layer | [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD\|Ecosystem Integration Hub Architecture]] | Draft |
@@ -38,3 +38,5 @@ FPIS links to authoritative records rather than copy them. Per [[05_Knowledge_Ar
 ## One-Line Relationship
 
 > **FDG CORE Intelligence understands and connects the FDG Ecosystem; FPIS understands and improves the platforms within it.**
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/11_Standards_Governance_Links/00_Index|00 Index]] → this document

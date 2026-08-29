@@ -23,3 +23,5 @@ Future projects can:
 
 Success metric:
 Each completed FDG project should make subsequent projects faster and less ambiguous.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document

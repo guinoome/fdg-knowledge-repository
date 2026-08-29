@@ -67,3 +67,5 @@ Nex being offline does not block FMCIS.
 During the current phase, Francis reviews and approves the result. FMCIS prepares a structured package that can later be placed in a future Nex Queue.
 
 When Nex becomes continuously available, FMCIS can pass the same structured engagement intelligence to Nex without changing the underlying workflow.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS-0000 - FMCIS Master Index]] → this document

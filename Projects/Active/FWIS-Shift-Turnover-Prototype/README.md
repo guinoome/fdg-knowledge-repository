@@ -109,3 +109,10 @@ Flagged during this work package and deliberately left alone:
 - `CLAUDE.md` — operative project guidelines, including the resolved architecture decisions
 - `FWIS_VISION.md` — product philosophy and long-term direction
 - `Raw Instructions/` — the original ChatGPT and Gemini source drafts the two documents above were merged from
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document
+
+## Direct Child Documents
+
+- [[Projects/Active/FWIS-Shift-Turnover-Prototype/CLAUDE|CLAUDE]]
+- [[Projects/Active/FWIS-Shift-Turnover-Prototype/FWIS_VISION|FWIS VISION]]

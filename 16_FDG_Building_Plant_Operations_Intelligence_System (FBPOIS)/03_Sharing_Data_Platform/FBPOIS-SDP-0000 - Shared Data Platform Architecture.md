@@ -365,3 +365,5 @@ Related:
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial Draft | Shared Data Platform Architecture |
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/03_Sharing_Data_Platform_Master_Index|03 Sharing Data Platform Master Index]] → this document

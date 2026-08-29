@@ -54,3 +54,5 @@ These are platform/commercial controls, not core maintenance rules.
 ## Extensibility Rule
 
 Adding a plant type, parameter, workflow, or role should not require rewriting core maintenance logic whenever practical.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document

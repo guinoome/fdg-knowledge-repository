@@ -18,3 +18,5 @@ Identity
 ## Principle
 
 Agent interoperability must be explicit, governed, secure, and verifiable. Discoverability alone does not authorize an agent to execute an action.
+
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS-MASTER-INDEX]] → this document
