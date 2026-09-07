@@ -1,0 +1,2292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens.
+ * Neutral placeholder palette. Swap for ML Printing brand palette when provided.
+ * Semantic names (--primary, --background) stay stable so components never change.
+ *
+ * Components read these through Tailwind (`bg-primary`), never as raw values.
+ * Adding a colour means adding a token here plus a mapping in tailwind.config.ts.
+ */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    /* Status — Ph1 §7 notification framework */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.5rem;
+    --font-sans: "Inter", system-ui, sans-serif;
+  }
+
+  :root[data-theme="dark"] {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 13%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 60% 40%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 80% 45%;
+    --warning-foreground: 222 47% 11%;
+    --info: 217 80% 55%;
+    --info-foreground: 0 0% 98%;
+
+    --border: 217 33% 24%;
+    --input: 217 33% 24%;
+    --ring: 213 27% 84%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+}
+
+/* Public catalogue and template detail pages are intentionally editorial and
+   light regardless of a signed-in dashboard theme preference. Keeping the
+   override on one boundary prevents dark dashboard tokens from washing out the
+   invitation artwork or producing the empty navy bands the public redesign
+   replaces. */
+.ml-editorial {
+  --background: 40 33% 95%;
+  --foreground: 45 10% 9%;
+  --card: 40 30% 97%;
+  --card-foreground: 45 10% 9%;
+  --popover: 40 30% 97%;
+  --popover-foreground: 45 10% 9%;
+  --primary: 36 46% 42%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 37 22% 89%;
+  --secondary-foreground: 45 10% 9%;
+  --muted: 37 22% 89%;
+  --muted-foreground: 35 8% 38%;
+  --accent: 37 22% 89%;
+  --accent-foreground: 45 10% 9%;
+  --border: 35 18% 79%;
+  --input: 35 18% 79%;
+  --ring: 36 46% 42%;
+}
+
+/* =========================================================================
+   Digital invitation — the public shared event page (Ph5). Themed at runtime
+   through --inv-* custom properties the renderer sets from the customer's
+   chosen palette and fonts; these rules own structure and motion only, so one
+   stylesheet dresses every theme. Scoped under .inv-reveal-root so nothing
+   leaks into the app UI.
+   ========================================================================= */
+.inv-reveal-root {
+  --inv-on-accent: #fff;
+
+  /*
+   * The invitation sizes itself continuously rather than snapping at two or
+   * three breakpoints, so there is no width where it looks like it was designed
+   * for a different screen. Everything below scales from this gutter and from
+   * clamp() on the type: a phone gets the tight end, a tablet lands genuinely
+   * between, and a desktop gets the open end.
+   */
+  --inv-gutter: clamp(20px, 4.5vw, 44px);
+}
+
+/* --- Envelope intro (the signature: a sealed envelope that opens) --- */
+.inv-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 24px;
+  background: radial-gradient(
+    120% 120% at 50% 28%,
+    var(--inv-bg) 0%,
+    var(--inv-bg2) 100%
+  );
+}
+.inv-env {
+  position: relative;
+  width: min(84vw, 340px);
+  aspect-ratio: 3 / 2;
+  perspective: 1400px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+.inv-env-body {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: var(--inv-soft);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+.inv-pocket {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: var(--inv-soft);
+  clip-path: polygon(0 42%, 50% 92%, 100% 42%, 100% 100%, 0 100%);
+}
+.inv-env-card {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  top: 14%;
+  height: 78%;
+  z-index: 3;
+  background: var(--inv-paper);
+  border-radius: 5px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.inv-env-k {
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.inv-env-n {
+  font-family: var(--inv-heading);
+  font-size: 24px;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0 10px;
+}
+.inv-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58%;
+  z-index: 6;
+  transform-origin: top center;
+  background: linear-gradient(180deg, var(--inv-accent), rgba(0, 0, 0, 0.22));
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.inv-seal {
+  position: absolute;
+  top: calc(58% - 27px);
+  left: calc(50% - 27px);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  z-index: 8;
+  background: var(--inv-accent);
+  color: var(--inv-on-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--inv-heading);
+  font-size: 19px;
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.28),
+    inset 0 1px 3px rgba(255, 255, 255, 0.35);
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
+}
+.inv-hint {
+  font-family: var(--inv-heading);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--inv-fg);
+  opacity: 0.6;
+}
+.inv-open-btn {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--inv-fg);
+  background: transparent;
+  border: 1px solid var(--inv-line);
+  border-radius: 999px;
+  padding: 11px 22px;
+  cursor: pointer;
+}
+.inv-env.is-opening .inv-flap {
+  animation: inv-flap 0.85s forwards ease-in;
+  z-index: 2;
+}
+.inv-env.is-opening .inv-seal {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.inv-env.is-opening .inv-env-card {
+  transform: translateY(-142%) scale(1.05);
+}
+.inv-overlay.is-opening {
+  animation: inv-ovfade 0.75s 0.1s forwards;
+}
+@keyframes inv-flap {
+  to {
+    transform: rotateX(178deg);
+  }
+}
+@keyframes inv-ovfade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Launch collection entrance system. The old envelope remains below only for
+   backwards-compatible CSS snapshots; rendered experiences use these full-
+   bleed thresholds, with live text and a real button over production imagery. */
+.inv-entry {
+  align-items: stretch;
+  justify-content: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(28px, 6vw, 80px);
+  isolation: isolate;
+  background-position: center;
+  background-size: cover;
+}
+.inv-entry::before,
+.inv-entry::after {
+  pointer-events: none;
+}
+.inv-entry-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 5, 7, 0.9) 0%,
+      rgba(4, 5, 7, 0.52) 46%,
+      rgba(4, 5, 7, 0.08) 78%
+    ),
+    linear-gradient(0deg, rgba(4, 5, 7, 0.7), transparent 42%);
+}
+.inv-entry-brand {
+  position: absolute;
+  left: clamp(28px, 6vw, 80px);
+  top: clamp(24px, 5vw, 54px);
+  display: grid;
+  color: #f2d49b;
+  font-family: var(--inv-heading);
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+.inv-entry-brand span {
+  font-size: 27px;
+  letter-spacing: 0.08em;
+}
+.inv-entry-brand small {
+  margin-top: 6px;
+  font-family: var(--inv-body);
+  font-size: 7px;
+  letter-spacing: 0.32em;
+}
+.inv-entry-copy {
+  position: relative;
+  z-index: 2;
+  width: min(680px, 100%);
+  color: #fff;
+}
+.inv-entry-kicker {
+  max-width: 480px;
+  margin-bottom: 18px;
+  font-size: clamp(10px, 1.1vw, 13px);
+  font-weight: 650;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.76;
+}
+.inv-entry-title {
+  max-width: 650px;
+  font-family: var(--inv-heading);
+  font-size: clamp(46px, 8.2vw, 112px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+.inv-entry-action {
+  position: relative;
+  z-index: 3;
+  margin-top: clamp(28px, 4vw, 48px);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  background: rgba(12, 12, 13, 0.34);
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+.inv-entry-action:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-2px);
+}
+.inv-entry-action:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 5px;
+}
+.inv-entry-action:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+.inv-entry-access {
+  position: absolute;
+  right: clamp(28px, 6vw, 80px);
+  bottom: clamp(28px, 6vw, 80px);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.inv-entry--capiz-luminous {
+  background-image: url("/experiences/capiz-window-hero.png");
+  background-position: center;
+}
+.inv-entry--capiz-luminous .inv-entry-action {
+  border-color: #cda764;
+  background: #9b7338;
+  color: #fffaf0;
+}
+.inv-entry--capiz-luminous .inv-entry-title {
+  font-style: italic;
+}
+.inv-entry--neon-nightlife {
+  background-image: url("/experiences/neon-eighteen-hero.png");
+  background-position: center;
+}
+.inv-entry--neon-nightlife .inv-entry-brand {
+  color: #6ff2ff;
+}
+.inv-entry--neon-nightlife .inv-entry-kicker {
+  color: #72efff;
+  opacity: 1;
+}
+.inv-entry--neon-nightlife .inv-entry-title {
+  font-family: "Arial Black", Impact, sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow:
+    4px 0 0 #ff2ea6,
+    -3px 0 0 rgba(77, 233, 255, 0.8);
+}
+.inv-entry--neon-nightlife .inv-entry-action {
+  border-color: #ff43b4;
+  background: #e9228f;
+  box-shadow: 0 0 34px rgba(255, 35, 157, 0.36);
+}
+.inv-entry--festival-pulse {
+  background-image: url("/experiences/fiesta-banderitas-catalogue.png");
+  background-position: 50% 44%;
+}
+.inv-entry--festival-pulse .inv-entry-shade {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32, 17, 7, 0.88) 0%,
+      rgba(32, 17, 7, 0.36) 46%,
+      transparent 76%
+    ),
+    linear-gradient(0deg, rgba(32, 17, 7, 0.72), transparent 48%);
+}
+.inv-entry--festival-pulse .inv-entry-brand,
+.inv-entry--festival-pulse .inv-entry-kicker {
+  color: #ffe081;
+}
+.inv-entry--festival-pulse .inv-entry-title {
+  max-width: 760px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  text-shadow: 0 4px 28px rgba(50, 20, 5, 0.55);
+}
+.inv-entry--festival-pulse .inv-entry-action {
+  border-color: #ffe081;
+  background: #d94b32;
+  box-shadow: 8px 8px 0 rgba(16, 91, 118, 0.82);
+}
+.inv-entry--digital-light {
+  background-image: url("/experiences/product-launch-catalogue.png");
+  background-position: center;
+}
+.inv-entry--digital-light .inv-entry-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 8, 29, 0.96) 0%,
+    rgba(2, 8, 29, 0.55) 48%,
+    rgba(2, 8, 29, 0.04) 78%
+  );
+}
+.inv-entry--digital-light .inv-entry-brand,
+.inv-entry--digital-light .inv-entry-kicker {
+  color: #b7dcff;
+}
+.inv-entry--digital-light .inv-entry-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.065em;
+  text-shadow: 0 0 38px rgba(108, 168, 255, 0.36);
+}
+.inv-entry--digital-light .inv-entry-action {
+  border-color: rgba(190, 222, 255, 0.86);
+  background: rgba(39, 91, 198, 0.5);
+  box-shadow: 0 0 42px rgba(83, 148, 255, 0.3);
+}
+.inv-entry--memorial-quiet {
+  background: linear-gradient(135deg, #262b28, #6b7068);
+}
+.inv-entry--memorial-quiet .inv-entry-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(18, 21, 19, 0.88),
+    rgba(18, 21, 19, 0.18)
+  );
+}
+
+@media (max-width: 700px) {
+  .inv-entry {
+    padding-bottom: 104px;
+    background-position: 62% center;
+  }
+  .inv-entry--neon-nightlife {
+    background-position: 58% center;
+  }
+  .inv-entry--festival-pulse {
+    background-position: 54% center;
+  }
+  .inv-entry--digital-light {
+    background-position: 64% center;
+  }
+  .inv-entry-shade {
+    background: linear-gradient(
+      0deg,
+      rgba(4, 5, 7, 0.96) 0%,
+      rgba(4, 5, 7, 0.58) 54%,
+      rgba(4, 5, 7, 0.08) 100%
+    );
+  }
+  .inv-entry-access {
+    left: 28px;
+    right: auto;
+    bottom: 28px;
+  }
+}
+
+/* --- Hero --- */
+.inv-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 var(--inv-gutter) clamp(56px, 8vh, 104px);
+}
+/* The full-bleed backdrop. An <img> normally; a <video> when one was uploaded
+   (increment 5). One selector for both so the parallax in
+   invitation-shell.tsx — which queries this class — moves either without
+   knowing which it got. Oversized so the drift never exposes an edge. */
+.inv-hero-photo {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  will-change: transform;
+}
+/* A paused <video> shows its poster, which must fill the frame the same way
+   the photograph would rather than letterboxing inside it. */
+video.inv-hero-photo {
+  object-position: center;
+  background: var(--inv-soft);
+}
+.inv-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 14, 16, 0.18) 0%,
+    rgba(20, 14, 16, 0.05) 38%,
+    rgba(20, 14, 16, 0.62) 100%
+  );
+}
+.inv-hero-top {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.inv-mono {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--inv-heading);
+  font-size: 20px;
+}
+.inv-hero-inner {
+  position: relative;
+  color: #fff;
+}
+.inv-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+.inv-names {
+  font-family: var(--inv-heading);
+  font-size: clamp(40px, 8.4vw, 104px);
+  line-height: 1;
+  font-weight: 500;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.28);
+}
+.inv-hero-sub {
+  margin-top: 14px;
+  opacity: 0.9;
+  font-family: var(--inv-heading);
+  font-style: italic;
+  font-size: 18px;
+}
+.inv-hero-date {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.inv-hero-rule {
+  width: 44px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 18px auto 0;
+}
+
+/* --- On-ground heroes -------------------------------------------------------
+ *
+ * The five presentations that set type on the invitation's own paper rather
+ * than over a photograph: arch-portrait, photo-band, type-led, flat-bold and
+ * photo-grid. They share a base because they share the thing that makes them
+ * different from the full-bleed hero — ink type, no scrim, and a height that
+ * comes from their content instead of the viewport.
+ *
+ * Deliberately not min-height:100vh. A hero that always fills the screen is a
+ * cinematic device; on a memorial notice or a barangay announcement it just
+ * means the reader scrolls past emptiness to reach the details they opened the
+ * page for.
+ */
+.inv-hero-ground {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--inv-fg);
+  padding: clamp(48px, 9vh, 96px) var(--inv-gutter);
+}
+.inv-hero-ground-copy {
+  position: relative;
+  max-width: 42rem;
+}
+/**
+ * Titles set inside a column, rather than across the viewport.
+ *
+ * .inv-names is clamp(40px, 8.4vw, 104px), sized against the viewport because
+ * on a full-bleed hero the title *is* the viewport. Reused unchanged inside a
+ * 42rem column it pinned to its 104px ceiling and filled the column edge to
+ * edge — measured, not guessed — which reads as shouting on a memorial and
+ * leaves a debut no margin.
+ *
+ * The selector follows the column and not the hero base, because card-on-photo
+ * is built on .inv-hero (it has a photographic backdrop) while its words live
+ * on a 30rem card. Keying this to .inv-hero-ground alone left that card setting
+ * a 104px title in a 480px box, which is exactly the bug this rule exists to
+ * prevent.
+ */
+.inv-hero-ground .inv-names,
+.inv-card-plane .inv-names {
+  font-size: clamp(30px, 5.2vw, 58px);
+}
+.inv-hero-ground .inv-hero-sub,
+.inv-card-plane .inv-hero-sub {
+  font-size: clamp(15px, 1.6vw, 18px);
+}
+/* The rule and monogram invert from the white used over a photograph. */
+.inv-hero-rule--ink {
+  background: var(--inv-accent);
+  opacity: 0.75;
+}
+.inv-mono--ink {
+  border-color: var(--inv-line);
+  color: var(--inv-accent);
+  margin: 0 auto clamp(18px, 3vh, 28px);
+}
+
+/* arch-portrait — one portrait, generous margin, words beneath. */
+.inv-arch-portrait {
+  position: relative;
+  width: min(320px, 68vw);
+  margin-bottom: clamp(26px, 5vh, 46px);
+}
+
+/* photo-band — a letterbox of photograph with the name set below it. */
+.inv-hero--band {
+  padding-top: 0;
+}
+.inv-band-photo {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  aspect-ratio: 16 / 9;
+  max-height: 58vh;
+  overflow: hidden;
+  margin-bottom: clamp(28px, 5vh, 52px);
+}
+.inv-band-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/**
+ * A cover standing in for a photograph that does not exist yet.
+ *
+ * The cover is a typeset card. Cropped to a letterbox and left legible it would
+ * print the template's own title across the band, above the hero setting the
+ * same words in type. Blurred past reading it keeps the palette and imagery and
+ * loses the words — texture, not a frosted panel. The scale hides the soft
+ * edges blur leaves at the boundary.
+ */
+.inv-band-texture {
+  filter: blur(14px) saturate(1.08);
+  transform: scale(1.12);
+}
+
+/* type-led — an inset ruled frame doing the work a photograph would. */
+.inv-type-card {
+  position: relative;
+  width: min(38rem, 100%);
+  padding: clamp(34px, 6vw, 62px) clamp(22px, 5vw, 48px);
+}
+
+/* flat-bold — the accent becomes the ground, not a detail.
+   The deepened accent, not the raw one: white on a raw mid-tone accent clears
+   the large-text contrast bar and fails the small-text one, which would leave
+   the eyebrow and date unreadable on exactly the two loudest occasions. */
+.inv-hero--bold {
+  background: var(--inv-accent-deep, var(--inv-accent));
+  color: #fff;
+}
+.inv-hero--bold .inv-hero-rule--ink {
+  background: rgba(255, 255, 255, 0.85);
+}
+.inv-hero--bold .inv-mono--ink {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+/* The one place the type is meant to shout, so it overrides the column scale. */
+.inv-hero-ground .inv-names--bold {
+  font-size: clamp(38px, 7.4vw, 82px);
+}
+.inv-names--bold {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  /* A hard offset rather than a blur: the reference set's children's designs
+     use a printed drop shadow, and a soft glow reads as a web effect. */
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.18);
+}
+.inv-bold-photo {
+  width: min(190px, 44vw);
+  margin-top: clamp(26px, 5vh, 44px);
+}
+
+/* photo-grid — the crowd is the design. */
+.inv-grid-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-bottom: clamp(28px, 5vh, 52px);
+}
+@media (min-width: 640px) {
+  .inv-grid-photos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.inv-grid-photos img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* card-on-photo — two planes: a photograph behind, paper on top. */
+.inv-hero-scrim--soft {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 14, 16, 0.28) 0%,
+    rgba(20, 14, 16, 0.16) 50%,
+    rgba(20, 14, 16, 0.4) 100%
+  );
+}
+.inv-hero--card {
+  justify-content: center;
+}
+.inv-card-plane {
+  position: relative;
+  z-index: 1;
+  width: min(30rem, 100%);
+  padding: clamp(34px, 7vw, 60px) clamp(24px, 6vw, 44px);
+  background: var(--inv-paper);
+  color: var(--inv-fg);
+  border: 1px solid var(--inv-line);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.inv-petal {
+  position: absolute;
+  top: -6vh;
+  width: 11px;
+  height: 11px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 60% 0 60% 0;
+  animation: inv-fall linear infinite;
+  pointer-events: none;
+}
+@keyframes inv-fall {
+  0% {
+    transform: translateY(-6vh) rotate(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(112vh) rotate(420deg);
+    opacity: 0;
+  }
+}
+.inv-scroll-cue {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  opacity: 0.85;
+  animation: inv-bob 1.7s ease-in-out infinite;
+}
+@keyframes inv-bob {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
+/* --- Body sections --- */
+.inv-main {
+  /* Grows with the screen rather than sitting at one width on every device.
+     Capped so the line length stays readable — an invitation is prose, and
+     prose set 1200px wide is worse than prose set 700px wide. */
+  max-width: clamp(600px, 58vw, 720px);
+  margin: 0 auto;
+  padding: 0 var(--inv-gutter);
+}
+.inv-section {
+  margin-top: clamp(52px, 9vw, 96px);
+  /* Containing block for .inv-section-motif, which is pinned to this section's
+     corners. Without it the ornament escapes to the nearest positioned
+     ancestor, which is the page. */
+  position: relative;
+}
+.inv-section-first {
+  margin-top: clamp(48px, 8vw, 84px);
+}
+.inv-label {
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.inv-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--inv-accent);
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+.inv-ornament::before,
+.inv-ornament::after {
+  content: "";
+  height: 1px;
+  width: 48px;
+  background: currentColor;
+  opacity: 0.5;
+}
+.inv-lead {
+  font-family: var(--inv-heading);
+  font-style: italic;
+  font-size: clamp(18px, 2.9vw, 26px);
+  line-height: 1.5;
+  text-align: center;
+}
+.inv-couplet {
+  font-family: var(--inv-heading);
+  font-size: clamp(24px, 3.9vw, 36px);
+  text-align: center;
+  line-height: 1.3;
+}
+.inv-list {
+  text-align: center;
+  line-height: 1.9;
+}
+.inv-count {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.inv-count-u {
+  min-width: clamp(58px, 9vw, 82px);
+  padding: clamp(12px, 1.6vw, 18px) 6px;
+  border: 1px solid var(--inv-line);
+  border-radius: 10px;
+  background: var(--inv-surface);
+  text-align: center;
+}
+.inv-count-v {
+  font-family: var(--inv-heading);
+  font-size: clamp(22px, 3.6vw, 34px);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.inv-count-l {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 6px;
+}
+.inv-venue {
+  text-align: center;
+  background: var(--inv-surface);
+  border: 1px solid var(--inv-line);
+  border-radius: 12px;
+  padding: 24px;
+}
+.inv-venue + .inv-venue {
+  margin-top: 16px;
+}
+.inv-venue-k {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.inv-venue-n {
+  font-family: var(--inv-heading);
+  font-size: clamp(18px, 2.9vw, 26px);
+  margin-top: 6px;
+}
+.inv-venue-a {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.inv-maplink {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inv-accent);
+  border: 1px solid var(--inv-line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.inv-timeline {
+  max-width: 420px;
+  margin: 0 auto;
+}
+.inv-timeline-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--inv-line);
+  text-align: left;
+}
+.inv-timeline-time {
+  width: 72px;
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 13px;
+  opacity: 0.6;
+}
+.inv-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+@media (min-width: 520px) {
+  .inv-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  /* Wide enough that three columns leave the photographs looking stranded. */
+  .inv-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/**
+ * The gallery is now PhotoFrame, which brings its own silhouette and its own
+ * aspect ratio per shape. Both are stripped here so the grid stays square and
+ * the shape decides the outline — an 8px radius under a blob or an oval would
+ * be a second, contradictory rounding.
+ */
+.inv-gallery > * {
+  aspect-ratio: 1;
+}
+.inv-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**
+ * The motif carried into one body section.
+ *
+ * Positioned relative to the section rather than the page, and pinned to the
+ * top corners only: the brief gathers decoration at the edges so the centre
+ * stays clear for words, and a countdown is exactly the kind of thing an
+ * ornament will crowd if allowed to.
+ */
+.inv-section-motif {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/** The date row standing in for the hero's plain date line. */
+.inv-hero-daterow {
+  margin-top: clamp(18px, 3vh, 28px);
+}
+.inv-rsvp {
+  background: var(--inv-surface);
+  border: 1px solid var(--inv-line);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+}
+/* --- QR block: the last thing on every invitation --- */
+.inv-qr {
+  margin-top: 72px;
+  padding-top: 40px;
+  border-top: 1px solid var(--inv-line);
+}
+.inv-qr-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 20px;
+  border: 1px solid var(--inv-line);
+  border-radius: 14px;
+  background: var(--inv-paper);
+  text-align: center;
+}
+.inv-qr-img {
+  width: clamp(112px, 17vw, 152px);
+  height: clamp(112px, 17vw, 152px);
+  /* The code must stay pure black on white to scan reliably; tinting it to the
+     theme is the one piece of this design that would stop it working. */
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  display: block;
+}
+.inv-qr-caption {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.inv-footer {
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+/* --- Scroll reveal ---------------------------------------------------------
+ *
+ * The resting state is shared: hidden, and a single transition. Only the
+ * *from* transform varies per choreography, which is what keeps four motions
+ * from becoming four duplicated rule sets — and keeps the arrival identical, so
+ * no occasion can land somewhere other than its natural position.
+ *
+ * The observer in invitation-shell.tsx adds .vis and knows nothing about any of
+ * this; the occasion is published once as data-motion on the reveal root.
+ */
+/**
+ * Each choreography varies only two custom properties — where a section starts
+ * and how it travels. The transform itself is declared once.
+ *
+ * Custom properties rather than a rule per motion, because a rule per motion
+ * would tie with `.vis` on specificity (both land at 0-3-0) and win on source
+ * order, so `.vis` would never clear the offset and every section would
+ * animate *into* its displacement and stay there. Varying an input to one rule
+ * cannot lose a fight it never enters.
+ */
+.inv-reveal-root {
+  --inv-reveal-from: translateY(26px);
+  --inv-reveal-ease:
+    opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.inv-reveal-root [data-reveal] {
+  opacity: 0;
+  transform: var(--inv-reveal-from);
+  transition: var(--inv-reveal-ease);
+}
+.inv-reveal-root [data-reveal].vis {
+  opacity: 1;
+  transform: none;
+}
+
+/* pop — birthday and fiesta. Up from slightly small, on a curve that overshoots
+   a little, matching the flat-bold hero's register. */
+.inv-reveal-root[data-motion="pop"] {
+  --inv-reveal-from: scale(0.94);
+  --inv-reveal-ease:
+    opacity 0.5s ease, transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* sweep — anniversary, graduation, reunion. Alternating sides, so a column of
+   sections reads as a filmstrip advancing rather than a list arriving. */
+.inv-reveal-root[data-motion="sweep"] {
+  --inv-reveal-from: translateX(-34px);
+}
+.inv-reveal-root[data-motion="sweep"] [data-reveal]:nth-of-type(even) {
+  --inv-reveal-from: translateX(34px);
+}
+
+/* fade — memorial, religious, community. Opacity only, and slower: no travel,
+   no scale. Movement is what makes a page feel like it is performing, and these
+   three should appear rather than perform. */
+.inv-reveal-root[data-motion="fade"] {
+  --inv-reveal-from: none;
+  --inv-reveal-ease: opacity 1.1s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-petal,
+  .inv-scroll-cue {
+    display: none;
+  }
+  .inv-reveal-root [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .inv-env.is-opening .inv-flap,
+  .inv-env.is-opening .inv-env-card {
+    animation: none;
+    transition: none;
+  }
+  .inv-confetti {
+    display: none;
+  }
+  .inv-caret {
+    animation: none;
+  }
+}
+
+/* --- Engagement layer: confetti, typewriter, actions, interactive RSVP --- */
+.inv-confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 55;
+}
+.inv-caret {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 3px;
+  background: currentColor;
+  vertical-align: -1px;
+  animation: inv-blink 0.9s step-end infinite;
+}
+@keyframes inv-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.inv-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.inv-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inv-fg);
+  background: var(--inv-surface);
+  border: 1px solid var(--inv-line);
+  border-radius: 999px;
+  padding: 11px 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.inv-action:hover {
+  border-color: var(--inv-accent);
+}
+.inv-action svg {
+  color: var(--inv-accent);
+}
+.inv-form {
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+.inv-seg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.inv-seg-btn {
+  padding: 12px 8px;
+  border: 1px solid var(--inv-line);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--inv-fg);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.inv-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.inv-stepper-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
+.inv-stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.inv-step {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--inv-line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--inv-fg);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inv-step-val {
+  min-width: 24px;
+  text-align: center;
+  font-family: var(--inv-heading);
+  font-size: 20px;
+}
+.inv-rsvp-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+.inv-rsvp-check {
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Envelope polish: paper grain, an inner rule on the card, an embossed seal. */
+.inv-env-body {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0 2px,
+    transparent 2px 5px
+  );
+}
+.inv-env-card::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--inv-line);
+  border-radius: 3px;
+  pointer-events: none;
+}
+.inv-seal {
+  background-image: radial-gradient(
+    circle at 35% 30%,
+    rgba(255, 255, 255, 0.35),
+    transparent 55%
+  );
+}
+.inv-flap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14),
+    transparent 70%
+  );
+}
+.inv-env-body {
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* --- Music toggle --- */
+.inv-music {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--inv-accent);
+  color: var(--inv-on-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 56;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.inv-music.is-playing::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid var(--inv-accent);
+  opacity: 0.5;
+  animation: inv-pulse 1.8s ease-out infinite;
+}
+@keyframes inv-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* --- Animated ornaments: the rule draws out as its section reveals --- */
+.inv-ornament::before,
+.inv-ornament::after {
+  width: 0;
+  transition: width 0.8s 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-reveal].vis .inv-ornament::before,
+[data-reveal].vis .inv-ornament::after {
+  width: 48px;
+}
+.inv-hero-rule {
+  animation: inv-rule-grow 1s 0.4s both ease-out;
+}
+@keyframes inv-rule-grow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 44px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-music.is-playing::after {
+    animation: none;
+    display: none;
+  }
+  .inv-hero-rule {
+    animation: none;
+  }
+  .inv-ornament::before,
+  .inv-ornament::after {
+    width: 48px;
+    transition: none;
+  }
+}
+
+/* =========================================================================
+   Invitation primitives — the shaped photo frame (Increment 1 of
+   docs/invitation-design-language.md). Only the parts a utility class cannot
+   express live here; the arch's radius, the proportions, the ring and the
+   spacing are Tailwind in the component files. Shape-only, no colour, so a
+   frame keeps wearing the customer's --inv-* theme.
+   ========================================================================= */
+.inv-shape-oval {
+  /* Fills its box, so a portrait frame gives a tall oval and a landscape one a
+     wide oval. */
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+.inv-shape-circle {
+  /* closest-side by default, so this survives a box that is not square instead
+     of stretching — which is the whole difference between it and the oval. */
+  clip-path: circle(50% at 50% 50%);
+}
+.inv-shape-blob {
+  /* Eight values, asymmetric on both axes. Equal radii would read as a rounded
+     rectangle and the reference blobs are hand-drawn shapes, not soft corners. */
+  border-radius: 62% 38% 47% 53% / 55% 43% 57% 45%;
+}
+
+/* =========================================================================
+   Experience engine — Gold Standard motion language (WP-02)
+
+   These selectors only activate when the configuration seam is enabled. The
+   legacy rendering remains the rollback path, while the profile attribute on
+   the shared shell selects choreography without giving invitation data access
+   to raw CSS or timings.
+   ========================================================================= */
+.inv-reveal-root[data-experience-enabled="true"] .inv-motion-stage {
+  isolation: isolate;
+}
+
+.inv-reveal-root[data-experience-enabled="true"] .inv-stage-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Luxury is the first Gold Standard profile: tactile paper, a deep ceremonial
+   opening and editorial motion. It is intentionally restrained; the movement
+   creates anticipation and hierarchy rather than animating every object. */
+.inv-reveal-root[data-motion-profile="luxury"] .inv-overlay {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 18%, var(--inv-soft) 0 1px, transparent 2px),
+    radial-gradient(circle at 84% 76%, var(--inv-soft) 0 1px, transparent 2px),
+    radial-gradient(90% 80% at 50% 35%, var(--inv-bg) 0%, var(--inv-bg2) 100%);
+  background-size:
+    38px 38px,
+    52px 52px,
+    auto;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-overlay::before,
+.inv-reveal-root[data-motion-profile="luxury"] .inv-overlay::after {
+  content: "";
+  position: absolute;
+  width: min(48vw, 360px);
+  aspect-ratio: 1;
+  border: 1px solid var(--inv-line);
+  border-radius: 50%;
+  opacity: 0.42;
+  pointer-events: none;
+  animation: inv-luxury-orbit 14s ease-in-out infinite alternate;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-overlay::before {
+  top: -24vw;
+  left: -18vw;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-overlay::after {
+  right: -22vw;
+  bottom: -28vw;
+  animation-direction: alternate-reverse;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-env {
+  filter: drop-shadow(0 30px 42px rgba(12, 24, 19, 0.22));
+  transform: translateY(0) rotateX(0.01deg);
+  animation: inv-luxury-envelope 5s ease-in-out infinite;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-env-body,
+.inv-reveal-root[data-motion-profile="luxury"] .inv-pocket {
+  background-color: var(--inv-soft);
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), transparent 48%),
+    repeating-linear-gradient(
+      116deg,
+      rgba(255, 255, 255, 0.035) 0 1px,
+      transparent 1px 4px
+    );
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-env-card {
+  border: 1px solid var(--inv-line);
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-seal {
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.2),
+    inset 0 0 0 5px rgba(0, 0, 0, 0.08);
+}
+
+/* The hero settles into focus only after the envelope has cleared. The image
+   is already oversized for parallax, so scale never exposes an edge. */
+.inv-reveal-root[data-motion-profile="luxury"][data-opened="true"]
+  .inv-hero-photo {
+  animation: inv-luxury-hero 1.8s cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"][data-opened="true"]
+  .inv-hero-inner
+  > * {
+  animation: inv-luxury-copy 0.9s cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"][data-opened="true"]
+  .inv-hero-inner
+  > :nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"][data-opened="true"]
+  .inv-hero-inner
+  > :nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"][data-opened="true"]
+  .inv-hero-inner
+  > :nth-child(4) {
+  animation-delay: 0.42s;
+}
+
+/* A fine editorial rule makes separate modules read as chapters of one story.
+   It stays outside the content column and disappears at the first chapter. */
+.inv-reveal-root[data-motion-profile="luxury"] .inv-motion-stage::before {
+  content: "";
+  display: block;
+  width: clamp(34px, 7vw, 56px);
+  height: 1px;
+  margin: 0 auto clamp(24px, 4vw, 36px);
+  background: var(--inv-accent);
+  opacity: 0.42;
+  transform: scaleX(0);
+  transition: transform 0.9s 0.18s cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.inv-reveal-root[data-motion-profile="luxury"] .inv-motion-stage.vis::before {
+  transform: scaleX(1);
+}
+
+.inv-reveal-root[data-motion-profile="luxury"]
+  .inv-motion-stage:first-child::before {
+  display: none;
+}
+
+.inv-reveal-root[data-motion-profile="luxury"]
+  .inv-motion-stage[data-experience-stage="venues"]
+  .inv-venue,
+.inv-reveal-root[data-motion-profile="luxury"]
+  .inv-motion-stage[data-experience-stage="rsvp"]
+  .inv-rsvp {
+  box-shadow: 0 18px 50px rgba(18, 25, 21, 0.08);
+}
+
+@keyframes inv-luxury-orbit {
+  to {
+    transform: translate3d(22px, 16px, 0) scale(1.08);
+  }
+}
+
+@keyframes inv-luxury-envelope {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0.01deg);
+  }
+  50% {
+    transform: translateY(-7px) rotateX(0.01deg);
+  }
+}
+
+@keyframes inv-luxury-hero {
+  from {
+    opacity: 0.72;
+    filter: saturate(0.72);
+  }
+  to {
+    opacity: 1;
+    filter: saturate(1);
+  }
+}
+
+@keyframes inv-luxury-copy {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* WP20-500A — Capiz Window. The grid is structural rather than decorative:
+   translucent panes, warm joins and one travelling light field make the
+   reveal read as capiz before any invitation copy appears. */
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-overlay,
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-hero--type {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(184, 138, 56, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 138, 56, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 50% 32%, #fffdf5 0%, #f4e5bd 48%, #d8b66d 125%);
+  background-size:
+    72px 72px,
+    72px 72px,
+    auto;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-overlay::before,
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-hero--type::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      38deg,
+      rgba(255, 255, 255, 0.22) 0 2px,
+      transparent 2px 17px
+    ),
+    repeating-linear-gradient(
+      -31deg,
+      rgba(126, 102, 56, 0.05) 0 1px,
+      transparent 1px 23px
+    );
+  mix-blend-mode: soft-light;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-overlay::after,
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-hero--type::after {
+  content: "";
+  position: absolute;
+  inset: -35% auto -35% -46%;
+  width: 32%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.74),
+    transparent
+  );
+  filter: blur(12px);
+  transform: skewX(-12deg);
+  animation: inv-capiz-light 7.5s ease-in-out infinite;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-env {
+  filter: drop-shadow(0 34px 45px rgba(83, 64, 29, 0.24));
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-env-body,
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-pocket {
+  background:
+    linear-gradient(rgba(184, 138, 56, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 138, 56, 0.2) 1px, transparent 1px),
+    rgba(248, 238, 210, 0.88);
+  background-size: 38px 38px;
+  border: 1px solid rgba(143, 103, 34, 0.32);
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-flap {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.18), transparent),
+    linear-gradient(180deg, #c29a4d, #806128);
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-seal {
+  background: #9a722b;
+  box-shadow:
+    0 8px 24px rgba(75, 54, 20, 0.34),
+    inset 0 0 0 2px rgba(255, 247, 215, 0.45),
+    inset 0 0 0 6px rgba(65, 44, 14, 0.1);
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-hero--type {
+  min-height: 100svh;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-type-card {
+  z-index: 1;
+  border: 1px solid rgba(151, 111, 43, 0.52);
+  background: rgba(255, 252, 240, 0.72);
+  box-shadow:
+    inset 0 0 0 8px rgba(255, 255, 255, 0.24),
+    0 35px 90px rgba(88, 65, 24, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-type-card::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 42px;
+  margin: 0 auto 24px;
+  border-radius: 84px 84px 0 0;
+  background: repeating-conic-gradient(
+    from 270deg at 50% 100%,
+    #b88a38 0 5deg,
+    transparent 5deg 12deg
+  );
+  opacity: 0.78;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-motion-stage {
+  padding: clamp(18px, 3vw, 30px) 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-experience-body {
+  background:
+    linear-gradient(90deg, rgba(184, 138, 56, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(184, 138, 56, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #fffdf7, #e9e3d6 72%) !important;
+  background-size:
+    92px 92px,
+    92px 92px,
+    auto !important;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-count-u,
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-venue,
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-rsvp {
+  border-radius: 0;
+  border-color: rgba(154, 114, 43, 0.28);
+  background: rgba(255, 253, 246, 0.46);
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes inv-capiz-light {
+  0%,
+  18% {
+    transform: translateX(0) skewX(-12deg);
+    opacity: 0;
+  }
+  36% {
+    opacity: 0.78;
+  }
+  68%,
+  100% {
+    transform: translateX(470%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+/* WP20-500B — Neon Eighteen. P3 effects stay scoped to this visual theme so
+   CORE/P1 experiences never pay for or inherit the nightlife vocabulary. */
+.inv-reveal-root[data-visual-theme="neon-nightlife"] {
+  color-scheme: dark;
+  --inv-line: rgba(255, 63, 191, 0.34);
+  --inv-surface: rgba(255, 255, 255, 0.055);
+  --inv-paper: #100d1d;
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-overlay,
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-hero--bold {
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 22%,
+      rgba(36, 228, 255, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 84% 70%,
+      rgba(255, 36, 172, 0.28),
+      transparent 31%
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    #070611;
+  background-size:
+    auto,
+    auto,
+    42px 42px,
+    42px 42px,
+    auto;
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-overlay::before,
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-hero--bold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 42%,
+    rgba(36, 228, 255, 0.12) 48%,
+    rgba(255, 63, 191, 0.16) 52%,
+    transparent 58%
+  );
+  animation: inv-neon-scan 5.8s linear infinite;
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-env {
+  filter: drop-shadow(0 0 18px rgba(255, 63, 191, 0.72))
+    drop-shadow(0 0 38px rgba(36, 228, 255, 0.28));
+  animation: inv-neon-float 2.8s ease-in-out infinite;
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-env-body,
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-pocket {
+  background: #100d1d;
+  border: 1px solid rgba(36, 228, 255, 0.64);
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-env-card {
+  color: #fff7ff;
+  background: linear-gradient(145deg, #191229, #0b0914);
+  border: 1px solid rgba(255, 63, 191, 0.62);
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-flap {
+  background: linear-gradient(180deg, #ff3fbf, #45114a 64%, #130d23);
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-seal {
+  background: #070611;
+  border: 2px solid #ff3fbf;
+  color: #fff;
+  text-shadow: 0 0 8px #24e4ff;
+  box-shadow:
+    0 0 14px rgba(255, 63, 191, 0.9),
+    0 0 34px rgba(36, 228, 255, 0.48);
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-names--bold {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  text-shadow:
+    -3px 0 0 rgba(36, 228, 255, 0.78),
+    3px 0 0 rgba(255, 63, 191, 0.9),
+    0 0 28px rgba(255, 63, 191, 0.58);
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-motion-stage {
+  padding: clamp(24px, 4vw, 38px) clamp(18px, 3vw, 30px);
+  border-left: 2px solid #ff3fbf;
+  border-right: 1px solid rgba(36, 228, 255, 0.38);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 63, 191, 0.07),
+    transparent 38%
+  );
+  box-shadow: -12px 0 40px rgba(255, 63, 191, 0.08);
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-experience-body {
+  background:
+    radial-gradient(
+      circle at 12% 24%,
+      rgba(24, 225, 255, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 66%,
+      rgba(255, 35, 171, 0.16),
+      transparent 30%
+    ),
+    #070611 !important;
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-count-u,
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-venue,
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-rsvp {
+  border-color: rgba(36, 228, 255, 0.42);
+  box-shadow: 0 0 24px rgba(255, 63, 191, 0.12);
+}
+
+@keyframes inv-neon-scan {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes inv-neon-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.4deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0.4deg);
+  }
+}
+
+/* Release collection — cinematic text-safe heroes. The campaign posters sell
+   the collection in the catalogue; these wide compositions are deliberately
+   text-free and reserve the left side for live customer content. */
+.inv-reveal-root:is(
+    [data-visual-theme="capiz-luminous"],
+    [data-visual-theme="neon-nightlife"],
+    [data-visual-theme="festival-pulse"],
+    [data-visual-theme="digital-light"]
+  )
+  .inv-hero {
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(96px, 12vh, 148px) clamp(28px, 7vw, 112px)
+    clamp(74px, 10vh, 112px);
+  text-align: left;
+}
+
+.inv-reveal-root:is(
+    [data-visual-theme="capiz-luminous"],
+    [data-visual-theme="neon-nightlife"],
+    [data-visual-theme="festival-pulse"],
+    [data-visual-theme="digital-light"]
+  )
+  .inv-hero-inner {
+  width: min(600px, 44vw);
+}
+
+.inv-reveal-root:is(
+    [data-visual-theme="capiz-luminous"],
+    [data-visual-theme="neon-nightlife"],
+    [data-visual-theme="festival-pulse"],
+    [data-visual-theme="digital-light"]
+  )
+  .inv-hero-rule {
+  margin-left: 0;
+}
+
+.inv-reveal-root:is(
+    [data-visual-theme="capiz-luminous"],
+    [data-visual-theme="neon-nightlife"],
+    [data-visual-theme="festival-pulse"],
+    [data-visual-theme="digital-light"]
+  )
+  .inv-hero-daterow {
+  justify-content: flex-start;
+}
+
+.inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-hero-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 8, 6, 0.9) 0%,
+    rgba(10, 8, 6, 0.58) 38%,
+    transparent 72%
+  );
+}
+.inv-reveal-root[data-visual-theme="capiz-luminous"]
+  .inv-hero--sample-art
+  .inv-hero-photo,
+.inv-reveal-root[data-visual-theme="neon-nightlife"]
+  .inv-hero--sample-art
+  .inv-hero-photo {
+  object-position: right center;
+}
+
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-hero-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 5, 23, 0.94) 0%,
+    rgba(2, 5, 23, 0.52) 42%,
+    transparent 72%
+  );
+}
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-hero-inner {
+  text-transform: uppercase;
+}
+.inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-names {
+  font-family: "Arial Black", Impact, sans-serif;
+  font-style: italic;
+  letter-spacing: -0.055em;
+  text-shadow:
+    4px 0 #ff2ea6,
+    -3px 0 rgba(77, 233, 255, 0.82),
+    0 0 30px rgba(255, 46, 166, 0.42);
+}
+
+/* Fiesta Banderitas — a living street procession, not another paper card. */
+.inv-reveal-root[data-visual-theme="festival-pulse"] {
+  --inv-line: rgba(19, 99, 124, 0.28);
+  --inv-surface: rgba(255, 248, 224, 0.62);
+  --inv-paper: #fff5d7;
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-hero-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(35, 15, 4, 0.92) 0%,
+    rgba(35, 15, 4, 0.5) 43%,
+    transparent 74%
+  );
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"]
+  .inv-hero--sample-art
+  .inv-hero-photo {
+  object-position: center;
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-names {
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  text-shadow: 0 5px 34px rgba(40, 15, 4, 0.64);
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-experience-body {
+  background:
+    linear-gradient(120deg, rgba(228, 76, 48, 0.08), transparent 32%),
+    radial-gradient(
+      circle at 92% 12%,
+      rgba(18, 117, 145, 0.14),
+      transparent 26%
+    ),
+    #fff5d7 !important;
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-motion-stage {
+  padding: clamp(28px, 5vw, 46px) clamp(24px, 5vw, 54px);
+  border: 0;
+  border-radius: 42px 10px 42px 10px;
+  background: rgba(255, 250, 231, 0.66);
+  box-shadow: 12px 12px 0 rgba(19, 99, 124, 0.09);
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"]
+  .inv-motion-stage:nth-child(even) {
+  border-radius: 10px 42px 10px 42px;
+  box-shadow: -12px 12px 0 rgba(226, 74, 47, 0.09);
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-count-u {
+  border: 0;
+  border-radius: 999px;
+  background: #d94b32;
+  color: #fff;
+  box-shadow: 5px 5px 0 #126f8c;
+}
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-action,
+.inv-reveal-root[data-visual-theme="festival-pulse"] .inv-maplink {
+  border-color: #d94b32;
+  background: #fff9e8;
+}
+
+/* Product Launch — full-width keynote rhythm and luminous data modules. */
+.inv-reveal-root[data-visual-theme="digital-light"] {
+  color-scheme: dark;
+  --inv-line: rgba(145, 194, 255, 0.26);
+  --inv-surface: rgba(131, 176, 255, 0.07);
+  --inv-paper: #071129;
+}
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-hero-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(1, 5, 20, 0.96) 0%,
+    rgba(1, 5, 20, 0.58) 46%,
+    transparent 76%
+  );
+}
+.inv-reveal-root[data-visual-theme="digital-light"]
+  .inv-hero--sample-art
+  .inv-hero-photo {
+  object-position: center;
+}
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-names {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  text-shadow: 0 0 42px rgba(112, 170, 255, 0.42);
+}
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-experience-body {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(60, 128, 255, 0.16),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #030817, #08152e 60%, #020614) !important;
+}
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-motion-stage {
+  padding: clamp(30px, 5vw, 52px) clamp(22px, 4vw, 48px);
+  border-top: 1px solid rgba(153, 204, 255, 0.28);
+  border-bottom: 1px solid rgba(153, 204, 255, 0.08);
+  background: linear-gradient(90deg, rgba(78, 130, 255, 0.1), transparent 60%);
+  box-shadow: inset 16px 0 40px rgba(85, 148, 255, 0.05);
+}
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-count-u,
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-venue,
+.inv-reveal-root[data-visual-theme="digital-light"] .inv-rsvp {
+  border-radius: 2px;
+  border-color: rgba(153, 204, 255, 0.34);
+  background: rgba(89, 139, 255, 0.07);
+  box-shadow: 0 0 34px rgba(83, 148, 255, 0.08);
+}
+
+@media (max-width: 700px) {
+  .inv-reveal-root:is(
+      [data-visual-theme="capiz-luminous"],
+      [data-visual-theme="neon-nightlife"],
+      [data-visual-theme="festival-pulse"],
+      [data-visual-theme="digital-light"]
+    )
+    .inv-hero {
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 118px 26px 78px;
+  }
+  .inv-reveal-root:is(
+      [data-visual-theme="capiz-luminous"],
+      [data-visual-theme="neon-nightlife"],
+      [data-visual-theme="festival-pulse"],
+      [data-visual-theme="digital-light"]
+    )
+    .inv-hero-inner {
+    width: 100%;
+  }
+  .inv-reveal-root:is(
+      [data-visual-theme="capiz-luminous"],
+      [data-visual-theme="neon-nightlife"],
+      [data-visual-theme="festival-pulse"],
+      [data-visual-theme="digital-light"]
+    )
+    .inv-hero-scrim {
+    background: linear-gradient(
+      0deg,
+      rgba(3, 5, 10, 0.95) 0%,
+      rgba(3, 5, 10, 0.5) 52%,
+      transparent 82%
+    );
+  }
+  .inv-reveal-root[data-visual-theme="capiz-luminous"]
+    .inv-hero--sample-art
+    .inv-hero-photo,
+  .inv-reveal-root[data-visual-theme="neon-nightlife"]
+    .inv-hero--sample-art
+    .inv-hero-photo,
+  .inv-reveal-root[data-visual-theme="festival-pulse"]
+    .inv-hero--sample-art
+    .inv-hero-photo {
+    object-position: 68% center;
+  }
+}
+
+/* WP20-500C — In Loving Memory. Service information is foregrounded through
+   spacing and rules; effects remain almost static and never read as festive. */
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-overlay {
+  background:
+    linear-gradient(rgba(111, 117, 107, 0.045) 1px, transparent 1px), #f3f1ec;
+  background-size: 100% 42px;
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-env {
+  filter: drop-shadow(0 22px 38px rgba(40, 43, 39, 0.16));
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-env-body,
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-pocket {
+  background: #e5e2da;
+  border: 1px solid rgba(72, 76, 70, 0.22);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-flap {
+  background: linear-gradient(180deg, #8a8e86, #5f635d);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-seal {
+  background: #656a62;
+  box-shadow: 0 5px 14px rgba(37, 39, 36, 0.22);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-hero--arch {
+  padding-top: clamp(36px, 6vh, 64px);
+  padding-bottom: clamp(38px, 7vh, 72px);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-arch-portrait {
+  max-width: 264px;
+  filter: grayscale(0.72) contrast(0.96);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-names {
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-motion-stage {
+  margin-top: clamp(38px, 6vw, 58px);
+  padding-top: clamp(28px, 4vw, 36px);
+  border-top: 1px solid rgba(83, 88, 80, 0.2);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"]
+  .inv-motion-stage[data-experience-stage="venues"],
+.inv-reveal-root[data-visual-theme="memorial-quiet"]
+  .inv-motion-stage[data-experience-stage="program"] {
+  border: 1px solid rgba(83, 88, 80, 0.22);
+  padding: clamp(26px, 5vw, 42px);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.inv-reveal-root[data-visual-theme="memorial-quiet"] .inv-venue {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 12px 0 22px;
+}
+
+/* The full-bleed production art is the launch entrance. These selectors sit
+   after the older proof-theme backgrounds so the image is not replaced by the
+   old procedural envelope surface. */
+.inv-reveal-root[data-visual-theme="capiz-luminous"]
+  .inv-entry--capiz-luminous {
+  background-image: url("/experiences/capiz-window-hero.png");
+  background-position: center;
+  background-size: cover;
+}
+.inv-reveal-root[data-visual-theme="neon-nightlife"]
+  .inv-entry--neon-nightlife {
+  background-image: url("/experiences/neon-eighteen-hero.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-reveal-root[data-experience-enabled="true"] .inv-overlay::before,
+  .inv-reveal-root[data-experience-enabled="true"] .inv-overlay::after,
+  .inv-reveal-root[data-experience-enabled="true"] .inv-env,
+  .inv-reveal-root[data-experience-enabled="true"] .inv-hero-photo,
+  .inv-reveal-root[data-experience-enabled="true"] .inv-hero-inner > * {
+    animation: none;
+  }
+
+  .inv-reveal-root[data-experience-enabled="true"] .inv-motion-stage::before {
+    transform: scaleX(1);
+    transition: none;
+  }
+
+  .inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-overlay::after,
+  .inv-reveal-root[data-visual-theme="capiz-luminous"] .inv-hero--type::after,
+  .inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-overlay::before,
+  .inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-hero--bold::before,
+  .inv-reveal-root[data-visual-theme="neon-nightlife"] .inv-env {
+    animation: none;
+  }
+}

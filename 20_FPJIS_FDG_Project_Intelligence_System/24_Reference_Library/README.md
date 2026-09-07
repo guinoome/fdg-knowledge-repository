@@ -32,6 +32,13 @@ FINAL DESIGN
 Important:
 Reference ≠ Requirement ≠ Blueprint ≠ Final Design.
 
+## Business Platform Research
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/Business_Platform_Research_README|Business Platform Research Package]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-IDEA-0001 - FDG Business Platform|FDG Business Platform Idea]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-OPP-0001 - Philippine Business Platform Opportunity|Philippine Business Platform Opportunity]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-COM-0001 - FDG Business Platform Commercialization Thesis|Commercialization Thesis]]
+
 Do not blindly copy reference material.
 Record the intended lesson and the resulting requirement.
 

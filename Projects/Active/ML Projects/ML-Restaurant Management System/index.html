@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aero ERP - Restaurant Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <nav class="sidebar">
+      <div class="logo">
+        <span class="logo-icon" style="font-size: 1.5rem">✨</span>
+        <h2>Aero ERP</h2>
+      </div>
+      <ul class="nav-links">
+        <li class="active" data-page="dashboard">Dashboard</li>
+        <li data-page="pos">POS Import</li>
+        <li data-page="inventory">Inventory Ledger</li>
+        <li data-page="products">Product Master</li>
+      </ul>
+      <div class="user-profile" style="margin-top: auto; padding: 1rem 2rem; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <div class="avatar">👤 Admin User</div>
+      </div>
+    </nav>
+    <main class="main-content">
+      <!-- Top header -->
+      <header class="topbar">
+        <h1 id="page-title">Dashboard</h1>
+        <div class="date-picker">Today: <span id="current-date"></span></div>
+      </header>
+
+      <!-- Pages Container -->
+      <div id="pages-container">
+        
+        <!-- Dashboard Page -->
+        <div class="page active" id="page-dashboard">
+          <div class="kpi-grid">
+            <div class="kpi-card glass">
+              <h3>Revenue Today</h3>
+              <div class="kpi-value" id="kpi-revenue">$0.00</div>
+              <div class="kpi-trend positive">+4.2% vs yesterday</div>
+            </div>
+            <div class="kpi-card glass">
+              <h3>Gross Profit</h3>
+              <div class="kpi-value" id="kpi-profit">$0.00</div>
+              <div class="kpi-trend positive">+5.1% vs yesterday</div>
+            </div>
+            <div class="kpi-card glass">
+              <h3>Food Cost %</h3>
+              <div class="kpi-value" id="kpi-foodcost">0%</div>
+              <div class="kpi-trend negative">-1.2% vs yesterday</div>
+            </div>
+            <div class="kpi-card glass alert" style="border-color: var(--warning);">
+              <h3>Low Stock Items</h3>
+              <div class="kpi-value" id="kpi-lowstock" style="color: var(--warning)">0</div>
+              <div class="kpi-trend">Action required</div>
+            </div>
+          </div>
+          
+          <div class="charts-grid">
+            <div class="chart-card glass">
+              <h3>Revenue Trend (Last 7 Days)</h3>
+              <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="chart-card glass">
+              <h3>Top Selling Products</h3>
+              <canvas id="topProductsChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- POS Import Page -->
+        <div class="page" id="page-pos">
+          <div class="card glass">
+            <h2>Import POS Data</h2>
+            <p>Paste your daily POS export data here. Expected format (CSV/TSV) to automatically parse inventory consumption and sales.</p>
+            <textarea id="pos-data-input" rows="10" placeholder="Paste POS export CSV/TSV data here...
+Example:
+Date, Invoice No, Product Name, Quantity Sold
+2023-10-01, 1001, Classic Burger, 2
+2023-10-01, 1002, Fries, 1"></textarea>
+            <div class="action-bar" style="margin-top: 1rem;">
+              <button class="btn primary" id="btn-import">Process POS Data</button>
+            </div>
+            <div id="import-status" class="status-message"></div>
+          </div>
+          
+          <div class="card glass mt-4">
+            <h2>Recent Imports Log</h2>
+            <div class="table-responsive">
+              <table id="import-log-table" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Rows Imported</th>
+                    <th>Total Revenue</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Filled by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inventory Page -->
+        <div class="page" id="page-inventory">
+          <div class="card glass">
+            <h2>Inventory Ledger</h2>
+            <p style="margin-bottom: 2rem;">Real-time inventory levels automatically updated from POS imports and production consumption.</p>
+            <div class="table-responsive">
+              <table id="inventory-table" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Item ID</th>
+                    <th>Material Name</th>
+                    <th>Category</th>
+                    <th>Current Stock</th>
+                    <th>Min Stock</th>
+                    <th>Unit Cost</th>
+                    <th>Total Value</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Filled by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Master Page -->
+        <div class="page" id="page-products">
+          <div class="card glass">
+            <h2>Product Master</h2>
+            <p style="margin-bottom: 2rem;">Menu items and their corresponding cost parameters.</p>
+            <div class="table-responsive">
+              <table id="products-table" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Cost</th>
+                    <th>Selling Price</th>
+                    <th>Margin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Filled by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+

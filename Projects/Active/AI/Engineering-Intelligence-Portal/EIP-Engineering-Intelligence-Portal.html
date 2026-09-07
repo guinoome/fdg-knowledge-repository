@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Intelligence Portal — EIP v1.0</title>
+<style>
+:root{
+  --bg:#0a0d13; --bg2:#0f131b; --card:#141922; --card2:#1a212c; --border:#242c3a;
+  --text:#e8ecf1; --text2:#8b96a8; --text3:#5b6576;
+  --blue:#3b82f6; --blue2:#1d4ed8; --green:#22c55e; --amber:#f59e0b; --red:#ef4444;
+  --cyan:#22d3ee; --purple:#a78bfa; --gray:#5b6576;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit;text-decoration:none}
+#app{display:flex;flex-direction:column;height:100vh;overflow:hidden}
+
+/* ===== TOP BAR ===== */
+#topbar{height:56px;flex:0 0 56px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 16px;gap:16px;z-index:50}
+#topbar .brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;white-space:nowrap}
+#topbar .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px var(--blue)}
+#topbar .hotelname{color:var(--text2);font-weight:400;font-size:12px}
+#topbar .clock{font-variant-numeric:tabular-nums;color:var(--text2);font-size:12px;white-space:nowrap}
+#topbar .statusbadge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.5px}
+.badge-live{background:rgba(34,197,94,.15);color:var(--green);animation:pulse 2s infinite}
+.badge-snap{background:rgba(59,130,246,.15);color:var(--blue)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+#topbar .search{flex:1;max-width:420px;position:relative}
+#topbar .search input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 12px 7px 30px;color:var(--text);font-size:13px}
+#topbar .search input:focus{outline:none;border-color:var(--blue)}
+#topbar .search .ic{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:13px}
+#topbar .spacer{flex:1}
+#topbar .navicon{position:relative;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text2)}
+#topbar .navicon:hover{background:var(--card)}
+#topbar .navicon .count{position:absolute;top:0;right:0;background:var(--red);color:#fff;font-size:9px;font-weight:700;border-radius:20px;padding:1px 4px;min-width:14px;text-align:center}
+#sidebartoggle{display:none}
+
+/* ===== LAYOUT ===== */
+#body{flex:1;display:flex;overflow:hidden}
+#sidebar{width:212px;flex:0 0 212px;background:var(--bg2);border-right:1px solid var(--border);overflow-y:auto;padding:10px}
+#sidebar .navitem{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;color:var(--text2);cursor:pointer;font-size:13px;font-weight:500;margin-bottom:2px;border-left:3px solid transparent}
+#sidebar .navitem:hover{background:var(--card);color:var(--text)}
+#sidebar .navitem.active{background:var(--card2);color:var(--text);border-left:3px solid var(--blue)}
+#sidebar .navitem .ic{width:18px;text-align:center;font-size:14px}
+#sidebar .navitem .cnt{margin-left:auto;font-size:10px;background:var(--card);color:var(--text3);padding:1px 6px;border-radius:20px}
+#sidebar .navitem.active .cnt{background:var(--blue2);color:#fff}
+#sidebar .navitem .cnt.crit{background:var(--red);color:#fff}
+#sidebar hr{border:none;border-top:1px solid var(--border);margin:8px 4px}
+#sidebar .sidefoot{color:var(--text3);font-size:10px;padding:10px 12px;line-height:1.6}
+
+#main{flex:1;overflow-y:auto;padding:20px 24px 60px}
+#main.printable{padding:0}
+
+/* ===== TYPOGRAPHY / GENERIC ===== */
+h1.pagetitle{font-size:19px;font-weight:700;margin-bottom:2px}
+.pagesub{color:var(--text2);font-size:12px;margin-bottom:16px}
+.section{margin-bottom:22px}
+.sectiontitle{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--text2);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+
+/* ===== CARDS / GRID ===== */
+.grid{display:grid;gap:12px}
+.grid-8{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.kpi{cursor:pointer;transition:border-color .15s}
+.kpi:hover{border-color:var(--blue)}
+.kpi .klabel{color:var(--text2);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px}
+.kpi .kval{font-size:26px;font-weight:800;line-height:1}
+.kpi .ksub{color:var(--text3);font-size:11px;margin-top:6px}
+.kpi.k-red .kval{color:var(--red)}
+.kpi.k-amber .kval{color:var(--amber)}
+.kpi.k-green .kval{color:var(--green)}
+.kpi.k-blue .kval{color:var(--blue)}
+.kpi.k-cyan .kval{color:var(--cyan)}
+
+/* health gauge */
+.healthwrap{display:flex;align-items:center;gap:20px}
+.gauge{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 100px}
+.gauge .gin{width:78px;height:78px;border-radius:50%;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gauge .gval{font-size:24px;font-weight:800}
+.gauge .glabel{font-size:9px;color:var(--text3);text-transform:uppercase}
+.healthdetail{flex:1}
+.healthdetail .hh{font-size:16px;font-weight:700;margin-bottom:4px}
+.healthdetail .hs{color:var(--text2);font-size:12px}
+.weightbar{display:flex;height:6px;border-radius:4px;overflow:hidden;margin-top:10px;background:var(--bg)}
+
+/* ===== BADGES / PILLS ===== */
+.pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;letter-spacing:.2px}
+.p-red{background:rgba(239,68,68,.15);color:var(--red)}
+.p-amber{background:rgba(245,158,11,.15);color:var(--amber)}
+.p-green{background:rgba(34,197,94,.15);color:var(--green)}
+.p-blue{background:rgba(59,130,246,.15);color:var(--blue)}
+.p-cyan{background:rgba(34,211,238,.15);color:var(--cyan)}
+.p-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.p-gray{background:rgba(139,150,168,.15);color:var(--text2)}
+.scorebadge{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:3px 6px;border-radius:6px;font-weight:800;font-size:12px}
+
+/* ===== TABLES ===== */
+.tablewrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+thead th{background:var(--card2);color:var(--text2);text-align:left;padding:9px 12px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.3px;cursor:pointer;user-select:none;border-bottom:1px solid var(--border);white-space:nowrap}
+thead th:hover{color:var(--text)}
+thead th.sorted{color:var(--blue)}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+tbody tr{cursor:pointer;transition:background .1s}
+tbody tr:hover{background:var(--card2)}
+tbody tr:last-child td{border-bottom:none}
+.tblempty{padding:34px;text-align:center;color:var(--text3);font-size:12px}
+.rowactions{display:flex;gap:6px}
+.iconbtn{background:none;border:1px solid var(--border);color:var(--text2);width:24px;height:24px;border-radius:6px;cursor:pointer;font-size:11px;display:inline-flex;align-items:center;justify-content:center}
+.iconbtn:hover{border-color:var(--blue);color:var(--text)}
+.iconbtn.danger:hover{border-color:var(--red);color:var(--red)}
+
+/* ===== TOOLBAR / FILTERS ===== */
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.toolbar .tsearch{flex:1;min-width:180px}
+.tinput,.tselect,select,input[type=text],input[type=date],input[type=number],textarea{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:7px 10px;border-radius:7px;font-size:12.5px;font-family:inherit}
+.tinput:focus,.tselect:focus,select:focus,input:focus,textarea:focus{outline:none;border-color:var(--blue)}
+textarea{width:100%;resize:vertical;min-height:56px}
+
+/* ===== BUTTONS ===== */
+.btn{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:7px 14px;border-radius:7px;font-size:12.5px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--blue)}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue2)}
+.btn-danger{background:transparent;border-color:var(--red);color:var(--red)}
+.btn-danger:hover{background:rgba(239,68,68,.1)}
+.btn-sm{padding:5px 10px;font-size:11.5px}
+
+/* ===== MODULE SUMMARY CARDS ===== */
+.modcard{cursor:pointer}
+.modcard .mtop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.modcard .micon{font-size:20px}
+.modcard .mtitle{font-weight:700;font-size:13px;margin-bottom:2px}
+.modcard .mrow{display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-top:6px}
+.modcard .mrow b{color:var(--text);font-size:15px}
+
+/* ===== TIMELINE ===== */
+.tl{position:relative;padding-left:22px}
+.tl::before{content:'';position:absolute;left:6px;top:4px;bottom:4px;width:1px;background:var(--border)}
+.tlitem{position:relative;margin-bottom:14px}
+.tlitem::before{content:'';position:absolute;left:-22px;top:3px;width:9px;height:9px;border-radius:50%;background:var(--blue);border:2px solid var(--bg2)}
+.tlitem .tltime{font-size:10.5px;color:var(--text3);font-variant-numeric:tabular-nums}
+.tlitem .tltext{font-size:12.5px;margin-top:1px}
+.tlitem .tltag{font-size:10px;color:var(--text2)}
+
+/* ===== MODAL ===== */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:flex-start;justify-content:center;z-index:200;padding:40px 16px;overflow-y:auto}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:12px;width:100%;max-width:640px;padding:0}
+.modal.wide{max-width:820px}
+.modal .mhead{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.modal .mhead h3{font-size:15px}
+.modal .mclose{cursor:pointer;color:var(--text2);font-size:18px;background:none;border:none}
+.modal .mbody{padding:18px 20px;max-height:70vh;overflow-y:auto}
+.modal .mfoot{padding:14px 20px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:8px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.formgrid .full{grid-column:1/-1}
+.flabel{font-size:11px;color:var(--text2);font-weight:600;margin-bottom:4px;display:block}
+.fcheck{display:flex;align-items:center;gap:8px;padding-top:8px}
+.detailgrid{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px;margin-bottom:16px}
+.detailgrid .dl{font-size:10.5px;color:var(--text3);text-transform:uppercase;letter-spacing:.3px;margin-top:8px}
+.detailgrid .dv{font-size:13px;margin-top:1px}
+.detailgrid .dv.full{grid-column:1/-1}
+
+/* ===== AI SUMMARY BOX ===== */
+.aibox{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(167,139,250,.06));border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:var(--radius);padding:16px}
+.aibox .ailabel{font-size:10.5px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.aibox p{font-size:13px;line-height:1.7}
+.aibox ul{margin:8px 0 0 18px;font-size:13px;line-height:1.8}
+
+/* ===== SEARCH PANEL ===== */
+.searchresult{padding:10px 12px;border-bottom:1px solid var(--border);cursor:pointer}
+.searchresult:hover{background:var(--card2)}
+.searchresult .srmod{font-size:10px;color:var(--blue);font-weight:700;text-transform:uppercase}
+.searchresult .srtitle{font-size:13px;font-weight:600;margin:2px 0}
+.searchresult .srsub{font-size:11px;color:var(--text3)}
+
+.footnote{color:var(--text3);font-size:11px;margin-top:24px;padding-top:14px;border-top:1px solid var(--border)}
+.toastwrap{position:fixed;bottom:20px;right:20px;z-index:300;display:flex;flex-direction:column;gap:8px}
+.toast{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:10px 16px;border-radius:8px;font-size:12.5px;box-shadow:0 4px 20px rgba(0,0,0,.4);animation:slidein .2s}
+@keyframes slidein{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
+
+@media(max-width:900px){
+  #sidebar{position:fixed;left:-220px;top:56px;bottom:0;z-index:100;transition:left .2s;box-shadow:4px 0 20px rgba(0,0,0,.4)}
+  #sidebar.open{left:0}
+  #sidebartoggle{display:flex}
+  #topbar .search{display:none}
+  .formgrid{grid-template-columns:1fr}
+  .detailgrid{grid-template-columns:1fr}
+  #main{padding:14px}
+}
+@media print{
+  #topbar,#sidebar,.toolbar,.rowactions,.btn,#sidebartoggle{display:none!important}
+  body{background:#fff;color:#000}
+  .card,.tablewrap{background:#fff;border:1px solid #ccc}
+  #main{padding:0}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <div id="sidebartoggle" class="navicon" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</div>
+    <div class="brand"><span class="dot"></span> EIP <span class="hotelname" id="tb-hotelname">— Hotel</span></div>
+    <div class="clock" id="tb-clock">--:--:--</div>
+    <span class="statusbadge badge-live" id="tb-status">LIVE</span>
+    <div class="search">
+      <span class="ic">🔎</span>
+      <input type="text" id="globalsearch" placeholder="Search rooms, WO, PR/PO, suppliers, technicians, notes…">
+    </div>
+    <div class="spacer"></div>
+    <div class="navicon" title="Notifications" onclick="app.setView('dashboard')">🔔<span class="count" id="tb-notif">0</span></div>
+    <div class="navicon" title="Print / Export" onclick="window.print()">🖨️</div>
+    <div class="navicon" title="Settings" onclick="app.setView('settings')">⚙️</div>
+  </div>
+  <div id="body">
+    <div id="sidebar"></div>
+    <div id="main"></div>
+  </div>
+</div>
+<div id="modalroot"></div>
+<div class="toastwrap" id="toastwrap"></div>
+<script>
+/* ============================================================
+   ENGINEERING INTELLIGENCE PORTAL (EIP) v1.0
+   Single-file offline prototype. Vanilla JS. localStorage persisted.
+   Built per FDGuinoo EIP Master Spec (Parts 00-11 + Appendix A).
+   NOTE: This is a client-side prototype/workspace, not a live
+   FCS/SCM/Outlook integration (that requires backend/API access).
+   Use it to log, track and prioritize engineering ops manually.
+   ============================================================ */
+
+const LSKEY = 'eip_v1_data';
+const LSSET = 'eip_v1_settings';
+
+function uid(p){ return (p||'id')+'_'+Math.random().toString(36).slice(2,9); }
+function todayStr(){ return new Date().toISOString().slice(0,10); }
+function nowTs(){ return new Date().toISOString(); }
+function fmtDate(d){ if(!d) return '—'; try{ return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }catch(e){return d;} }
+function fmtTime(d){ try{ return new Date(d).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'}); }catch(e){return '';} }
+function fmtDateTime(d){ return fmtDate(d)+' '+fmtTime(d); }
+function fmtMoney(n){ n=Number(n||0); return '₱'+n.toLocaleString(undefined,{maximumFractionDigits:0}); }
+function daysBetween(d){ if(!d) return 0; const diff = Date.now() - new Date(d).getTime(); return Math.max(0, Math.floor(diff/86400000)); }
+function clamp(n,lo,hi){ return Math.max(lo, Math.min(hi, n)); }
+function esc(s){ if(s===undefined||s===null) return ''; return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ---------------- Priority / status weight maps ---------------- */
+const PRI_W = {Critical:40, High:26, Medium:12, Low:0};
+const TIER_W = {1:40,2:32,3:22,4:12,5:0};
+
+function scoreBand(s){
+  if(s>=90) return {label:'Critical', cls:'p-red'};
+  if(s>=70) return {label:'High', cls:'p-amber'};
+  if(s>=40) return {label:'Medium', cls:'p-blue'};
+  return {label:'Low', cls:'p-gray'};
+}
+function priorityCls(p){
+  return {Critical:'p-red',High:'p-amber',Medium:'p-blue',Low:'p-gray'}[p] || 'p-gray';
+}
+function statusCls(s){
+  const red=['Emergency','Out of Stock','Critical','Overdue','Behind Schedule'];
+  const amber=['Waiting Material','Waiting Contractor','Waiting Approval','Reorder Required','In Progress','Sourcing','Investigation'];
+  const green=['Completed','Closed','Released','Healthy','Resolved'];
+  if(red.includes(s)) return 'p-red';
+  if(amber.includes(s)) return 'p-amber';
+  if(green.includes(s)) return 'p-green';
+  return 'p-blue';
+}
+
+/* ============================================================
+   ATTENTION SCORE ENGINE (per Part 02 sec 15 / Part 04-10)
+   ============================================================ */
+function scoreRoom(r){
+  let s = PRI_W[r.priority]||0;
+  s += Math.min(daysBetween(r.dateOpened)*5, 30);
+  if(r.vip) s += 18;
+  if(r.businessImpact==='Revenue') s += 14;
+  if(r.businessImpact==='Safety') s += 22;
+  if(r.status==='Waiting Material'||r.status==='Waiting Contractor') s += 8;
+  return clamp(Math.round(s),0,100);
+}
+function scoreWO(w){
+  let s = PRI_W[w.priority]||0;
+  s += Math.min((w.difficulty||1)*3, 24);
+  s += Math.min(daysBetween(w.reportedDate)*4, 24);
+  if(w.category==='Emergency') s += 20;
+  if(w.status==='Waiting Material'||w.status==='Waiting Contractor') s += 10;
+  return clamp(Math.round(s),0,100);
+}
+function scoreProc(p){
+  let s = PRI_W[p.priority]||0;
+  s += Math.min(daysBetween(p.dateRequested)*3, 26);
+  if(p.businessImpact==='Revenue') s += 18;
+  if(p.businessImpact==='Safety') s += 22;
+  if(['Waiting Approval','Waiting Supplier','Sourcing'].includes(p.status)) s += 10;
+  return clamp(Math.round(s),0,100);
+}
+function stockStatus(i){
+  const cur = Number(i.currentStock||0);
+  if(cur<=0) return 'Out of Stock';
+  if(cur<=Number(i.criticalLevel||0)) return 'Critical';
+  if(cur<=Number(i.reorderLevel||0)) return 'Reorder Required';
+  if(cur<=Number(i.minStock||0)*1.2) return 'Monitor';
+  return 'Healthy';
+}
+function scoreInv(i){
+  const st = stockStatus(i);
+  return {'Out of Stock':100,'Critical':85,'Reorder Required':58,'Monitor':28,'Healthy':4}[st];
+}
+function pmStatusCalc(p){
+  if(p.status==='Completed') return 'Completed';
+  const over = new Date(p.scheduledDate) < new Date(todayStr());
+  return over ? 'Overdue' : (p.status||'Scheduled');
+}
+function scorePM(p){
+  const st = pmStatusCalc(p);
+  let s = TIER_W[p.criticalTier]||0;
+  if(st==='Overdue') s += Math.min(daysBetween(p.scheduledDate)*8, 50);
+  if(st==='Completed') s = Math.max(0, s-30);
+  return clamp(Math.round(s),0,100);
+}
+function scoreProj(pr){
+  let s = PRI_W[pr.priority]||0;
+  if(pr.status==='Behind Schedule') s += 30;
+  s += Math.min((Number(pr.safetyIssues)||0)*18, 36);
+  if(pr.businessImpact==='Revenue') s += 14;
+  return clamp(Math.round(s),0,100);
+}
+
+/* ============================================================
+   MODULE SCHEMAS
+   ============================================================ */
+const MODULES = {
+  rooms:{
+    label:'Room Operations', icon:'🏨', idPrefix:'RM',
+    filterFields:['status','category','priority'],
+    fields:[
+      {k:'number',l:'Room Number',t:'text',req:1},
+      {k:'building',l:'Building',t:'text'},
+      {k:'floor',l:'Floor',t:'text'},
+      {k:'type',l:'Room Type',t:'text'},
+      {k:'category',l:'Category',t:'select',opts:['OOO','OOS','VIP Hold','Preventive Maintenance','Renovation','Contractor Access','Released']},
+      {k:'status',l:'Status',t:'select',opts:['Open','In Progress','Waiting Material','Waiting Contractor','Waiting Housekeeping','Waiting Verification','Released']},
+      {k:'priority',l:'Priority',t:'select',opts:['Critical','High','Medium','Low']},
+      {k:'vip',l:'VIP Room',t:'checkbox'},
+      {k:'businessImpact',l:'Business Impact',t:'select',opts:['Revenue','Guest Comfort','Safety','Operational']},
+      {k:'dateOpened',l:'Date Opened',t:'date'},
+      {k:'owner',l:'Owner / Engineer',t:'text'},
+      {k:'supervisor',l:'Supervisor',t:'text'},
+      {k:'technician',l:'Technician',t:'text'},
+      {k:'contractor',l:'Contractor (if any)',t:'text'},
+      {k:'adr',l:'ADR (₱/night)',t:'number'},
+      {k:'problem',l:'Problem Description',t:'textarea'},
+      {k:'findings',l:'Engineering Findings',t:'textarea'},
+      {k:'rootCause',l:'Root Cause',t:'text'},
+      {k:'materials',l:'Materials Required',t:'text'},
+      {k:'expectedCompletion',l:'Expected Completion',t:'date'},
+      {k:'progress',l:'Progress %',t:'number'},
+      {k:'nextAction',l:'Next Action',t:'text'},
+    ],
+    cols:[
+      {k:'number',l:'Room'},{k:'category',l:'Category'},{k:'status',l:'Status'},
+      {k:'priority',l:'Priority'},{k:'_days',l:'Days Open'},{k:'owner',l:'Owner'},{k:'_score',l:'Score'}
+    ],
+    score:scoreRoom,
+    title:r=>'Room '+r.number,
+    sub:r=>(r.category||'')+' · '+(r.building||''),
+  },
+  wo:{
+    label:'Work Orders', icon:'🛠️', idPrefix:'WO',
+    filterFields:['status','category','priority'],
+    fields:[
+      {k:'woNumber',l:'WO Number',t:'text',req:1},
+      {k:'fcsNumber',l:'FCS Number',t:'text'},
+      {k:'category',l:'Category',t:'select',opts:['Emergency','Urgent','Routine','Guest Complaint','Preventive Maintenance','Safety','Energy','Project','Warranty']},
+      {k:'status',l:'Status',t:'select',opts:['Reported','Assigned','Investigation','Waiting Material','Waiting Contractor','Repair','Testing','Completed','Closed']},
+      {k:'priority',l:'Priority',t:'select',opts:['Critical','High','Medium','Low']},
+      {k:'room',l:'Room / Location',t:'text'},
+      {k:'equipment',l:'Equipment',t:'text'},
+      {k:'building',l:'Building',t:'text'},
+      {k:'trade',l:'Trade',t:'select',opts:['HVAC','Electrical','Mechanical','Plumbing','Civil','Painting','Carpentry','ELV','Automation']},
+      {k:'reportedDate',l:'Date Reported',t:'date'},
+      {k:'supervisor',l:'Supervisor',t:'text'},
+      {k:'technician',l:'Technician',t:'text'},
+      {k:'difficulty',l:'Difficulty (1-10)',t:'number'},
+      {k:'estHours',l:'Estimated Hours',t:'number'},
+      {k:'description',l:'Description',t:'textarea'},
+      {k:'findings',l:'Engineering Findings',t:'textarea'},
+      {k:'rootCause',l:'Root Cause',t:'text'},
+    ],
+    cols:[
+      {k:'woNumber',l:'WO #'},{k:'category',l:'Category'},{k:'status',l:'Status'},
+      {k:'priority',l:'Priority'},{k:'room',l:'Room'},{k:'technician',l:'Technician'},{k:'_score',l:'Score'}
+    ],
+    score:scoreWO,
+    title:w=>w.woNumber+' — '+(w.equipment||w.room||''),
+    sub:w=>(w.category||'')+' · '+(w.trade||''),
+  },
+  proc:{
+    label:'Procurement', icon:'📦', idPrefix:'PR',
+    filterFields:['status','businessImpact','priority'],
+    fields:[
+      {k:'prNumber',l:'PR Number',t:'text',req:1},
+      {k:'srfNumber',l:'SRF Number',t:'text'},
+      {k:'poNumber',l:'PO Number',t:'text'},
+      {k:'status',l:'Status',t:'select',opts:['Draft','Pending Approval','Approved','Sourcing','Waiting Supplier','Quotation Received','PO Processing','In Transit','Received','Issued','Completed','Cancelled']},
+      {k:'priority',l:'Priority',t:'select',opts:['Critical','High','Medium','Low']},
+      {k:'requester',l:'Requester',t:'text'},
+      {k:'buyer',l:'Buyer',t:'text'},
+      {k:'supplier',l:'Supplier',t:'text'},
+      {k:'itemDescription',l:'Item Description',t:'textarea'},
+      {k:'qty',l:'Quantity',t:'number'},
+      {k:'estCost',l:'Estimated Cost (₱)',t:'number'},
+      {k:'requiredFor',l:'Required For (Room/WO/Project)',t:'text'},
+      {k:'businessImpact',l:'Business Impact',t:'select',opts:['Revenue','Guest Comfort','Safety','Operational','General Stock']},
+      {k:'dateRequested',l:'Date Requested',t:'date'},
+      {k:'estimatedDelivery',l:'Estimated Delivery',t:'date'},
+      {k:'actualDelivery',l:'Actual Delivery',t:'date'},
+    ],
+    cols:[
+      {k:'prNumber',l:'PR #'},{k:'itemDescription',l:'Item'},{k:'status',l:'Status'},
+      {k:'priority',l:'Priority'},{k:'buyer',l:'Buyer'},{k:'supplier',l:'Supplier'},{k:'_score',l:'Score'}
+    ],
+    score:scoreProc,
+    title:p=>p.prNumber+' — '+(p.itemDescription||'').slice(0,40),
+    sub:p=>(p.status||'')+' · '+(p.supplier||'—'),
+  },
+  inv:{
+    label:'Inventory', icon:'🗄️', idPrefix:'INV',
+    filterFields:['_stockstatus','category'],
+    fields:[
+      {k:'itemCode',l:'Item Code',t:'text',req:1},
+      {k:'description',l:'Description',t:'text',req:1},
+      {k:'category',l:'Category',t:'select',opts:['Electrical','Mechanical','HVAC','Plumbing','Civil','Fire Protection','ELV','Consumables','Tools','Safety Equipment']},
+      {k:'unit',l:'Unit',t:'text'},
+      {k:'currentStock',l:'Current Stock',t:'number'},
+      {k:'minStock',l:'Minimum Stock',t:'number'},
+      {k:'reorderLevel',l:'Reorder Level',t:'number'},
+      {k:'criticalLevel',l:'Critical Level',t:'number'},
+      {k:'unitCost',l:'Unit Cost (₱)',t:'number'},
+      {k:'location',l:'Location / Bin',t:'text'},
+      {k:'supplier',l:'Preferred Supplier',t:'text'},
+      {k:'leadTimeDays',l:'Lead Time (days)',t:'number'},
+      {k:'avgMonthlyUsage',l:'Avg Monthly Usage',t:'number'},
+    ],
+    cols:[
+      {k:'itemCode',l:'Code'},{k:'description',l:'Description'},{k:'category',l:'Category'},
+      {k:'currentStock',l:'Stock'},{k:'_stockstatus',l:'Status'},{k:'supplier',l:'Supplier'},{k:'_score',l:'Score'}
+    ],
+    score:scoreInv,
+    title:i=>i.itemCode+' — '+i.description,
+    sub:i=>(i.category||'')+' · '+(i.location||''),
+  },
+  pm:{
+    label:'Preventive Maint.', icon:'📅', idPrefix:'PM',
+    filterFields:['_pmstatus','frequency'],
+    fields:[
+      {k:'pmNumber',l:'PM Number',t:'text',req:1},
+      {k:'equipment',l:'Equipment',t:'text',req:1},
+      {k:'category',l:'Category',t:'select',opts:['HVAC','Electrical','Mechanical','Plumbing','Fire Protection','ELV','General']},
+      {k:'building',l:'Building',t:'text'},
+      {k:'room',l:'Room / Location',t:'text'},
+      {k:'frequency',l:'Frequency',t:'select',opts:['Daily','Weekly','Biweekly','Monthly','Quarterly','Semiannual','Annual']},
+      {k:'status',l:'Status',t:'select',opts:['Scheduled','Assigned','In Progress','Completed']},
+      {k:'scheduledDate',l:'Scheduled Date',t:'date'},
+      {k:'completionDate',l:'Completion Date',t:'date'},
+      {k:'supervisor',l:'Supervisor',t:'text'},
+      {k:'technician',l:'Technician',t:'text'},
+      {k:'criticalTier',l:'Criticality Tier (1=Life Safety..5=General)',t:'number'},
+      {k:'difficulty',l:'Difficulty (1-10)',t:'number'},
+    ],
+    cols:[
+      {k:'pmNumber',l:'PM #'},{k:'equipment',l:'Equipment'},{k:'frequency',l:'Freq'},
+      {k:'_pmstatus',l:'Status'},{k:'scheduledDate',l:'Scheduled'},{k:'technician',l:'Technician'},{k:'_score',l:'Score'}
+    ],
+    score:scorePM,
+    title:p=>p.pmNumber+' — '+p.equipment,
+    sub:p=>(p.frequency||'')+' · Tier '+(p.criticalTier||'-'),
+  },
+  manpower:{
+    label:'Manpower', icon:'👷', idPrefix:'EMP',
+    filterFields:['status','trade'],
+    fields:[
+      {k:'empId',l:'Employee ID',t:'text',req:1},
+      {k:'name',l:'Full Name',t:'text',req:1},
+      {k:'position',l:'Position',t:'text'},
+      {k:'trade',l:'Primary Trade',t:'select',opts:['HVAC','Electrical','Mechanical','Plumbing','Fire Protection','Civil','ELV','General Maintenance']},
+      {k:'supervisor',l:'Supervisor',t:'text'},
+      {k:'status',l:'Status Today',t:'select',opts:['Present','Absent','Leave','Training','Medical Leave','Overtime']},
+      {k:'skillLevel',l:'Skill Level (1-5)',t:'number'},
+      {k:'certExpiry',l:'Nearest Cert Expiry',t:'date'},
+      {k:'currentWorkload',l:'Open Assignments',t:'number'},
+      {k:'utilization',l:'Utilization %',t:'number'},
+    ],
+    cols:[
+      {k:'empId',l:'ID'},{k:'name',l:'Name'},{k:'trade',l:'Trade'},
+      {k:'status',l:'Status'},{k:'skillLevel',l:'Skill Lv'},{k:'currentWorkload',l:'Workload'},{k:'utilization',l:'Util %'}
+    ],
+    score:e=>Number(e.utilization||0),
+    title:e=>e.name+' ('+e.empId+')',
+    sub:e=>(e.trade||'')+' · '+(e.position||''),
+  },
+  proj:{
+    label:'Contractors & Projects', icon:'🏗️', idPrefix:'PRJ',
+    filterFields:['status','category','priority'],
+    fields:[
+      {k:'projectId',l:'Project ID',t:'text',req:1},
+      {k:'projectName',l:'Project Name',t:'text',req:1},
+      {k:'contractor',l:'Contractor',t:'text'},
+      {k:'trade',l:'Trade',t:'text'},
+      {k:'category',l:'Category',t:'select',opts:['Guest Room Renovation','Public Area','MEP Upgrade','Fire Protection','HVAC','Civil','Energy Project','Life Safety','Warranty Work','Emergency Project']},
+      {k:'priority',l:'Priority',t:'select',opts:['Critical','High','Medium','Low']},
+      {k:'status',l:'Status',t:'select',opts:['Planning','Mobilization','Execution','Behind Schedule','Punch List','Warranty','Completed']},
+      {k:'building',l:'Building',t:'text'},
+      {k:'roomsAffected',l:'Rooms Affected',t:'text'},
+      {k:'startDate',l:'Start Date',t:'date'},
+      {k:'targetCompletion',l:'Target Completion',t:'date'},
+      {k:'progress',l:'Progress %',t:'number'},
+      {k:'budget',l:'Budget (₱)',t:'number'},
+      {k:'actualCost',l:'Actual Cost (₱)',t:'number'},
+      {k:'safetyIssues',l:'Open Safety Issues',t:'number'},
+      {k:'businessImpact',l:'Business Impact',t:'select',opts:['Revenue','Guest Comfort','Safety','Operational']},
+    ],
+    cols:[
+      {k:'projectId',l:'ID'},{k:'projectName',l:'Project'},{k:'contractor',l:'Contractor'},
+      {k:'status',l:'Status'},{k:'progress',l:'Progress'},{k:'_score',l:'Score'}
+    ],
+    score:scoreProj,
+    title:p=>p.projectName,
+    sub:p=>(p.contractor||'')+' · '+(p.category||''),
+  },
+};
+const MODORDER = ['rooms','wo','proc','inv','pm','manpower','proj'];
+
+/* ============================================================
+   SEED / SAMPLE DATA (first run only)
+   ============================================================ */
+function seedData(){
+  const t = todayStr();
+  const d = (n)=>{ const dt=new Date(); dt.setDate(dt.getDate()-n); return dt.toISOString().slice(0,10); };
+  const f = (n)=>{ const dt=new Date(); dt.setDate(dt.getDate()+n); return dt.toISOString().slice(0,10); };
+  const tl = (arr)=>arr.map(x=>({id:uid('tl'),ts:x[0],text:x[1]}));
+
+  return {
+    rooms:[
+      {id:uid('rm'),number:'1812',building:'Tower A',floor:'18',type:'Deluxe King',category:'OOO',status:'Waiting Material',
+       priority:'Critical',vip:true,businessImpact:'Revenue',dateOpened:d(2),owner:'FDGuinoo Engineering',supervisor:'HVAC Supervisor',
+       technician:'J. Ramos',contractor:'',adr:8500,problem:'Guest reported no cooling.',findings:'FCU motor bearing seized.',
+       rootCause:'Motor bearing failure - end of service life.',materials:'FCU Motor 1/4HP',expectedCompletion:f(1),progress:60,
+       nextAction:'Follow up supplier for motor delivery',
+       timeline:tl([[d(2)+'T05:55','Guest reported no cooling.'],[d(2)+'T06:05','Duty Engineer inspected room.'],
+         [d(2)+'T06:18','FCU motor confirmed defective.'],[d(1)+'T06:40','PR linked, buyer notified.'],
+         [t+'T07:15','Supplier confirmed stock, ETA tomorrow AM.']])},
+      {id:uid('rm'),number:'2204',building:'Tower B',floor:'22',type:'Suite',category:'OOS',status:'In Progress',
+       priority:'High',vip:false,businessImpact:'Guest Comfort',dateOpened:d(1),owner:'FDGuinoo Engineering',supervisor:'Plumbing Supervisor',
+       technician:'M. Cruz',contractor:'',adr:12000,problem:'Toilet flush valve leaking.',findings:'Flush valve diaphragm worn.',
+       rootCause:'Normal wear, valve age 6 yrs.',materials:'Flush Valve Diaphragm Kit',expectedCompletion:t,progress:80,
+       nextAction:'Complete repair, functional test',
+       timeline:tl([[d(1)+'T08:10','Guest reported leak.'],[d(1)+'T08:40','Inspected, root cause found.'],
+         [t+'T07:00','Parts available from stock, repair in progress.']])},
+      {id:uid('rm'),number:'0905',building:'Tower A',floor:'9',type:'Standard Twin',category:'Renovation',status:'Waiting Contractor',
+       priority:'Medium',vip:false,businessImpact:'Operational',dateOpened:d(6),owner:'FDGuinoo Engineering',supervisor:'Projects Engineer',
+       technician:'',contractor:'ABC Interior Works',adr:5500,problem:'Scheduled bathroom renovation.',findings:'Waterproofing stage.',
+       rootCause:'',materials:'Waterproofing membrane, tiles',expectedCompletion:f(4),progress:35,
+       nextAction:'Contractor to resume after material delivery',
+       timeline:tl([[d(6)+'T09:00','Renovation started.'],[d(3)+'T10:00','Demolition completed.'],
+         [d(1)+'T14:00','Waiting waterproofing material.']])},
+      {id:uid('rm'),number:'1501',building:'Tower A',floor:'15',type:'Deluxe King',category:'Released',status:'Released',
+       priority:'Low',vip:false,businessImpact:'Operational',dateOpened:d(3),owner:'FDGuinoo Engineering',supervisor:'Electrical Supervisor',
+       technician:'R. Santos',contractor:'',adr:8000,problem:'Partial power loss.',findings:'Tripped breaker due to overloaded outlet.',
+       rootCause:'Guest using high-load appliance.',materials:'',expectedCompletion:d(1),progress:100,
+       nextAction:'Closed - monitor for repeat',
+       timeline:tl([[d(3)+'T11:00','Reported.'],[d(3)+'T11:30','Breaker reset, tested.'],
+         [d(1)+'T09:00','Room released to Front Office.']])},
+    ],
+    wo:[
+      {id:uid('wo'),woNumber:'WO-2026-1145',fcsNumber:'FCS-88231',category:'Emergency',status:'Waiting Material',priority:'Critical',
+       room:'1812',equipment:'FCU-1812',building:'Tower A',trade:'HVAC',reportedDate:d(2),supervisor:'HVAC Supervisor',
+       technician:'J. Ramos',difficulty:8,estHours:5,description:'No cooling in room.',findings:'Motor bearing seized.',rootCause:'End of service life.',
+       timeline:tl([[d(2)+'T06:05','WO received & assigned.'],[d(2)+'T06:22','Diagnosis completed.'],[d(2)+'T06:40','Material required, PR generated.']])},
+      {id:uid('wo'),woNumber:'WO-2026-1150',fcsNumber:'FCS-88240',category:'Guest Complaint',status:'Testing',priority:'High',
+       room:'2204',equipment:'Toilet Flush Valve',building:'Tower B',trade:'Plumbing',reportedDate:d(1),supervisor:'Plumbing Supervisor',
+       technician:'M. Cruz',difficulty:3,estHours:1.5,description:'Leaking flush valve.',findings:'Diaphragm worn.',rootCause:'Normal wear.',
+       timeline:tl([[d(1)+'T08:40','Assigned.'],[t+'T07:00','Repair completed, testing.']])},
+      {id:uid('wo'),woNumber:'WO-2026-1162',fcsNumber:'FCS-88255',category:'Routine',status:'Assigned',priority:'Medium',
+       room:'Lobby',equipment:'Main Entrance Door Closer',building:'Main',trade:'Mechanical',reportedDate:t,supervisor:'Mechanical Supervisor',
+       technician:'A. Reyes',difficulty:2,estHours:0.75,description:'Door closing too fast.',findings:'',rootCause:'',
+       timeline:tl([[t+'T08:00','WO created and assigned.']])},
+      {id:uid('wo'),woNumber:'WO-2026-1140',fcsNumber:'FCS-88220',category:'Preventive Maintenance',status:'Completed',priority:'Low',
+       room:'Roof Deck',equipment:'Cooling Tower Fan 2',building:'Main',trade:'HVAC',reportedDate:d(4),supervisor:'HVAC Supervisor',
+       technician:'J. Ramos',difficulty:6,estHours:3,description:'Quarterly PM.',findings:'Bearing noise detected, monitor.',rootCause:'',
+       timeline:tl([[d(4)+'T09:00','PM performed.'],[d(4)+'T12:00','Completed, remarked bearing noise.']])},
+      {id:uid('wo'),woNumber:'WO-2026-1170',fcsNumber:'FCS-88270',category:'Safety',status:'Waiting Contractor',priority:'Critical',
+       room:'B2 Parking',equipment:'Fire Pump Controller',building:'Main',trade:'Fire Protection',reportedDate:d(1),supervisor:'FDGuinoo Engineering',
+       technician:'',difficulty:9,estHours:6,description:'Fire pump controller fault alarm.',findings:'Suspected control board failure.',rootCause:'',
+       timeline:tl([[d(1)+'T14:00','Reported, specialist contractor called.'],[t+'T08:00','Contractor scheduled tomorrow AM.']])},
+    ],
+    proc:[
+      {id:uid('pr'),prNumber:'PR-2458',srfNumber:'SRF-1190',poNumber:'',status:'Waiting Supplier',priority:'Critical',
+       requester:'HVAC Supervisor',buyer:'Buyer 2',supplier:'ABC Industrial Supply',itemDescription:'FCU Motor 1/4HP 220V',qty:2,
+       estCost:8500,requiredFor:'Room 1812 / WO-2026-1145',businessImpact:'Revenue',dateRequested:d(2),estimatedDelivery:f(1),actualDelivery:'',
+       timeline:tl([[d(2)+'T06:40','PR generated.'],[d(2)+'T07:10','Engineering approved.'],[d(1)+'T09:25','SRF issued.'],[t+'T07:15','Supplier confirmed stock, ETA tomorrow.']])},
+      {id:uid('pr'),prNumber:'PR-2461',srfNumber:'SRF-1193',poNumber:'PO-3305',status:'In Transit',priority:'High',
+       requester:'Plumbing Supervisor',buyer:'Buyer 1',supplier:'HydroParts Inc.',itemDescription:'Flush Valve Diaphragm Kit (x10)',qty:10,
+       estCost:3200,requiredFor:'General Stock - Plumbing',businessImpact:'Operational',dateRequested:d(6),estimatedDelivery:f(1),actualDelivery:'',
+       timeline:tl([[d(6)+'T10:00','PR generated.'],[d(4)+'T11:00','PO approved.'],[d(2)+'T09:00','Supplier shipped.']])},
+      {id:uid('pr'),prNumber:'PR-2465',srfNumber:'',poNumber:'',status:'Pending Approval',priority:'Medium',
+       requester:'Projects Engineer',buyer:'',supplier:'',itemDescription:'Waterproofing Membrane 50sqm',qty:50,
+       estCost:15000,requiredFor:'Room 0905 Renovation',businessImpact:'Operational',dateRequested:t,estimatedDelivery:'',actualDelivery:'',
+       timeline:tl([[t+'T08:30','PR submitted for approval.']])},
+      {id:uid('pr'),prNumber:'PR-2440',srfNumber:'SRF-1170',poNumber:'PO-3280',status:'Completed',priority:'Low',
+       requester:'Electrical Supervisor',buyer:'Buyer 2',supplier:'ElectroMart',itemDescription:'MCB 20A Single Pole (x20)',qty:20,
+       estCost:6400,requiredFor:'General Stock',businessImpact:'General Stock',dateRequested:d(15),estimatedDelivery:d(9),actualDelivery:d(8),
+       timeline:tl([[d(15)+'T10:00','PR generated.'],[d(8)+'T14:00','Received and issued to stock.']])},
+      {id:uid('pr'),prNumber:'PR-2470',srfNumber:'',poNumber:'',status:'Draft',priority:'Critical',
+       requester:'FDGuinoo Engineering',buyer:'',supplier:'FireTech Solutions',itemDescription:'Fire Pump Controller Board (Emergency)',qty:1,
+       estCost:85000,requiredFor:'Fire Pump / WO-2026-1170',businessImpact:'Safety',dateRequested:t,estimatedDelivery:'',actualDelivery:'',
+       timeline:tl([[t+'T08:15','Emergency PR being drafted.']])},
+    ],
+    inv:[
+      {id:uid('inv'),itemCode:'HVAC-MTR-014',description:'FCU Motor 1/4HP 220V',category:'HVAC',unit:'pcs',currentStock:1,minStock:6,
+       reorderLevel:4,criticalLevel:2,unitCost:4200,location:'Warehouse A-3',supplier:'ABC Industrial Supply',leadTimeDays:5,avgMonthlyUsage:3,timeline:tl([[d(20)+'T00:00','Stock replenished.'],[d(2)+'T06:40','2 pcs issued to WO-2026-1145 (backorder).']])},
+      {id:uid('inv'),itemCode:'PLB-DIA-002',description:'Flush Valve Diaphragm Kit',category:'Plumbing',unit:'kit',currentStock:14,minStock:10,
+       reorderLevel:8,criticalLevel:4,unitCost:320,location:'Warehouse B-1',supplier:'HydroParts Inc.',leadTimeDays:7,avgMonthlyUsage:6,timeline:tl([[d(1)+'T07:00','1 kit issued to Room 2204.']])},
+      {id:uid('inv'),itemCode:'ELE-MCB-020',description:'MCB 20A Single Pole',category:'Electrical',unit:'pcs',currentStock:22,minStock:15,
+       reorderLevel:10,criticalLevel:5,unitCost:320,location:'Warehouse A-1',supplier:'ElectroMart',leadTimeDays:4,avgMonthlyUsage:8,timeline:tl([[d(8)+'T14:00','20 pcs received.']])},
+      {id:uid('inv'),itemCode:'HVAC-FLT-101',description:'FCU Air Filter Washable',category:'HVAC',unit:'pcs',currentStock:3,minStock:20,
+       reorderLevel:15,criticalLevel:8,unitCost:150,location:'Warehouse A-2',supplier:'ABC Industrial Supply',leadTimeDays:5,avgMonthlyUsage:25,timeline:tl([[d(10)+'T00:00','Heavy consumption - quarterly PM cycle.']])},
+      {id:uid('inv'),itemCode:'FIRE-CTRL-BRD',description:'Fire Pump Controller Board',category:'Fire Protection',unit:'pcs',currentStock:0,minStock:1,
+       reorderLevel:1,criticalLevel:1,unitCost:85000,location:'Warehouse C-1',supplier:'FireTech Solutions',leadTimeDays:10,avgMonthlyUsage:0.1,timeline:tl([[t+'T08:15','Out of stock - emergency PR raised.']])},
+      {id:uid('inv'),itemCode:'CONS-LUB-005',description:'Multi-Purpose Grease (400g)',category:'Consumables',unit:'tube',currentStock:40,minStock:20,
+       reorderLevel:15,criticalLevel:8,unitCost:180,location:'Warehouse A-4',supplier:'ElectroMart',leadTimeDays:3,avgMonthlyUsage:10,timeline:tl([[d(30)+'T00:00','Stock count verified.']])},
+      {id:uid('inv'),itemCode:'HVAC-CAP-032',description:'Run Capacitor 35uF',category:'HVAC',unit:'pcs',currentStock:9,minStock:12,
+       reorderLevel:8,criticalLevel:4,unitCost:280,location:'Warehouse A-3',supplier:'ABC Industrial Supply',leadTimeDays:5,avgMonthlyUsage:6,timeline:tl([[d(5)+'T00:00','3 pcs issued.']])},
+      {id:uid('inv'),itemCode:'SAFE-PPE-011',description:'Safety Harness Full Body',category:'Safety Equipment',unit:'pcs',currentStock:6,minStock:4,
+       reorderLevel:3,criticalLevel:2,unitCost:3200,location:'Warehouse D-1',supplier:'SafetyFirst Corp',leadTimeDays:14,avgMonthlyUsage:0.5,timeline:tl([[d(60)+'T00:00','Annual inspection passed.']])},
+    ],
+    pm:[
+      {id:uid('pm'),pmNumber:'PM-2026-0501',equipment:'Cooling Tower Fan 2',category:'HVAC',building:'Main',room:'Roof Deck',
+       frequency:'Quarterly',status:'Completed',scheduledDate:d(4),completionDate:d(4),supervisor:'HVAC Supervisor',technician:'J. Ramos',
+       criticalTier:2,difficulty:6,timeline:tl([[d(4)+'T09:00','PM performed, bearing noise noted.']])},
+      {id:uid('pm'),pmNumber:'PM-2026-0512',equipment:'Fire Pump Set',category:'Fire Protection',building:'Main',room:'Pump Room',
+       frequency:'Weekly',status:'Scheduled',scheduledDate:t,completionDate:'',supervisor:'FDGuinoo Engineering',technician:'R. Santos',
+       criticalTier:1,difficulty:5,timeline:tl([[d(7)+'T09:00','Previous weekly test passed.']])},
+      {id:uid('pm'),pmNumber:'PM-2026-0498',equipment:'Chiller No.1',category:'HVAC',building:'Main',room:'Plant Room',
+       frequency:'Monthly',status:'Scheduled',scheduledDate:d(2),completionDate:'',supervisor:'HVAC Supervisor',technician:'J. Ramos',
+       criticalTier:1,difficulty:10,timeline:tl([[d(32)+'T00:00','Last monthly PM completed.']])},
+      {id:uid('pm'),pmNumber:'PM-2026-0520',equipment:'Elevator Car 3',category:'Mechanical',building:'Tower A',room:'Elevator Shaft',
+       frequency:'Monthly',status:'Scheduled',scheduledDate:f(3),completionDate:'',supervisor:'Mechanical Supervisor',technician:'A. Reyes',
+       criticalTier:2,difficulty:7,timeline:tl([[d(28)+'T00:00','Last PM completed, no findings.']])},
+      {id:uid('pm'),pmNumber:'PM-2026-0480',equipment:'Emergency Genset',category:'Electrical',building:'Main',room:'Genset Room',
+       frequency:'Weekly',status:'Completed',scheduledDate:d(1),completionDate:d(1),supervisor:'Electrical Supervisor',technician:'R. Santos',
+       criticalTier:1,difficulty:5,timeline:tl([[d(1)+'T09:00','Weekly run test passed, load test 85%.']])},
+      {id:uid('pm'),pmNumber:'PM-2026-0470',equipment:'STP Blower 1',category:'Mechanical',building:'Main',room:'STP Room',
+       frequency:'Biweekly',status:'Scheduled',scheduledDate:d(1),completionDate:'',supervisor:'Mechanical Supervisor',technician:'A. Reyes',
+       criticalTier:3,difficulty:4,timeline:tl([[d(15)+'T00:00','Last biweekly PM completed.']])},
+    ],
+    manpower:[
+      {id:uid('emp'),empId:'ENG-001',name:'J. Ramos',position:'HVAC Technician',trade:'HVAC',supervisor:'HVAC Supervisor',status:'Present',skillLevel:5,certExpiry:f(45),currentWorkload:3,utilization:92},
+      {id:uid('emp'),empId:'ENG-002',name:'M. Cruz',position:'Plumbing Technician',trade:'Plumbing',supervisor:'Plumbing Supervisor',status:'Present',skillLevel:4,certExpiry:f(120),currentWorkload:2,utilization:74},
+      {id:uid('emp'),empId:'ENG-003',name:'A. Reyes',position:'Mechanical Technician',trade:'Mechanical',supervisor:'Mechanical Supervisor',status:'Present',skillLevel:3,certExpiry:f(20),currentWorkload:2,utilization:68},
+      {id:uid('emp'),empId:'ENG-004',name:'R. Santos',position:'Electrical Technician',trade:'Electrical',supervisor:'Electrical Supervisor',status:'Present',skillLevel:4,certExpiry:f(200),currentWorkload:1,utilization:55},
+      {id:uid('emp'),empId:'ENG-005',name:'D. Villar',position:'HVAC Technician',trade:'HVAC',supervisor:'HVAC Supervisor',status:'Leave',skillLevel:3,certExpiry:f(90),currentWorkload:0,utilization:0},
+      {id:uid('emp'),empId:'ENG-006',name:'P. Torres',position:'General Maintenance',trade:'General Maintenance',supervisor:'FDGuinoo Engineering',status:'Present',skillLevel:2,certExpiry:f(300),currentWorkload:4,utilization:98},
+    ],
+    proj:[
+      {id:uid('prj'),projectId:'PRJ-2026-04',projectName:'Room 0905 Bathroom Renovation',contractor:'ABC Interior Works',trade:'Civil/Waterproofing',
+       category:'Guest Room Renovation',priority:'Medium',status:'Execution',building:'Tower A',roomsAffected:'0905',startDate:d(6),
+       targetCompletion:f(4),progress:35,budget:180000,actualCost:62000,safetyIssues:0,businessImpact:'Operational',
+       timeline:tl([[d(6)+'T09:00','Kickoff, mobilization.'],[d(3)+'T10:00','Demolition completed.'],[d(1)+'T14:00','Waiting waterproofing material.']])},
+      {id:uid('prj'),projectId:'PRJ-2026-01',projectName:'Lobby Fire Alarm Panel Upgrade',contractor:'FireTech Solutions',trade:'Fire Protection',
+       category:'Fire Protection',priority:'Critical',status:'Behind Schedule',building:'Main',roomsAffected:'Lobby / BOH',startDate:d(20),
+       targetCompletion:d(2),progress:70,budget:950000,actualCost:710000,safetyIssues:1,businessImpact:'Safety',
+       timeline:tl([[d(20)+'T09:00','Project started.'],[d(5)+'T10:00','Panel delivery delayed by supplier.'],[d(1)+'T09:00','Recovery plan submitted by contractor.']])},
+      {id:uid('prj'),projectId:'PRJ-2026-06',projectName:'Cooling Tower Annual Overhaul',contractor:'CoolServe Philippines',trade:'HVAC',
+       category:'HVAC',priority:'High',status:'Planning',building:'Main',roomsAffected:'Roof Deck',startDate:f(10),
+       targetCompletion:f(20),progress:5,budget:420000,actualCost:0,safetyIssues:0,businessImpact:'Operational',
+       timeline:tl([[d(2)+'T09:00','Scope finalized, awaiting budget approval.']])},
+    ],
+    notebook:[
+      {id:uid('nb'),ts:d(1)+'T18:30',tag:'Handover',text:'Night shift: Room 1812 still waiting FCU motor. Fire pump controller alarm reported 14:00, contractor being sourced.'},
+      {id:uid('nb'),ts:d(3)+'T09:00',tag:'General',text:'Reminder: Elevator Car 3 annual government inspection due next month, coordinate with 3rd party inspector.'},
+    ],
+    settingsMeta:{lastSnapshot:null},
+  };
+}
+
+/* ============================================================
+   APP STATE / PERSISTENCE
+   ============================================================ */
+const DEFAULT_SETTINGS = {
+  hotelName:'Hotel ABC',
+  snapshotTime:'07:45',
+  ooWarnDays:3,
+  invReorderPct:80,
+};
+
+const app = {
+  data:null,
+  settings:null,
+  state:{ view:'dashboard', filters:{}, sort:{}, search:'', modal:null, sidebarModuleFilter:'' },
+
+  load(){
+    try{ this.data = JSON.parse(localStorage.getItem(LSKEY)); }catch(e){ this.data=null; }
+    if(!this.data){ this.data = seedData(); this.save(); }
+    try{ this.settings = JSON.parse(localStorage.getItem(LSSET)); }catch(e){ this.settings=null; }
+    if(!this.settings){ this.settings = Object.assign({}, DEFAULT_SETTINGS); this.saveSettings(); }
+    MODORDER.forEach(m=>{ if(!Array.isArray(this.data[m])) this.data[m]=[]; });
+    if(!Array.isArray(this.data.notebook)) this.data.notebook=[];
+    if(!this.data.settingsMeta) this.data.settingsMeta={lastSnapshot:null};
+  },
+  save(){ localStorage.setItem(LSKEY, JSON.stringify(this.data)); },
+  saveSettings(){ localStorage.setItem(LSSET, JSON.stringify(this.settings)); },
+  resetSample(){ this.data = seedData(); this.save(); this.toast('Sample data restored.'); this.setView('dashboard'); },
+  wipeAll(){ this.data = {rooms:[],wo:[],proc:[],inv:[],pm:[],manpower:[],proj:[],notebook:[],settingsMeta:{lastSnapshot:null}}; this.save(); this.toast('All data cleared.'); this.setView('dashboard'); },
+
+  toast(msg){
+    const w = document.getElementById('toastwrap');
+    const el = document.createElement('div'); el.className='toast'; el.textContent=msg;
+    w.appendChild(el); setTimeout(()=>el.remove(), 3200);
+  },
+
+  setView(v, extra){
+    this.state.view = v;
+    this.state.detailId = extra&&extra.id;
+    this.state.detailMod = extra&&extra.mod;
+    document.getElementById('sidebar').classList.remove('open');
+    this.render();
+    document.getElementById('main').scrollTop = 0;
+  },
+
+  isSnapshot(){
+    const now = new Date();
+    const [h,m] = (this.settings.snapshotTime||'07:45').split(':').map(Number);
+    const snapMoment = new Date(); snapMoment.setHours(h,m,0,0);
+    return now >= snapMoment;
+  },
+
+  /* ---------- computed record helpers ---------- */
+  computedRow(modKey, rec){
+    const mod = MODULES[modKey];
+    const row = Object.assign({}, rec);
+    row._score = mod.score ? mod.score(rec) : 0;
+    if(modKey==='rooms') row._days = daysBetween(rec.dateOpened);
+    if(modKey==='inv') row._stockstatus = stockStatus(rec);
+    if(modKey==='pm') row._pmstatus = pmStatusCalc(rec);
+    return row;
+  },
+
+  allRows(modKey){
+    return (this.data[modKey]||[]).map(r=>this.computedRow(modKey,r));
+  },
+
+  /* ---------- KPI / health computation ---------- */
+  kpis(){
+    const rooms = this.allRows('rooms');
+    const wo = this.allRows('wo');
+    const proc = this.allRows('proc');
+    const inv = this.allRows('inv');
+    const pm = this.allRows('pm');
+    const man = this.allRows('manpower');
+    const proj = this.allRows('proj');
+
+    const ooo = rooms.filter(r=>r.category==='OOO' && r.status!=='Released').length;
+    const oos = rooms.filter(r=>r.category==='OOS' && r.status!=='Released').length;
+    const emergencyWO = wo.filter(w=>w.category==='Emergency' && !['Completed','Closed'].includes(w.status)).length;
+    const criticalProc = proc.filter(p=>p._score>=70 && !['Completed','Cancelled'].includes(p.status)).length;
+    const invAlerts = inv.filter(i=>['Critical','Out of Stock','Reorder Required'].includes(i._stockstatus)).length;
+    const pmDueToday = pm.filter(p=>p.scheduledDate===todayStr()).length;
+    const pmDoneToday = pm.filter(p=>p.scheduledDate===todayStr() && p.status==='Completed').length;
+    const pmCompliance = pmDueToday ? Math.round(pmDoneToday/pmDueToday*100) : 100;
+    const pmOverdue = pm.filter(p=>p._pmstatus==='Overdue').length;
+    const safetyIssues = proj.reduce((a,p)=>a+(Number(p.safetyIssues)||0),0) + wo.filter(w=>w.category==='Safety'&&!['Completed','Closed'].includes(w.status)).length;
+    const scheduled = man.length, present = man.filter(m=>m.status==='Present'||m.status==='Overtime').length;
+    const manAvail = scheduled ? Math.round(present/scheduled*100) : 100;
+    const contractorDelay = proj.filter(p=>p.status==='Behind Schedule').length;
+    const guestComplaintWO = wo.filter(w=>w.category==='Guest Complaint' && !['Completed','Closed'].includes(w.status)).length;
+    const revenueRoomsOpen = rooms.filter(r=>r.category==='OOO'&&r.status!=='Released');
+    const revenueLoss = revenueRoomsOpen.reduce((a,r)=>a+(Number(r.adr)||0)*Math.max(1,r._days),0);
+
+    // Health Score - weighted per Part03 sec7
+    const wRoom = clamp(100-(ooo+oos)*9,0,100);
+    const wWO = clamp(100-emergencyWO*22,0,100);
+    const wPM = clamp(pmCompliance-pmOverdue*8,0,100);
+    const wInv = clamp(100-invAlerts*13,0,100);
+    const wProc = clamp(100-criticalProc*13,0,100);
+    const wGuest = clamp(100-guestComplaintWO*16,0,100);
+    const wSafety = clamp(100-safetyIssues*30,0,100);
+    const wMan = manAvail;
+    const health = Math.round(wRoom*0.25 + wWO*0.20 + wPM*0.15 + wInv*0.10 + wProc*0.10 + wGuest*0.10 + wSafety*0.05 + wMan*0.05);
+
+    return {
+      ooo, oos, emergencyWO, criticalProc, invAlerts, pmCompliance, pmOverdue, safetyIssues,
+      manAvail, contractorDelay, guestComplaintWO, revenueLoss, health,
+      weights:{wRoom,wWO,wPM,wInv,wProc,wGuest,wSafety,wMan},
+      counts:{
+        rooms:rooms.length, wo:wo.length, proc:proc.length, inv:inv.length, pm:pm.length, manpower:man.length, proj:proj.length
+      },
+      criticalCounts:{
+        rooms: rooms.filter(r=>r._score>=70 && r.status!=='Released').length,
+        wo: wo.filter(w=>w._score>=70 && !['Completed','Closed'].includes(w.status)).length,
+        proc: criticalProc,
+        inv: invAlerts,
+        pm: pmOverdue,
+        manpower: man.filter(m=>m.status==='Absent').length,
+        proj: contractorDelay,
+      }
+    };
+  },
+
+  topPriorities(n){
+    let all = [];
+    MODORDER.forEach(m=>{
+      if(m==='manpower') return;
+      this.allRows(m).forEach(r=>{
+        const closed = ['Released','Completed','Closed','Cancelled'].includes(r.status);
+        if(closed) return;
+        all.push({mod:m, rec:r});
+      });
+    });
+    all.sort((a,b)=>b.rec._score - a.rec._score);
+    return all.slice(0, n||10);
+  },
+
+  activityFeed(n){
+    let items = [];
+    MODORDER.forEach(m=>{
+      (this.data[m]||[]).forEach(r=>{
+        (r.timeline||[]).forEach(t=>{
+          items.push({ts:t.ts, text:t.text, mod:m, recId:r.id, title: MODULES[m].title(r)});
+        });
+      });
+    });
+    (this.data.notebook||[]).forEach(nb=>{
+      items.push({ts:nb.ts, text:nb.text, mod:'notebook', recId:nb.id, title:'Notebook: '+(nb.tag||'Entry')});
+    });
+    items.sort((a,b)=> new Date(b.ts) - new Date(a.ts));
+    return items.slice(0, n||15);
+  },
+
+  addTimeline(modKey, id, text){
+    const rec = (this.data[modKey]||[]).find(r=>r.id===id);
+    if(!rec) return;
+    if(!rec.timeline) rec.timeline=[];
+    rec.timeline.push({id:uid('tl'), ts:nowTs(), text});
+  },
+};
+
+/* ============================================================
+   RENDER: SHELL / SIDEBAR / TOPBAR
+   ============================================================ */
+app.renderShell = function(){
+  document.getElementById('tb-hotelname').textContent = '— '+this.settings.hotelName;
+  const snap = this.isSnapshot();
+  const badge = document.getElementById('tb-status');
+  badge.textContent = snap ? 'SNAPSHOT' : 'LIVE';
+  badge.className = 'statusbadge '+(snap?'badge-snap':'badge-live');
+  const k = this.kpis();
+  document.getElementById('tb-notif').textContent = (k.emergencyWO + k.criticalProc + k.invAlerts + k.safetyIssues) || 0;
+
+  const nav = [
+    ['dashboard','📊','Dashboard'],
+    ['dailysummary','📋','Daily Summary'],
+    ['rooms','🏨','Room Operations'],
+    ['wo','🛠️','Work Orders'],
+    ['proc','📦','Procurement'],
+    ['inv','🗄️','Inventory'],
+    ['pm','📅','Preventive Maint.'],
+    ['manpower','👷','Manpower'],
+    ['proj','🏗️','Contractors'],
+    ['notebook','📝','Engineering Notebook'],
+    ['search','🔎','Search'],
+    ['settings','⚙️','Settings'],
+  ];
+  const cc = k.criticalCounts, ct = k.counts;
+  let html = '';
+  nav.forEach(([v,ic,label])=>{
+    const active = this.state.view===v ? ' active':'';
+    let cnt = '';
+    if(ct[v]!==undefined){
+      const crit = cc[v]||0;
+      cnt = '<span class="cnt'+(crit>0?' crit':'')+'">'+(crit>0?crit:ct[v])+'</span>';
+    }
+    html += '<div class="navitem'+active+'" data-action="nav" data-view="'+v+'"><span class="ic">'+ic+'</span>'+label+cnt+'</div>';
+    if(v==='dailysummary'||v==='proj') html += '<hr>';
+  });
+  html += '<div class="sidefoot">EIP v1.0 — Prototype Workspace<br>'+ (snap? 'Snapshot generated '+fmtTime(this.data.settingsMeta.lastSnapshot||nowTs()) : 'Live · auto-refresh') +'<br>Local browser storage only.</div>';
+  document.getElementById('sidebar').innerHTML = html;
+};
+
+app.render = function(){
+  this.renderShell();
+  const main = document.getElementById('main');
+  const v = this.state.view;
+  if(v==='dashboard') main.innerHTML = this.viewDashboard();
+  else if(v==='dailysummary') main.innerHTML = this.viewDailySummary();
+  else if(v==='search') main.innerHTML = this.viewSearch();
+  else if(v==='notebook') main.innerHTML = this.viewNotebook();
+  else if(v==='settings') main.innerHTML = this.viewSettings();
+  else if(MODULES[v]) main.innerHTML = this.viewModule(v);
+  else main.innerHTML = this.viewDashboard();
+  // restore search box value
+  const gs = document.getElementById('globalsearch');
+  if(gs) gs.value = this.state.search||'';
+};
+
+/* ============================================================
+   RENDER: DASHBOARD
+   ============================================================ */
+app.viewDashboard = function(){
+  const k = this.kpis();
+  const band = s=> s>=90?'k-green': s>=75?'k-blue': s>=60?'k-amber':'k-red';
+  const gaugeColor = k.health>=90?'var(--green)': k.health>=75?'var(--blue)': k.health>=60?'var(--amber)':'var(--red)';
+
+  const kpicards = [
+    ['OOO Rooms', k.ooo, k.ooo>2?'k-red':'k-green', 'rooms'],
+    ['OOS Rooms', k.oos, k.oos>2?'k-amber':'k-green', 'rooms'],
+    ['Emergency WO', k.emergencyWO, k.emergencyWO>0?'k-red':'k-green', 'wo'],
+    ['Critical Procurement', k.criticalProc, k.criticalProc>2?'k-amber':'k-green', 'proc'],
+    ['Inventory Alerts', k.invAlerts, k.invAlerts>2?'k-red':'k-green', 'inv'],
+    ['PM Compliance', k.pmCompliance+'%', k.pmCompliance>=95?'k-green':(k.pmCompliance>=80?'k-amber':'k-red'), 'pm'],
+    ['Safety Issues', k.safetyIssues, k.safetyIssues>0?'k-red':'k-green', 'proj'],
+    ['Manpower Available', k.manAvail+'%', k.manAvail>=85?'k-green':'k-amber', 'manpower'],
+  ];
+
+  const priorities = this.topPriorities(10);
+  const feed = this.activityFeed(12);
+
+  let html = '';
+  html += '<h1 class="pagetitle">FDGuinoo Engineering Dashboard</h1>';
+  html += '<div class="pagesub">'+ new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}) +' · '+(this.isSnapshot()?'Snapshot mode — briefing package locked':'Live — continuously updated')+'</div>';
+
+  html += '<div class="section"><div class="grid grid-2">';
+  html += '<div class="card"><div class="healthwrap">';
+  html += '<div class="gauge" style="background:conic-gradient('+gaugeColor+' '+(k.health*3.6)+'deg, var(--border) 0deg)"><div class="gin"><div class="gval">'+k.health+'</div><div class="glabel">Health</div></div></div>';
+  html += '<div class="healthdetail"><div class="hh">Engineering Health Score</div><div class="hs">'+this.healthNarrative(k)+'</div></div>';
+  html += '</div></div>';
+
+  html += '<div class="card"><div class="sectiontitle" style="margin-bottom:8px">AI Daily Operational Summary</div>';
+  html += '<div style="font-size:12.5px;line-height:1.8">'+this.autoSummaryLines(k).map(l=>'• '+l).join('<br>')+'</div></div>';
+  html += '</div></div>';
+
+  html += '<div class="section"><div class="sectiontitle">Operational Health</div><div class="grid grid-8">';
+  kpicards.forEach(([label,val,cls,mod])=>{
+    html += '<div class="card kpi '+cls+'" data-action="nav" data-view="'+mod+'"><div class="klabel">'+label+'</div><div class="kval">'+val+'</div><div class="ksub">Open Module →</div></div>';
+  });
+  html += '</div></div>';
+
+  html += '<div class="section"><div class="sectiontitle">Today\'s Critical Priorities <span class="pill p-blue">'+priorities.length+'</span></div>';
+  html += '<div class="tablewrap"><table><thead><tr><th>Score</th><th>Issue</th><th>Module</th><th>Owner</th><th>Status</th><th>Next Action</th></tr></thead><tbody>';
+  if(!priorities.length) html += '<tr><td colspan="6" class="tblempty">No open priority items. All clear.</td></tr>';
+  priorities.forEach(p=>{
+    const b = scoreBand(p.rec._score);
+    const owner = p.rec.owner||p.rec.technician||p.rec.buyer||p.rec.contractor||'—';
+    const next = p.rec.nextAction||p.rec.rootCause||'Review record';
+    html += '<tr data-action="detail" data-mod="'+p.mod+'" data-id="'+p.rec.id+'">';
+    html += '<td><span class="scorebadge '+b.cls+'">'+p.rec._score+'</span></td>';
+    html += '<td>'+esc(MODULES[p.mod].title(p.rec))+'</td>';
+    html += '<td><span class="pill p-gray">'+MODULES[p.mod].label+'</span></td>';
+    html += '<td>'+esc(owner)+'</td>';
+    html += '<td><span class="pill '+statusCls(p.rec.status)+'">'+esc(p.rec.status||'—')+'</span></td>';
+    html += '<td style="color:var(--text2)">'+esc(next)+'</td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table></div></div>';
+
+  html += '<div class="section"><div class="grid grid-2">';
+  html += '<div><div class="sectiontitle">Engineering Activity Timeline</div><div class="card"><div class="tl">';
+  if(!feed.length) html += '<div class="tblempty">No activity recorded.</div>';
+  feed.forEach(f=>{
+    html += '<div class="tlitem" data-action="detail" data-mod="'+f.mod+'" data-id="'+f.recId+'" style="cursor:pointer">';
+    html += '<div class="tltime">'+fmtDateTime(f.ts)+' <span class="tltag">· '+(MODULES[f.mod]?MODULES[f.mod].label:'Notebook')+'</span></div>';
+    html += '<div class="tltext">'+esc(f.text)+'</div></div>';
+  });
+  html += '</div></div></div>';
+
+  html += '<div><div class="sectiontitle">Module Summary</div><div class="grid" style="grid-template-columns:1fr 1fr;gap:10px">';
+  MODORDER.forEach(m=>{
+    const mod = MODULES[m];
+    const rows = this.allRows(m);
+    const crit = k.criticalCounts[m]||0;
+    html += '<div class="card modcard" data-action="nav" data-view="'+m+'">';
+    html += '<div class="mtop"><span class="micon">'+mod.icon+'</span>'+(crit>0?'<span class="pill p-red">'+crit+' critical</span>':'<span class="pill p-green">OK</span>')+'</div>';
+    html += '<div class="mtitle">'+mod.label+'</div>';
+    html += '<div class="mrow"><span>Total Records</span><b>'+rows.length+'</b></div>';
+    html += '</div>';
+  });
+  html += '</div></div>';
+  html += '</div></div>';
+
+  html += '<div class="footnote">Estimated revenue at risk from open OOO rooms: <b style="color:var(--text)">'+fmtMoney(k.revenueLoss)+'</b> · Data stored locally in this browser only · Last render '+fmtTime(nowTs())+'</div>';
+  return html;
+};
+
+app.healthNarrative = function(k){
+  if(k.health>=90) return 'Excellent — engineering operations within target across all indicators.';
+  if(k.health>=75) return 'Good — minor items need follow-up, no major operational risk.';
+  if(k.health>=60) return 'Needs attention — multiple indicators below target, review priorities below.';
+  return 'Critical — engineering operations at risk, immediate management attention required.';
+};
+
+app.autoSummaryLines = function(k){
+  const lines = [];
+  lines.push(k.ooo+' room(s) OOO, '+k.oos+' OOS'+(k.ooo+k.oos>0?' — see Room Operations for recovery status.':'.'));
+  if(k.emergencyWO>0) lines.push(k.emergencyWO+' emergency work order(s) open and require immediate follow-up.');
+  if(k.criticalProc>0) lines.push(k.criticalProc+' procurement item(s) at critical priority; check supplier confirmations today.');
+  if(k.invAlerts>0) lines.push(k.invAlerts+' inventory item(s) at reorder/critical/out-of-stock level.');
+  lines.push('PM compliance today: '+k.pmCompliance+'%'+(k.pmOverdue>0?', '+k.pmOverdue+' PM overdue.':'.'));
+  if(k.safetyIssues>0) lines.push(k.safetyIssues+' open safety-related item(s) — review immediately.'); else lines.push('No open safety incidents.');
+  lines.push('Manpower availability at '+k.manAvail+'%.');
+  if(k.contractorDelay>0) lines.push(k.contractorDelay+' contractor project(s) behind schedule.');
+  if(k.revenueLoss>0) lines.push('Estimated revenue at risk from OOO rooms: '+fmtMoney(k.revenueLoss)+'.');
+  return lines;
+};
+
+/* ============================================================
+   RENDER: GENERIC MODULE (TABLE + FILTERS)
+   ============================================================ */
+app.viewModule = function(modKey){
+  const mod = MODULES[modKey];
+  let rows = this.allRows(modKey);
+
+  const st = this.state.filters[modKey] || {};
+  if(st.q){
+    const q = st.q.toLowerCase();
+    rows = rows.filter(r => JSON.stringify(r).toLowerCase().includes(q));
+  }
+  (mod.filterFields||[]).forEach(f=>{
+    if(st[f]) rows = rows.filter(r => (r[f]||'') === st[f]);
+  });
+
+  const sortKey = (this.state.sort[modKey]||{}).key || '_score';
+  const sortDir = (this.state.sort[modKey]||{}).dir || 'desc';
+  rows.sort((a,b)=>{
+    let av=a[sortKey], bv=b[sortKey];
+    if(typeof av==='string') av=av.toLowerCase(); if(typeof bv==='string') bv=bv.toLowerCase();
+    if(av===undefined||av===null) av=''; if(bv===undefined||bv===null) bv='';
+    if(av<bv) return sortDir==='asc'?-1:1;
+    if(av>bv) return sortDir==='asc'?1:-1;
+    return 0;
+  });
+
+  let html = '';
+  html += '<h1 class="pagetitle">'+mod.icon+' '+mod.label+'</h1>';
+  html += '<div class="pagesub">'+rows.length+' record(s)'+(st.q||Object.values(st).some(v=>v&&v!==st.q)?' (filtered)':'')+'</div>';
+
+  html += '<div class="toolbar">';
+  html += '<div class="tsearch"><input class="tinput" style="width:100%" type="text" placeholder="Search this module…" data-action="filter" data-mod="'+modKey+'" data-field="q" value="'+esc(st.q||'')+'"></div>';
+  (mod.filterFields||[]).forEach(f=>{
+    let opts;
+    if(f==='_stockstatus') opts=['Healthy','Monitor','Reorder Required','Critical','Out of Stock'];
+    else if(f==='_pmstatus') opts=['Scheduled','Assigned','In Progress','Completed','Overdue'];
+    else { const fdef=(mod.fields||[]).find(x=>x.k===f); opts = fdef?fdef.opts:[]; }
+    if(!opts) return;
+    html += '<select class="tselect" data-action="filter" data-mod="'+modKey+'" data-field="'+f+'"><option value="">All '+f.replace('_','')+'</option>';
+    opts.forEach(o=> html += '<option value="'+o+'"'+(st[f]===o?' selected':'')+'>'+o+'</option>');
+    html += '</select>';
+  });
+  html += '<button class="btn btn-primary" data-action="add" data-mod="'+modKey+'">+ Add Record</button>';
+  html += '<button class="btn" data-action="csv" data-mod="'+modKey+'">⬇ CSV</button>';
+  html += '</div>';
+
+  html += '<div class="tablewrap"><table><thead><tr>';
+  mod.cols.forEach(c=>{
+    const sorted = sortKey===c.k;
+    html += '<th class="'+(sorted?'sorted':'')+'" data-action="sort" data-mod="'+modKey+'" data-field="'+c.k+'">'+c.l+(sorted?(sortDir==='asc'?' ▲':' ▼'):'')+'</th>';
+  });
+  html += '<th></th></tr></thead><tbody>';
+  if(!rows.length) html += '<tr><td colspan="'+(mod.cols.length+1)+'" class="tblempty">No records match. Try clearing filters or add a new record.</td></tr>';
+  rows.forEach(r=>{
+    html += '<tr data-action="detail" data-mod="'+modKey+'" data-id="'+r.id+'">';
+    mod.cols.forEach(c=>{
+      let v = r[c.k];
+      if(c.k==='_score'){ const b=scoreBand(v); html += '<td><span class="scorebadge '+b.cls+'">'+v+'</span></td>'; return; }
+      if(c.k==='status'||c.k==='_stockstatus'||c.k==='_pmstatus'){ html += '<td><span class="pill '+statusCls(v)+'">'+esc(v||'—')+'</span></td>'; return; }
+      if(c.k==='priority'){ html += '<td><span class="pill '+priorityCls(v)+'">'+esc(v||'—')+'</span></td>'; return; }
+      if(c.k==='category' && modKey==='rooms'){ html += '<td><span class="pill p-purple">'+esc(v||'—')+'</span></td>'; return; }
+      if(c.k==='dateOpened'||c.k==='scheduledDate') v = fmtDate(v);
+      if(c.k==='progress') v = (v!==undefined && v!==''? v+'%':'—');
+      if(c.k==='itemDescription') v = (v||'').slice(0,44);
+      html += '<td>'+esc(v!==undefined&&v!==''?v:'—')+'</td>';
+    });
+    html += '<td class="rowactions"><button class="iconbtn" data-action="edit" data-mod="'+modKey+'" data-id="'+r.id+'" title="Edit">✎</button>';
+    html += '<button class="iconbtn danger" data-action="del" data-mod="'+modKey+'" data-id="'+r.id+'" title="Delete">🗑</button></td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table></div>';
+  return html;
+};
+
+/* ============================================================
+   RENDER: RECORD DETAIL (modal-less inline panel via modal)
+   ============================================================ */
+app.openDetail = function(modKey, id){
+  const mod = MODULES[modKey];
+  const rec = (this.data[modKey]||[]).find(r=>r.id===id);
+  if(!rec) return;
+  const row = this.computedRow(modKey, rec);
+  const b = scoreBand(row._score);
+
+  let body = '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">';
+  body += '<div><div style="font-size:16px;font-weight:700">'+esc(mod.title(rec))+'</div><div style="color:var(--text2);font-size:12px">'+esc(mod.sub(rec))+'</div></div>';
+  body += '<span class="scorebadge '+b.cls+'" style="font-size:15px;padding:6px 10px">'+row._score+'</span>';
+  body += '</div>';
+
+  body += '<div class="detailgrid">';
+  mod.fields.forEach(f=>{
+    let v = rec[f.k];
+    if(f.t==='checkbox') v = v ? 'Yes' : 'No';
+    if(f.t==='date') v = fmtDate(v);
+    if(f.t==='number' && f.k.toLowerCase().includes('cost')) v = v!==undefined&&v!==''?fmtMoney(v):'—';
+    if(f.t==='number' && (f.k==='adr'||f.k==='budget')) v = v!==undefined&&v!==''?fmtMoney(v):'—';
+    const full = f.t==='textarea' ? ' full' : '';
+    body += '<div class="dl'+full+'">'+f.l+'</div><div class="dv'+full+'">'+ (v!==undefined&&v!==''&&v!==null ? esc(v) : '—') +'</div>';
+  });
+  body += '</div>';
+
+  body += '<div class="sectiontitle">Timeline / History</div>';
+  body += '<div class="tl" style="margin-bottom:12px">';
+  const tlItems = (rec.timeline||[]).slice().sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+  if(!tlItems.length) body += '<div style="color:var(--text3);font-size:12px">No history yet.</div>';
+  tlItems.forEach(t=>{
+    body += '<div class="tlitem"><div class="tltime">'+fmtDateTime(t.ts)+'</div><div class="tltext">'+esc(t.text)+'</div></div>';
+  });
+  body += '</div>';
+
+  body += '<div class="full"><label class="flabel">Add Update / Note</label>';
+  body += '<textarea id="tlnote" placeholder="e.g. Follow up supplier, ETA confirmed tomorrow AM…"></textarea>';
+  body += '<button class="btn btn-primary btn-sm" style="margin-top:8px" data-action="addupdate" data-mod="'+modKey+'" data-id="'+id+'">+ Add Update</button></div>';
+
+  this.showModal({
+    title: mod.icon+' '+mod.title(rec),
+    wide:true,
+    body,
+    footer: '<button class="btn" data-action="closemodal">Close</button>'+
+            '<button class="btn" data-action="edit" data-mod="'+modKey+'" data-id="'+id+'">✎ Edit</button>'+
+            '<button class="btn btn-danger" data-action="del" data-mod="'+modKey+'" data-id="'+id+'">Delete</button>'
+  });
+};
+
+/* ============================================================
+   RENDER: ADD / EDIT FORM
+   ============================================================ */
+app.openForm = function(modKey, id){
+  const mod = MODULES[modKey];
+  const rec = id ? (this.data[modKey]||[]).find(r=>r.id===id) : {};
+  const isNew = !id;
+
+  let body = '<form id="recordForm" data-mod="'+modKey+'" data-id="'+(id||'')+'"><div class="formgrid">';
+  mod.fields.forEach(f=>{
+    const val = rec[f.k]!==undefined ? rec[f.k] : '';
+    const full = (f.t==='textarea') ? ' full' : '';
+    body += '<div class="'+full.trim()+'"><label class="flabel">'+f.l+(f.req?' *':'')+'</label>';
+    if(f.t==='select'){
+      body += '<select name="'+f.k+'" style="width:100%" '+(f.req?'required':'')+'><option value="">— Select —</option>';
+      f.opts.forEach(o=> body += '<option value="'+o+'"'+(val===o?' selected':'')+'>'+o+'</option>');
+      body += '</select>';
+    } else if(f.t==='textarea'){
+      body += '<textarea name="'+f.k+'">'+esc(val)+'</textarea>';
+    } else if(f.t==='checkbox'){
+      body += '<div class="fcheck"><input type="checkbox" name="'+f.k+'" '+(val?'checked':'')+' id="chk_'+f.k+'"><label for="chk_'+f.k+'" style="font-size:12.5px">Yes</label></div>';
+    } else {
+      body += '<input type="'+f.t+'" name="'+f.k+'" value="'+esc(val)+'" style="width:100%" '+(f.req?'required':'')+'>';
+    }
+    body += '</div>';
+  });
+  body += '</div></form>';
+
+  this.showModal({
+    title: (isNew?'Add ':'Edit ') + mod.label + ' Record',
+    wide:true,
+    body,
+    footer: '<button class="btn" data-action="closemodal">Cancel</button>'+
+            '<button class="btn btn-primary" data-action="saveform">'+(isNew?'Create Record':'Save Changes')+'</button>'
+  });
+};
+
+app.saveForm = function(){
+  const form = document.getElementById('recordForm');
+  if(!form.reportValidity()) return;
+  const modKey = form.dataset.mod;
+  const id = form.dataset.id;
+  const mod = MODULES[modKey];
+  const fd = new FormData(form);
+  const isNew = !id;
+  let rec = isNew ? {id: uid(mod.idPrefix), timeline:[]} : (this.data[modKey]||[]).find(r=>r.id===id);
+
+  mod.fields.forEach(f=>{
+    if(f.t==='checkbox'){ rec[f.k] = form.querySelector('[name="'+f.k+'"]').checked; }
+    else if(f.t==='number'){ const v=fd.get(f.k); rec[f.k] = v===''?'':Number(v); }
+    else { rec[f.k] = fd.get(f.k) || ''; }
+  });
+  if(isNew){
+    if(!rec.timeline) rec.timeline=[];
+    rec.timeline.push({id:uid('tl'), ts:nowTs(), text:'Record created.'});
+    this.data[modKey].push(rec);
+  } else {
+    rec.timeline = rec.timeline || [];
+    rec.timeline.push({id:uid('tl'), ts:nowTs(), text:'Record updated.'});
+  }
+  this.save();
+  this.closeModal();
+  this.toast(isNew? mod.label+' record created.' : mod.label+' record updated.');
+  this.setView(modKey);
+};
+
+app.deleteRecord = function(modKey, id){
+  if(!confirm('Delete this '+MODULES[modKey].label+' record? This cannot be undone.')) return;
+  this.data[modKey] = (this.data[modKey]||[]).filter(r=>r.id!==id);
+  this.save();
+  this.closeModal();
+  this.toast('Record deleted.');
+  this.setView(modKey);
+};
+
+/* ============================================================
+   MODAL HELPERS
+   ============================================================ */
+app.showModal = function(cfg){
+  const root = document.getElementById('modalroot');
+  root.innerHTML = '<div class="overlay" id="modaloverlay" data-action="overlayclick">'+
+    '<div class="modal'+(cfg.wide?' wide':'')+'">'+
+    '<div class="mhead"><h3>'+cfg.title+'</h3><button class="mclose" data-action="closemodal">✕</button></div>'+
+    '<div class="mbody">'+cfg.body+'</div>'+
+    '<div class="mfoot">'+cfg.footer+'</div>'+
+    '</div></div>';
+};
+app.closeModal = function(){ document.getElementById('modalroot').innerHTML=''; };
+
+/* ============================================================
+   DAILY SUMMARY (executive brief / snapshot)
+   ============================================================ */
+app.viewDailySummary = function(){
+  const k = this.kpis();
+  const priorities = this.topPriorities(8);
+  const snap = this.isSnapshot();
+  let html = '';
+  html += '<h1 class="pagetitle">Daily Engineering Summary</h1>';
+  html += '<div class="pagesub">Executive Brief · '+ new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}) +' · Snapshot time '+this.settings.snapshotTime+'</div>';
+
+  html += '<div class="toolbar"><button class="btn btn-primary" data-action="gensnapshot">📸 Generate / Refresh Snapshot</button>';
+  html += '<button class="btn" onclick="window.print()">🖨️ Print / Export PDF</button></div>';
+
+  html += '<div class="aibox section"><div class="ailabel">Executive Brief — Auto-Generated</div>';
+  html += '<p>Occupancy-relevant engineering status as of '+fmtTime(nowTs())+': Engineering Health Score is <b>'+k.health+'/100</b> ('+this.healthNarrative(k).split(' — ')[0]+').</p>';
+  html += '<ul>'+this.autoSummaryLines(k).map(l=>'<li>'+l+'</li>').join('')+'</ul></div>';
+
+  html += '<div class="grid grid-4 section">';
+  const cards = [
+    ['OOO / OOS', k.ooo+' / '+k.oos],
+    ['Emergency WO', k.emergencyWO],
+    ['Critical Procurement', k.criticalProc],
+    ['Revenue at Risk', fmtMoney(k.revenueLoss)],
+  ];
+  cards.forEach(([l,v])=>{ html += '<div class="card"><div class="klabel">'+l+'</div><div class="kval">'+v+'</div></div>'; });
+  html += '</div>';
+
+  html += '<div class="section"><div class="sectiontitle">Action Register — Top Priorities for Engineering Briefing</div>';
+  html += '<div class="tablewrap"><table><thead><tr><th>Score</th><th>Item</th><th>Module</th><th>Owner</th><th>Next Action</th><th>ETA</th></tr></thead><tbody>';
+  if(!priorities.length) html += '<tr><td colspan="6" class="tblempty">No open priority items.</td></tr>';
+  priorities.forEach(p=>{
+    const b = scoreBand(p.rec._score);
+    html += '<tr data-action="detail" data-mod="'+p.mod+'" data-id="'+p.rec.id+'">';
+    html += '<td><span class="scorebadge '+b.cls+'">'+p.rec._score+'</span></td>';
+    html += '<td>'+esc(MODULES[p.mod].title(p.rec))+'</td>';
+    html += '<td><span class="pill p-gray">'+MODULES[p.mod].label+'</span></td>';
+    html += '<td>'+esc(p.rec.owner||p.rec.technician||p.rec.buyer||p.rec.contractor||'—')+'</td>';
+    html += '<td>'+esc(p.rec.nextAction||'Review')+'</td>';
+    html += '<td>'+fmtDate(p.rec.expectedCompletion||p.rec.estimatedDelivery||p.rec.targetCompletion||p.rec.scheduledDate)+'</td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table></div></div>';
+
+  html += '<div class="footnote">'+(snap? 'This snapshot is the official Engineering Briefing package for today, generated '+fmtTime(this.data.settingsMeta.lastSnapshot||nowTs())+'.' : 'Live preview — official snapshot locks automatically at '+this.settings.snapshotTime+'.')+'</div>';
+  return html;
+};
+app.generateSnapshot = function(){
+  this.data.settingsMeta.lastSnapshot = nowTs();
+  this.save();
+  this.toast('Daily snapshot generated.');
+  this.render();
+};
+
+/* ============================================================
+   NOTEBOOK
+   ============================================================ */
+app.viewNotebook = function(){
+  const entries = (this.data.notebook||[]).slice().sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+  let html = '';
+  html += '<h1 class="pagetitle">📝 Engineering Notebook</h1>';
+  html += '<div class="pagesub">Free-form shift handover notes, reminders, observations.</div>';
+  html += '<div class="card section"><label class="flabel">New Entry</label>';
+  html += '<div style="display:flex;gap:8px;margin-bottom:8px">';
+  html += '<select id="nbtag" class="tselect"><option>General</option><option>Handover</option><option>Safety</option><option>Reminder</option><option>Meeting</option></select>';
+  html += '</div>';
+  html += '<textarea id="nbtext" placeholder="Write a note…"></textarea>';
+  html += '<button class="btn btn-primary btn-sm" style="margin-top:8px" data-action="addnote">+ Add Note</button></div>';
+
+  html += '<div class="section"><div class="tl">';
+  if(!entries.length) html += '<div class="tblempty">No notebook entries yet.</div>';
+  entries.forEach(e=>{
+    html += '<div class="tlitem"><div class="tltime">'+fmtDateTime(e.ts)+' <span class="pill p-blue">'+esc(e.tag||'General')+'</span></div>';
+    html += '<div class="tltext">'+esc(e.text)+'</div></div>';
+  });
+  html += '</div></div>';
+  return html;
+};
+app.addNote = function(){
+  const text = document.getElementById('nbtext').value.trim();
+  if(!text) return;
+  const tag = document.getElementById('nbtag').value;
+  this.data.notebook.push({id:uid('nb'), ts:nowTs(), tag, text});
+  this.save();
+  this.toast('Note added.');
+  this.setView('notebook');
+};
+
+/* ============================================================
+   GLOBAL SEARCH
+   ============================================================ */
+app.viewSearch = function(){
+  const q = (this.state.search||'').trim().toLowerCase();
+  let html = '<h1 class="pagetitle">🔎 Global Search</h1><div class="pagesub">Search across rooms, work orders, procurement, inventory, PM, manpower, contractors, notebook.</div>';
+  html += '<div class="card" style="margin-bottom:16px"><input type="text" class="tinput" style="width:100%" id="searchpageinput" placeholder="Type to search…" value="'+esc(this.state.search||'')+'"></div>';
+
+  if(!q){ html += '<div class="tblempty">Start typing to search the entire portal.</div>'; return html; }
+
+  let results = [];
+  MODORDER.forEach(m=>{
+    (this.data[m]||[]).forEach(r=>{
+      if(JSON.stringify(r).toLowerCase().includes(q)){
+        results.push({mod:m, rec:r});
+      }
+    });
+  });
+  (this.data.notebook||[]).forEach(nb=>{
+    if(JSON.stringify(nb).toLowerCase().includes(q)) results.push({mod:'notebook', rec:nb});
+  });
+
+  html += '<div class="pagesub">'+results.length+' result(s)</div>';
+  html += '<div class="tablewrap">';
+  if(!results.length) html += '<div class="tblempty">No matches found.</div>';
+  results.forEach(r=>{
+    const isNb = r.mod==='notebook';
+    const title = isNb ? (r.rec.tag+': '+r.rec.text.slice(0,60)) : MODULES[r.mod].title(r.rec);
+    const sub = isNb ? fmtDateTime(r.rec.ts) : MODULES[r.mod].sub(r.rec);
+    html += '<div class="searchresult" data-action="detail" data-mod="'+r.mod+'" data-id="'+r.rec.id+'">';
+    html += '<div class="srmod">'+(isNb?'Notebook':MODULES[r.mod].label)+'</div>';
+    html += '<div class="srtitle">'+esc(title)+'</div><div class="srsub">'+esc(sub)+'</div></div>';
+  });
+  html += '</div>';
+  return html;
+};
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+app.viewSettings = function(){
+  const s = this.settings;
+  let html = '<h1 class="pagetitle">⚙️ Settings</h1><div class="pagesub">Configuration is stored locally in this browser.</div>';
+  html += '<form id="settingsForm" class="card section"><div class="formgrid">';
+  html += '<div><label class="flabel">Hotel Name</label><input type="text" name="hotelName" value="'+esc(s.hotelName)+'" style="width:100%"></div>';
+  html += '<div><label class="flabel">Daily Snapshot Time</label><input type="time" name="snapshotTime" value="'+esc(s.snapshotTime)+'" style="width:100%"></div>';
+  html += '<div><label class="flabel">OOO Warning Threshold (days)</label><input type="number" name="ooWarnDays" value="'+esc(s.ooWarnDays)+'" style="width:100%"></div>';
+  html += '<div><label class="flabel">Inventory Reorder Trigger (%)</label><input type="number" name="invReorderPct" value="'+esc(s.invReorderPct)+'" style="width:100%"></div>';
+  html += '</div><div style="margin-top:14px"><button class="btn btn-primary" type="submit">Save Settings</button></div></form>';
+
+  html += '<div class="card section"><div class="sectiontitle" style="margin-bottom:10px">Data Management</div>';
+  html += '<div style="display:flex;gap:8px;flex-wrap:wrap">';
+  html += '<button class="btn" data-action="exportjson">⬇ Export All Data (JSON backup)</button>';
+  html += '<label class="btn" style="cursor:pointer">⬆ Import JSON<input type="file" id="importfile" accept="application/json" style="display:none"></label>';
+  html += '<button class="btn" data-action="resetsample">↺ Restore Sample Data</button>';
+  html += '<button class="btn btn-danger" data-action="wipeall">🗑 Clear All Data</button>';
+  html += '</div></div>';
+
+  html += '<div class="aibox"><div class="ailabel">About This Build</div>';
+  html += '<p>EIP v1.0 is a self-contained offline prototype implementing the FDGuinoo Engineering Dashboard, Room Operations, Work Orders, Procurement, Inventory, Preventive Maintenance, Manpower and Contractor/Project modules per the Engineering Intelligence Portal specification. It runs entirely in this browser with no server, build step, or internet dependency after load — all records are entered manually and persisted to <code>localStorage</code>. It does not perform live synchronization with Outlook, FCS, or SCM (that layer requires a backend + API access per the original architecture, Part 01/13-17). Attention Score, Health Score and Daily Summary are calculated locally from the data you enter.</p></div>';
+  return html;
+};
+app.saveSettingsForm = function(){
+  const form = document.getElementById('settingsForm');
+  const fd = new FormData(form);
+  this.settings.hotelName = fd.get('hotelName')||'Hotel';
+  this.settings.snapshotTime = fd.get('snapshotTime')||'07:45';
+  this.settings.ooWarnDays = Number(fd.get('ooWarnDays'))||3;
+  this.settings.invReorderPct = Number(fd.get('invReorderPct'))||80;
+  this.saveSettings();
+  this.toast('Settings saved.');
+  this.render();
+};
+
+/* ============================================================
+   CSV EXPORT
+   ============================================================ */
+app.exportCSV = function(modKey){
+  const mod = MODULES[modKey];
+  const rows = this.allRows(modKey);
+  const cols = mod.fields.map(f=>f.k).concat(['_score']);
+  const header = mod.fields.map(f=>f.l).concat(['Attention Score']);
+  let csv = header.map(h=>'"'+h.replace(/"/g,'""')+'"').join(',')+'\n';
+  rows.forEach(r=>{
+    csv += cols.map(c=>{
+      let v = r[c];
+      if(v===undefined||v===null) v='';
+      return '"'+String(v).replace(/"/g,'""')+'"';
+    }).join(',')+'\n';
+  });
+  downloadFile(modKey+'_export_'+todayStr()+'.csv', csv, 'text/csv');
+  this.toast('CSV exported.');
+};
+app.exportJSON = function(){
+  downloadFile('EIP_backup_'+todayStr()+'.json', JSON.stringify({data:this.data, settings:this.settings}, null, 2), 'application/json');
+  this.toast('Backup exported.');
+};
+function downloadFile(filename, content, mime){
+  const blob = new Blob([content], {type:mime});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; document.body.appendChild(a); a.click();
+  setTimeout(()=>{ document.body.removeChild(a); URL.revokeObjectURL(url); }, 200);
+}
+app.importJSON = function(file){
+  const reader = new FileReader();
+  reader.onload = (e)=>{
+    try{
+      const parsed = JSON.parse(e.target.result);
+      if(parsed.data){ this.data = parsed.data; this.save(); }
+      if(parsed.settings){ this.settings = parsed.settings; this.saveSettings(); }
+      this.toast('Data imported successfully.');
+      this.setView('dashboard');
+    }catch(err){ alert('Invalid JSON backup file.'); }
+  };
+  reader.readAsText(file);
+};
+
+/* ============================================================
+   EVENT DELEGATION
+   ============================================================ */
+document.addEventListener('click', function(e){
+  const t = e.target.closest('[data-action]');
+  if(!t){
+    if(e.target.id==='modaloverlay') app.closeModal();
+    return;
+  }
+  const act = t.dataset.action;
+  const mod = t.dataset.mod;
+  const id = t.dataset.id;
+
+  if(act==='nav') app.setView(t.dataset.view);
+  else if(act==='detail') app.openDetail(mod, id);
+  else if(act==='add') app.openForm(mod, null);
+  else if(act==='edit'){ app.closeModal(); app.openForm(mod, id); }
+  else if(act==='del') app.deleteRecord(mod, id);
+  else if(act==='saveform') app.saveForm();
+  else if(act==='closemodal') app.closeModal();
+  else if(act==='overlayclick'){ if(e.target.id==='modaloverlay') app.closeModal(); }
+  else if(act==='addupdate'){
+    const val = document.getElementById('tlnote').value.trim();
+    if(val){ app.addTimeline(mod, id, val); app.save(); app.closeModal(); app.toast('Update added.'); app.openDetail(mod,id); }
+  }
+  else if(act==='csv') app.exportCSV(mod);
+  else if(act==='exportjson') app.exportJSON();
+  else if(act==='resetsample'){ if(confirm('Replace current data with sample data? This cannot be undone.')) app.resetSample(); }
+  else if(act==='wipeall'){ if(confirm('Delete ALL engineering data in this browser? This cannot be undone.')) app.wipeAll(); }
+  else if(act==='addnote') app.addNote();
+  else if(act==='gensnapshot') app.generateSnapshot();
+  else if(act==='sort'){
+    const cur = app.state.sort[mod]||{};
+    const dir = (cur.key===t.dataset.field && cur.dir==='desc') ? 'asc' : 'desc';
+    app.state.sort[mod] = {key:t.dataset.field, dir};
+    app.render();
+  }
+});
+
+document.addEventListener('input', function(e){
+  if(e.target.id==='globalsearch'){
+    app.state.search = e.target.value;
+    if(app.state.view!=='search') app.setView('search'); else { app.render(); document.getElementById('globalsearch').focus(); }
+  }
+  if(e.target.id==='searchpageinput'){
+    app.state.search = e.target.value;
+    app.render();
+    const el=document.getElementById('searchpageinput'); if(el){ el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+  }
+  if(e.target.dataset && e.target.dataset.action==='filter'){
+    const mod = e.target.dataset.mod, field = e.target.dataset.field;
+    app.state.filters[mod] = app.state.filters[mod] || {};
+    app.state.filters[mod][field] = e.target.value;
+    const focusId = e.target;
+    app.render();
+    if(field==='q'){
+      const inp = document.querySelector('.tsearch input');
+      if(inp){ inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
+    }
+  }
+});
+document.addEventListener('change', function(e){
+  if(e.target.dataset && e.target.dataset.action==='filter' && e.target.tagName==='SELECT'){
+    const mod = e.target.dataset.mod, field = e.target.dataset.field;
+    app.state.filters[mod] = app.state.filters[mod] || {};
+    app.state.filters[mod][field] = e.target.value;
+    app.render();
+  }
+  if(e.target.id==='importfile' && e.target.files[0]){
+    app.importJSON(e.target.files[0]);
+  }
+});
+document.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(e.target.id==='settingsForm') app.saveSettingsForm();
+});
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape') app.closeModal();
+});
+
+/* ============================================================
+   INIT / CLOCK
+   ============================================================ */
+function tickClock(){
+  const el = document.getElementById('tb-clock');
+  if(el) el.textContent = new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const badge = document.getElementById('tb-status');
+  if(badge){
+    const snap = app.isSnapshot();
+    badge.textContent = snap?'SNAPSHOT':'LIVE';
+    badge.className = 'statusbadge '+(snap?'badge-snap':'badge-live');
+  }
+}
+app.load();
+app.render();
+setInterval(tickClock, 1000);
+tickClock();
+
+</script>
+</body>
+</html>

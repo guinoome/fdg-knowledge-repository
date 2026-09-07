@@ -1,0 +1,1214 @@
+// ML-DEP database schema.
+//
+// Phase 3 scope: identity, preferences, the template catalog, and the
+// invitation dataset (ML-DES.md §7, Ph1.md §4–§5, Ph2.md §1/§7/§9, Ph3.md §12).
+// Remaining business models — Booking, Order, Payment — are deliberately
+// absent; they arrive with their own phases.
+//
+// Auth identities live in Supabase's `auth.users` table, which Prisma does not
+// manage. Profile mirrors that table by id, holding app-level data Supabase
+// Auth has no concept of (role, display name).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+  CUSTOMER
+}
+
+enum ThemePreference {
+  LIGHT
+  DARK
+  SYSTEM
+}
+
+/// Application-level user record. `id` matches Supabase auth.users.id.
+///
+/// Note what is absent: no password, no session, no email-verification state.
+/// Supabase Auth owns those in auth.users. Mirroring credentials here would
+/// mean two sources of truth for who someone is, and the copy always loses.
+model Profile {
+  id          String   @id @db.Uuid
+  email       String   @unique
+  displayName String?
+  avatarUrl   String?
+  role        Role     @default(CUSTOMER)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  preferences            Preference?
+  favorites              TemplateFavorite[]
+  views                  TemplateView[]
+  uses                   TemplateUse[]
+  invitations            Invitation[]
+  mediaAssets            MediaAsset[]
+  lifecycleNotifications LifecycleNotification[]
+
+  uploadedTemplateAssets TemplateAsset[] @relation("TemplateAssetUploader")
+
+  orders         Order[]      @relation("OrderCustomer")
+  assignedOrders Order[]      @relation("OrderAssignee")
+  assignedItems  OrderItem[]  @relation("OrderItemAssignee")
+  orderEvents    OrderEvent[] @relation("OrderEventActor")
+  orderNotes     OrderNote[]  @relation("OrderNoteAuthor")
+
+  @@index([role])
+  @@map("profiles")
+}
+
+/// Basic preferences — Ph1.md §5.
+///
+/// Split from Profile rather than inlined: preferences grow every phase
+/// (notification channels, print defaults, locale), and a wide Profile row read
+/// on every request to learn a role is the wrong shape for that growth.
+model Preference {
+  profileId          String          @id @db.Uuid
+  theme              ThemePreference @default(SYSTEM)
+  emailNotifications Boolean         @default(true)
+  /// Opt-out rather than opt-in, at the owner's instruction.
+  ///
+  /// Worth knowing what that commits ML Printing to. The Philippines' Data
+  /// Privacy Act asks for consent that is freely given, specific and informed,
+  /// and a pre-set default is a weaker basis than a tick the customer made
+  /// themselves. It is defensible for a business emailing its own customers
+  /// about its own services, and it is not defensible for anyone in the EU or
+  /// UK, where a pre-ticked box is not consent at all.
+  ///
+  /// What makes opt-out workable is the exit: every marketing email needs a
+  /// one-click unsubscribe that writes back to this column, and no sender
+  /// exists yet to carry one. See docs/architecture.md.
+  marketingEmails    Boolean         @default(true)
+  updatedAt          DateTime        @updatedAt
+
+  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@map("preferences")
+}
+
+// ---------------------------------------------------------------------------
+// Template Marketplace — Ph2.md
+//
+// Ph2.md §1 lists the catalog as: Featured, New, Premium, Seasonal, Wedding,
+// Birthday, Christening, Corporate, Debut, Anniversary, Graduation, Custom.
+// Those are not one kind of thing, and modelling them as one flat list would
+// make a template unable to be both Premium and a Wedding. They are separated
+// by what they actually are:
+//
+//   Wedding, Birthday, … , Custom  → TemplateCategory rows (the event type)
+//   Premium / Free                 → Template.tier
+//   Featured                       → Template.isFeatured
+//   New                            → derived from Template.publishedAt
+//   Seasonal                       → TemplateCollection, which has a date window
+//
+// §1 also requires that future categories need no code change. That is why
+// categories are rows and not an enum: adding "Reunion" is an INSERT, and the
+// filter UI reads the table. The enums below are deliberately *not* categories —
+// they are closed vocabularies the UI renders differently per value.
+// ---------------------------------------------------------------------------
+
+enum TemplateTier {
+  FREE
+  PREMIUM
+}
+
+enum TemplateOrientation {
+  PORTRAIT
+  LANDSCAPE
+  SQUARE
+}
+
+/// Which surface a screenshot depicts — Ph2.md §6 requires all three.
+enum ScreenshotKind {
+  DESKTOP
+  MOBILE
+  PRINT
+}
+
+/// Event type — Ph2.md §1. Rows, not an enum, so "Custom Categories" and any
+/// future category are data rather than a deployment.
+model TemplateCategory {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique
+  name        String
+  description String?
+  /// Display order in filter lists. Ties broken by name.
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  templates Template[]
+
+  @@index([isActive, sortOrder])
+  @@map("template_categories")
+}
+
+/// Curated grouping — Ph2.md §1 (Seasonal, and future curation).
+///
+/// Has a date window because "Seasonal" is the whole reason this exists: a
+/// Christmas collection should leave the marketplace in January without anyone
+/// remembering to unpublish it.
+model TemplateCollection {
+  id          String    @id @default(uuid()) @db.Uuid
+  slug        String    @unique
+  name        String
+  description String?
+  /// Null means always active. Both bounds are inclusive of the window.
+  activeFrom  DateTime?
+  activeTo    DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  templates TemplateOnCollection[]
+
+  @@map("template_collections")
+}
+
+/// Explicit join table rather than an implicit m-n relation, so the ordering of
+/// templates within a collection is curatable.
+model TemplateOnCollection {
+  templateId   String @db.Uuid
+  collectionId String @db.Uuid
+  sortOrder    Int    @default(0)
+
+  template   Template           @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  collection TemplateCollection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+
+  @@id([templateId, collectionId])
+  @@index([collectionId, sortOrder])
+  @@map("templates_on_collections")
+}
+
+/// An invitation template — Ph2.md §1, §7.
+///
+/// This model owns *presentation*, which is exactly why invitation data must
+/// not (V1 §7, "Design Once, Deliver Everywhere"). The split is the point: an
+/// event record says "the reception is at 6pm"; a template says what that looks
+/// like on a website and on paper. Neither knows about the other.
+model Template {
+  id   String @id @default(uuid()) @db.Uuid
+  /// URL identity. Stable across renames — the name is display, this is not.
+  slug String @unique
+
+  name             String
+  /// One line, shown on the card (Ph2.md §2).
+  shortDescription String
+  /// Full copy, shown on the preview page (Ph2.md §6).
+  description      String
+
+  categoryId String           @db.Uuid
+  category   TemplateCategory @relation(fields: [categoryId], references: [id])
+
+  // --- Metadata (Ph2.md §7) ---
+  /// Designer-facing version of the template artwork itself, not of this row.
+  version  String   @default("1.0.0")
+  designer String
+  /// Free-text search surface — themes, motifs, occasions (Ph2.md §3).
+  tags     String[]
+  /// Colour theme slugs, e.g. ["blush","ivory"] (Ph2.md §4 Color Theme).
+  colors   String[]
+  /// Style slugs, e.g. ["modern","minimal"] (Ph2.md §4 Style).
+  styles   String[]
+  /// What the template can do — e.g. ["rsvp","gallery","map"] (Ph2.md §7).
+  /// Strings, not an enum: Ph3–Ph9 each add capabilities, and a template
+  /// declaring one the platform does not know about yet is harmless.
+  features String[]
+
+  orientation       TemplateOrientation @default(PORTRAIT)
+  tier              TemplateTier        @default(FREE)
+  /// Ph2.md §7 — a template may suit one output and not the other.
+  printCompatible   Boolean             @default(true)
+  websiteCompatible Boolean             @default(true)
+
+  /// What every surface renders — card, landing page, builder, preview, OG tag.
+  /// When an admin assigns uploaded artwork this is overwritten with its public
+  /// URL, so all twelve consumers pick up the real design without knowing this
+  /// feature exists.
+  coverImageUrl String
+
+  /// The uploaded design currently supplying coverImageUrl, if any.
+  /// SetNull rather than Cascade: deleting an asset must not delete templates.
+  artworkId String?        @db.Uuid
+  artwork   TemplateAsset? @relation(fields: [artworkId], references: [id], onDelete: SetNull)
+
+  /// The procedurally generated cover this template had before artwork was
+  /// assigned. Stored rather than recomputed because regenerating it needs the
+  /// seed's style argument, which lives in seed-data.ts and not on this row —
+  /// so recomputation would quietly return a *different* design. Remembering
+  /// the string makes un-assigning exact instead of approximate.
+  generatedCoverUrl String?
+
+  // --- Curation and lifecycle ---
+  isFeatured  Boolean   @default(false)
+  /// Null means draft. "New" (Ph2.md §1) is derived from this, not stored — a
+  /// stored isNew flag is a lie the moment nobody runs the job that clears it.
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  /// Denormalised count of TemplateUse rows, for the "Most Popular" sort
+  /// (Ph2.md §5). Sorting on a live count() across the catalog is a table scan
+  /// per page view; this is incremented when a use is recorded.
+  useCount Int @default(0)
+
+  screenshots TemplateScreenshot[]
+  collections TemplateOnCollection[]
+  favorites   TemplateFavorite[]
+  views       TemplateView[]
+  uses        TemplateUse[]
+  invitations Invitation[]
+
+  // Every index here backs a filter or sort in Ph2.md §4/§5. The composite
+  // ones lead with publishedAt because every catalog query filters on it.
+  @@index([publishedAt, categoryId])
+  @@index([publishedAt, tier])
+  @@index([publishedAt, isFeatured])
+  @@index([publishedAt, useCount])
+  @@index([publishedAt, name])
+  @@map("templates")
+}
+
+/// A professionally designed cover uploaded by an administrator —
+/// Instructions 4.
+///
+/// The reason this model exists: template artwork was generated procedurally
+/// from the slug (lib/placeholder-art.ts), and generated vector art does not
+/// look like stationery someone would pay for. This is the escape hatch — a
+/// real design, drawn by a person, uploaded through the admin.
+///
+/// Deliberately NOT folded into Template. A Template carries a slug, category,
+/// two descriptions, a designer and five string arrays, all required; the brief
+/// asks for three fields and puts categories out of scope. Forcing an upload
+/// through the catalogue schema would mean inventing nine values nobody typed.
+/// An asset is a file. What it is *used for* is the assignment below.
+model TemplateAsset {
+  id String @id @default(uuid()) @db.Uuid
+
+  /// Display name. Defaults to the filename, editable at upload.
+  name String
+
+  /// Bucket and object path — never a URL. Mirrors MediaAsset's reasoning:
+  /// a path is stable, a URL is a rendering of one.
+  bucket      String
+  /// Unique within the bucket. Generated, never the user's filename, so two
+  /// designers uploading "cover.png" cannot collide or overwrite each other.
+  storagePath String @unique
+
+  /// What the admin actually chose on disk. Kept for display and for support
+  /// questions ("which file did I upload?"); never used to address storage.
+  originalFilename String
+  mimeType         String
+  bytes            Int
+  /// Intrinsic dimensions. Null only if the image could not be probed, which
+  /// also means no thumbnail was produced.
+  width            Int?
+  height           Int?
+
+  /// Downscaled thumbnail path for the admin grid. Null when generation
+  /// failed — the list falls back to the full image rather than a broken box.
+  thumbnailPath String?
+
+  uploadedById String?  @db.Uuid
+  uploadedBy   Profile? @relation("TemplateAssetUploader", fields: [uploadedById], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+
+  /// Templates currently wearing this artwork. Plural because one design may
+  /// legitimately cover several catalogue entries.
+  templates Template[]
+
+  /// Newest first is the only ordering the brief asks for.
+  @@index([createdAt])
+  @@map("template_assets")
+}
+
+/// Preview imagery — Ph2.md §6 (desktop, mobile, print).
+model TemplateScreenshot {
+  id         String         @id @default(uuid()) @db.Uuid
+  templateId String         @db.Uuid
+  kind       ScreenshotKind
+  url        String
+  /// Alt text. Required, not optional — an optional alt field is an empty one.
+  alt        String
+  sortOrder  Int            @default(0)
+
+  template Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@index([templateId, kind, sortOrder])
+  @@map("template_screenshots")
+}
+
+/// Saved favourites — Ph2.md §9.
+model TemplateFavorite {
+  profileId  String   @db.Uuid
+  templateId String   @db.Uuid
+  createdAt  DateTime @default(now())
+
+  profile  Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  template Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@id([profileId, templateId])
+  @@index([profileId, createdAt])
+  @@map("template_favorites")
+}
+
+/// Recently viewed — Ph2.md §9.
+///
+/// One row per profile+template, with viewedAt overwritten on each visit,
+/// rather than an append-only log. "Recently viewed" wants a short distinct
+/// list; an event log would grow without bound and then need a DISTINCT ON to
+/// answer the only question ever asked of it. Analytics, if it ever wants the
+/// full stream, is a separate concern with a separate table.
+model TemplateView {
+  profileId  String   @db.Uuid
+  templateId String   @db.Uuid
+  viewedAt   DateTime @default(now())
+
+  profile  Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  template Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@id([profileId, templateId])
+  @@index([profileId, viewedAt])
+  @@map("template_views")
+}
+
+/// Recently used — Ph2.md §9, and the popularity signal for §8.
+///
+/// A "use" is selecting a template to build with. In Phase 2 that is where the
+/// journey stops: the Invitation Builder is Ph3, and Ph2.md's Out of Scope is
+/// explicit that no editing happens here.
+model TemplateUse {
+  profileId  String   @db.Uuid
+  templateId String   @db.Uuid
+  usedAt     DateTime @default(now())
+
+  profile  Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  template Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@id([profileId, templateId])
+  @@index([profileId, usedAt])
+  @@map("template_uses")
+}
+
+// ---------------------------------------------------------------------------
+// Guided Invitation Builder — Ph3.md
+//
+// §12 is the constraint everything here answers to: "Store invitation data
+// separately from template layout. The same structured data must support:
+// Website Generator, Print-ready PDF Generator, Future Mobile App, Future API."
+//
+// So: an Invitation says WHAT the event is. A Template says what it LOOKS like.
+// An InvitationPersonalization says WHICH approved design choices were made.
+// Three records, three owners, and no field on Invitation names a colour, a
+// font, or a coordinate (V1 §7, "Design Once, Deliver Everywhere").
+//
+// Why that split is not fussiness: Ph5 renders a website and Ph6 renders a
+// press-ready PDF from the SAME rows. A hex value or a pixel offset stored on
+// the event would be meaningless to one of them and wrong for the other, and
+// the first person to "just add a colour field here" makes the two outputs
+// impossible to reconcile.
+//
+// The seam is testable: if you can imagine the Print generator reading a field
+// and having no idea what to do with it, that field is in the wrong table.
+// ---------------------------------------------------------------------------
+
+enum InvitationStatus {
+  /// Being edited. The only status Ph3 can produce.
+  DRAFT
+  /// Content complete, handed to the order flow (Ph7). Ph3 stops at the door.
+  COMPLETED
+  /// Kept for the record after an order. Never edited in place.
+  ARCHIVED
+}
+
+/// Which venue this is — Ph3.md §4 names Ceremony and Reception explicitly.
+enum VenueKind {
+  CEREMONY
+  RECEPTION
+  OTHER
+}
+
+/// How a named person relates to the event — Ph3.md §5 (Parents, Sponsors).
+///
+/// One table with a group, rather than a table per list. The lists are
+/// structurally identical (an ordered set of names with an optional role), and
+/// ENTOURAGE is here because a Filipino wedding invitation has one and a later
+/// phase will ask for it.
+enum PartyGroup {
+  PARENT
+  SPONSOR
+  ENTOURAGE
+}
+
+/// Where an asset is used on the invitation — Ph3.md §7.
+enum MediaSlot {
+  COVER
+  COUPLE
+  FAMILY
+  LOGO
+  /// Ph3.md §7 marks background music future-ready. The slot exists; nothing
+  /// writes it yet.
+  MUSIC
+  /// The hero's moving background — increment 5 of
+  /// docs/invitation-design-language.md. Same treatment as MUSIC above: the
+  /// renderer plays one when this slot is filled, and nothing fills it yet
+  /// because Ph4 Decision 4 scopes upload to images. COVER remains the poster,
+  /// so an invitation with a video still has a still frame to show while it
+  /// loads, when it fails, and whenever the guest asked for reduced motion.
+  VIDEO
+}
+
+enum MediaKind {
+  IMAGE
+  DOCUMENT
+  AUDIO
+  /// Ph4.md §1/§4 mark video future-ready, same treatment as MediaSlot.MUSIC in
+  /// Phase 3. No processing pipeline exists behind this value yet — Decision 4
+  /// in the Ph4 design doc scopes upload to images only this phase.
+  VIDEO
+}
+
+enum MediaDerivativeKind {
+  REMASTER
+}
+
+/// An uploaded asset — Ph4's Media Library owns this concept (Ph4.md §15).
+///
+/// It exists in Phase 3 because Ph3.md §7 says "Connect to the Invitation Media
+/// Library" and the Success Criteria require uploading media, while the Library
+/// itself is Phase 4. Rather than invent a parallel store Ph4 would have to
+/// unpick, Phase 3 introduces the minimum record the Library will own and
+/// references it by id.
+///
+/// Ph4 expands this: folders, processing, variants, search, usage tracking.
+/// Ph4.md §10 ("replace an asset while preserving references") and §11 ("prevent
+/// deleting assets still referenced") are exactly why invitations point at this
+/// row instead of copying a URL — the reference is the feature.
+model MediaAsset {
+  id        String @id @default(uuid()) @db.Uuid
+  profileId String @db.Uuid
+
+  /// Storage bucket and object path. Not a URL: URLs expire, and a private
+  /// asset is served through a signed one generated per request.
+  bucket      String
+  storagePath String
+
+  kind             MediaKind
+  mimeType         String
+  bytes            Int
+  originalFilename String
+  /// Accessibility text. Nullable because it is supplied later in the flow, but
+  /// the website and PDF generators both require it before publishing.
+  altText          String?
+  /// Free-text organizational labels — Ph4.md §6 metadata, §8 search, and the
+  /// "by type" virtual folder view (design doc Decision 1) all read this one
+  /// field. Not validated against a fixed vocabulary; unlike Template.tags this
+  /// is customer-authored, not curated catalog data.
+  tags             String[]  @default([])
+  /// Bumped on every Replace Asset (Ph4.md §10). Embedded in served URLs so a
+  /// stale cached URL is provably stale rather than silently wrong — see the
+  /// design doc's "Why the version belongs in the URL path".
+  version          Int       @default(1)
+  /// Intrinsic dimensions, when known. Null for audio, documents, and any image
+  /// whose thumbnail/preview generation failed (design doc Decision 4). This is
+  /// also the sole signal that variants exist for this asset — see
+  /// services/media/paths.ts `hasVariants`.
+  width            Int?
+  height           Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile     Profile           @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  usages      InvitationMedia[]
+  derivatives MediaDerivative[]
+
+  @@index([profileId, createdAt])
+  @@map("media_assets")
+}
+
+/// A generated, optional treatment of an uploaded asset. The source asset row
+/// and its original storage object are never changed by derivative creation.
+model MediaDerivative {
+  id              String              @id @default(uuid()) @db.Uuid
+  assetId         String              @db.Uuid
+  kind            MediaDerivativeKind @default(REMASTER)
+  sourceVersion   Int
+  provider        String
+  providerVersion String
+  storagePath     String              @unique
+  mimeType        String
+  bytes           Int
+  width           Int?
+  height          Int?
+  createdAt       DateTime            @default(now())
+
+  asset  MediaAsset        @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  usages InvitationMedia[]
+
+  @@unique([assetId, sourceVersion, kind, provider, providerVersion])
+  @@index([assetId, sourceVersion, kind, createdAt])
+  @@map("media_derivatives")
+}
+
+/// A customer's invitation — the structured dataset Ph3.md exists to produce.
+///
+/// Note what is NOT here: no colour, no font, no layout, no coordinates. Those
+/// are InvitationPersonalization (approved choices) and Template (the design).
+/// Note also what is not here: no HTML. Ph3.md §5 forbids free-form HTML
+/// editing, and a rich-text blob would defeat §12 — a PDF generator cannot lay
+/// out arbitrary markup, and neither can a future mobile app.
+model Invitation {
+  id        String @id @default(uuid()) @db.Uuid
+  profileId String @db.Uuid
+
+  /// The chosen design. Nullable: a draft can exist before a template is picked
+  /// (Ph3.md §1 step 1), and a template deleted from the catalog must not take
+  /// the customer's content with it.
+  templateId String? @db.Uuid
+
+  /// What the customer calls this draft — Ph3.md §11 (Rename Draft).
+  /// Distinct from eventTitle: a draft named "Mum 60th (v2)" is a filename,
+  /// not a heading.
+  title  String
+  status InvitationStatus @default(DRAFT)
+
+  /// Which step to resume on — Ph3.md §1, §11 (Resume Draft).
+  currentStep String @default("template")
+
+  // --- Event Information (Ph3.md §2) ---
+  /// Category slug, mirroring TemplateCategory.slug. A string, not a foreign
+  /// key: the event type is what the customer said their event IS, and it must
+  /// not change or vanish because the catalog was reorganised.
+  eventType    String?
+  eventTitle   String?
+  subtitle     String?
+  /// The event's calendar date, as an instant. Rendered through timeZone.
+  eventDate    DateTime?
+  /// Local start time as "HH:mm". Deliberately a string, not a DateTime:
+  /// "the ceremony is at 3pm" is a wall-clock fact about the venue, and
+  /// round-tripping it through UTC is how a printed invitation ends up saying
+  /// 7am. The date carries the instant; this carries what the card should read.
+  eventTime    String?
+  /// IANA zone, e.g. "Asia/Manila". Required to render eventDate anywhere other
+  /// than the server's own locale.
+  timeZone     String    @default("Asia/Manila")
+  rsvpDeadline DateTime?
+  dressCode    String?
+  /// The event's own theme — e.g. "Enchanted Garden". CONTENT, not
+  /// presentation: it is a phrase printed on the invitation, and has nothing to
+  /// do with the colour theme in InvitationPersonalization. Ph3.md lists them
+  /// in different sections (§2 vs §6) for this reason.
+  eventTheme   String?
+  /// BCP-47 tag, e.g. "en" or "fil".
+  language     String    @default("en")
+
+  // --- Autosave (Ph3.md §8) ---
+  lastSavedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  /// Set when the customer finishes (Ph3.md §1 step 10). Ph3 goes no further —
+  /// the order workflow is Ph7.
+  completedAt DateTime?
+
+  // --- Public website (Ph5.md) ---
+  /// Public website identifier, chosen by the customer at publish time — never
+  /// during the builder. Doubles as the access-control boundary alongside
+  /// isPublished; there is no separate opaque id underneath it.
+  slug        String? @unique
+  /// The single guest-visibility boundary. "Never published" and "unpublished"
+  /// are identical to every access check and to a guest (the route is not live
+  /// either way) — the only difference is UI copy, derived from whether slug
+  /// is already set. No enum, no extra state to keep consistent.
+  isPublished Boolean @default(false)
+
+  profile                Profile                    @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  template               Template?                  @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  hosts                  InvitationHost[]
+  venues                 InvitationVenue[]
+  content                InvitationContent?
+  people                 InvitationPerson[]
+  program                ProgramItem[]
+  personalization        InvitationPersonalization?
+  media                  InvitationMedia[]
+  rsvps                  RsvpResponse[]
+  memorySettings         EventMemorySettings?
+  memorySubmissions      EventMemorySubmission[]
+  lifecycleNotifications LifecycleNotification[]
+  pdfGenerations         PdfGeneration[]
+  orders                 Order[]
+
+  @@index([profileId, status, updatedAt])
+  @@index([templateId])
+  @@map("invitations")
+}
+
+enum LifecycleNotificationKind {
+  MEMORY_PROMPT
+  THANK_YOU
+  ARCHIVE_READY
+  REVIEW_REQUEST
+}
+
+enum NotificationDeliveryStatus {
+  PENDING
+  PROCESSING
+  SENT
+  FAILED
+  CANCELLED
+}
+
+enum AcquisitionEventType {
+  HOMEPAGE_CTA
+}
+
+/// Anonymous product-acquisition measurement. Deliberately stores no IP,
+/// user-agent, cookie, profile, or guest identity.
+model AcquisitionEvent {
+  id        String               @id @default(uuid()) @db.Uuid
+  type      AcquisitionEventType
+  source    String
+  target    String
+  createdAt DateTime             @default(now())
+
+  @@index([type, createdAt])
+  @@map("acquisition_events")
+}
+
+/// Fixed-window public-write limiter. The key is an HMAC digest; raw network
+/// addresses are never persisted.
+model RateLimitBucket {
+  id          String   @id @default(uuid()) @db.Uuid
+  scope       String
+  keyHash     String
+  windowStart DateTime
+  count       Int      @default(1)
+  expiresAt   DateTime
+  updatedAt   DateTime @updatedAt
+
+  @@unique([scope, keyHash, windowStart])
+  @@index([expiresAt])
+  @@map("rate_limit_buckets")
+}
+
+model LifecycleNotification {
+  id           String                     @id @default(uuid()) @db.Uuid
+  invitationId String                     @db.Uuid
+  profileId    String                     @db.Uuid
+  kind         LifecycleNotificationKind
+  channel      String                     @default("in_app")
+  scheduledAt  DateTime
+  status       NotificationDeliveryStatus @default(PENDING)
+  payload      Json
+  consentBasis String?
+  attempts     Int                        @default(0)
+  lastError    String?
+  claimedAt    DateTime?
+  sentAt       DateTime?
+  createdAt    DateTime                   @default(now())
+  updatedAt    DateTime                   @updatedAt
+  invitation   Invitation                 @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+  profile      Profile                    @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([invitationId, kind])
+  @@index([status, scheduledAt])
+  @@index([profileId, scheduledAt])
+  @@map("lifecycle_notifications")
+}
+
+enum EventMemoryMode {
+  PRIVATE_COLLECTION
+  GUEST_GALLERY
+  LIVE_WALL
+  POST_EVENT_ARCHIVE
+}
+
+enum EventMemoryStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model EventMemorySettings {
+  invitationId String          @id @db.Uuid
+  enabled      Boolean         @default(false)
+  mode         EventMemoryMode @default(PRIVATE_COLLECTION)
+  opensAt      DateTime?
+  closesAt     DateTime?
+  allowVideos  Boolean         @default(false)
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  invitation   Invitation      @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@map("event_memory_settings")
+}
+
+model EventMemorySubmission {
+  id               String            @id @default(uuid()) @db.Uuid
+  invitationId     String            @db.Uuid
+  status           EventMemoryStatus @default(PENDING)
+  guestName        String?
+  caption          String?
+  bucket           String
+  storagePath      String            @unique
+  mimeType         String
+  bytes            Int
+  originalFilename String
+  createdAt        DateTime          @default(now())
+  moderatedAt      DateTime?
+  invitation       Invitation        @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId, status, createdAt])
+  @@map("event_memory_submissions")
+}
+
+/// A host or celebrant — Ph3.md §3.
+///
+/// A list, not columns: §3 asks for configurable host types with examples from
+/// "Bride & Groom" (two) to "Company" (one). Two nullable bride/groom columns
+/// would model a wedding and nothing else.
+model InvitationHost {
+  id           String @id @default(uuid()) @db.Uuid
+  invitationId String @db.Uuid
+
+  /// Host type slug — "bride", "groom", "celebrant", "debutant", "company".
+  /// A string against a preset list in lib/config, not a table: unlike template
+  /// categories, nothing filters or joins on this, and the presets are a UI
+  /// affordance per event type rather than shared reference data.
+  role String
+
+  displayName  String
+  /// Ph3.md §3 — Optional Photo. By reference (Capture Once, Reuse Everywhere).
+  photoAssetId String? @db.Uuid
+  biography    String?
+  sortOrder    Int     @default(0)
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId, sortOrder])
+  @@map("invitation_hosts")
+}
+
+/// A venue — Ph3.md §4.
+model InvitationVenue {
+  id           String @id @default(uuid()) @db.Uuid
+  invitationId String @db.Uuid
+
+  kind VenueKind @default(CEREMONY)
+  name String
+
+  address      String?
+  /// Ph3.md §4 — Google Maps Link.
+  mapsUrl      String?
+  /// Ph3.md §4 marks GPS future-ready. Nullable; nothing writes them yet.
+  latitude     Float?
+  longitude    Float?
+  parkingNotes String?
+
+  contactName  String?
+  contactPhone String?
+
+  /// Wall-clock time at THIS venue, "HH:mm". A ceremony at 3pm and a reception
+  /// at 6pm are one event with two times, which a single eventTime cannot say.
+  startTime String?
+  sortOrder Int     @default(0)
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId, sortOrder])
+  @@map("invitation_venues")
+}
+
+/// The written content — Ph3.md §5.
+///
+/// One-to-one with Invitation rather than inlined, for the same reason
+/// Preference is split from Profile: these are long text fields read only when
+/// rendering, and the builder's step navigation reads the parent row constantly.
+///
+/// Every field is a plain string. Ph3.md §5: "No free-form HTML editing."
+model InvitationContent {
+  invitationId String @id @db.Uuid
+
+  welcomeMessage    String?
+  invitationMessage String?
+  giftsPreference   String?
+  specialNotes      String?
+  closingMessage    String?
+
+  updatedAt DateTime @updatedAt
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@map("invitation_content")
+}
+
+/// A named person — Ph3.md §5 (Parents, Sponsors).
+model InvitationPerson {
+  id           String @id @default(uuid()) @db.Uuid
+  invitationId String @db.Uuid
+
+  group     PartyGroup
+  name      String
+  /// Optional qualifier — "Mother of the Bride", "Principal Sponsor".
+  role      String?
+  sortOrder Int        @default(0)
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId, group, sortOrder])
+  @@map("invitation_people")
+}
+
+/// A programme entry — Ph3.md §5 (Program).
+model ProgramItem {
+  id           String @id @default(uuid()) @db.Uuid
+  invitationId String @db.Uuid
+
+  /// Wall-clock "HH:mm", same reasoning as Invitation.eventTime.
+  time        String?
+  title       String
+  description String?
+  sortOrder   Int     @default(0)
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId, sortOrder])
+  @@map("invitation_program_items")
+}
+
+/// Design choices — Ph3.md §6.
+///
+/// This is where presentation lives, and it is a separate table from Invitation
+/// on purpose: it is the one record a generator consults for *look*, and the
+/// invitation stays pure without it.
+///
+/// Every column stores a TOKEN SLUG from the approved vocabulary in
+/// lib/config/design-vocabulary.ts — never a hex value, never a font stack.
+/// Ph3.md §6: "Customization must remain within the approved design system."
+/// A hex column would make that sentence unenforceable, put ML Printing's brand
+/// at the mercy of a colour picker, and hand the print generator colours no ink
+/// can reproduce.
+model InvitationPersonalization {
+  invitationId String @id @db.Uuid
+
+  /// Slugs, validated against the approved vocabulary before write.
+  colorTheme      String @default("classic-ivory")
+  typography      String @default("classic-serif")
+  backgroundStyle String @default("plain")
+  decorativeStyle String @default("none")
+
+  /// Section slugs the customer switched off — Ph3.md §6 (Section Visibility).
+  /// Stored as the exceptions rather than the full list: a template that later
+  /// adds a section should show it by default, not have it silently missing
+  /// because an old row never listed it.
+  hiddenSections String[]
+
+  updatedAt DateTime @updatedAt
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@map("invitation_personalization")
+}
+
+/// An asset used by an invitation — Ph3.md §7.
+///
+/// A join, not a copy. Ph3.md §7: "Do not duplicate uploaded assets." One photo
+/// can be the cover and a couple photo; replacing the asset updates both
+/// (Ph4.md §10), and nothing here stores bytes or a URL.
+///
+/// Restrict on delete: removing an asset still used by an invitation must fail
+/// loudly rather than silently blank a customer's cover image. Ph4.md §11 turns
+/// that error into a proper "here is where it is used" dialog.
+model InvitationMedia {
+  invitationId String    @db.Uuid
+  assetId      String    @db.Uuid
+  derivativeId String?   @db.Uuid
+  slot         MediaSlot
+  sortOrder    Int       @default(0)
+
+  invitation Invitation       @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+  asset      MediaAsset       @relation(fields: [assetId], references: [id], onDelete: Restrict)
+  derivative MediaDerivative? @relation(fields: [derivativeId], references: [id], onDelete: SetNull)
+
+  /// One asset may fill one slot once, but may appear in several slots.
+  @@id([invitationId, assetId, slot])
+  @@index([invitationId, slot, sortOrder])
+  @@index([assetId])
+  @@index([derivativeId])
+  @@map("invitation_media")
+}
+
+/// A guest's response — Ph5.md §3. No guest accounts, no edit-after-submit: a
+/// second submission from the same guest is a second row, not an upsert. The
+/// customer's RSVP list can show both — deduping by name is unreliable (two
+/// invited "Maria Santos" are not the same guest) and deliberately not
+/// attempted.
+model RsvpResponse {
+  id           String @id @default(uuid()) @db.Uuid
+  invitationId String @db.Uuid
+
+  guestName  String
+  attending  Boolean
+  guestCount Int      @default(1)
+  message    String?
+  createdAt  DateTime @default(now())
+
+  invitation Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId, createdAt])
+  @@map("rsvp_responses")
+}
+
+enum PdfPageSize {
+  FIVE_BY_SEVEN
+  A5
+  A6
+}
+
+enum PdfGenerationStatus {
+  PENDING
+  READY
+  FAILED
+}
+
+/// One generated print file — Ph6.md §11 (traceability), §12 (version history).
+///
+/// Rows are appended, never overwritten: a superseded file stays downloadable,
+/// which is what "preserve previous versions when required" asks for. The
+/// engine never touches customer data — this table is the only thing it writes.
+model PdfGeneration {
+  id           String @id @default(uuid()) @db.Uuid
+  invitationId String @db.Uuid
+
+  /// Increments per invitation. What a human means by "version 3".
+  version  Int
+  pageSize PdfPageSize
+  status   PdfGenerationStatus @default(PENDING)
+
+  /// Null until status is READY.
+  storagePath String?
+  bytes       Int?
+
+  /// Ph6.md §11. generatorVersion is a constant exported by services/pdf,
+  /// bumped by hand when a layout change would alter output for unchanged
+  /// input — that is what makes "reproducible from the same inputs" checkable.
+  /// templateVersion copies Template.version at generation time.
+  generatorVersion String
+  templateVersion  String?
+
+  /// The report as returned at generation time (Ph6.md §9, §15), so a failed
+  /// attempt still explains itself later rather than only in a log.
+  validationReport Json?
+  error            String?
+
+  createdAt DateTime @default(now())
+
+  invitation Invitation  @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+  orderItems OrderItem[]
+
+  @@index([invitationId, createdAt])
+  @@map("pdf_generations")
+}
+
+enum OrderStatus {
+  INQUIRY
+  QUOTATION
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  ARCHIVED
+  CANCELLED
+}
+
+enum OrderItemStatus {
+  PENDING
+  DRAFT_CREATION
+  CUSTOMER_REVIEW
+  REVISION
+  APPROVED
+  IN_PRODUCTION
+  QUALITY_CHECK
+  READY_FOR_RELEASE
+  COMPLETED
+  CANCELLED
+}
+
+enum OrderItemKind {
+  INVITATION_PRINT
+  WEBSITE
+  REPRINT
+  OTHER
+}
+
+enum Priority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+enum OrderEventType {
+  STATUS_CHANGE
+  ASSIGNED
+  NOTE_ADDED
+  ITEM_ADDED
+  GENERATED
+  PAYMENT_STATUS
+  PUBLICATION
+}
+
+enum PaymentStatus {
+  PENDING
+  AUTHORIZED
+  CAPTURED
+  FAILED
+  REFUNDED
+  WAIVED
+}
+
+/// One commercial engagement — Ph7.md §1. What a customer calls "my booking".
+model Order {
+  id        String @id @default(uuid()) @db.Uuid
+  profileId String @db.Uuid
+
+  /// Nullable: Ph7.md §2 starts the lifecycle at Inquiry, which precedes any
+  /// design work, so an order can exist before an invitation does.
+  invitationId String? @db.Uuid
+
+  /// Human-facing booking ID, "ML-2026-0042". Unique across all years.
+  reference String @unique
+
+  status       OrderStatus @default(INQUIRY)
+  assignedToId String?     @db.Uuid
+  dueDate      DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile    Profile     @relation("OrderCustomer", fields: [profileId], references: [id], onDelete: Cascade)
+  assignedTo Profile?    @relation("OrderAssignee", fields: [assignedToId], references: [id], onDelete: SetNull)
+  invitation Invitation? @relation(fields: [invitationId], references: [id], onDelete: SetNull)
+
+  items   OrderItem[]
+  events  OrderEvent[]
+  notes   OrderNote[]
+  payment Payment?
+
+  @@index([status, createdAt])
+  @@index([profileId])
+  @@index([assignedToId])
+  @@map("orders")
+}
+
+/// One settlement record per order. Provider callbacks update this row only
+/// after server-side verification; offline payments and waivers are staff-only.
+model Payment {
+  id                String        @id @default(uuid()) @db.Uuid
+  orderId           String        @unique @db.Uuid
+  status            PaymentStatus @default(PENDING)
+  amountMinor       Int
+  currency          String        @default("PHP")
+  provider          String
+  providerReference String?
+  verifiedAt        DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerReference])
+  @@index([status, updatedAt])
+  @@map("payments")
+}
+
+/// One deliverable — a print run, a website, a reprint. This is what the
+/// production board moves. Splitting deliverables out is what makes reprints
+/// and staged delivery representable without duplicating an order.
+model OrderItem {
+  id      String @id @default(uuid()) @db.Uuid
+  orderId String @db.Uuid
+
+  kind     OrderItemKind
+  status   OrderItemStatus @default(PENDING)
+  quantity Int             @default(1)
+
+  assignedToId String?   @db.Uuid
+  dueDate      DateTime?
+  priority     Priority  @default(NORMAL)
+
+  /// Set for print items once a file exists — Phase 6's PdfGeneration.
+  pdfGenerationId String? @db.Uuid
+
+  /// Ph7.md §7's per-task note, e.g. "stock arrives Tuesday". Shows on the
+  /// board card. Distinct from OrderNote, which is order-level commentary.
+  notes String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  order         Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  assignedTo    Profile?       @relation("OrderItemAssignee", fields: [assignedToId], references: [id], onDelete: SetNull)
+  pdfGeneration PdfGeneration? @relation(fields: [pdfGenerationId], references: [id], onDelete: SetNull)
+
+  events OrderEvent[]
+
+  @@index([status, priority])
+  @@index([orderId])
+  @@index([assignedToId])
+  @@map("order_items")
+}
+
+/// Append-only audit trail — Ph7.md §12. Never updated, never deleted.
+model OrderEvent {
+  id          String  @id @default(uuid()) @db.Uuid
+  orderId     String  @db.Uuid
+  orderItemId String? @db.Uuid
+
+  /// Null means the system did it rather than a person.
+  actorId String? @db.Uuid
+
+  type OrderEventType
+
+  /// Strings, not enums: this one table records transitions of two different
+  /// status enums, and two nullable enum column pairs would be worse.
+  fromStatus String?
+  toStatus   String?
+
+  message String?
+
+  createdAt DateTime @default(now())
+
+  order     Order      @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderItem OrderItem? @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+  actor     Profile?   @relation("OrderEventActor", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([orderId, createdAt])
+  @@map("order_events")
+}
+
+/// Staff-only operational notes — Ph7.md §8. Separate from OrderEvent because a
+/// note is authored prose, not a recorded fact, and because 7b will expose
+/// events to customers while these must never be exposed.
+model OrderNote {
+  id       String @id @default(uuid()) @db.Uuid
+  orderId  String @db.Uuid
+  authorId String @db.Uuid
+
+  body String
+
+  createdAt DateTime @default(now())
+
+  order  Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  author Profile @relation("OrderNoteAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([orderId, createdAt])
+  @@map("order_notes")
+}

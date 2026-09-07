@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import pathlib
 import re
+import sys
 
 
 MOTHERS = {
@@ -75,6 +76,7 @@ def local_parent(root: pathlib.Path, file: pathlib.Path, mother: str) -> str:
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=pathlib.Path, default=pathlib.Path.cwd())
     parser.add_argument("--top", action="append", required=True)
@@ -85,7 +87,8 @@ def main() -> None:
         base = root / top
         if not base.exists():
             continue
-        mother = MOTHERS.get(top, "FDG Ecosystem")
+        repository_top = pathlib.PurePosixPath(top.replace("\\", "/")).parts[0]
+        mother = MOTHERS.get(repository_top, "FDG Ecosystem")
         paths = [base] if base.is_file() else sorted(base.rglob("*.md"))
         for file in paths:
             if not file.is_file() or ".git" in file.parts:

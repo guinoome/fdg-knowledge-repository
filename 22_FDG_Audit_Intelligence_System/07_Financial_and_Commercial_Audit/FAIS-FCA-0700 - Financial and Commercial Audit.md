@@ -37,3 +37,7 @@ Trace transactions and decisions to authorized evidence and identify missing, in
 This document is part of the initial FAIS baseline. It may be expanded through controlled future milestones. Recommendations do not become FDG policy until approved through the applicable governance authority.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FAIS-0000 - FDG Audit Intelligence System]] → this document
+
+## Direct Audit Mandates
+
+- [[22_FDG_Audit_Intelligence_System/07_Financial_and_Commercial_Audit/FAIS-FCA-0701 - FDG Enterprise Commercial and Revenue Architecture Audit Mandate|FAIS-FCA-0701 — FDG Enterprise, Commercial & Revenue Architecture Audit Mandate]]

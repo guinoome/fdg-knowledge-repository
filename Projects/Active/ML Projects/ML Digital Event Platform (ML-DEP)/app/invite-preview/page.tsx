@@ -1,0 +1,498 @@
+import type { Metadata } from "next";
+import type { EventKind, PreviewModel } from "@/lib/invitation/preview-model";
+import { EventSite } from "@/features/website-generator/components/event-site";
+import { getTemplateBySlug } from "@/features/template-marketplace/repository";
+import { isDatabaseConfigured } from "@/lib/db";
+import { generateQrPng } from "@/lib/qr";
+import { env } from "@/lib/env";
+import { proofExperienceForSlug } from "@/features/website-generator/experience/proofs";
+
+/**
+ * A live sample invitation — the same renderer a real shared link uses, filled
+ * with stand-in content.
+ *
+ * With `?template=<slug>` it dresses itself as that template: the template's
+ * own cover art, and sample content matching its category. That is what makes
+ * the marketplace honest — a customer sees the animated invitation a template
+ * actually produces, not a screenshot of one. Noindexed: it is a demo, not a
+ * real event.
+ */
+export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Sample invitation",
+  robots: { index: false, follow: false },
+};
+
+const HEADING =
+  "Didot, 'Bodoni MT', 'Hoefler Text', Georgia, 'Times New Roman', serif";
+const BODY = "'Gill Sans', 'Century Gothic', 'Segoe UI', system-ui, sans-serif";
+
+/** Sample content per celebration, so every category demos as itself. */
+interface KindSpec {
+  title: string;
+  subtitle: string;
+  hosts: string[];
+  welcome: string;
+  bg: string;
+  fg: string;
+  accent: string;
+  /**
+   * Overrides for the shared celebratory copy below. A memorial needs every one
+   * of them — "Cocktails" on the programme and "can't wait to celebrate" at the
+   * end would be worse than having no sample at all.
+   */
+  invitation?: string;
+  venues?: { label: string; name: string; address: string; time: string }[];
+  program?: { time: string; title: string }[];
+  gifts?: string | null;
+  rsvpLine?: string | null;
+  closing?: string;
+  dressCode?: string | null;
+}
+
+const KINDS: Record<EventKind, KindSpec> = {
+  wedding: {
+    title: "Maria & Jose",
+    subtitle: "are getting married",
+    hosts: ["Maria Santos", "Jose Rivera"],
+    welcome:
+      "With hearts full of joy, we invite you to celebrate the beginning of our forever.",
+    bg: "#fbf3f2",
+    fg: "#4a3b3e",
+    accent: "#b0868c",
+  },
+  debut: {
+    title: "Isabella at Eighteen",
+    subtitle: "a debut celebration",
+    hosts: ["Isabella Cruz"],
+    welcome:
+      "Come celebrate eighteen years of joy, and the woman I am becoming.",
+    bg: "#fbf1ec",
+    fg: "#5a3f3a",
+    accent: "#bd8b6e",
+    invitation:
+      "With my family, I invite you to step into the night and celebrate this milestone with me.",
+    venues: [
+      {
+        label: "Debut",
+        name: "Oakridge Pavilion",
+        address: "A. S. Fortuna St, Mandaue City",
+        time: "6:00 PM",
+      },
+    ],
+    program: [
+      { time: "6:00 PM", title: "Doors open" },
+      { time: "7:00 PM", title: "Grand entrance" },
+      { time: "7:30 PM", title: "Eighteen roses and candles" },
+      { time: "9:00 PM", title: "Dance floor" },
+    ],
+    gifts: null,
+    closing: "Meet me under the neon lights.",
+  },
+  birthday: {
+    title: "Emma turns Seven",
+    subtitle: "please join the fun",
+    hosts: ["Emma"],
+    welcome: "There will be cake, games, and a very excited seven-year-old.",
+    bg: "#fff5ef",
+    fg: "#5a3a30",
+    accent: "#e2725b",
+  },
+  christening: {
+    title: "Baby Noah",
+    subtitle: "is being christened",
+    hosts: ["Noah Reyes"],
+    welcome:
+      "With grateful hearts, we welcome our little one into the family of faith.",
+    bg: "#f0f4f8",
+    fg: "#33414a",
+    accent: "#7d9bc0",
+  },
+  anniversary: {
+    title: "Fifty Golden Years",
+    subtitle: "Ramon & Elena",
+    hosts: ["Ramon Villanueva", "Elena Villanueva"],
+    welcome: "Fifty years later, we would love to celebrate with you again.",
+    bg: "#faf5ea",
+    fg: "#4a4230",
+    accent: "#b08d3c",
+  },
+  graduation: {
+    title: "The Class of 2026",
+    subtitle: "Maria graduates",
+    hosts: ["Maria Santos"],
+    welcome: "Four years, one degree, and the people who made it possible.",
+    bg: "#f1f3f7",
+    fg: "#2b3450",
+    accent: "#b08d3c",
+  },
+  corporate: {
+    title: "The Annual Gala",
+    subtitle: "an evening with ML Holdings",
+    hosts: [],
+    welcome: "Join us for an evening of recognition, dinner, and celebration.",
+    bg: "#1f2836",
+    fg: "#f3ecdd",
+    accent: "#c9a227",
+  },
+  engagement: {
+    title: "She Said Yes",
+    subtitle: "Maria & Jose are engaged",
+    hosts: ["Maria Santos", "Jose Rivera"],
+    welcome:
+      "After eight years and one very nervous question, we are getting married.",
+    bg: "#fbf2f1",
+    fg: "#54393c",
+    accent: "#c08a86",
+  },
+  "baby-shower": {
+    title: "Baby Reyes",
+    subtitle: "a baby shower",
+    hosts: ["Ana Reyes"],
+    welcome:
+      "We are expecting, and we would love to celebrate with the people we love most.",
+    bg: "#f7f4ef",
+    fg: "#4a4438",
+    accent: "#a39a7c",
+  },
+  reunion: {
+    title: "The Santos Reunion",
+    subtitle: "four generations, one long table",
+    hosts: ["The Santos Family"],
+    welcome:
+      "It has been too long. Bring the children, bring the stories, bring an appetite.",
+    bg: "#f2f4f7",
+    fg: "#2c3550",
+    accent: "#b08d3c",
+  },
+  /**
+   * A memorial notice. The copy is written as an announcement of a service —
+   * no celebration language, no exclamation, nothing that reads as festive.
+   */
+  funeral: {
+    title: "Rosario Santos",
+    subtitle: "1948 — 2026",
+    hosts: ["The Santos Family"],
+    welcome:
+      "With grateful hearts for a life well lived, we invite you to join us in remembrance.",
+    bg: "#f6f6f4",
+    fg: "#3f4144",
+    accent: "#8b8d88",
+    invitation:
+      "The family of Rosario Santos thanks you for your prayers and kindness during this time.",
+    venues: [
+      {
+        label: "Wake",
+        name: "Cosmopolitan Funeral Homes",
+        address: "N. Bacalso Ave, Cebu City",
+        time: "Daily, 9:00 AM to 9:00 PM",
+      },
+      {
+        label: "Mass and interment",
+        name: "Santo Niño Basilica",
+        address: "Osmeña Blvd, Cebu City",
+        time: "8:00 AM",
+      },
+    ],
+    program: [
+      { time: "8:00 AM", title: "Funeral mass" },
+      { time: "10:00 AM", title: "Procession" },
+      { time: "11:00 AM", title: "Interment" },
+    ],
+    gifts: "In lieu of flowers, the family welcomes donations to the parish.",
+    rsvpLine: null,
+    closing: "Thank you for keeping her in your prayers.",
+    dressCode: null,
+  },
+  family: {
+    title: "Noche Buena",
+    subtitle: "with the Santos family",
+    hosts: ["The Santos Family"],
+    welcome:
+      "The table is long, the lechon is ordered, and everyone is expected. Come hungry.",
+    bg: "#faf5ec",
+    fg: "#4a4131",
+    accent: "#9a7a4a",
+  },
+  fiesta: {
+    title: "Fiesta ng Santo Niño",
+    subtitle: "Barangay Libo, Consolacion",
+    hosts: ["Barangay Libo"],
+    welcome:
+      "Nine days of novena, one afternoon of procession, and a whole barangay at table. Everyone is welcome.",
+    bg: "#fff3ec",
+    fg: "#5d2f22",
+    accent: "#c8442e",
+    program: [
+      { time: "5:00 AM", title: "Novena mass" },
+      { time: "3:00 PM", title: "Procession" },
+      { time: "6:00 PM", title: "Programme and salu-salo" },
+    ],
+    dressCode: null,
+  },
+  religious: {
+    title: "Thanksgiving Mass",
+    subtitle: "for the Reyes family",
+    hosts: ["The Reyes Family"],
+    welcome:
+      "We are giving thanks for a year of grace, and we would be glad to have you with us.",
+    bg: "#f9f7f0",
+    fg: "#453f30",
+    accent: "#8e8354",
+    invitation:
+      "Please join us for the mass and the simple meal that follows it.",
+    program: [
+      { time: "9:00 AM", title: "Holy mass" },
+      { time: "10:30 AM", title: "Blessing" },
+      { time: "11:00 AM", title: "Salu-salo" },
+    ],
+    gifts: null,
+    dressCode: "Smart casual",
+  },
+  community: {
+    title: "Barangay Assembly",
+    subtitle: "first quarter, Barangay Libo",
+    hosts: ["Barangay Council"],
+    welcome:
+      "The quarterly assembly is open to every household. Your attendance is counted.",
+    bg: "#f2f4f8",
+    fg: "#2b3446",
+    accent: "#4a6a94",
+    invitation:
+      "Agenda, budget report, and an open forum. Please bring one representative per household.",
+    program: [
+      { time: "8:00 AM", title: "Registration" },
+      { time: "9:00 AM", title: "Reports and budget" },
+      { time: "10:30 AM", title: "Open forum" },
+    ],
+    gifts: null,
+    rsvpLine: null,
+    dressCode: null,
+    closing: "Salamat po, and we hope to see you there.",
+  },
+  general: {
+    title: "You're Invited",
+    subtitle: "join us to celebrate",
+    hosts: [],
+    welcome: "We would love for you to be there.",
+    bg: "#faf5ea",
+    fg: "#41392c",
+    accent: "#b08d3c",
+  },
+};
+
+/**
+ * Named launch experiences can be more specific than their broad event kind.
+ * A product reveal that says "Annual Gala" is visually polished and still a
+ * false preview, so release proofs may replace the sample story as one unit.
+ */
+const PROOF_SPECS: Partial<Record<string, KindSpec>> = {
+  "product-launch": {
+    title: "Lumen One",
+    subtitle: "the next form arrives",
+    hosts: ["ML Innovation Studio"],
+    welcome:
+      "A new object of light, movement, and intelligence is ready to leave the stage.",
+    invitation:
+      "Join the live keynote, first reveal, and hands-on preview of Lumen One.",
+    venues: [
+      {
+        label: "Keynote and reveal",
+        name: "NUSTAR Convention Center",
+        address: "South Road Properties, Cebu City",
+        time: "6:30 PM",
+      },
+    ],
+    program: [
+      { time: "5:30 PM", title: "Guest check-in" },
+      { time: "6:30 PM", title: "Vision keynote" },
+      { time: "7:00 PM", title: "Lumen One reveal" },
+      { time: "7:30 PM", title: "First-look experience" },
+    ],
+    gifts: null,
+    rsvpLine: "Registration is required for the live reveal.",
+    closing: "See what arrives next.",
+    dressCode: "Future formal",
+    bg: "#061025",
+    fg: "#eef6ff",
+    accent: "#78aefc",
+  },
+};
+
+function sampleModel(
+  kind: EventKind,
+  coverImageUrl: string | null,
+  dates: ReturnType<typeof sampleDates>,
+  override?: KindSpec,
+): PreviewModel {
+  const k = override ?? KINDS[kind];
+  return {
+    title: k.title,
+    subtitle: k.subtitle,
+    dateLine: dates.dateLine,
+    timeLine: "3:00 PM",
+    hosts: k.hosts.map((name, i) => ({
+      id: String(i),
+      name,
+      biography: null,
+    })),
+    venues: (
+      k.venues ?? [
+        {
+          label: "Ceremony",
+          name: "Santo Niño Basilica",
+          address: "Osmeña Blvd, Cebu City",
+          time: "3:00 PM",
+        },
+        {
+          label: "Reception",
+          name: "Marco Polo Plaza",
+          address: "Nivel Hills, Cebu City",
+          time: "6:00 PM",
+        },
+      ]
+    ).map((v, i) => ({
+      id: `v${i}`,
+      label: v.label,
+      name: v.name,
+      address: v.address,
+      mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        `${v.name} ${v.address}`,
+      )}`,
+      parkingNotes: null,
+      timeLine: v.time,
+    })),
+    welcomeMessage: k.welcome,
+    invitationMessage:
+      k.invitation ??
+      "Together with our families, we request the honour of your presence.",
+    parents: [],
+    sponsors: [],
+    program: (
+      k.program ?? [
+        { time: "3:00 PM", title: "Ceremony" },
+        { time: "5:00 PM", title: "Cocktails" },
+        { time: "6:00 PM", title: "Reception and dinner" },
+      ]
+    ).map((p, i) => ({
+      id: `g${i}`,
+      time: p.time,
+      title: p.title,
+      description: null,
+    })),
+    giftsPreference:
+      k.gifts === undefined
+        ? "Your presence is the only gift we ask for."
+        : k.gifts,
+    specialNotes: null,
+    closingMessage: k.closing ?? "We can't wait to celebrate with you.",
+    dressCode: k.dressCode === undefined ? "Formal" : k.dressCode,
+    eventTheme: null,
+    rsvpLine: k.rsvpLine === undefined ? dates.rsvpLine : k.rsvpLine,
+    coverImageUrl,
+    // No uploaded media on the sample, so no hero video. The cover above is the
+    // poster, which is exactly what the full-bleed heroes showed before video
+    // existed — an absent video is the normal case, not a degraded one.
+    heroVideoUrl: null,
+    galleryUrls: [],
+    // Left null so the sample exercises the same occasion-matched track a real
+    // invitation gets, rather than a one-off file only this page knows about.
+    musicUrl: null,
+    style: {
+      background: k.bg,
+      foreground: k.fg,
+      accent: k.accent,
+      headingFont: HEADING,
+      bodyFont: BODY,
+      backgroundStyle: "soft-gradient",
+      decorativeStyle: "none",
+    },
+    eventKind: kind,
+    hidden: new Set<string>(),
+  };
+}
+
+/**
+ * The sample's event date, always a few months out.
+ *
+ * Derived from today rather than hard-coded. A fixed date silently expires: this
+ * was pinned to 14 February 2026 and, once that passed, `Countdown` correctly
+ * refused to render a negative countdown — so the sample invitation everyone is
+ * pointed at simply had no countdown on it, on a page whose whole job is to
+ * show what the product does.
+ */
+function sampleDates(now = new Date()) {
+  const eventDate = new Date(now.getTime() + 128 * 86_400_000);
+  const rsvpBy = new Date(eventDate.getTime() - 25 * 86_400_000);
+  const fmt = (d: Date) =>
+    d.toLocaleDateString("en-PH", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  return {
+    eventDate,
+    dateLine: fmt(eventDate),
+    rsvpLine: `Kindly reply by ${fmt(rsvpBy)}`,
+  };
+}
+
+export default async function InvitePreviewPage({
+  searchParams,
+}: {
+  searchParams: { template?: string };
+}) {
+  let kind: EventKind = "wedding";
+  let cover: string | null =
+    "/api/placeholder/desktop/ivory-lace?label=Maria%20%26%20Jose&caption=Wedding";
+
+  const slug = searchParams.template;
+  const proof = proofExperienceForSlug(slug);
+  if (proof) {
+    // Proof routes must remain truthful when CI, a local checkout, or a brief
+    // database outage cannot load catalogue rows. Their slug is an exact,
+    // platform-owned contract rather than a best-effort visual hint.
+    kind = proof.eventKind;
+    cover = proof.sampleCover;
+  }
+
+  if (slug && isDatabaseConfigured()) {
+    const template = await getTemplateBySlug(slug);
+    if (template) {
+      // The template's own category picks the sample content, and its own cover
+      // art heads the page — so this is that template, not a generic demo.
+      const category = template.category.slug;
+      kind = category in KINDS ? (category as EventKind) : "general";
+      cover = template.coverImageUrl;
+    }
+  }
+
+  // The sample has no published slug, so it cannot use the QR route — that one
+  // is gated on publication, and it should stay that way rather than becoming a
+  // general "encode any URL" endpoint on our domain. Generating it here keeps
+  // the sample's code genuinely scannable: it points at this very page.
+  // Computed per request, which is free here: the page is force-dynamic.
+  const dates = sampleDates();
+
+  const sampleUrl = `${env.app.url}/invite-preview${
+    slug ? `?template=${encodeURIComponent(slug)}` : ""
+  }`;
+  const qrSrc = `data:image/png;base64,${(await generateQrPng(sampleUrl)).toString("base64")}`;
+
+  return (
+    <EventSite
+      invitationId="preview"
+      model={sampleModel(
+        kind,
+        cover,
+        dates,
+        slug ? PROOF_SPECS[slug] : undefined,
+      )}
+      countdownTarget={dates.eventDate}
+      qrSrc={qrSrc}
+      experienceSlug={slug}
+    />
+  );
+}

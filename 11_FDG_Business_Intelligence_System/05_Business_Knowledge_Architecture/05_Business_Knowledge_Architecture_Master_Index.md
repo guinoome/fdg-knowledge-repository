@@ -6,6 +6,7 @@
 - [[05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model|Business_Intelligence_Data_Model]]
 - [[05_Business_Knowledge_Architecture/FBIS_Core_Entities|FBIS_Core_Entities]]
 - [[05_Business_Knowledge_Architecture/FBIS_Data_Architecture|FBIS_Data_Architecture]]
+- [[05_Business_Knowledge_Architecture/FBIS-DATA-CBDM-001 - Philippine Common Business Data Model|Philippine Common Business Data Model]]
 
 ---
 
@@ -20,3 +21,4 @@
 - [[11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model|Business Intelligence Data Model]]
 - [[11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Core_Entities|FBIS Core Entities]]
 - [[11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Data_Architecture|FBIS Data Architecture]]
+- [[11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS-DATA-CBDM-001 - Philippine Common Business Data Model|Philippine Common Business Data Model]]

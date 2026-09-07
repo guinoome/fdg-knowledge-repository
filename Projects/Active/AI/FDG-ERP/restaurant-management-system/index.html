@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Restaurant Management System — ERP for inventory, sales, costing, and management reports.">
+  <title>RestaurantERP — Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<!-- ═══ LOGIN SCREEN ═══ -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-card">
+    <div class="sidebar-logo" style="margin: 0 auto 16px;">🍽️</div>
+    <h2 style="text-align:center;margin-bottom:8px">RestaurantERP</h2>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-bottom:24px">Sign in to your account</p>
+    <div class="form-group mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-input" id="loginUsername" placeholder="Enter username">
+    </div>
+    <div class="form-group mb-4">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-input" id="loginPassword" placeholder="Enter password">
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="handleLogin()">Sign In</button>
+    <p class="text-muted" style="font-size:0.75rem;text-align:center;margin-top:16px">Default: admin / 123</p>
+  </div>
+</div>
+
+<div class="app-layout" id="appLayout" style="display:none;">
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">🍽️</div>
+      <div>
+        <div class="sidebar-title">RestaurantERP</div>
+        <div class="sidebar-subtitle">Management System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav">
+      <!-- Core -->
+      <div class="nav-group">
+        <div class="nav-group-label">Core</div>
+        <button class="nav-item active" data-module="dashboard" onclick="switchModule('dashboard')">
+          <i class="fas fa-chart-pie"></i> Dashboard
+        </button>
+        <button class="nav-item" data-module="settings" onclick="switchModule('settings')">
+          <i class="fas fa-cog"></i> Settings
+        </button>
+        <button class="nav-item" data-module="pos-import" onclick="switchModule('pos-import')">
+          <i class="fas fa-file-import"></i> POS Import
+        </button>
+      </div>
+      <!-- Catalog -->
+      <div class="nav-group">
+        <div class="nav-group-label">Catalog</div>
+        <button class="nav-item" data-module="products" onclick="switchModule('products')">
+          <i class="fas fa-box"></i> Product Master
+        </button>
+        <button class="nav-item" data-module="recipes" onclick="switchModule('recipes')">
+          <i class="fas fa-utensils"></i> Recipe / BOM
+        </button>
+        <button class="nav-item" data-module="raw-materials" onclick="switchModule('raw-materials')">
+          <i class="fas fa-carrot"></i> Raw Materials
+        </button>
+      </div>
+      <!-- Inventory -->
+      <div class="nav-group">
+        <div class="nav-group-label">Inventory</div>
+        <button class="nav-item" data-module="purchase-orders" onclick="switchModule('purchase-orders')">
+          <i class="fas fa-file-alt"></i> Purchase Orders
+        </button>
+        <button class="nav-item" data-module="goods-receipt" onclick="switchModule('goods-receipt')">
+          <i class="fas fa-dolly"></i> Goods Receipt
+        </button>
+        <button class="nav-item" data-module="purchases" onclick="switchModule('purchases')">
+          <i class="fas fa-truck"></i> Purchase History
+        </button>
+        <button class="nav-item" data-module="stock-adj" onclick="switchModule('stock-adj')">
+          <i class="fas fa-sliders-h"></i> Stock Adjustments
+        </button>
+        <button class="nav-item" data-module="wastage" onclick="switchModule('wastage')">
+          <i class="fas fa-trash-alt"></i> Wastage
+        </button>
+        <button class="nav-item" data-module="production" onclick="switchModule('production')">
+          <i class="fas fa-industry"></i> Production
+        </button>
+        <button class="nav-item" data-module="inv-ledger" onclick="switchModule('inv-ledger')">
+          <i class="fas fa-book"></i> Inventory Ledger
+        </button>
+        <button class="nav-item" data-module="low-stock" onclick="switchModule('low-stock')">
+          <i class="fas fa-exclamation-triangle"></i> Low Stock
+          <span class="nav-badge" id="lowStockBadge" style="display:none;">0</span>
+        </button>
+      </div>
+      <!-- Analytics -->
+      <div class="nav-group">
+        <div class="nav-group-label">Analytics</div>
+        <button class="nav-item" data-module="sales-analysis" onclick="switchModule('sales-analysis')">
+          <i class="fas fa-chart-line"></i> Sales Analysis
+        </button>
+        <button class="nav-item" data-module="profit-analysis" onclick="switchModule('profit-analysis')">
+          <i class="fas fa-hand-holding-usd"></i> Profit Analysis
+        </button>
+      </div>
+      <!-- Reports -->
+      <div class="nav-group">
+        <div class="nav-group-label">Reports</div>
+        <button class="nav-item" data-module="daily-report" onclick="switchModule('daily-report')">
+          <i class="fas fa-calendar-day"></i> Daily Report
+        </button>
+        <button class="nav-item" data-module="weekly-report" onclick="switchModule('weekly-report')">
+          <i class="fas fa-calendar-week"></i> Weekly Report
+        </button>
+        <button class="nav-item" data-module="monthly-report" onclick="switchModule('monthly-report')">
+          <i class="fas fa-calendar-alt"></i> Monthly Report
+        </button>
+      </div>
+      <!-- Management -->
+      <div class="nav-group">
+        <div class="nav-group-label">Management</div>
+        <button class="nav-item" data-module="suppliers" onclick="switchModule('suppliers')">
+          <i class="fas fa-handshake"></i> Suppliers
+        </button>
+        <button class="nav-item" data-module="employees" onclick="switchModule('employees')">
+          <i class="fas fa-users"></i> Employees
+        </button>
+        <button class="nav-item" data-module="audit-log" onclick="switchModule('audit-log')">
+          <i class="fas fa-clipboard-list"></i> Audit Log
+        </button>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <div class="main-content">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="topbar-btn" id="menuToggle" onclick="toggleSidebar()" style="display:none;">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h2 class="page-title" id="pageTitle">Dashboard <span>Overview</span></h2>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="globalSearch" placeholder="Search anything..." oninput="handleGlobalSearch(this.value)">
+        </div>
+        <button class="topbar-btn" onclick="exportCurrentModule()" title="Export CSV">
+          <i class="fas fa-download"></i>
+        </button>
+        <button class="topbar-btn" id="notifBtn" onclick="showNotifications()" title="Notifications">
+          <i class="fas fa-bell"></i>
+          <span class="badge" id="notifBadge" style="display:none;">0</span>
+        </button>
+        <button class="topbar-btn" onclick="logout()" title="Logout">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <div class="content-area" id="contentArea">
+      <!-- All module panels rendered by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL ═══ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOverlay(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modalTitle">Title</h3>
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer" id="modalFooter">
+      <button class="btn" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" id="modalSave" onclick="saveModal()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- App Script -->
+<script src="app.js"></script>
+</body>
+</html>

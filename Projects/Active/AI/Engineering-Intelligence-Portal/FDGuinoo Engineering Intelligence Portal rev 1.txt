@@ -1,0 +1,279 @@
+# Appendix A
+# Engineering Tracking Catalog
+
+## Purpose
+
+The FDGuinoo Engineering Intelligence Portal shall serve as the single source of truth for all engineering operational information. Every tracked item shall have a defined source, owner, update frequency, and attention level.
+
+---
+
+# A.1 Hotel Operations
+
+The system shall track:
+
+- Occupancy (%)
+- VIP Arrivals
+- VIP In-House Guests
+- Long Staying Guests
+- Early Arrivals
+- Late Check-Outs
+- Total Available Rooms
+- Occupied Rooms
+- Vacant Rooms
+- Out of Order (OOO) Rooms
+- Out of Service (OOS) Rooms
+- Rooms Returned Today
+- Rooms Waiting for Housekeeping
+- Rooms Waiting for Front Office Release
+- Revenue Loss per OOO Room
+- Average Room Recovery Time
+- Repeat Room Failures
+- Rooms Under Monitoring
+
+---
+
+# A.2 Guest Experience
+
+The system shall track:
+
+- Guest Complaints
+- Guest Requests
+- Engineering Service Requests
+- Repeat Complaints
+- Open Guest Cases
+- Closed Guest Cases
+- Guest Compensation Related to Engineering
+- VIP Engineering Requests
+- Average Response Time
+- Average Resolution Time
+- Escalated Guest Issues
+- Pending Guest Follow-up
+
+---
+
+# A.3 Work Orders (FCS)
+
+Track:
+
+- New Work Orders
+- Open Work Orders
+- Assigned Work Orders
+- In Progress
+- Waiting Materials
+- Waiting Contractor
+- Waiting Approval
+- Waiting Parts
+- Completed Today
+- Cancelled
+- Overdue
+- Emergency Work Orders
+- Repeat Work Orders
+- Highest Priority Work Orders
+
+---
+
+# A.4 Room Engineering Cases
+
+Track:
+
+- Room Number
+- Current Status
+- Problem Description
+- Root Cause
+- Temporary Repair
+- Permanent Repair
+- Current Owner
+- Date Reported
+- Days Open
+- Revenue Impact
+- Estimated Completion
+- Required Materials
+- Related PR
+- Related PO
+- Related Work Orders
+- Related Photos
+- Related Emails
+- Related Reports
+
+---
+
+# A.5 Preventive Maintenance
+
+Track:
+
+- Daily PM
+- Weekly PM
+- Monthly PM
+- Quarterly PM
+- Semi-Annual PM
+- Annual PM
+- Overdue PM
+- PM Compliance
+- PM Effectiveness
+- Repeat Failures After PM
+- Equipment Availability
+- MTBF
+- MTTR
+
+---
+
+# A.6 Inventory
+
+Track:
+
+- Current Stock
+- Minimum Stock
+- Maximum Stock
+- Warning Level
+- Critical Level
+- Reorder Level
+- Reserved Quantity
+- Available Quantity
+- Average Monthly Consumption
+- Last Purchase Date
+- Unit Cost
+- Total Inventory Value
+- Dead Stock
+- Slow Moving
+- Fast Moving
+- Expiring Chemicals
+- Calibration Due
+- Missing Tools
+- PPE Inventory
+
+---
+
+# A.7 Procurement (SCM)
+
+Track:
+
+- Purchase Request (PR)
+- Purchase Order (PO)
+- Sourcing Request Form (SRF)
+- Quotation Status
+- Supplier Response
+- Approval Status
+- Delivery Status
+- Lead Time
+- Emergency Purchase
+- Sole Source Purchase
+- Contract Expiry
+- Warranty Claims
+- Outstanding Procurement
+- Procurement Delays
+
+---
+
+# A.8 Contractors
+
+Track:
+
+- Active Contractors
+- Daily Attendance
+- Daily Progress
+- Safety Compliance
+- Permits
+- Delayed Activities
+- Punch List
+- Defects
+- Warranty
+- Variation Orders
+- Retention Status
+- Project Completion
+
+---
+
+# A.9 Utilities
+
+Track:
+
+- Electricity Consumption
+- Water Consumption
+- Diesel Consumption
+- LPG Consumption
+- Generator Runtime
+- Peak Demand
+- Power Factor
+- Chilled Water Consumption
+- Cooling Tower Makeup Water
+- STP Flow
+- Utility Cost
+- Utility Alarms
+
+---
+
+# A.10 Safety
+
+Track:
+
+- Fire Alarm Impairments
+- Fire Pump Status
+- Sprinkler Shutdown
+- Fire Watch
+- Emergency Lights
+- Exit Lights
+- Safety Violations
+- Near Miss
+- Incident Reports
+- Hot Work Permits
+- LOTO
+- Confined Space
+- Working at Height
+
+---
+
+# A.11 Compliance
+
+Track:
+
+- Elevator Inspection
+- Generator Inspection
+- Boiler Inspection
+- Pressure Vessel Inspection
+- Fire Pump Testing
+- Calibration Certificates
+- Water Testing
+- Air Quality Testing
+- Government Permits
+- Internal Audit
+- External Audit
+- Corrective Actions
+
+---
+
+# A.12 Workforce
+
+Track:
+
+- Present
+- Absent
+- Leave
+- Training
+- Overtime
+- Available Technicians
+- Skill Matrix
+- Certification Expiry
+- Workload
+- Productivity Score
+- Quality Score
+- Training Hours
+
+---
+
+# A.13 Executive Attention Queue
+
+Every tracked item shall automatically receive:
+
+- Attention Level
+- Business Impact
+- Revenue Impact
+- Safety Impact
+- Guest Impact
+- Priority
+- Responsible Owner
+- Current Status
+- Next Required Action
+- Target Completion
+- Escalation Level
+- AI Recommendation
+- Last Updated

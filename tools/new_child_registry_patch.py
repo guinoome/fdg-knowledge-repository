@@ -8,11 +8,13 @@ from __future__ import annotations
 
 import pathlib
 import re
+import sys
 
 from new_parent_link_patch import MOTHERS, local_parent
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
     root = pathlib.Path.cwd().resolve()
     grouped: dict[str, list[str]] = {}
 
@@ -50,7 +52,8 @@ def main() -> None:
                 missing.append(target)
         if not missing:
             continue
-        lines = ["+", "+## Direct Child Documents", "+"]
+        heading = "Additional Direct Child Documents" if "## Direct Child Documents" in text else "Direct Child Documents"
+        lines = ["+", f"+## {heading}", "+"]
         lines.extend(
             f"+- [[{target}|{pathlib.PurePosixPath(target).name.replace('_', ' ')}]]"
             for target in missing

@@ -28,6 +28,7 @@ principles:
 - `05_Project_Audit/FAIS-PRJ-0500 - Project Audit.md`
 - `06_Business_and_Operational_Audit/FAIS-OPS-0600 - Business and Operational Audit.md`
 - `07_Financial_and_Commercial_Audit/FAIS-FCA-0700 - Financial and Commercial Audit.md`
+- `07_Financial_and_Commercial_Audit/FAIS-FCA-0701 - FDG Enterprise Commercial and Revenue Architecture Audit Mandate.md` — v1.0 SHA-256 `19CED97C2F21DBA42C585C57E3F6C6EBBEFD9422B652E2D732F560226B21DB51`
 - `08_Legal_and_Compliance_Audit/FAIS-LCA-0800 - Legal and Compliance Audit.md`
 - `09_Security_and_Data_Governance_Audit/FAIS-SDA-0900 - Security and Data Governance Audit.md`
 - `10_System_and_Software_Audit/FAIS-SSA-1000 - System and Software Audit.md`

@@ -1,0 +1,173 @@
+# Feature: Admin Template Management
+
+## Context
+
+The current AI-generated template design is not acceptable. Instead of relying on AI-generated layouts, the system should allow the administrator to upload professionally designed templates manually.
+
+Templates are reusable assets that can be selected by users during document generation. Administrators must be able to manage these templates without modifying application code.
+
+This feature only covers template management. It does **not** include template editing, AI generation, or design tools.
+
+---
+
+## Harness
+
+### Objective
+
+Create an Admin Template Management module.
+
+### Requirements
+
+#### Admin Page
+
+Create a page where administrators can:
+
+- View all uploaded templates
+- Upload a new template
+- Delete an existing template
+
+---
+
+### Upload
+
+Allow uploading supported template files.
+
+Minimum metadata:
+
+- Template Name
+- Preview Image (if available)
+- Uploaded Date
+
+Store uploaded files in the configured template storage location.
+
+Validate:
+
+- supported file types
+- maximum file size
+- duplicate filenames (or generate unique filenames)
+
+---
+
+### Template List
+
+Display:
+
+- Preview thumbnail
+- Template name
+- Date uploaded
+- Delete action
+
+Sorting:
+
+- newest first
+
+---
+
+### Delete
+
+Provide Delete action.
+
+Requirements:
+
+- confirmation dialog
+- remove database record
+- remove physical file
+- refresh list
+
+---
+
+### Error Handling
+
+Handle:
+
+- invalid file type
+- upload failure
+- storage failure
+- delete failure
+- missing file
+
+Display user-friendly messages.
+
+---
+
+### Security
+
+Only administrators may:
+
+- upload templates
+- delete templates
+- view template management page
+
+Non-admin users must not access this module.
+
+---
+
+### Out of Scope
+
+Do NOT implement:
+
+- template editor
+- drag-and-drop designer
+- AI-generated templates
+- template versioning
+- template categories
+
+These may be future enhancements.
+
+---
+
+## Loop
+
+Follow this implementation cycle.
+
+### Step 1
+
+Design backend storage for templates.
+
+### Step 2
+
+Implement upload endpoint.
+
+### Step 3
+
+Implement template listing.
+
+### Step 4
+
+Implement delete endpoint.
+
+### Step 5
+
+Create admin UI.
+
+### Step 6
+
+Connect UI to backend.
+
+### Step 7
+
+Test:
+
+- upload
+- duplicate upload
+- invalid upload
+- delete
+- delete missing file
+- permission checks
+
+### Step 8
+
+Refactor for maintainability.
+
+---
+
+## Acceptance Criteria
+
+- Admin can upload a template.
+- Uploaded template appears immediately in the list.
+- Admin can delete a template.
+- Deleted template is removed from storage and database.
+- Only administrators can access this feature.
+- Error handling is implemented.
+- Code follows existing project architecture and conventions.
+- No unrelated features are modified.

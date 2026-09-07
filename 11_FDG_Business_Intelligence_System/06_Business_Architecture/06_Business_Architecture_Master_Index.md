@@ -8,6 +8,7 @@
 - [[06_Business_Architecture/FBIS_Integration_Map|FBIS_Integration_Map]]
 - [[06_Business_Architecture/FBIS_Reference_Architecture|FBIS_Reference_Architecture]]
 - [[06_Business_Architecture/FBIS_System_Architecture|FBIS_System_Architecture]]
+- [[06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture|FDG Common Business Core Architecture]]
 - [[06_Business_Architecture/Payment_Integration_Strategy|Payment_Integration_Strategy]]
 - [[06_Business_Architecture/Provider_Webhook_Contract|Provider_Webhook_Contract]]
 
@@ -26,5 +27,6 @@
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Integration_Map|FBIS Integration Map]]
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Reference_Architecture|FBIS Reference Architecture]]
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_System_Architecture|FBIS System Architecture]]
+- [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture|FDG Common Business Core Architecture]]
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy|Payment Integration Strategy]]
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract|Provider Webhook Contract]]

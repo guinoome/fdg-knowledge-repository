@@ -1,0 +1,103 @@
+import type { Metadata } from "next";
+import { ClipboardList } from "lucide-react";
+import { requireStaff } from "@/lib/auth/require-staff";
+import { searchOrders, parseOrderSearch } from "@/services/orders";
+import { EmptyState } from "@/components/ui/empty-state";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { routes } from "@/lib/config";
+import { OrderSearch } from "@/features/orders/components/order-search";
+import { ORDER_STATUS_LABELS as STATUS_LABELS } from "@/features/orders/labels";
+import { SettlementControls } from "@/features/payments/components/settlement-controls";
+import { isPayMongoConfigured } from "@/lib/env";
+
+export const metadata: Metadata = {
+  title: "Bookings",
+};
+
+export default async function AdminBookingsPage({
+  searchParams,
+}: {
+  searchParams: { q?: string; status?: string };
+}) {
+  await requireStaff();
+
+  const criteria = parseOrderSearch(searchParams);
+  const orders = await searchOrders(criteria);
+  const filtered = Boolean(criteria.q || criteria.status.length > 0);
+  const onlineAvailable = isPayMongoConfigured();
+
+  return (
+    <div className="space-y-6 p-6">
+      <Breadcrumbs
+        items={[
+          { label: "Admin", href: routes.admin.root },
+          { label: "Bookings" },
+        ]}
+      />
+
+      <header className="space-y-1">
+        <h1 className="text-2xl font-semibold">Bookings</h1>
+        <p className="text-sm text-muted-foreground">
+          Every order, newest first.
+        </p>
+      </header>
+
+      <OrderSearch />
+
+      {orders.length === 0 ? (
+        <EmptyState
+          icon={<ClipboardList aria-hidden="true" />}
+          title={filtered ? "No matching bookings" : "No bookings yet"}
+          description={
+            filtered
+              ? "Try a different reference, customer, or status."
+              : "Orders appear here once they are created."
+          }
+        />
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[40rem] text-sm">
+            <thead className="text-left text-muted-foreground">
+              <tr className="border-b">
+                <th className="py-2 pr-4 font-medium">Reference</th>
+                <th className="py-2 pr-4 font-medium">Customer</th>
+                <th className="py-2 pr-4 font-medium">Status</th>
+                <th className="py-2 pr-4 font-medium">Items</th>
+                <th className="py-2 pr-4 font-medium">Settlement</th>
+                <th className="py-2 font-medium">Created</th>
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order.id} className="border-b last:border-0">
+                  <td className="py-2 pr-4 font-medium">{order.reference}</td>
+                  <td className="py-2 pr-4">
+                    {order.profile.displayName ?? order.profile.email}
+                  </td>
+                  <td className="py-2 pr-4">
+                    {STATUS_LABELS[order.status] ?? order.status}
+                  </td>
+                  <td className="py-2 pr-4">{order.items.length}</td>
+                  <td className="py-2 pr-4">
+                    <SettlementControls
+                      orderId={order.id}
+                      status={order.payment?.status ?? null}
+                      onlineAvailable={onlineAvailable}
+                      provider={order.payment?.provider ?? null}
+                      providerReference={
+                        order.payment?.providerReference ?? null
+                      }
+                    />
+                  </td>
+                  <td className="py-2">
+                    {order.createdAt.toLocaleDateString()}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}

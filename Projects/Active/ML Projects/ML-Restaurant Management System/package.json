@@ -1,0 +1,13 @@
+{
+  "name": "aero-erp",
+  "version": "1.0.0",
+  "description": "Vanilla JS implementation of the Restaurant Management ERP system",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+

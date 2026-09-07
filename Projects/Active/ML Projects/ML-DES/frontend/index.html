@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ML-DES Prototype</title>
+</head>
+<body>
+  <h1>ML-DES Prototype</h1>
+  <div id="status">Checking backend...</div>
+  <script>
+    fetch('/api/ping')
+      .then(r => r.json())
+      .then(j => document.getElementById('status').textContent = 'Backend: ' + j.status)
+      .catch(() => document.getElementById('status').textContent = 'Backend unreachable')
+  </script>
+</body>
+</html>

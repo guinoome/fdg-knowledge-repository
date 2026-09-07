@@ -1,0 +1,477 @@
+Agreed. I have now treated the GitHub repository as the source material and performed the first actual WP-02 audit rather than asking you to supply the existing catalogue.
+
+I inspected the current `main` repository structure, including the template catalogue, invitation builder, website generator, template marketplace/gallery, design-language documentation, seeded catalogue, recommendation logic, media system, music, QR, and existing invitation architecture. The repository already contains substantial groundwork for the evolution we are planning. [ML Printing GitHub repository](https://github.com/guinoome/mlprinting?utm_source=chatgpt.com)
+
+The important finding is this:
+
+> **We do not need to build ML-DEP from zero. We need to evolve the existing template/website engine from static-template-oriented presentation into a motion-first experience engine.**
+
+The current repository explicitly identifies the architectural gap: the website generator currently uses one general layout structure across categories, while the existing design-language analysis calls for template-selected structures and distinct category layouts. It also already identifies shaped photo frames, date rows, photo strips, layered depth, motion, video, music and QR as the next design capabilities. citeturn53file0
+
+And there is an even more important discovery: the repository's seeded catalogue already contains **50 published templates plus one deliberately unpublished draft**, spanning multiple event categories, tiers, orientations, colours, styles and print/website compatibility. The seed file itself says the catalogue content is placeholder material intended for building/reviewing before ML Printing supplies final templates. [Current template seed source](https://github.com/guinoome/mlprinting/blob/main/prisma/seed-data.ts?utm_source=chatgpt.com)
+
+So I am changing our WP-02 approach slightly.
+
+# WP-02 — Motion-First Experience Evolution
+
+New governing rule:
+
+> **Motion graphics / motion design is the default product direction. Static-template treatment is the fallback, not the target.**
+
+A template should not merely have an animated button or fade-in.
+
+The invitation should have an identifiable **motion concept**.
+
+For example:
+
+`Reveal → Transition → Story → Interaction → CTA`
+
+That is the standard we will use to judge the 50.
+
+---
+
+# WP-02.3 — Existing ML-DEP 50 Audit
+
+I found 50 published catalogue templates in the seed data. The current catalogue is much broader than just weddings and birthdays.
+
+It already includes:
+
+Wedding, Birthday, Debut, Christening, Baby Shower, Anniversary, Graduation, Corporate, Family, Fiesta, Reunion, Engagement, Religious, Community, Funeral and Custom.
+
+That is actually a strong foundation.
+
+The problem isn't event coverage.
+
+The problem is **experience depth**.
+
+The existing catalogue is predominantly defined by:
+
+`name + description + colour + style + features + orientation + print compatibility`
+
+rather than:
+
+`visual identity + motion identity + interaction identity + media treatment`.
+
+That is exactly what WP-02 needs to fix.
+
+---
+
+## Existing 50 — first-pass curator decision
+
+I am deliberately making these decisions myself first.
+
+`KEEP` means preserve the concept but evolve it into motion-first.
+
+`ENHANCE` means the concept is good but needs substantial experience work.
+
+`REDESIGN` means the concept is too ordinary or its current identity is insufficiently differentiated.
+
+`MERGE` means its concept overlaps another experience and doesn't need to remain a separate design family.
+
+`REPOSITION` means keep the underlying idea but move it into another experience category.
+
+`RETIRE` means it doesn't justify a distinct catalogue position.
+
+| # | Existing design | Current strength | My decision | Future experience direction |
+|---:|---|---|---|---|
+| 01 | Ivory Lace | Strong classic wedding | **ENHANCE** | Animated lace reveal + editorial storytelling |
+| 02 | Blush Botanical | Strong botanical direction | **ENHANCE** | Organic bloom animation + botanical parallax |
+| 03 | Midnight Gold | Strong luxury identity | **KEEP** | Dark cinematic + metallic motion |
+| 04 | Coastal Linen | Good destination concept | **ENHANCE** | Ocean/parallax + cinematic destination reveal |
+| 05 | Gilded Vow | Strong premium wedding | **KEEP** | Gold-line choreography + cinematic reveal |
+| 06 | Sampaguita | Excellent Filipino identity | **KEEP** | Floral bloom + cultural editorial motion |
+| 07 | Two of Us | Good illustrated concept | **ENHANCE** | Illustrated storybook animation |
+| 08 | Capiz Window | Highly distinctive Filipino concept | **KEEP** | Layered capiz/light/refraction experience |
+| 09 | Confetti Pop | Strong celebration | **ENHANCE** | Kinetic typography + confetti motion |
+| 10 | First Year | Useful baby/first birthday | **ENHANCE** | Photo-led cinematic memory experience |
+| 11 | Cake Smash | Strong children's concept | **ENHANCE** | Playful 3D/balloon/confetti interaction |
+| 12 | Golden Sixty | Good milestone concept | **KEEP** | Luxury numeral reveal + photo story |
+| 13 | Seventh Heaven | Distinctive fantasy | **KEEP** | Fairy-tale interactive reveal |
+| 14 | Neon Eighteen | Strong modern identity | **KEEP** | Full motion-design / neon experience |
+| 15 | Eighteen Roses | Strong Filipino debut relevance | **KEEP** | Interactive 18-rose experience |
+| 16 | Cotillion Waltz | Strong programme potential | **KEEP** | Dance-inspired motion choreography |
+| 17 | Sagala | Strong cultural identity | **KEEP** | Ceremonial floral/cultural motion |
+| 18 | Blue Hour | Strong photographic direction | **KEEP** | Cinematic dusk/portrait experience |
+| 19 | Little Dove | Clean christening | **ENHANCE** | Gentle reveal + floating dove |
+| 20 | Sacred Olive | Good print concept | **REPOSITION** | Premium print/digital keepsake |
+| 21 | Sunday Best | Useful illustrated concept | **ENHANCE** | Illustrated ceremony story |
+| 22 | Little Bloom | Good baby-shower base | **ENHANCE** | Watercolour/bloom motion |
+| 23 | Sweet Pea | Playful baby shower | **ENHANCE** | Soft kinetic/pastel animation |
+| 24 | Sweet Dreams | Strong night-sky idea | **KEEP** | Star-field / constellation interaction |
+| 25 | Golden Jubilee | Strong anniversary | **KEEP** | Then/now cinematic memory |
+| 26 | Paper Anniversary | Good minimalist concept | **ENHANCE** | Editorial paper-motion experience |
+| 27 | Still Us | Strong couple story | **ENHANCE** | Interactive relationship timeline |
+| 28 | Toga and Tassel | Functional graduation | **REDESIGN** | Editorial graduation story |
+| 29 | Summa Minimal | Too generic | **MERGE** | Fold into Editorial Minimal |
+| 30 | Sablay | Strong Filipino identity | **KEEP** | Graduation portrait + achievement reveal |
+| 31 | Quarterly Gala | Strong corporate | **ENHANCE** | Luxury corporate motion |
+| 32 | Product Launch | Strong commercial opportunity | **KEEP** | Product-reveal motion experience |
+| 33 | Boardroom Black | Strong formal corporate | **ENHANCE** | Cinematic awards/gala experience |
+| 34 | Noche Buena | Strong Filipino seasonal | **ENHANCE** | Warm festive motion |
+| 35 | Handaan sa Bahay | Useful generic family | **REPOSITION** | Family Memory / Gathering experience |
+| 36 | Bahay Kubo | Distinctive Filipino | **KEEP** | Interactive Filipino garden experience |
+| 37 | Fiesta Banderitas | Excellent event potential | **KEEP** | High-energy motion flyer experience |
+| 38 | Santo Patrón | Strong community utility | **ENHANCE** | Programme + procession map experience |
+| 39 | Reunion Table | Good family concept | **ENHANCE** | Family story / timeline |
+| 40 | Class of Then | Excellent memory concept | **KEEP** | Then/Now interactive gallery |
+| 41 | Sealed with Yes | Good engagement concept | **ENHANCE** | Interactive envelope/wax seal |
+| 42 | The Long Engagement | Photo-led concept | **MERGE** | Fold into Cinematic Romance |
+| 43 | Paper Lanterns | Good evening atmosphere | **ENHANCE** | Interactive light reveal |
+| 44 | Salamat sa Biyaya | Strong religious utility | **ENHANCE** | Quiet ceremonial motion |
+| 45 | Flores de Mayo | Strong cultural identity | **KEEP** | Floral procession/timeline experience |
+| 46 | Barangay Assembly | Utility rather than experience | **REPOSITION** | Community Event system |
+| 47 | Sinulog Street | Strong local event potential | **KEEP** | Full motion event-poster experience |
+| 48 | In Loving Memory | Sensitive/useful | **KEEP** | Extremely restrained memorial experience |
+| 49 | Eternal Olive | Good memorial keepsake | **ENHANCE** | Memory archive / tribute experience |
+| 50 | Parol Lights | Good seasonal concept | **REPOSITION** | Holiday Event experience |
+
+This is **not yet APPROVED**.
+
+It is my curator recommendation and therefore currently **DRAFT**.
+
+---
+
+# The most important result of the audit
+
+I don't recommend simply replacing these 50 with the proposed 50.
+
+That would throw away too much useful work.
+
+Instead:
+
+### Existing 50
+
+become the **heritage/base catalogue**.
+
+### New trend research
+
+becomes the **next-generation experience catalogue**.
+
+Then we consolidate.
+
+The final library might still be 50 customer-facing experiences, but the underlying architecture could contain substantially more reusable combinations.
+
+For example:
+
+```text id="8sok7s"
+Experience
+    +
+Visual Theme
+    +
+Motion Profile
+    +
+Interaction Profile
+    +
+Media Treatment
+    +
+Event Type
+```
+
+One system can generate many experiences without creating 500 independent applications.
+
+---
+
+# A major discovery: the repository is already prepared for this
+
+The current codebase already has several pieces we need.
+
+The invitation builder has dedicated steps for event, content, hosts, media, personalization, template, venue and preview. [Invitation builder source tree](https://github.com/guinoome/mlprinting/tree/main/features/invitation-builder?utm_source=chatgpt.com)
+
+The website generator already contains:
+
+- hero
+- hero video
+- countdown
+- music
+- RSVP
+- QR
+- photo frames
+- photo strips
+- ornaments
+- typewriter effects
+- invitation shell
+- layout registry
+
+That is extremely useful because we are not inventing the entire experience engine. [Website generator source tree](https://github.com/guinoome/mlprinting/tree/main/features/website-generator?utm_source=chatgpt.com)
+
+The repository's own design-language document specifically identifies shaped photo frames, photo strips, layered depth, motion, video, music and QR as the intended evolution path. [Invitation design language](https://github.com/guinoome/mlprinting/blob/main/docs/invitation-design-language.md?utm_source=chatgpt.com)
+
+This validates our direction.
+
+---
+
+# What I would NOT do
+
+I would **not** create 50 completely different codebases.
+
+I would **not** make every design its own React page.
+
+I would **not** create 50 independent animation implementations.
+
+I would **not** force the customer to configure animation.
+
+I would **not** make Canva the runtime engine.
+
+I would **not** make the 50 designs depend on one giant hard-coded conditional.
+
+Instead:
+
+```text id="d3n7zg"
+                 ML-DEP EXPERIENCE ENGINE
+                          │
+        ┌─────────────────┼──────────────────┐
+        │                 │                  │
+    VISUAL SYSTEM     MOTION SYSTEM    INTERACTION SYSTEM
+        │                 │                  │
+        └─────────────────┼──────────────────┘
+                          │
+                    EXPERIENCE CONFIG
+                          │
+          ┌───────────────┼───────────────┐
+          │               │               │
+       Wedding         Concert         Corporate
+          │               │               │
+       Design A        Design B        Design C
+```
+
+---
+
+# WP-02.4 — Motion-first transformation
+
+I recommend that we now add a **Motion Requirement Score** to the master matrix.
+
+Every design receives:
+
+**M0 — Static**
+
+Only allowed as fallback/print.
+
+**M1 — Ambient Motion**
+
+Subtle continuous movement.
+
+**M2 — Structured Motion**
+
+Multiple coordinated animated elements.
+
+**M3 — Motion Design**
+
+The design itself unfolds through choreography.
+
+**M4 — Cinematic Experience**
+
+The invitation behaves like a short interactive motion piece.
+
+For ML-DEP's new direction:
+
+> **Customer-facing digital invitations should target M2–M4.**
+
+M0 should not be a normal digital product tier.
+
+This is an important product distinction.
+
+A static invitation can still exist as a **print companion**, but the digital product should justify itself through motion and interaction.
+
+---
+
+# WP-02.5 — The experience signature
+
+I am also adding a mandatory field to every design.
+
+Each design must answer:
+
+> **Why would someone remember this invitation?**
+
+Examples:
+
+**Capiz Window**
+
+> The invitation appears to unfold through illuminated capiz panels.
+
+**Neon Eighteen**
+
+> The debut invitation feels like entering a live nightlife event.
+
+**Class of Then**
+
+> Guests move through a visual timeline from old photographs to current memories.
+
+**Sealed with Yes**
+
+> The invitation begins as a sealed engagement announcement and opens into the couple's story.
+
+**Fiesta Banderitas**
+
+> The invitation behaves like a living festival poster.
+
+**Product Launch**
+
+> The invitation reveals the product like a launch campaign.
+
+This field is critical.
+
+If a proposed design cannot answer this question, it probably isn't differentiated enough.
+
+---
+
+# WP-02.6 — The 50 should therefore become experiences, not templates
+
+The catalogue language should eventually change from:
+
+> **Choose a template**
+
+to something closer to:
+
+> **Choose an experience**
+
+The customer may still see:
+
+> Ivory Lace  
+> Midnight Gold  
+> Neon Eighteen
+
+but internally these are **experience configurations**.
+
+That distinction will matter enormously later.
+
+---
+
+# WP-02.7 — My recommended final architecture for the catalogue
+
+I would eventually structure it like this:
+
+```text id="7fgory"
+EXPERIENCE FAMILY
+        │
+        ▼
+DESIGN EXPERIENCE
+        │
+        ├── Visual Identity
+        ├── Motion Profile
+        ├── Interaction Profile
+        ├── Media Profile
+        ├── Event Compatibility
+        ├── Print Compatibility
+        ├── Commercial Tier
+        └── Performance Class
+```
+
+Then:
+
+```text id="p6lbnk"
+Customer
+   │
+   ▼
+What are you celebrating?
+   │
+   ▼
+Recommendation Engine
+   │
+   ▼
+6 relevant experiences
+   │
+   ▼
+Customer chooses
+   │
+   ▼
+Experience Configuration
+   │
+   ▼
+Published Invitation
+```
+
+This is exactly the spoon-fed experience we established earlier.
+
+---
+
+# WP-02.8 — Initial consolidation recommendation
+
+After reviewing the actual catalogue, I recommend that the eventual 50 **not** be exactly the 50 proposed earlier.
+
+I would build the final catalogue from:
+
+**approximately 30–35 evolved existing concepts**
+
++
+
+**approximately 15–20 genuinely new experience concepts**
+
+rather than 50 brand-new designs.
+
+That gives us:
+
+- continuity
+- less wasted work
+- stronger local/Filipino identity
+- more unique experiences
+- better use of existing code
+- lower production burden
+- a genuinely differentiated catalogue
+
+The existing ML-DEP catalogue already has some very valuable concepts that would be difficult to replace with generic trend designs.
+
+**Capiz Window, Sampaguita, Sagala, Eighteen Roses, Cotillion Waltz, Sablay, Bahay Kubo, Flores de Mayo, Sinulog Street and Fiesta Banderitas** are examples.
+
+Those are potentially stronger ML Printing assets than generic "Luxury Gold Wedding #17."
+
+---
+
+# WP-02 current status
+
+I would record it as:
+
+```text id="wtfjub"
+WP-02.1 Trend Research
+STATUS: REVIEW
+
+WP-02.2 Proposed Experience Catalogue
+STATUS: REVIEW
+
+WP-02.3 Existing ML-DEP 50 Audit
+STATUS: REVIEW
+
+WP-02.4 Consolidation
+STATUS: DRAFT
+
+WP-02.5 Final 50
+STATUS: NOT STARTED
+
+WP-02.6 Motion Library
+STATUS: DRAFT
+
+WP-02.7 Interaction Library
+STATUS: DRAFT
+
+WP-02.8 Commercial / Performance Classification
+STATUS: DRAFT
+
+WP-02.9 WP-02 Review
+STATUS: NOT STARTED
+
+WP-02.10 APPROVAL
+STATUS: NOT STARTED
+```
+
+Nothing has been silently treated as baselined.
+
+And I would formally add this GitHub governance rule:
+
+> **A BASELINED artifact is immutable by default. A material change requires a new revision, explicit REVIEW, and re-baselining. Historical baselines remain recoverable through Git history.**
+
+That fits the FDG/FPJIS philosophy very well.
+
+---
+
+# My next action
+
+I recommend I continue **without requiring another decision from you** into:
+
+## WP-02.4 — Consolidation
+
+I will take the 50 existing designs plus the proposed new experience directions and produce the **recommended final 50 experience portfolio**, including:
+
+**Design → Experience Family → Visual Identity → Event Compatibility → Motion Concept → Interactive Experience → Media Treatment → Optional Modules → Digital/Print → Commercial Tier → Performance Class → Motion Level → Experience Signature → Action**
+
+Then I will identify only the genuinely important exceptions where your decision is useful.
+
+That gets us much closer to the 100% objective without turning you into a design-review committee.

@@ -1,0 +1,60 @@
+import "server-only";
+
+/**
+ * Order engine — the public surface. Nothing outside this folder imports
+ * services/orders/* by its internal path.
+ */
+
+export type {
+  OrderStatusValue,
+  OrderItemStatusValue,
+  OrderItemKindValue,
+  PriorityValue,
+} from "./types";
+export { PRIORITY_ORDER } from "./types";
+export {
+  ORDER_TRANSITIONS,
+  ITEM_TRANSITIONS,
+  canTransitionOrder,
+  canTransitionItem,
+  isTerminalOrder,
+  isTerminalItem,
+  TransitionError,
+} from "./status";
+export { deriveOrderStatus } from "./derive";
+export { formatReference, parseReference, nextReference } from "./reference";
+export type { OrderSearchCriteria } from "./search";
+export { parseOrderSearch, buildOrderSearchWhere } from "./search";
+export type { OrderReport } from "./reporting";
+export { summarise, ACTIVE_ORDER_STATUSES } from "./reporting";
+export type {
+  OrderRow,
+  OrderItemRow,
+  BoardItem,
+  OrderWithItems,
+  CreateOrderInput,
+  AddItemInput,
+  MoveResult,
+} from "./repository";
+export {
+  listBoardItems,
+  listOrders,
+  searchOrders,
+  getOrderReport,
+  getOrder,
+  createOrder,
+  addItem,
+  moveItem,
+  moveOrder,
+  assignItem,
+  addNote,
+} from "./repository";
+export type { CustomerOrder } from "./customer";
+export {
+  canCustomerReview,
+  revisionNumberFrom,
+  listOrdersForCustomer,
+  getOrderForCustomer,
+  approveItem,
+  requestRevision,
+} from "./customer";

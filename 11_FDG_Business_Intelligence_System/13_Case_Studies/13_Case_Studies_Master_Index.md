@@ -4,6 +4,8 @@
 
 ## Domain Documents
 - [[13_Case_Studies/FBIS_PayMongo_Phase_1_Case|FBIS_PayMongo_Phase_1_Case]]
+- [[13_Case_Studies/FBIS-CASE-DIZLOG-001 - DizLog Business Platform Reference|DizLog Business Platform Reference]]
+- [[13_Case_Studies/FBIS-CASE-ODOO-OGIS-001 - Odoo OGIS Hospitality Reference|Odoo OGIS Hospitality Reference]]
 
 ---
 
@@ -16,3 +18,5 @@
 ## Direct Child Documents
 
 - [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS_PayMongo_Phase_1_Case|FBIS PayMongo Phase 1 Case]]
+- [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DIZLOG-001 - DizLog Business Platform Reference|DizLog Business Platform Reference]]
+- [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-ODOO-OGIS-001 - Odoo OGIS Hospitality Reference|Odoo OGIS Hospitality Reference]]

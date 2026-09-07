@@ -1,0 +1,149 @@
+import { describe, expect, it } from "vitest";
+import {
+  placeholderCover,
+  placeholderUrl,
+  isPlaceholderSurface,
+  PLACEHOLDER_SIZES,
+} from "./placeholder-art";
+
+const base = {
+  seed: "rustic-garden",
+  label: "Rustic Garden",
+  width: 600,
+  height: 750,
+};
+
+describe("placeholderCover", () => {
+  it("is deterministic — same seed, same picture", () => {
+    expect(placeholderCover(base)).toBe(placeholderCover(base));
+  });
+
+  it("gives different seeds different output", () => {
+    expect(placeholderCover(base)).not.toBe(
+      placeholderCover({ ...base, seed: "modern-ivory" }),
+    );
+  });
+
+  it("renders the label and an initial glyph", () => {
+    const svg = placeholderCover(base);
+    expect(svg).toContain("Rustic Garden");
+    expect(svg).toContain(">R<");
+  });
+
+  it("renders an optional caption in uppercase", () => {
+    expect(placeholderCover({ ...base, caption: "Wedding" })).toContain(
+      "WEDDING",
+    );
+  });
+
+  it("falls back to a neutral category when no caption is given", () => {
+    const svg = placeholderCover(base);
+    // No category supplied → the cover still names itself rather than leaving a
+    // blank line. The '>' anchor avoids matching the 'AN INVITATION' eyebrow.
+    expect(svg).toContain(">INVITATION<");
+  });
+
+  it("matches a family from a display name, not just a slug", () => {
+    // prisma/seed.ts passes the category's DISPLAY NAME ("Baby Shower"), while
+    // the marketplace passes its slug ("baby-shower"). Both must land on the
+    // same family: when they did not, "Memorial" fell through to the
+    // celebratory custom monogram.
+    const bySlug = placeholderCover({ ...base, caption: "baby-shower" });
+    const byName = placeholderCover({ ...base, caption: "Baby Shower" });
+    expect(byName).toContain("A LITTLE ONE IS ON THE WAY");
+    expect(bySlug).toContain("A LITTLE ONE IS ON THE WAY");
+  });
+
+  it("treats 'Memorial' as the funeral family — never the celebratory fallback", () => {
+    const svg = placeholderCover({ ...base, caption: "Memorial" });
+    expect(svg).toContain("IN LOVING MEMORY");
+    expect(svg).not.toContain("AN INVITATION");
+  });
+
+  it("keys the visual family off the caption", () => {
+    const wedding = placeholderCover({ ...base, caption: "Wedding" });
+    const corporate = placeholderCover({ ...base, caption: "Corporate" });
+    // Different categories get genuinely different covers, not a recolour.
+    expect(wedding).not.toBe(corporate);
+    expect(wedding).toContain("TOGETHER WITH OUR FAMILIES");
+    expect(corporate).toContain("YOU ARE CORDIALLY INVITED");
+  });
+
+  it("carries the requested dimensions", () => {
+    const svg = placeholderCover({ ...base, width: 1280, height: 800 });
+    expect(svg).toContain('viewBox="0 0 1280 800"');
+  });
+
+  it("escapes XML in the label — a template name is data, not markup", () => {
+    const svg = placeholderCover({ ...base, label: 'Tom & "Jane" <script>' });
+
+    expect(svg).toContain("Tom &amp; &quot;Jane&quot; &lt;script&gt;");
+    expect(svg).not.toContain("<script>");
+  });
+
+  it("escapes XML in the caption too", () => {
+    const svg = placeholderCover({ ...base, caption: "A & B" });
+    expect(svg).toContain("A &amp; B");
+  });
+
+  it("survives an empty label rather than emitting a broken glyph", () => {
+    const svg = placeholderCover({ ...base, label: "" });
+    expect(svg).toContain("·");
+    expect(svg).toContain("<svg");
+  });
+
+  it("carries an accessible label", () => {
+    expect(placeholderCover(base)).toContain('role="img"');
+  });
+});
+
+describe("placeholderUrl", () => {
+  it("builds a route-handler URL carrying the label", () => {
+    const url = placeholderUrl("cover", "rustic-garden", "Rustic Garden");
+    expect(url).toBe(
+      "/api/placeholder/cover/rustic-garden?label=Rustic+Garden",
+    );
+  });
+
+  it("includes the caption when given", () => {
+    expect(placeholderUrl("cover", "a", "A", "Wedding")).toContain(
+      "caption=Wedding",
+    );
+  });
+
+  it("encodes a seed with URL-significant characters", () => {
+    expect(placeholderUrl("cover", "a/b?c", "X")).toContain("a%2Fb%3Fc");
+  });
+});
+
+describe("PLACEHOLDER_SIZES", () => {
+  it("covers every surface Ph2 §6 requires", () => {
+    expect(Object.keys(PLACEHOLDER_SIZES)).toEqual([
+      "cover",
+      "desktop",
+      "mobile",
+      "print",
+    ]);
+  });
+
+  it("gives mobile a portrait aspect and desktop a landscape one", () => {
+    expect(PLACEHOLDER_SIZES.mobile.height).toBeGreaterThan(
+      PLACEHOLDER_SIZES.mobile.width,
+    );
+    expect(PLACEHOLDER_SIZES.desktop.width).toBeGreaterThan(
+      PLACEHOLDER_SIZES.desktop.height,
+    );
+  });
+});
+
+describe("isPlaceholderSurface", () => {
+  it("accepts known surfaces", () => {
+    expect(isPlaceholderSurface("cover")).toBe(true);
+    expect(isPlaceholderSurface("print")).toBe(true);
+  });
+
+  it("rejects anything else — this guards a route param", () => {
+    expect(isPlaceholderSurface("../../etc/passwd")).toBe(false);
+    expect(isPlaceholderSurface("")).toBe(false);
+  });
+});

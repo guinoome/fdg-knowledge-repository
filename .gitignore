@@ -47,6 +47,15 @@ dist/
 build/
 .cache/
 
+# ---- Local reference archives ---------------------------------------------
+# Imported source material that must remain available locally but must never
+# be included in the GitHub mirror (archives, nested Git history, or files
+# requiring separate secret review).
+Projects/Local_Archive/
+# The installer plugin is retained as a local reference only; do not mirror its
+# independent Git checkout through this repository.
+Projects/Active/AI/Installer/codex-plugin-cc/
+
 # ---- OS --------------------------------------------------------------------
 .DS_Store
 Thumbs.db

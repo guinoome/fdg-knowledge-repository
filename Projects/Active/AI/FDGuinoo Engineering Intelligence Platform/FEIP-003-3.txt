@@ -1,0 +1,369 @@
+# FEIP-003.md
+# Engineering Disciplines & Capability Framework
+## Part 3 of N (Final)
+
+---
+
+# 19. Discipline Governance
+
+Each engineering discipline shall operate under a formal governance model to ensure technical consistency, quality, and accountability throughout the FEIP platform.
+
+Governance applies to:
+
+- Engineering calculations
+- Standards implementation
+- Equipment libraries
+- Material libraries
+- Report templates
+- Workflow definitions
+- Validation rules
+- Engineering terminology
+- Discipline-specific user interfaces
+
+---
+
+## 19.1 Discipline Steward
+
+Each discipline shall have an assigned Discipline Steward.
+
+The Discipline Steward is responsible for:
+
+- approving engineering methodologies;
+- validating calculation implementations;
+- reviewing standards updates;
+- maintaining engineering terminology;
+- approving discipline-specific templates;
+- coordinating cross-discipline technical issues.
+
+A Discipline Steward may be supported by multiple Subject Matter Experts (SMEs).
+
+---
+
+## 19.2 Subject Matter Experts (SMEs)
+
+SMEs provide technical expertise within specialized domains.
+
+Examples:
+
+Mechanical Engineering
+
+- HVAC
+- Refrigeration
+- Pumps
+- Steam Systems
+- Compressed Air
+
+Electrical Engineering
+
+- Power Systems
+- Lighting
+- Protection Systems
+- Renewable Energy
+
+Fire Protection Engineering
+
+- Fire Hydraulics
+- Fire Pumps
+- Detection Systems
+- Suppression Systems
+
+SMEs review engineering content but do not independently modify platform architecture.
+
+---
+
+# 20. Engineering Knowledge Ownership
+
+Engineering knowledge shall be treated as a governed asset.
+
+Every knowledge object shall have:
+
+- an owner;
+- a version;
+- a validation status;
+- an approval history;
+- a review schedule.
+
+Knowledge objects include:
+
+- engineering formulas;
+- engineering constants;
+- material properties;
+- equipment specifications;
+- engineering guidance;
+- report templates;
+- standards interpretations.
+
+---
+
+## 20.1 Knowledge Lifecycle
+
+Every engineering knowledge object shall progress through a controlled lifecycle.
+
+```
+Draft
+   │
+Technical Review
+   │
+Engineering Approval
+   │
+Published
+   │
+Periodic Review
+   │
+Revised
+   │
+Archived
+```
+
+Superseded knowledge shall remain available for historical project traceability.
+
+---
+
+# 21. Cross-Discipline Workflow Framework
+
+Engineering disciplines shall collaborate through standardized workflows.
+
+The objective is to minimize duplicate work while maintaining discipline ownership.
+
+---
+
+## 21.1 Conceptual Workflow
+
+```
+Client Requirements
+        │
+        ▼
+Architectural Design
+        │
+        ▼
+Civil Engineering
+        │
+        ▼
+Structural Engineering
+        │
+        ▼
+Mechanical Engineering
+        │
+        ▼
+Electrical Engineering
+        │
+        ▼
+Plumbing Engineering
+        │
+        ▼
+Fire Protection Engineering
+        │
+        ▼
+Integrated Engineering Review
+        │
+        ▼
+Construction Documentation
+        │
+        ▼
+Commissioning
+        │
+        ▼
+Facility Engineering
+```
+
+The sequence above represents a typical workflow.
+
+Projects may configure alternative workflows depending on project scope.
+
+---
+
+## 21.2 Shared Coordination Objects
+
+Disciplines shall coordinate using shared engineering objects rather than duplicate information.
+
+Examples include:
+
+- Project
+- Building
+- Floor
+- Zone
+- Room
+- Equipment
+- Utility Connection
+- Asset
+- Drawing
+- Specification
+- Issue
+- Inspection
+
+Ownership of the object remains with the designated module while access is controlled through permissions.
+
+---
+
+# 22. Discipline Configuration
+
+Each engineering discipline shall support configurable operational settings.
+
+Examples include:
+
+### Mechanical Engineering
+
+- preferred pressure units;
+- preferred temperature units;
+- default pipe roughness;
+- preferred pump manufacturers.
+
+---
+
+### Electrical Engineering
+
+- default system voltage;
+- preferred conductor material;
+- default frequency;
+- default cable insulation.
+
+---
+
+### Fire Protection Engineering
+
+- preferred hazard classifications;
+- default design density;
+- fire water safety factors;
+- preferred sprinkler types.
+
+---
+
+### Plumbing Engineering
+
+- default fixture units;
+- water demand methodology;
+- preferred pipe materials;
+- drainage standards.
+
+Configuration shall be managed through organizational settings rather than hard-coded application logic.
+
+---
+
+# 23. Future Discipline Expansion Strategy
+
+FEIP is designed to accommodate additional engineering disciplines without requiring fundamental architectural changes.
+
+Potential future disciplines include:
+
+- Environmental Engineering
+- Chemical Engineering
+- Mining Engineering
+- Petroleum Engineering
+- Aerospace Engineering
+- Railway Engineering
+- Agricultural Engineering
+- Biomedical Engineering
+- Industrial Engineering
+- Telecommunications Engineering
+- Geotechnical Engineering
+- Process Engineering
+
+Each new discipline shall:
+
+- integrate with CORE;
+- use shared engineering objects;
+- comply with FEIP governance;
+- expose standardized APIs;
+- support the common reporting framework.
+
+---
+
+# 24. Capability Maturity Model
+
+Engineering disciplines shall evolve through defined capability levels.
+
+| Level | Description |
+|--------|-------------|
+| Level 1 | Basic engineering calculations |
+| Level 2 | Engineering reports and documentation |
+| Level 3 | Workflow integration |
+| Level 4 | Cross-discipline collaboration |
+| Level 5 | Optimization and analytics |
+| Level 6 | Asset lifecycle integration |
+| Level 7 | Engineering intelligence integration |
+
+This maturity model provides a roadmap for progressive enhancement while preserving architectural consistency.
+
+---
+
+# 25. Design Principles for New Disciplines
+
+Every newly introduced engineering discipline shall comply with the following principles:
+
+1. Reuse shared CORE services.
+2. Avoid duplication of existing calculations.
+3. Use standardized engineering terminology where applicable.
+4. Integrate with the shared project information model.
+5. Implement version-controlled calculation libraries.
+6. Reference centralized standards.
+7. Participate in multidisciplinary workflows.
+8. Support common reporting formats.
+9. Maintain auditability.
+10. Preserve backward compatibility whenever practical.
+
+---
+
+# 26. Dependencies
+
+This specification is referenced by:
+
+- FEIP-300 Series (CORE Engine Specifications)
+- FEIP-400 Series (Engineering Calculation Modules)
+- FEIP-500 Series (Business Modules)
+- FEIP-600 Series (Shared Platform Services)
+- FEIP-700 Series (FEIP Studio)
+- FEIP-800 Series (API Specifications)
+- FEIP-900 Series (Database Specifications)
+
+All engineering modules shall conform to the discipline framework defined in this document.
+
+---
+
+# 27. Acceptance Criteria
+
+This document shall be considered complete when:
+
+- Supported engineering disciplines are defined.
+- Capability boundaries are documented.
+- Shared capability model is approved.
+- Governance framework is established.
+- Knowledge ownership is defined.
+- Cross-discipline workflows are documented.
+- Configuration principles are approved.
+- Future expansion strategy is documented.
+- Capability maturity model is established.
+
+Compliance with this document shall be mandatory for all engineering modules.
+
+---
+
+# 28. Revision History
+
+| Version | Date | Description |
+|----------|------|-------------|
+| 1.0 | 2026-07-02 | Initial release of Engineering Disciplines & Capability Framework. |
+
+---
+
+# End of Document
+
+**Document Status:** COMPLETE
+
+---
+
+## FEIP Core Specification Progress
+
+| Document | Status |
+|----------|--------|
+| FEIP-000 Project Vision & Product Charter | ✅ Complete |
+| FEIP-001 Product Philosophy & Engineering Design Principles | ✅ Complete |
+| FEIP-002 CORE Integrated Engineering Framework | ✅ Complete |
+| FEIP-003 Engineering Disciplines & Capability Framework | ✅ Complete |
+
+---
+
+## Next Sequential Document
+
+**FEIP-004.md — Engineering Terminology & Common Data Dictionary**
+
+This specification will establish the canonical engineering vocabulary used across FEIP, including naming conventions, entity definitions, engineering object taxonomy, units of measure, abbreviations, metadata standards, and master data rules. It will serve as the foundation for the database schema, APIs, UI labels, reports, and engineering calculations, ensuring every module uses a consistent language throughout the platform.

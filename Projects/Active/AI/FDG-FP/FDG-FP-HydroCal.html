@@ -1,0 +1,2910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FDGuinoo Fire Protection Calculator — FDG-FP</title>
+<meta name="description" content="Professional Fire Protection Engineering Design Suite — Hydraulic Calculator, Sprinkler, Fire Pump, Water Tank, Standpipe, PDF Reports">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{
+  --primary:#D32F2F;--primary-light:#EF5350;--primary-dark:#B71C1C;
+  --primary-alpha:rgba(211,47,47,.12);--primary-alpha2:rgba(211,47,47,.06);
+  --bg:#F4F5F7;--surface:#FFFFFF;--card:#FFFFFF;
+  --sidebar-bg:#1A1A2E;--sidebar-text:#9090B0;--sidebar-active:#FFFFFF;
+  --text:#1A1A2E;--text2:#5A5A7A;--text3:#9090B0;
+  --border:#E2E4EA;--border-light:#F0F1F5;
+  --success:#2E7D32;--success-bg:#E8F5E9;
+  --warning:#E65100;--warning-bg:#FFF3E0;
+  --error:#C62828;--error-bg:#FFEBEE;
+  --info:#1565C0;--info-bg:#E3F2FD;
+  --shadow:0 2px 8px rgba(26,26,46,.07);
+  --shadow-md:0 4px 20px rgba(26,26,46,.12);
+  --shadow-lg:0 8px 40px rgba(26,26,46,.15);
+  --radius:10px;--radius-sm:6px;--radius-lg:16px;
+  --sidebar-w:265px;--topbar-h:62px;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --transition:all .25s cubic-bezier(.4,0,.2,1);
+  --font-size:14px;
+}
+[data-theme="dark"]{
+  --bg:#0D0D1A;--surface:#161625;--card:#1C1C30;
+  --sidebar-bg:#09091A;--text:#E0E0F0;--text2:#9090B0;--text3:#5A5A7A;
+  --border:#2A2A45;--border-light:#1C1C30;
+  --primary:#EF5350;--primary-light:#FF8A80;--primary-dark:#D32F2F;
+  --primary-alpha:rgba(239,83,80,.18);--primary-alpha2:rgba(239,83,80,.08);
+  --success:#66BB6A;--success-bg:rgba(102,187,106,.15);
+  --warning:#FFA726;--warning-bg:rgba(255,167,38,.15);
+  --error:#EF5350;--error-bg:rgba(239,83,80,.15);
+  --info:#42A5F5;--info-bg:rgba(66,165,245,.15);
+  --shadow:0 2px 8px rgba(0,0,0,.4);
+  --shadow-md:0 4px 20px rgba(0,0,0,.5);
+  --shadow-lg:0 8px 40px rgba(0,0,0,.6);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:var(--font-size);scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;transition:background .3s,color .3s}
+h1{font-size:1.7rem;font-weight:800;color:var(--text);letter-spacing:-.02em}
+h2{font-size:1.3rem;font-weight:700;color:var(--text)}
+h3{font-size:1.05rem;font-weight:600;color:var(--text)}
+a{color:var(--primary);text-decoration:none}
+
+/* === SIDEBAR === */
+.sidebar{width:var(--sidebar-w);height:100vh;position:fixed;left:0;top:0;background:var(--sidebar-bg);display:flex;flex-direction:column;z-index:100;transition:var(--transition);overflow:hidden;box-shadow:var(--shadow-md)}
+.sidebar-brand{padding:18px 20px 14px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:12px;flex-shrink:0}
+.sidebar-brand .logo{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),#FF6B6B);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:#fff;box-shadow:0 4px 12px rgba(211,47,47,.4)}
+.sidebar-brand .brand-text{color:#fff;font-weight:800;font-size:.95rem;letter-spacing:-.01em}
+.sidebar-brand .brand-sub{color:var(--sidebar-text);font-size:.65rem;font-weight:400;margin-top:1px}
+.sidebar-nav{flex:1;overflow-y:auto;padding:10px 0 20px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.08) transparent}
+.sidebar-nav::-webkit-scrollbar{width:3px}
+.sidebar-nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
+.nav-section{padding:10px 20px 3px;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.25);margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:11px;padding:9px 20px;color:var(--sidebar-text);cursor:pointer;transition:var(--transition);font-size:.82rem;font-weight:500;border-left:3px solid transparent;position:relative;border-radius:0 8px 8px 0;margin:1px 8px 1px 0}
+.nav-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.nav-item.active{background:linear-gradient(90deg,rgba(211,47,47,.2),rgba(211,47,47,.05));color:#fff;border-left-color:var(--primary)}
+.nav-item .icon{width:18px;text-align:center;font-size:.95rem;flex-shrink:0}
+.nav-badge{position:absolute;right:12px;background:var(--primary);color:#fff;font-size:.55rem;padding:2px 5px;border-radius:10px;font-weight:700}
+.sidebar-footer{padding:12px 20px;border-top:1px solid rgba(255,255,255,.07);font-size:.65rem;color:rgba(255,255,255,.2);flex-shrink:0}
+
+/* === MAIN === */
+.main{margin-left:var(--sidebar-w);flex:1;min-height:100vh;display:flex;flex-direction:column;transition:margin-left .25s}
+
+/* === TOPBAR === */
+.topbar{height:var(--topbar-h);background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:50;box-shadow:var(--shadow)}
+.topbar-left{display:flex;align-items:center;gap:14px}
+.breadcrumb{font-size:.82rem;color:var(--text3);display:flex;align-items:center;gap:6px}
+.breadcrumb span{color:var(--primary);font-weight:600}
+.topbar-right{display:flex;align-items:center;gap:6px}
+.topbar-btn{height:36px;min-width:36px;border:none;background:transparent;border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text2);font-size:1rem;transition:var(--transition);padding:0 8px;font-family:var(--font);font-size:.78rem;font-weight:500;gap:5px}
+.topbar-btn:hover{background:var(--primary-alpha);color:var(--primary)}
+.topbar-btn.active{background:var(--primary-alpha);color:var(--primary)}
+.search-box{display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:0 12px;height:36px;width:220px;transition:var(--transition)}
+.search-box:focus-within{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-alpha)}
+.search-box input{border:none;background:transparent;outline:none;font-family:var(--font);font-size:.8rem;color:var(--text);width:100%}
+
+/* === PROGRESS === */
+.progress-bar-container{height:3px;background:var(--border-light);position:sticky;top:var(--topbar-h);z-index:49}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--primary-dark),var(--primary),var(--primary-light));transition:width .6s ease;border-radius:0 2px 2px 0;position:relative}
+.progress-bar-fill::after{content:'';position:absolute;right:0;top:0;height:100%;width:40px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4));animation:shimmer 2s infinite}
+@keyframes shimmer{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+/* === CONTENT === */
+.content{flex:1;padding:24px;max-width:1440px;width:100%;margin:0 auto}
+.page{display:none;animation:pageIn .35s cubic-bezier(.4,0,.2,1)}
+.page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* === PAGE HEADER === */
+.page-header{margin-bottom:22px}
+.page-header h1{margin-bottom:4px}
+.page-header p{color:var(--text2);font-size:.88rem}
+
+/* === CARDS === */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);transition:var(--transition);position:relative}
+.card:hover{box-shadow:var(--shadow-md)}
+.card.collapsed .card-body{display:none}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border-light)}
+.card-header h3{display:flex;align-items:center;gap:8px;margin:0}
+.card-header .icon{color:var(--primary)}
+.card-actions{display:flex;gap:6px;align-items:center}
+.collapse-btn{width:28px;height:28px;border:1px solid var(--border);border-radius:6px;cursor:pointer;background:transparent;color:var(--text3);display:flex;align-items:center;justify-content:center;transition:var(--transition);font-size:.9rem}
+.collapse-btn:hover{background:var(--primary-alpha);border-color:var(--primary);color:var(--primary)}
+.card.collapsed .collapse-btn{transform:rotate(180deg)}
+
+/* === GRID === */
+.grid{display:grid;gap:18px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+
+/* === STAT CARDS === */
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px;display:flex;align-items:center;gap:14px;transition:var(--transition);cursor:pointer;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 70%,var(--primary-alpha2));pointer-events:none}
+.stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.stat-card .stat-icon{width:46px;height:46px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.stat-card .stat-icon.red{background:var(--error-bg);color:var(--error)}
+.stat-card .stat-icon.blue{background:var(--info-bg);color:var(--info)}
+.stat-card .stat-icon.green{background:var(--success-bg);color:var(--success)}
+.stat-card .stat-icon.orange{background:var(--warning-bg);color:var(--warning)}
+.stat-card .stat-icon.purple{background:rgba(103,58,183,.12);color:#6200EA}
+.stat-info .stat-value{font-size:1.4rem;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.stat-info .stat-label{font-size:.72rem;color:var(--text2);margin-top:3px;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.stat-info .stat-sub{font-size:.7rem;color:var(--text3);margin-top:2px}
+
+/* === FORMS === */
+.form-group{margin-bottom:14px}
+.form-label{display:flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;color:var(--text2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.6px}
+.form-label .tip{width:14px;height:14px;border-radius:50%;background:var(--border);color:var(--text3);display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;cursor:help;font-weight:700;flex-shrink:0;transition:var(--transition)}
+.form-label .tip:hover{background:var(--info-bg);color:var(--info)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:9px 13px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:.88rem;color:var(--text);background:var(--surface);transition:var(--transition);outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-alpha);background:var(--card)}
+.form-group textarea{resize:vertical;min-height:72px}
+.form-group .hint{font-size:.68rem;color:var(--text3);margin-top:4px;display:flex;align-items:center;gap:4px}
+.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px}
+.input-group{position:relative}
+.input-group input{padding-right:52px}
+.input-unit{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:.72rem;color:var(--text3);font-weight:600;pointer-events:none;background:var(--bg);padding:2px 4px;border-radius:3px}
+
+/* === BUTTONS === */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--transition);letter-spacing:.2px;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;box-shadow:0 2px 8px rgba(211,47,47,.3)}
+.btn-primary:hover{background:linear-gradient(135deg,var(--primary-dark),var(--primary));box-shadow:0 4px 16px rgba(211,47,47,.4);transform:translateY(-1px)}
+.btn-primary:active{transform:translateY(0)}
+.btn-secondary{background:var(--bg);color:var(--text);border:1.5px solid var(--border)}
+.btn-secondary:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-alpha2)}
+.btn-success{background:var(--success);color:#fff}
+.btn-success:hover{filter:brightness(1.1)}
+.btn-warning{background:var(--warning);color:#fff}
+.btn-danger{background:var(--error);color:#fff}
+.btn-danger:hover{filter:brightness(1.1)}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid transparent}
+.btn-ghost:hover{background:var(--primary-alpha);color:var(--primary);border-color:var(--primary-alpha)}
+.btn-sm{padding:5px 11px;font-size:.75rem}
+.btn-xs{padding:3px 8px;font-size:.7rem}
+.btn-icon{width:34px;height:34px;padding:0;justify-content:center;border-radius:var(--radius-sm)}
+.btn-group{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:16px}
+
+/* === TABLES === */
+.table-container{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.83rem}
+thead{background:var(--bg)}
+th{padding:10px 14px;text-align:left;font-weight:700;color:var(--text2);font-size:.7rem;text-transform:uppercase;letter-spacing:.6px;border-bottom:2px solid var(--border);white-space:nowrap}
+td{padding:9px 14px;border-bottom:1px solid var(--border-light);vertical-align:middle}
+tbody tr:hover{background:var(--primary-alpha2)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr{transition:background .15s}
+td input,td select{padding:4px 8px;border:1.5px solid var(--border);border-radius:4px;font-family:var(--font);font-size:.8rem;color:var(--text);background:var(--surface);outline:none;transition:border-color .2s}
+td input:focus,td select:focus{border-color:var(--primary)}
+
+/* === TAGS === */
+.tag{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:.68rem;font-weight:700;letter-spacing:.2px}
+.tag-pass{background:var(--success-bg);color:var(--success)}
+.tag-fail{background:var(--error-bg);color:var(--error)}
+.tag-warn{background:var(--warning-bg);color:var(--warning)}
+.tag-info{background:var(--info-bg);color:var(--info)}
+.tag-neutral{background:var(--border);color:var(--text2)}
+
+/* === CALC BLOCK === */
+.calc-block{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;margin:12px 0;font-family:'Courier New',monospace;font-size:.82rem;line-height:1.9}
+.calc-block .formula{color:var(--primary);font-weight:700;font-size:.84rem}
+.calc-block .step{color:var(--text2)}
+.calc-block .answer{color:var(--success);font-weight:700;font-size:.9rem}
+.calc-block .remark{color:var(--info);font-style:italic;font-family:var(--font);font-size:.78rem;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)}
+
+/* === TOAST === */
+.toast-container{position:fixed;top:74px;right:22px;z-index:9999;display:flex;flex-direction:column;gap:7px}
+.toast{padding:12px 18px;border-radius:var(--radius);box-shadow:var(--shadow-lg);font-size:.83rem;font-weight:500;display:flex;align-items:center;gap:9px;animation:toastIn .3s cubic-bezier(.34,1.56,.64,1);min-width:270px;max-width:340px;backdrop-filter:blur(10px)}
+@keyframes toastIn{from{opacity:0;transform:translateX(50px) scale(.95)}to{opacity:1;transform:translateX(0) scale(1)}}
+.toast-success{background:rgba(46,125,50,.95);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.toast-error{background:rgba(198,40,40,.95);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.toast-warning{background:rgba(230,81,0,.95);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.toast-info{background:rgba(21,101,192,.95);color:#fff;border:1px solid rgba(255,255,255,.15)}
+
+/* === MODAL === */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal-overlay.active{display:flex;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal{background:var(--surface);border-radius:var(--radius-lg);padding:28px;max-width:540px;width:92%;box-shadow:var(--shadow-lg);max-height:85vh;overflow-y:auto;animation:modalIn .25s cubic-bezier(.34,1.56,.64,1)}
+@keyframes modalIn{from{opacity:0;transform:scale(.94) translateY(-10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+
+/* === TOOLTIP === */
+[data-tip]{position:relative}
+[data-tip]::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) scale(.92);background:#1A1A2E;color:#E0E0F0;padding:6px 11px;border-radius:var(--radius-sm);font-size:.7rem;white-space:nowrap;opacity:0;pointer-events:none;transition:all .2s;z-index:400;font-family:var(--font);box-shadow:var(--shadow-md);border:1px solid rgba(255,255,255,.1)}
+[data-tip]:hover::after{opacity:1;transform:translateX(-50%) scale(1)}
+
+/* === SELECTION CARDS === */
+.selection-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
+.selection-card{border:2px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center;cursor:pointer;transition:var(--transition);background:var(--card)}
+.selection-card:hover{border-color:var(--primary-light);background:var(--primary-alpha2);transform:translateY(-1px)}
+.selection-card.selected{border-color:var(--primary);background:var(--primary-alpha);box-shadow:0 0 0 3px var(--primary-alpha)}
+.selection-card .sel-icon{font-size:1.7rem;margin-bottom:7px}
+.selection-card .sel-title{font-weight:700;font-size:.82rem}
+.selection-card .sel-desc{font-size:.66rem;color:var(--text3);margin-top:3px;line-height:1.4}
+
+/* === TABS === */
+.tabs{display:flex;gap:2px;border-bottom:2px solid var(--border);margin-bottom:20px;overflow-x:auto}
+.tab{padding:9px 16px;font-size:.82rem;font-weight:500;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:var(--transition);white-space:nowrap;border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+.tab:hover{color:var(--text);background:var(--primary-alpha2)}
+.tab.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:700;background:var(--primary-alpha2)}
+.tab-content{display:none}
+.tab-content.active{display:block;animation:pageIn .3s ease}
+
+/* === CHART === */
+.chart-container{position:relative;height:300px;width:100%}
+.chart-container.tall{height:380px}
+
+/* === STATUS BAR === */
+.status-bar{height:30px;background:var(--surface);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:.68rem;color:var(--text3);position:sticky;bottom:0;z-index:40}
+.status-bar .status-dot{width:7px;height:7px;border-radius:50%;background:var(--success);display:inline-block;margin-right:5px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* === HISTORY PANEL === */
+.history-panel{position:fixed;right:-340px;top:var(--topbar-h);height:calc(100vh - var(--topbar-h) - 30px);width:320px;background:var(--surface);border-left:1px solid var(--border);z-index:80;transition:right .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:var(--shadow-lg)}
+.history-panel.open{right:0}
+.history-panel-header{padding:16px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.history-list{flex:1;overflow-y:auto;padding:10px}
+.history-item{padding:10px 12px;border-radius:var(--radius-sm);margin-bottom:6px;cursor:pointer;border:1px solid var(--border);font-size:.78rem;transition:var(--transition);background:var(--bg)}
+.history-item:hover{border-color:var(--primary);background:var(--primary-alpha2);color:var(--primary)}
+.history-item .hi-time{font-size:.65rem;color:var(--text3);margin-top:2px}
+.history-item .hi-label{font-weight:600;color:var(--text)}
+
+/* === ALERTS === */
+.alert{border-radius:var(--radius);padding:12px 16px;margin:12px 0;display:flex;align-items:flex-start;gap:10px;font-size:.82rem;border:1px solid transparent}
+.alert-pass{background:var(--success-bg);color:var(--success);border-color:rgba(46,125,50,.2)}
+.alert-fail{background:var(--error-bg);color:var(--error);border-color:rgba(198,40,40,.2)}
+.alert-warn{background:var(--warning-bg);color:var(--warning);border-color:rgba(230,81,0,.2)}
+.alert-info{background:var(--info-bg);color:var(--info);border-color:rgba(21,101,192,.2)}
+.alert-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
+.alert-content strong{display:block;margin-bottom:2px}
+
+/* === DIVIDER === */
+.divider{border:none;border-top:1px solid var(--border);margin:20px 0}
+.section-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--border-light)}
+
+/* === RESPONSIVE === */
+@media(max-width:1200px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.open{transform:translateX(0)}
+  .main{margin-left:0}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  #menuToggle{display:flex!important}
+}
+@media(max-width:620px){
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .content{padding:14px}
+  .form-row{grid-template-columns:1fr}
+}
+/* === SCROLL === */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--text3)}
+/* === PRINT === */
+@media print{.sidebar,.topbar,.status-bar,.progress-bar-container,.history-panel,.toast-container{display:none!important}.main{margin-left:0!important}.content{padding:0!important}}
+/* === ANIMATIONS === */
+.fade-in{animation:pageIn .4s ease}
+.result-card{animation:resultPop .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes resultPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.calc-row{animation:slideIn .3s ease both}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+/* === HOME === */
+.welcome-banner{background:linear-gradient(135deg,var(--primary-dark),var(--primary),var(--primary-light));border-radius:var(--radius-lg);padding:24px 28px;color:#fff;margin-bottom:20px;position:relative;overflow:hidden}
+.welcome-banner::before{content:'🔥';position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:4rem;opacity:.15}
+.welcome-banner h2{font-size:1.3rem;margin-bottom:4px}
+.welcome-banner p{font-size:.85rem;opacity:.85}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="logo">FP</div>
+    <div>
+      <div class="brand-text">FDGuinoo</div>
+      <div class="brand-sub">Fire Protection Calculator</div>
+    </div>
+  </div>
+  <nav class="sidebar-nav" id="sidebarNav">
+    <div class="nav-section">Main</div>
+    <div class="nav-item active" data-page="home"><span class="icon">🏠</span>Dashboard</div>
+    <div class="nav-item" data-page="project"><span class="icon">📋</span>Project Information</div>
+    <div class="nav-section">Analysis</div>
+    <div class="nav-item" data-page="firecode"><span class="icon">📜</span>Fire Code Selection</div>
+    <div class="nav-item" data-page="occupancy"><span class="icon">🏢</span>Occupancy Classification</div>
+    <div class="nav-item" data-page="hazard"><span class="icon">⚠️</span>Hazard Classification</div>
+    <div class="nav-item" data-page="watersupply"><span class="icon">💧</span>Water Supply</div>
+    <div class="nav-section">Calculations</div>
+    <div class="nav-item" data-page="sprinkler"><span class="icon">🔧</span>Sprinkler Calculator</div>
+    <div class="nav-item" data-page="hydraulic"><span class="icon">📐</span>Hydraulic Calculator</div>
+    <div class="nav-item" data-page="pipesize"><span class="icon">🔩</span>Pipe Sizing</div>
+    <div class="nav-item" data-page="standpipe"><span class="icon">🚿</span>Standpipe System</div>
+    <div class="nav-item" data-page="firepump"><span class="icon">⚡</span>Fire Pump</div>
+    <div class="nav-item" data-page="watertank"><span class="icon">🛢️</span>Water Tank</div>
+    <div class="nav-item" data-page="pressureloss"><span class="icon">📉</span>Pressure Loss</div>
+    <div class="nav-item" data-page="elevation"><span class="icon">📏</span>Elevation Analysis</div>
+    <div class="nav-item" data-page="hosereel"><span class="icon">🔴</span>Hose Reel</div>
+    <div class="nav-item" data-page="extinguisher"><span class="icon">🧯</span>Fire Extinguisher</div>
+    <div class="nav-section">Outputs</div>
+    <div class="nav-item" data-page="material"><span class="icon">📦</span>Material Estimate</div>
+    <div class="nav-item" data-page="cost"><span class="icon">💰</span>Cost Estimate</div>
+    <div class="nav-item" data-page="visualization"><span class="icon">📊</span>Visualization</div>
+    <div class="nav-item" data-page="reports"><span class="icon">📄</span>Reports</div>
+    <div class="nav-section">System</div>
+    <div class="nav-item" data-page="settings"><span class="icon">⚙️</span>Settings</div>
+    <div class="nav-item" data-page="about"><span class="icon">ℹ️</span>About</div>
+  </nav>
+  <div class="sidebar-footer">FDG-FP v2.0 · All Rights Reserved</div>
+</aside>
+
+<!-- MAIN -->
+<div class="main" id="main">
+
+<!-- TOPBAR -->
+<header class="topbar" id="topbar">
+  <div class="topbar-left">
+    <button class="topbar-btn" id="menuToggle" style="display:none" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+    <div class="breadcrumb">FDG-FP &rsaquo; <span id="breadcrumbPage">Dashboard</span></div>
+  </div>
+  <div class="topbar-right">
+    <div class="search-box"><span style="color:var(--text3);font-size:.9rem">🔍</span><input type="text" id="searchInput" placeholder="Search modules..." autocomplete="off"></div>
+    <button class="topbar-btn" data-tip="Undo (Ctrl+Z)" onclick="App.undo()" id="undoBtn">↩️</button>
+    <button class="topbar-btn" data-tip="Redo (Ctrl+Y)" onclick="App.redo()" id="redoBtn">↪️</button>
+    <button class="topbar-btn" data-tip="Calculation History" onclick="App.toggleHistory()" id="historyBtn">📋</button>
+    <button class="topbar-btn" data-tip="Save Project (Ctrl+S)" onclick="App.exportJSON()">💾</button>
+    <button class="topbar-btn" data-tip="Toggle Dark Mode" onclick="App.toggleTheme()" id="themeBtn">🌙</button>
+    <button class="topbar-btn" data-tip="Reset Project" onclick="App.confirmReset()">🔄</button>
+  </div>
+</header>
+
+<!-- PROGRESS -->
+<div class="progress-bar-container"><div class="progress-bar-fill" id="progressBar" style="width:0%"></div></div>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- HISTORY PANEL -->
+<div class="history-panel" id="historyPanel">
+  <div class="history-panel-header">
+    <h3 style="font-size:.95rem">📋 Calculation History</h3>
+    <button class="btn-icon btn-ghost" onclick="App.toggleHistory()">✕</button>
+  </div>
+  <div class="history-list" id="historyList"></div>
+</div>
+
+<!-- PAGES -->
+<main class="content" id="contentArea">
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="welcome-banner">
+    <h2>FDGuinoo Fire Protection Calculator</h2>
+    <p>Professional Engineering Design Suite — NFPA · IFC · Philippine Fire Code</p>
+  </div>
+  <div class="grid grid-4" id="homeStats" style="margin-bottom:18px"></div>
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header"><h3><span class="icon">📊</span> Project Completion</h3></div>
+      <div class="card-body"><div class="chart-container"><canvas id="chartCompletion"></canvas></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3><span class="icon">⚡</span> Quick Actions</h3></div>
+      <div class="card-body"><div id="quickActions" class="selection-grid"></div></div>
+    </div>
+  </div>
+  <div class="card" id="homeValidation" style="display:none">
+    <div class="card-header"><h3><span class="icon">🛡️</span> Engineering Validation Summary</h3></div>
+    <div class="card-body" id="homeValidationContent"></div>
+  </div>
+</div>
+
+<!-- PROJECT INFO -->
+<div class="page" id="page-project">
+  <div class="page-header"><h1>📋 Project Information</h1><p>Enter project details for use in calculations and reports.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🏗️</span> General Information</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Project Name</label><input type="text" id="projName" placeholder="Enter project name"></div>
+        <div class="form-group"><label class="form-label">Project Number</label><input type="text" id="projNumber" placeholder="PRJ-001"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Client</label><input type="text" id="projClient" placeholder="Client name"></div>
+        <div class="form-group"><label class="form-label">Company</label><input type="text" id="projCompany" placeholder="Your company"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Engineer</label><input type="text" id="projEngineer" placeholder="Lead engineer"></div>
+        <div class="form-group"><label class="form-label">Date</label><input type="date" id="projDate"></div>
+        <div class="form-group"><label class="form-label">Revision</label><input type="text" id="projRevision" placeholder="Rev 0"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Prepared By</label><input type="text" id="projPrepared" placeholder="Name"></div>
+        <div class="form-group"><label class="form-label">Checked By</label><input type="text" id="projChecked" placeholder="Name"></div>
+        <div class="form-group"><label class="form-label">Approved By</label><input type="text" id="projApproved" placeholder="Name"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🏢</span> Building Information</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Building Name</label><input type="text" id="projBuilding" placeholder="Building name"></div>
+        <div class="form-group"><label class="form-label">Location</label><input type="text" id="projLocation" placeholder="City, Country"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Building Height (m)</label><input type="number" id="projHeight" placeholder="0" min="0" step="0.1"></div>
+        <div class="form-group"><label class="form-label">Floor Count</label><input type="number" id="projFloors" placeholder="1" min="1"></div>
+        <div class="form-group"><label class="form-label">Occupancy Type</label><input type="text" id="projOccType" placeholder="See Occupancy module" readonly></div>
+      </div>
+      <div class="form-group"><label class="form-label">Remarks</label><textarea id="projRemarks" placeholder="Additional project notes..."></textarea></div>
+    </div>
+  </div>
+</div>
+
+<!-- FIRE CODE -->
+<div class="page" id="page-firecode">
+  <div class="page-header"><h1>📜 Fire Code Selection</h1><p>Parameters automatically adjust based on the selected code.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📜</span> Select Applicable Fire Code</h3></div>
+    <div class="card-body"><div class="selection-grid" id="fireCodeGrid"></div></div>
+  </div>
+  <div class="card" id="codeParamsCard" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Code Parameters</h3></div>
+    <div class="card-body" id="codeParamsContent"></div>
+  </div>
+</div>
+
+<!-- OCCUPANCY -->
+<div class="page" id="page-occupancy">
+  <div class="page-header"><h1>🏢 Occupancy Classification</h1><p>Select the building occupancy to auto-set hazard classification.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🏢</span> Select Occupancy Type</h3></div>
+    <div class="card-body"><div class="selection-grid" id="occupancyGrid"></div></div>
+  </div>
+  <div class="card" id="occupancyDetails" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Occupancy Details</h3></div>
+    <div class="card-body" id="occupancyContent"></div>
+  </div>
+</div>
+
+<!-- HAZARD -->
+<div class="page" id="page-hazard">
+  <div class="page-header"><h1>⚠️ Hazard Classification</h1><p>Design density and area are automatically set per NFPA 13.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">⚠️</span> Select Hazard Classification</h3></div>
+    <div class="card-body"><div class="selection-grid" id="hazardGrid"></div></div>
+  </div>
+  <div class="card" id="hazardDetails" style="display:none">
+    <div class="card-header"><h3><span class="icon">📐</span> Design Parameters</h3></div>
+    <div class="card-body" id="hazardContent"></div>
+  </div>
+</div>
+
+<!-- WATER SUPPLY -->
+<div class="page" id="page-watersupply">
+  <div class="page-header"><h1>💧 Water Supply</h1><p>Define the available water source and supply characteristics.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">💧</span> Water Source</h3></div>
+    <div class="card-body"><div class="selection-grid" id="waterSourceGrid"></div></div>
+  </div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📐</span> Supply Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Static Pressure <span class="tip" data-tip="Maximum system pressure when no water is flowing">?</span></label><div class="input-group"><input type="number" id="wsStaticPressure" value="80" min="0" step="0.1"><span class="input-unit">psi</span></div></div>
+        <div class="form-group"><label class="form-label">Residual Pressure <span class="tip" data-tip="Pressure measured while water is flowing at test rate">?</span></label><div class="input-group"><input type="number" id="wsResidualPressure" value="60" min="0" step="0.1"><span class="input-unit">psi</span></div></div>
+        <div class="form-group"><label class="form-label">Flow at Residual <span class="tip" data-tip="Flow rate measured at the residual pressure">?</span></label><div class="input-group"><input type="number" id="wsFlowResidual" value="1000" min="0" step="1"><span class="input-unit">GPM</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Source Elevation <span class="tip" data-tip="Elevation of supply source above ground floor">?</span></label><div class="input-group"><input type="number" id="wsElevation" value="0" step="0.1"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Supply Pipe Diameter</label><div class="input-group"><input type="number" id="wsPipeDia" value="6" min="1" step="0.5"><span class="input-unit">in</span></div></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="WaterSupply.analyze()">⚙️ Analyze Supply</button></div>
+    </div>
+  </div>
+  <div class="card" id="waterSupplyResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📊</span> Supply Analysis</h3></div>
+    <div class="card-body" id="waterSupplyOutput"></div>
+  </div>
+</div>
+
+<!-- SPRINKLER -->
+<div class="page" id="page-sprinkler">
+  <div class="page-header"><h1>🔧 Sprinkler Calculator</h1><p>NFPA 13 density-area method hydraulic calculation.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🔧</span> Sprinkler Design Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">System Type</label><select id="sprSystemType"><option value="tree">Tree System</option><option value="loop">Loop System</option><option value="grid">Grid System</option></select></div>
+        <div class="form-group"><label class="form-label">K-Factor <span class="tip" data-tip="Sprinkler discharge coefficient — K=5.6 for standard 1/2&quot; orifice">?</span></label><select id="sprKFactor"><option value="5.6">5.6 — Standard 1/2&quot;</option><option value="8.0">8.0 — Large 17/32&quot;</option><option value="11.2">11.2 — Large 3/4&quot;</option><option value="14.0">14.0 — Extra Large</option><option value="16.8">16.8</option><option value="25.2">25.2 — ESFR</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Design Density <span class="tip" data-tip="Minimum water application rate per unit area per NFPA 13">?</span></label><div class="input-group"><input type="number" id="sprDensity" value="0.10" min="0.01" step="0.01"><span class="input-unit">GPM/ft²</span></div></div>
+        <div class="form-group"><label class="form-label">Design Area <span class="tip" data-tip="Hydraulically most demanding area — per NFPA 13 Table 11.2.3.1.4">?</span></label><div class="input-group"><input type="number" id="sprArea" value="1500" min="100" step="10"><span class="input-unit">ft²</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Sprinkler Spacing <span class="tip" data-tip="Distance between heads — max 15 ft for standard spray">?</span></label><div class="input-group"><input type="number" id="sprSpacing" value="10" min="6" step="0.5"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Coverage per Head <span class="tip" data-tip="Max coverage area per sprinkler head per code">?</span></label><div class="input-group"><input type="number" id="sprCoverage" value="130" min="36" step="1"><span class="input-unit">ft²</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Heads per Branch Line</label><input type="number" id="sprHeadsBranch" value="4" min="1"></div>
+        <div class="form-group"><label class="form-label">Number of Branch Lines</label><input type="number" id="sprBranches" value="4" min="1"></div>
+        <div class="form-group"><label class="form-label">Min. Head Pressure <span class="tip" data-tip="Minimum operating pressure per NFPA 13 — typically 7 psi">?</span></label><div class="input-group"><input type="number" id="sprMinPressure" value="7" min="5" step="0.5"><span class="input-unit">psi</span></div></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="Sprinkler.calculate()">⚙️ Calculate</button><button class="btn btn-secondary" onclick="Sprinkler.reset()">↺ Reset</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="sprinklerResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Sprinkler Calculation Results</h3></div>
+    <div class="card-body" id="sprinklerCalcOutput"></div>
+  </div>
+</div>
+
+<!-- HYDRAULIC -->
+<div class="page" id="page-hydraulic">
+  <div class="page-header"><h1>📐 Hydraulic Calculator</h1><p>Hazen-Williams friction loss equation for pipe sizing.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📐</span> Hazen-Williams Pipe Friction Loss</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Flow Rate Q <span class="tip" data-tip="Volumetric flow rate through the pipe segment">?</span></label><div class="input-group"><input type="number" id="hydQ" value="200" min="0" step="1"><span class="input-unit">GPM</span></div></div>
+        <div class="form-group"><label class="form-label">C-Factor <span class="tip" data-tip="Hazen-Williams roughness coefficient — higher C = smoother pipe">?</span></label><select id="hydC"><option value="100">100 — Black Steel (dry)</option><option value="120" selected>120 — Black Steel (wet)</option><option value="130">130 — Galvanized Iron</option><option value="140">140 — Copper</option><option value="150">150 — CPVC / Cement Lined</option><option value="150">150 — HDPE</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Internal Diameter <span class="tip" data-tip="Inside pipe diameter (ID), not nominal size">?</span></label><div class="input-group"><input type="number" id="hydD" value="4.026" min="0.5" step="0.001"><span class="input-unit">in</span></div></div>
+        <div class="form-group"><label class="form-label">Pipe Length</label><div class="input-group"><input type="number" id="hydL" value="100" min="0" step="1"><span class="input-unit">ft</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Fittings Equiv. Length <span class="tip" data-tip="Equivalent pipe length for all fittings (elbows, tees, valves)">?</span></label><div class="input-group"><input type="number" id="hydFittings" value="20" min="0" step="1"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Elevation Change <span class="tip" data-tip="Height difference — positive if water flows upward">?</span></label><div class="input-group"><input type="number" id="hydElev" value="0" step="0.1"><span class="input-unit">ft</span></div></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="Hydraulic.calculate()">⚙️ Calculate</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="hydraulicResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Hydraulic Results</h3></div>
+    <div class="card-body" id="hydraulicCalcOutput"></div>
+  </div>
+</div>
+
+<!-- PIPE SIZING -->
+<div class="page" id="page-pipesize">
+  <div class="page-header"><h1>🔩 Pipe Sizing</h1><p>Automatic pipe diameter recommendation based on flow and velocity limits.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🔩</span> Pipe Size Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Flow Rate</label><div class="input-group"><input type="number" id="psFlow" value="100" min="0" step="1"><span class="input-unit">GPM</span></div></div>
+        <div class="form-group"><label class="form-label">Max Velocity <span class="tip" data-tip="NFPA 13 recommends max 15 ft/s for branch lines">?</span></label><div class="input-group"><input type="number" id="psMaxVel" value="15" min="1" step="0.5"><span class="input-unit">ft/s</span></div></div>
+        <div class="form-group"><label class="form-label">Pipe Material</label><select id="psMaterial" onchange="PipeSizing.updateC()"><option value="steel">Black Steel</option><option value="gi">Galvanized Iron</option><option value="cpvc">CPVC</option><option value="copper">Copper</option><option value="ss">Stainless Steel</option><option value="hdpe">HDPE</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">C-Factor</label><input type="number" id="psCFactor" value="120" min="50" max="160"></div>
+        <div class="form-group"><label class="form-label">Unit Display</label><select id="psUnit"><option value="inch">Inches</option><option value="mm">Millimeters</option></select></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="PipeSizing.calculate()">⚙️ Recommend Size</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="pipeSizeResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Pipe Size Recommendation</h3></div>
+    <div class="card-body" id="pipeSizeOutput"></div>
+  </div>
+</div>
+
+<!-- STANDPIPE -->
+<div class="page" id="page-standpipe">
+  <div class="page-header"><h1>🚿 Standpipe System</h1><p>NFPA 14 standpipe design per class and building height.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🚿</span> Standpipe Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Class <span class="tip" data-tip="Class I: FD use only | Class II: Occupant use | Class III: Combined">?</span></label><select id="spClass"><option value="I">Class I — 2½&quot; FD Connections</option><option value="II">Class II — 1½&quot; Hose Stations</option><option value="III">Class III — Combined</option></select></div>
+        <div class="form-group"><label class="form-label">Number of Risers</label><input type="number" id="spRisers" value="1" min="1"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Floors Served</label><input type="number" id="spFloors" value="5" min="1"></div>
+        <div class="form-group"><label class="form-label">Floor Height</label><div class="input-group"><input type="number" id="spFloorHt" value="12" min="8" step="0.5"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Hose Valves/Floor</label><input type="number" id="spValves" value="2" min="1"></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="Standpipe.calculate()">⚙️ Calculate</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="standpipeResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Standpipe Results</h3></div>
+    <div class="card-body" id="standpipeOutput"></div>
+  </div>
+</div>
+
+<!-- FIRE PUMP -->
+<div class="page" id="page-firepump">
+  <div class="page-header"><h1>⚡ Fire Pump</h1><p>NFPA 20 fire pump sizing and motor selection.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">⚡</span> Pump Selection Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Pump Type</label><select id="fpType"><option value="electric">Electric Motor Drive</option><option value="diesel">Diesel Engine Drive</option></select></div>
+        <div class="form-group"><label class="form-label">Required Flow <span class="tip" data-tip="Total system demand including hose allowance">?</span></label><div class="input-group"><input type="number" id="fpFlow" value="500" min="0" step="10"><span class="input-unit">GPM</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Required Head / TDH <span class="tip" data-tip="Total Dynamic Head — sum of static head, friction loss, and pressure required at highest point">?</span></label><div class="input-group"><input type="number" id="fpHead" value="100" min="0" step="1"><span class="input-unit">psi</span></div></div>
+        <div class="form-group"><label class="form-label">Pump Efficiency <span class="tip" data-tip="Typical fire pump efficiency is 65–85%">?</span></label><div class="input-group"><input type="number" id="fpEfficiency" value="80" min="30" max="95" step="1"><span class="input-unit">%</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Safety Factor</label><div class="input-group"><input type="number" id="fpSafety" value="10" min="0" max="30"><span class="input-unit">%</span></div></div>
+        <div class="form-group"><label class="form-label">Suction Pressure <span class="tip" data-tip="Net suction head available at pump inlet">?</span></label><div class="input-group"><input type="number" id="fpSuction" value="10" min="0" step="1"><span class="input-unit">psi</span></div></div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="FirePump.calculate()">⚙️ Calculate Main Pump</button>
+        <button class="btn btn-secondary" onclick="FirePump.calcJockey()">🔸 Jockey Pump</button>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card result-card" id="pumpResults" style="display:none"><div class="card-header"><h3><span class="icon">📋</span> Pump Results</h3></div><div class="card-body" id="pumpCalcOutput"></div></div>
+    <div class="card" id="pumpCurveCard" style="display:none"><div class="card-header"><h3><span class="icon">📊</span> Pump Curve</h3></div><div class="card-body"><div class="chart-container"><canvas id="chartPumpCurve"></canvas></div></div></div>
+  </div>
+</div>
+
+<!-- WATER TANK -->
+<div class="page" id="page-watertank">
+  <div class="page-header"><h1>🛢️ Water Storage Tank</h1><p>NFPA 22 tank sizing for fire protection supply.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🛢️</span> Tank Design Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Total System Flow <span class="tip" data-tip="Combined sprinkler + hose demand">?</span></label><div class="input-group"><input type="number" id="wtFlow" value="500" min="0" step="10"><span class="input-unit">GPM</span></div></div>
+        <div class="form-group"><label class="form-label">Fire Duration <span class="tip" data-tip="Required duration based on hazard class per NFPA 13/22">?</span></label><select id="wtDuration"><option value="30">30 min — Light Hazard</option><option value="60" selected>60 min — Ordinary Hazard</option><option value="90">90 min — Extra Hazard</option><option value="120">120 min — Storage</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Reserve Volume <span class="tip" data-tip="Emergency reserve — typically 10% of total">?</span></label><div class="input-group"><input type="number" id="wtReserve" value="10" min="0" max="30"><span class="input-unit">%</span></div></div>
+        <div class="form-group"><label class="form-label">Dead Volume <span class="tip" data-tip="Non-usable volume below pump suction — typically 5%">?</span></label><div class="input-group"><input type="number" id="wtDead" value="5" min="0" max="15"><span class="input-unit">%</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Tank Type</label><select id="wtType"><option value="cylindrical">Cylindrical</option><option value="rectangular">Rectangular</option></select></div>
+        <div class="form-group"><label class="form-label">Refill Rate</label><div class="input-group"><input type="number" id="wtRefill" value="100" min="0" step="10"><span class="input-unit">GPM</span></div></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="WaterTank.calculate()">⚙️ Calculate</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="tankResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Tank Analysis</h3></div>
+    <div class="card-body" id="tankCalcOutput"></div>
+  </div>
+</div>
+
+<!-- PRESSURE LOSS -->
+<div class="page" id="page-pressureloss">
+  <div class="page-header"><h1>📉 Pressure Loss Analysis</h1><p>Multi-segment pipe friction and elevation loss tabulation.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📉</span> Pipe Segments</h3><div class="card-actions"><button class="btn btn-sm btn-primary" onclick="PressureLoss.addRow()">+ Add Segment</button></div></div>
+    <div class="card-body">
+      <div class="table-container">
+        <table id="pressureTable">
+          <thead><tr><th>#</th><th>Label</th><th>Length (ft)</th><th>Dia (in)</th><th>C</th><th>Flow (GPM)</th><th>Fittings EL (ft)</th><th>Elev Δ (ft)</th><th>Friction (psi)</th><th>Elev (psi)</th><th>Total (psi)</th><th></th></tr></thead>
+          <tbody id="pressureBody"></tbody>
+          <tfoot><tr><td colspan="9" style="text-align:right;font-weight:700">Total Pressure Loss:</td><td colspan="2" style="font-weight:700;color:var(--primary)" id="totalPressureLoss">0.00 psi</td><td></td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ELEVATION ANALYSIS -->
+<div class="page" id="page-elevation">
+  <div class="page-header"><h1>📏 Elevation Analysis</h1><p>System elevation profile and static head calculations.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📏</span> Building Elevation Profile</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Ground Floor Elevation <span class="tip" data-tip="Datum reference elevation">?</span></label><div class="input-group"><input type="number" id="elGround" value="0" step="0.1"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Pump Elevation <span class="tip" data-tip="Elevation of pump centerline above datum">?</span></label><div class="input-group"><input type="number" id="elPump" value="-10" step="0.1"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Tank Bottom Elevation</label><div class="input-group"><input type="number" id="elTankBot" value="-12" step="0.1"><span class="input-unit">ft</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Highest Sprinkler Elevation</label><div class="input-group"><input type="number" id="elTopSpr" value="40" step="0.1"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Number of Floors</label><input type="number" id="elFloors" value="5" min="1"></div>
+        <div class="form-group"><label class="form-label">Floor-to-Floor Height</label><div class="input-group"><input type="number" id="elFloorHt" value="12" min="6" step="0.5"><span class="input-unit">ft</span></div></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="ElevAnalysis.calculate()">⚙️ Analyze Elevation</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="elevResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📊</span> Elevation Profile</h3></div>
+    <div class="card-body">
+      <div class="chart-container tall"><canvas id="chartElevation"></canvas></div>
+      <div id="elevOutput"></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOSE REEL -->
+<div class="page" id="page-hosereel">
+  <div class="page-header"><h1>🔴 Hose Reel System</h1><p>Coverage and flow demand for first-aid hose reel systems.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🔴</span> Hose Reel Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Floor Area</label><div class="input-group"><input type="number" id="hrArea" value="5000" min="0"><span class="input-unit">ft²</span></div></div>
+        <div class="form-group"><label class="form-label">Hose Length</label><div class="input-group"><input type="number" id="hrLength" value="100" min="50"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Nozzle Pressure</label><div class="input-group"><input type="number" id="hrPressure" value="65" min="30"><span class="input-unit">psi</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Flow per Reel</label><div class="input-group"><input type="number" id="hrFlow" value="40" min="20"><span class="input-unit">GPM</span></div></div>
+        <div class="form-group"><label class="form-label">Max Coverage Radius</label><div class="input-group"><input type="number" id="hrRadius" value="130" min="50"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Simultaneous Reels <span class="tip" data-tip="Number of reels assumed operating simultaneously">?</span></label><input type="number" id="hrSimul" value="2" min="1"></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="HoseReel.calculate()">⚙️ Calculate</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="hoseReelResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Hose Reel Results</h3></div>
+    <div class="card-body" id="hoseReelOutput"></div>
+  </div>
+</div>
+
+<!-- FIRE EXTINGUISHER -->
+<div class="page" id="page-extinguisher">
+  <div class="page-header"><h1>🧯 Fire Extinguisher</h1><p>NFPA 10 extinguisher selection and quantity calculation.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">🧯</span> Extinguisher Parameters</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Occupancy Hazard</label><select id="feOccupancy"><option value="light">Light Hazard (Office, Church, School)</option><option value="ordinary">Ordinary Hazard (Retail, Storage)</option><option value="extra">Extra Hazard (Industrial, Warehouse)</option></select></div>
+        <div class="form-group"><label class="form-label">Floor Area</label><div class="input-group"><input type="number" id="feArea" value="5000" min="0"><span class="input-unit">ft²</span></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Max Travel Distance <span class="tip" data-tip="Max distance occupant travels to reach extinguisher — per NFPA 10">?</span></label><div class="input-group"><input type="number" id="feTravelDist" value="75" min="25"><span class="input-unit">ft</span></div></div>
+        <div class="form-group"><label class="form-label">Fire Class</label><select id="feFireClass"><option value="A">Class A — Ordinary Combustibles</option><option value="B">Class B — Flammable Liquids</option><option value="C">Class C — Electrical</option><option value="ABC">ABC — Multi-Purpose</option><option value="K">Class K — Kitchen</option></select></div>
+      </div>
+      <div class="btn-group"><button class="btn btn-primary" onclick="Extinguisher.calculate()">⚙️ Recommend</button></div>
+    </div>
+  </div>
+  <div class="card result-card" id="extResults" style="display:none">
+    <div class="card-header"><h3><span class="icon">📋</span> Extinguisher Recommendation</h3></div>
+    <div class="card-body" id="extOutput"></div>
+  </div>
+</div>
+
+<!-- MATERIAL ESTIMATE -->
+<div class="page" id="page-material">
+  <div class="page-header"><h1>📦 Material Estimate</h1><p>Bill of materials with quantities from calculations.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📦</span> Material Takeoff</h3>
+      <div class="card-actions">
+        <button class="btn btn-xs btn-primary" onclick="Material.addRow()">+ Add Item</button>
+        <button class="btn btn-xs btn-secondary" onclick="Material.autoGenerate()">⚡ Auto Generate</button>
+        <button class="btn btn-xs btn-success" onclick="Material.exportCSV()">📥 CSV</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table><thead><tr><th>#</th><th>Item</th><th>Description</th><th>Size</th><th>Unit</th><th>Qty</th><th></th></tr></thead>
+        <tbody id="materialBody"></tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COST ESTIMATE -->
+<div class="page" id="page-cost">
+  <div class="page-header"><h1>💰 Cost Estimate</h1><p>Material, labor, and equipment cost breakdown.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">💰</span> Cost Breakdown</h3>
+      <div class="card-actions">
+        <button class="btn btn-xs btn-primary" onclick="Cost.addRow()">+ Add Item</button>
+        <button class="btn btn-xs btn-secondary" onclick="Cost.autoGenerate()">⚡ Auto Generate</button>
+        <button class="btn btn-xs btn-success" onclick="Cost.exportCSV()">📥 CSV</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table><thead><tr><th>#</th><th>Category</th><th>Item</th><th>Unit</th><th>Qty</th><th>Unit Price</th><th>Total</th><th></th></tr></thead>
+        <tbody id="costBody"></tbody>
+        <tfoot id="costFooter"></tfoot></table>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-3" id="costSummaryCards" style="margin-top:4px"></div>
+</div>
+
+<!-- VISUALIZATION -->
+<div class="page" id="page-visualization">
+  <div class="page-header"><h1>📊 Visualization</h1><p>Interactive engineering charts and system diagram.</p></div>
+  <div class="tabs" id="vizTabs">
+    <div class="tab active" data-tab="vizCharts">📈 Charts</div>
+    <div class="tab" data-tab="vizDiagram">🔧 System Diagram</div>
+  </div>
+  <div class="tab-content active" id="vizCharts">
+    <div class="grid grid-2">
+      <div class="card"><div class="card-header"><h3>Flow Distribution</h3></div><div class="chart-container"><canvas id="chartFlow"></canvas></div></div>
+      <div class="card"><div class="card-header"><h3>Pressure Profile</h3></div><div class="chart-container"><canvas id="chartPressure"></canvas></div></div>
+      <div class="card"><div class="card-header"><h3>Water Demand Breakdown</h3></div><div class="chart-container"><canvas id="chartDemand"></canvas></div></div>
+      <div class="card"><div class="card-header"><h3>Cost Distribution</h3></div><div class="chart-container"><canvas id="chartCost"></canvas></div></div>
+      <div class="card"><div class="card-header"><h3>Pipe Size Distribution</h3></div><div class="chart-container"><canvas id="chartPipeSize"></canvas></div></div>
+      <div class="card"><div class="card-header"><h3>Tank Volume Breakdown</h3></div><div class="chart-container"><canvas id="chartTankVol"></canvas></div></div>
+    </div>
+  </div>
+  <div class="tab-content" id="vizDiagram">
+    <div class="card"><div class="card-header"><h3><span class="icon">🔧</span> Fire Protection System Schematic</h3><button class="btn btn-sm btn-secondary" onclick="Diagram.generate()">🔄 Refresh</button></div>
+    <div id="systemDiagram" style="width:100%;min-height:520px;background:var(--bg);border-radius:var(--radius);overflow:auto;padding:20px"></div></div>
+  </div>
+</div>
+
+<!-- REPORTS -->
+<div class="page" id="page-reports">
+  <div class="page-header"><h1>📄 Reports</h1><p>Professional A4 multi-page PDF engineering report generation.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">📄</span> Report Configuration</h3></div>
+    <div class="card-body">
+      <div class="form-group"><label class="form-label">Report Sections to Include</label>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px" id="reportSections"></div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="Reports.generatePDF()">📄 Generate PDF</button>
+        <button class="btn btn-secondary" onclick="App.exportJSON()">💾 Export JSON</button>
+        <button class="btn btn-secondary" onclick="Reports.exportCSV()">📥 Export CSV</button>
+        <button class="btn btn-secondary" onclick="window.print()">🖨️ Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div class="page" id="page-settings">
+  <div class="page-header"><h1>⚙️ Settings</h1><p>Application preferences and data management.</p></div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">⚙️</span> Application Settings</h3><div class="card-actions"><button class="collapse-btn" onclick="App.toggleCard(this)">▲</button></div></div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Unit System</label><select id="setUnits"><option value="imperial">Imperial (GPM, psi, ft, in)</option><option value="metric">Metric (LPM, kPa, m, mm)</option></select></div>
+        <div class="form-group"><label class="form-label">Default Fire Code</label><select id="setDefaultCode"><option value="NFPA13">NFPA 13</option><option value="PFC">Philippine Fire Code</option><option value="IFC">International Fire Code</option><option value="IBC">International Building Code</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Font Size</label><select id="setFontSize" onchange="Settings.applyFontSize(this.value)"><option value="12">Small (12px)</option><option value="14" selected>Medium (14px)</option><option value="16">Large (16px)</option><option value="18">Extra Large (18px)</option></select></div>
+        <div class="form-group"><label class="form-label">Theme</label><select id="setTheme" onchange="Settings.applyThemeFromSelect(this.value)"><option value="light">Light</option><option value="dark">Dark</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Company Name</label><input type="text" id="setCompany" placeholder="Your Company Name"></div>
+        <div class="form-group"><label class="form-label">Engineer Signature</label><input type="text" id="setEngineer" placeholder="Eng. Name, PE"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Company Logo (embedded in PDF)</label><input type="file" id="setLogo" accept="image/*" onchange="Settings.loadLogo(this)"></div>
+      <div id="logoPreview" style="margin-top:8px"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><h3><span class="icon">💾</span> Data Management</h3></div>
+    <div class="card-body">
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="App.exportJSON()">💾 Export Project (JSON)</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📂 Import Project</button>
+        <input type="file" id="importFile" accept=".json" style="display:none" onchange="App.importJSON(this)">
+        <button class="btn btn-danger" onclick="App.confirmReset()">🗑️ Reset All Data</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+  <div class="page-header"><h1>ℹ️ About</h1></div>
+  <div class="card" style="text-align:center;padding:40px 28px">
+    <div style="font-size:3.5rem;margin-bottom:14px">🔥</div>
+    <h2 style="font-size:1.5rem">FDGuinoo Fire Protection Calculator</h2>
+    <p style="color:var(--text2);margin:8px 0;font-size:.9rem">Professional Fire Protection Engineering Design Suite</p>
+    <p style="color:var(--text3);font-size:.8rem">Version 2.0 &bull; FDG-FP-HydroCal &bull; Offline Single-File Application</p>
+    <hr class="divider">
+    <div style="max-width:540px;margin:0 auto;text-align:left;color:var(--text2);font-size:.85rem;line-height:1.9">
+      <p>A complete offline Fire Protection Engineering Calculator for professional Mechanical Engineers and Fire Protection Engineers. No internet connection required.</p>
+      <p style="margin-top:12px"><strong>Supported Codes:</strong> NFPA 13, 14, 20, 22, 24, 25, 72, 101 &bull; IFC &bull; IBC &bull; Philippine Fire Code (RA 9514 / Revised IRR)</p>
+      <p style="margin-top:12px"><strong>Libraries:</strong> Chart.js 4.4.7 &bull; jsPDF 2.5.2 &bull; html2canvas 1.4.1</p>
+      <p style="margin-top:12px"><strong>Calculations:</strong> Hazen-Williams &bull; Density-Area Method &bull; NFPA 14 Standpipe &bull; NFPA 20 Pump Sizing &bull; NFPA 22 Tank &bull; NFPA 10 Extinguisher</p>
+    </div>
+    <p style="color:var(--text3);font-size:.72rem;margin-top:24px">&copy; 2025 FDGuinoo Engineering. All rights reserved.</p>
+  </div>
+</div>
+
+</main>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div><span class="status-dot"></span><span id="statusText">Ready</span></div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <span id="autoSaveStatus">Autosaved</span>
+    <span>&bull;</span>
+    <span id="unitDisplay">Imperial</span>
+    <span>&bull;</span>
+    <span id="progressText">0% Complete</span>
+  </div>
+</div>
+</div><!-- /main -->
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+'use strict';
+/* ============================================================
+   FDGuinoo Fire Protection Calculator v2.0
+   Professional Engineering Design Suite
+   ============================================================ */
+
+/* ---- PIPE DATA ---- */
+const PIPE_DATA = {
+  '0.75':{id:0.824,od:1.050},'1':{id:1.049,od:1.315},'1.25':{id:1.380,od:1.660},
+  '1.5':{id:1.610,od:1.900},'2':{id:2.067,od:2.375},'2.5':{id:2.469,od:2.875},
+  '3':{id:3.068,od:3.500},'4':{id:4.026,od:4.500},'5':{id:5.047,od:5.563},
+  '6':{id:6.065,od:6.625},'8':{id:7.981,od:8.625},'10':{id:10.020,od:10.750},
+  '12':{id:11.938,od:12.750}
+};
+const PIPE_SIZES_SORTED = Object.keys(PIPE_DATA).map(Number).sort((a,b)=>a-b);
+
+/* ---- FIRE CODES ---- */
+const FIRE_CODES = [
+  {id:'NFPA13',name:'NFPA 13',desc:'Sprinkler Systems',icon:'🔧',params:{velocityMax:32,hoseAllowance:250,minPressure:7}},
+  {id:'NFPA14',name:'NFPA 14',desc:'Standpipe & Hose',icon:'🚿',params:{velocityMax:25,hoseAllowance:0,minPressure:100}},
+  {id:'NFPA20',name:'NFPA 20',desc:'Fire Pumps',icon:'⚡',params:{velocityMax:32,hoseAllowance:250,minPressure:7}},
+  {id:'NFPA22',name:'NFPA 22',desc:'Water Tanks',icon:'🛢️',params:{velocityMax:32,hoseAllowance:250,minPressure:7}},
+  {id:'NFPA24',name:'NFPA 24',desc:'Private Service Mains',icon:'🔩',params:{velocityMax:20,hoseAllowance:250,minPressure:7}},
+  {id:'NFPA25',name:'NFPA 25',desc:'Inspection & Testing',icon:'🔍',params:{velocityMax:32,hoseAllowance:250,minPressure:7}},
+  {id:'NFPA72',name:'NFPA 72',desc:'Fire Alarm',icon:'🔔',params:{velocityMax:32,hoseAllowance:250,minPressure:7}},
+  {id:'NFPA101',name:'NFPA 101',desc:'Life Safety Code',icon:'🏃',params:{velocityMax:32,hoseAllowance:250,minPressure:7}},
+  {id:'IFC',name:'Intl Fire Code',desc:'International Fire Code',icon:'🌍',params:{velocityMax:30,hoseAllowance:250,minPressure:7}},
+  {id:'IBC',name:'Intl Building Code',desc:'International Building Code',icon:'🏗️',params:{velocityMax:30,hoseAllowance:250,minPressure:7}},
+  {id:'PFC',name:'Philippine Fire Code',desc:'RA 9514 / Revised IRR',icon:'🇵🇭',params:{velocityMax:25,hoseAllowance:250,minPressure:7}},
+];
+
+/* ---- OCCUPANCIES ---- */
+const OCCUPANCIES = [
+  {id:'residential',name:'Residential',icon:'🏠',hazard:'light'},
+  {id:'apartment',name:'Apartment',icon:'🏢',hazard:'light'},
+  {id:'hotel',name:'Hotel',icon:'🏨',hazard:'light'},
+  {id:'dormitory',name:'Dormitory',icon:'🛏️',hazard:'light'},
+  {id:'office',name:'Office',icon:'🏛️',hazard:'light'},
+  {id:'commercial',name:'Commercial',icon:'🏬',hazard:'ordinary1'},
+  {id:'mall',name:'Mall',icon:'🛍️',hazard:'ordinary2'},
+  {id:'hospital',name:'Hospital',icon:'🏥',hazard:'light'},
+  {id:'school',name:'School',icon:'🏫',hazard:'light'},
+  {id:'industrial',name:'Industrial',icon:'🏭',hazard:'extra1'},
+  {id:'warehouse',name:'Warehouse',icon:'📦',hazard:'ordinary2'},
+  {id:'factory',name:'Factory',icon:'⚙️',hazard:'extra1'},
+  {id:'storage',name:'Storage',icon:'🗄️',hazard:'ordinary2'},
+  {id:'parking',name:'Parking',icon:'🅿️',hazard:'ordinary1'},
+  {id:'mixed',name:'Mixed Occupancy',icon:'🔀',hazard:'ordinary1'},
+  {id:'custom',name:'Custom',icon:'✏️',hazard:'light'},
+];
+
+/* ---- HAZARD DATA ---- */
+const HAZARDS = {
+  light:    {name:'Light Hazard',density:0.10,area:1500,hose:100,duration:30},
+  ordinary1:{name:'Ordinary Hazard Gp 1',density:0.15,area:1500,hose:250,duration:60},
+  ordinary2:{name:'Ordinary Hazard Gp 2',density:0.20,area:1500,hose:250,duration:60},
+  extra1:   {name:'Extra Hazard Gp 1',density:0.30,area:2500,hose:500,duration:90},
+  extra2:   {name:'Extra Hazard Gp 2',density:0.40,area:2500,hose:500,duration:120},
+  storage:  {name:'Storage Hazard',density:0.35,area:2000,hose:500,duration:120},
+  special:  {name:'Special Hazard',density:0.25,area:3000,hose:250,duration:90},
+  custom:   {name:'Custom',density:0.10,area:1500,hose:100,duration:60},
+};
+
+/* ---- WATER SOURCES ---- */
+const WATER_SOURCES = [
+  {id:'municipal',name:'Municipal',icon:'🏛️',desc:'City/Utility Supply'},
+  {id:'tank',name:'Tank',icon:'🛢️',desc:'Ground Level Tank'},
+  {id:'ground',name:'Ground Reservoir',icon:'💧',desc:'Below Grade Reservoir'},
+  {id:'elevated',name:'Elevated Tank',icon:'⬆️',desc:'Gravity Feed Tank'},
+  {id:'well',name:'Private Well',icon:'🕳️',desc:'Groundwater Well'},
+  {id:'combo',name:'Combination',icon:'🔀',desc:'Multiple Sources'},
+];
+
+/* ---- UTILITY FUNCTIONS ---- */
+const $ = id => document.getElementById(id);
+const qs = sel => document.querySelector(sel);
+const qsa = sel => document.querySelectorAll(sel);
+const numVal = id => parseFloat($(id)?.value) || 0;
+const fmt = (n, d=2) => Number(n).toFixed(d);
+const fmtComma = n => Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmtInt = n => Math.round(Number(n)).toLocaleString('en-US');
+const validateInputs = (pageId) => {
+  if(window.App && App.isRestoring) return true;
+  const inputs = qsa(`#${pageId} input[type="number"]`);
+  for(const input of inputs) {
+    const val = parseFloat(input.value);
+    const min = parseFloat(input.getAttribute('min'));
+    const max = parseFloat(input.getAttribute('max'));
+    const label = input.closest('.form-group')?.querySelector('.form-label')?.textContent?.replace('?','').trim() || 'Input';
+    if(!isNaN(min) && val < min) { toast(`⚠️ ${label} must be at least ${min}`, 'error'); return false; }
+    if(!isNaN(max) && val > max) { toast(`⚠️ ${label} must be at most ${max}`, 'error'); return false; }
+  }
+  return true;
+};
+
+/* ---- ENGINEERING FORMULAS ---- */
+const Eng = {
+  /** Hazen-Williams friction loss: psi/ft */
+  hazenWilliams(Q, C, D) {
+    if(!Q||!C||!D) return 0;
+    return (4.52 * Math.pow(Q,1.85)) / (Math.pow(C,1.85) * Math.pow(D,4.87));
+  },
+  /** Velocity ft/s from Q (GPM) and D (inches ID) */
+  velocity(Q, D) {
+    if(!Q||!D) return 0;
+    const A = Math.PI * Math.pow(D/24, 2); // ft²
+    return (Q / 448.831) / A;
+  },
+  /** Flow from pressure and K-factor: Q = K * sqrt(P) */
+  flowFromK(K, P) { return K * Math.sqrt(Math.max(P,0)); },
+  /** Pressure from flow and K-factor: P = (Q/K)² */
+  pressureFromK(Q, K) { return K>0 ? Math.pow(Q/K, 2) : 0; },
+  /** Elevation head psi: 0.433 psi per foot */
+  elevationHead(ft) { return 0.433 * ft; },
+  /** Pump BHP */
+  pumpBHP(Q, H, eff) { return (Q * H) / (3960 * (eff/100)); },
+  /** Motor HP with safety factor */
+  motorHP(bhp, safety) { return bhp * (1 + safety/100); },
+  /** Round up to standard motor HP */
+  stdMotorHP(hp) {
+    const std = [1,1.5,2,3,5,7.5,10,15,20,25,30,40,50,60,75,100,125,150,200,250,300,350,400,500];
+    return std.find(s => s >= hp) || Math.ceil(hp/50)*50;
+  },
+  /** Storage volume (gallons) accounting for reserve and dead volumes */
+  storageVolume(gpm, minutes, reservePct, deadPct) {
+    const base = gpm * minutes;
+    const denom = 1 - reservePct/100 - deadPct/100;
+    return denom > 0 ? base / denom : base;
+  },
+  /** Tank dimensions — cylindrical (H ≈ D assumption) */
+  tankDimensions(gallons) {
+    const vol_ft3 = gallons / 7.481;
+    // V = π/4 * D² * H, assume H = D → V = π/4 * D³ → D = (4V/π)^(1/3)
+    const D = Math.pow((4 * vol_ft3) / Math.PI, 1/3);
+    const H = vol_ft3 / (Math.PI * Math.pow(D/2, 2));
+    return {diameter: D, height: H, vol_ft3};
+  },
+  /** NPSH available (ft) */
+  npshA(atmPsi, suctionPsi, vaporPsi, frictionPsi) {
+    return (atmPsi + suctionPsi - vaporPsi - frictionPsi) * 2.31;
+  },
+  /** Recommend pipe size for flow and max velocity */
+  recommendPipe(Q, maxVel) {
+    for(const nom of PIPE_SIZES_SORTED){
+      const d = PIPE_DATA[String(nom)].id;
+      const v = this.velocity(Q, d);
+      if(v <= maxVel) return {nominal:nom, id:d, velocity:v};
+    }
+    const last = PIPE_SIZES_SORTED[PIPE_SIZES_SORTED.length-1];
+    return {nominal:last, id:PIPE_DATA[String(last)].id, velocity:this.velocity(Q, PIPE_DATA[String(last)].id)};
+  },
+  // Unit conversions
+  gpmToLpm: gpm => gpm * 3.785,
+  psiToKpa: psi => psi * 6.895,
+  ftToM:    ft  => ft  * 0.3048,
+  mToFt:    m   => m   / 0.3048,
+  inToMm:   i   => i   * 25.4,
+  lpmToGpm: l   => l   / 3.785,
+  kpaToPsi: k   => k   / 6.895,
+};
+
+/* ---- TOAST ---- */
+function toast(msg, type='info', dur=3500){
+  if(window.App && App.isRestoring) return;
+  const c = $('toastContainer');
+  const t = document.createElement('div');
+  t.className = 'toast toast-'+type;
+  t.innerHTML = msg;
+  c.appendChild(t);
+  setTimeout(()=>{
+    t.style.transition='all .3s ease';
+    t.style.opacity='0';
+    t.style.transform='translateX(50px)';
+    setTimeout(()=>t.remove(),300);
+  }, dur);
+}
+
+/* ---- MODAL ---- */
+function showModal(title, body, actions=''){
+  const m = $('modalContent');
+  m.innerHTML = `<h2 style="margin-bottom:14px">${title}</h2><div>${body}</div>${actions?'<div class="modal-actions">'+actions+'</div>':''}`;
+  $('modalOverlay').classList.add('active');
+}
+function closeModal(){ $('modalOverlay').classList.remove('active'); }
+$('modalOverlay')?.addEventListener('click', e=>{ if(e.target===$('modalOverlay')) closeModal(); });
+
+/* ============================================================
+   APP STATE MANAGER
+   ============================================================ */
+const App = {
+  state: {},
+  history: [],
+  historyIndex: -1,
+  maxHistory: 50,
+  autoSaveTimer: null,
+  currentPage: 'home',
+  charts: {},
+  calcHistory: [], // Calculation history log
+
+  init() {
+    this.loadState();
+    this.initNavigation();
+    this.initSearch();
+    this.initKeyboardShortcuts();
+    this.startAutoSave();
+    this.renderFireCodes();
+    this.renderOccupancy();
+    this.renderHazards();
+    this.renderWaterSources();
+    this.renderHomeStats();
+    this.renderQuickActions();
+    this.renderReportSections();
+    PressureLoss.init();
+    Material.init();
+    Cost.init();
+    this.applyTheme();
+    this.bindAllInputs();
+    this.updateProgress();
+    this.initCharts();
+    Diagram.generate();
+    $('statusText').textContent = 'Ready — ' + new Date().toLocaleString();
+    toast('🔥 FDG-FP v2.0 loaded successfully', 'success');
+  },
+
+  getDefaultState() {
+    return {
+      project:{name:'',number:'',client:'',company:'',engineer:'',date:new Date().toISOString().split('T')[0],revision:'Rev 0',preparedBy:'',checkedBy:'',approvedBy:'',building:'',location:'',height:0,floors:1,occType:'',remarks:''},
+      fireCode:'NFPA13',
+      occupancy:'',
+      hazard:'light',
+      waterSource:'municipal',
+      waterSupply:{staticPressure:80,residualPressure:60,flowResidual:1000,elevation:0,pipeDia:6},
+      settings:{units:'imperial',theme:'light',defaultCode:'NFPA13',companyName:'',engineerName:'',logo:'',fontSize:'14'},
+      pressureSegments:[],
+      materialItems:[],
+      costItems:[],
+      calculations:{sprinkler:null,hydraulic:null,pipeSize:null,standpipe:null,firePump:null,waterTank:null,hoseReel:null,extinguisher:null,waterSupply:null,elevation:null},
+    };
+  },
+
+  loadState() {
+    try {
+      const saved = localStorage.getItem('fdg_fp_state_v2');
+      this.state = saved ? Object.assign(this.getDefaultState(), JSON.parse(saved)) : this.getDefaultState();
+      // Deep merge nested objects
+      this.state.project = Object.assign(this.getDefaultState().project, this.state.project);
+      this.state.settings = Object.assign(this.getDefaultState().settings, this.state.settings);
+      this.state.waterSupply = Object.assign(this.getDefaultState().waterSupply, this.state.waterSupply||{});
+      this.state.calculations = Object.assign(this.getDefaultState().calculations, this.state.calculations);
+    } catch(e) {
+      this.state = this.getDefaultState();
+    }
+    // Load calc history from sessionStorage
+    try { this.calcHistory = JSON.parse(sessionStorage.getItem('fdg_calc_history')||'[]'); } catch(e){}
+    
+    this.restoreFormValues();
+    
+    // Restore calculation visual states silently
+    App.isRestoring = true;
+    setTimeout(() => {
+      const c = this.state.calculations;
+      if(c.sprinkler) Sprinkler.calculate();
+      if(c.hydraulic) Hydraulic.calculate();
+      if(c.pipeSize) PipeSize.calculate();
+      if(c.standpipe) Standpipe.calculate();
+      if(c.firePump) FirePump.calculate();
+      if(c.waterTank) WaterTank.calculate();
+      if(c.hoseReel) HoseReel.calculate();
+      if(c.extinguisher) Extinguisher.calculate();
+      if(c.waterSupply) WaterSupply.analyze();
+      if(c.elevation) ElevAnalysis.calculate();
+      App.isRestoring = false;
+      this.pushHistory(); // push initial loaded state
+    }, 50);
+  },
+
+  saveState() {
+    try {
+      localStorage.setItem('fdg_fp_state_v2', JSON.stringify(this.state));
+      $('autoSaveStatus').textContent = 'Autosaved ' + new Date().toLocaleTimeString();
+    } catch(e) {}
+  },
+
+  pushHistory() {
+    if(this.isRestoring) return;
+    if(this.historyIndex < this.history.length - 1)
+      this.history = this.history.slice(0, this.historyIndex + 1);
+    this.history.push(JSON.stringify(this.state));
+    if(this.history.length > this.maxHistory) this.history.shift();
+    this.historyIndex = this.history.length - 1;
+  },
+
+  undo() {
+    if(this.historyIndex > 0) {
+      this.historyIndex--;
+      this.state = JSON.parse(this.history[this.historyIndex]);
+      this.restoreFormValues();
+      this.saveState();
+      toast('↩️ Undo','info',1500);
+    } else { toast('Nothing to undo','info',1200); }
+  },
+
+  redo() {
+    if(this.historyIndex < this.history.length - 1) {
+      this.historyIndex++;
+      this.state = JSON.parse(this.history[this.historyIndex]);
+      this.restoreFormValues();
+      this.saveState();
+      toast('↪️ Redo','info',1500);
+    }
+  },
+
+  restoreFormValues() {
+    const p = this.state.project;
+    const projMap = {projName:'name',projNumber:'number',projClient:'client',projCompany:'company',projEngineer:'engineer',projDate:'date',projRevision:'revision',projPrepared:'preparedBy',projChecked:'checkedBy',projApproved:'approvedBy',projBuilding:'building',projLocation:'location',projHeight:'height',projFloors:'floors',projOccType:'occType',projRemarks:'remarks'};
+    for(const [elId, key] of Object.entries(projMap)){
+      const el=$(elId); if(el) el.value = p[key]||'';
+    }
+    const ws = this.state.waterSupply||{};
+    if($('wsStaticPressure')) $('wsStaticPressure').value = ws.staticPressure||80;
+    if($('wsResidualPressure')) $('wsResidualPressure').value = ws.residualPressure||60;
+    if($('wsFlowResidual')) $('wsFlowResidual').value = ws.flowResidual||1000;
+    if($('wsElevation')) $('wsElevation').value = ws.elevation||0;
+    if($('wsPipeDia')) $('wsPipeDia').value = ws.pipeDia||6;
+    const s = this.state.settings;
+    if($('setUnits')) $('setUnits').value = s.units;
+    if($('setDefaultCode')) $('setDefaultCode').value = s.defaultCode;
+    if($('setCompany')) $('setCompany').value = s.companyName;
+    if($('setEngineer')) $('setEngineer').value = s.engineerName;
+    if($('setFontSize')) $('setFontSize').value = s.fontSize||'14';
+    if($('setTheme')) $('setTheme').value = s.theme||'light';
+    $('unitDisplay').textContent = s.units==='metric'?'Metric':'Imperial';
+    if(s.theme==='dark') document.documentElement.setAttribute('data-theme','dark');
+    if(s.fontSize) document.documentElement.style.setProperty('--font-size', s.fontSize+'px');
+    if(s.logo) $('logoPreview').innerHTML=`<img src="${s.logo}" style="max-height:60px;border-radius:6px">`;
+    this.highlightSelection('fireCodeGrid', this.state.fireCode);
+    this.highlightSelection('occupancyGrid', this.state.occupancy);
+    this.highlightSelection('hazardGrid', this.state.hazard);
+    this.highlightSelection('waterSourceGrid', this.state.waterSource);
+  },
+
+  highlightSelection(gridId, selectedId) {
+    const grid = $(gridId); if(!grid) return;
+    grid.querySelectorAll('.selection-card').forEach(c=>c.classList.toggle('selected', c.dataset.id===selectedId));
+  },
+
+  bindAllInputs() {
+    const projMap = {projName:'name',projNumber:'number',projClient:'client',projCompany:'company',projEngineer:'engineer',projDate:'date',projRevision:'revision',projPrepared:'preparedBy',projChecked:'checkedBy',projApproved:'approvedBy',projBuilding:'building',projLocation:'location',projHeight:'height',projFloors:'floors',projOccType:'occType',projRemarks:'remarks'};
+    for(const [elId, key] of Object.entries(projMap)){
+      const el=$(elId);
+      if(el) el.addEventListener('input',()=>{this.state.project[key]=el.value; this.pushHistory();});
+    }
+    const wsMap = {wsStaticPressure:'staticPressure',wsResidualPressure:'residualPressure',wsFlowResidual:'flowResidual',wsElevation:'elevation',wsPipeDia:'pipeDia'};
+    for(const [elId, key] of Object.entries(wsMap)){
+      const el=$(elId);
+      if(el) el.addEventListener('input',()=>{this.state.waterSupply[key]=parseFloat(el.value)||0; this.pushHistory();});
+    }
+    $('setUnits')?.addEventListener('change',e=>{this.state.settings.units=e.target.value; $('unitDisplay').textContent=e.target.value==='metric'?'Metric':'Imperial'; this.pushHistory();});
+    $('setDefaultCode')?.addEventListener('change',e=>{this.state.settings.defaultCode=e.target.value; this.pushHistory();});
+    $('setCompany')?.addEventListener('input',e=>{this.state.settings.companyName=e.target.value; this.pushHistory();});
+    $('setEngineer')?.addEventListener('input',e=>{this.state.settings.engineerName=e.target.value; this.pushHistory();});
+  },
+
+  startAutoSave() { this.autoSaveTimer = setInterval(()=>this.saveState(), 5000); },
+
+  /* Navigation */
+  initNavigation() {
+    qsa('.nav-item').forEach(item=>{
+      item.addEventListener('click',()=>{ if(item.dataset.page) this.navigate(item.dataset.page); });
+    });
+  },
+
+  navigate(page) {
+    this.currentPage = page;
+    qsa('.nav-item').forEach(n=>n.classList.toggle('active', n.dataset.page===page));
+    qsa('.page').forEach(p=>p.classList.toggle('active', p.id==='page-'+page));
+    const names={home:'Dashboard',project:'Project Information',firecode:'Fire Code Selection',occupancy:'Occupancy Classification',hazard:'Hazard Classification',watersupply:'Water Supply',sprinkler:'Sprinkler Calculator',hydraulic:'Hydraulic Calculator',pipesize:'Pipe Sizing',standpipe:'Standpipe System',firepump:'Fire Pump',watertank:'Water Tank',pressureloss:'Pressure Loss',elevation:'Elevation Analysis',hosereel:'Hose Reel',extinguisher:'Fire Extinguisher',material:'Material Estimate',cost:'Cost Estimate',visualization:'Visualization',reports:'Reports',settings:'Settings',about:'About'};
+    $('breadcrumbPage').textContent = names[page]||page;
+    this.updateProgress();
+    $('sidebar').classList.remove('open');
+    if(page==='visualization') this.updateCharts();
+    if(page==='home') { this.renderHomeStats(); this.initCharts(); this.updateValidation(); }
+  },
+
+  initSearch() {
+    $('searchInput')?.addEventListener('input', e=>{
+      const q = e.target.value.toLowerCase();
+      qsa('.nav-item').forEach(item=>{
+        item.style.display = !q||item.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  },
+
+  initKeyboardShortcuts() {
+    document.addEventListener('keydown', e=>{
+      if(e.ctrlKey && e.key==='z'){ e.preventDefault(); this.undo(); }
+      if(e.ctrlKey && e.key==='y'){ e.preventDefault(); this.redo(); }
+      if(e.ctrlKey && e.key==='s'){ e.preventDefault(); this.exportJSON(); }
+      if(e.key==='Escape') closeModal();
+      if(e.key==='F1'){ e.preventDefault(); this.navigate('about'); }
+    });
+  },
+
+  updateProgress() {
+    let done=0, total=8;
+    if(this.state.project.name) done++;
+    if(this.state.fireCode) done++;
+    if(this.state.occupancy) done++;
+    if(this.state.hazard) done++;
+    if(this.state.calculations.sprinkler) done++;
+    if(this.state.calculations.hydraulic) done++;
+    if(this.state.calculations.firePump) done++;
+    if(this.state.calculations.waterTank) done++;
+    const pct = Math.round(done/total*100);
+    $('progressBar').style.width = pct+'%';
+    $('progressText').textContent = pct+'% Complete';
+  },
+
+  toggleCard(btn) {
+    const card = btn.closest('.card');
+    card.classList.toggle('collapsed');
+  },
+
+  toggleHistory() {
+    const panel = $('historyPanel');
+    panel.classList.toggle('open');
+    if(panel.classList.contains('open')) this.renderCalcHistory();
+  },
+
+  logCalculation(module, summary, data) {
+    if(this.isRestoring) return;
+    this.calcHistory.unshift({
+      module, summary, data:JSON.stringify(data),
+      time: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString()
+    });
+    if(this.calcHistory.length > 30) this.calcHistory.pop();
+    try { sessionStorage.setItem('fdg_calc_history', JSON.stringify(this.calcHistory)); } catch(e){}
+  },
+
+  renderCalcHistory() {
+    const list = $('historyList');
+    if(!this.calcHistory.length){
+      list.innerHTML = '<div style="text-align:center;color:var(--text3);padding:30px;font-size:.82rem">No calculations yet.<br>Run a calculation to see history.</div>';
+      return;
+    }
+    list.innerHTML = this.calcHistory.map((h,i)=>`
+      <div class="history-item">
+        <div class="hi-label">${h.module} — ${h.summary}</div>
+        <div class="hi-time">${h.date} ${h.time}</div>
+      </div>`).join('');
+  },
+
+  updateValidation() {
+    const calcs = this.state.calculations;
+    const items = [];
+    if(calcs.sprinkler){
+      const s = calcs.sprinkler;
+      items.push({label:'Sprinkler Pressure', val:`${fmt(s.pressurePerHead,1)} psi`, pass:s.pressurePerHead>=7, note:`Min 7 psi required`});
+    }
+    if(calcs.hydraulic){
+      const h = calcs.hydraulic;
+      items.push({label:'Pipe Velocity', val:`${fmt(h.velocity,1)} ft/s`, pass:h.velOk, note:`Max ${h.maxVel} ft/s allowed`});
+    }
+    if(calcs.firePump){
+      const fp = calcs.firePump;
+      items.push({label:'NPSH Available', val:`${fmt(fp.npshA,1)} ft`, pass:fp.npshA>=10, note:`Min 10 ft recommended`});
+    }
+    if(!items.length){ $('homeValidation').style.display='none'; return; }
+    $('homeValidation').style.display='block';
+    $('homeValidationContent').innerHTML = `
+      <div class="grid grid-3">${items.map(it=>`
+        <div class="stat-card">
+          <div class="stat-icon ${it.pass?'green':'red'}">${it.pass?'✅':'⚠️'}</div>
+          <div class="stat-info">
+            <div class="stat-value" style="font-size:1.1rem">${it.val}</div>
+            <div class="stat-label">${it.label}</div>
+            <div class="stat-sub">${it.note} — <span class="tag ${it.pass?'tag-pass':'tag-fail'}">${it.pass?'PASS':'FAIL'}</span></div>
+          </div>
+        </div>`).join('')}
+      </div>`;
+  },
+
+  /* Theme */
+  toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme')==='dark';
+    if(isDark){ document.documentElement.removeAttribute('data-theme'); this.state.settings.theme='light'; $('themeBtn').textContent='🌙'; if($('setTheme'))$('setTheme').value='light'; }
+    else { document.documentElement.setAttribute('data-theme','dark'); this.state.settings.theme='dark'; $('themeBtn').textContent='☀️'; if($('setTheme'))$('setTheme').value='dark'; }
+    this.pushHistory();
+    this.destroyCharts(); this.initCharts();
+  },
+
+  applyTheme() {
+    if(this.state.settings.theme==='dark'){ document.documentElement.setAttribute('data-theme','dark'); $('themeBtn').textContent='☀️'; }
+    const fs = this.state.settings.fontSize||'14';
+    document.documentElement.style.setProperty('--font-size', fs+'px');
+  },
+
+  /* Export JSON */
+  exportJSON() {
+    this.saveState();
+    const blob = new Blob([JSON.stringify(this.state,null,2)],{type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = (this.state.project.name||'FDG-FP-Project')+'.json';
+    a.click(); URL.revokeObjectURL(a.href);
+    toast('💾 Project exported','success');
+  },
+
+  /* Import JSON */
+  importJSON(input) {
+    const file = input.files[0]; if(!file) return;
+    const reader = new FileReader();
+    reader.onload = e=>{
+      try {
+        this.state = Object.assign(this.getDefaultState(), JSON.parse(e.target.result));
+        this.restoreFormValues(); this.saveState(); this.pushHistory();
+        PressureLoss.render(); Material.render(); Cost.render();
+        this.renderHomeStats(); this.updateProgress();
+        toast('📂 Project imported successfully','success');
+      } catch(err){ toast('❌ Invalid project file','error'); }
+    };
+    reader.readAsText(file); input.value='';
+  },
+
+  /* Reset */
+  confirmReset() {
+    showModal('Reset Project','<p style="color:var(--text2)">Are you sure you want to reset all project data? This action cannot be undone.</p>',
+      '<button class="btn btn-secondary" onclick="closeModal()">Cancel</button><button class="btn btn-danger" onclick="App.resetProject()">🗑️ Reset</button>');
+  },
+
+  resetProject() {
+    closeModal();
+    localStorage.removeItem('fdg_fp_state_v2');
+    this.state = this.getDefaultState();
+    this.history=[]; this.historyIndex=-1; this.calcHistory=[];
+    this.restoreFormValues(); this.pushHistory();
+    PressureLoss.init(); Material.init(); Cost.init();
+    this.renderHomeStats(); this.updateProgress();
+    // Clear result cards
+    ['sprinklerResults','hydraulicResults','pipeSizeResults','standpipeResults','pumpResults','pumpCurveCard','tankResults','hoseReelResults','extResults','waterSupplyResults','elevResults'].forEach(id=>{const el=$(id);if(el)el.style.display='none';});
+    toast('🔄 Project reset','warning');
+  },
+
+  /* ---- RENDER FUNCTIONS ---- */
+  renderFireCodes() {
+    $('fireCodeGrid').innerHTML = FIRE_CODES.map(c=>`
+      <div class="selection-card ${this.state.fireCode===c.id?'selected':''}" data-id="${c.id}" onclick="App.selectFireCode('${c.id}')">
+        <div class="sel-icon">${c.icon}</div>
+        <div class="sel-title">${c.name}</div>
+        <div class="sel-desc">${c.desc}</div>
+      </div>`).join('');
+  },
+
+  selectFireCode(id) {
+    this.state.fireCode = id;
+    this.highlightSelection('fireCodeGrid', id);
+    const code = FIRE_CODES.find(c=>c.id===id);
+    $('codeParamsCard').style.display='block';
+    $('codeParamsContent').innerHTML=`
+      <div class="grid grid-3">
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${code.params.velocityMax} ft/s</div><div class="stat-label">Max Pipe Velocity</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange">🔥</div><div class="stat-info"><div class="stat-value">${code.params.hoseAllowance} GPM</div><div class="stat-label">Hose Allowance</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">💧</div><div class="stat-info"><div class="stat-value">${code.params.minPressure} psi</div><div class="stat-label">Min Head Pressure</div></div></div>
+      </div>
+      <div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">ℹ️</span><div><strong>${code.name} — ${code.desc}</strong>Parameters automatically applied throughout all calculations.</div></div>`;
+    this.pushHistory();
+    toast('📜 Fire code: '+code.name,'info');
+  },
+
+  renderOccupancy() {
+    $('occupancyGrid').innerHTML = OCCUPANCIES.map(o=>`
+      <div class="selection-card ${this.state.occupancy===o.id?'selected':''}" data-id="${o.id}" onclick="App.selectOccupancy('${o.id}')">
+        <div class="sel-icon">${o.icon}</div>
+        <div class="sel-title">${o.name}</div>
+      </div>`).join('');
+  },
+
+  selectOccupancy(id) {
+    this.state.occupancy = id;
+    this.highlightSelection('occupancyGrid', id);
+    const occ = OCCUPANCIES.find(o=>o.id===id);
+    const haz = HAZARDS[occ.hazard];
+    this.state.hazard = occ.hazard;
+    this.highlightSelection('hazardGrid', occ.hazard);
+    $('occupancyDetails').style.display='block';
+    $('occupancyContent').innerHTML=`
+      <div class="grid grid-3">
+        <div class="stat-card"><div class="stat-icon green">🏢</div><div class="stat-info"><div class="stat-value" style="font-size:1rem">${occ.name}</div><div class="stat-label">Occupancy</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange">⚠️</div><div class="stat-info"><div class="stat-value" style="font-size:.9rem">${haz.name}</div><div class="stat-label">Default Hazard</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">💧</div><div class="stat-info"><div class="stat-value">${haz.density} GPM/ft²</div><div class="stat-label">Design Density</div></div></div>
+      </div>`;
+    if($('sprDensity')) $('sprDensity').value = haz.density;
+    if($('sprArea')) $('sprArea').value = haz.area;
+    if($('projOccType')) $('projOccType').value = occ.name;
+    this.state.project.occType = occ.name;
+    this.pushHistory();
+    toast('🏢 Occupancy: '+occ.name,'info');
+  },
+
+  renderHazards() {
+    $('hazardGrid').innerHTML = Object.entries(HAZARDS).map(([id,h])=>`
+      <div class="selection-card ${this.state.hazard===id?'selected':''}" data-id="${id}" onclick="App.selectHazard('${id}')">
+        <div class="sel-icon">⚠️</div>
+        <div class="sel-title">${h.name}</div>
+        <div class="sel-desc">${h.density} GPM/ft² · ${h.area.toLocaleString()} ft²</div>
+      </div>`).join('');
+  },
+
+  selectHazard(id) {
+    this.state.hazard = id;
+    this.highlightSelection('hazardGrid', id);
+    const h = HAZARDS[id];
+    $('hazardDetails').style.display='block';
+    $('hazardContent').innerHTML=`
+      <div class="grid grid-4">
+        <div class="stat-card"><div class="stat-icon red">💧</div><div class="stat-info"><div class="stat-value">${h.density}</div><div class="stat-label">Density (GPM/ft²)</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${h.area.toLocaleString()}</div><div class="stat-label">Design Area (ft²)</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange">🔥</div><div class="stat-info"><div class="stat-value">${h.hose}</div><div class="stat-label">Hose Allowance (GPM)</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">⏱️</div><div class="stat-info"><div class="stat-value">${h.duration} min</div><div class="stat-label">Fire Duration</div></div></div>
+      </div>`;
+    if($('sprDensity')) $('sprDensity').value = h.density;
+    if($('sprArea')) $('sprArea').value = h.area;
+    if($('wtDuration')) $('wtDuration').value = h.duration;
+    this.pushHistory();
+    toast('⚠️ Hazard: '+h.name,'info');
+  },
+
+  renderWaterSources() {
+    $('waterSourceGrid').innerHTML = WATER_SOURCES.map(w=>`
+      <div class="selection-card ${this.state.waterSource===w.id?'selected':''}" data-id="${w.id}" onclick="App.selectWaterSource('${w.id}')">
+        <div class="sel-icon">${w.icon}</div>
+        <div class="sel-title">${w.name}</div>
+        <div class="sel-desc">${w.desc}</div>
+      </div>`).join('');
+  },
+
+  selectWaterSource(id) {
+    this.state.waterSource = id;
+    this.highlightSelection('waterSourceGrid', id);
+    this.pushHistory();
+    toast('💧 Water source: '+WATER_SOURCES.find(w=>w.id===id).name,'info');
+  },
+
+  renderHomeStats() {
+    const h = HAZARDS[this.state.hazard]||HAZARDS.light;
+    const code = FIRE_CODES.find(c=>c.id===this.state.fireCode)||FIRE_CODES[0];
+    const sprFlow = this.state.calculations.sprinkler ? this.state.calculations.sprinkler.systemDemand : (h.density*h.area+h.hose);
+    const tankVol = this.state.calculations.waterTank ? fmtInt(this.state.calculations.waterTank.totalVolume)+' gal' : '—';
+    const pumpHp = this.state.calculations.firePump ? this.state.calculations.firePump.stdHp+' HP' : '—';
+    $('homeStats').innerHTML=`
+      <div class="stat-card" onclick="App.navigate('sprinkler')">
+        <div class="stat-icon red">💧</div>
+        <div class="stat-info"><div class="stat-value">${Math.round(sprFlow)} GPM</div><div class="stat-label">System Demand</div><div class="stat-sub">Sprinkler + Hose</div></div>
+      </div>
+      <div class="stat-card" onclick="App.navigate('firecode')">
+        <div class="stat-icon blue">📜</div>
+        <div class="stat-info"><div class="stat-value" style="font-size:1rem">${code.name}</div><div class="stat-label">Fire Code</div><div class="stat-sub">${code.desc}</div></div>
+      </div>
+      <div class="stat-card" onclick="App.navigate('firepump')">
+        <div class="stat-icon orange">⚡</div>
+        <div class="stat-info"><div class="stat-value">${pumpHp}</div><div class="stat-label">Fire Pump</div><div class="stat-sub">${this.state.calculations.firePump?fmt(this.state.calculations.firePump.Q,0)+' GPM @ '+this.state.calculations.firePump.H+' psi':'Not calculated'}</div></div>
+      </div>
+      <div class="stat-card" onclick="App.navigate('watertank')">
+        <div class="stat-icon green">🛢️</div>
+        <div class="stat-info"><div class="stat-value">${tankVol}</div><div class="stat-label">Tank Volume</div><div class="stat-sub">${this.state.calculations.waterTank?this.state.calculations.waterTank.duration+' min duration':'Not calculated'}</div></div>
+      </div>`;
+  },
+
+  renderQuickActions() {
+    const actions = [
+      {icon:'🔧',label:'Sprinkler',page:'sprinkler'},{icon:'📐',label:'Hydraulic',page:'hydraulic'},
+      {icon:'⚡',label:'Fire Pump',page:'firepump'},{icon:'🛢️',label:'Water Tank',page:'watertank'},
+      {icon:'📏',label:'Elevation',page:'elevation'},{icon:'📄',label:'Reports',page:'reports'},
+    ];
+    $('quickActions').innerHTML = actions.map(a=>`
+      <div class="selection-card" onclick="App.navigate('${a.page}')">
+        <div class="sel-icon">${a.icon}</div>
+        <div class="sel-title">${a.label}</div>
+      </div>`).join('');
+  },
+
+  renderReportSections() {
+    const secs = ['Project Info','Fire Code','Occupancy','Hazard','Water Supply','Sprinkler','Hydraulic','Pipe Sizing','Standpipe','Fire Pump','Water Tank','Pressure Loss','Hose Reel','Extinguisher','Material','Cost','Elevation','Visualizations'];
+    $('reportSections').innerHTML = 
+      `<div style="width:100%;margin-bottom:8px">
+         <button class="btn btn-xs btn-secondary" onclick="document.querySelectorAll('#reportSections input').forEach(cb=>cb.checked=true)">☑️ Select All</button>
+         <button class="btn btn-xs btn-secondary" onclick="document.querySelectorAll('#reportSections input').forEach(cb=>cb.checked=false)">☐ Deselect All</button>
+       </div>` +
+      secs.map(s=>`<label style="display:flex;align-items:center;gap:5px;font-size:.82rem;cursor:pointer;padding:4px 8px;border:1px solid var(--border);border-radius:4px;background:var(--bg)"><input type="checkbox" checked value="${s}"> ${s}</label>`).join('');
+  },
+
+  /* ---- CHARTS ---- */
+  destroyCharts() {
+    Object.values(this.charts).forEach(c=>{ if(c&&c.destroy) c.destroy(); });
+    this.charts = {};
+  },
+
+  initCharts() {
+    const tc = getComputedStyle(document.documentElement).getPropertyValue('--text').trim()||'#1A1A2E';
+    const gc = getComputedStyle(document.documentElement).getPropertyValue('--border').trim()||'#E2E4EA';
+    Chart.defaults.color = tc; Chart.defaults.borderColor = gc;
+    const completionCtx = $('chartCompletion');
+    if(completionCtx && !this.charts.completion) {
+      let done=0, total=8;
+      if(this.state.project.name) done++;
+      if(this.state.fireCode) done++;
+      if(this.state.occupancy) done++;
+      if(this.state.hazard) done++;
+      if(this.state.calculations.sprinkler) done++;
+      if(this.state.calculations.hydraulic) done++;
+      if(this.state.calculations.firePump) done++;
+      if(this.state.calculations.waterTank) done++;
+      this.charts.completion = new Chart(completionCtx,{
+        type:'doughnut',
+        data:{labels:['Completed','Remaining'],datasets:[{data:[done,total-done],backgroundColor:['#D32F2F','#E2E4EA'],borderWidth:0,hoverOffset:4}]},
+        options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:ctx=>`${ctx.label}: ${ctx.raw}/${total}`}}}}
+      });
+    }
+  },
+
+  updateCharts() {
+    this.destroyCharts();
+    const tc = getComputedStyle(document.documentElement).getPropertyValue('--text').trim()||'#1A1A2E';
+    Chart.defaults.color = tc;
+    const h = HAZARDS[this.state.hazard]||HAZARDS.light;
+    const sprCalc = this.state.calculations.sprinkler;
+    const reds = ['#D32F2F','#EF5350','#FF8A80','#FFCDD2','#B71C1C','#C62828'];
+
+    // Flow Distribution bar
+    const flowCtx = $('chartFlow');
+    if(flowCtx) {
+      const sprFlow = sprCalc ? sprCalc.totalFlow : h.density*h.area;
+      const spCalc = this.state.calculations.standpipe;
+      const hrCalc = this.state.calculations.hoseReel;
+      this.charts.flow = new Chart(flowCtx,{
+        type:'bar',
+        data:{labels:['Sprinkler','Hose Allow.','Standpipe','Hose Reel','Total Demand'],
+          datasets:[{label:'Flow (GPM)',data:[sprFlow,h.hose,spCalc?spCalc.flowDemand:0,hrCalc?hrCalc.totalFlow:0,sprFlow+h.hose],backgroundColor:reds,borderRadius:4}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,title:{display:true,text:'GPM'}}}}
+      });
+    }
+
+    // Pressure Profile line
+    const pressCtx = $('chartPressure');
+    if(pressCtx) {
+      const segs = this.state.pressureSegments||[];
+      let cumP = this.state.waterSupply?.staticPressure||80;
+      const labels=['Source'], data=[cumP];
+      segs.forEach((s,i)=>{ cumP -= (s.totalLoss||0); labels.push(s.label||'Seg '+(i+1)); data.push(Math.max(cumP,0)); });
+      this.charts.pressure = new Chart(pressCtx,{
+        type:'line',
+        data:{labels,datasets:[{label:'Pressure (psi)',data,borderColor:'#D32F2F',backgroundColor:'rgba(211,47,47,.15)',fill:true,tension:.35,pointBackgroundColor:'#D32F2F',pointRadius:5}]},
+        options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:true,text:'Pressure (psi)'}}}}
+      });
+    }
+
+    // Water Demand pie
+    const demandCtx = $('chartDemand');
+    if(demandCtx) {
+      const sprFlow = sprCalc ? sprCalc.totalFlow : h.density*h.area;
+      const spCalc = this.state.calculations.standpipe;
+      const hrCalc = this.state.calculations.hoseReel;
+      this.charts.demand = new Chart(demandCtx,{
+        type:'pie',
+        data:{labels:['Sprinkler Demand','Hose Allowance','Standpipe','Hose Reel'],
+          datasets:[{data:[sprFlow,h.hose,spCalc?spCalc.flowDemand:0,hrCalc?hrCalc.totalFlow:0],backgroundColor:reds,borderWidth:2,borderColor:'var(--surface)'}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}
+      });
+    }
+
+    // Cost Distribution
+    const costCtx = $('chartCost');
+    if(costCtx) {
+      const items = this.state.costItems||[];
+      const cats = {};
+      items.forEach(it=>{ cats[it.category]=(cats[it.category]||0)+(it.qty*it.unitPrice); });
+      const hasData = Object.keys(cats).length > 0;
+      this.charts.cost = new Chart(costCtx,{
+        type:'doughnut',
+        data:{labels:hasData?Object.keys(cats):['No data'],datasets:[{data:hasData?Object.values(cats):[1],backgroundColor:hasData?reds:['#E2E4EA'],borderWidth:2,borderColor:'var(--surface)'}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}
+      });
+    }
+
+    // Pipe Size Distribution
+    const pipeSizeCtx = $('chartPipeSize');
+    if(pipeSizeCtx) {
+      const segs = this.state.pressureSegments||[];
+      const sizeCounts = {};
+      segs.forEach(s=>{
+        const nom = PIPE_SIZES_SORTED.find(n=>Math.abs(PIPE_DATA[String(n)].id - s.dia) < 0.1) || 'Other';
+        sizeCounts[nom+'\"']=(sizeCounts[nom+'\"']||0)+1;
+      });
+      const hasData = Object.keys(sizeCounts).length>0;
+      this.charts.pipeSize = new Chart(pipeSizeCtx,{
+        type:'bar',
+        data:{labels:hasData?Object.keys(sizeCounts):['No data'],datasets:[{label:'Segments',data:hasData?Object.values(sizeCounts):[0],backgroundColor:'#D32F2F',borderRadius:4}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,title:{display:true,text:'Count'}}}}
+      });
+    }
+
+    // Tank Volume Breakdown
+    const tankVolCtx = $('chartTankVol');
+    if(tankVolCtx) {
+      const wt = this.state.calculations.waterTank;
+      const hasData = !!wt;
+      this.charts.tankVol = new Chart(tankVolCtx,{
+        type:'doughnut',
+        data:{labels:['Usable Volume','Reserve Volume','Dead Volume'],
+          datasets:[{data:hasData?[wt.usableVolume,wt.reserveVolume,wt.deadVolume]:[1,0,0],backgroundColor:['#D32F2F','#EF5350','#FFCDD2'],borderWidth:2,borderColor:'var(--surface)'}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}
+      });
+    }
+
+    this.initCharts(); // Re-add completion chart
+  },
+};
+
+/* ============================================================
+   MODULE: WATER SUPPLY
+   ============================================================ */
+const WaterSupply = {
+  analyze() {
+    if(!validateInputs('page-watersupply')) return;
+    const Ps = numVal('wsStaticPressure'), Pr = numVal('wsResidualPressure');
+    const Qr = numVal('wsFlowResidual'), elev = numVal('wsElevation'), dia = numVal('wsPipeDia');
+    if(!Ps||!Qr){ toast('❌ Enter static pressure and flow','error'); return; }
+
+    const elevHead = Eng.elevationHead(elev);
+    const adjStatic = Ps + elevHead;
+    const velAtFlow = Eng.velocity(Qr, PIPE_DATA[String(dia)]?.id || dia);
+    const C = 120;
+    const pf = Eng.hazenWilliams(Qr, C, PIPE_DATA[String(dia)]?.id||dia);
+    const availableAt0 = Ps; // static pressure
+
+    const result = {Ps,Pr,Qr,elev,dia,elevHead,adjStatic,velAtFlow,pf};
+    App.state.calculations.waterSupply = result;
+    App.pushHistory();
+    App.logCalculation('Water Supply','Static: '+Ps+' psi, Residual: '+Pr+' psi @ '+Qr+' GPM', result);
+
+    $('waterSupplyResults').style.display='block';
+    $('waterSupplyOutput').innerHTML=`
+      <div class="grid grid-3">
+        <div class="stat-card"><div class="stat-icon blue">💧</div><div class="stat-info"><div class="stat-value">${Ps} psi</div><div class="stat-label">Static Pressure</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">📐</div><div class="stat-info"><div class="stat-value">${Pr} psi</div><div class="stat-label">Residual Pressure</div></div></div>
+        <div class="stat-card"><div class="stat-icon red">🔄</div><div class="stat-info"><div class="stat-value">${fmtInt(Qr)} GPM</div><div class="stat-label">Flow at Residual</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">Available Water Supply Analysis</div>
+        <div class="step">Static Pressure at Source: ${Ps} psi</div>
+        <div class="step">Elevation Correction: 0.433 × ${elev} = ${fmt(elevHead)} psi</div>
+        <div class="step">Adjusted Static at Grade: ${Ps} + ${fmt(elevHead)} = ${fmt(adjStatic)} psi</div>
+        <div class="step">Velocity in Supply Main: ${fmt(velAtFlow)} ft/s</div>
+        <div class="answer">Pressure Drop (Static to Residual): ${fmt(Ps - Pr)} psi at ${fmtInt(Qr)} GPM</div>
+        <div class="remark">✅ Supply data recorded. Use this data to verify system demand does not exceed available supply.</div>
+      </div>`;
+    toast('✅ Water supply analyzed','success');
+  }
+};
+
+/* ============================================================
+   MODULE: SPRINKLER CALCULATOR
+   ============================================================ */
+const Sprinkler = {
+  calculate() {
+    if(!validateInputs('page-sprinkler')) return;
+    const K = parseFloat($('sprKFactor').value);
+    const density = numVal('sprDensity'), area = numVal('sprArea');
+    const spacing = numVal('sprSpacing'), coverage = numVal('sprCoverage');
+    const headsOnBranch = numVal('sprHeadsBranch'), branches = numVal('sprBranches');
+    const minP = numVal('sprMinPressure')||7;
+    if(!density||!area){ toast('❌ Enter density and design area','error'); return; }
+
+    const totalFlow = density * area;
+    const operatingHeads = Math.ceil(area / coverage);
+    const flowPerHead = totalFlow / operatingHeads;
+    const pressurePerHead = Eng.pressureFromK(flowPerHead, K);
+    const totalHeads = headsOnBranch * branches;
+    const hose = HAZARDS[App.state.hazard]?.hose || 250;
+    const systemDemand = totalFlow + hose;
+    const maxSpacing = 15; // ft, standard spray
+
+    const result = {K,density,area,spacing,coverage,totalFlow,operatingHeads,flowPerHead,pressurePerHead,totalHeads,hose,systemDemand,minP};
+    App.state.calculations.sprinkler = result;
+    App.pushHistory(); App.renderHomeStats(); App.updateProgress();
+    App.logCalculation('Sprinkler',`${fmt(systemDemand,0)} GPM system demand`,result);
+
+    const warns = [];
+    if(pressurePerHead < minP) warns.push(`⚠️ Head pressure ${fmt(pressurePerHead,1)} psi < min ${minP} psi`);
+    if(spacing > maxSpacing) warns.push(`⚠️ Spacing ${spacing} ft exceeds ${maxSpacing} ft maximum`);
+    if(coverage > 130) warns.push('⚠️ Coverage >130 ft² — verify per NFPA 13 Table');
+
+    $('sprinklerResults').style.display='block';
+    $('sprinklerCalcOutput').innerHTML=`
+      <div class="grid grid-3" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">💧</div><div class="stat-info"><div class="stat-value">${fmt(totalFlow,0)} GPM</div><div class="stat-label">Sprinkler Demand</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">🔧</div><div class="stat-info"><div class="stat-value">${operatingHeads}</div><div class="stat-label">Operating Heads</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">⚡</div><div class="stat-info"><div class="stat-value">${fmt(systemDemand,0)} GPM</div><div class="stat-label">System Demand (w/ Hose)</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">Formula: Q = Density × Design Area</div>
+        <div class="step">Given: Density = ${density} GPM/ft² | Area = ${area.toLocaleString()} ft²</div>
+        <div class="step">Substituting: Q = ${density} × ${area.toLocaleString()}</div>
+        <div class="answer">Q = ${fmt(totalFlow,1)} GPM ✓</div>
+        <br>
+        <div class="formula">Formula: Operating Heads = ceil(Area / Coverage)</div>
+        <div class="step">n = ⌈${area.toLocaleString()} / ${coverage}⌉ = ${operatingHeads} heads</div>
+        <br>
+        <div class="formula">Formula: Flow per Head = Q / n</div>
+        <div class="step">q = ${fmt(totalFlow,1)} / ${operatingHeads}</div>
+        <div class="answer">q = ${fmt(flowPerHead,1)} GPM per head</div>
+        <br>
+        <div class="formula">Formula: Head Pressure P = (q / K)²</div>
+        <div class="step">P = (${fmt(flowPerHead,1)} / ${K})²</div>
+        <div class="answer">P = ${fmt(pressurePerHead,1)} psi ${pressurePerHead>=minP?`<span class="tag tag-pass">PASS ≥ ${minP} psi</span>`:`<span class="tag tag-fail">FAIL < ${minP} psi</span>`}</div>
+        <br>
+        <div class="formula">Formula: System Demand = Sprinkler Q + Hose Allowance</div>
+        <div class="step">Q_sys = ${fmt(totalFlow,0)} + ${hose}</div>
+        <div class="answer">Q_sys = ${fmt(systemDemand,0)} GPM</div>
+        ${warns.length?`<div class="remark">${warns.join('<br>')}</div>`:'<div class="remark">✅ All sprinkler parameters within acceptable range per NFPA 13.</div>'}
+      </div>
+      <div class="table-container" style="margin-top:14px">
+        <table><thead><tr><th>Parameter</th><th>Symbol</th><th>Value</th><th>Unit</th><th>Status</th></tr></thead><tbody>
+          <tr><td>K-Factor</td><td>K</td><td>${K}</td><td>GPM/√psi</td><td><span class="tag tag-info">Selected</span></td></tr>
+          <tr><td>Design Density</td><td>d</td><td>${density}</td><td>GPM/ft²</td><td><span class="tag tag-pass">Per Code</span></td></tr>
+          <tr><td>Design Area</td><td>A</td><td>${area.toLocaleString()}</td><td>ft²</td><td><span class="tag tag-pass">OK</span></td></tr>
+          <tr><td>Total Heads</td><td>N</td><td>${totalHeads}</td><td>heads</td><td><span class="tag tag-info">Calculated</span></td></tr>
+          <tr><td>Operating Heads</td><td>n</td><td>${operatingHeads}</td><td>heads</td><td><span class="tag tag-pass">OK</span></td></tr>
+          <tr><td>Flow per Head</td><td>q</td><td>${fmt(flowPerHead,1)}</td><td>GPM</td><td><span class="tag tag-pass">OK</span></td></tr>
+          <tr><td>Head Pressure</td><td>P</td><td>${fmt(pressurePerHead,1)}</td><td>psi</td><td>${pressurePerHead>=minP?'<span class="tag tag-pass">PASS</span>':'<span class="tag tag-fail">FAIL</span>'}</td></tr>
+          <tr><td>Hose Allowance</td><td>—</td><td>${hose}</td><td>GPM</td><td><span class="tag tag-info">Per Code</span></td></tr>
+          <tr><td>System Demand</td><td>Q_sys</td><td>${fmt(systemDemand,0)}</td><td>GPM</td><td><span class="tag tag-pass">OK</span></td></tr>
+        </tbody></table>
+      </div>`;
+    toast('✅ Sprinkler calculation complete','success');
+  },
+  reset() {
+    $('sprinklerResults').style.display='none';
+    App.state.calculations.sprinkler=null;
+    App.pushHistory(); App.renderHomeStats(); App.updateProgress();
+    toast('↺ Sprinkler reset','info',1500);
+  }
+};
+
+/* ============================================================
+   MODULE: HYDRAULIC CALCULATOR
+   ============================================================ */
+const Hydraulic = {
+  calculate() {
+    if(!validateInputs('page-hydraulic')) return;
+    const Q = numVal('hydQ'), C = parseFloat($('hydC').value), D = numVal('hydD');
+    const L = numVal('hydL'), fittings = numVal('hydFittings'), elev = numVal('hydElev');
+    if(!Q||!C||!D){ toast('❌ Enter Q, C-factor, and Diameter','error'); return; }
+
+    const pf = Eng.hazenWilliams(Q, C, D);
+    const totalLength = L + fittings;
+    const frictionLoss = pf * totalLength;
+    const elevLoss = Eng.elevationHead(elev);
+    const totalLoss = frictionLoss + elevLoss;
+    const velocity = Eng.velocity(Q, D);
+    const code = FIRE_CODES.find(c=>c.id===App.state.fireCode);
+    const maxVel = code ? code.params.velocityMax : 32;
+    const velOk = velocity <= maxVel;
+    const residualP = (App.state.waterSupply?.staticPressure||80) - totalLoss;
+
+    const result = {Q,C,D,L,fittings,totalLength,pf,frictionLoss,elevLoss,totalLoss,velocity,velOk,maxVel,residualP};
+    App.state.calculations.hydraulic = result;
+    App.pushHistory();
+    App.logCalculation('Hydraulic',`${fmt(totalLoss)} psi loss @ ${Q} GPM`,result);
+
+    $('hydraulicResults').style.display='block';
+    $('hydraulicCalcOutput').innerHTML=`
+      <div class="grid grid-3" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">📉</div><div class="stat-info"><div class="stat-value">${fmt(totalLoss)} psi</div><div class="stat-label">Total Pressure Loss</div></div></div>
+        <div class="stat-card"><div class="stat-icon ${velOk?'green':'orange'}">💨</div><div class="stat-info"><div class="stat-value">${fmt(velocity)} ft/s</div><div class="stat-label">Velocity</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">📊</div><div class="stat-info"><div class="stat-value">${fmt(pf,5)} psi/ft</div><div class="stat-label">Unit Friction Loss</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">Hazen-Williams: p = 4.52 × Q^1.85 / (C^1.85 × D^4.87)</div>
+        <div class="step">Given: Q = ${Q} GPM | C = ${C} | D = ${D}" ID</div>
+        <div class="step">p = 4.52 × ${Q}^1.85 / (${C}^1.85 × ${D}^4.87)</div>
+        <div class="answer">p = ${fmt(pf,6)} psi/ft</div>
+        <br>
+        <div class="formula">Total Equivalent Length L_eq = L_pipe + L_fittings</div>
+        <div class="step">L_eq = ${L} + ${fittings} = ${totalLength} ft</div>
+        <br>
+        <div class="formula">Friction Loss = p × L_eq</div>
+        <div class="step">F = ${fmt(pf,6)} × ${totalLength} ft</div>
+        <div class="answer">F = ${fmt(frictionLoss)} psi</div>
+        <br>
+        <div class="formula">Elevation Loss = 0.433 psi/ft × Δh</div>
+        <div class="step">E = 0.433 × ${elev} ft</div>
+        <div class="answer">E = ${fmt(elevLoss)} psi</div>
+        <br>
+        <div class="formula">Total Loss = F + E</div>
+        <div class="answer">Total = ${fmt(frictionLoss)} + ${fmt(elevLoss)} = ${fmt(totalLoss)} psi</div>
+        <br>
+        <div class="formula">Velocity V = Q / (A × 448.831) where A = π/4 × (D/12)²</div>
+        <div class="step">V = ${Q} / ((π/4 × (${D}/12)²) × 448.831)</div>
+        <div class="answer">V = ${fmt(velocity)} ft/s ${velOk?`<span class="tag tag-pass">PASS ≤ ${maxVel} ft/s</span>`:`<span class="tag tag-fail">FAIL > ${maxVel} ft/s</span>`}</div>
+        <div class="answer">Residual Pressure at End: ${fmt(residualP)} psi</div>
+        ${!velOk?`<div class="remark">⚠️ Velocity exceeds allowable limit per ${code?.name||'NFPA 13'}. Increase pipe diameter.</div>`:'<div class="remark">✅ All hydraulic parameters acceptable.</div>'}
+      </div>`;
+    toast('✅ Hydraulic calculation complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: PIPE SIZING
+   ============================================================ */
+const PipeSizing = {
+  updateC() {
+    const matC = {steel:120,gi:130,cpvc:150,copper:140,ss:120,hdpe:150};
+    const mat = $('psMaterial')?.value;
+    if($('psCFactor') && mat) $('psCFactor').value = matC[mat]||120;
+  },
+  calculate() {
+    if(!validateInputs('page-pipesize')) return;
+    const Q = numVal('psFlow'), maxVel = numVal('psMaxVel'), C = numVal('psCFactor');
+    const unit = $('psUnit').value;
+    if(!Q){ toast('❌ Enter flow rate','error'); return; }
+
+    const rec = Eng.recommendPipe(Q, maxVel);
+    const results = PIPE_SIZES_SORTED.map(nom=>{
+      const d = PIPE_DATA[String(nom)].id;
+      const v = Eng.velocity(Q, d);
+      const p = Eng.hazenWilliams(Q, C, d);
+      let status = 'ok';
+      if(v > maxVel*1.5) status = 'undersized';
+      else if(v > maxVel) status = 'warn';
+      else if(v < 1.5) status = 'oversized';
+      return {nominal:nom, id:d, velocity:v, friction:p, status, recommended:nom===rec.nominal};
+    });
+
+    App.state.calculations.pipeSize = {Q,maxVel,C,recommended:rec,unit};
+    App.pushHistory();
+    App.logCalculation('Pipe Sizing',`${rec.nominal}" recommended for ${Q} GPM`,{Q,maxVel,recommended:rec});
+
+    $('pipeSizeResults').style.display='block';
+    $('pipeSizeOutput').innerHTML=`
+      <div class="grid grid-2" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon green">✅</div><div class="stat-info"><div class="stat-value">${rec.nominal}" ${unit==='mm'?'('+fmt(Eng.inToMm(rec.nominal),0)+' mm)':''}</div><div class="stat-label">Recommended Nominal Size</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">💨</div><div class="stat-info"><div class="stat-value">${fmt(rec.velocity)} ft/s</div><div class="stat-label">Velocity at Recommended Size</div></div></div>
+      </div>
+      <div class="table-container">
+        <table><thead><tr><th>Nom (in)</th>${unit==='mm'?'<th>Nom (mm)</th>':''}<th>ID (in)</th><th>Vel (ft/s)</th><th>Friction (psi/ft)</th><th>Status</th></tr></thead>
+        <tbody>${results.map(r=>`<tr style="${r.recommended?'background:var(--primary-alpha);font-weight:700':''}">
+          <td>${r.nominal}"</td>${unit==='mm'?`<td>${fmt(Eng.inToMm(r.nominal),0)} mm</td>`:''}
+          <td>${fmt(r.id,3)}</td><td>${fmt(r.velocity)}</td><td>${fmt(r.friction,5)}</td>
+          <td>${r.recommended?'<span class="tag tag-pass">✅ RECOMMENDED</span>':r.status==='oversized'?'<span class="tag tag-warn">Oversized</span>':r.status==='undersized'?'<span class="tag tag-fail">Undersized</span>':r.status==='warn'?'<span class="tag tag-warn">High Velocity</span>':'<span class="tag tag-info">OK</span>'}</td>
+        </tr>`).join('')}</tbody></table>
+      </div>`;
+    toast('✅ Pipe sizing complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: STANDPIPE
+   ============================================================ */
+const Standpipe = {
+  calculate() {
+    if(!validateInputs('page-standpipe')) return;
+    const cls = $('spClass').value, risers = numVal('spRisers');
+    const floors = numVal('spFloors'), floorHt = numVal('spFloorHt');
+    const valvesPerFloor = numVal('spValves');
+    const classReq = {
+      'I':{flowFirst:500,flowAdditional:250,maxFlow:1000,pressure:100,pipeSize:6,desc:'2½" hose connections for fire department use'},
+      'II':{flowFirst:100,flowAdditional:50,maxFlow:500,pressure:65,pipeSize:4,desc:'1½" hose stations for building occupant use'},
+      'III':{flowFirst:500,flowAdditional:250,maxFlow:1000,pressure:100,pipeSize:6,desc:'Combined 2½" FD and 1½" occupant connections'},
+    };
+    const req = classReq[cls];
+    const flowDemand = Math.min(req.flowFirst + req.flowAdditional*(risers-1), req.maxFlow);
+    const totalHeight = floors * floorHt;
+    const elevPressure = Eng.elevationHead(totalHeight);
+    const totalPressure = req.pressure + elevPressure;
+    const totalValves = floors * valvesPerFloor * risers;
+    const rec = Eng.recommendPipe(flowDemand, 25);
+
+    const result = {cls,risers,floors,floorHt,valvesPerFloor,flowDemand,totalHeight,elevPressure,totalPressure,totalValves,pipeSize:req.pipeSize};
+    App.state.calculations.standpipe = result;
+    App.pushHistory();
+    App.logCalculation('Standpipe',`Class ${cls}: ${flowDemand} GPM @ ${fmt(totalPressure,0)} psi`,result);
+
+    $('standpipeResults').style.display='block';
+    $('standpipeOutput').innerHTML=`
+      <div class="grid grid-3" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">💧</div><div class="stat-info"><div class="stat-value">${flowDemand} GPM</div><div class="stat-label">Flow Demand</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${fmt(totalPressure,0)} psi</div><div class="stat-label">Required Pressure</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">🔩</div><div class="stat-info"><div class="stat-value">${req.pipeSize}"</div><div class="stat-label">Min Riser Size</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">NFPA 14 Class ${cls} Standpipe — ${req.desc}</div>
+        <div class="step">Given: ${risers} riser(s) | ${floors} floors @ ${floorHt} ft/floor</div>
+        <div class="formula">Flow Demand = First Riser Flow + Additional Riser Flow (max ${req.maxFlow} GPM)</div>
+        <div class="step">Q = ${req.flowFirst} + ${req.flowAdditional} × (${risers} − 1) = ${flowDemand} GPM</div>
+        <div class="formula">Building Height = Floors × Floor Height</div>
+        <div class="step">H = ${floors} × ${floorHt} = ${totalHeight} ft</div>
+        <div class="formula">Elevation Pressure = 0.433 psi/ft × H</div>
+        <div class="step">P_elev = 0.433 × ${totalHeight} = ${fmt(elevPressure)} psi</div>
+        <div class="formula">Total Required Pressure = Residual + Elevation</div>
+        <div class="answer">P_total = ${req.pressure} + ${fmt(elevPressure)} = ${fmt(totalPressure)} psi</div>
+        <div class="step">Total Hose Valves = ${floors} floors × ${valvesPerFloor} valves × ${risers} risers = ${totalValves} valves</div>
+        <div class="remark">✅ Per NFPA 14 requirements for Class ${cls} standpipe systems. Minimum riser: ${req.pipeSize}" nominal.</div>
+      </div>`;
+    toast('✅ Standpipe calculation complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: FIRE PUMP
+   ============================================================ */
+const FirePump = {
+  calculate() {
+    if(!validateInputs('page-firepump')) return;
+    const Q = numVal('fpFlow'), H = numVal('fpHead'), eff = numVal('fpEfficiency');
+    const safety = numVal('fpSafety'), suction = numVal('fpSuction');
+    const type = $('fpType').value;
+    if(!Q||!H){ toast('❌ Enter flow rate and head','error'); return; }
+
+    const bhp = Eng.pumpBHP(Q, H, eff);
+    const motorHp = Eng.motorHP(bhp, safety);
+    const stdHp = Eng.stdMotorHP(motorHp);
+    const npshA = Eng.npshA(14.7, suction, 0.5, 2);
+    const tdh = H;
+    const shutoffH = H * 1.4; // approx shutoff at 140% rated head
+    const kw = stdHp * 0.746;
+
+    const result = {Q,H,eff,safety,suction,type,bhp,motorHp,stdHp,npshA,tdh,shutoffH,kw};
+    App.state.calculations.firePump = result;
+    App.pushHistory(); App.renderHomeStats(); App.updateProgress();
+    App.logCalculation('Fire Pump',`${stdHp} HP @ ${Q} GPM / ${H} psi`,result);
+
+    $('pumpResults').style.display='block';
+    $('pumpCalcOutput').innerHTML=`
+      <div class="grid grid-2" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">⚡</div><div class="stat-info"><div class="stat-value">${stdHp} HP</div><div class="stat-label">Motor Rating</div><div class="stat-sub">${fmt(kw,0)} kW equivalent</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${fmt(npshA,1)} ft</div><div class="stat-label">NPSH Available</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">BHP = (Q × H) / (3960 × η)</div>
+        <div class="step">Given: Q = ${Q} GPM | H = ${H} psi | η = ${eff}%</div>
+        <div class="step">BHP = (${Q} × ${H}) / (3960 × ${eff/100})</div>
+        <div class="answer">BHP = ${fmt(bhp,2)} HP</div>
+        <br>
+        <div class="formula">Motor HP = BHP × (1 + Safety Factor)</div>
+        <div class="step">Motor HP = ${fmt(bhp,2)} × (1 + ${safety/100})</div>
+        <div class="answer">Motor HP = ${fmt(motorHp,2)} HP → Standard: <strong>${stdHp} HP</strong></div>
+        <br>
+        <div class="formula">NPSH_A = (P_atm + P_suction − P_vapor − P_friction) × 2.31</div>
+        <div class="step">NPSH_A = (14.7 + ${suction} − 0.5 − 2) × 2.31</div>
+        <div class="answer">NPSH_A = ${fmt(npshA,1)} ft ${npshA>10?'<span class="tag tag-pass">PASS</span>':'<span class="tag tag-fail">LOW — Verify NPSH</span>'}</div>
+        <div class="step">Shutoff Head (approx): ${fmt(shutoffH,0)} psi (140% of rated)</div>
+        <div class="remark">✅ Pump Type: ${type==='electric'?'Electric Motor Drive':'Diesel Engine Drive'} — Per NFPA 20. Select ${stdHp} HP rated pump.</div>
+      </div>`;
+
+    // Pump curve chart
+    $('pumpCurveCard').style.display='block';
+    if(App.charts.pumpCurve) App.charts.pumpCurve.destroy();
+    const flowPts=[], headPts=[], powerPts=[];
+    for(let pct=0; pct<=150; pct+=10){
+      const q = Q*pct/100;
+      const h = H*(1.4 - 0.4*Math.pow(pct/100,2));
+      flowPts.push(q); headPts.push(h); powerPts.push(Eng.pumpBHP(q,h,eff));
+    }
+    App.charts.pumpCurve = new Chart($('chartPumpCurve'),{
+      type:'line',
+      data:{labels:flowPts.map(f=>fmt(f,0)),datasets:[
+        {label:'Head (psi)',data:headPts,borderColor:'#D32F2F',backgroundColor:'rgba(211,47,47,.1)',fill:true,yAxisID:'y',tension:.3,pointRadius:3},
+        {label:'BHP',data:powerPts,borderColor:'#1565C0',borderDash:[5,5],yAxisID:'y1',tension:.3,pointRadius:3}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index'},scales:{y:{position:'left',title:{display:true,text:'Head (psi)'}},y1:{position:'right',title:{display:true,text:'BHP'},grid:{drawOnChartArea:false}}},plugins:{title:{display:true,text:'Fire Pump Performance Curve'}}}
+    });
+    toast('✅ Fire pump calculation complete','success');
+  },
+
+  calcJockey() {
+    const mainFlow = numVal('fpFlow'), mainHead = numVal('fpHead');
+    const jFlow = Math.max(mainFlow*0.01, 5);
+    const jHead = mainHead*1.1 + 5;
+    const jBHP = Eng.pumpBHP(jFlow, jHead, 60);
+    const jHP = Eng.stdMotorHP(jBHP*1.15);
+    showModal('🔸 Jockey Pump Sizing',`
+      <div class="calc-block">
+        <div class="formula">Jockey Pump Design Per NFPA 20</div>
+        <div class="formula">Flow = max(1% of Main Flow, 5 GPM min)</div>
+        <div class="step">Q_j = max(${mainFlow}×0.01, 5) = ${fmt(jFlow,1)} GPM</div>
+        <div class="formula">Head = Main Head × 1.1 + 5 psi</div>
+        <div class="step">H_j = ${mainHead} × 1.1 + 5 = ${fmt(jHead,1)} psi</div>
+        <div class="formula">BHP = (Q × H) / (3960 × η) where η = 60%</div>
+        <div class="step">BHP = ${fmt(jBHP,2)} HP</div>
+        <div class="answer">Jockey Pump: <strong>${jHP} HP</strong> @ ${fmt(jFlow,0)} GPM, ${fmt(jHead,0)} psi</div>
+        <div class="remark">✅ Jockey pump maintains system pressure and prevents main pump from cycling. Install with dedicated pressure controller.</div>
+      </div>`,
+      '<button class="btn btn-primary" onclick="closeModal()">Close</button>');
+  }
+};
+
+/* ============================================================
+   MODULE: WATER TANK
+   ============================================================ */
+const WaterTank = {
+  calculate() {
+    if(!validateInputs('page-watertank')) return;
+    const flow = numVal('wtFlow'), duration = parseFloat($('wtDuration').value);
+    const reservePct = numVal('wtReserve'), deadPct = numVal('wtDead');
+    const type = $('wtType').value, refill = numVal('wtRefill');
+    if(!flow){ toast('❌ Enter system flow rate','error'); return; }
+
+    const baseVolume = flow * duration;
+    const totalVolume = Eng.storageVolume(flow, duration, reservePct, deadPct);
+    const reserveVolume = totalVolume * reservePct / 100;
+    const deadVolume = totalVolume * deadPct / 100;
+    const usableVolume = baseVolume;
+    const dims = Eng.tankDimensions(totalVolume);
+    const refillTime = refill > 0 ? totalVolume / refill : Infinity;
+    const totalVolumeL = totalVolume * 3.785;
+
+    const result = {flow,duration,reservePct,deadPct,baseVolume,totalVolume,reserveVolume,deadVolume,usableVolume,dims,refillTime,type,totalVolumeL};
+    App.state.calculations.waterTank = result;
+    App.pushHistory(); App.renderHomeStats(); App.updateProgress();
+    App.logCalculation('Water Tank',`${fmtComma(totalVolume)} gal for ${duration} min`,result);
+
+    $('tankResults').style.display='block';
+    $('tankCalcOutput').innerHTML=`
+      <div class="grid grid-4" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">🛢️</div><div class="stat-info"><div class="stat-value" style="font-size:1.1rem">${fmtComma(totalVolume)}</div><div class="stat-label">Total Volume (gal)</div><div class="stat-sub">${fmtComma(totalVolumeL)} L</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">💧</div><div class="stat-info"><div class="stat-value" style="font-size:1.1rem">${fmtComma(usableVolume)}</div><div class="stat-label">Usable Volume (gal)</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">📐</div><div class="stat-info"><div class="stat-value">${fmt(dims.diameter,1)} × ${fmt(dims.height,1)}</div><div class="stat-label">D × H (ft)</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange">⏱️</div><div class="stat-info"><div class="stat-value">${refillTime===Infinity?'N/A':fmt(refillTime,0)+' min'}</div><div class="stat-label">Refill Time</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">Base Volume = Q × Duration</div>
+        <div class="step">V_base = ${flow} GPM × ${duration} min</div>
+        <div class="answer">V_base = ${fmtComma(baseVolume)} gallons</div>
+        <br>
+        <div class="formula">Total Volume = V_base / (1 − Reserve% − Dead%)</div>
+        <div class="step">V_total = ${fmtComma(baseVolume)} / (1 − ${reservePct/100} − ${deadPct/100})</div>
+        <div class="answer">V_total = ${fmtComma(totalVolume)} gallons (${fmtComma(totalVolumeL)} liters)</div>
+        <div class="step">Reserve Volume: ${fmtComma(reserveVolume)} gal (${reservePct}%)</div>
+        <div class="step">Dead Volume: ${fmtComma(deadVolume)} gal (${deadPct}%)</div>
+        <br>
+        ${type==='cylindrical'?`<div class="formula">Cylindrical Tank (H ≈ D): D = (4V/π)^(1/3)</div>
+        <div class="answer">Diameter = ${fmt(dims.diameter,2)} ft (${fmt(Eng.inToMm(dims.diameter*12)/25.4*0.3048,2)} m) | Height = ${fmt(dims.height,2)} ft (${fmt(Eng.ftToM(dims.height),2)} m)</div>`:''}
+        ${refill>0?`<div class="formula">Refill Time = Total Volume / Refill Rate</div>
+        <div class="answer">T = ${fmtComma(totalVolume)} / ${refill} = ${fmt(refillTime,0)} minutes (${fmt(refillTime/60,2)} hrs)</div>`:''}
+        <div class="remark">✅ Tank sized per NFPA 22 requirements for ${duration}-minute fire duration. Provide level indicators, overflow, and drain per code.</div>
+      </div>`;
+    toast('✅ Water tank calculation complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: HOSE REEL
+   ============================================================ */
+const HoseReel = {
+  calculate() {
+    if(!validateInputs('page-hosereel')) return;
+    const area = numVal('hrArea'), hoseLen = numVal('hrLength'), pressure = numVal('hrPressure');
+    const flowPerReel = numVal('hrFlow'), radius = numVal('hrRadius'), simul = numVal('hrSimul');
+    if(!area){ toast('❌ Enter floor area','error'); return; }
+
+    const coveragePerReel = Math.PI * radius * radius;
+    const reelsRequired = Math.ceil(area / coveragePerReel);
+    const totalFlow = flowPerReel * simul;
+    const pipeRec = Eng.recommendPipe(totalFlow, 15);
+
+    const result = {area,hoseLen,pressure,flowPerReel,radius,simul,coveragePerReel,reelsRequired,totalFlow,pipeSize:pipeRec.nominal};
+    App.state.calculations.hoseReel = result;
+    App.pushHistory();
+    App.logCalculation('Hose Reel',`${reelsRequired} reels, ${totalFlow} GPM total`,result);
+
+    $('hoseReelResults').style.display='block';
+    $('hoseReelOutput').innerHTML=`
+      <div class="grid grid-3" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">🔴</div><div class="stat-info"><div class="stat-value">${reelsRequired}</div><div class="stat-label">Hose Reels Required</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">💧</div><div class="stat-info"><div class="stat-value">${totalFlow} GPM</div><div class="stat-label">Total Flow Demand</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">🔩</div><div class="stat-info"><div class="stat-value">${pipeRec.nominal}"</div><div class="stat-label">Supply Pipe Size</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">Coverage per Reel = π × r²</div>
+        <div class="step">A_reel = π × ${radius}² = ${fmtComma(coveragePerReel)} ft²</div>
+        <div class="formula">Reels Required = ⌈Floor Area / Coverage⌉</div>
+        <div class="step">N = ⌈${area.toLocaleString()} / ${fmtComma(coveragePerReel)}⌉ = ${reelsRequired}</div>
+        <div class="formula">Total Flow = Flow per Reel × Simultaneous Reels</div>
+        <div class="answer">Q = ${flowPerReel} × ${simul} = ${totalFlow} GPM</div>
+        <div class="remark">✅ Provide ${reelsRequired} hose reel(s) with ${hoseLen} ft hose, ${pressure} psi nozzle pressure, ${pipeRec.nominal}" supply pipe.</div>
+      </div>`;
+    toast('✅ Hose reel calculation complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: FIRE EXTINGUISHER
+   ============================================================ */
+const Extinguisher = {
+  calculate() {
+    if(!validateInputs('page-extinguisher')) return;
+    const occ = $('feOccupancy').value, area = numVal('feArea');
+    const travelDist = numVal('feTravelDist'), fireClass = $('feFireClass').value;
+    const config = {
+      light:   {maxTravel:75,maxArea:11250,rating:'2-A',sizeABC:'5 lb',sizeCO2:'5 lb',interval:75},
+      ordinary:{maxTravel:75,maxArea:6000,rating:'3-A',sizeABC:'10 lb',sizeCO2:'10 lb',interval:75},
+      extra:   {maxTravel:75,maxArea:4000,rating:'4-A',sizeABC:'20 lb',sizeCO2:'15 lb',interval:75},
+    };
+    const c = config[occ];
+    const coveragePerExt = Math.min(Math.PI*travelDist*travelDist, c.maxArea);
+    const qtyRequired = Math.ceil(area / coveragePerExt);
+    const typeMap = {
+      A:{name:'ABC Dry Chemical',size:c.sizeABC},
+      B:{name:'CO2 Carbon Dioxide',size:c.sizeCO2},
+      C:{name:'CO2 Carbon Dioxide',size:c.sizeCO2},
+      ABC:{name:'ABC Dry Chemical',size:c.sizeABC},
+      K:{name:'Wet Chemical (Class K)',size:'6 L'},
+    };
+    const recommended = typeMap[fireClass];
+    const result = {occ,area,travelDist,fireClass,coveragePerExt,qtyRequired,rating:c.rating,type:recommended.name,size:recommended.size};
+    App.state.calculations.extinguisher = result;
+    App.pushHistory();
+    App.logCalculation('Fire Extinguisher',`${qtyRequired} × ${recommended.size} ${recommended.name}`,result);
+
+    $('extResults').style.display='block';
+    $('extOutput').innerHTML=`
+      <div class="grid grid-3" style="margin-bottom:14px">
+        <div class="stat-card"><div class="stat-icon red">🧯</div><div class="stat-info"><div class="stat-value">${qtyRequired}</div><div class="stat-label">Extinguishers Required</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${c.rating}</div><div class="stat-label">Minimum Rating</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">🔥</div><div class="stat-info"><div class="stat-value">${recommended.size}</div><div class="stat-label">${recommended.name}</div></div></div>
+      </div>
+      <div class="calc-block">
+        <div class="formula">NFPA 10 — Coverage per Extinguisher = min(π×d², Max Area per Code)</div>
+        <div class="step">A = min(π×${travelDist}², ${c.maxArea}) = ${fmtComma(coveragePerExt)} ft²</div>
+        <div class="formula">Quantity = ⌈Floor Area / Coverage⌉</div>
+        <div class="answer">N = ⌈${area.toLocaleString()} / ${fmtComma(coveragePerExt)}⌉ = ${qtyRequired} extinguisher(s)</div>
+        <div class="remark">✅ Provide ${qtyRequired} × ${recommended.size} ${recommended.name}, rated ${c.rating}, max travel distance ${travelDist} ft per NFPA 10.</div>
+      </div>`;
+    toast('✅ Extinguisher recommendation complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: ELEVATION ANALYSIS
+   ============================================================ */
+const ElevAnalysis = {
+  calculate() {
+    if(!validateInputs('page-elevation')) return;
+    const ground = numVal('elGround'), pump = numVal('elPump');
+    const tankBot = numVal('elTankBot'), topSpr = numVal('elTopSpr');
+    const floors = numVal('elFloors'), floorHt = numVal('elFloorHt');
+
+    const sucionHead = pump - tankBot;
+    const staticHead = topSpr - pump;
+    const elevPressureTop = Eng.elevationHead(staticHead);
+    const elevPressurePump = Eng.elevationHead(Math.abs(pump));
+    const totalStaticH = elevPressureTop + elevPressurePump;
+
+    const floorElevations = Array.from({length:floors},(_,i)=>ground + i*floorHt);
+
+    const result = {ground,pump,tankBot,topSpr,floors,floorHt,sucionHead,staticHead,elevPressureTop,elevPressurePump,totalStaticH};
+    App.state.calculations.elevation = result;
+    App.pushHistory();
+    App.logCalculation('Elevation','Static head: '+fmt(totalStaticH)+' psi',result);
+
+    $('elevResults').style.display='block';
+
+    // Build chart data
+    const labels = ['Tank Bottom','Pump','Ground Floor',...floorElevations.slice(1).map((_,i)=>`Floor ${i+2}`),'Top Sprinkler'];
+    const data = [tankBot, pump, ground, ...floorElevations.slice(1), topSpr];
+
+    // Destroy old chart and render new one on the existing canvas
+    if(App.charts.elevation) App.charts.elevation.destroy();
+    const elevCtx = $('chartElevation');
+    App.charts.elevation = new Chart(elevCtx,{
+      type:'bar',
+      data:{labels,datasets:[{label:'Elevation (ft)',data,backgroundColor:data.map(d=>d<0?'rgba(21,101,192,.7)':d===topSpr?'rgba(46,125,50,.8)':'rgba(211,47,47,.5)'),borderRadius:4,borderWidth:1}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'System Elevation Profile (ft above datum)'}},scales:{y:{title:{display:true,text:'Elevation (ft)'}}}}
+    });
+
+    // Output stats and calc block below the chart
+    $('elevOutput').innerHTML=`
+      <div class="grid grid-3" style="margin-top:14px">
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${fmt(totalStaticH)} psi</div><div class="stat-label">Total Static Head</div></div></div>
+        <div class="stat-card"><div class="stat-icon red">⬆️</div><div class="stat-info"><div class="stat-value">${fmt(staticHead)} ft</div><div class="stat-label">Pump to Top Sprinkler</div></div></div>
+        <div class="stat-card"><div class="stat-icon orange">⬇️</div><div class="stat-info"><div class="stat-value">${fmt(Math.abs(sucionHead))} ft</div><div class="stat-label">Suction Lift</div></div></div>
+      </div>
+      <div class="calc-block" style="margin-top:12px">
+        <div class="formula">Static Head = Elevation of Top Sprinkler − Pump Elevation</div>
+        <div class="step">H_static = ${topSpr} − (${pump}) = ${fmt(staticHead)} ft</div>
+        <div class="formula">Elevation Pressure at Top = 0.433 × H_static</div>
+        <div class="answer">P_elev = 0.433 × ${fmt(staticHead)} = ${fmt(elevPressureTop)} psi</div>
+        <div class="remark">✅ Add elevation pressure to friction losses to determine total system head requirement.</div>
+      </div>`;
+
+    toast('✅ Elevation analysis complete','success');
+  }
+};
+
+/* ============================================================
+   MODULE: PRESSURE LOSS (Multi-segment)
+   ============================================================ */
+const PressureLoss = {
+  init() {
+    if(!App.state.pressureSegments||!App.state.pressureSegments.length)
+      App.state.pressureSegments = [{label:'Segment 1',length:50,dia:4.026,C:120,flow:200,fittings:10,elev:0}];
+    this.render();
+  },
+  addRow() {
+    const n = App.state.pressureSegments.length+1;
+    App.state.pressureSegments.push({label:'Segment '+n,length:50,dia:4.026,C:120,flow:200,fittings:10,elev:0});
+    this.render(); App.pushHistory();
+  },
+  removeRow(i) { App.state.pressureSegments.splice(i,1); this.render(); App.pushHistory(); },
+  update(i, field, value) {
+    App.state.pressureSegments[i][field] = field==='label' ? value : parseFloat(value)||0;
+    this.recalc();
+  },
+  recalc() {
+    let total=0;
+    App.state.pressureSegments.forEach(s=>{
+      const pf = Eng.hazenWilliams(s.flow, s.C, s.dia);
+      s.frictionLoss = pf*(s.length+s.fittings);
+      s.elevLoss = Eng.elevationHead(s.elev);
+      s.totalLoss = s.frictionLoss + s.elevLoss;
+      total += s.totalLoss;
+    });
+    $('totalPressureLoss').textContent = fmt(total)+' psi';
+  },
+  render() {
+    this.recalc();
+    $('pressureBody').innerHTML = App.state.pressureSegments.map((s,i)=>`<tr>
+      <td>${i+1}</td>
+      <td><input type="text" value="${s.label}" style="width:90px" onchange="PressureLoss.update(${i},'label',this.value)"></td>
+      <td><input type="number" value="${s.length}" style="width:60px" onchange="PressureLoss.update(${i},'length',this.value)"></td>
+      <td><input type="number" value="${s.dia}" step="0.001" style="width:65px" onchange="PressureLoss.update(${i},'dia',this.value)"></td>
+      <td><input type="number" value="${s.C}" style="width:50px" onchange="PressureLoss.update(${i},'C',this.value)"></td>
+      <td><input type="number" value="${s.flow}" style="width:60px" onchange="PressureLoss.update(${i},'flow',this.value)"></td>
+      <td><input type="number" value="${s.fittings}" style="width:55px" onchange="PressureLoss.update(${i},'fittings',this.value)"></td>
+      <td><input type="number" value="${s.elev}" step="0.1" style="width:55px" onchange="PressureLoss.update(${i},'elev',this.value)"></td>
+      <td>${fmt(s.frictionLoss)}</td><td>${fmt(s.elevLoss)}</td><td>${fmt(s.totalLoss)}</td>
+      <td><button class="btn btn-xs btn-danger" onclick="PressureLoss.removeRow(${i})">✕</button></td>
+    </tr>`).join('');
+  }
+};
+
+/* ============================================================
+   MODULE: MATERIAL ESTIMATE
+   ============================================================ */
+const Material = {
+  init() { if(!App.state.materialItems||!App.state.materialItems.length) App.state.materialItems=[]; this.render(); },
+  addRow() { App.state.materialItems.push({item:'',description:'',size:'',unit:'pcs',qty:0}); this.render(); App.pushHistory(); },
+  removeRow(i) { App.state.materialItems.splice(i,1); this.render(); App.pushHistory(); },
+  update(i,field,value) { App.state.materialItems[i][field]=field==='qty'?(parseFloat(value)||0):value; },
+  autoGenerate() {
+    const items=[
+      {item:'Sprinkler Head',description:'Pendant, K=5.6, 155°F, Glass Bulb',size:'1/2"',unit:'pcs',qty:0},
+      {item:'Branch Line Pipe',description:'Black Steel Sch 40',size:'1"',unit:'ft',qty:0},
+      {item:'Cross Main Pipe',description:'Black Steel Sch 40',size:'2"',unit:'ft',qty:0},
+      {item:'Feed Main Pipe',description:'Black Steel Sch 40',size:'4"',unit:'ft',qty:0},
+      {item:'Riser Pipe',description:'Black Steel Sch 40',size:'4"',unit:'ft',qty:0},
+      {item:'90° Elbow',description:'Threaded/Grooved',size:'Various',unit:'pcs',qty:0},
+      {item:'Tee',description:'Threaded/Grooved',size:'Various',unit:'pcs',qty:0},
+      {item:'Reducer',description:'Concentric',size:'Various',unit:'pcs',qty:0},
+      {item:'Gate Valve',description:'OS&Y, UL Listed',size:'4"',unit:'pcs',qty:2},
+      {item:'Check Valve',description:'Swing Type, UL Listed',size:'4"',unit:'pcs',qty:1},
+      {item:'Alarm Valve',description:'Wet Pipe, UL Listed',size:'4"',unit:'pcs',qty:1},
+      {item:'Flow Switch',description:'Vane/Paddle Type',size:'4"',unit:'pcs',qty:1},
+      {item:'Pressure Gauge',description:'0-200 psi, Glycerine Filled',size:'2½"',unit:'pcs',qty:4},
+      {item:'Pipe Hanger',description:'Adjustable Ring Type',size:'Various',unit:'pcs',qty:0},
+      {item:'Pipe Support',description:'Trapeze / U-Bolt',size:'Various',unit:'pcs',qty:0},
+      {item:'Fire Pump',description:'Horizontal Split Case, UL/FM Listed',size:'',unit:'set',qty:1},
+      {item:'Jockey Pump',description:'Vertical Multistage, UL Listed',size:'',unit:'set',qty:1},
+      {item:'Water Tank',description:'Cylindrical Steel Tank',size:'',unit:'set',qty:1},
+      {item:'Hose Reel',description:'First Aid Hose Reel, 30m hose',size:'25mm',unit:'set',qty:0},
+    ];
+    const spr = App.state.calculations.sprinkler;
+    if(spr){
+      items[0].qty = spr.totalHeads;
+      items[1].qty = spr.totalHeads * 8;
+      items[2].qty = Math.ceil(spr.totalHeads/4)*20;
+      items[3].qty = 50; items[4].qty = parseFloat($('projHeight')?.value)||30;
+      items[5].qty = Math.ceil(spr.totalHeads*0.5);
+      items[6].qty = Math.ceil(spr.totalHeads*0.3);
+      items[7].qty = Math.ceil(spr.totalHeads*0.15);
+      items[13].qty = Math.ceil(spr.totalHeads*0.6);
+      items[14].qty = Math.ceil(spr.totalHeads*0.2);
+    }
+    const hr = App.state.calculations.hoseReel;
+    if(hr) items[18].qty = hr.reelsRequired;
+    App.state.materialItems = items; this.render(); App.pushHistory();
+    toast('📦 Material list generated','success');
+  },
+  render() {
+    $('materialBody').innerHTML = App.state.materialItems.map((m,i)=>`<tr>
+      <td>${i+1}</td>
+      <td><input type="text" value="${m.item}" style="width:130px" onchange="Material.update(${i},'item',this.value)"></td>
+      <td><input type="text" value="${m.description}" style="width:180px" onchange="Material.update(${i},'description',this.value)"></td>
+      <td><input type="text" value="${m.size}" style="width:55px" onchange="Material.update(${i},'size',this.value)"></td>
+      <td><input type="text" value="${m.unit}" style="width:45px" onchange="Material.update(${i},'unit',this.value)"></td>
+      <td><input type="number" value="${m.qty}" style="width:65px" onchange="Material.update(${i},'qty',this.value)"></td>
+      <td><button class="btn btn-xs btn-danger" onclick="Material.removeRow(${i})">✕</button></td>
+    </tr>`).join('');
+  },
+  exportCSV() {
+    let csv = '#,Item,Description,Size,Unit,Qty\n';
+    App.state.materialItems.forEach((m,i)=>{ csv += `${i+1},"${m.item}","${m.description}","${m.size}","${m.unit}",${m.qty}\n`; });
+    const blob=new Blob([csv],{type:'text/csv'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='FDG-FP-Materials.csv'; a.click();
+    toast('📥 Material CSV exported','success');
+  }
+};
+
+/* ============================================================
+   MODULE: COST ESTIMATE
+   ============================================================ */
+const Cost = {
+  init() { if(!App.state.costItems||!App.state.costItems.length) App.state.costItems=[]; this.render(); },
+  addRow() { App.state.costItems.push({category:'Material',item:'',unit:'pcs',qty:0,unitPrice:0}); this.render(); App.pushHistory(); },
+  removeRow(i) { App.state.costItems.splice(i,1); this.render(); App.pushHistory(); },
+  update(i,field,value) {
+    const c=App.state.costItems[i];
+    if(field==='qty'||field==='unitPrice') c[field]=parseFloat(value)||0; else c[field]=value;
+    this.render();
+  },
+  autoGenerate() {
+    const items=[
+      {category:'Material',item:'Sprinkler Heads',unit:'pcs',qty:0,unitPrice:28},
+      {category:'Material',item:'Pipe (Black Steel Sch 40)',unit:'ft',qty:0,unitPrice:9},
+      {category:'Material',item:'Fittings (Assorted)',unit:'lot',qty:1,unitPrice:2500},
+      {category:'Material',item:'Valves (Gate/Check)',unit:'pcs',qty:4,unitPrice:380},
+      {category:'Material',item:'Alarm Valve Assembly',unit:'set',qty:1,unitPrice:4000},
+      {category:'Material',item:'Fire Pump Assembly',unit:'set',qty:1,unitPrice:0},
+      {category:'Material',item:'Jockey Pump Assembly',unit:'set',qty:1,unitPrice:5500},
+      {category:'Material',item:'Water Tank (Steel)',unit:'set',qty:1,unitPrice:0},
+      {category:'Material',item:'Hangers & Supports',unit:'lot',qty:1,unitPrice:1800},
+      {category:'Material',item:'Pressure Gauges',unit:'pcs',qty:4,unitPrice:120},
+      {category:'Labor',item:'Pipe Installation',unit:'ft',qty:0,unitPrice:6},
+      {category:'Labor',item:'Sprinkler Installation',unit:'pcs',qty:0,unitPrice:18},
+      {category:'Labor',item:'Pump Installation',unit:'set',qty:1,unitPrice:6000},
+      {category:'Labor',item:'Tank Installation',unit:'set',qty:1,unitPrice:9000},
+      {category:'Labor',item:'Testing & Commissioning',unit:'lot',qty:1,unitPrice:5000},
+      {category:'Equipment',item:'Scaffolding',unit:'lot',qty:1,unitPrice:3500},
+      {category:'Equipment',item:'Pipe Threader/Groover',unit:'lot',qty:1,unitPrice:2200},
+    ];
+    const spr=App.state.calculations.sprinkler, fp=App.state.calculations.firePump, wt=App.state.calculations.waterTank;
+    if(spr){ items[0].qty=spr.totalHeads; items[1].qty=spr.totalHeads*12; items[10].qty=spr.totalHeads*12; items[11].qty=spr.totalHeads; }
+    if(fp){ items[5].unitPrice=fp.stdHp*280; }
+    if(wt){ items[7].unitPrice=Math.round(wt.totalVolume*0.9); }
+    App.state.costItems=items; this.render(); App.pushHistory();
+    toast('💰 Cost estimate generated','success');
+  },
+  render() {
+    let subtotal=0;
+    $('costBody').innerHTML = App.state.costItems.map((c,i)=>{
+      const total=c.qty*c.unitPrice; subtotal+=total;
+      return `<tr>
+        <td>${i+1}</td>
+        <td><select style="padding:4px;width:100px" onchange="Cost.update(${i},'category',this.value)"><option ${c.category==='Material'?'selected':''}>Material</option><option ${c.category==='Labor'?'selected':''}>Labor</option><option ${c.category==='Equipment'?'selected':''}>Equipment</option></select></td>
+        <td><input type="text" value="${c.item}" style="width:160px" onchange="Cost.update(${i},'item',this.value)"></td>
+        <td><input type="text" value="${c.unit}" style="width:45px" onchange="Cost.update(${i},'unit',this.value)"></td>
+        <td><input type="number" value="${c.qty}" style="width:65px" onchange="Cost.update(${i},'qty',this.value)"></td>
+        <td><input type="number" value="${c.unitPrice}" step="0.01" style="width:85px" onchange="Cost.update(${i},'unitPrice',this.value)"></td>
+        <td style="font-weight:700">$${fmtComma(total)}</td>
+        <td><button class="btn btn-xs btn-danger" onclick="Cost.removeRow(${i})">✕</button></td>
+      </tr>`;
+    }).join('');
+    const vat=subtotal*0.12, contingency=subtotal*0.10, grand=subtotal+vat+contingency;
+    $('costFooter').innerHTML=`
+      <tr><td colspan="6" style="text-align:right;font-weight:600;padding-top:8px">Subtotal:</td><td style="font-weight:700">$${fmtComma(subtotal)}</td><td></td></tr>
+      <tr><td colspan="6" style="text-align:right">VAT (12%):</td><td>$${fmtComma(vat)}</td><td></td></tr>
+      <tr><td colspan="6" style="text-align:right">Contingency (10%):</td><td>$${fmtComma(contingency)}</td><td></td></tr>
+      <tr style="background:var(--primary-alpha)"><td colspan="6" style="text-align:right;font-weight:800;font-size:1rem">Grand Total:</td><td style="font-weight:800;font-size:1rem;color:var(--primary)">$${fmtComma(grand)}</td><td></td></tr>`;
+    $('costSummaryCards').innerHTML=`
+      <div class="stat-card"><div class="stat-icon red">💵</div><div class="stat-info"><div class="stat-value">$${fmtComma(subtotal)}</div><div class="stat-label">Subtotal</div></div></div>
+      <div class="stat-card"><div class="stat-icon orange">📊</div><div class="stat-info"><div class="stat-value">$${fmtComma(vat)}</div><div class="stat-label">VAT (12%)</div></div></div>
+      <div class="stat-card"><div class="stat-icon green">💰</div><div class="stat-info"><div class="stat-value">$${fmtComma(grand)}</div><div class="stat-label">Grand Total</div></div></div>`;
+  },
+  exportCSV() {
+    let csv='Category,Item,Unit,Qty,Unit Price,Total\n';
+    App.state.costItems.forEach(c=>{ csv+=`"${c.category}","${c.item}","${c.unit}",${c.qty},${c.unitPrice},${c.qty*c.unitPrice}\n`; });
+    const blob=new Blob([csv],{type:'text/csv'}); const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download='FDG-FP-CostEstimate.csv'; a.click();
+    toast('📥 Cost CSV exported','success');
+  }
+};
+
+/* ============================================================
+   MODULE: SYSTEM DIAGRAM (SVG)
+   ============================================================ */
+const Diagram = {
+  generate() {
+    const fp=App.state.calculations.firePump, wt=App.state.calculations.waterTank, spr=App.state.calculations.sprinkler;
+    const svg=`<svg viewBox="0 0 920 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:920px;font-family:Inter,sans-serif;font-size:11px">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#D32F2F"/></marker>
+        <marker id="arrb" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#1565C0"/></marker>
+        <marker id="arrg" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#2E7D32"/></marker>
+      </defs>
+      <!-- BG -->
+      <rect width="920" height="520" fill="none"/>
+      <!-- Water Tank -->
+      <rect x="20" y="170" width="110" height="150" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2.5"/>
+      <rect x="20" y="220" width="110" height="70" fill="rgba(21,101,192,.15)" rx="0"/>
+      <text x="75" y="248" text-anchor="middle" fill="#1565C0" font-weight="700" font-size="12">WATER</text>
+      <text x="75" y="263" text-anchor="middle" fill="#1565C0" font-weight="700" font-size="12">TANK</text>
+      <text x="75" y="283" text-anchor="middle" fill="#1565C0" font-size="9">${wt?fmtComma(wt.totalVolume)+' gal':'— gal'}</text>
+      <text x="75" y="295" text-anchor="middle" fill="#1565C0" font-size="9">${wt?'('+fmtComma(wt.totalVolume*3.785)+' L)':''}</text>
+      <!-- Suction pipe -->
+      <line x1="130" y1="250" x2="200" y2="250" stroke="#D32F2F" stroke-width="3.5" marker-end="url(#arr)"/>
+      <text x="165" y="242" text-anchor="middle" fill="#888" font-size="9">Suction</text>
+      <!-- Fire Pump -->
+      <rect x="200" y="215" width="120" height="75" rx="8" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2.5"/>
+      <text x="260" y="245" text-anchor="middle" fill="#D32F2F" font-weight="800" font-size="11">FIRE PUMP</text>
+      <text x="260" y="260" text-anchor="middle" fill="#D32F2F" font-size="9">${fp?fp.stdHp+' HP':' — HP'}</text>
+      <text x="260" y="274" text-anchor="middle" fill="#D32F2F" font-size="9">${fp?fmt(fp.Q,0)+' GPM / '+fp.H+' psi':'—'}</text>
+      <!-- Jockey Pump -->
+      <rect x="208" y="312" width="100" height="44" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5"/>
+      <text x="258" y="333" text-anchor="middle" fill="#E65100" font-weight="700" font-size="10">JOCKEY</text>
+      <text x="258" y="347" text-anchor="middle" fill="#E65100" font-size="9">PUMP</text>
+      <line x1="258" y1="312" x2="258" y2="290" stroke="#E65100" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <!-- Check Valve -->
+      <circle cx="374" cy="252" r="9" fill="#fff" stroke="#D32F2F" stroke-width="2"/>
+      <text x="374" y="256" text-anchor="middle" fill="#D32F2F" font-size="8" font-weight="700">CV</text>
+      <!-- Discharge pipe -->
+      <line x1="320" y1="252" x2="362" y2="252" stroke="#D32F2F" stroke-width="3.5" marker-end="url(#arr)"/>
+      <line x1="383" y1="252" x2="415" y2="252" stroke="#D32F2F" stroke-width="3.5" marker-end="url(#arr)"/>
+      <text x="350" y="244" text-anchor="middle" fill="#888" font-size="9">Discharge</text>
+      <!-- Main Header -->
+      <rect x="415" y="237" width="150" height="30" rx="5" fill="#D32F2F"/>
+      <text x="490" y="256" text-anchor="middle" fill="#fff" font-weight="700" font-size="11">MAIN HEADER</text>
+      <!-- Zone Valves & Riser up -->
+      <line x1="490" y1="237" x2="490" y2="155" stroke="#D32F2F" stroke-width="3" marker-end="url(#arr)"/>
+      <rect x="475" y="180" width="30" height="22" rx="3" fill="#fff" stroke="#D32F2F" stroke-width="2"/>
+      <text x="490" y="195" text-anchor="middle" fill="#D32F2F" font-size="8" font-weight="700">ZV</text>
+      <text x="503" y="168" fill="#888" font-size="9">Riser</text>
+      <!-- Alarm Check Valve -->
+      <circle cx="490" cy="155" r="8" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
+      <text x="490" y="159" text-anchor="middle" fill="#E65100" font-size="7" font-weight="700">AV</text>
+      <!-- Cross Main -->
+      <line x1="490" y1="147" x2="490" y2="80" stroke="#D32F2F" stroke-width="3"/>
+      <line x1="370" y1="80" x2="610" y2="80" stroke="#B71C1C" stroke-width="2.5"/>
+      <line x1="370" y1="112" x2="610" y2="112" stroke="#B71C1C" stroke-width="2.5"/>
+      <text x="490" y="70" text-anchor="middle" fill="#888" font-size="9">Branch Lines & Cross Main</text>
+      <!-- Sprinkler heads -->
+      ${[385,415,445,530,560,590].map(x=>`<circle cx="${x}" cy="80" r="5" fill="#EF5350"/><line x1="${x}" y1="85" x2="${x}" y2="94" stroke="#EF5350" stroke-width="1.5"/>`).join('')}
+      ${[385,415,445,530,560,590].map(x=>`<circle cx="${x}" cy="112" r="5" fill="#EF5350"/><line x1="${x}" y1="117" x2="${x}" y2="126" stroke="#EF5350" stroke-width="1.5"/>`).join('')}
+      <text x="600" y="66" fill="#EF5350" font-size="9" font-weight="600">Sprinklers${spr?' ('+spr.totalHeads+')':''}</text>
+      <!-- Standpipe -->
+      <line x1="565" y1="252" x2="690" y2="252" stroke="#B71C1C" stroke-width="2.5" marker-end="url(#arr)"/>
+      <line x1="690" y1="252" x2="690" y2="90" stroke="#1565C0" stroke-width="2.5"/>
+      <rect x="678" y="90" width="25" height="162" rx="3" fill="none" stroke="#1565C0" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="690" y="82" text-anchor="middle" fill="#1565C0" font-weight="700" font-size="10">STANDPIPE</text>
+      ${[115,155,195,230].map(y=>`<rect x="703" y="${y}" width="22" height="12" rx="2" fill="#1565C0"/><text x="714" y="${y+9}" text-anchor="middle" fill="#fff" font-size="7" font-weight="700">HV</text>`).join('')}
+      <!-- Hose Reel -->
+      <line x1="565" y1="267" x2="565" y2="380" stroke="#2E7D32" stroke-width="2" marker-end="url(#arrg)"/>
+      <circle cx="565" cy="400" r="22" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+      <text x="565" y="403" text-anchor="middle" fill="#2E7D32" font-weight="700" font-size="10">HR</text>
+      <text x="565" y="432" text-anchor="middle" fill="#2E7D32" font-size="9">Hose Reel</text>
+      <!-- Flow arrows on branch -->
+      <text x="415" y="268" fill="#D32F2F" font-size="9">Flow →</text>
+      <!-- Legend -->
+      <rect x="740" y="320" width="170" height="165" rx="8" fill="white" stroke="#E2E4EA" stroke-width="1" opacity="0.95"/>
+      <text x="825" y="342" text-anchor="middle" font-weight="800" font-size="11" fill="#1A1A2E">LEGEND</text>
+      <circle cx="760" cy="360" r="5" fill="#EF5350"/><text x="775" y="364" fill="#616161" font-size="9">Sprinkler Head</text>
+      <line x1="752" y1="380" x2="768" y2="380" stroke="#D32F2F" stroke-width="3"/><text x="775" y="384" fill="#616161" font-size="9">Fire Main (Red)</text>
+      <line x1="752" y1="400" x2="768" y2="400" stroke="#1565C0" stroke-width="2"/><text x="775" y="404" fill="#616161" font-size="9">Standpipe (Blue)</text>
+      <line x1="752" y1="420" x2="768" y2="420" stroke="#2E7D32" stroke-width="2"/><text x="775" y="424" fill="#616161" font-size="9">Hose Reel (Green)</text>
+      <circle cx="760" cy="440" r="6" fill="#fff" stroke="#D32F2F" stroke-width="2"/><text x="775" y="444" fill="#616161" font-size="9">Check Valve</text>
+      <rect x="754" y="454" width="12" height="12" rx="2" fill="#D32F2F"/><text x="775" y="464" fill="#616161" font-size="9">Zone Valve</text>
+    </svg>`;
+    $('systemDiagram').innerHTML = svg;
+  }
+};
+
+/* ============================================================
+   MODULE: SETTINGS
+   ============================================================ */
+const Settings = {
+  loadLogo(input) {
+    const file=input.files[0]; if(!file) return;
+    const reader=new FileReader();
+    reader.onload=e=>{ App.state.settings.logo=e.target.result; $('logoPreview').innerHTML=`<img src="${e.target.result}" style="max-height:60px;border-radius:6px;border:1px solid var(--border)">`; toast('🖼️ Logo loaded','success'); };
+    reader.readAsDataURL(file);
+  },
+  applyFontSize(size) {
+    document.documentElement.style.setProperty('--font-size', size+'px');
+    App.state.settings.fontSize = size; App.pushHistory();
+    toast('Font size: '+size+'px','info',1500);
+  },
+  applyThemeFromSelect(theme) {
+    App.state.settings.theme = theme;
+    if(theme==='dark'){ document.documentElement.setAttribute('data-theme','dark'); $('themeBtn').textContent='☀️'; }
+    else { document.documentElement.removeAttribute('data-theme'); $('themeBtn').textContent='🌙'; }
+    App.pushHistory(); App.destroyCharts(); App.initCharts();
+  }
+};
+
+/* ============================================================
+   MODULE: REPORTS (PDF)
+   ============================================================ */
+const Reports = {
+  async generatePDF() {
+    toast('📄 Generating PDF report...','info',6000);
+    try {
+      const {jsPDF} = window.jspdf;
+      const doc = new jsPDF('p','mm','a4');
+      const W=210, H=297, M=15; let y=M;
+      const primary=[211,47,47], dark=[26,26,46], gray=[90,90,120];
+      const proj=App.state.project, company=App.state.settings.companyName||'FDGuinoo Engineering', engineer=App.state.settings.engineerName||'Engineer';
+      let pageNum=1;
+
+      // Get selected sections
+      const selectedSections = Array.from(document.querySelectorAll('#reportSections input:checked')).map(cb=>cb.value);
+      const inc = sec => selectedSections.includes(sec);
+
+      const addHeader=(title='')=>{
+        doc.setFillColor(...primary); doc.rect(0,0,W,18,'F');
+        doc.setTextColor(255,255,255); doc.setFontSize(11); doc.setFont(undefined,'bold');
+        doc.text(company,M,11);
+        doc.setFontSize(8); doc.setFont(undefined,'normal');
+        doc.text('FDGuinoo FP Calculator v2.0',W-M,8,{align:'right'});
+        doc.text(proj.name||'Untitled Project',W-M,14,{align:'right'});
+        y=26;
+        if(title){
+          doc.setTextColor(...primary); doc.setFontSize(13); doc.setFont(undefined,'bold');
+          doc.text(title,M,y); y+=7;
+          doc.setDrawColor(...primary); doc.setLineWidth(.5); doc.line(M,y,W-M,y); y+=6;
+        }
+      };
+
+      const addFooter=()=>{
+        doc.setDrawColor(200,200,200); doc.setLineWidth(.3); doc.line(M,H-12,W-M,H-12);
+        doc.setFontSize(7); doc.setTextColor(...gray); doc.setFont(undefined,'normal');
+        doc.text('Generated by FDG-FP-HydroCal v2.0 | '+new Date().toLocaleString(),M,H-7);
+        doc.text('Page '+doc.getNumberOfPages(),W-M,H-7,{align:'right'});
+      };
+
+      const checkPage=(need=15)=>{
+        if(y+need>H-20){ addFooter(); doc.addPage(); addHeader(); return true; } return false;
+      };
+
+      const addField=(label,value,indent=0)=>{
+        checkPage(7);
+        doc.setFontSize(8); doc.setTextColor(...gray); doc.setFont(undefined,'normal');
+        doc.text(label+':',M+indent,y);
+        doc.setTextColor(...dark); doc.setFont(undefined,'bold');
+        doc.text(String(value||'—'),M+indent+52,y);
+        y+=6;
+      };
+
+      const addSectionTitle=(title)=>{
+        checkPage(16);
+        y+=4;
+        doc.setFillColor(245,245,248); doc.rect(M,y-4,W-2*M,12,'F');
+        doc.setTextColor(...primary); doc.setFontSize(10); doc.setFont(undefined,'bold');
+        doc.text(title,M+3,y+4);
+        y+=12;
+      };
+
+      const addTable=(headers,rows)=>{
+        const nCols=headers.length, colW=(W-2*M)/nCols;
+        checkPage(10+rows.length*6);
+        doc.setFillColor(240,241,245); doc.rect(M,y-4,W-2*M,8,'F');
+        doc.setFontSize(7); doc.setTextColor(...gray); doc.setFont(undefined,'bold');
+        headers.forEach((h,i)=>doc.text(h,M+i*colW+2,y));
+        y+=6; doc.setFont(undefined,'normal'); doc.setTextColor(...dark);
+        rows.forEach(row=>{
+          checkPage(6); row.forEach((cell,i)=>doc.text(String(cell).substring(0,22),M+i*colW+2,y)); y+=6;
+        }); y+=4;
+      };
+
+      // ---- COVER PAGE ----
+      addHeader();
+      y=55;
+      doc.setFillColor(...primary); doc.rect(M,y,W-2*M,3,'F'); y+=8;
+      doc.setTextColor(...primary); doc.setFontSize(22); doc.setFont(undefined,'bold');
+      doc.text('FIRE PROTECTION',W/2,y,{align:'center'}); y+=12;
+      doc.text('ENGINEERING REPORT',W/2,y,{align:'center'}); y+=18;
+      doc.setTextColor(...dark); doc.setFontSize(14);
+      doc.text(proj.name||'Untitled Project',W/2,y,{align:'center'}); y+=10;
+      doc.setFontSize(10); doc.setTextColor(...gray);
+      doc.text(proj.building||'',W/2,y,{align:'center'}); y+=7;
+      doc.text(proj.location||'',W/2,y,{align:'center'}); y+=18;
+      doc.setFillColor(...primary); doc.rect(M,y,W-2*M,3,'F'); y+=12;
+      
+      if(inc('Project Info')) {
+        const infoRows=[['Project No.',proj.number,'Client',proj.client],['Engineer',proj.engineer,'Company',proj.company],['Date',proj.date,'Revision',proj.revision||'Rev 0']];
+        infoRows.forEach(([l1,v1,l2,v2])=>{
+          doc.setFontSize(8); doc.setTextColor(...gray); doc.text(l1+':',M+10,y); doc.setTextColor(...dark); doc.setFont(undefined,'bold'); doc.text(v1||'—',M+35,y);
+          doc.setTextColor(...gray); doc.setFont(undefined,'normal'); doc.text(l2+':',W/2+10,y); doc.setTextColor(...dark); doc.setFont(undefined,'bold'); doc.text(v2||'—',W/2+35,y);
+          doc.setFont(undefined,'normal'); y+=7;
+        });
+        y+=8;
+        doc.setFontSize(8); doc.setTextColor(...gray);
+        doc.text('Prepared By: '+(proj.preparedBy||'—'),M+10,y); y+=6;
+        doc.text('Checked By: '+(proj.checkedBy||'—'),M+10,y); y+=6;
+        doc.text('Approved By: '+(proj.approvedBy||'—'),M+10,y);
+      }
+      addFooter();
+
+      // ---- PAGE 2: ENGINEERING SUMMARY ----
+      doc.addPage(); addHeader('Engineering Summary');
+      const h=HAZARDS[App.state.hazard]||HAZARDS.light;
+      const code=FIRE_CODES.find(c=>c.id===App.state.fireCode)||FIRE_CODES[0];
+      
+      if(inc('Fire Code') || inc('Occupancy') || inc('Hazard') || inc('Water Supply')) {
+        addSectionTitle('Design Basis');
+        if(inc('Fire Code')) addField('Fire Code',code.name+' — '+code.desc);
+        if(inc('Occupancy')) addField('Occupancy',OCCUPANCIES.find(o=>o.id===App.state.occupancy)?.name||'—');
+        if(inc('Hazard')) {
+          addField('Hazard Classification',h.name); addField('Design Density',h.density+' GPM/ft²');
+          addField('Design Area',h.area.toLocaleString()+' ft²'); addField('Hose Allowance',h.hose+' GPM');
+          addField('Fire Duration',h.duration+' min');
+        }
+        if(inc('Water Supply')) addField('Water Source',App.state.waterSource||'—');
+      }
+
+      const spr=App.state.calculations.sprinkler;
+      if(spr && inc('Sprinkler')){ addSectionTitle('Sprinkler System (NFPA 13)');
+        addField('System Demand',fmt(spr.totalFlow,0)+' GPM'); addField('System Demand (w/ Hose)',fmt(spr.systemDemand,0)+' GPM');
+        addField('Operating Heads',spr.operatingHeads+' heads'); addField('Flow per Head',fmt(spr.flowPerHead,1)+' GPM');
+        addField('Pressure per Head',fmt(spr.pressurePerHead,1)+' psi'); addField('K-Factor',spr.K); }
+
+      const hyd=App.state.calculations.hydraulic;
+      if(hyd && inc('Hydraulic')){ addSectionTitle('Hydraulic Calculation');
+        addField('Flow Rate',fmt(hyd.Q,0)+' GPM'); addField('Pipe Diameter',fmt(hyd.D,3)+' in ID');
+        addField('Velocity',fmt(hyd.velocity,2)+' ft/s'); addField('Friction Loss',fmt(hyd.frictionLoss,2)+' psi');
+        addField('Total Loss',fmt(hyd.totalLoss,2)+' psi'); }
+        
+      const sp=App.state.calculations.standpipe;
+      if(sp && inc('Standpipe')){ addSectionTitle('Standpipe System (NFPA 14)');
+        addField('Class',sp.cls); addField('Flow Demand',fmt(sp.flowDemand,0)+' GPM');
+        addField('Required Pressure',fmt(sp.totalPressure,0)+' psi'); addField('Min Pipe Size',sp.pipeSize+'"'); }
+
+      const hr=App.state.calculations.hoseReel;
+      if(hr && inc('Hose Reel')){ addSectionTitle('Hose Reel System');
+        addField('Reels Required',hr.reelsRequired); addField('Total Flow',fmt(hr.totalFlow,0)+' GPM');
+        addField('Supply Pipe Size',hr.pipeSize+'"'); }
+
+      const ext=App.state.calculations.extinguisher;
+      if(ext && inc('Extinguisher')){ addSectionTitle('Fire Extinguisher (NFPA 10)');
+        addField('Extinguishers Required',ext.qtyRequired); addField('Minimum Rating',ext.rating);
+        addField('Recommended Type',ext.size+' '+ext.type); }
+
+      const elev=App.state.calculations.elevation;
+      if(elev && inc('Elevation')){ addSectionTitle('Elevation Analysis');
+        addField('Total Static Head',fmt(elev.totalStaticH,1)+' psi'); addField('Pump to Top Sprinkler',fmt(elev.staticHead,1)+' ft');
+        addField('Suction Lift',fmt(Math.abs(elev.sucionHead),1)+' ft'); }
+
+      const fp=App.state.calculations.firePump;
+      if(fp && inc('Fire Pump')){ checkPage(50); addSectionTitle('Fire Pump (NFPA 20)');
+        addField('Required Flow',fmt(fp.Q,0)+' GPM'); addField('Required Head',fmt(fp.H,0)+' psi');
+        addField('Motor Rating',fp.stdHp+' HP'); addField('Pump Type',fp.type==='electric'?'Electric Motor':'Diesel Engine');
+        addField('Efficiency',fp.eff+'%'); addField('NPSH Available',fmt(fp.npshA,1)+' ft'); }
+
+      const wt=App.state.calculations.waterTank;
+      if(wt && inc('Water Tank')){ checkPage(40); addSectionTitle('Water Storage Tank (NFPA 22)');
+        addField('Total Volume',fmtComma(wt.totalVolume)+' gallons'); addField('Total Volume (SI)',fmtComma(wt.totalVolumeL||wt.totalVolume*3.785)+' liters');
+        addField('Fire Duration',wt.duration+' minutes');
+        addField('Tank Dimensions',fmt(wt.dims.diameter,2)+'ft Ø × '+fmt(wt.dims.height,2)+'ft H'); }
+      addFooter();
+
+      // ---- PAGE 3: PRESSURE LOSS ----
+      if(App.state.pressureSegments.length && inc('Pressure Loss')){ doc.addPage(); addHeader('Pressure Loss Analysis');
+        addTable(['#','Label','L (ft)','D (in)','C','Flow (GPM)','Friction (psi)','Elev (psi)','Total (psi)'],
+          App.state.pressureSegments.map((s,i)=>[i+1,s.label,s.length,s.dia,s.C,s.flow,fmt(s.frictionLoss),fmt(s.elevLoss),fmt(s.totalLoss)]));
+        addFooter(); }
+
+      // ---- PAGE 4: MATERIAL & COST ----
+      if((App.state.materialItems.length && inc('Material')) || (App.state.costItems.length && inc('Cost'))){ doc.addPage(); addHeader('Material & Cost Estimate');
+        if(App.state.materialItems.length && inc('Material')){ addSectionTitle('Material Takeoff');
+          addTable(['#','Item','Description','Size','Unit','Qty'],
+            App.state.materialItems.map((m,i)=>[i+1,m.item,m.description.substring(0,20),m.size,m.unit,m.qty])); }
+        if(App.state.costItems.length && inc('Cost')){ addSectionTitle('Cost Estimate');
+          let sub=0;
+          addTable(['#','Category','Item','Qty','Unit Price','Total'],
+            App.state.costItems.map((c,i)=>{ const t=c.qty*c.unitPrice; sub+=t; return [i+1,c.category,c.item,c.qty,'$'+fmtComma(c.unitPrice),'$'+fmtComma(t)]; }));
+          checkPage(30);
+          addField('Subtotal','$'+fmtComma(sub)); addField('VAT (12%)','$'+fmtComma(sub*0.12));
+          addField('Contingency (10%)','$'+fmtComma(sub*0.10)); addField('Grand Total','$'+fmtComma(sub*1.22)); }
+        addFooter(); }
+
+      // ---- VISUALIZATIONS PAGE ----
+      if(inc('Visualizations') && window.html2canvas) {
+        doc.addPage(); addHeader('System Visualizations');
+        try {
+          const vizEl = document.getElementById('vizCharts');
+          const pageViz = document.getElementById('page-visualization');
+          const wasPageActive = pageViz.classList.contains('active');
+          const wasTabActive = vizEl.classList.contains('active');
+          
+          if(!wasPageActive) { pageViz.style.display = 'block'; pageViz.style.opacity = '1'; }
+          if(!wasTabActive) vizEl.classList.add('active');
+          
+          const canvas = await html2canvas(vizEl, { scale: 2, logging: false });
+          
+          if(!wasTabActive) vizEl.classList.remove('active');
+          if(!wasPageActive) { pageViz.style.display = ''; pageViz.style.opacity = ''; }
+          
+          const imgData = canvas.toDataURL('image/jpeg', 0.95);
+          const imgWidth = W - 2*M;
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+          
+          doc.addImage(imgData, 'JPEG', M, y, imgWidth, Math.min(imgHeight, H - y - 20));
+        } catch(e) { console.warn('Chart capture failed', e); }
+        addFooter();
+      }
+
+      // ---- SIGNATURE PAGE ----
+      doc.addPage(); addHeader('Certification & Signatures');
+      y=50;
+      doc.setFontSize(9); doc.setTextColor(...dark); doc.setFont(undefined,'normal');
+      doc.text('This fire protection engineering report has been prepared in accordance with',W/2,y,{align:'center'}); y+=6;
+      doc.text(code.name+' and all applicable fire codes and standards.',W/2,y,{align:'center'}); y+=20;
+      const sigs=[['Prepared By:',proj.preparedBy],['Checked By:',proj.checkedBy],['Approved By:',proj.approvedBy]];
+      sigs.forEach(([label,name])=>{
+        checkPage(35);
+        doc.setFontSize(9); doc.setTextColor(...gray); doc.text(label,M+20,y); y+=12;
+        doc.setDrawColor(160,160,160); doc.line(M+20,y,M+90,y); y+=5;
+        doc.setTextColor(...dark); doc.setFont(undefined,'bold');
+        doc.text(name||'________________________',M+20,y); y+=5;
+        doc.setFont(undefined,'normal'); doc.setTextColor(...gray);
+        doc.text('Signature over Printed Name',M+20,y); y+=4;
+        doc.text('License No. / Date: _______________',M+20,y); y+=18;
+      });
+      addFooter();
+
+      doc.save((proj.name||'FDG-FP-Report')+'.pdf');
+      toast('✅ PDF report generated','success');
+    } catch(err){ console.error(err); toast('❌ PDF error: '+err.message,'error'); }
+  },
+
+  exportCSV() {
+    let csv='Section,Parameter,Value,Unit\n';
+    const h=HAZARDS[App.state.hazard]||HAZARDS.light;
+    csv+=`Design,Density,${h.density},GPM/ft²\nDesign,Area,${h.area},ft²\nDesign,Hose Allowance,${h.hose},GPM\nDesign,Duration,${h.duration},min\n`;
+    const spr=App.state.calculations.sprinkler;
+    if(spr){ csv+=`Sprinkler,Total Flow,${fmt(spr.totalFlow,1)},GPM\nSprinkler,System Demand,${fmt(spr.systemDemand,0)},GPM\nSprinkler,Operating Heads,${spr.operatingHeads},heads\nSprinkler,Head Pressure,${fmt(spr.pressurePerHead,1)},psi\n`; }
+    const fp=App.state.calculations.firePump;
+    if(fp){ csv+=`Pump,Flow,${fp.Q},GPM\nPump,Head,${fp.H},psi\nPump,Motor HP,${fp.stdHp},HP\nPump,BHP,${fmt(fp.bhp,1)},HP\n`; }
+    const wt=App.state.calculations.waterTank;
+    if(wt){ csv+=`Tank,Total Volume,${fmt(wt.totalVolume,0)},gallons\nTank,Duration,${wt.duration},min\n`; }
+    const blob=new Blob([csv],{type:'text/csv'}); const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download='FDG-FP-Summary.csv'; a.click();
+    toast('📥 CSV exported','success');
+  }
+};
+
+/* ============================================================
+   TABS HANDLER
+   ============================================================ */
+document.addEventListener('click', e=>{
+  const tab = e.target.closest('.tab'); if(!tab) return;
+  const parent = tab.closest('.tabs')||tab.parentElement;
+  const tabId = tab.dataset.tab;
+  parent.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t===tab));
+  
+  const container = parent.parentElement;
+  container.querySelectorAll('.tab-content').forEach(tc => {
+    tc.classList.toggle('active', tc.id === tabId);
+  });
+});
+
+/* ============================================================
+   RESPONSIVE MENU
+   ============================================================ */
+function checkMobile(){
+  const m = window.innerWidth<=900;
+  $('menuToggle').style.display = m?'flex':'none';
+}
+window.addEventListener('resize', checkMobile);
+checkMobile();
+
+/* ============================================================
+   INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', ()=>App.init());
+</script>
+</body>
+</html>

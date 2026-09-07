@@ -1,0 +1,86 @@
+The “Pattern Interrupt” Hook
+“I am creating a YouTube Short about [Your Topic]. Generate 5 powerful 3 second opening hooks that instantly break the viewer’s attention pattern and force them to stop scrolling.
+Each hook must: • Be extremely unexpected, bold, or slightly controversial
+• Avoid overused phrases like “Did you know” or “Have you ever”
+• Start in a way that feels like the viewer joined mid conversation or mid action
+• Create instant curiosity or confusion that demands continuation
+• Be short, punchy, and natural for spoken delivery in Shorts
+Focus on hooks that feel like interruptions in reality, not introductions to content.”
+
+The “Retain & Reward” Script
+“Write a 50 second YouTube Shorts script about [Topic].
+Structure it using the Gap Theory of curiosity:
+• First 5 seconds: Open with a burning question that creates a strong knowledge gap and makes viewers feel they need the answer immediately
+• Middle section: Deliver exactly 3 fast, high value points. Each point should be sharp, practical, and easy to understand. Keep pacing intense and remove all filler
+• Final 5 seconds: Reveal the main answer, insight, or conclusion that resolves the curiosity gap created at the start
+Rules: • Keep every sentence under 10 words
+• Maintain high energy and fast rhythm
+• No long explanations or storytelling fluff
+• Every line must push retention forward
+• Make the viewer feel they must watch until the end to understand the full idea”
+
+ The “Contrarian Take”
+“Identify the most widely accepted piece of advice in the [Your Niche] industry.
+Now create a YouTube Shorts script titled:
+‘Why [Common Advice] Is Actually Ruining Your Progress’
+Requirements:
+• Start by clearly stating the common advice everyone follows
+• Immediately challenge it with a bold contrarian statement
+• Explain why it seems right but fails in real execution
+• Use simple, logical reasoning instead of emotional claims
+• Provide one clear alternative approach that works better
+• End with a provocative line that invites disagreement, debate, or comments
+Tone: • Confident, direct, slightly provocative
+• Not emotional or clickbait
+• Back every claim with logic or practical reasoning
+Goal: Spark discussion, disagreement, and high engagement while still sounding credible and intelligent.”
+
+
+4️⃣ The “Infinite Loop” Closer
+“Script a 45 second YouTube Short about [Topic].
+The script must be designed for maximum rewatchability using an infinite loop structure.
+Requirements:
+• Open with a strong hook that introduces [Topic] in a curious or unresolved way
+• Build the middle with clear, fast paced value delivery (no filler, no slow explanations)
+• Keep the tone simple, direct, and highly engaging for short form video
+• Focus on maintaining curiosity and momentum throughout
+Critical rule: • The final sentence must directly connect back to the opening hook
+• It should feel like the video never truly ‘ends’
+• The ending must naturally lead the viewer to restart the video without realizing it
+Goal: Create a seamless loop effect that increases watch time, replays, and algorithm performance by making the ending and beginning feel like one continuous cycle.”
+
+
+5️⃣ The “Visual Storyboarder”
+“Take this YouTube Shorts script: [Paste Script]
+Break it down into precise 3 second intervals.
+For each interval, create a high retention visual plan designed to maximize watch time and stop viewers from scrolling.
+For every 3 second segment, include:
+• On screen visual (B roll, stock footage, screen recording, or meme style visual)
+• Text overlay (short, bold, attention grabbing words)
+• Editing direction (zoom, cut, speed change, glitch, shake, etc.)
+• Attention goal (what emotion or curiosity this moment triggers)
+Rules: • No generic visuals
+• Every scene must feel dynamic and fast paced
+• Prioritize pattern interrupts and visual change every few seconds
+• Avoid repetition in visuals or pacing
+• Design for mobile first viewing and silent autoplay
+Goal: Turn a simple script into a high energy visual experience that forces retention and prevents swiping.”
+
+6️⃣ The “Viral Title & Thumbnail” Duo
+“I have a YouTube video about [Topic].
+Generate 10 high performing title ideas and matching thumbnail concepts designed for maximum CTR and curiosity.
+For each idea:
+• Title must be under 50 characters
+• Use Negative Constraints or pattern interrupt framing such as:
+‘Stop doing X’
+‘The truth about Y’
+‘You are wasting time on X’
+‘Nobody tells you this about Y’
+• Titles must feel bold, controversial, or revealing without being misleading
+For each title, also include:
+• A high contrast thumbnail concept
+• No words or text on the thumbnail at all
+• Strong visual storytelling using facial expressions, symbols, arrows, contrast, or shocking comparison
+• Clear emotional trigger (shock, confusion, curiosity, urgency)
+• Simple composition that is instantly understandable in 1 second
+Goal: Maximize click through rate by combining curiosity driven titles with visually powerful, wordless thumbnails that communicate instantly.”
