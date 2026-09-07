@@ -1,4 +1,19 @@
-# FBIS — FDG Ecosystem Integrated Obsidian Package
+# FDG Knowledge Repository
+
+This local Obsidian vault connects FDG governance, knowledge architecture, intelligence-system specifications, and project records.
+
+## Vault entry points
+
+- [[FDG Ecosystem|FDG Ecosystem — Center]] — current system map and local navigation.
+- [[00_Nex/00_Master Index|Nex Core Master Index]] — governed reading path.
+- [[07_Nex_Core_Intelligence/NEX_PRE_OS_RUNTIME_FOUNDATION_INDEX|Nex Pre-OS Runtime Foundation Index]] — proposed runtime bridge documents.
+- [[docs/2026-09-07-repository-audit-and-preos-merge|Repository audit and Pre-OS integration record]] — findings, validation, and remaining decisions.
+
+## Existing FBIS integration record
+
+The following FBIS-specific guidance is preserved from the earlier repository README.
+
+### FBIS — FDG Ecosystem Integrated Obsidian Package
 
 This package implements the corrected FBIS Master Index architecture inside the existing FDG Knowledge Repository.
 
