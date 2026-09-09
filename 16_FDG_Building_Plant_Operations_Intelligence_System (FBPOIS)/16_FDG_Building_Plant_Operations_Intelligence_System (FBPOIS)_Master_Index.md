@@ -14,3 +14,9 @@
 ## Direct Child Documents
 
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/README|README]]
+
+## Business platform implementation relationship
+
+- [[Projects/Active/FDG Business Platform/README|FDG Business Platform]] — client-facing ecosystem hub and module portfolio experience.
+- [[Projects/Active/FDG Business Platform/docs/UNIFIED_ACCOUNT_MODULAR_ARCHITECTURE|Unified Account and Modular Subscription Architecture]] — separates account navigation from module, branch, permissions, billing, and operational scopes.
+- [[Projects/Active/FDG Business Platform/fuel-station/README|Fuel Operations]] — first connected, domain-native operational module; implementation evidence does not replace FBPOIS knowledge authority.

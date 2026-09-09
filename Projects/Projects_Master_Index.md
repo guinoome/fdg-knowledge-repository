@@ -19,7 +19,9 @@
 - [[Projects/CORE Engineering|CORE Engineering]]
 - [[Projects/Active/ML Projects/README|ML Projects — Vault Integration Index]]
 - [[Projects/Active/AI/README|AI Projects]]
-- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — NJ Gas Station — Habay local functional prototype.
+- [[Projects/Active/FDG Business Platform/README|FDG Business Platform]] — unified one-account ecosystem hub; includes [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] as the first connected operational module.
+- [[Projects/Active/FDG Business Platform/docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate|FDG Business Platform Unified Account and Modular Subscription Merge Mandate]] — active architecture and experience governance.
+- [[Projects/Active/FDG Business Platform/docs/UNIFIED_ACCOUNT_MODULAR_ARCHITECTURE|Unified Account and Modular Subscription Architecture]] — implementation record and production boundary.
 - [[Projects/FMIS_Local_Prototype/README|README]]
 
 ## Additional Direct Child Documents

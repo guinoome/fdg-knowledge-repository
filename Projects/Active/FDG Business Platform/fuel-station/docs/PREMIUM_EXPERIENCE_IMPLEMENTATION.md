@@ -10,7 +10,7 @@ Preserve the verified workbook model, closeout, delivery, wet-stock, pricing, re
 ## Experience architecture
 
 1. **Prospect story:** outcome → fuel visual → verified proof → controlled workflow → scale path → locally generated review brief.
-2. **Operational command:** station condition → next decision → explainable movement → closeout/action → evidence and exceptions.
+2. **Operational command:** station condition → next decision → automatic prior-close carry-forward → final reading/OCR confirmation → explainable movement → evidence and exceptions.
 3. **Mobile workflow:** compact command header, sticky bottom navigation, thumb-reachable primary action, stacked decisions, no information loss.
 4. **Trust layer:** Workbook Verified, Local Demo, Concept, and Planned Capability never blur into “live.”
 
@@ -47,18 +47,23 @@ No “AI-powered,” “live telemetry,” “compliant,” or “real-time” c
 - Successful local save
 - Permission restricted
 - Empty local history
+- OCR supported / OCR unavailable / OCR proposal pending confirmation
+- Hourly source not connected
 
 ## Client value proof
 
 - Explain each recorded liter through sales, deliveries, calibration, and adjustments.
 - Surface broken formulas and negative totalizer movement instead of hiding them in totals.
 - Turn daily closeout into a reviewable workflow rather than a fragile spreadsheet sequence.
+- Remove duplicate opening-totalizer entry while preserving the source and value used for every calculation.
+- Let owners examine recorded product movement by day, week, month, and year without misrepresenting daily evidence as hourly telemetry.
 - Preserve a single-site path that can extend to branch and network visibility without redesigning the operating model.
 
 ## Deliberate deferrals
 
 - No fabricated CCTV, automatic tank gauge, POS, payment, weather, or sensor feed.
 - No external inquiry submission; prospect CTA prepares a local review brief only.
+- No cloud OCR upload. The current assist uses the browser's native on-device detector when available and otherwise keeps manual final entry available.
 - No unverified 3D digital twin.
 - No secure authentication or server-enforced authorization in the local prototype.
 - No BIR or regulatory compliance claim.
@@ -69,6 +74,8 @@ No “AI-powered,” “live telemetry,” “compliant,” or “real-time” c
 - Prospect enters working operations in one action.
 - Workbook proof and demo data remain distinct.
 - Closeout remains functional after the experience patch.
+- A saved final reading becomes the next locked opening reading.
+- The internal functional-ownership map is not rendered to clients.
 - 390 px has no page-level horizontal overflow.
 - Public and operational views share identity without sharing the same layout.
 - Final screenshots update [[Projects/Active/FDG Business Platform/fuel-station/docs/VISUAL_FIDELITY_LEDGER|the fidelity ledger]].

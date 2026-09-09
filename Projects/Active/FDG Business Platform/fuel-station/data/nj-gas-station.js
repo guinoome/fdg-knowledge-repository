@@ -11,6 +11,15 @@ export const verifiedHistory = [
   { date: "2025-04-29", regularLiters: 112.90, premiumLiters: 221.44, dieselLiters: 78.53, sales: 25003.75, profit: 1094.30, status: "verified" },
 ];
 
+// Latest accepted close from the supplied workbook: April 2025, row 35.
+// April 30 is excluded because the Premium reading reverses and is already
+// retained below as a high-severity source exception.
+export const latestAcceptedTotalizers = {
+  date: "2025-04-29",
+  source: "Workbook verified · April 2025 row 35",
+  values: { regular: 68202.44, premium: 132379.26, diesel: 32833.33 },
+};
+
 export const sourceExceptions = [
   { severity: "high", date: "2025-04-30", title: "Premium totalizer reversal", detail: "Closing totalizer is below the prior reading, producing a negative 30 L result. Review the source entry before approval." },
   { severity: "high", date: "2025-07", title: "Broken workbook references", detail: "Daily sales cells contain #REF! and product columns appear misaligned. July 2025 is excluded from trusted reporting." },

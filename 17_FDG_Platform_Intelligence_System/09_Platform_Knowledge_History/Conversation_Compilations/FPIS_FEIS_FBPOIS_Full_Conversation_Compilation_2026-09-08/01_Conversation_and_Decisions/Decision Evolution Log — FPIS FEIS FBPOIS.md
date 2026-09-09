@@ -100,3 +100,11 @@ Product-grade, domain-native, client-magnet design was established as direction,
 
 ### Refinement — 2026-09-09
 [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|FDG Premium Experience Design & Implementation Mandate]] makes the gate explicit: a major FDG platform is simultaneously a product experience, marketing asset, operational tool, and business-growth instrument. Mobile web is primary; generic admin-template delivery is rejected; public and operational experiences remain connected without blurring evidence or domain truth. Implementation patches forward and preserves working logic.
+
+## Unified business account and modular subscriptions
+
+### Earlier
+Fuel Operations was the deployed root experience, while future FDG Business verticals were primarily expressed as roadmap concepts and visual boards.
+
+### Refinement — 2026-09-10
+[[Projects/Active/FDG Business Platform/docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate|the Unified Account, Modular Subscription & Experience Merge Mandate]] establishes one ecosystem account above independently governed module subscriptions and branch instances. The main [[Projects/Active/FDG Business Platform/README|FDG Business Platform]] now owns discovery, client-magnet storytelling, `My Platforms`, portfolio navigation, and shared scope visibility. Modules retain operational workflows, users, permissions, data, settings, and subscription lifecycles. Fuel Operations remains connected at `/fuel-station/`; cancellation of one local prototype subscription preserves the account and other modules. Real authentication, server authorization, and payments remain gated rather than implied.

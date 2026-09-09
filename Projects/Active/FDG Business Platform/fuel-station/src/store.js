@@ -1,4 +1,4 @@
-import { initialDeliveries, products, safetyChecklist, verifiedHistory } from "../data/nj-gas-station.js";
+import { initialDeliveries, latestAcceptedTotalizers, products, safetyChecklist, verifiedHistory } from "../data/nj-gas-station.js";
 
 const KEY = "fdg-fuel-station-demo-v3";
 
@@ -8,6 +8,7 @@ const defaultState = () => ({
   tanks: Object.fromEntries(products.map((p) => [p.id, p.openingStock])),
   deliveries: initialDeliveries,
   closeouts: [],
+  analyticsRange: "daily",
   checklist: Object.fromEntries(safetyChecklist.map((item) => [item, false])),
   audit: [{ id: crypto.randomUUID(), at: new Date().toISOString(), actor: "System", action: "Demo workspace initialized", detail: "Verified workbook history loaded read-only." }],
 });
@@ -31,6 +32,15 @@ export function addAudit(state, action, detail) {
 
 export function allReportRows(state) {
   return [...verifiedHistory, ...state.closeouts].sort((a, b) => a.date.localeCompare(b.date));
+}
+
+export function latestTotalizerRecord(state) {
+  const local = [...state.closeouts]
+    .filter((row) => row.closingTotalizers)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .at(-1);
+  if (local) return { date: local.date, source: "Latest local closeout", values: { ...local.closingTotalizers } };
+  return { date: latestAcceptedTotalizers.date, source: latestAcceptedTotalizers.source, values: { ...latestAcceptedTotalizers.values } };
 }
 
 export function reportCsv(state) {

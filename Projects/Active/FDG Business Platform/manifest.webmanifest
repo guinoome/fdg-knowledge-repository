@@ -1,0 +1,10 @@
+{
+  "name": "FDG Business Platform",
+  "short_name": "FDG Business",
+  "description": "One account for independently activated FDG business operating platforms.",
+  "start_url": "./#home",
+  "display": "standalone",
+  "background_color": "#f5f8f6",
+  "theme_color": "#071e18",
+  "icons": [{ "src": "./assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

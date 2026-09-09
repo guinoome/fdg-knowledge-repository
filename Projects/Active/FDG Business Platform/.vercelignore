@@ -1,0 +1,10 @@
+.git/
+.github/
+.vercel/
+design/
+docs/
+tests/
+**/*.md
+fuel-station/design/
+fuel-station/docs/
+fuel-station/tests/

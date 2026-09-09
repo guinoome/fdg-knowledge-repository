@@ -47,7 +47,7 @@ A few high-traffic destinations, each opened and read directly, not assumed from
   - `verify/` holds 10 files: 4 `.html` test harnesses, 6 `.mjs` test scripts
   - **458 total assertions, 457 passing, 1 known failure** (Google Fonts CDN, non-blocking)
 - **[[Projects/Active/FWIS-Shift-Turnover-Prototype/README|FWIS Shift Turnover Prototype]]** — `Raw Instructions/` folder holds the original ChatGPT and Gemini drafts from this project's origin.
-- **[[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]]** — first FDG Business Platform validation build; workbook-grounded local operations with a connected premium prospect experience governed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|the FPIS Premium Experience mandate]].
+- **[[Projects/Active/FDG Business Platform/README|FDG Business Platform]]** — one-account ecosystem hub for discovery, independently scoped module activation, `My Platforms`, branch-aware permissions and billing visibility; [[Projects/Active/FDG Business Platform/fuel-station/README|Fuel Operations]] remains its first connected operational module.
 - The intelligence-system folders remain knowledge authorities rather than independent application forks. Active project implementations link back to those authorities and do not replace them.
 
 ## Complete knowledge-system map
@@ -81,6 +81,13 @@ This is the repository-level mother map. Each entry points to the system's curre
 | 22 | Audit Intelligence | [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System\|FAIS Home]] | Draft/admission review |
 
 Supporting navigation: [[05_Knowledge_Architecture/FDG_CROSS_SYSTEM_RELATIONSHIP_MAP|Cross-System Relationship Map]] · [[Projects/Projects_Master_Index|Projects]] · [[Candidates/Candidates_Master_Index|Candidates]] · [[People/People_Master_Index|People]] · [[Journal/Journal_Master_Index|Journal]].
+
+## Active platform architecture
+
+- [[Projects/Active/FDG Business Platform/README|FDG Business Platform]] — interactive client-magnet and portfolio hub.
+- [[Projects/Active/FDG Business Platform/docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate|Unified Account, Modular Subscription & Experience Merge Mandate]] — active product and architecture governance.
+- [[Projects/Active/FDG Business Platform/docs/UNIFIED_ACCOUNT_MODULAR_ARCHITECTURE|Unified Account and Modular Subscription Architecture]] — implemented prototype boundaries and production gates.
+- [[Projects/Active/FDG Business Platform/CURRENT_HANDOVER|Current Agent Handover]] — verified release continuation point.
 
 ## How this works
 

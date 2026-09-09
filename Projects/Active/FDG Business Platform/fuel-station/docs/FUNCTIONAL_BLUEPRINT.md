@@ -16,12 +16,15 @@ Validate the core inquiry-to-operating loop for NJ Gas Station — Habay with th
 
 | Workbook concept | Platform function | Control |
 |---|---|---|
-| Totalizer, test/calibration, daily consumption | Daily closeout | Reject negative calculated volume |
+| Prior final totalizer, new final totalizer, test/calibration, daily consumption | Daily closeout | Carry forward the latest accepted close automatically; only the final reading is editable; reject negative calculated volume |
 | Refill and balance | Deliveries and wet-stock movement | Require reference and role |
 | Buying and selling price | Effective price record | Capture reason and actor |
 | Electricity, manpower, monthly allocation | Operating cost inputs | Do not bury rates in formulas |
 | Daily sales and daily profit | Verified report facts | Preserve source/local evidence status |
 | Collections and variance | Cash reconciliation | Hold material variance for review |
+| Product sales history | Sales analysis | Group recorded Regular/Premium/Diesel facts by day, week, month, or year; require timestamped transactions before enabling hourly analysis |
+
+The FPIS/FBPOIS/FBIS/FSIS/FWAIS ownership map is an internal FDG architecture aid. Its responsibilities govern the implementation, but the map itself is not part of the client experience.
 
 ## Required production contracts
 
@@ -37,11 +40,12 @@ Validate the core inquiry-to-operating loop for NJ Gas Station — Habay with th
 
 ## Success criteria for the client validation session
 
-- A manager can reconcile a normal day using real totalizer inputs without spreadsheet formulas.
+- A manager can reconcile a normal day without retyping opening totalizers: the latest accepted close is locked as the next opening and only final readings are entered or proposed by local OCR.
 - A negative totalizer or broken source reference is held visibly rather than included in trusted figures.
 - A delivery explains the corresponding increase in wet stock.
 - A price change has an actor, reason, and time.
 - The owner can distinguish verified workbook history from locally entered demo records.
 - The complete closeout works at phone width without horizontal page overflow.
+- The owner can switch product analysis among hourly, daily, weekly, monthly, and annual views and can see when the requested source resolution is not connected.
 - The prospect can state what the product controls and why it is more useful than the source workbook after a 15–30 second phone review.
 - The session records baseline and prototype closeout time, correction count/rate, unexplained-liter variance, cash variance, and an explicit owner approve/revise decision.

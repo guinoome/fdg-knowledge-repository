@@ -43,6 +43,7 @@ Links go to each platform's own authoritative entry point — FPIS does not dupl
 |---|---|---|---|
 | FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope\|FBPOIS Vision & Scope]] | Local-first build in progress |
 | — FWIS | Facility Workspace | [[Projects/Active/FWIS/README\|FWIS README]] | Production, 457/458 assertions passing |
+| — FDG Business Platform | Business ecosystem and portfolio experience | [[Projects/Active/FDG Business Platform/README\|FDG Business Platform]] | Unified hub prototype; Fuel Operations connected; production identity and payments deferred |
 | — Fuel Station Operations | Fuel-retail experience validation | [[Projects/Active/FDG Business Platform/fuel-station/README\|NJ Gas Station — Habay prototype]] | Local functional prototype; production controls deferred |
 | FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index\|FBIS Master Index]] | Canonical 18-domain knowledge architecture under migration review |
 | FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home\|FSIS Home]] | Fully specified, not yet built |
@@ -104,3 +105,5 @@ Concept → Architecture → Prototype → Local Validation → Integration → 
 ## Active Experience Governance
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|FDG Premium Experience Design & Implementation Mandate]] — Active Mandate; extends earlier FPIS design direction with mobile-first, client-magnet, domain-native, truth-protecting implementation gates.
+- [[Projects/Active/FDG Business Platform/docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate|FDG Business Platform Unified Account, Modular Subscription & Experience Merge Mandate]] — Active Mandate; applies FPIS experience ownership to a shared ecosystem hub while retaining module and branch boundaries.
+- [[Projects/Active/FDG Business Platform/docs/UNIFIED_PLATFORM_VISUAL_FIDELITY_LEDGER|FDG Business Platform Visual Fidelity Ledger]] — browser-evidenced comparison between approved direction and the working responsive implementation.

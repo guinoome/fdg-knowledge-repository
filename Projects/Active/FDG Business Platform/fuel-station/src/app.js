@@ -1,7 +1,7 @@
 import { products } from "../data/nj-gas-station.js";
 import { peso } from "./format.js";
 import { icon } from "./icons.js";
-import { addAudit, loadState, reportCsv, resetDemo, saveState } from "./store.js";
+import { addAudit, latestTotalizerRecord, loadState, reportCsv, resetDemo, saveState } from "./store.js";
 import { views } from "./views.js";
 
 let state = loadState();
@@ -53,10 +53,11 @@ function buildReviewBrief(form) {
 }
 
 function closeoutPreview(form) {
+  const prior = latestTotalizerRecord(state);
   let sales = 0;
   let margin = 0;
   products.forEach((product) => {
-    const opening = Number(form.elements[`${product.id}-opening`].value || 0);
+    const opening = Number(prior.values[product.id]);
     const closing = Number(form.elements[`${product.id}-closing`].value || 0);
     const test = Number(form.elements[`${product.id}-test`].value || 0);
     const volume = closing - opening - test;
@@ -73,12 +74,15 @@ function closeoutPreview(form) {
 }
 
 function handleCloseout(form) {
+  const prior = latestTotalizerRecord(state);
   const preview = closeoutPreview(form);
-  const row = { id: crypto.randomUUID(), date: form.elements.date.value, status: "local", sales: preview.sales, profit: preview.profit, cashVariance: preview.cashVariance };
+  const row = { id: crypto.randomUUID(), date: form.elements.date.value, status: "local", sales: preview.sales, profit: preview.profit, cashVariance: preview.cashVariance, openingTotalizers: { ...prior.values }, closingTotalizers: {}, openingSource: `${prior.source}; ${prior.date}` };
   let invalid = false;
   let insufficientStock = false;
   products.forEach((product) => {
-    const volume = Number(form.elements[`${product.id}-closing`].value) - Number(form.elements[`${product.id}-opening`].value) - Number(form.elements[`${product.id}-test`].value);
+    const closing = Number(form.elements[`${product.id}-closing`].value);
+    const volume = closing - Number(prior.values[product.id]) - Number(form.elements[`${product.id}-test`].value);
+    row.closingTotalizers[product.id] = closing;
     row[`${product.id}Liters`] = volume;
     if (volume < 0) invalid = true;
     if (volume > state.tanks[product.id]) insufficientStock = true;
@@ -88,10 +92,47 @@ function handleCloseout(form) {
   if (state.closeouts.some((item) => item.date === row.date)) return notify("Closeout held: this local operating date already exists.");
   products.forEach((product) => { state.tanks[product.id] -= row[`${product.id}Liters`]; });
   state.closeouts.push(row);
-  addAudit(state, "Daily closeout saved for review", `${row.date}; expected sales ${peso(row.sales)}; cash variance ${peso(row.cashVariance)}.`);
+  addAudit(state, "Daily closeout saved for review", `${row.date}; automatic opening from ${row.openingSource}; expected sales ${peso(row.sales)}; cash variance ${peso(row.cashVariance)}.`);
   saveState(state);
   notify("Closeout saved locally for manager review.");
   go("reports");
+}
+
+async function handleTotalizerPhoto(input) {
+  const productId = input.dataset.ocrInput;
+  const file = input.files?.[0];
+  if (!file) return;
+  const status = workspace.querySelector(`[data-ocr-status="${productId}"]`);
+  const closingInput = workspace.querySelector(`[name="${productId}-closing"]`);
+  const opening = Number(latestTotalizerRecord(state).values[productId]);
+  if (!("TextDetector" in window)) {
+    status.textContent = "Photo attached for this entry. On-device OCR is unavailable in this browser; enter the final reading manually.";
+    return notify("Photo ready. Confirm the final totalizer manually in this browser.");
+  }
+  status.textContent = "Reading photo on this device…";
+  try {
+    const bitmap = await createImageBitmap(file);
+    const blocks = await new window.TextDetector().detect(bitmap);
+    bitmap.close?.();
+    const candidates = blocks
+      .flatMap((block) => String(block.rawValue || "").match(/\d[\d,]*(?:\.\d+)?/g) || [])
+      .map((value) => Number(value.replaceAll(",", "")))
+      .filter((value) => Number.isFinite(value) && value >= opening)
+      .sort((a, b) => (a - opening) - (b - opening));
+    if (!candidates.length) {
+      status.textContent = "No plausible reading was detected. Keep the photo selected and enter the final totalizer manually.";
+      return notify("OCR needs manual confirmation; no plausible final reading was found.");
+    }
+    closingInput.value = candidates[0].toFixed(2);
+    closingInput.dispatchEvent(new Event("input", { bubbles: true }));
+    status.textContent = `OCR proposed ${candidates[0].toFixed(2)}. Compare it with the photo and edit before saving.`;
+    addAudit(state, "On-device OCR reading proposed", `${productId}; proposed ${candidates[0].toFixed(2)}; technician confirmation required.`);
+    saveState(state);
+    notify("OCR proposed a reading. Confirm it against the meter photo.");
+  } catch {
+    status.textContent = "The photo could not be read on this device. Enter the final totalizer manually.";
+    notify("OCR could not read this photo. Manual entry remains available.");
+  }
 }
 
 function handleDelivery(form) {
@@ -132,11 +173,13 @@ function bindViewEvents() {
   const closeout = workspace.querySelector("#closeout-form");
   closeout?.addEventListener("input", () => closeoutPreview(closeout));
   closeout?.addEventListener("submit", (event) => { event.preventDefault(); handleCloseout(closeout); });
+  closeout?.querySelectorAll("[data-ocr-input]").forEach((input) => input.addEventListener("change", () => handleTotalizerPhoto(input)));
   const delivery = workspace.querySelector("#delivery-form");
   delivery?.addEventListener("submit", (event) => { event.preventDefault(); handleDelivery(delivery); });
   const pricing = workspace.querySelector("#pricing-form");
   pricing?.addEventListener("submit", (event) => { event.preventDefault(); handlePricing(pricing); });
   workspace.querySelector("#export-report")?.addEventListener("click", exportCsv);
+  workspace.querySelectorAll("[data-analytics-range]").forEach((button) => button.addEventListener("click", () => { state.analyticsRange = button.dataset.analyticsRange; saveState(state); go("reports"); }));
   const reviewBrief = workspace.querySelector("#review-brief-form");
   reviewBrief?.addEventListener("submit", (event) => { event.preventDefault(); buildReviewBrief(reviewBrief); });
   workspace.querySelectorAll("[data-scroll]").forEach((button) => button.addEventListener("click", () => workspace.querySelector(`#${button.dataset.scroll}`)?.scrollIntoView({ behavior: "smooth" })));

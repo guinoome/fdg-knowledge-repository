@@ -1,40 +1,53 @@
-# FDG Business Platforms
+# FDG Business Platform
 
-FDG's governed workspace for domain-native business operating products. The local folder inside the FDG Knowledge Repository is the source of truth; this GitHub repository is its implementation mirror.
+The FDG Business Platform is a premium, mobile-first ecosystem hub for discovering and opening domain-native operating modules through one account. This folder is the authoritative implementation inside the local FDG Knowledge Repository; GitHub is a mirror.
 
-## Active platform
+Live platform: [fdgbusinessplatforms.vercel.app](https://fdgbusinessplatforms.vercel.app/)
 
-- [FDG Fuel Station Operations](fuel-station/README.md) — a premium, mobile-first, local-first operating prototype for NJ Gas Station — Habay, grounded in supplied client records and governed by FPIS experience guidance.
-- [Build preflight](BUILD_PREFLIGHT.md) — platform family, evidence boundary, architecture choices, and release constraints.
-- [Design concepts](design/concepts/) — approved visual exploration retained as design evidence.
+## Current release
 
-Live prototype: [fdgbusinessplatforms.vercel.app](https://fdgbusinessplatforms.vercel.app/#experience)
+- Interactive client-magnet home and business-module discovery.
+- `My Platforms` portfolio bridge with Active, Trial, Setup incomplete, and Cancelled states.
+- One-account prototype with module-, branch-, role-, and billing-scope demonstrations.
+- Config-driven per-module and per-branch pricing examples.
+- Four-step activation flow ending at an explicit no-provider payment boundary.
+- Module-scoped cancellation that preserves the account and other subscriptions.
+- Domain-aware portfolio analytics grounded only in the supplied fuel workbook data.
+- Mobile-first PWA shell with local state and offline application caching.
+- Existing [Fuel Operations](fuel-station/README.md) workspace preserved at `/fuel-station/`.
 
-## Fuel-station experience
+Fuel Operations is the first connected operational module. Micro Fuel Station is an activation preview. Restaurant, neighborhood retail, tire and auto, pickleball, logistics, bakery, and mobility are labelled roadmap modules; they are not represented as completed products.
 
-The current release supports source-grounded wet-stock visibility, daily totalizer closeout, deliveries, pricing, safety checks, local audit history, CSV export, and installable/offline reopening. Its public-facing experience explains operational value while its signed-in workspace demonstrates the real workflow.
+## Truth and security boundary
 
-This remains a prototype. It does not claim production authentication, regulatory compliance, live integrations, payment processing, or secure multi-tenant authorization.
+This release is an interactive product and architecture prototype. Identity, subscription, invitation, cancellation, and billing records stay in local browser storage. No production authentication, payment provider, live integration, regulatory compliance, or secure multi-tenant authorization is claimed. Production writes will require server-side authorization, durable audit handling, and a reviewed payment integration.
 
-## Local run
+## Run locally
 
 ```powershell
-Set-Location fuel-station
 python -m http.server 4173
 ```
 
-Then open `http://localhost:4173`.
+Open `http://localhost:4173`. Fuel Operations remains available at `http://localhost:4173/fuel-station/`.
 
 ## Validation
 
 ```powershell
-Set-Location fuel-station
 npm test
 npm run check
 ```
 
-The scripts install no dependencies.
+The validation scripts install no dependencies. Browser QA covers desktop and a 390 × 844 mobile viewport.
 
-## Repository relationship
+## Architecture and governance
 
-Knowledge governance, architecture decisions, and cross-system links remain in the local FDG Knowledge Repository. Product source, design evidence, and implementation handovers are mirrored here so the active platform can be reviewed and deployed independently without creating a second authority.
+- [Unified account and modular subscription architecture](docs/UNIFIED_ACCOUNT_MODULAR_ARCHITECTURE.md)
+- [Active merge mandate](docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate.md)
+- [Visual fidelity ledger](docs/UNIFIED_PLATFORM_VISUAL_FIDELITY_LEDGER.md)
+- [Current handover](CURRENT_HANDOVER.md)
+- [Build preflight](BUILD_PREFLIGHT.md)
+- [Design references](design/references/)
+
+The project implements the repository relationship:
+
+`FPIS experience primitives → FDG Business ecosystem hub → module subscription → module instance → branch-scoped operational data`
