@@ -9,4 +9,3 @@ Historical snapshot of [[Projects/Active/FDG Business Platform/fuel-station/CURR
 - Tests: root and Fuel smoke tests passed; root and Fuel syntax checks passed
 - Mobile: Closeout and Sales measured 390 CSS px with no document-level horizontal overflow
 - Continuation: validate the final-reading/OCR workflow with one real operating day before connecting a backend or claiming hourly/live data
-

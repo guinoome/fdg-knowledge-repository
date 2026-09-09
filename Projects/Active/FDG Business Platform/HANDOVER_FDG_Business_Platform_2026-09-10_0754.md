@@ -8,4 +8,3 @@ Historical release snapshot. See [[Projects/Active/FDG Business Platform/CURRENT
 - Vercel deployment: `dpl_9YhTzm8rqHTTSGsvNPgT2JZDbEvS` (`READY`)
 - Production: `https://fdgbusinessplatforms.vercel.app/`
 - Highest-value continuation: one real manager-led Fuel closeout and final-totalizer image validation
-

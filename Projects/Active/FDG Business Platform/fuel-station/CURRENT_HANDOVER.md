@@ -1,10 +1,10 @@
 # FDG Fuel Station — Current Handover
 
-Updated: 2026-09-10 07:54 Asia/Taipei  
-Platform family: FDG Business Platform / FBPOIS  
-Experience authority: FPIS  
-Authoritative checkout: `C:\Users\FraNc!s\Documents\Obsidian\FDG Knowledge Repository`  
-Branch and source baseline: vault `main`, implementation commit `1ae43a3` before this handover update  
+Updated: 2026-09-10 07:54 Asia/Taipei
+Platform family: FDG Business Platform / FBPOIS
+Experience authority: FPIS
+Authoritative checkout: `C:\Users\FraNc!s\Documents\Obsidian\FDG Knowledge Repository`
+Branch and source baseline: vault `main`, implementation commit `1ae43a3` before this handover update
 Project mirror: `guinoome/FDG-Business-Platforms` `main` at `28b2b59` before this handover update
 
 ## Work completed
@@ -40,4 +40,3 @@ Project mirror: `guinoome/FDG-Business-Platforms` `main` at `28b2b59` before thi
 ## Exact next action
 
 Run one NJ Gas Station manager-led closeout with a genuine final meter photo and a completed operating day. Record OCR/manual reading accuracy, closeout time, correction rate, unexplained-liter variance, cash variance, and the owner approve/revise decision before selecting a production backend or enabling hourly data.
-
