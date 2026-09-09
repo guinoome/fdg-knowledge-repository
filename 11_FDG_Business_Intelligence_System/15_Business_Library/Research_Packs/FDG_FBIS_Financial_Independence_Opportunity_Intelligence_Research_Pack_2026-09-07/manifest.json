@@ -1,0 +1,153 @@
+{
+  "pack": "FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07",
+  "created": "2026-09-07",
+  "updated_after_resume": true,
+  "purpose": "Obsidian-ready FBIS Financial Independence & Opportunity Intelligence research and repository integration pack",
+  "source_image_included": true,
+  "files": [
+    {
+      "path": "00_README.md",
+      "bytes": 3755,
+      "sha256": "5d01271d4e5eb8506da0e010f350916cff59efb8d4b6fb275b00e2936683970c"
+    },
+    {
+      "path": "01_FDG_Financial_Independence_Opportunity_Intelligence_MOC.md",
+      "bytes": 3287,
+      "sha256": "8ffff4cc77c8b75f7806a36a57e9ed4b0af76b22db089413cee0f33f76654439"
+    },
+    {
+      "path": "02_Canonical_Principle_Owner_Independent_Value_Creation.md",
+      "bytes": 2993,
+      "sha256": "7c7c14829d1dcae2be54c7462c8e8e13a0dbef3073d726746dfd202da10bfc52"
+    },
+    {
+      "path": "03_Reference_Financial_Independence_Before_35.md",
+      "bytes": 3220,
+      "sha256": "3b0456f83c513708377b8e62ef23917d29142431916debe203fd620776c1099c"
+    },
+    {
+      "path": "04_Financial_Independence_Engineering_Capability.md",
+      "bytes": 3283,
+      "sha256": "94fe88ec6f58c35d00ee461a712f28672c4986efc7980e292bb2099d3fc613f6"
+    },
+    {
+      "path": "05_FDG_Opportunity_Intelligence_Model.md",
+      "bytes": 3138,
+      "sha256": "a35b3afb6981564cab24247cb3cc6720a215e61fcb2a6227b332119708b3704c"
+    },
+    {
+      "path": "06_Founder_Dependency_and_Owner_Independent_Revenue.md",
+      "bytes": 2755,
+      "sha256": "67b18da38338034b589bda8d227fce6cc1d74712f062f948483e07f2ea093db0"
+    },
+    {
+      "path": "07_Productive_Assets_IP_and_Organizational_Knowledge.md",
+      "bytes": 2974,
+      "sha256": "94e7ac0be1eca5a004c0017602766620a3dbe26720071ff61beddf836bd71823"
+    },
+    {
+      "path": "08_Recurring_Revenue_and_Platform_Economics.md",
+      "bytes": 2493,
+      "sha256": "7f74fcde37a3710ce52a3ed3f18a438b43b67218122d5e8e73ebadcdb50c6d17"
+    },
+    {
+      "path": "09_Risk_Capital_Allocation_and_Portfolio_Governance.md",
+      "bytes": 2475,
+      "sha256": "1732ebe26b348744c783bd1b26a5d3e4439249eb49e1b5cc8a83d0bb79936e14"
+    },
+    {
+      "path": "10_Philippines_Localization_and_Guardrails.md",
+      "bytes": 2092,
+      "sha256": "5c24953b1af26f3d86e5cba1c9b7c7c316139eae771f606ae3ceaf0c75bfdae1"
+    },
+    {
+      "path": "11_FDG_Repository_Integration_Map.md",
+      "bytes": 5147,
+      "sha256": "eef6f480c1e2fc167ef87c52059aea0a5706ae42b4d2b86d579c7ad4e50c702e"
+    },
+    {
+      "path": "12_Source_Register.md",
+      "bytes": 6306,
+      "sha256": "aa6e0f209d101335ffb16006f6f03e8d3ffdbb25330a2199c9e5fbec4f0a93fa"
+    },
+    {
+      "path": "13_Conversation_Compilation.md",
+      "bytes": 6048,
+      "sha256": "e3132ffdc7bec0cf538b8713f18a1c4bd5a3e5e6593f1b1696d238d3046d6e85"
+    },
+    {
+      "path": "14_Implementation_Backlog.md",
+      "bytes": 2936,
+      "sha256": "7cf325f017871e46eb081131ab5657976ee6b92195b82bc861d84121d129510c"
+    },
+    {
+      "path": "15_Decision_Rules_and_Stage_Gates.md",
+      "bytes": 1939,
+      "sha256": "aee4e03fa08e5dfe23b1511867cbbab79202136b009b47323dbac8e7a045025a"
+    },
+    {
+      "path": "16_Institutional_Continuity_Index.md",
+      "bytes": 2006,
+      "sha256": "3fd18f23d1e5ec812e69ad0735d432c919fee65da845876013b5a0ea8889ade4"
+    },
+    {
+      "path": "17_Recurring_Revenue_Quality_Model.md",
+      "bytes": 1764,
+      "sha256": "1cb97c79a1e13c0233b0ca50fc19022d866fe40e443345fc28cc25a596bfb780"
+    },
+    {
+      "path": "18_Key_Person_Risk_Register.md",
+      "bytes": 1397,
+      "sha256": "c9a187f1a28f0bcbe9928d21e772ff7b647892122718716e6c0b06dda712b89f"
+    },
+    {
+      "path": "19_Wikilink_Audit.md",
+      "bytes": 2905,
+      "sha256": "8c174c71257288ab7133114b7a373c719f132e36c1e41ebad5a1e2a5e9a7c92a"
+    },
+    {
+      "path": "20_External_Research_Strengthening_2026-09-07.md",
+      "bytes": 7128,
+      "sha256": "2936e11b5473a9310a3f8a26dae7e212947d758e81f831b33447e2c446e35816"
+    },
+    {
+      "path": "99_HANDOVER_FOR_REPOSITORY_AUDIT.md",
+      "bytes": 4066,
+      "sha256": "eeb95042b7e9f13dc6a3c6b3fd4e1f9e99fdaeb37a77c3321d7204e42060d0e8"
+    },
+    {
+      "path": "metrics/FBIS KPI Dictionary.md",
+      "bytes": 2658,
+      "sha256": "484dccd677f67ea34ca69969466606098cb6eab541287e1fef99d9756596056f"
+    },
+    {
+      "path": "schemas/Opportunity Intelligence Data Model.json",
+      "bytes": 5297,
+      "sha256": "20195ff487c251122943a2c3684e2281272e042fabd8a8995d39fb4184f721a3"
+    },
+    {
+      "path": "schemas/Opportunity Intelligence Data Model.md",
+      "bytes": 1411,
+      "sha256": "172e79c37a88c76566c1d379fd6588bf3dbd2702142adcfddd9b24c43a9a1632"
+    },
+    {
+      "path": "sources/1000008374.jpg",
+      "bytes": 301065,
+      "sha256": "120a34731d23a944ffe54dc301711e3f423f721591fdd4ec60501d4b309576bd"
+    },
+    {
+      "path": "templates/FBIS Opportunity Assessment Template.md",
+      "bytes": 1927,
+      "sha256": "237b2eef3fe340b76ae9adabe3ce1ddbaae0300f1c1779f01c4b451ee529c5da"
+    },
+    {
+      "path": "templates/Financial Independence Dashboard Template.md",
+      "bytes": 1465,
+      "sha256": "115c895dc2f5c651340200c4aa6440f421191de3576fbd1223495804fe9fa8e7"
+    }
+  ],
+  "wikilink_count": 220,
+  "unresolved_pack_internal_wikilinks": [],
+  "repository_or_future_wikilink_count": 129,
+  "validation": "All pack-internal Wikilinks resolved. Repository/future links are intentional and documented in 19_Wikilink_Audit.md."
+}

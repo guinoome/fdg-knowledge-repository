@@ -14,16 +14,23 @@ function Relative([string]$path) {
     [IO.Path]::GetRelativePath($root, $path).Replace('\', '/')
 }
 
-$excludedRoots = @('.git', '.obsidian/plugins', '.obsidian/themes', 'node_modules')
-$files = Get-ChildItem -LiteralPath $root -File -Recurse -Force | Where-Object {
-    $rel = Relative $_.FullName
-    -not ($excludedRoots | Where-Object { $rel -eq $_ -or $rel.StartsWith("$_/") })
+$files = [Collections.Generic.List[IO.FileInfo]]::new()
+$directories = [Collections.Generic.List[IO.DirectoryInfo]]::new()
+$pending = [Collections.Generic.Stack[IO.DirectoryInfo]]::new()
+$pending.Push((Get-Item -LiteralPath $root))
+while ($pending.Count -gt 0) {
+    foreach ($item in (Get-ChildItem -LiteralPath $pending.Pop().FullName -Force)) {
+        if ($item.PSIsContainer) {
+            # Prune before entering nested repositories, dependencies or plugin trees.
+            if ($item.Name -in @('.git', 'node_modules') -or
+                ($item.Parent.Name -eq '.obsidian' -and $item.Name -in @('plugins', 'themes')) -or
+                ($item.Attributes -band [IO.FileAttributes]::ReparsePoint)) { continue }
+            $directories.Add($item)
+            $pending.Push($item)
+        } else { $files.Add($item) }
+    }
 }
 $markdown = @($files | Where-Object Extension -eq '.md')
-$directories = Get-ChildItem -LiteralPath $root -Directory -Recurse -Force | Where-Object {
-    $rel = Relative $_.FullName
-    -not ($excludedRoots | Where-Object { $rel -eq $_ -or $rel.StartsWith("$_/") })
-}
 
 $inventory = foreach ($group in ($files | Group-Object { (Relative $_.FullName -split '/')[0] } | Sort-Object Name)) {
     [pscustomobject]@{
@@ -61,37 +68,80 @@ $metadata = foreach ($file in $markdown) {
 }
 if (-not $PassThruOnly) { $metadata | Export-Csv -LiteralPath (Join-Path $auditOutputPath 'metadata-coverage.csv') -NoTypeInformation -Encoding utf8 }
 
-$byStem = @{}
+$byPath = @{}
+$byName = @{}
 foreach ($file in $files) {
-    $stem = [IO.Path]::GetFileNameWithoutExtension($file.Name).ToLowerInvariant()
-    if (-not $byStem.ContainsKey($stem)) { $byStem[$stem] = [Collections.Generic.List[string]]::new() }
-    $byStem[$stem].Add((Relative $file.FullName))
+    $rel = Relative $file.FullName
+    $byPath[$rel] = $rel
+    if (-not $byName.ContainsKey($file.Name)) { $byName[$file.Name] = [Collections.Generic.List[string]]::new() }
+    $byName[$file.Name].Add($rel)
+}
+
+function Without-FencedCode([string]$text) {
+    $fenceCharacter = $null
+    $fenceLength = 0
+    foreach ($line in ($text -split '\r?\n')) {
+        $fence = [regex]::Match($line, '^ {0,3}(`{3,}|~{3,})(.*)$')
+        if ($null -eq $fenceCharacter) {
+            if ($fence.Success -and -not ($fence.Groups[1].Value[0] -eq '`' -and $fence.Groups[2].Value.Contains('`'))) {
+                $fenceCharacter = $fence.Groups[1].Value[0]
+                $fenceLength = $fence.Groups[1].Length
+                ''
+            } else { $line }
+        } else {
+            if ($fence.Success -and $fence.Groups[1].Value[0] -eq $fenceCharacter -and
+                $fence.Groups[1].Length -ge $fenceLength -and -not $fence.Groups[2].Value.Trim()) {
+                $fenceCharacter = $null
+            }
+            ''
+        }
+    }
+}
+
+function Wiki-Matches([string]$target, [IO.FileInfo]$sourceFile) {
+    # A dot may belong to a note name. Only an actual .md suffix is an extension here.
+    $candidates = @($target)
+    if (-not $target.EndsWith('.md', [StringComparison]::OrdinalIgnoreCase)) { $candidates += "$target.md" }
+    $sourceDirectory = Relative $sourceFile.DirectoryName
+    if ($target.Contains('/')) {
+        $bases = if ($target -match '^\.\.?/') { @($sourceFile.DirectoryName) } else { @($root, $sourceFile.DirectoryName) }
+        foreach ($base in $bases) {
+            foreach ($candidate in $candidates) {
+                try { $rel = Relative ([IO.Path]::GetFullPath((Join-Path $base $candidate))) } catch { continue }
+                if ($byPath.ContainsKey($rel)) { return $byPath[$rel] }
+            }
+        }
+        return
+    }
+    # Obsidian can resolve a same-folder note despite duplicate basenames elsewhere.
+    foreach ($candidate in $candidates) {
+        $local = if ($sourceDirectory -eq '.') { $candidate } else { "$sourceDirectory/$candidate" }
+        if ($byPath.ContainsKey($local)) { return $byPath[$local] }
+    }
+    foreach ($candidate in $candidates) {
+        if ($byName.ContainsKey($candidate)) { return $byName[$candidate] | Sort-Object }
+    }
 }
 $wikiLinks = [Collections.Generic.List[object]]::new()
 $markdownLinks = [Collections.Generic.List[object]]::new()
 foreach ($file in $markdown) {
-    $text = [string](Get-Content -LiteralPath $file.FullName -Raw)
+    $text = (Without-FencedCode ([string](Get-Content -LiteralPath $file.FullName -Raw))) -join "`n"
     $source = Relative $file.FullName
     foreach ($match in [regex]::Matches($text, '!??\[\[([^\]]+)\]\]')) {
         $raw = $match.Groups[1].Value
-        $target = (($raw -split '\|',2)[0] -split '#',2)[0].Trim().Replace('\','/')
+        $target = (($raw -split '\\?\|',2)[0] -split '#',2)[0].Trim().Replace('\','/')
         if (-not $target) { continue }
-        $candidate = $target.TrimEnd('.md')
-        $matches = @()
-        if ($candidate.Contains('/')) {
-            $relMd = if ([IO.Path]::GetExtension($candidate)) { $candidate } else { "$candidate.md" }
-            $matches = @($files | Where-Object { (Relative $_.FullName).Equals($relMd,[StringComparison]::OrdinalIgnoreCase) })
-        } else {
-            $key = [IO.Path]::GetFileNameWithoutExtension($candidate).ToLowerInvariant()
-            if ($byStem.ContainsKey($key)) { $matches = @($byStem[$key]) }
-        }
+        $matches = @(Wiki-Matches $target $file)
         $status = if ($matches.Count -eq 0) {'BROKEN'} elseif ($matches.Count -gt 1) {'AMBIGUOUS'} else {'OK'}
         $wikiLinks.Add([pscustomobject]@{ source=$source; target=$target; status=$status; matches=(($matches | ForEach-Object { if ($_ -is [IO.FileInfo]) { Relative $_.FullName } else { $_ } }) -join ' | ') })
     }
-    foreach ($match in [regex]::Matches($text, '(?<!\!)\[[^\]]*\]\(([^)]+)\)')) {
-        $raw = $match.Groups[1].Value.Trim().Trim('<','>')
-        if ($raw -match '^(https?|mailto|obsidian):' -or $raw.StartsWith('#')) { continue }
-        $pathPart = [uri]::UnescapeDataString(($raw -split '#',2)[0]).Replace('/','\')
+    # Balancing groups retain parentheses inside a destination; angle brackets allow spaces.
+    $markdownPattern = '(?<!\!)\[[^\]\r\n]*\]\(\s*(?<destination><[^>\r\n]+>|(?:\\.|[^\s()\\]|\((?<paren>)|\)(?<-paren>))+)(?(paren)(?!))(?:\s+(?:"[^"]*"|''[^'']*''))?\s*\)'
+    foreach ($match in [regex]::Matches($text, $markdownPattern)) {
+        $raw = $match.Groups['destination'].Value.Trim().Trim('<','>')
+        if ($raw -match '^(https?|mailto|obsidian|data|tel|ftp):' -or $raw.StartsWith('#')) { continue }
+        $pathPart = [uri]::UnescapeDataString(($raw -split '#',2)[0]) -replace '\\([() ])', '$1'
+        $pathPart = $pathPart.Replace('\','/')
         $resolved = [IO.Path]::GetFullPath((Join-Path $file.DirectoryName $pathPart))
         $status = if (Test-Path -LiteralPath $resolved) {'OK'} else {'BROKEN'}
         $markdownLinks.Add([pscustomobject]@{ source=$source; target=$raw; status=$status; resolved=(Relative $resolved) })

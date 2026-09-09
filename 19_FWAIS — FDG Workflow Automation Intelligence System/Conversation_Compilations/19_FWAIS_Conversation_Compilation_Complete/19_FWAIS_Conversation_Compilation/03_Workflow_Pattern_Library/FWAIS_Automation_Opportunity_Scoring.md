@@ -1,0 +1,40 @@
+# FWAIS Automation Opportunity Scoring
+
+## Positive scoring factors
+
+- Business impact
+- Frequency
+- Labor cost
+- Revenue impact
+- Error cost
+- Customer impact
+- Reusability
+- Automation feasibility
+- Evidence strength
+
+## Negative scoring factors
+
+- Complexity
+- Compliance risk
+- Security risk
+- Integration risk
+- Operational dependency
+- Change-management burden
+
+## Priority classes
+
+### P0 — Immediate
+High value, strong evidence, manageable risk and complexity.
+
+### P1 — Strategic
+High value with moderate implementation complexity.
+
+### P2 — Opportunistic
+Useful but not strategically urgent.
+
+### P3 — Do Not Automate
+Low ROI, weak evidence, excessive risk, or unnecessary complexity.
+
+## Key rule
+
+Do not automate simply because automation is possible.

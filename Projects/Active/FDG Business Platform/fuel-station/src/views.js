@@ -1,0 +1,128 @@
+import { integrationMap, products, safetyChecklist, sourceExceptions, verifiedHistory } from "../data/nj-gas-station.js";
+import { experienceConfig } from "../data/experience-config.js";
+import { allReportRows } from "./store.js";
+import { dateTime, escapeHtml, localDate, number, peso, shortDate } from "./format.js";
+
+const title = (eyebrow, heading, copy, actions = "") => `<div class="page-heading"><div><span class="eyebrow">${eyebrow}</span><h1>${heading}</h1><p>${copy}</p></div>${actions}</div>`;
+const productName = (id) => products.find((p) => p.id === id)?.name ?? id;
+
+export function experienceView() {
+  const latest = verifiedHistory.at(-1);
+  const totalLiters = latest.regularLiters + latest.premiumLiters + latest.dieselLiters;
+  return `<div class="prospect-page">
+    <header class="prospect-nav">
+      <button class="prospect-brand" data-scroll="top" aria-label="FDG Business Platform home"><span>/</span><strong>FDG</strong><small>BUSINESS PLATFORM</small></button>
+      <nav aria-label="Prospect navigation"><button data-scroll="proof">Proof</button><button data-scroll="workflow">How it works</button><button data-scroll="scale">Scale path</button></nav>
+      <button class="prospect-nav-cta" data-go="overview">Explore operations <span data-icon="arrow"></span></button>
+    </header>
+
+    <section class="prospect-hero" id="top">
+      <div class="hero-copy">
+        <div class="trust-line"><span>${experienceConfig.evidence.label}</span><span>${experienceConfig.capabilityState.storage}</span></div>
+        <h1>Know every liter.<br />Close every shift.<br /><em>Grow with confidence.</em></h1>
+        <p>See fuel, stock, deliveries, safety, and profit in one operating picture—grounded in records you can verify.</p>
+        <div class="hero-actions"><button class="hero-primary" data-go="overview">Explore the working demo <span data-icon="arrow"></span></button><button class="hero-secondary" data-scroll="proof">See the proof</button></div>
+        <div class="hero-assurance"><span><b>01</b> No invented live feeds</span><span><b>02</b> Your source stays visible</span><span><b>03</b> Mobile work comes first</span></div>
+      </div>
+      <figure class="hero-media">
+        <img src="./design/reference/fdg_micro_station_operations_showcase.png" alt="FPIS concept showing an FDG micro fuel station and connected mobile operations screens" fetchpriority="high" />
+        <figcaption><span>FPIS experience concept</span><strong>${experienceConfig.tenant.name} — ${experienceConfig.tenant.location}</strong><small>Visual direction · not a live station photograph</small></figcaption>
+      </figure>
+    </section>
+
+    <section class="proof-band" id="proof">
+      <div class="proof-intro"><span>Verified client record · ${shortDate(experienceConfig.evidence.latestVerifiedDate)}</span><h2>A stronger station starts with numbers you can trace.</h2><p>The prototype separates workbook evidence from locally entered demo records, so persuasive presentation never outruns operational truth.</p></div>
+      <div class="proof-numbers"><div><strong>${peso(latest.sales)}</strong><span>daily fuel sales</span><small>Workbook verified</small></div><div><strong>${number(totalLiters)} L</strong><span>volume recorded</span><small>Three fuel grades</small></div><div><strong>${peso(latest.profit)}</strong><span>net daily profit</span><small>Workbook verified</small></div></div>
+    </section>
+
+    <section class="value-story" id="workflow">
+      <div class="story-heading"><span>From workbook to operating control</span><h2>Keep the familiarity. Remove the fragile parts.</h2><p>The platform follows the station’s real language—totalizers, calibration, wet stock, deliveries, costs, cash, and manager review—then makes the decision path visible.</p></div>
+      <div class="workflow-rail">
+        <article><b>01</b><div><h3>Record the shift</h3><p>Capture opening and closing totalizers, calibration, utilities, manpower, and cash.</p></div></article>
+        <article><b>02</b><div><h3>Explain every liter</h3><p>Connect sales, deliveries, tests, and tank movement instead of accepting a mysterious balance.</p></div></article>
+        <article><b>03</b><div><h3>Hold what looks wrong</h3><p>Negative totalizers, broken references, and capacity conflicts stay visible for review.</p></div></article>
+        <article><b>04</b><div><h3>Close with evidence</h3><p>Preserve actor, reason, time, source status, and variance before a manager approves.</p></div></article>
+      </div>
+      <button class="story-action" data-go="closeout">Walk through a closeout <span data-icon="arrow"></span></button>
+    </section>
+
+    <section class="comparison-story">
+      <figure><img src="./design/reference/before_and_after_smarter_station_marketing.png" loading="lazy" alt="FPIS before-and-after concept contrasting a basic operations dashboard with a client-magnet fuel business experience" /><figcaption>FPIS concept comparison · presentation direction, not measured client outcomes</figcaption></figure>
+      <div><span>More than a prettier interface</span><h2>Operations prove the value. Experience makes the value visible.</h2><p>A prospect should understand the platform before an FDG representative finishes the first explanation. An operator should then enter the same product and finish real work without marketing getting in the way.</p><ul><li>Evidence remains attached to every claim.</li><li>Operational actions stay direct and role-aware.</li><li>Client presentation and working controls share one product identity.</li></ul></div>
+    </section>
+
+    <section class="scale-story" id="scale">
+      <div><span>Planned capability · no live network connection</span><h2>Start with Habay. Keep the path to a network open.</h2><p>The information model is shaped for one station today and future branch, regional, and enterprise views without turning fuel operations into a generic business dashboard.</p></div>
+      <div class="network-line"><article class="active"><b>01</b><strong>Single station</strong><small>Closeout · stock · margin</small></article><i></i><article><b>02</b><strong>Multi-branch</strong><small>Compare · replenish · support</small></article><i></i><article><b>03</b><strong>Regional network</strong><small>Route · risk · performance</small></article><i></i><article><b>04</b><strong>Enterprise</strong><small>Portfolio · governance · growth</small></article></div>
+    </section>
+
+    <section class="review-brief" id="review">
+      <div><span>Local discovery tool</span><h2>Prepare the first station review.</h2><p>Create a private on-device brief for the next operating walkthrough. Nothing is submitted or transmitted.</p></div>
+      <form id="review-brief-form"><label>Station or business name<input name="station" placeholder="Your station" autocomplete="organization" /></label><label>First priority<select name="priority"><option>Daily closeout and cash control</option><option>Wet-stock and delivery control</option><option>Profitability visibility</option><option>Multi-branch readiness</option></select></label><button class="hero-primary" type="submit">Build my local review brief <span data-icon="arrow"></span></button></form>
+      <article id="review-brief-output" hidden><span>Prepared locally</span><h3 data-brief="station"></h3><p>Priority: <strong data-brief="priority"></strong></p><p data-brief="next"></p><button data-go="overview">Enter the working demo</button></article>
+    </section>
+
+    <footer class="prospect-footer"><div class="prospect-brand"><span>/</span><strong>FDG</strong><small>BUSINESS PLATFORM</small></div><p>${experienceConfig.provider.attribution} · Prototype · No production integrations connected</p><button data-go="overview">Open station operations <span data-icon="arrow"></span></button></footer>
+  </div>`;
+}
+
+export function overviewView(state) {
+  const latest = verifiedHistory.at(-1);
+  const totalLiters = latest.regularLiters + latest.premiumLiters + latest.dieselLiters;
+  const stock = Object.values(state.tanks).reduce((a, b) => a + b, 0);
+  return `${title("Station command", "One station. Every critical decision in view.", "NJ Gas Station — Habay · Workbook evidence and local demo actions remain clearly separated.", '<button class="primary" data-go="closeout">Close today’s shift <span data-icon="arrow"></span></button>')}
+    <section class="command-hero">
+      <figure class="command-media"><img src="./design/reference/fpis-fuel-operations-sample.png" alt="FPIS fuel operations design reference" /><figcaption><span>FPIS concept view</span><small>Presentation reference · not live telemetry</small></figcaption></figure>
+      <aside class="decision-rail"><span class="decision-source">Workbook verified · ${shortDate(latest.date)}</span><h2>${peso(latest.sales)}</h2><p>Latest verified daily fuel sales across ${number(totalLiters)} liters.</p><div class="decision-margin"><span>Net daily profit</span><strong>${peso(latest.profit)}</strong><small>${number((latest.profit / latest.sales) * 100, 1)}% of sales</small></div><div class="decision-alert"><b>${sourceExceptions.length}</b><span>source exceptions kept out of trusted totals</span></div><button data-go="audit">Review evidence and exceptions <span data-icon="arrow"></span></button></aside>
+    </section>
+    <section class="signal-strip" aria-label="Station operating signals"><div><span>Total wet stock</span><strong>${number(stock, 0)} L</strong><small>Local demo balance</small></div>${products.map((p) => { const pct = Math.min(100, (state.tanks[p.id] / p.tankCapacity) * 100); return `<div class="fuel-signal" style="--fuel:${p.color};--level:${pct}%"><span>${p.name}</span><strong>${number(state.tanks[p.id], 0)} L</strong><small>${number(pct, 0)}% capacity</small><i></i></div>`; }).join("")}</section>
+    <section class="command-lower">
+      <article class="exception-command"><header><div><span>What needs a decision</span><h2>Exceptions before automation</h2></div><button data-go="audit">Open control log</button></header>${sourceExceptions.map((item) => `<div class="exception-row"><span class="severity ${item.severity}">!</span><div><strong>${item.title}</strong><p>${item.detail}</p></div><small>${item.date}</small></div>`).join("")}</article>
+      <article class="closeout-command"><span>Today’s operating path</span><h2>Close the shift with proof.</h2><ol><li><b>1</b><p><strong>Record</strong> totalizers and calibration</p></li><li><b>2</b><p><strong>Reconcile</strong> wet stock and cash</p></li><li><b>3</b><p><strong>Review</strong> exceptions before approval</p></li></ol><button class="primary" data-go="closeout">Begin closeout <span data-icon="arrow"></span></button></article>
+    </section>`;
+}
+
+export function closeoutView(state) {
+  const restricted = state.role === "Attendant";
+  return `${title("Shift control", "Daily closeout", "Turn totalizer readings and operating costs into a reviewable station record.", '<span class="permission-note">Manager approval required</span>')}
+    <form id="closeout-form" class="panel form-panel">
+      <div class="form-header"><div><h2>Meter and cash reconciliation</h2><p>Negative volume, excessive calibration, or cash variance will be held for review.</p></div><label>Date<input name="date" type="date" required value="${localDate()}" /></label></div>
+      <div class="product-entry-grid">${products.map((p) => `<fieldset><legend><i style="background:${p.color}"></i>${p.name}</legend><label>Opening totalizer<input name="${p.id}-opening" type="number" min="0" step="0.01" required /></label><label>Closing totalizer<input name="${p.id}-closing" type="number" min="0" step="0.01" required /></label><label>Test / calibration (L)<input name="${p.id}-test" type="number" min="0" step="0.01" value="0" required /></label><div class="computed"><span>Calculated volume</span><strong data-volume="${p.id}">0.00 L</strong></div></fieldset>`).join("")}</div>
+      <div class="cost-grid"><label>Electricity cost<input name="electricity" type="number" min="0" step="0.01" value="0" /></label><label>Manpower cost<input name="manpower" type="number" min="0" step="0.01" value="0" /></label><label>Other allocated cost<input name="otherCost" type="number" min="0" step="0.01" value="0" /></label><label>Cash collected<input name="cashCollected" type="number" min="0" step="0.01" value="0" /></label></div>
+      <div class="closeout-summary"><div><span>Expected sales</span><strong id="expected-sales">₱0.00</strong></div><div><span>Gross margin</span><strong id="gross-margin">₱0.00</strong></div><div><span>Cash variance</span><strong id="cash-variance">₱0.00</strong></div><button class="primary" type="submit" ${restricted ? "disabled" : ""}>${restricted ? "Manager role required" : "Save for manager review"}</button></div>
+    </form>`;
+}
+
+export function tanksView(state) {
+  return `${title("Wet stock", "Tanks & inventory", "Recorded balances, capacity exposure, and movement controls for the three workbook fuel grades.")}
+    <div class="tank-grid">${products.map((p) => { const level = state.tanks[p.id]; const pct = Math.min(100, (level / p.tankCapacity) * 100); return `<article class="panel tank-card"><div class="tank-visual"><div style="height:${pct}%;background:${p.color}"></div><span>${number(pct, 0)}%</span></div><div><span class="eyebrow">${p.name}</span><h2>${number(level, 0)} L</h2><p>Working capacity ${number(p.tankCapacity, 0)} L</p><div class="detail-row"><span>Buying price</span><strong>${peso(state.prices[p.id].buyingPrice)}/L</strong></div><div class="detail-row"><span>Selling price</span><strong>${peso(state.prices[p.id].sellingPrice)}/L</strong></div><div class="detail-row"><span>Unit margin</span><strong>${peso(state.prices[p.id].sellingPrice - state.prices[p.id].buyingPrice)}</strong></div></div></article>`; }).join("")}</div>
+    <article class="panel governance-callout"><span>FBIS data rule</span><h2>Every balance must be explainable by movements.</h2><p>Production implementation should derive stock from an immutable movement ledger: opening balance + posted deliveries − verified sales − test/calibration ± approved adjustments.</p></article>`;
+}
+
+export function deliveriesView(state) {
+  const restricted = state.role === "Attendant";
+  return `${title("Inbound fuel", "Deliveries", "Log a delivery reference, product, volume and cost before it changes wet-stock position.")}
+    <div class="split-grid"><form id="delivery-form" class="panel form-panel"><h2>Post a delivery</h2><p class="form-copy">This demo records the movement and audit event together in local storage.</p><label>Date<input name="date" type="date" required value="${localDate()}" /></label><label>Product<select name="product">${products.map((p) => `<option value="${p.id}">${p.name}</option>`).join("")}</select></label><label>Volume (L)<input name="liters" type="number" min="0.01" step="0.01" required /></label><label>Unit cost<input name="unitCost" type="number" min="0" step="0.01" required /></label><label>Supplier / reference<input name="reference" required placeholder="Delivery receipt or supplier reference" /></label><button class="primary full" type="submit" ${restricted ? "disabled" : ""}>${restricted ? "Manager role required" : "Post delivery"}</button></form>
+    <article class="panel"><div class="panel-header"><div><span class="eyebrow">Movement ledger</span><h2>Recent deliveries</h2></div></div><div class="table-wrap"><table><thead><tr><th>Date</th><th>Reference</th><th>Product</th><th class="numeric">Liters</th><th class="numeric">Value</th></tr></thead><tbody>${state.deliveries.map((d) => `<tr><td>${shortDate(d.date)}</td><td><strong>${escapeHtml(d.reference)}</strong><small>${d.id}</small></td><td>${productName(d.product.toLowerCase())}</td><td class="numeric">${number(d.liters)}</td><td class="numeric">${peso(d.liters * d.unitCost)}</td></tr>`).join("")}</tbody></table></div></article></div>`;
+}
+
+export function pricingView(state) {
+  const restricted = state.role === "Attendant";
+  return `${title("Controlled commercial input", "Fuel pricing", "Make margins visible and keep each price change attributable.", '<span class="permission-note">Owner / manager only</span>')}
+    <form id="pricing-form" class="pricing-grid">${products.map((p) => { const current = state.prices[p.id]; return `<article class="panel price-card"><div class="product-badge" style="--product:${p.color}"><i></i>${p.name}</div><label>Buying price / L<input name="${p.id}-buy" type="number" min="0" step="0.01" value="${current.buyingPrice}" ${restricted ? "disabled" : ""} /></label><label>Selling price / L<input name="${p.id}-sell" type="number" min="0" step="0.01" value="${current.sellingPrice}" ${restricted ? "disabled" : ""} /></label><div class="margin-box"><span>Current unit margin</span><strong>${peso(current.sellingPrice - current.buyingPrice)}</strong></div></article>`; }).join("")}<div class="pricing-actions"><label>Reason for change<input name="reason" required placeholder="Supplier adjustment, market review…" ${restricted ? "disabled" : ""} /></label><button class="primary" ${restricted ? "disabled" : ""}>Save price change</button></div></form>`;
+}
+
+export function reportsView(state) {
+  const rows = allReportRows(state);
+  return `${title("Operational evidence", "Reports", "Verified client history and locally recorded closeouts remain distinguishable.", '<button class="secondary" id="export-report">Export CSV ↓</button>')}
+    <article class="panel"><div class="report-summary"><div><span>Trusted source rows</span><strong>${verifiedHistory.length}</strong></div><div><span>Demo closeouts</span><strong>${state.closeouts.length}</strong></div><div><span>Excluded source issues</span><strong>${sourceExceptions.length}</strong></div></div>${state.closeouts.length ? "" : '<div class="local-empty"><span data-icon="closeout"></span><div><strong>No local closeout yet</strong><p>Workbook history remains read-only. Complete a shift closeout to add the first clearly labelled Local Demo record.</p></div><button data-go="closeout">Start closeout</button></div>'}<div class="table-wrap"><table><thead><tr><th>Date</th><th>Evidence</th><th class="numeric">Regular</th><th class="numeric">Premium</th><th class="numeric">Diesel</th><th class="numeric">Sales</th><th class="numeric">Profit</th></tr></thead><tbody>${rows.map((row) => `<tr><td>${shortDate(row.date)}</td><td><span class="evidence-pill ${row.status === "verified" ? "verified" : "local"}">${row.status === "verified" ? "Workbook verified" : "Local demo"}</span></td><td class="numeric">${number(row.regularLiters)} L</td><td class="numeric">${number(row.premiumLiters)} L</td><td class="numeric">${number(row.dieselLiters)} L</td><td class="numeric"><strong>${peso(row.sales)}</strong></td><td class="numeric">${peso(row.profit)}</td></tr>`).join("")}</tbody></table></div></article>`;
+}
+
+export function auditView(state) {
+  return `${title("Safety, control and traceability", "Safety & audit", "A review surface for shift checks, source exceptions, and local mutation history.", '<button class="secondary" id="reset-demo">Reset local demo</button>')}
+    <div class="audit-grid"><article class="panel"><div class="panel-header"><div><span class="eyebrow">Before closeout</span><h2>Safety checklist</h2></div><span class="subtle">${Object.values(state.checklist).filter(Boolean).length}/${safetyChecklist.length} complete</span></div><div class="checklist">${safetyChecklist.map((item) => `<label><input type="checkbox" data-check="${escapeHtml(item)}" ${state.checklist[item] ? "checked" : ""}/><span><strong>${item}</strong><small>Recorded locally with current role</small></span></label>`).join("")}</div></article>
+    <article class="panel"><div class="panel-header"><div><span class="eyebrow">FSIS-aligned evidence</span><h2>Audit trail</h2></div></div><div class="timeline">${state.audit.map((event) => `<div><span></span><section><strong>${escapeHtml(event.action)}</strong><small>${escapeHtml(event.actor)} · ${dateTime(event.at)}</small><p>${escapeHtml(event.detail)}</p></section></div>`).join("")}</div></article></div>
+    <article class="panel integration-panel"><div class="panel-header"><div><span class="eyebrow">Coordinated intelligence</span><h2>Functional ownership map</h2></div></div><div class="integration-grid">${integrationMap.map((item) => `<div><strong>${item.system}</strong><span>${item.responsibility}</span><p>${item.contribution}</p></div>`).join("")}</div></article>`;
+}
+
+export const views = { experience: experienceView, overview: overviewView, closeout: closeoutView, tanks: tanksView, deliveries: deliveriesView, pricing: pricingView, reports: reportsView, audit: auditView };

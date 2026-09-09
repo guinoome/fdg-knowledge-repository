@@ -31,4 +31,8 @@ FSIS is the security intelligence domain of the FDG Ecosystem.
 
 The goal is not to prevent collaboration. The goal is to prevent unnecessary exposure of the FDG blueprint.
 
+## Active Control Validation
+
+- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — demonstrates role-aware interfaces, anomaly visibility, safety evidence, and mutation audit events. Its local role selector is not production authorization; server-side enforcement remains a required FSIS gate.
+
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document

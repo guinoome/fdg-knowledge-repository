@@ -41,6 +41,7 @@ yarn-error.log*
 Projects/**/verify/screenshots/
 playwright-report/
 test-results/
+.codex-remote-attachments/
 
 # ---- Build output ----------------------------------------------------------
 dist/

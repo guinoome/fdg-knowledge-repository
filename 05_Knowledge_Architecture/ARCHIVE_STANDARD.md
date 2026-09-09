@@ -22,7 +22,7 @@ Supersedes: None
 
 Related Documents:
 
-- NEX-STD-001 Document Control
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
 - NEX-STD-019 Knowledge Lifecycle
 - NEX-STD-023 Knowledge Preservation Standard
 - NEX-STD-024 Knowledge Evolution Standard

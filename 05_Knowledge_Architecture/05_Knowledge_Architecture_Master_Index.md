@@ -31,3 +31,7 @@
 - [[05_Knowledge_Architecture/REPOSITORY_ORGANIZATION_STANDARD|REPOSITORY ORGANIZATION STANDARD]]
 - [[05_Knowledge_Architecture/REPOSITORY_STRUCTURE_STANDARD|REPOSITORY STRUCTURE STANDARD]]
 - [[05_Knowledge_Architecture/TAGGING_STANDARD|TAGGING STANDARD]]
+
+## Proposed runtime bridge
+
+- [[05_Knowledge_Architecture/CANONICAL_TRUTH_RESOLUTION_STANDARD|Canonical Truth Resolution Standard]] — Proposed; subject to review and approval.

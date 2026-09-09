@@ -302,6 +302,10 @@ Child:
 
 - FWIS-ARCH-0000 – Facility Workspace Intelligence System
 
+Active validation implementation:
+
+- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — validates forecourt, totalizer, wet-stock, delivery, pricing, safety, and closeout workflows without promoting the local demo to production authority.
+
 ---
 
 # Sibling Subsystems (Graph Downlinks)

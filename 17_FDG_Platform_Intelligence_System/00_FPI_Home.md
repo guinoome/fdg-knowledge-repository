@@ -43,6 +43,7 @@ Links go to each platform's own authoritative entry point — FPIS does not dupl
 |---|---|---|---|
 | FBPOIS | Building Plant Operations | [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope\|FBPOIS Vision & Scope]] | Local-first build in progress |
 | — FWIS | Facility Workspace | [[Projects/Active/FWIS/README\|FWIS README]] | Production, 457/458 assertions passing |
+| — Fuel Station Operations | Fuel-retail experience validation | [[Projects/Active/FDG Business Platform/fuel-station/README\|NJ Gas Station — Habay prototype]] | Local functional prototype; production controls deferred |
 | FBIS | Business Intelligence | [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index\|FBIS Master Index]] | Canonical 18-domain knowledge architecture under migration review |
 | FSIS | Security Intelligence | [[12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home\|FSIS Home]] | Fully specified, not yet built |
 | FEIS / FEIP | Engineering Intelligence | [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD\|FEIP Architecture Standard]] | Specified, not yet built |
@@ -99,3 +100,7 @@ Concept → Architecture → Prototype → Local Validation → Integration → 
 - [[17_FDG_Platform_Intelligence_System/09_REVIEW_STATUS|09 REVIEW STATUS]]
 - [[17_FDG_Platform_Intelligence_System/10_Platform_Roadmap/00_Index|00 Index]]
 - [[17_FDG_Platform_Intelligence_System/11_Standards_Governance_Links/00_Index|00 Index]]
+
+## Active Experience Governance
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|FDG Premium Experience Design & Implementation Mandate]] — Active Mandate; extends earlier FPIS design direction with mobile-first, client-magnet, domain-native, truth-protecting implementation gates.

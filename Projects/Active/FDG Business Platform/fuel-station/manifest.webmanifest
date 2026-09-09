@@ -1,0 +1,12 @@
+{
+  "name": "FDG Fuel Station Operations",
+  "short_name": "FDG Fuel",
+  "description": "Local-first fuel-station operations prototype",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b2018",
+  "icons": [
+    { "src": "./assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

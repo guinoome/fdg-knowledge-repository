@@ -158,3 +158,7 @@
 - [[07_Nex_Core_Intelligence/NEX_TEMPLATE_AND_ARTIFACT_STANDARD|NEX TEMPLATE AND ARTIFACT STANDARD]]
 - [[07_Nex_Core_Intelligence/NEX_WORK_PACKAGE_MANAGEMENT_STANDARD|NEX WORK PACKAGE MANAGEMENT STANDARD]]
 - [[07_Nex_Core_Intelligence/USER_CONTEXT_STANDARD|USER CONTEXT STANDARD]]
+
+## Proposed Pre-OS runtime foundation
+
+- [[07_Nex_Core_Intelligence/NEX_PRE_OS_RUNTIME_FOUNDATION_INDEX|Nex Pre-OS Runtime Foundation Index]] — Proposed; import does not establish operational runtime status.

@@ -19,6 +19,7 @@
 - [[Projects/CORE Engineering|CORE Engineering]]
 - [[Projects/Active/ML Projects/README|ML Projects — Vault Integration Index]]
 - [[Projects/Active/AI/README|AI Projects]]
+- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — NJ Gas Station — Habay local functional prototype.
 - [[Projects/FMIS_Local_Prototype/README|README]]
 
 ## Additional Direct Child Documents

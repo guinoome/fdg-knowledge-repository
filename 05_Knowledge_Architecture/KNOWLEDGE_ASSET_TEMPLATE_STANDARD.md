@@ -22,7 +22,7 @@ Supersedes: None
 
 Related Documents:
 
-- NEX-STD-001 Document Control
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
 - NEX-STD-029 Knowledge Asset Standard
 - NEX-STD-030 Naming Standard
 - NEX-STD-031 Metadata Standard

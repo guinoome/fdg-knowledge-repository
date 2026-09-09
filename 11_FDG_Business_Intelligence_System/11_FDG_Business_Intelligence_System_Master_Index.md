@@ -35,6 +35,10 @@ FDG Ecosystem — Center → FBIS Master Index → Domain Master Index → Indiv
 ## One-System Rule
 All canonical folders above are domains of ONE FBIS. None is an independent intelligence system.
 
+## Active Validation Project
+
+- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — exercises the candidate common business data seams for product, price, sale, cost, stock movement, margin, cash reconciliation, and evidence status using NJ Gas Station — Habay data.
+
 ## Structural Integrity
 - Exactly one FBIS system-level Master Index.
 - Exactly one Master Index per canonical FBIS domain.

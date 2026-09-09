@@ -1,0 +1,82 @@
+# FPIS Platform Experience Visualization and Design Intelligence
+
+## Architectural role
+[[FPIS]] owns how engineering and business information is experienced. It provides reusable experience primitives and governance while domain modules retain their own logic.
+
+## Proposed capability tree
+- Platform Architecture Intelligence
+- Platform Lifecycle Intelligence
+- Platform Performance Intelligence
+- Platform Value Intelligence
+- Platform Evolution Intelligence
+- **Platform Experience, Visualization & Design Intelligence**
+  - 00_Experience_Design_Governance
+  - 01_FDG_Visual_Identity
+    - Brand_System
+    - Typography
+    - Color_System
+    - Iconography
+    - Engineering_Graphic_Language
+    - Design_Tokens
+  - 02_UI_UX_Design_System
+    - Navigation
+    - Components
+    - Forms
+    - Engineering_Workflows
+    - Information_Density
+    - Role_Based_Experiences
+  - 03_Responsive_Experience
+    - Mobile_App
+    - Mobile_Browser
+    - Tablet
+    - Desktop_Browser
+    - Large_Display
+    - Field_Mode
+  - 04_Engineering_Visualization
+    - Charts
+    - Engineering_Diagrams
+    - System_Topology
+    - Sankey_Energy_Flows
+    - Performance_Curves
+    - Heatmaps
+    - Evidence_Overlays
+    - Timeline_Visualization
+  - 05_3D_Experience
+    - Digital_Twin_Interaction
+    - Equipment_Visualization
+    - Building_Visualization
+    - System_Layering
+    - Findings_Hotspots
+    - Sectioning_and_Exploded_Views
+    - Before_After_States
+    - Simulation_Visualization
+  - 06_Motion_and_Interaction
+    - Camera_Transitions
+    - System_Flow_Animation
+    - Equipment_State_Animation
+    - Finding_Reveal
+    - Timeline_Animation
+    - Scroll_Storytelling
+    - Reduced_Motion
+  - 07_Client_Experience
+    - Public_Landing_Pages
+    - Interactive_Case_Studies
+    - Client_Magnet_Experiences
+    - Executive_Visualization
+    - Proposal_Experiences
+  - 08_Field_Experience
+    - Touch_First_UI
+    - Offline_Operation
+    - QR_Asset_Access
+    - Camera_Evidence
+    - AR_Assistance
+    - Outdoor_Readability
+  - 09_Accessibility_and_Usability
+  - 10_Component_and_Pattern_Library
+  - 11_Experience_Quality_Assurance
+
+## Boundary rule
+- [[FPIS]] owns **how** the information is experienced.
+- [[FEIS]] / engineering module owns **what** the information means.
+- [[FBPOIS]] / business vertical owns its operational domain logic.
+- [[FDG CORE]] preserves identity, evidence, truth/provenance, and shared primitives.

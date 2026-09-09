@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FDG FBIS Opportunity Intelligence Record",
+  "type": "object",
+  "required": [
+    "opportunity_id",
+    "name",
+    "status",
+    "evidence",
+    "economics",
+    "founder_dependency",
+    "risks"
+  ],
+  "properties": {
+    "opportunity_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "idea",
+        "experiment",
+        "approved",
+        "deferred",
+        "rejected",
+        "scaling",
+        "closed"
+      ]
+    },
+    "related_systems": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "evidence_class",
+          "as_of"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "evidence_class": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "economics": {
+      "type": "object",
+      "properties": {
+        "startup_capital": {
+          "type": "number"
+        },
+        "time_to_first_revenue_days": {
+          "type": "number"
+        },
+        "expected_monthly_revenue": {
+          "type": "number"
+        },
+        "expected_monthly_cashflow": {
+          "type": "number"
+        },
+        "gross_margin_pct": {
+          "type": "number"
+        },
+        "payback_months": {
+          "type": "number"
+        },
+        "npv": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "irr_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "capital_at_risk": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string",
+          "default": "PHP"
+        }
+      }
+    },
+    "revenue_quality": {
+      "type": "object",
+      "properties": {
+        "recurring": {
+          "type": "boolean"
+        },
+        "retention_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "customer_concentration_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "support_burden_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "owner_independence_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        }
+      }
+    },
+    "founder_dependency": {
+      "type": "object",
+      "properties": {
+        "founder_hours_per_month": {
+          "type": "number"
+        },
+        "founder_only_tasks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "delegation_potential_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "automation_potential_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        }
+      }
+    },
+    "capability_creation": {
+      "type": "object",
+      "properties": {
+        "ip": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "data_assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "process_assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cross_module_leverage": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "strategic_options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "impact",
+          "likelihood"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "impact": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "likelihood": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "mitigation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "outcome": {
+          "enum": [
+            "DO NOW",
+            "RUN SMALL EXPERIMENT",
+            "DEFER",
+            "PARTNER/LICENSE",
+            "REJECT",
+            "KILL",
+            "SCALE"
+          ]
+        },
+        "reasoning": {
+          "type": "string"
+        },
+        "kill_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

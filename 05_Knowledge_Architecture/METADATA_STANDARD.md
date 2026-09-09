@@ -22,7 +22,7 @@ Supersedes: None
 
 Related Documents:
 
-- NEX-STD-001 Document Control
+- [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|NEX-STD-002 Document Control]]
 - NEX-STD-025 Knowledge Architecture Model
 - NEX-STD-026 Repository Structure Standard
 - NEX-STD-029 Knowledge Asset Standard

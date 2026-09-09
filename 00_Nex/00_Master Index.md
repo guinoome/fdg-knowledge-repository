@@ -252,6 +252,7 @@ Where specs become running code.
 
 - [[Projects/Active/FWIS/README|FWIS]] — the production build, 458 total assertions (457 passing, 1 known non-blocking failure). Recovered 2026-08-06 after accidental deletion; verified byte-exact via codeload.github.com archive at the pre-deletion commit.
 - [[Projects/Active/FWIS-Shift-Turnover-Prototype/README|FWIS Shift Turnover Prototype]] — verified.
+- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — current local validation build for NJ Gas Station — Habay, coordinated across FPIS, FBPOIS, FBIS, FSIS, and FWAIS.
 
 ## Second Brain (flattened 2026-08-04)
 

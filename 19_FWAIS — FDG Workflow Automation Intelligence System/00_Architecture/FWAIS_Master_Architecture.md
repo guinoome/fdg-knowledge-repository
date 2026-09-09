@@ -48,4 +48,8 @@ The adapter is replaceable. The FDG-owned workflow remains stable.
 - [[FDG Capability-Over-Tool Principle]]
 - [[FWAIS Workflow Pattern Library]]
 
+## Active Workflow Validation
+
+- [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — applies record → validate → human review → approve or reject → monitor → recover to daily closeout, deliveries, pricing, source anomalies, and cash variance. Automation may assist but must not silently approve material exceptions.
+
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document
