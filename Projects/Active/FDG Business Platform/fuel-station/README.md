@@ -22,6 +22,10 @@ No installation, external service, or CDN resource is required.
 
 Run `npm test` for the source-data and cross-intelligence invariants, and `npm run check` for JavaScript syntax checks. These scripts install nothing.
 
+## Live prototype
+
+[Open FDG Business Platforms](https://fdgbusinessplatforms.vercel.app/#experience). The public deployment is a labelled operational prototype; it does not represent a production integration or live station feed.
+
 ## Working functions
 
 - Connected prospect experience with verified proof, fuel-native product story, scale path, and a private on-device review brief

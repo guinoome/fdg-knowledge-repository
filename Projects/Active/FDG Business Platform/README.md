@@ -8,6 +8,8 @@ FDG's governed workspace for domain-native business operating products. The loca
 - [Build preflight](BUILD_PREFLIGHT.md) — platform family, evidence boundary, architecture choices, and release constraints.
 - [Design concepts](design/concepts/) — approved visual exploration retained as design evidence.
 
+Live prototype: [fdgbusinessplatforms.vercel.app](https://fdgbusinessplatforms.vercel.app/#experience)
+
 ## Fuel-station experience
 
 The current release supports source-grounded wet-stock visibility, daily totalizer closeout, deliveries, pricing, safety checks, local audit history, CSV export, and installable/offline reopening. Its public-facing experience explains operational value while its signed-in workspace demonstrates the real workflow.
