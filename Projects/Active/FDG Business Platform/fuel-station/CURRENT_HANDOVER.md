@@ -1,10 +1,10 @@
 # FDG Fuel Station — Current Handover
 
-Updated: 2026-09-09 11:43 Asia/Taipei
+Updated: 2026-09-09 18:35 Asia/Taipei
 Platform family: FDG Business Platform / FBPOIS
 Experience authority: FPIS
 Repository: `C:\Users\FraNc!s\Documents\Obsidian\FDG Knowledge Repository`
-Checkout: `main` at `8ac2520`; repository is dirty and `main` is one commit ahead and one behind `origin/main`. No commit, pull, merge, staging, or push was performed in this milestone.
+Checkout: local vault `main` at `015c61a`; the working tree was clean after the knowledge-repository mirror push. Business-platform publication commit `40f65b8` is on `guinoome/FDG-Business-Platforms` `main`.
 
 ## Objective
 
@@ -21,6 +21,9 @@ Complete the gas-station platform first as a premium, mobile-first client-magnet
 - Added and linked the active [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|FDG Premium Experience Design & Implementation Mandate]].
 - Added [[Projects/Active/FDG Business Platform/fuel-station/docs/PREMIUM_EXPERIENCE_IMPLEMENTATION|the implementation brief]] and updated the [[Projects/Active/FDG Business Platform/fuel-station/docs/VISUAL_FIDELITY_LEDGER|visual fidelity ledger]].
 - Preserved all three accepted FPIS concept assets locally. The supplied `1000008382.png` and project `fpis-fuel-operations-sample.png` share SHA-256 `5EAC317C2A94DB296794536CC46CB0C9B8D5FFB5F3A5A64DA6C698FCAC97C133`.
+- Reconciled and pushed the local FDG Knowledge Repository to `guinoome/fdg-knowledge-repository` without force-pushing; local and remote both reached `da3cbd5`, followed by mirror-preparation commit `015c61a`.
+- Added a standalone business-platform gateway, project-level safety exclusions, and a GitHub Pages deployment workflow inside the local source-of-truth folder.
+- Published only `Projects/Active/FDG Business Platform` to `guinoome/FDG-Business-Platforms`. The publication history preserves the existing remote initial commit and does not create a nested Git repository in the vault.
 
 ## Decisions made
 
@@ -41,11 +44,20 @@ Working routes:
 
 The app is dependency-free and can be served with `python -m http.server 4173`. The latest QA used port `4174` only to avoid a stale prior browser session.
 
+Online mirror: `https://github.com/guinoome/FDG-Business-Platforms`
+
+Expected GitHub Pages URL after enablement: `https://guinoome.github.io/FDG-Business-Platforms/`
+
+The first Pages workflow run (`34340532277`) failed at `actions/configure-pages@v5` because Pages is not enabled. GitHub reports that the private repository must be upgraded or made public before Pages can be enabled on the current account. No visibility change has been made.
+
 ## Validation performed
 
 - `npm test` passed the product, trusted-history, anomaly, integration-ownership, evidence-date, and no-connected-integration invariants.
 - CSV serialization was extracted into a deterministic function and independently checked for stable headers, inclusion of verified plus local rows, and preservation of evidence state and values.
 - `npm run check` passed JavaScript syntax checks for application, views, store, icons, data, experience configuration, and service worker.
+- The same test and syntax-check commands passed immediately before the standalone business-platform publication.
+- A high-confidence scan of the business-platform text files found no private-key, GitHub token, OpenAI key, AWS access-key, or Google API-key signatures before publication.
+- GitHub confirmed workflow discovery and ran `Deploy FDG Fuel Station to GitHub Pages`; the failure annotation identified repository Pages enablement as the sole deployment blocker.
 - Desktop prospect render visually inspected: fuel domain, value, proof, CTA, and concept label are visible in the first viewport.
 - Phone prospect render inspected at 390 × 844: outcome, fuel domain, two CTAs, three trust statements, and station visual remain legible and intentionally composed.
 - Phone station command inspected at 390 × 844: primary closeout action, labelled FPIS concept, verified sales/profit, and five-action mobile dock are visible.
@@ -64,14 +76,16 @@ The app is dependency-free and can be served with `python -m http.server 4173`. 
 - The offline reload passed in Brave on Windows; other production-supported browsers and offline mutation/conflict recovery remain untested.
 - No real manager has approved the Inquiry-to-Proposal / operating-case workflow or baseline metrics.
 - No secure backend, server authorization, immutable transactional ledger, backup/recovery, monitoring, payment, BIR validation, or production integration exists.
-- Repository-wide unrelated edits and untracked files remain present. Preserve them and inspect ownership before any commit or push.
+- `guinoome/FDG-Business-Platforms` is private. On the current GitHub plan, its Pages site cannot be published until the repository is made public or the account is upgraded.
 
 ## Exact next actions
 
-1. Conduct one NJ Gas Station manager-led walkthrough using one real completed operating day.
-2. Record baseline and prototype closeout time, correction count/rate, unexplained-liter variance, cash variance, and the owner’s approve/revise decision.
-3. Fix only evidence-backed workflow or visual defects revealed by that session.
-4. Extend offline validation to offline mutation, reconnection, and conflict recovery only after the production data model is selected.
-5. Update this handover, the functional blueprint, and the decision-evolution record with the validated case before selecting a production data/security architecture.
+1. Obtain the owner’s explicit confirmation to make `guinoome/FDG-Business-Platforms` public, or select a paid/private deployment alternative.
+2. Enable GitHub Pages using GitHub Actions, rerun the workflow, and verify the expected URL at a 390 × 844 phone viewport before publishing it as the client-access link.
+3. Conduct one NJ Gas Station manager-led walkthrough using one real completed operating day.
+4. Record baseline and prototype closeout time, correction count/rate, unexplained-liter variance, cash variance, and the owner’s approve/revise decision.
+5. Fix only evidence-backed workflow or visual defects revealed by that session.
+6. Extend offline validation to offline mutation, reconnection, and conflict recovery only after the production data model is selected.
+7. Update this handover, the functional blueprint, and the decision-evolution record with the validated case before selecting a production data/security architecture.
 
 Do not connect credentials, Supabase, payments, or real integrations until the operating case is approved and a dedicated security/data milestone is authorized.
