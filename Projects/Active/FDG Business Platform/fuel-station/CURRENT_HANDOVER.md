@@ -1,5 +1,13 @@
 # FDG Fuel Station — Current Handover
 
+## Current continuation — 2026-09-17
+
+Deployed READY: `dpl_HnJt4KhXgurYYMVtuxfTmVWCBVP4`. Exact continuation and recovery cautions: [[Projects/Active/FDG Business Platform/fuel-station/HANDOVER_Fuel_Reliability_2026-09-17|Fuel Reliability Release Handover]].
+
+Fuel reliability patch implemented; owner acceptance is not complete. Read [[Projects/Active/FDG Business Platform/fuel-station/docs/FUEL_RELIABILITY_OWNER_GATE_2026-09-17|Reliability evidence and owner gate]] first. It supersedes the earlier immediate-posting description below: only **approved** revisions now affect stock, reports, and opening carry-forward. New modules: `src/closeouts.js`, `src/ocr.js`; regression suite: `tests/reliability.mjs`. Modified store, app, views, package scripts and both service workers. No schema migration, authentication or server deployment was added; existing local key is retained. Earlier handover below is historical release evidence.
+
+Next: obtain genuine meter photos and one complete owner-selected day with its immediately preceding accepted readings; reconcile the historical baseline before any real-day trial. Run the linked protocol and record the owner's actual decision. Do not begin Restaurant, invent signoff, or implement hourly/multi-device infrastructure under this milestone.
+
 Updated: 2026-09-10 07:54 Asia/Taipei
 Platform family: FDG Business Platform / FBPOIS
 Experience authority: FPIS

@@ -28,6 +28,8 @@ Run `npm test` for the source-data and cross-intelligence invariants, and `npm r
 
 ## Working functions
 
+Current reliability milestone and pending owner validation: [[Projects/Active/FDG Business Platform/fuel-station/docs/FUEL_RELIABILITY_OWNER_GATE_2026-09-17|Fuel Reliability and Owner Gate]]. Only approved closeouts now affect stock, reports and subsequent openings. JSON backup is available from Reports; images are preview-only, not stored evidence.
+
 - Connected prospect experience with verified proof, fuel-native product story, scale path, and a private on-device review brief
 - Mobile-first station command with a sticky operations dock and direct closeout path
 - Source-grounded overview for Regular, Premium, and Diesel
@@ -53,6 +55,6 @@ This is not BIR-, payment-, security-, or production-ready. Before deployment, r
 
 The workbook contains useful historical operations data but also contains anomalies, including a negative Premium result around 2025-04-30 and broken references/misaligned columns in July 2025. These periods are excluded from trusted demo metrics and shown as exceptions for correction.
 
-The accepted opening seed is the April 29, 2025 workbook close: Regular `68,202.44`, Premium `132,379.26`, and Diesel `32,833.33`. After a local closeout is saved, its final readings automatically become the next opening readings. The FPIS/FBPOIS/FBIS/FSIS/FWAIS ownership map is internal FDG governance and is intentionally absent from the client-facing runtime.
+The accepted opening seed is the April 29, 2025 workbook close: Regular `68,202.44`, Premium `132,379.26`, and Diesel `32,833.33`. After a local closeout is approved, its final readings become the next opening readings. This historical baseline must be reconciled before any current operating-day trial. The FPIS/FBPOIS/FBIS/FSIS/FWAIS ownership map is internal FDG governance and is intentionally absent from the client-facing runtime.
 
 See [[Projects/Active/FDG Business Platform/fuel-station/docs/FUNCTIONAL_BLUEPRINT|Functional Blueprint]], [[Projects/Active/FDG Business Platform/fuel-station/docs/VISUAL_FIDELITY_LEDGER|FPIS Visual Fidelity Ledger]], and [[Projects/Active/FDG Business Platform/fuel-station/CURRENT_HANDOVER|Current Handover]].

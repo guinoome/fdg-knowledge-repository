@@ -1,5 +1,9 @@
 # FDG Business Platform — Current Agent Handover
 
+## Current continuation — 2026-09-17
+
+Fuel-first reliability work takes priority; Restaurant is paused. See [[Projects/Active/FDG Business Platform/fuel-station/CURRENT_HANDOVER|Fuel Current Handover]] and [[Projects/Active/FDG Business Platform/fuel-station/docs/FUEL_RELIABILITY_OWNER_GATE_2026-09-17|Reliability evidence and owner acceptance gate]]. Pending approval now precedes stock/report posting; corrections retain history. Failed writes roll back in memory, damaged storage is protected, and hub/Fuel caches are isolated. Hourly reporting and secure multi-device operations are separate milestones. The previous release details below are historical, not owner acceptance evidence.
+
 Updated: 2026-09-10 07:54 Asia/Taipei
 Authoritative source: local vault at `C:\Users\FraNc!s\Documents\Obsidian\FDG Knowledge Repository\Projects\Active\FDG Business Platform`
 Vault branch and source baseline: `main` at `1ae43a3` before this handover update
