@@ -6,6 +6,7 @@ import { views } from "./views.js";
 import { submitCloseout, reviewCloseout, requireManager, validateOperatingDate } from "./closeouts.js";
 import { storageError } from "./store.js";
 import { totalizerCandidates } from "./ocr.js";
+import { addDeliveryLot, capacity, saveCapacity, saveMonthlyRecord, consumeLots, registeredTests, voidCalibration } from "./operations.js";
 let correctionId = null;
 
 let state = loadState();
@@ -67,6 +68,7 @@ function closeoutPreview(form) {
   const prices = state.closeouts.find((r) => r.id === correctionId)?.prices || state.prices;
   let sales = 0;
   let margin = 0;
+  let costReady = true;
   products.forEach((product) => {
     const opening = Number(form.querySelector(`[data-opening="${product.id}"]`).dataset.value);
     const closing = Number(form.elements[`${product.id}-closing`].value || opening);
@@ -74,12 +76,17 @@ function closeoutPreview(form) {
     const volume = closing - opening - test;
     form.querySelector(`[data-volume="${product.id}"]`).textContent = `${volume.toFixed(2)} L`;
     sales += Math.max(0, volume) * prices[product.id].sellingPrice;
-    margin += Math.max(0, volume) * (prices[product.id].sellingPrice - prices[product.id].buyingPrice);
+    try {
+      const lots = structuredClone(state.inventoryLots[product.id]);
+      const original = state.closeouts.find((r) => r.id === correctionId && r.workflow === "approved");
+      for (const allocation of original?.fifoAllocations?.[product.id] || []) lots.find((l) => l.id === allocation.lotId).remaining += allocation.liters;
+      margin += Math.max(0,volume) * prices[product.id].sellingPrice - consumeLots(lots,Math.max(0,volume),form.elements.date.value).cost;
+    } catch { costReady = false; }
   });
-  const costs = ["electricity", "manpower", "otherCost"].reduce((sum, name) => sum + Number(form.elements[name].value || 0), 0);
+  const costs = Number(form.elements.otherCost.value || 0);
   const cash = Number(form.elements.cashCollected.value || 0);
   form.querySelector("#expected-sales").textContent = peso(sales);
-  form.querySelector("#gross-margin").textContent = peso(margin - costs);
+  form.querySelector("#gross-margin").textContent = costReady ? peso(margin - costs) : "Cost reconciliation needed";
   form.querySelector("#cash-variance").textContent = peso(cash - sales);
   return { sales, profit: margin - costs, cashVariance: cash - sales };
 }
@@ -162,8 +169,10 @@ function handleDelivery(form) {
   if (data.get("date") <= latestTotalizerRecord(state).date) throw new Error("Delivery date must be after the latest posted close; earlier movements require reviewed reconciliation.");
   if (!products.some((p) => p.id === product) || !Number.isFinite(liters) || liters <= 0 || !Number.isFinite(unitCost) || unitCost < 0 || !String(data.get("reference") || "").trim()) throw new Error("Enter a valid product, volume, cost, and delivery reference.");
   const delivery = { id: `DEL-${String(state.deliveries.length + 1).padStart(3, "0")}`, date: data.get("date"), product, liters, unitCost, reference: data.get("reference"), status: "posted" };
-  const capacity = products.find((item) => item.id === product).tankCapacity;
-  if (state.tanks[product] + liters > capacity) return notify("Delivery held: volume would exceed the tank working capacity.");
+  const tankLimit = capacity(state, product);
+  if (state.tanks[product] + liters > tankLimit) return notify("Delivery held: volume would exceed the tank working capacity.");
+  delivery.id = crypto.randomUUID();
+  addDeliveryLot(state, delivery);
   state.deliveries.unshift(delivery);
   state.tanks[product] += liters;
   addAudit(state, "Fuel delivery posted", `${delivery.id}; ${product}; ${liters.toFixed(2)} L; ${delivery.reference}.`);
@@ -175,7 +184,9 @@ function handleDelivery(form) {
 function handlePricing(form) {
   requireManager(state);
   const data = new FormData(form);
-  products.forEach((product) => { state.prices[product.id] = { buyingPrice: Number(data.get(`${product.id}-buy`)), sellingPrice: Number(data.get(`${product.id}-sell`)) }; });
+  const nextPrices = structuredClone(state.prices);
+  products.forEach((product) => { const selling = Number(data.get(`${product.id}-sell`)); if (!Number.isFinite(selling) || selling < 0) throw new Error("Enter valid selling prices."); nextPrices[product.id].sellingPrice = selling; });
+  state.prices = nextPrices;
   addAudit(state, "Fuel prices changed", data.get("reason"));
   saveState(state);
   notify("Prices updated with an audit reason.");
@@ -191,6 +202,18 @@ function exportCsv() {
 }
 
 function bindViewEvents() {
+  workspace.querySelectorAll("[data-void-test]").forEach((form) => form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    try { voidCalibration(state,form.dataset.voidTest,form.elements.reason.value); saveState(state); go("reports"); notify("Test voided; audit history retained."); } catch (error) { showSaveError(error); }
+  }));
+  workspace.querySelectorAll("[data-monthly-form]").forEach((form) => form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    try { saveMonthlyRecord(state, { ...Object.fromEntries(new FormData(form)), kind: form.dataset.monthlyForm }, localDate()); saveState(state); go("reports"); notify("Monthly record saved."); } catch (error) { showSaveError(error); }
+  }));
+  workspace.querySelector("#capacity-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    try { saveCapacity(state,Object.fromEntries(new FormData(event.target))); saveState(state); go("reports"); notify("Working capacity saved."); } catch (error) { showSaveError(error); }
+  });
   workspace.querySelectorAll("[data-review-form]").forEach((form) => form.addEventListener("submit", (event) => {
     event.preventDefault();
     try { reviewCloseout(state, form.dataset.reviewForm, event.submitter.value, form.elements.reason.value); saveState(state); go("reports"); notify("Review saved."); } catch (error) { showSaveError(error); }
@@ -209,12 +232,22 @@ function bindViewEvents() {
       form.elements[`${p.id}-closing`].min = row.openingTotalizers[p.id];
       const opening = form.querySelector(`[data-opening="${p.id}"]`); opening.dataset.value = row.openingTotalizers[p.id]; opening.textContent = row.openingTotalizers[p.id].toLocaleString("en-PH");
     }
-    for (const name of ["electricity","manpower","otherCost"]) form.elements[name].value = row.costs?.[name] || 0;
+    form.elements.otherCost.value = row.costs?.otherCost || 0;
     form.elements.cashCollected.value = row.cashCollected || 0;
     closeoutPreview(form);
   }));
   workspace.querySelectorAll("[data-go]").forEach((button) => button.addEventListener("click", () => go(button.dataset.go)));
   const closeout = workspace.querySelector("#closeout-form");
+  const syncTests = () => {
+    for (const p of products) {
+      const field = closeout.elements[`${p.id}-test`];
+      const registered = registeredTests(state,closeout.elements.date.value,p.id);
+      if (registered.length) { field.value = registered.reduce((sum,r) => sum+r.liters,0); field.readOnly = true; field.dataset.registered = "true"; }
+      else { if (field.dataset.registered) field.value = 0; field.readOnly = false; delete field.dataset.registered; }
+    }
+    closeoutPreview(closeout);
+  };
+  if (closeout) { closeout.elements.date.addEventListener("input",syncTests); syncTests(); }
   closeout?.addEventListener("input", () => closeoutPreview(closeout));
   closeout?.addEventListener("submit", (event) => { event.preventDefault(); handleCloseout(closeout); });
   closeout?.querySelectorAll("[data-ocr-input]").forEach((input) => input.addEventListener("change", () => handleTotalizerPhoto(input)));

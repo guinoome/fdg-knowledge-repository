@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/platform-smoke.mjs && node fuel-station/tests/data-smoke.mjs && node fuel-station/tests/reliability.mjs",
+    "test": "node tests/platform-smoke.mjs && node fuel-station/tests/data-smoke.mjs && node fuel-station/tests/reliability.mjs && node fuel-station/tests/operations.mjs",
     "check": "node --check src/app.js && node --check src/views.js && node --check src/store.js && node --check src/icons.js && node --check data/catalog.js && node --check sw.js && npm --prefix fuel-station run check"
   }
 }

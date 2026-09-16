@@ -21,7 +21,7 @@ export const latestAcceptedTotalizers = {
 };
 
 export const sourceExceptions = [
-  { severity: "high", date: "2025-04-30", title: "Premium totalizer reversal", detail: "Closing totalizer is below the prior reading, producing a negative 30 L result. Review the source entry before approval." },
+  { severity: "high", date: "2025-04-30", title: "Premium 30 L test allocation — source review", detail: "Owner clarified that 30 L testing fuel was returned to the same tank: subtract it from positive meter movement, not from the physical closing totalizer. Example: 100 L movement minus 30 L test equals 70 L sold. The original source reading still needs reconciliation before approval." },
   { severity: "high", date: "2025-07", title: "Broken workbook references", detail: "Daily sales cells contain #REF! and product columns appear misaligned. July 2025 is excluded from trusted reporting." },
   { severity: "medium", date: "Multiple periods", title: "Utility rate changes", detail: "Electrical-cost formulas use different rates across periods. Store the rate as an effective-dated input, not a hidden constant." },
 ];

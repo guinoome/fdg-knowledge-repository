@@ -1,5 +1,9 @@
 # FDG Fuel Station — Current Handover
 
+## Latest refinement — FIFO and monthly controls
+
+Read [[Projects/Active/FDG Business Platform/fuel-station/HANDOVER_Fuel_FIFO_Monthly_2026-09-17|FIFO, returned calibration and monthly controls]] before continuing. User confirmed returned calibration: 100 L movement − 30 L test = 70 L sold/net depletion. Reports now holds monthly electricity/manpower, dated calibration, owner-only capacity, FIFO batches and monthly contribution. Owner real-day/OCR validation remains pending. Earlier release notes below are historical.
+
 ## Current continuation — 2026-09-17
 
 Deployed READY: `dpl_HnJt4KhXgurYYMVtuxfTmVWCBVP4`. Exact continuation and recovery cautions: [[Projects/Active/FDG Business Platform/fuel-station/HANDOVER_Fuel_Reliability_2026-09-17|Fuel Reliability Release Handover]].

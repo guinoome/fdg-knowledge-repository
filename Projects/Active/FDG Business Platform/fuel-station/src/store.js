@@ -10,6 +10,9 @@ const defaultState = () => ({
   role: "Owner",
   prices: Object.fromEntries(products.map((p) => [p.id, { buyingPrice: p.buyingPrice, sellingPrice: p.sellingPrice }])),
   tanks: Object.fromEntries(products.map((p) => [p.id, p.openingStock])),
+  capacities: Object.fromEntries(products.map((p) => [p.id, p.tankCapacity])),
+  monthlyExpenses: [],
+  monthlyTests: [],
   deliveries: structuredClone(initialDeliveries),
   closeouts: [],
   analyticsRange: "daily",
@@ -27,6 +30,14 @@ export function loadState() {
         && Number.isFinite(stored.prices?.[p.id]?.sellingPrice) && Number.isFinite(stored.prices?.[p.id]?.buyingPrice))
       || !stored.closeouts.every((r) => r && typeof r.date === "string" && Number.isFinite(r.sales) && Number.isFinite(r.profit)))) throw new Error("Invalid saved records");
     const state = stored ? { ...defaultState(), ...stored } : defaultState();
+    // Preserve old balances; do not replay historical deliveries already included in stock.
+    state.inventoryLots ??= Object.fromEntries(products.map((p) => [p.id, [{ id: `carry-in-${p.id}`, date: latestTotalizerRecord(state).date, remaining: state.tanks[p.id], unitCost: state.prices[p.id].buyingPrice, basis: "Unverified carry-in cost — owner reconciliation required" }]]));
+    if (!Array.isArray(state.monthlyExpenses) || !Array.isArray(state.monthlyTests) || !products.every((p) => {
+      const lots = state.inventoryLots[p.id];
+      return Number.isFinite(state.capacities[p.id]) && state.capacities[p.id] >= state.tanks[p.id]
+        && Array.isArray(lots) && lots.every((l) => l && Number.isFinite(l.remaining) && l.remaining >= 0 && Number.isFinite(l.unitCost) && l.unitCost >= 0 && typeof l.date === "string")
+        && Math.abs(lots.reduce((sum,l) => sum+l.remaining,0)-state.tanks[p.id]) < 0.011;
+    })) throw new Error("Stock batches or monthly records need reconciliation");
     persisted = JSON.stringify(state);
     return state;
   } catch {
@@ -80,6 +91,7 @@ export function resetDemo() {
   localStorage.removeItem(KEY);
   storageSnapshot = null;
   const state = defaultState();
+  state.inventoryLots = Object.fromEntries(products.map((p) => [p.id, [{ id: `carry-in-${p.id}`, date: latestAcceptedTotalizers.date, remaining: state.tanks[p.id], unitCost: state.prices[p.id].buyingPrice, basis: "Unverified carry-in cost — owner reconciliation required" }]]));
   persisted = JSON.stringify(state);
   return state;
 }

@@ -28,6 +28,8 @@ Run `npm test` for the source-data and cross-intelligence invariants, and `npm r
 
 ## Working functions
 
+Latest operating rules: [[Projects/Active/FDG Business Platform/fuel-station/HANDOVER_Fuel_FIFO_Monthly_2026-09-17|FIFO cost batches, returned calibration, monthly electricity/manpower, and owner-only capacity inputs in Reports]].
+
 Current reliability milestone and pending owner validation: [[Projects/Active/FDG Business Platform/fuel-station/docs/FUEL_RELIABILITY_OWNER_GATE_2026-09-17|Fuel Reliability and Owner Gate]]. Only approved closeouts now affect stock, reports and subsequent openings. JSON backup is available from Reports; images are preview-only, not stored evidence.
 
 - Connected prospect experience with verified proof, fuel-native product story, scale path, and a private on-device review brief

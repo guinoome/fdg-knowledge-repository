@@ -1,5 +1,9 @@
 # FDG Business Platform — Current Agent Handover
 
+Standing visual requirement reaffirmed by the user: every business platform must have its own premium, domain-specific hero image, with deliberate mobile/desktop cropping and readable outcome-led text/CTA. Preserve the existing Fuel and ecosystem hero assets. Add and validate each module's hero as that module is implemented; do not treat a shared generic image as completion. This requirement does not remove the Fuel owner-validation gate before Restaurant.
+
+Latest Fuel refinement: [[Projects/Active/FDG Business Platform/fuel-station/HANDOVER_Fuel_FIFO_Monthly_2026-09-17|FIFO, returned calibration, monthly expense and capacity controls]]. No Restaurant work was started. Read this refinement before the older reliability notes below.
+
 ## Current continuation — 2026-09-17
 
 Fuel-first reliability work takes priority; Restaurant is paused. See [[Projects/Active/FDG Business Platform/fuel-station/CURRENT_HANDOVER|Fuel Current Handover]] and [[Projects/Active/FDG Business Platform/fuel-station/docs/FUEL_RELIABILITY_OWNER_GATE_2026-09-17|Reliability evidence and owner acceptance gate]]. Pending approval now precedes stock/report posting; corrections retain history. Failed writes roll back in memory, damaged storage is protected, and hub/Fuel caches are isolated. Hourly reporting and secure multi-device operations are separate milestones. The previous release details below are historical, not owner acceptance evidence.
