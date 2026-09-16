@@ -1,5 +1,7 @@
 # FDG Business Platform — Current Agent Handover
 
+Latest refinement: [[HANDOVER_Fuel_Sales_Periods_2026-09-17]] — dashboard-first sales, calendar-scoped product bars, explicit missing-data coverage. Prior operational handovers remain applicable.
+
 Standing visual requirement reaffirmed by the user: every business platform must have its own premium, domain-specific hero image, with deliberate mobile/desktop cropping and readable outcome-led text/CTA. Preserve the existing Fuel and ecosystem hero assets. Add and validate each module's hero as that module is implemented; do not treat a shared generic image as completion. This requirement does not remove the Fuel owner-validation gate before Restaurant.
 
 Latest Fuel refinement: [[Projects/Active/FDG Business Platform/fuel-station/HANDOVER_Fuel_FIFO_Monthly_2026-09-17|FIFO, returned calibration, monthly expense and capacity controls]]. No Restaurant work was started. Read this refinement before the older reliability notes below.

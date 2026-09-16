@@ -265,7 +265,14 @@ function bindViewEvents() {
       notify("Backup exported. Keep it private; it includes local operational records.");
     } catch (error) { showSaveError(error); }
   });
-  workspace.querySelectorAll("[data-analytics-range]").forEach((button) => button.addEventListener("click", () => { state.analyticsRange = button.dataset.analyticsRange; saveState(state); go("reports"); }));
+  workspace.querySelectorAll("[data-analytics-range]").forEach((button) => button.addEventListener("click", () => { state.analyticsRange = button.dataset.analyticsRange; go(currentView); }));
+  workspace.querySelector("[data-sales-date]")?.addEventListener("change", (event) => {
+    if (!event.target.value || !event.target.checkValidity()) return;
+    state.analyticsDate = event.target.value; go(currentView);
+  });
+  workspace.querySelector("[data-sales-today]")?.addEventListener("click", () => {
+    state.analyticsDate = localDate(); go(currentView);
+  });
   const reviewBrief = workspace.querySelector("#review-brief-form");
   reviewBrief?.addEventListener("submit", (event) => { event.preventDefault(); buildReviewBrief(reviewBrief); });
   workspace.querySelectorAll("[data-scroll]").forEach((button) => button.addEventListener("click", () => workspace.querySelector(`#${button.dataset.scroll}`)?.scrollIntoView({ behavior: "smooth" })));
@@ -310,4 +317,6 @@ renderIcons();
 updateConnectionState();
 
 const requestedView = window.location.hash.slice(1);
-go(views[requestedView] ? requestedView : "experience");
+state.analyticsDate = localDate();
+state.analyticsRange = "daily";
+go(views[requestedView] ? requestedView : "overview");

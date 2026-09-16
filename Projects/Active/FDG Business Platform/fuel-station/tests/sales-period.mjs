@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { salesPeriod } from "../src/sales-period.js";
+import { verifiedHistory } from "../data/nj-gas-station.js";
+const rows = ["2024-12-29", "2024-12-30", "2025-01-01", "2025-01-05", "2025-01-06"].map(date => ({date, sales:100, regularLiters:10}));
+assert.equal(salesPeriod(rows,"daily","2025-01-01").sales,100);
+const week = salesPeriod(rows,"weekly","2025-01-01");
+assert.equal(week.from,"2024-12-30"); assert.equal(week.to,"2025-01-05"); assert.equal(week.sales,300);
+assert.equal(salesPeriod(rows,"monthly","2025-01-01").sales,300);
+assert.equal(salesPeriod(rows,"annually","2024-01-01").sales,200);
+assert.equal(salesPeriod(rows,"monthly","2024-02-15").days,29);
+assert.equal(salesPeriod(rows,"daily","2026-09-17").count,0);
+assert.equal(salesPeriod(rows,"hourly","2025-01-01"),null);
+assert.throws(()=>salesPeriod(rows,"daily","2025-02-30"));
+assert.equal(salesPeriod(verifiedHistory,"daily","2025-04-29").sales,25003.75);
+assert.equal(salesPeriod(verifiedHistory,"weekly","2025-04-29").count,1);
+assert.equal(salesPeriod(verifiedHistory,"annually","2025-04-29").count,1);
+console.log("Sales periods: calendar boundaries, leap year, empty coverage and source isolation passed.");

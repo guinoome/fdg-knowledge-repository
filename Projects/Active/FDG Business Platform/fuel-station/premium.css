@@ -126,3 +126,18 @@ body[data-mode="experience"] .workspace { max-width:none; padding:0; }
 @media (max-width:420px) {
   .hero-copy h1 { font-size:39px; }.trust-line { flex-wrap:wrap; }.signal-strip { grid-template-columns:1fr; }.signal-strip > div { border-left:0; }.command-media { height:240px; }.decision-rail { padding:20px; }.exception-command,.closeout-command { padding:18px; }
 }
+.period-sales .range-tabs { flex-wrap:wrap; overflow:visible; gap:8px; }
+.period-sales .range-tabs button { min-height:44px; font-size:12px; }
+.sales-date { display:flex; align-items:end; flex-wrap:wrap; gap:12px; padding:18px 24px; }
+.sales-date label { display:grid; gap:8px; font-size:12px; }
+.sales-date input { min-height:44px; max-width:100%; border:1px solid #c9d8d1; border-radius:10px; padding:10px; background:white; color:#163c2e; }
+.sales-date button { min-height:44px; }
+.period-summary { display:grid; gap:10px; padding:24px; background:#edf6ef; color:#123d2d; }
+.period-summary > strong { font-size:clamp(28px,5vw,44px); letter-spacing:-1px; }
+.period-summary > span { font-size:13px; font-weight:700; line-height:1.6; }
+.period-summary small,.sales-source { font-size:12px; line-height:1.6; }
+.product-bars { display:grid; gap:22px; padding:26px 24px; }
+.product-bar > div:first-child { display:flex; justify-content:space-between; gap:12px; margin-bottom:10px; font-size:14px; }
+.product-track { background:#e8eeeb; border-radius:8px; height:26px; overflow:hidden; }
+.product-track i { display:block; height:100%; border-radius:8px; }
+.sales-source { margin:0; padding:0 24px 24px; color:#51685d; }

@@ -1,5 +1,6 @@
 import { products, safetyChecklist, sourceExceptions, verifiedHistory } from "../data/nj-gas-station.js";
 import { reportInputs } from "./report-inputs.js";
+import { salesPeriod } from "./sales-period.js";
 import { capacity, activeBuyingPrice } from "./operations.js";
 import { experienceConfig } from "../data/experience-config.js";
 import { allReportRows, latestTotalizerRecord } from "./store.js";
@@ -10,44 +11,17 @@ const productName = (id) => products.find((p) => p.id === id)?.name ?? id;
 
 const analyticsRanges = ["hourly", "daily", "weekly", "monthly", "annually"];
 
-function periodKey(date, range) {
-  const day = new Date(`${date}T00:00:00Z`);
-  if (range === "daily") return date;
-  if (range === "monthly") return date.slice(0, 7);
-  if (range === "annually") return date.slice(0, 4);
-  const thursday = new Date(day);
-  thursday.setUTCDate(day.getUTCDate() + 4 - (day.getUTCDay() || 7));
-  const yearStart = new Date(Date.UTC(thursday.getUTCFullYear(), 0, 1));
-  const week = Math.ceil((((thursday - yearStart) / 86400000) + 1) / 7);
-  return `${thursday.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
-}
-
-function salesSeries(state, range) {
-  if (range === "hourly") return [];
-  const groups = new Map();
-  allReportRows(state).forEach((row) => {
-    const key = periodKey(row.date, range);
-    const current = groups.get(key) ?? { key, regular: 0, premium: 0, diesel: 0, sales: 0, profit: 0, statuses: new Set() };
-    current.regular += Number(row.regularLiters || 0);
-    current.premium += Number(row.premiumLiters || 0);
-    current.diesel += Number(row.dieselLiters || 0);
-    current.sales += Number(row.sales || 0);
-    current.profit += Number(row.profit || 0);
-    current.statuses.add(row.status);
-    groups.set(key, current);
-  });
-  return [...groups.values()].sort((a, b) => a.key.localeCompare(b.key)).slice(-10);
-}
-
 function salesExplorer(state) {
   const range = analyticsRanges.includes(state.analyticsRange) ? state.analyticsRange : "daily";
-  const series = salesSeries(state, range);
-  const maxLiters = Math.max(1, ...series.map((item) => item.regular + item.premium + item.diesel));
-  return `<section class="sales-explorer panel">
-    <header class="sales-explorer-head"><div><span class="eyebrow">Product movement intelligence</span><h2>See what each fuel product is doing over time.</h2><p>Interactive history from verified workbook rows and clearly labelled local closeouts.</p></div><span class="analysis-pulse"><i></i>Interactive timeline</span></header>
-    <div class="range-tabs" role="group" aria-label="Sales analysis period">${analyticsRanges.map((item) => `<button class="${range === item ? "active" : ""}" data-analytics-range="${item}" aria-pressed="${range === item}">${item[0].toUpperCase()}${item.slice(1)}</button>`).join("")}</div>
-    ${series.length ? `<div class="sales-chart" aria-label="${range} product sales volume chart">${series.map((item) => { const regular = (item.regular / maxLiters) * 100; const premium = (item.premium / maxLiters) * 100; const diesel = (item.diesel / maxLiters) * 100; return `<article><div class="chart-label"><strong>${escapeHtml(item.key)}</strong><span>${number(item.regular + item.premium + item.diesel)} L · ${peso(item.sales)}</span></div><div class="stacked-track" title="Regular ${number(item.regular)} L; Premium ${number(item.premium)} L; Diesel ${number(item.diesel)} L"><i class="regular" style="--segment:${regular}%"></i><i class="premium" style="--segment:${premium}%"></i><i class="diesel" style="--segment:${diesel}%"></i></div><small>${item.statuses.has("local") ? "Includes local demo closeout" : "Workbook verified"}</small></article>`; }).join("")}</div>` : `<div class="analytics-empty"><strong>Hourly source not connected</strong><p>Hourly analysis requires timestamped POS or shift transactions. The platform will not invent an hourly curve from daily totals.</p></div>`}
-    <footer class="chart-legend">${products.map((product) => `<span><i style="background:${product.color}"></i>${product.name}</span>`).join("")}<em>Bar length = liters sold · label = recorded sales</em></footer>
+  const date = state.analyticsDate || localDate();
+  const period = salesPeriod(allReportRows(state), range, date);
+  const max = period ? Math.max(1, ...Object.values(period.products)) : 1;
+  return `<section class="sales-explorer panel period-sales">
+    <header class="sales-explorer-head"><div><span class="eyebrow">Station sales</span><h2>Your sales. The period you choose.</h2><p>Recorded revenue and fuel sold, with source coverage visible.</p></div></header>
+    <div class="range-tabs" role="group" aria-label="Sales analysis period">${analyticsRanges.map(item => `<button class="${range === item ? "active" : ""}" data-analytics-range="${item}" aria-pressed="${range === item}">${item[0].toUpperCase()}${item.slice(1)}</button>`).join("")}</div>
+    <div class="sales-date"><label>Choose a date in the period<input type="date" data-sales-date value="${escapeHtml(date)}" required /></label><button class="secondary" data-sales-today>Today</button></div>
+    ${period ? `<div class="period-summary"><span>${range === "daily" ? "Daily" : range === "weekly" ? "Weekly · Monday–Sunday" : range === "monthly" ? "Monthly" : "Annual"} sales · ${period.from}${period.from !== period.to ? ` — ${period.to}` : ""}</span><strong>${period.count ? peso(period.sales) : "No recorded sales"}</strong><small>${period.recordedDays} of ${period.days} calendar days have records. Missing days are not zero sales.</small></div>
+    ${period.count ? `<div class="product-bars" role="img" aria-label="Fuel sold by product in liters for ${period.from} to ${period.to}">${products.map(product => `<div class="product-bar"><div><span>${product.name}</span><strong>${number(period.products[product.id])} L</strong></div><div class="product-track"><i style="width:${Math.max(0, period.products[product.id] / max * 100)}%;background:${product.color}"></i></div></div>`).join("")}</div><p class="sales-source">${period.local ? "Includes locally approved demo records; not server-verified." : "Verified workbook records."} Bars show liters sold; revenue above is the recorded period total.</p>` : `<div class="analytics-empty"><p>No approved closeout or verified workbook record falls within this period. Choose a historical date to review existing evidence.</p></div>`}` : '<div class="analytics-empty"><strong>Hourly source not connected</strong><p>Hourly analysis requires timestamped transactions. Daily totals cannot establish hourly sales.</p></div>'}
   </section>`;
 }
 
@@ -116,6 +90,7 @@ export function overviewView(state) {
   const totalLiters = latest.regularLiters + latest.premiumLiters + latest.dieselLiters;
   const stock = Object.values(state.tanks).reduce((a, b) => a + b, 0);
   return `${title("Station command", "One station. Every critical decision in view.", "NJ Gas Station — Habay · Workbook evidence and local demo actions remain clearly separated.", '<button class="primary" data-go="closeout">Close today’s shift <span data-icon="arrow"></span></button>')}
+    ${salesExplorer(state)}
     <section class="command-hero">
       <figure class="command-media"><img src="./design/reference/fpis-fuel-operations-sample.png" alt="FPIS fuel operations design reference" /><figcaption><span>FPIS concept view</span><small>Presentation reference · not live telemetry</small></figcaption></figure>
       <aside class="decision-rail"><span class="decision-source">Workbook verified · ${shortDate(latest.date)}</span><h2>${peso(latest.sales)}</h2><p>Latest verified daily fuel sales across ${number(totalLiters)} liters.</p><div class="decision-margin"><span>Net daily profit</span><strong>${peso(latest.profit)}</strong><small>${number((latest.profit / latest.sales) * 100, 1)}% of sales</small></div><div class="decision-alert"><b>${sourceExceptions.length}</b><span>source exceptions kept out of trusted totals</span></div><button data-go="audit">Review evidence and exceptions <span data-icon="arrow"></span></button></aside>
@@ -171,9 +146,9 @@ function reviewQueue(state) {
 export function reportsView(state) {
   const rows = allReportRows(state);
   return `${title("Operational evidence", "Reports", "Verified client history and locally recorded closeouts remain distinguishable.", '<button class="secondary" id="export-report">Export CSV ↓</button><button class="secondary" id="export-backup">Backup local records ↓</button>')}
+    ${salesExplorer(state)}
     ${reviewQueue(state)}
     ${reportInputs(state)}
-    ${salesExplorer(state)}
     <article class="panel report-records"><div class="report-summary"><div><span>Trusted source rows</span><strong>${verifiedHistory.length}</strong></div><div><span>Demo closeouts</span><strong>${state.closeouts.length}</strong></div><div><span>Excluded source issues</span><strong>${sourceExceptions.length}</strong></div></div>${state.closeouts.length ? "" : '<div class="local-empty"><span data-icon="closeout"></span><div><strong>No local closeout yet</strong><p>Workbook history remains read-only. Complete a shift closeout to add the first clearly labelled Local Demo record.</p></div><button data-go="closeout">Start closeout</button></div>'}<div class="table-wrap"><table><thead><tr><th>Date</th><th>Evidence</th><th class="numeric">Regular</th><th class="numeric">Premium</th><th class="numeric">Diesel</th><th class="numeric">Sales</th><th class="numeric">Profit</th></tr></thead><tbody>${rows.map((row) => `<tr><td>${shortDate(row.date)}</td><td><span class="evidence-pill ${row.status === "verified" ? "verified" : "local"}">${row.status === "verified" ? "Workbook verified" : "Local demo"}</span></td><td class="numeric">${number(row.regularLiters)} L</td><td class="numeric">${number(row.premiumLiters)} L</td><td class="numeric">${number(row.dieselLiters)} L</td><td class="numeric"><strong>${peso(row.sales)}</strong></td><td class="numeric">${peso(row.profit)}</td></tr>`).join("")}</tbody></table></div></article>`;
 }
 
