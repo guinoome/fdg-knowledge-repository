@@ -18,4 +18,8 @@ npm test and npm run check passed, plus syntax check for sales-period.js. Calend
 
 Keep hero imagery. Preserve calibration, FIFO and monthly-cost rules from previous handover. Owner-led real operating-day and genuine OCR-photo validation remain uncompleted. Secure multi-device/authentication and hourly sources are separate milestones. Do not start Restaurant until Fuel owner gate is resolved.
 
-Release: push scoped project subtree to FDG-Business-Platforms, build neutral-path prebuilt Vercel artifact, verify production #overview after deployment. No client financial records or localStorage are uploaded by this release.
+## Verified release
+
+Runtime vault commit 4dcb01c; business mirror runtime commit 731e33487f4c689541aad638e9b743f95bb344c5 (remote main verified). Vercel production READY: dpl_7Yb6yZY6wZBw8nWdxbzu6qy6unWM, https://fdgbusinessplatforms.vercel.app/fuel-station/#overview. Neutral-path build succeeded; shell paths and changed runtime hashes matched source. Production browser confirmed April 29 PHP 25,003.75 and reviewed 1440x900 desktop; console scan returned no errors/warnings. Existing PWA required one reload after cache update; do not clear local records. No runtime-log monitoring audit was performed.
+
+No client financial records or localStorage are uploaded by this release. The follow-up documentation commit changes no deployed runtime.
