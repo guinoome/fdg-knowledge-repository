@@ -6,6 +6,8 @@ Live platform: [fdgbusinessplatforms.vercel.app](https://fdgbusinessplatforms.ve
 
 ## Current release
 
+- Fuel scene-first Home: glass data overlays, contextual hotspots, mobile bottom sheets and existing workflow controls. See [[HANDOVER_Fuel_Hero_Environment_2026-09-17]].
+
 - Interactive client-magnet home and business-module discovery.
 - `My Platforms` portfolio bridge with Active, Trial, Setup incomplete, and Cancelled states.
 - One-account prototype with module-, branch-, role-, and billing-scope demonstrations.

@@ -1,5 +1,7 @@
 # FDG Fuel Station Operations
 
+Current overview: [[HANDOVER_Fuel_Hero_Environment_2026-09-17|Hero-environment implementation and validation]]. Implements [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/05_FDG_Hero_Environment_Execution_Standard|Hero-Environment Execution Standard]]; generated station artwork is illustrative, overlays are source-bound, and utility workflows remain operational.
+
 Local-first functional prototype for **NJ Gas Station — Habay**, using the supplied client workbook as operating evidence and the FPIS-generated fuel-operations image as the accepted visual direction.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → [[Projects/Active/FDG Business Platform/BUILD_PREFLIGHT|FDG Business Platform Build Preflight]] → this project

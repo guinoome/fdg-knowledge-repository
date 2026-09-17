@@ -2,7 +2,8 @@ import { products } from "../data/nj-gas-station.js";
 import { peso, localDate } from "./format.js";
 import { icon } from "./icons.js";
 import { addAudit, latestTotalizerRecord, loadState, reportCsv, resetDemo, saveState } from "./store.js";
-import { views } from "./views.js";
+import { views, salesExplorer } from "./views.js";
+import { sceneDetail } from "./station-scene.js";
 import { submitCloseout, reviewCloseout, requireManager, validateOperatingDate } from "./closeouts.js";
 import { storageError } from "./store.js";
 import { totalizerCandidates } from "./ocr.js";
@@ -41,6 +42,7 @@ function go(view, { updateHash = true, preserveCorrection = false } = {}) {
     window.history.replaceState(null, "", `#${currentView}`);
   }
   document.body.dataset.mode = currentView === "experience" ? "experience" : "operations";
+  document.body.dataset.view = currentView;
   workspace.innerHTML = views[currentView](state);
   nav.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === currentView));
   mobileDock.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === currentView));
@@ -204,15 +206,15 @@ function exportCsv() {
 function bindViewEvents() {
   workspace.querySelectorAll("[data-void-test]").forEach((form) => form.addEventListener("submit", (event) => {
     event.preventDefault();
-    try { voidCalibration(state,form.dataset.voidTest,form.elements.reason.value); saveState(state); go("reports"); notify("Test voided; audit history retained."); } catch (error) { showSaveError(error); }
+    try { voidCalibration(state,form.dataset.voidTest,form.elements.reason.value); saveState(state); go(currentView); notify("Test voided; audit history retained."); } catch (error) { showSaveError(error); }
   }));
   workspace.querySelectorAll("[data-monthly-form]").forEach((form) => form.addEventListener("submit", (event) => {
     event.preventDefault();
-    try { saveMonthlyRecord(state, { ...Object.fromEntries(new FormData(form)), kind: form.dataset.monthlyForm }, localDate()); saveState(state); go("reports"); notify("Monthly record saved."); } catch (error) { showSaveError(error); }
+    try { saveMonthlyRecord(state, { ...Object.fromEntries(new FormData(form)), kind: form.dataset.monthlyForm }, localDate()); saveState(state); go(currentView); notify("Monthly record saved."); } catch (error) { showSaveError(error); }
   }));
   workspace.querySelector("#capacity-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
-    try { saveCapacity(state,Object.fromEntries(new FormData(event.target))); saveState(state); go("reports"); notify("Working capacity saved."); } catch (error) { showSaveError(error); }
+    try { saveCapacity(state,Object.fromEntries(new FormData(event.target))); saveState(state); go(currentView); notify("Working capacity saved."); } catch (error) { showSaveError(error); }
   });
   workspace.querySelectorAll("[data-review-form]").forEach((form) => form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -237,6 +239,27 @@ function bindViewEvents() {
     closeoutPreview(form);
   }));
   workspace.querySelectorAll("[data-go]").forEach((button) => button.addEventListener("click", () => go(button.dataset.go)));
+  const sceneDialog = workspace.querySelector(".scene-dialog");
+  workspace.querySelectorAll("[data-scene-open]").forEach(button => button.addEventListener("click", () => {
+    const kind = button.dataset.sceneOpen;
+    const paint = () => {
+      sceneDialog.querySelector(".scene-dialog-content").innerHTML = sceneDetail(state, kind, salesExplorer);
+      renderIcons(sceneDialog);
+      sceneDialog.querySelector("[data-close-scene]").addEventListener("click", () => sceneDialog.close());
+      sceneDialog.querySelectorAll("[data-go]").forEach(link => link.addEventListener("click", () => { sceneDialog.close(); go(link.dataset.go); }));
+      sceneDialog.querySelectorAll("[data-analytics-range]").forEach(tab => tab.addEventListener("click", () => {
+        state.analyticsRange = tab.dataset.analyticsRange; paint();
+        sceneDialog.querySelector(`[data-analytics-range="${state.analyticsRange}"]`).focus();
+      }));
+      sceneDialog.querySelector("[data-sales-date]")?.addEventListener("change", event => {
+        if (!event.target.value || !event.target.checkValidity()) return;
+        state.analyticsDate = event.target.value; paint(); sceneDialog.querySelector("[data-sales-date]").focus();
+      });
+      sceneDialog.querySelector("[data-sales-today]")?.addEventListener("click", () => { state.analyticsDate = localDate(); paint(); sceneDialog.querySelector("[data-sales-today]").focus(); });
+    };
+    paint(); sceneDialog.showModal();
+  }));
+  sceneDialog?.addEventListener("click", event => { if (event.target === sceneDialog) sceneDialog.close(); });
   const closeout = workspace.querySelector("#closeout-form");
   const syncTests = () => {
     for (const p of products) {

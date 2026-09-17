@@ -30,6 +30,8 @@ This mandate extends existing FPIS standards and supersedes in part any interpre
 
 ## 1. Governing outcome
 
+2026-09-17 refinement: [[04_FDG_Hero_Environment_Intelligence_Layer_Mandate]] and [[05_FDG_Hero_Environment_Execution_Standard]] govern scene-first overview composition. They extend this mandate without changing protected operational truth or replacing utility-first data-entry screens.
+
 FDG builds premium operating experiences that turn data into understanding, understanding into decisions, decisions into action, and action into measurable engineering and business value.
 
 **Premium Experience + Real Workflow + Trust + Evidence + Business Value**

@@ -1,9 +1,13 @@
-const CACHE = "fdg-fuel-station-v7";
+const CACHE = "fdg-fuel-station-v10";
 const SHELL = [
   "./",
   "./index.html",
   "./styles.css",
   "./premium.css",
+  "./station-scene.css",
+  "./src/station-scene.js",
+  "./assets/station-environment-v1.png",
+  "./assets/station-environment-mobile-v1.png",
   "./manifest.webmanifest",
   "./assets/icon.svg",
   "./src/app.js",

@@ -1,6 +1,7 @@
 import { products, safetyChecklist, sourceExceptions, verifiedHistory } from "../data/nj-gas-station.js";
 import { reportInputs } from "./report-inputs.js";
 import { salesPeriod } from "./sales-period.js";
+import { stationOverview } from "./station-scene.js";
 import { capacity, activeBuyingPrice } from "./operations.js";
 import { experienceConfig } from "../data/experience-config.js";
 import { allReportRows, latestTotalizerRecord } from "./store.js";
@@ -11,7 +12,7 @@ const productName = (id) => products.find((p) => p.id === id)?.name ?? id;
 
 const analyticsRanges = ["hourly", "daily", "weekly", "monthly", "annually"];
 
-function salesExplorer(state) {
+export function salesExplorer(state) {
   const range = analyticsRanges.includes(state.analyticsRange) ? state.analyticsRange : "daily";
   const date = state.analyticsDate || localDate();
   const period = salesPeriod(allReportRows(state), range, date);
@@ -85,21 +86,17 @@ export function experienceView() {
   </div>`;
 }
 
-export function overviewView(state) {
-  const latest = verifiedHistory.at(-1);
-  const totalLiters = latest.regularLiters + latest.premiumLiters + latest.dieselLiters;
-  const stock = Object.values(state.tanks).reduce((a, b) => a + b, 0);
-  return `${title("Station command", "One station. Every critical decision in view.", "NJ Gas Station — Habay · Workbook evidence and local demo actions remain clearly separated.", '<button class="primary" data-go="closeout">Close today’s shift <span data-icon="arrow"></span></button>')}
-    ${salesExplorer(state)}
-    <section class="command-hero">
-      <figure class="command-media"><img src="./design/reference/fpis-fuel-operations-sample.png" alt="FPIS fuel operations design reference" /><figcaption><span>FPIS concept view</span><small>Presentation reference · not live telemetry</small></figcaption></figure>
-      <aside class="decision-rail"><span class="decision-source">Workbook verified · ${shortDate(latest.date)}</span><h2>${peso(latest.sales)}</h2><p>Latest verified daily fuel sales across ${number(totalLiters)} liters.</p><div class="decision-margin"><span>Net daily profit</span><strong>${peso(latest.profit)}</strong><small>${number((latest.profit / latest.sales) * 100, 1)}% of sales</small></div><div class="decision-alert"><b>${sourceExceptions.length}</b><span>source exceptions kept out of trusted totals</span></div><button data-go="audit">Review evidence and exceptions <span data-icon="arrow"></span></button></aside>
-    </section>
-    <section class="signal-strip" aria-label="Station operating signals"><div><span>Total wet stock</span><strong>${number(stock, 0)} L</strong><small>Local demo balance</small></div>${products.map((p) => { const pct = Math.min(100, (state.tanks[p.id] / capacity(state, p.id)) * 100); return `<div class="fuel-signal" style="--fuel:${p.color};--level:${pct}%"><span>${p.name}</span><strong>${number(state.tanks[p.id], 0)} L</strong><small>${number(pct, 0)}% capacity</small><i></i></div>`; }).join("")}</section>
-    <section class="command-lower">
-      <article class="exception-command"><header><div><span>What needs a decision</span><h2>Exceptions before automation</h2></div><button data-go="audit">Open control log</button></header>${sourceExceptions.map((item) => `<div class="exception-row"><span class="severity ${item.severity}">!</span><div><strong>${item.title}</strong><p>${item.detail}</p></div><small>${item.date}</small></div>`).join("")}</article>
-      <article class="closeout-command"><span>Today’s operating path</span><h2>Close the shift with proof.</h2><ol><li><b>1</b><p><strong>Record</strong> totalizers and calibration</p></li><li><b>2</b><p><strong>Reconcile</strong> wet stock and cash</p></li><li><b>3</b><p><strong>Review</strong> exceptions before approval</p></li></ol><button class="primary" data-go="closeout">Begin closeout <span data-icon="arrow"></span></button></article>
-    </section>`;
+export function overviewView(state) { return stationOverview(state); }
+
+export function operationsView(state) {
+  return `${title("Station workflow", "Operations", "Record, reconcile and review. Local records are not live telemetry.")}
+  <div class="operation-path"><button data-go="closeout"><span data-icon="closeout"></span><strong>Record a closeout</strong><small>Final readings, calibration and cash</small></button><button data-go="deliveries"><span data-icon="deliveries"></span><strong>Receive fuel</strong><small>Delivery reference and FIFO buying cost</small></button><button data-go="tanks"><span data-icon="tanks"></span><strong>Check stock</strong><small>Recorded balances and capacity</small></button></div>
+  ${reviewQueue(state)}`;
+}
+
+export function settingsView(state) {
+  return `${title("Station controls", "Settings", "Monthly costs, calibration records and owner-controlled capacity.")}
+  <p class="permission-note">Role selection is a local demo control, not secure authentication.</p>${reportInputs(state)}`;
 }
 
 export function closeoutView(state) {
@@ -158,4 +155,4 @@ export function auditView(state) {
     <article class="panel"><div class="panel-header"><div><span class="eyebrow">FSIS-aligned evidence</span><h2>Audit trail</h2></div></div><div class="timeline">${state.audit.map((event) => `<div><span></span><section><strong>${escapeHtml(event.action)}</strong><small>${escapeHtml(event.actor)} · ${dateTime(event.at)}</small><p>${escapeHtml(event.detail)}</p></section></div>`).join("")}</div></article></div>`;
 }
 
-export const views = { experience: experienceView, overview: overviewView, closeout: closeoutView, tanks: tanksView, deliveries: deliveriesView, pricing: pricingView, reports: reportsView, audit: auditView };
+export const views = { experience: experienceView, overview: overviewView, operations: operationsView, settings: settingsView, closeout: closeoutView, tanks: tanksView, deliveries: deliveriesView, pricing: pricingView, reports: reportsView, audit: auditView };

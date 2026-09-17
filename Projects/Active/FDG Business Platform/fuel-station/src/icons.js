@@ -1,4 +1,5 @@
 const paths = {
+  settings: '<path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/>',
   experience: '<path d="M4 18.5 12 4l8 14.5"/><path d="M7.5 13h9"/>',
   overview: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-7h6v7"/>',
   closeout: '<path d="M5 3h14v18H5z"/><path d="m8 12 2.5 2.5L16 9"/><path d="M8 6.5h8"/>',

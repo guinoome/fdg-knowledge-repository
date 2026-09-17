@@ -1,5 +1,7 @@
 # FDG Fuel Station — Current Handover
 
+Read [[HANDOVER_Fuel_Hero_Environment_2026-09-17]] first. Scene-first Home refines the previous sales-first layout: sales is now a compact scene overlay and an on-demand chart, not a large panel above the hero. Prior calculation, approval and storage contracts are preserved.
+
 Latest refinement: [[HANDOVER_Fuel_Sales_Periods_2026-09-17]] — dashboard-first sales, calendar-scoped product bars, explicit missing-data coverage. Prior operational handovers remain applicable.
 
 ## Latest refinement — FIFO and monthly controls
