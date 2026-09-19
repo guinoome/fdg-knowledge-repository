@@ -4,6 +4,7 @@ import { icon } from "./icons.js";
 import { addAudit, latestTotalizerRecord, loadState, reportCsv, resetDemo, saveState } from "./store.js";
 import { views, salesExplorer } from "./views.js";
 import { sceneDetail } from "./station-scene.js";
+import { glassDialog } from "./glass-motion.js";
 import { reviewIssue } from "./attention.js";
 import { addUtilityRate, reviewUtilityRate } from "./utility-rates.js";
 import { submitCloseout, reviewCloseout, requireManager, validateOperatingDate } from "./closeouts.js";
@@ -250,6 +251,7 @@ function bindViewEvents() {
   }));
   workspace.querySelectorAll("[data-go]").forEach((button) => button.addEventListener("click", () => go(button.dataset.go)));
   const sceneDialog = workspace.querySelector(".scene-dialog");
+  const sceneMotion = sceneDialog ? glassDialog(sceneDialog) : null;
   workspace.querySelectorAll("[data-scene-open]").forEach(button => button.addEventListener("click", () => {
     const kind = button.dataset.sceneOpen;
     sceneDialog.classList.toggle("attention-dialog",kind === "attention");
@@ -266,8 +268,8 @@ function bindViewEvents() {
           detail.querySelector("summary").focus();
         } catch(error) { form.querySelector("[data-review-message]").textContent=error.message; }
       }));
-      sceneDialog.querySelector("[data-close-scene]").addEventListener("click", () => sceneDialog.close());
-      sceneDialog.querySelectorAll("[data-go]").forEach(link => link.addEventListener("click", () => { sceneDialog.close(); go(link.dataset.go); }));
+      sceneDialog.querySelector("[data-close-scene]").addEventListener("click", () => sceneMotion.close());
+      sceneDialog.querySelectorAll("[data-go]").forEach(link => link.addEventListener("click", () => sceneMotion.close(() => go(link.dataset.go))));
       sceneDialog.querySelectorAll("[data-analytics-range]").forEach(tab => tab.addEventListener("click", () => {
         state.analyticsRange = tab.dataset.analyticsRange; paint();
         sceneDialog.querySelector(`[data-analytics-range="${state.analyticsRange}"]`).focus();
@@ -278,9 +280,8 @@ function bindViewEvents() {
       });
       sceneDialog.querySelector("[data-sales-today]")?.addEventListener("click", () => { state.analyticsDate = localDate(); paint(); sceneDialog.querySelector("[data-sales-today]").focus(); });
     };
-    paint(); sceneDialog.showModal();
+    paint(); sceneMotion.open(button);
   }));
-  sceneDialog?.addEventListener("click", event => { if (event.target === sceneDialog) sceneDialog.close(); });
   const closeout = workspace.querySelector("#closeout-form");
   const syncTests = () => {
     for (const p of products) {

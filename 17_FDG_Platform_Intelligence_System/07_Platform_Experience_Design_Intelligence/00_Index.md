@@ -4,6 +4,8 @@
 
 ### Documents
 
+- [[HANDOVER_Fuel_Glass_Motion_2026-09-20|Fuel glass motion — material, accessibility and release evidence]]
+
 - [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17|Fuel all-pages glass, Attention Center and rollout refinement]]
 
 - [[04_FDG_Hero_Environment_Intelligence_Layer_Mandate|Hero-Environment Intelligence Layer — governing interpretation]]

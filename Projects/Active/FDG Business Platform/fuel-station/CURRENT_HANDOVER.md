@@ -1,5 +1,7 @@
 # FDG Fuel Station — Current Handover
 
+Current: [[HANDOVER_Fuel_Glass_Motion_2026-09-20]] — actual glass motion, material refinement, reduced-motion and focus tests. Read its release status before assuming changes are live.
+
 Latest: [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]] — all-pages glass styling, Attention Center, utility-rate evidence, calibration provenance and rollout updates. Read its release status and [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]] before continuing.
 
 Read [[HANDOVER_Fuel_Hero_Environment_2026-09-17]] first. Scene-first Home refines the previous sales-first layout: sales is now a compact scene overlay and an on-demand chart, not a large panel above the hero. Prior calculation, approval and storage contracts are preserved.
