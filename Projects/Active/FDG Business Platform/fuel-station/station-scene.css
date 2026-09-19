@@ -159,3 +159,25 @@ button.glass:active,.scene-actions button:active { translate:0 1px; }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
  .glass,.scene-dialog,body[data-mode="operations"]:not([data-view="overview"]) :is(.panel,.metric-card,.page-heading,.operation-path button,.period-sales) { background:#f2f8f3f5; }
 }
+
+/* Clear glass: do not stack white gradients over translucent surfaces. */
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+ body[data-mode="operations"] { --muted:#304b3e; }
+ .station-environment .glass { background:rgba(232,245,235,.32); backdrop-filter:blur(9px) saturate(115%); -webkit-backdrop-filter:blur(9px) saturate(115%); }
+ body[data-mode="operations"]:not([data-view="overview"]) :is(.panel,.metric-card,.page-heading,.operation-path button,.period-sales) { background:rgba(236,247,240,.46); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+ body[data-mode="operations"]:not([data-view="overview"]) .panel.governance-callout { background:rgba(8,35,24,.72); }
+ body[data-mode="operations"] .topbar { background:rgba(235,246,240,.46); }
+ .scene-dialog,.attention-dialog { background:rgba(237,248,242,.65); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
+ .scene-dialog .detail-heading { background:rgba(232,246,238,.66); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+ .attention-issue { background:rgba(247,255,249,.23); }
+ body[data-mode="operations"] :is(.period-summary,.analytics-empty,.local-empty,.pricing-actions,.sales-chart,.detail-baseline) { background:rgba(239,251,244,.2); }
+ body[data-mode="operations"] :is(.prior-close-note,.opening-reading,.ocr-assist) { background:rgba(232,250,239,.18); }
+ body[data-mode="operations"] :is(.secondary,.range-tabs button:not(.active),.detail-heading button,.icon-button) { background:rgba(243,255,247,.26); border-color:#ffffff80; }
+ body[data-mode="operations"] :is(.prior-close-note small,.opening-reading small,.opening-reading span,.ocr-assist small) { color:#294534; }
+ body[data-mode="operations"] :is(.sales-source,.attention-intro,.attention-footnote,.scene-sales small,.scene-heading time) { color:#244332; }
+ body[data-mode="operations"] :is(.form-panel input,.form-panel select,.pricing-grid input,.sales-date input,.issue-expanded input,.issue-expanded select,.issue-expanded textarea) { background:rgba(250,255,251,.64); }
+ .station-environment .scene-attention { background:rgba(255,230,164,.46); }
+}
+.attention-archive { margin-top:18px; border-top:1px solid #759a8580; padding-top:12px; }
+.attention-archive > summary { min-height:44px; padding:12px 0; cursor:pointer; font-weight:700; }
+.attention-empty { padding:16px; border:1px solid #6c997980; border-radius:12px; }

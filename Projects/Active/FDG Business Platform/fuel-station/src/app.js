@@ -5,7 +5,7 @@ import { addAudit, latestTotalizerRecord, loadState, reportCsv, resetDemo, saveS
 import { views, salesExplorer } from "./views.js";
 import { sceneDetail } from "./station-scene.js";
 import { glassDialog } from "./glass-motion.js";
-import { reviewIssue } from "./attention.js";
+import { reviewIssue, attentionLabel } from "./attention.js";
 import { addUtilityRate, reviewUtilityRate } from "./utility-rates.js";
 import { submitCloseout, reviewCloseout, requireManager, validateOperatingDate } from "./closeouts.js";
 import { storageError } from "./store.js";
@@ -263,7 +263,10 @@ function bindViewEvents() {
         const id=form.dataset.issueReview;
         try {
           reviewIssue(state,{...Object.fromEntries(new FormData(form)),issueId:id}); saveState(state); paint();
+          const pending = state.closeouts.filter(row => row.workflow === "pending").length;
+          workspace.querySelector("[data-attention-label]").textContent = `${pending ? pending+" pending · " : ""}${attentionLabel(state)}`;
           const detail=sceneDialog.querySelector(`[data-issue="${id}"]`); detail.open=true;
+          const archive = detail.closest(".attention-archive"); if (archive) archive.open = true;
           const message=detail.querySelector("[data-review-message]"); message.textContent="Review saved locally. Reporting eligibility is unchanged.";
           detail.querySelector("summary").focus();
         } catch(error) { form.querySelector("[data-review-message]").textContent=error.message; }

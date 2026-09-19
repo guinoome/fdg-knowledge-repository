@@ -1,5 +1,17 @@
 # Fuel glass motion — 2026-09-20
 
+## Follow-up: clear glass and actionable counts
+
+User rejected white-looking live-data panels and permanently displayed three issues. Root causes: stacked white gradient/fills (including nested chart/empty surfaces), and `sourceExceptions.length` used for attention count regardless of review state.
+
+Refinement: scene glass now 32% tinted fill / 9px blur; utility panels 46% / 12px, sheet 65% with translucent issue cards; chart summaries, empty states and pricing actions no longer opaque. Form fields retain 64% fill for legibility. Unsupported-backdrop fallback remains deliberately readable.
+
+`attentionSummary` derives active/completed reviews; dashboard separates source reviews from rate setup. Saved decisions immediately refresh dashboard and modal counts. Resolved/accepted reviews move to expandable history and can be reopened. **This resolves the count/UI bug, not the underlying workbook.** April 30/July source exclusions and trusted totals remain unchanged. All review history is retained.
+
+Tests: Node suite and syntax checks pass; local browser save/archive/reload/reopen lifecycle passed with isolated QA-only records. Four-width motion/route suite rerun. Local data panels and Attention screenshot checked after animations settled. Original workbook search in Downloads and vault returned no matching NJ/Gas/Station XLSX; requested original from owner. Calibration formula is already corrected; original physical readings cannot be reconstructed from the extracted exception text.
+
+Fuel SW v16 (v15 was an intermediate release before removing nested white fills). READY production `dpl_4mpkt25uwAschXF36QmSE1HjFfqB`, immutable https://fdgbusinessplatforms-fv1ofj2pe-guinoomes-projects.vercel.app, aliased to https://fdgbusinessplatforms.vercel.app. Source parity verified for app, Attention, scene, CSS and SW. No station storage cleared or operational records changed by deployment. This supersedes the motion release identifier in the historical release section below.
+
 Extends [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]], implements [[05_FDG_Hero_Environment_Execution_Standard]], governed by [[04_FDG_Hero_Environment_Intelligence_Layer_Mandate]]. Earlier requirements and evidence remain in [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]].
 
 ## Scope and preserved behavior

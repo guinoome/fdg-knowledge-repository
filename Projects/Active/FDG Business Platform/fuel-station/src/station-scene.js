@@ -1,7 +1,7 @@
-import { products, sourceExceptions } from "../data/nj-gas-station.js";
+import { products } from "../data/nj-gas-station.js";
 import { allReportRows, latestTotalizerRecord } from "./store.js";
 import { capacity } from "./operations.js";
-import { attentionCenter } from "./attention.js";
+import { attentionCenter, attentionLabel, attentionSummary } from "./attention.js";
 import { salesPeriod } from "./sales-period.js";
 import { localDate, number, peso, escapeHtml, shortDate } from "./format.js";
 
@@ -20,7 +20,7 @@ export function stationOverview(state) {
       <button class="scene-hotspot zone-pumps glass" data-scene-open="sales"><strong>Forecourt</strong><span>Fuel sales <span data-icon="arrow"></span></span></button>
       <button class="scene-hotspot zone-tanks glass" data-scene-open="tanks"><strong>Reserve</strong><span>Tanks <span data-icon="arrow"></span></span></button>
     </div>
-    <button class="scene-attention glass" data-scene-open="attention"><span class="attention-mark">!</span><span><strong>${pending ? pending+" pending · " : ""}${sourceExceptions.length} source issues</strong><small>Review before approval</small></span><span data-icon="arrow"></span></button>
+    <button class="scene-attention glass" data-scene-open="attention"><span class="attention-mark">!</span><span><strong data-attention-label>${pending ? pending+" pending · " : ""}${attentionLabel(state)}</strong><small>Review evidence and setup</small></span><span data-icon="arrow"></span></button>
     <button class="scene-stock glass" data-scene-open="tanks"><span>Wet stock · local balance</span><strong>${number(stock,0)} L</strong><span class="stock-mini">${products.map(p=>`<span><b>${p.name}</b><i><em style="width:${Math.min(100, Math.max(0,state.tanks[p.id]/capacity(state,p.id)*100))}%;background:${p.color}"></em></i><small>${number(state.tanks[p.id],0)} L</small></span>`).join("")}</span></button>
     <nav class="scene-actions" aria-label="Station quick actions"><button class="scene-primary" data-go="closeout"><span data-icon="closeout"></span>New closeout</button><button class="glass" data-go="deliveries"><span data-icon="deliveries"></span>Receive delivery</button><button class="glass" data-scene-open="sales"><span data-icon="reports"></span>Sales chart</button></nav>
     <p class="scene-provenance">Concept environment · local records · no telemetry</p>
@@ -30,7 +30,7 @@ export function stationOverview(state) {
 
 export function sceneDetail(state, kind, renderSales) {
   const prior = latestTotalizerRecord(state);
-  const title = {sales:"Fuel sales",tanks:"Tanks & stock",closeout:"Daily closeout",attention:`Needs attention · ${sourceExceptions.length}`}[kind] || "Station details";
+  const title = {sales:"Fuel sales",tanks:"Tanks & stock",closeout:"Daily closeout",attention:`Needs attention · ${attentionSummary(state).active.length}`}[kind] || "Station details";
   let body = "";
   if (kind === "sales") body = renderSales(state) + action("reports","Open reports & records","reports");
   if (kind === "tanks") body = `<p>Recorded local balances, not sensor readings.</p><div class="detail-tanks">${products.map(p=>`<article><span style="--product:${p.color}">${p.name}</span><strong>${number(state.tanks[p.id])} L</strong><meter min="0" max="${capacity(state,p.id)}" value="${state.tanks[p.id]}" aria-label="${p.name} recorded tank level"></meter><small>${number(capacity(state,p.id),0)} L working capacity</small></article>`).join("")}</div>` + action("tanks","Open tanks & inventory","tanks") + action("deliveries","Receive delivery","deliveries");
