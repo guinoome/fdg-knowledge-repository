@@ -1,4 +1,4 @@
-import { getModule } from "../data/catalog.js";
+import { getModule, LEGACY_PLANS, planTotal, TRIAL_DAYS } from "../data/catalog.js";
 
 const KEY = "fdg-business-platform-demo-v1";
 
@@ -49,7 +49,12 @@ const defaults = () => ({
 export function loadState() {
   try {
     const stored = JSON.parse(localStorage.getItem(KEY));
-    return stored ? { ...defaults(), ...stored } : defaults();
+    const state = stored ? { ...defaults(), ...stored } : defaults();
+    for (const subscription of state.subscriptions) {
+      const prior = LEGACY_PLANS[`${subscription.moduleId}:${subscription.planId}`];
+      if (subscription.quotedMonthlyTotal == null && prior) subscription.quotedMonthlyTotal = planTotal(prior,subscription.branchCount);
+    }
+    return state;
   } catch {
     return defaults();
   }
@@ -82,6 +87,10 @@ export function completeTrial(state) {
     planId: activation.planId,
     interval: "Monthly",
     status: "Trial",
+    trialDays: TRIAL_DAYS,
+    trialStartedAt: new Date().toISOString(),
+    trialEndsAt: new Date(Date.now() + TRIAL_DAYS * 86400000).toISOString(),
+    quotedMonthlyTotal: planTotal(module.plans.find(p=>p.id===activation.planId),Number(activation.branches) || 1),
     billingStatus: "No payment method · no charge made",
     nextBillingDate: "Not scheduled",
     workspace: activation.moduleId === "fuel" ? "/fuel-station/#overview" : null,

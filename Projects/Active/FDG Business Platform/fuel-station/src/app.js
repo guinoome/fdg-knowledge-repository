@@ -4,6 +4,8 @@ import { icon } from "./icons.js";
 import { addAudit, latestTotalizerRecord, loadState, reportCsv, resetDemo, saveState } from "./store.js";
 import { views, salesExplorer } from "./views.js";
 import { sceneDetail } from "./station-scene.js";
+import { reviewIssue } from "./attention.js";
+import { addUtilityRate, reviewUtilityRate } from "./utility-rates.js";
 import { submitCloseout, reviewCloseout, requireManager, validateOperatingDate } from "./closeouts.js";
 import { storageError } from "./store.js";
 import { totalizerCandidates } from "./ocr.js";
@@ -204,6 +206,14 @@ function exportCsv() {
 }
 
 function bindViewEvents() {
+  workspace.querySelector("[data-utility-add]")?.addEventListener("submit", event => {
+    event.preventDefault();
+    try { addUtilityRate(state,Object.fromEntries(new FormData(event.target))); saveState(state); go(currentView); notify("Pending utility rate saved locally."); } catch(error) { showSaveError(error); }
+  });
+  workspace.querySelectorAll("[data-utility-review]").forEach(form=>form.addEventListener("submit",event=>{
+    event.preventDefault();
+    try { reviewUtilityRate(state,form.dataset.utilityReview,event.submitter.value,form.elements.reason.value); saveState(state); go(currentView); notify("Rate review saved. Monthly expenses unchanged."); } catch(error) { showSaveError(error); }
+  }));
   workspace.querySelectorAll("[data-void-test]").forEach((form) => form.addEventListener("submit", (event) => {
     event.preventDefault();
     try { voidCalibration(state,form.dataset.voidTest,form.elements.reason.value); saveState(state); go(currentView); notify("Test voided; audit history retained."); } catch (error) { showSaveError(error); }
@@ -242,9 +252,20 @@ function bindViewEvents() {
   const sceneDialog = workspace.querySelector(".scene-dialog");
   workspace.querySelectorAll("[data-scene-open]").forEach(button => button.addEventListener("click", () => {
     const kind = button.dataset.sceneOpen;
+    sceneDialog.classList.toggle("attention-dialog",kind === "attention");
     const paint = () => {
       sceneDialog.querySelector(".scene-dialog-content").innerHTML = sceneDetail(state, kind, salesExplorer);
       renderIcons(sceneDialog);
+      sceneDialog.querySelectorAll("[data-issue-review]").forEach(form=>form.addEventListener("submit",event=>{
+        event.preventDefault();
+        const id=form.dataset.issueReview;
+        try {
+          reviewIssue(state,{...Object.fromEntries(new FormData(form)),issueId:id}); saveState(state); paint();
+          const detail=sceneDialog.querySelector(`[data-issue="${id}"]`); detail.open=true;
+          const message=detail.querySelector("[data-review-message]"); message.textContent="Review saved locally. Reporting eligibility is unchanged.";
+          detail.querySelector("summary").focus();
+        } catch(error) { form.querySelector("[data-review-message]").textContent=error.message; }
+      }));
       sceneDialog.querySelector("[data-close-scene]").addEventListener("click", () => sceneDialog.close());
       sceneDialog.querySelectorAll("[data-go]").forEach(link => link.addEventListener("click", () => { sceneDialog.close(); go(link.dataset.go); }));
       sceneDialog.querySelectorAll("[data-analytics-range]").forEach(tab => tab.addEventListener("click", () => {

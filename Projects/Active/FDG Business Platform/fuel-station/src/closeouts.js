@@ -43,6 +43,7 @@ export function submitCloseout(state, input, today) {
     if (state.monthlyTests.some((r) => !r.voided && r.testDate === input.date && r.product === p.id && r.returnStatus !== "returned")) throw new Error(`${p.name}: resolve the unconfirmed or unreturned test record before closing this day.`);
     const registered = registeredTests(state, input.date, p.id);
     if (registered.length && Math.abs(test - registered.reduce((sum,r) => sum+r.liters,0)) > 0.001) throw new Error(`${p.name}: use the dated calibration register total once; do not duplicate it in daily input.`);
+    if (test > 0 && !registered.length && !(replacing && replacing.tests?.[p.id] === test)) throw new Error(`${p.name}: record dated calibration evidence in Settings before deducting test fuel.`);
     row.calibrationRecordIds.push(...registered.map((r) => r.id));
     const liters = round(closing - opening[p.id] - test);
     if (liters < 0) throw new Error(`${p.name}: final reading minus calibration is below the opening.`);

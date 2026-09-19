@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { CATEGORIES, MODULES, getModule, planTotal } from "../data/catalog.js";
+import { CATEGORIES, MODULES, getModule, planTotal, TRIAL_DAYS } from "../data/catalog.js";
+import { loadState, startActivation, completeTrial } from "../src/store.js";
 
 assert.equal(CATEGORIES[0].id, "all", "catalog must retain an all-businesses category");
 assert.equal(new Set(MODULES.map((module) => module.id)).size, MODULES.length, "module IDs must be unique");
@@ -33,3 +34,15 @@ assert.match(store, /branchName:/, "subscription records must retain branch scop
 assert.match(sw, /fdg-business-platform-v\d+/, "PWA shell must be versioned");
 
 console.log("PASS: unified account, catalog, pricing, scope, lifecycle, and PWA invariants");
+globalThis.localStorage={getItem:()=>null,setItem:()=>{}};
+const state=loadState();
+assert.equal(state.subscriptions[0].quotedMonthlyTotal,250000,"existing quote must not silently change");
+assert.ok(MODULES.every(m=>m.plans[0].basePrice===50000));
+assert.equal(TRIAL_DAYS,7);
+startActivation(state,"fuel");state.activation.branches=2;
+const id=completeTrial(state);const trial=state.subscriptions.find(s=>s.id===id);
+assert.equal(trial.quotedMonthlyTotal,100000);
+assert.equal(trial.trialDays,7);
+assert.ok(Math.abs(Date.parse(trial.trialEndsAt)-Date.parse(trial.trialStartedAt)-7*86400000)<100);
+assert.equal(state.subscriptions[0].quotedMonthlyTotal,250000);
+console.log("PASS seven-day trial, PHP500 entry plan/branch, historical quote protection");

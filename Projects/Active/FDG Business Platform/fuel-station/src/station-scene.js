@@ -1,6 +1,7 @@
 import { products, sourceExceptions } from "../data/nj-gas-station.js";
 import { allReportRows, latestTotalizerRecord } from "./store.js";
 import { capacity } from "./operations.js";
+import { attentionCenter } from "./attention.js";
 import { salesPeriod } from "./sales-period.js";
 import { localDate, number, peso, escapeHtml, shortDate } from "./format.js";
 
@@ -29,11 +30,11 @@ export function stationOverview(state) {
 
 export function sceneDetail(state, kind, renderSales) {
   const prior = latestTotalizerRecord(state);
-  const title = {sales:"Fuel sales",tanks:"Tanks & stock",closeout:"Daily closeout",attention:"Needs attention"}[kind] || "Station details";
+  const title = {sales:"Fuel sales",tanks:"Tanks & stock",closeout:"Daily closeout",attention:`Needs attention · ${sourceExceptions.length}`}[kind] || "Station details";
   let body = "";
   if (kind === "sales") body = renderSales(state) + action("reports","Open reports & records","reports");
   if (kind === "tanks") body = `<p>Recorded local balances, not sensor readings.</p><div class="detail-tanks">${products.map(p=>`<article><span style="--product:${p.color}">${p.name}</span><strong>${number(state.tanks[p.id])} L</strong><meter min="0" max="${capacity(state,p.id)}" value="${state.tanks[p.id]}" aria-label="${p.name} recorded tank level"></meter><small>${number(capacity(state,p.id),0)} L working capacity</small></article>`).join("")}</div>` + action("tanks","Open tanks & inventory","tanks") + action("deliveries","Receive delivery","deliveries");
   if (kind === "closeout") body = `<p>Opening readings carry forward automatically from the latest accepted close.</p><div class="detail-baseline"><span>${escapeHtml(prior.source)}</span><strong>${shortDate(prior.date)}</strong>${products.map(p=>`<p>${p.name}<b>${number(prior.values[p.id])}</b></p>`).join("")}</div><p>Enter the final reading or review a photo-assisted reading. Returned tests are deducted from positive meter movement. Submission awaits manager review.</p>` + action("closeout","Record final readings","closeout");
-  if (kind === "attention") body = `<p>${state.closeouts.filter(r=>r.workflow==="pending").length} local closeout(s) await review. Source issues below remain excluded from trusted totals.</p><div class="detail-issues">${sourceExceptions.map(item=>`<article><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.detail)}</p><small>${escapeHtml(item.date)}</small></article>`).join("")}</div>` + action("reports","Review closeouts","reports") + action("audit","Open safety & audit","audit");
+  if (kind === "attention") body = attentionCenter(state) + action("reports","Review closeouts","reports") + action("audit","Open safety & audit","audit");
   return `<header class="detail-heading"><h2 id="scene-detail-title">${title}</h2><button data-close-scene aria-label="Close station details">Close <span aria-hidden="true">×</span></button></header><div class="detail-body">${body}</div>`;
 }

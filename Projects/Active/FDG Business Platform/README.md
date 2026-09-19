@@ -1,5 +1,7 @@
 # FDG Business Platform
 
+Latest refinement: [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]] · [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]]. Seven-day prototype trials, entry plans from ₱500/month/module or branch, and reviewed Fuel evidence workflows. Existing quotes preserved; no actual payment provider.
+
 The FDG Business Platform is a premium, mobile-first ecosystem hub for discovering and opening domain-native operating modules through one account. This folder is the authoritative implementation inside the local FDG Knowledge Repository; GitHub is a mirror.
 
 Live platform: [fdgbusinessplatforms.vercel.app](https://fdgbusinessplatforms.vercel.app/)

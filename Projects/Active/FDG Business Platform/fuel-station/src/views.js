@@ -1,5 +1,6 @@
 import { products, safetyChecklist, sourceExceptions, verifiedHistory } from "../data/nj-gas-station.js";
 import { reportInputs } from "./report-inputs.js";
+import { utilityRatesView } from "./utility-rates.js";
 import { salesPeriod } from "./sales-period.js";
 import { stationOverview } from "./station-scene.js";
 import { capacity, activeBuyingPrice } from "./operations.js";
@@ -96,7 +97,7 @@ export function operationsView(state) {
 
 export function settingsView(state) {
   return `${title("Station controls", "Settings", "Monthly costs, calibration records and owner-controlled capacity.")}
-  <p class="permission-note">Role selection is a local demo control, not secure authentication.</p>${reportInputs(state)}`;
+  <p class="permission-note">Role selection is a local demo control, not secure authentication.</p>${utilityRatesView(state)}${reportInputs(state)}`;
 }
 
 export function closeoutView(state) {
@@ -105,9 +106,9 @@ export function closeoutView(state) {
   return `${title("Shift control", "Daily closeout", "Turn totalizer readings and operating costs into a reviewable station record.", '<span class="permission-note">Manager approval required</span>')}
     <form id="closeout-form" class="panel form-panel">
       <div class="form-header"><div><h2>Final reading and cash reconciliation</h2><p>Opening readings come from the latest recorded close. Enter or scan only the final totalizer; every OCR proposal remains editable and requires confirmation.</p></div><label>Date<input name="date" type="date" required value="${localDate()}" /></label></div>
-      <div class="prior-close-note"><span>Automatic opening source</span><strong>${escapeHtml(prior.source)}</strong><small>${shortDate(prior.date)} · April 30 remains excluded because of the recorded Premium reversal.</small></div>
+      <div class="prior-close-note"><span>Automatic opening source</span><strong>${escapeHtml(prior.source)}</strong><small>${shortDate(prior.date)} · April 30 remains excluded pending source reconciliation of returned calibration fuel.</small></div>
       <div class="product-entry-grid">${products.map((p) => `<fieldset><legend><i style="background:${p.color}"></i>${p.name}</legend><div class="opening-reading"><span>Opening totalizer · automatic</span><strong data-opening="${p.id}" data-value="${prior.values[p.id]}">${number(prior.values[p.id])}</strong><small>Locked from latest recorded close</small></div><label>Final totalizer<input name="${p.id}-closing" type="number" min="${prior.values[p.id]}" step="0.01" inputmode="decimal" required placeholder="Enter final reading" /></label><div class="ocr-assist"><input id="${p.id}-totalizer-photo" data-ocr-input="${p.id}" type="file" accept="image/*" capture="environment" /><label for="${p.id}-totalizer-photo">Capture or choose meter photo</label><small data-ocr-status="${p.id}">Photo stays on this device. OCR runs only when the browser supports on-device text detection.</small></div><label>Test / calibration (L)<input name="${p.id}-test" type="number" min="0" step="0.01" inputmode="decimal" value="0" required /></label><div class="computed"><span>Calculated volume</span><strong data-volume="${p.id}">0.00 L</strong></div></fieldset>`).join("")}</div>
-      <p>Calibration volumes are assumed returned to the same tank. Unreturned test fuel needs a reviewed stock adjustment; do not use this workflow for that case. Photo previews are not stored; only confirmation metadata is saved.</p>
+      <p>New calibration deductions require dated pump/tank/time evidence in Settings, with return to the same tank confirmed. Unreturned test fuel needs a reviewed stock adjustment; do not use this workflow for that case. Photo previews are not stored; only confirmation metadata is saved.</p>
       <p>Daily closeout must be the day immediately after the accepted opening source. Missing days or an outdated baseline must be reconciled first; do not label accumulated meter movement as one day's sales.</p>
       <label>Correction reason (required for revisions)<input name="reason" maxlength="500" placeholder="Explain what changed and why" /></label>
       <p>Electricity and manpower are entered monthly in Reports. Daily contribution excludes those monthly costs; buying cost is allocated by FIFO stock batch on approval.</p>

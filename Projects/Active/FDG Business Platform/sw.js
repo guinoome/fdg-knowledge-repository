@@ -1,4 +1,4 @@
-const CACHE = "fdg-business-platform-v9";
+const CACHE = "fdg-business-platform-v10";
 const SHELL = [
   "./",
   "./index.html",

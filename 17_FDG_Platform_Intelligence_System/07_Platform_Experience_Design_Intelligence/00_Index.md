@@ -4,6 +4,8 @@
 
 ### Documents
 
+- [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17|Fuel all-pages glass, Attention Center and rollout refinement]]
+
 - [[04_FDG_Hero_Environment_Intelligence_Layer_Mandate|Hero-Environment Intelligence Layer — governing interpretation]]
 - [[05_FDG_Hero_Environment_Execution_Standard|Hero-Environment Execution Standard — eight-page execution companion]]
 

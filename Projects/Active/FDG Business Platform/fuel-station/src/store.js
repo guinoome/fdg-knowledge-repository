@@ -13,6 +13,8 @@ const defaultState = () => ({
   capacities: Object.fromEntries(products.map((p) => [p.id, p.tankCapacity])),
   monthlyExpenses: [],
   monthlyTests: [],
+  issueReviews: [],
+  utilityRates: [],
   deliveries: structuredClone(initialDeliveries),
   closeouts: [],
   analyticsRange: "daily",
@@ -32,7 +34,7 @@ export function loadState() {
     const state = stored ? { ...defaultState(), ...stored } : defaultState();
     // Preserve old balances; do not replay historical deliveries already included in stock.
     state.inventoryLots ??= Object.fromEntries(products.map((p) => [p.id, [{ id: `carry-in-${p.id}`, date: latestTotalizerRecord(state).date, remaining: state.tanks[p.id], unitCost: state.prices[p.id].buyingPrice, basis: "Unverified carry-in cost — owner reconciliation required" }]]));
-    if (!Array.isArray(state.monthlyExpenses) || !Array.isArray(state.monthlyTests) || !products.every((p) => {
+    if (!Array.isArray(state.issueReviews) || !Array.isArray(state.utilityRates) || !Array.isArray(state.monthlyExpenses) || !Array.isArray(state.monthlyTests) || !products.every((p) => {
       const lots = state.inventoryLots[p.id];
       return Number.isFinite(state.capacities[p.id]) && state.capacities[p.id] >= state.tanks[p.id]
         && Array.isArray(lots) && lots.every((l) => l && Number.isFinite(l.remaining) && l.remaining >= 0 && Number.isFinite(l.unitCost) && l.unitCost >= 0 && typeof l.date === "string")

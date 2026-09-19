@@ -143,6 +143,15 @@ export const MODULES = [
 
 export const BASE_ROLES = ["Owner", "Administrator", "Manager", "Supervisor", "Staff", "Cashier", "Accountant", "Viewer"];
 
+// Preserve prior illustrative quotes for already-created prototype subscriptions.
+export const LEGACY_PLANS = Object.fromEntries(MODULES.flatMap(m => m.plans.map(p => [`${m.id}:${p.id}`, { ...p }])));
+export const TRIAL_DAYS = 7;
+for (const module of MODULES) {
+  module.plans[0].basePrice = 50000;
+  module.plans[0].branchPrice = 50000;
+  module.billingModel = "Per module / branch · setup dependent";
+}
+
 export function getModule(id) {
   return MODULES.find((module) => module.id === id) ?? MODULES[0];
 }
