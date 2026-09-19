@@ -35,7 +35,7 @@ Screenshots outside repository: `C:/Windows/Temp/fdg-motion-390.png`, `fdg-motio
 
 ## Remaining goal requirements — do not mark complete
 
-- Publish and verify this motion release on GitHub/Vercel; record exact identifiers below.
+- Motion release published and verified (see below); this item is complete, not a remaining implementation task.
 - Full phone/device and every-route visual acceptance, including actual owner phone reduced-motion settings and PWA refresh.
 - Original workbook required to identify broken July cells and reconcile April 30; review UI must not admit corrupt source rows.
 - Genuine meter-photo OCR/manual fallback and one complete owner-approved operating day remain unverified.
@@ -45,4 +45,10 @@ Screenshots outside repository: `C:/Windows/Temp/fdg-motion-390.png`, `fdg-motio
 
 ## Release
 
-Vercel READY `dpl_69LHDda8LtppxoX6BVEYGfZB4jbc`, alias https://fdgbusinessplatforms.vercel.app; immutable https://fdgbusinessplatforms-7ux7gvd5z-guinoomes-projects.vercel.app. Built app, motion module, stylesheet and SW hashes matched source before publication; live motion/CSS/SW content matched source after publication. Rollback presentation to prior `dpl_EU6AZ3WKN3vKFyQ1mgY7KGZ7H8n9`, never by clearing station records. Business GitHub publication and full production browser outcome to be recorded after confirmation.
+Vercel READY `dpl_69LHDda8LtppxoX6BVEYGfZB4jbc`, alias https://fdgbusinessplatforms.vercel.app; immutable https://fdgbusinessplatforms-7ux7gvd5z-guinoomes-projects.vercel.app. Built app, motion module, stylesheet and SW hashes matched source before publication; live motion/CSS/SW content matched source after publication. Rollback presentation to prior `dpl_EU6AZ3WKN3vKFyQ1mgY7KGZ7H8n9`, never by clearing station records.
+
+Implementation vault commit `e0e9a58`, subtree `01199210a76ac525fe4c4337819731024642ebe9`; business mirror `main` implementation merge `8ab0e01da7728ac1affd53fb755b61c963093886`, push and ls-remote verified. This release-note update follows that implementation commit.
+
+The same browser interaction suite passed against the production alias at all four widths: entrance, running sheet animation, issue expansion, Escape/focus, tank navigation, eight utility routes without horizontal overflow, reduced-motion suppression, zero page errors. Latest production screenshots inspected, including mobile 390×844. Accepted concept was inspected at native 1536×1024 alongside rendered evidence. Known intentional differences: actual source-derived dates/stock, existing FDG slash brand and illustrative station asset retained. Screenshots cannot demonstrate motion alone; runtime animation assertions supply that evidence. Real owner device and genuine data validation remain pending.
+
+Next: audit outstanding comments against the full mandate (do not repeat this completed release), improve any remaining in-scope presentation/flow gaps; obtain original workbook and owner day evidence before admitting untrusted data or beginning Restaurant. No production QA records were created; fresh isolated browser contexts only.
