@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="./live-wallpaper.css" />
     <link rel="manifest" href="./manifest.webmanifest" />
   </head>
-  <body>
+  <body class="immersive-shell">
+    <div class="scene-chrome" aria-label="Workspace controls"><button class="secondary" id="menu-button" aria-controls="sidebar" aria-expanded="false">Menu</button><button class="secondary" id="controls-button" aria-controls="workspace-controls" aria-expanded="false">Controls</button></div>
     <div class="app-shell">
-      <aside class="sidebar" id="sidebar">
+      <aside class="sidebar" id="sidebar" inert>
         <div class="brand"><span class="brand-mark">/</span><strong>FDG</strong><span>BUSINESS<br />PLATFORM</span></div>
         <div class="site-chip"><span class="status-dot"></span><div><strong>NJ Gas Station</strong><small>Habay · Demo workspace</small></div></div>
         <nav aria-label="Primary navigation" id="primary-nav">
@@ -35,8 +36,7 @@
       </aside>
 
       <main class="main">
-        <header class="topbar">
-          <button class="icon-button menu-button" id="menu-button" aria-label="Toggle navigation"><span data-icon="menu"></span></button>
+        <header class="topbar" id="workspace-controls" hidden>
           <div class="search-wrap"><span>⌕</span><input id="global-search" type="search" placeholder="Search operations or reports" aria-label="Search" /></div>
           <div class="top-actions">
             <button class="client-view-button" id="client-view" type="button">Client view</button>

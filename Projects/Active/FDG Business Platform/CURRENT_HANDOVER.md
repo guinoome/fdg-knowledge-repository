@@ -1,5 +1,7 @@
 # FDG Business Platform — Current Agent Handover
 
+Latest: [[HANDOVER_Dispenser_Meters_2026-09-21]] — per-dispenser/product totalizers and compact hero navigation. Account/payment work remains plan-only: [[CLIENT_ACCOUNTS_PAYMENT_PLAN_2026-09-21]].
+
 Latest visual milestone: [[HANDOVER_Fuel_Live_Wallpaper_2026-09-20]] — approved package-led station HUD, responsive wallpaper assets and ambient motion controls. Read its release status before relying on publication. Fuel source/owner gates remain intact.
 
 Current: [[HANDOVER_Fuel_Glass_Motion_2026-09-20]] — animated Fuel glass, dialog lifecycle, material/contrast refinement and outstanding goal gates. Check release status there; prior milestones are preserved.

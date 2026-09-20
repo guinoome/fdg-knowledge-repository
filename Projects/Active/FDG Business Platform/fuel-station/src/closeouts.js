@@ -1,6 +1,7 @@
 import { products } from "../data/nj-gas-station.js";
 import { addAudit, latestTotalizerRecord } from "./store.js";
 import { consumeLots, capacity, registeredTests } from "./operations.js";
+import { meterEntries } from "./meters.js";
 
 const round = (n) => Math.round((n + Number.EPSILON) * 100) / 100;
 const nonnegative = (value) => {
@@ -32,9 +33,30 @@ export function submitCloseout(state, input, today) {
   if (state.closeouts.some((r) => r.date === input.date && r.id !== replacing?.id && ["approved", "pending"].includes(r.workflow))) throw new Error("This operating date already has a closeout.");
   if (replacing && !input.reason?.trim()) throw new Error("A correction reason is required.");
   const opening = replacing?.workflow === "approved" ? replacing.openingTotalizers : prior.values;
+  let meterReadings;
+  if (state.meterSetup) {
+    if (replacing && !replacing.meterReadings) throw new Error("Legacy closeout correction after commissioning needs reviewed reconciliation.");
+    const entries = meterEntries(state, replacing?.workflow === "approved" ? replacing : null);
+    if (!input.meters || Object.keys(input.meters).length !== entries.length) throw new Error("Enter every commissioned dispenser/product reading exactly once.");
+    const closing = { ...opening }, tests = Object.fromEntries(products.map(p => [p.id, 0]));
+    meterReadings = {};
+    for (const meter of entries) {
+      const value = input.meters[meter.id];
+      if (!value) throw new Error("A dispenser/product reading is missing.");
+      const final = nonnegative(value.closing), test = nonnegative(value.test);
+      if (final - meter.opening - test < 0) throw new Error(`${meter.name}: final reading minus calibration is below the opening.`);
+      const registered = registeredTests(state, input.date, meter.product).filter(r => r.pump === meter.dispenser);
+      if (Math.abs(test - registered.reduce((sum,r) => sum+r.liters,0)) > 0.001) throw new Error(`${meter.name}: calibration must match this dispenser's dated evidence.`);
+      meterReadings[meter.id] = { dispenser: meter.dispenser, product: meter.product, opening: meter.opening, closing: final, test, liters: round(final-meter.opening-test) };
+      closing[meter.product] = round(closing[meter.product] + final - meter.opening);
+      tests[meter.product] = round(tests[meter.product] + test);
+    }
+    input = { ...input, closing, tests };
+  }
   const prices = replacing?.prices || structuredClone(state.prices);
   const row = { id: crypto.randomUUID(), date: input.date, status: "local", workflow: "pending", replaces: replacing?.id || null, reason: input.reason?.trim() || "", openingTotalizers: { ...opening }, openingSource: replacing?.openingSource || `${prior.source}; ${prior.date}`, closingTotalizers: {}, tests: {}, prices, sales: 0, profit: 0, createdAt: new Date().toISOString(), submittedBy: state.role, revision: (replacing?.revision || 0) + 1 };
-  row.photoReviewed = (input.photoReviewed || []).filter((id) => products.some((p) => p.id === id));
+  if (meterReadings) { row.meterReadings = meterReadings; row.readingBasis = "Per dispenser/product physical registers; product totals are accounting carry-forward only"; }
+  row.photoReviewed = (input.photoReviewed || []).filter((id) => meterReadings ? Object.hasOwn(meterReadings,id) : products.some((p) => p.id === id));
   row.photoRetention = "Review only; image not persisted";
   row.calibrationRecordIds = [];
   for (const p of products) {

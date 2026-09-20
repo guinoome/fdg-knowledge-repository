@@ -10,6 +10,7 @@ import { addUtilityRate, reviewUtilityRate } from "./utility-rates.js";
 import { submitCloseout, reviewCloseout, requireManager, validateOperatingDate } from "./closeouts.js";
 import { storageError } from "./store.js";
 import { totalizerCandidates } from "./ocr.js";
+import { meterEntries, commissionMeters, dispenserRow } from "./meters.js";
 import { addDeliveryLot, capacity, saveCapacity, saveMonthlyRecord, consumeLots, registeredTests, voidCalibration } from "./operations.js";
 let correctionId = null;
 
@@ -68,6 +69,8 @@ function go(view, { updateHash = true, preserveCorrection = false } = {}) {
   nav.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === currentView));
   mobileDock.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === currentView));
   document.querySelector("#sidebar").classList.remove("open");
+  document.querySelector("#sidebar").inert = true;
+  document.querySelector("#menu-button").setAttribute('aria-expanded', 'false');
   renderIcons(workspace);
   bindViewEvents();
   updateWallpaperControl();
@@ -93,12 +96,17 @@ function closeoutPreview(form) {
   let sales = 0;
   let margin = 0;
   let costReady = true;
-  products.forEach((product) => {
+  const volumes = Object.fromEntries(products.map(p => [p.id, 0]));
+  meterEntries(state).forEach((product) => {
     const opening = Number(form.querySelector(`[data-opening="${product.id}"]`).dataset.value);
     const closing = Number(form.elements[`${product.id}-closing`].value || opening);
     const test = Number(form.elements[`${product.id}-test`].value || 0);
     const volume = closing - opening - test;
     form.querySelector(`[data-volume="${product.id}"]`).textContent = `${volume.toFixed(2)} L`;
+    volumes[product.product] += volume;
+  });
+  products.forEach(product => {
+    const volume = volumes[product.id];
     sales += Math.max(0, volume) * prices[product.id].sellingPrice;
     try {
       const lots = structuredClone(state.inventoryLots[product.id]);
@@ -124,6 +132,7 @@ function handleCloseout(form) {
     const input = Object.fromEntries(data);
     input.closing = Object.fromEntries(products.map((p) => [p.id, data.get(`${p.id}-closing`)]));
     input.tests = Object.fromEntries(products.map((p) => [p.id, data.get(`${p.id}-test`)]));
+    if (state.meterSetup) input.meters = Object.fromEntries(meterEntries(state).map(m => [m.id, { closing: data.get(`${m.id}-closing`), test: data.get(`${m.id}-test`) }]));
     input.replaces = correctionId;
     input.photoReviewed = [...form.querySelectorAll("[data-ocr-confirm]")].map((box) => box.dataset.ocrConfirm);
     const now = new Date();
@@ -226,6 +235,20 @@ function exportCsv() {
 }
 
 function bindViewEvents() {
+  const setup = workspace.querySelector('#meter-setup');
+  setup?.querySelector('[data-add-dispenser]').addEventListener('click', () => {
+    const list = setup.querySelector('[data-dispenser-list]');
+    list.insertAdjacentHTML('beforeend', dispenserRow(list.children.length + 1));
+  });
+  setup?.addEventListener('click', event => event.target.closest('[data-remove-dispenser]')?.closest('[data-dispenser]').remove());
+  setup?.addEventListener('submit', event => {
+    event.preventDefault();
+    try {
+      const sets = [...setup.querySelectorAll('[data-dispenser]')].map(field => ({ id: field.querySelector('[name=dispenser]').value.trim(), forecourt: field.querySelector('[name=forecourt]').value, products: [...field.querySelectorAll('[data-product]:checked')].map(box => ({ product: box.dataset.product, opening: field.querySelector(`[data-baseline="${box.dataset.product}"]`).value })) }));
+      commissionMeters(state, { sets, date: setup.elements.date.value, reference: setup.elements.reference.value });
+      saveState(state); go('settings'); notify('Dispenser meters commissioned locally. Stock and history unchanged.');
+    } catch (error) { showSaveError(error); }
+  });
   workspace.querySelector("[data-utility-add]")?.addEventListener("submit", event => {
     event.preventDefault();
     try { addUtilityRate(state,Object.fromEntries(new FormData(event.target))); saveState(state); go(currentView); notify("Pending utility rate saved locally."); } catch(error) { showSaveError(error); }
@@ -258,11 +281,12 @@ function bindViewEvents() {
     form.querySelector(".prior-close-note strong").textContent = `Correction of revision ${row.revision || 1}: ${row.openingSource}`;
     form.querySelector(".prior-close-note small").textContent = "Original opening and price snapshot retained. A new revision will be submitted for review.";
     form.elements.date.value = row.date; form.elements.date.readOnly = true;
-    for (const p of products) {
-      form.elements[`${p.id}-closing`].value = row.closingTotalizers[p.id];
-      form.elements[`${p.id}-test`].value = row.tests?.[p.id] || 0;
-      form.elements[`${p.id}-closing`].min = row.openingTotalizers[p.id];
-      const opening = form.querySelector(`[data-opening="${p.id}"]`); opening.dataset.value = row.openingTotalizers[p.id]; opening.textContent = row.openingTotalizers[p.id].toLocaleString("en-PH");
+    for (const p of meterEntries(state, row)) {
+      if (!form.elements[`${p.id}-closing`]) { notify('Legacy correction requires reconciliation after commissioning.'); return; }
+      form.elements[`${p.id}-closing`].value = row.meterReadings?.[p.id]?.closing ?? row.closingTotalizers[p.id];
+      form.elements[`${p.id}-test`].value = row.meterReadings?.[p.id]?.test ?? row.tests?.[p.id] ?? 0;
+      form.elements[`${p.id}-closing`].min = p.opening;
+      const opening = form.querySelector(`[data-opening="${p.id}"]`); opening.dataset.value = p.opening; opening.textContent = p.opening.toLocaleString("en-PH");
     }
     form.elements.otherCost.value = row.costs?.otherCost || 0;
     form.elements.cashCollected.value = row.cashCollected || 0;
@@ -306,9 +330,9 @@ function bindViewEvents() {
   }));
   const closeout = workspace.querySelector("#closeout-form");
   const syncTests = () => {
-    for (const p of products) {
+    for (const p of meterEntries(state)) {
       const field = closeout.elements[`${p.id}-test`];
-      const registered = registeredTests(state,closeout.elements.date.value,p.id);
+      const registered = registeredTests(state,closeout.elements.date.value,p.product).filter(r => !p.dispenser || r.pump === p.dispenser);
       if (registered.length) { field.value = registered.reduce((sum,r) => sum+r.liters,0); field.readOnly = true; field.dataset.registered = "true"; }
       else { if (field.dataset.registered) field.value = 0; field.readOnly = false; delete field.dataset.registered; }
     }
@@ -350,7 +374,28 @@ function bindViewEvents() {
 nav.addEventListener("click", (event) => { const button = event.target.closest("[data-view]"); if (button) go(button.dataset.view); });
 mobileDock.addEventListener("click", (event) => { const button = event.target.closest("[data-view]"); if (button) go(button.dataset.view); });
 roleSelect.addEventListener("change", () => { state.role = roleSelect.value; addAudit(state, "Demo role changed", `Active role: ${state.role}. UI restrictions are illustrative; production authorization must be enforced server-side.`); saveState(state); go(currentView); });
-document.querySelector("#menu-button").addEventListener("click", () => document.querySelector("#sidebar").classList.toggle("open"));
+const menuButton = document.querySelector('#menu-button');
+const sidebar = document.querySelector('#sidebar');
+function toggleMenu(open) {
+  sidebar.classList.toggle('open', open); sidebar.inert = !open;
+  menuButton.setAttribute('aria-expanded', String(open));
+  if (open) sidebar.querySelector('.nav-item.active')?.focus(); else menuButton.focus();
+}
+menuButton.addEventListener('click', () => toggleMenu(sidebar.inert));
+const controlsButton = document.querySelector('#controls-button');
+const controls = document.querySelector('#workspace-controls');
+controlsButton.addEventListener('click', () => {
+  controls.hidden = !controls.hidden;
+  controlsButton.setAttribute('aria-expanded', String(!controls.hidden));
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || document.querySelector('dialog[open]')) return;
+  if (!sidebar.inert) toggleMenu(false);
+  else if (!controls.hidden) { controls.hidden = true; controlsButton.setAttribute('aria-expanded','false'); controlsButton.focus(); }
+});
+document.addEventListener('click', event => {
+  if (!sidebar.inert && !sidebar.contains(event.target) && !menuButton.contains(event.target)) toggleMenu(false);
+});
 document.querySelector("#client-view").addEventListener("click", () => go("experience"));
 document.querySelector("#global-search").addEventListener("input", (event) => { const query = event.target.value.toLowerCase().trim(); nav.querySelectorAll("[data-view]").forEach((button) => { button.hidden = query && !button.textContent.toLowerCase().includes(query); }); });
 

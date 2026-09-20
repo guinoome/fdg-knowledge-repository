@@ -6,6 +6,7 @@ import { stationOverview } from "./station-scene.js";
 import { capacity, activeBuyingPrice } from "./operations.js";
 import { experienceConfig } from "../data/experience-config.js";
 import { allReportRows, latestTotalizerRecord } from "./store.js";
+import { meterEntries, meterSettings, meterEvidence } from "./meters.js";
 import { dateTime, escapeHtml, localDate, number, peso, shortDate } from "./format.js";
 
 const title = (eyebrow, heading, copy, actions = "") => `<div class="page-heading"><div><span class="eyebrow">${eyebrow}</span><h1>${heading}</h1><p>${copy}</p></div>${actions}</div>`;
@@ -97,12 +98,15 @@ export function operationsView(state) {
 
 export function settingsView(state) {
   return `${title("Station controls", "Settings", "Monthly costs, calibration records and owner-controlled capacity.")}
-  <p class="permission-note">Role selection is a local demo control, not secure authentication.</p>${utilityRatesView(state)}${reportInputs(state)}`;
+  <p class="permission-note">Role selection is a local demo control, not secure authentication.</p>${meterSettings(state)}${utilityRatesView(state)}${reportInputs(state)}`;
 }
 
 export function closeoutView(state) {
   const restricted = state.role === "Attendant";
   const prior = latestTotalizerRecord(state);
+  // Local names preserve the shared OCR/form contract while identifying physical meters.
+  const products = meterEntries(state).map(p => ({ ...p, name: escapeHtml(p.name) }));
+  prior.values = Object.fromEntries(products.map(p => [p.id, p.opening]));
   return `${title("Shift control", "Daily closeout", "Turn totalizer readings and operating costs into a reviewable station record.", '<span class="permission-note">Manager approval required</span>')}
     <form id="closeout-form" class="panel form-panel">
       <div class="form-header"><div><h2>Final reading and cash reconciliation</h2><p>Opening readings come from the latest recorded close. Enter or scan only the final totalizer; every OCR proposal remains editable and requires confirmation.</p></div><label>Date<input name="date" type="date" required value="${localDate()}" /></label></div>
@@ -138,7 +142,7 @@ export function pricingView(state) {
 
 function reviewQueue(state) {
   const manager = ["Owner", "Station Manager"].includes(state.role);
-  return `<section class="panel form-panel"><h2>Closeout review and revisions</h2><p>Pending records do not change stock or reported sales. Earlier revisions remain in the audit history.</p>${state.closeouts.map((row) => `<article style="border-top:1px solid #ddd;padding:16px 0"><h3>${escapeHtml(row.date)} · ${escapeHtml(row.workflow || "Legacy posted — approval not recorded")} · revision ${row.revision || 1}</h3><p>Sales ${peso(row.sales)} · Cash variance ${peso(row.cashVariance || 0)}</p><p>${products.map((p) => `${p.name}: ${number(row.openingTotalizers?.[p.id] || 0)} → ${number(row.closingTotalizers?.[p.id] || 0)}; ${number(row[p.id+"Liters"])} L`).join(" · ")}</p><p>${escapeHtml(row.reason || row.reviewReason || "")}</p>${row.workflow === "pending" && manager ? `<form data-review-form="${row.id}"><label>Review reason<input name="reason" required maxlength="500" /></label><button class="primary" name="decision" value="approved">Approve and post stock</button> <button class="secondary" name="decision" value="rejected">Reject without posting</button></form>` : ""}${manager && ["approved","rejected"].includes(row.workflow) ? `<button class="secondary" data-correct="${row.id}">Create correction</button>` : ""}</article>`).join("") || "<p>No closeouts awaiting review.</p>"}</section>`;
+  return `<section class="panel form-panel"><h2>Closeout review and revisions</h2><p>Pending records do not change stock or reported sales. Earlier revisions remain in the audit history.</p>${state.closeouts.map((row) => `<article style="border-top:1px solid #ddd;padding:16px 0"><h3>${escapeHtml(row.date)} · ${escapeHtml(row.workflow || "Legacy posted — approval not recorded")} · revision ${row.revision || 1}</h3><p>Sales ${peso(row.sales)} · Cash variance ${peso(row.cashVariance || 0)}</p><p>${meterEvidence(row)}</p><p>${escapeHtml(row.reason || row.reviewReason || "")}</p>${row.workflow === "pending" && manager ? `<form data-review-form="${row.id}"><label>Review reason<input name="reason" required maxlength="500" /></label><button class="primary" name="decision" value="approved">Approve and post stock</button> <button class="secondary" name="decision" value="rejected">Reject without posting</button></form>` : ""}${manager && ["approved","rejected"].includes(row.workflow) ? `<button class="secondary" data-correct="${row.id}">Create correction</button>` : ""}</article>`).join("") || "<p>No closeouts awaiting review.</p>"}</section>`;
 }
 
 export function reportsView(state) {

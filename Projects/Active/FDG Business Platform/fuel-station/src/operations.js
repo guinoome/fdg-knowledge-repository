@@ -57,6 +57,7 @@ export function saveMonthlyRecord(state, input, today) {
     state.monthlyExpenses.push({ ...common, electricity: amount(input.electricity), manpower: amount(input.manpower), revision: (previous?.revision || 0) + 1 });
     addAudit(state, "Monthly expenses recorded", `${input.month}; electricity ${input.electricity}; manpower ${input.manpower}; ${input.reason}`);
   } else if (input.kind === "calibration") {
+    if (state.meterSetup && !state.meterSetup.sets.some(set => set.id === input.pump?.trim() && set.products.some(p => p.product === input.product))) throw new Error("Choose the exact commissioned dispenser ID and one of its products.");
     if (!products.some((p) => p.id === input.product) || !["returned", "not-returned", "unconfirmed"].includes(input.returnStatus)) throw new Error("Choose a product and fuel-return status.");
     const liters = amount(input.liters);
     if (!liters) throw new Error("Enter a positive test volume, not negative sales.");
@@ -64,7 +65,7 @@ export function saveMonthlyRecord(state, input, today) {
     if (state.closeouts.some((r) => r.date === input.testDate && ["pending","approved"].includes(r.workflow))) throw new Error("This day is already submitted. Review/correct its closeout rather than adding another calibration deduction.");
     if (!input.reference?.trim()) throw new Error("A test reference is required to prevent duplicate deductions.");
     if (!input.pump?.trim() || !input.tank?.trim() || !/^([01]\d|2[0-3]):[0-5]\d$/.test(input.testTime || "")) throw new Error("Pump, tank and actual test time are required for calibration evidence.");
-    if (state.monthlyTests.some((r) => !r.voided && r.testDate === input.testDate && r.product === input.product && r.reference === input.reference.trim())) throw new Error("This test reference is already recorded for this product/date.");
+    if (state.monthlyTests.some((r) => !r.voided && r.testDate === input.testDate && r.product === input.product && r.pump === input.pump.trim() && r.reference === input.reference.trim())) throw new Error("This test reference is already recorded for this dispenser/product/date.");
     state.monthlyTests.push({ ...common, eventType: input.returnStatus === "returned" ? "CALIBRATION_TEST_FUEL_RETURNED_TO_TANK" : "CALIBRATION_TEST_FUEL_UNRECONCILED", pump: input.pump.trim().slice(0,100), tank: input.tank.trim().slice(0,100), testTime: input.testTime, timeBasis: "Station local time", testDate: input.testDate, product: input.product, liters, returnStatus: input.returnStatus, status: input.returnStatus === "returned" ? "Awaiting dated closeout" : "Review only — not posted", reference: input.reference.trim() });
     addAudit(state, "Monthly test evidence recorded", `${input.month}; ${input.product}; ${liters} L; ${input.returnStatus}; no stock or sales posted; ${input.reason}`);
   } else throw new Error("Unknown monthly record type.");

@@ -1,5 +1,7 @@
 # FDG Fuel Station — Current Handover
 
+Latest: [[HANDOVER_Dispenser_Meters_2026-09-21]] — independent dispenser/product totalizers, owner commissioning, compact navigation and account/payment decision plan. Read release status before assuming live.
+
 Latest visual milestone: [[HANDOVER_Fuel_Live_Wallpaper_2026-09-20]] — package-led station HUD, portrait/wide wallpaper, ambient controls and product palette. Check its release status first; earlier releases below are historical.
 
 Current: [[HANDOVER_Fuel_Glass_Motion_2026-09-20]] — actual glass motion, material refinement, reduced-motion and focus tests. Read its release status before assuming changes are live.

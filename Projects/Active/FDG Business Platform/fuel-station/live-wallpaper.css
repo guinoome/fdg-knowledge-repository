@@ -75,3 +75,16 @@ body[data-page-hidden="true"] :is(.hud-orbit,.hud-flow),
  .wallpaper-controls { bottom:8px; left:12px; right:12px; flex-direction:column; gap:3px; }
  .wallpaper-controls button { min-height:44px; font-size:10px; padding:5px 10px; }.wallpaper-controls .scene-provenance { font-size:9px; }
 }
+/* Compact chrome leaves the station visible; panels open deliberately, never on hover. */
+.immersive-shell .app-shell { display:block; }
+.immersive-shell .main { width:100%; padding-top:66px; }
+.immersive-shell .sidebar { transform:translateX(-105%); visibility:hidden; padding-top:76px; z-index:40; }
+.immersive-shell .sidebar.open { transform:none; visibility:visible; }
+.scene-chrome { position:fixed; top:12px; left:16px; z-index:45; display:flex; gap:8px; }
+.scene-chrome button { min-height:44px; background:rgba(8,28,25,.5); backdrop-filter:blur(12px); color:#f4fff9; border:1px solid #b9dfcd66; }
+.immersive-shell .topbar { position:relative; top:auto; height:auto; min-height:76px; flex-wrap:wrap; padding:14px 20px; }
+.immersive-shell .topbar[hidden] { display:none; }
+.immersive-shell .topbar .search-wrap { display:flex; min-width:180px; }
+[data-dispenser-list] { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:16px; margin-bottom:16px; }
+[data-dispenser] { min-width:0; border:1px solid #b9dfcd66; border-radius:14px; padding:16px; }
+[data-dispenser] input[type=checkbox] { width:20px; height:20px; }
