@@ -1,5 +1,19 @@
 # Fuel glass motion — 2026-09-20
 
+## Current revision: smoked transparent glass
+
+User explicitly supplied the dark transparent OTP material reference and approved revision. `smoked-glass.css` implements that material without copying OTP layout or changing the station image: charcoal 62% fill, 3px blur, fine luminous edge, light type, FDG green actions. Readable modal uses 78% fill; controls and nested data surfaces remain dark/translucent. Previous light/clear treatments below are historical, superseded in presentation only.
+
+No operational JS, source facts or saved-data keys changed. New stylesheet loads last and is cached in Fuel SW v17. This material layer is kept separate from scene positioning and motion to avoid changing domain workflows.
+
+Reference inspected: attachment `dd714634-0b0f-4c25-930f-d9db4b3d281a/1-Photo-1.jpg`. Comparison: dark rather than white fill; minimal blur keeps background recognizable; narrow highlights rather than luminous card walls; light readable type; preserved green actions, operational copy, station imagery and mobile sheets. OTP decorative cutouts intentionally not copied. Reference is a material sample, not a full FDG layout specification.
+
+Local validation: Node regression/syntax suites pass; four-width Playwright motion/overflow/routes checks pass at 360, 390, 1366 and 1536px; review save/archive/reload/reopen test passes in isolated localhost context. Browser plugin unavailable; existing Playwright/Chromium used. Full route screenshots inspected for Reports, Pricing, Safety, Settings and Closeout; light table headers, price-reason surface and empty-state button contrast corrected. Fixed background requires viewport screenshots at scrolled positions; full-page capture paints off-viewport backgrounds incorrectly. Text contrast analytical worst case over white backdrop: primary 5.28:1, secondary 4.52:1 with selected tint. This is not a blanket accessibility certification.
+
+Smoked release READY: `dpl_31PdEQ2pefbZppWW2qzQPbjXoD23`, immutable https://fdgbusinessplatforms-8lawna3vu-guinoomes-projects.vercel.app, production alias https://fdgbusinessplatforms.vercel.app. Built/source hashes and live content of index, smoked stylesheet and v17 SW matched. Remaining source/owner gates below still apply; smoked styling does not resolve missing workbook evidence or create live telemetry. Prior v16 release remains the presentation rollback target, without clearing data.
+
+Production Playwright passed all four widths: computed smoked material/3px blur, page identity, entrance, sheet animation, expansion, Escape/focus, tank navigation, all eight utility routes without horizontal overflow, and reduced motion. No page errors. Current production mobile screenshot `C:/Windows/Temp/fdg-motion-390.png`; reference/material comparison and operational copy preserved. Git mirror publication follows this note.
+
 ## Follow-up: clear glass and actionable counts
 
 User rejected white-looking live-data panels and permanently displayed three issues. Root causes: stacked white gradient/fills (including nested chart/empty surfaces), and `sourceExceptions.length` used for attention count regardless of review state.

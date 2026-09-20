@@ -4,7 +4,7 @@
 
 ### Documents
 
-- [[HANDOVER_Fuel_Glass_Motion_2026-09-20|Fuel glass motion — material, accessibility and release evidence]]
+- [[HANDOVER_Fuel_Glass_Motion_2026-09-20|Fuel smoked transparent glass — material, motion, accessibility and release evidence]]
 
 - [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17|Fuel all-pages glass, Attention Center and rollout refinement]]
 
