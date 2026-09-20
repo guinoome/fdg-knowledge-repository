@@ -1,7 +1,7 @@
 export const products = [
   { id: "regular", name: "Regular", color: "#1f9d5a", tankCapacity: 9000, openingStock: 6240, buyingPrice: 60.5, sellingPrice: 64.25 },
-  { id: "premium", name: "Premium", color: "#d5a619", tankCapacity: 9000, openingStock: 4890, buyingPrice: 61, sellingPrice: 64.75 },
-  { id: "diesel", name: "Diesel", color: "#2463eb", tankCapacity: 12000, openingStock: 8420, buyingPrice: 54.75, sellingPrice: 62.75 },
+  { id: "premium", name: "Premium", color: "#f06469", tankCapacity: 9000, openingStock: 4890, buyingPrice: 61, sellingPrice: 64.75 },
+  { id: "diesel", name: "Diesel", color: "#f2cd45", tankCapacity: 12000, openingStock: 8420, buyingPrice: 54.75, sellingPrice: 62.75 },
 ];
 
 export const verifiedHistory = [

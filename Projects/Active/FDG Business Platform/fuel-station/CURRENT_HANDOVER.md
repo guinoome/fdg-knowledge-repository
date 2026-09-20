@@ -1,5 +1,7 @@
 # FDG Fuel Station — Current Handover
 
+Latest visual milestone: [[HANDOVER_Fuel_Live_Wallpaper_2026-09-20]] — package-led station HUD, portrait/wide wallpaper, ambient controls and product palette. Check its release status first; earlier releases below are historical.
+
 Current: [[HANDOVER_Fuel_Glass_Motion_2026-09-20]] — actual glass motion, material refinement, reduced-motion and focus tests. Read its release status before assuming changes are live.
 
 Latest: [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]] — all-pages glass styling, Attention Center, utility-rate evidence, calibration provenance and rollout updates. Read its release status and [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]] before continuing.

@@ -38,6 +38,24 @@ function notify(message) {
   window.setTimeout(() => toast.classList.remove("show"), 2600);
 }
 
+// Presentation preference only: never writes to station records or implies sync.
+const wallpaperMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function updateWallpaperControl() {
+  const button = workspace.querySelector('[data-wallpaper-toggle]');
+  if (!button) return;
+  const paused = document.body.dataset.wallpaperPaused === 'true';
+  button.disabled = wallpaperMotion.matches;
+  button.setAttribute('aria-pressed', String(paused || wallpaperMotion.matches));
+  button.textContent = wallpaperMotion.matches ? 'Reduced motion enabled' : paused ? 'Resume ambient motion' : 'Pause ambient motion';
+}
+workspace.addEventListener('click', event => {
+  if (!event.target.closest('[data-wallpaper-toggle]')) return;
+  document.body.dataset.wallpaperPaused = String(document.body.dataset.wallpaperPaused !== 'true');
+  updateWallpaperControl();
+});
+wallpaperMotion.addEventListener('change', updateWallpaperControl);
+document.addEventListener('visibilitychange', () => { document.body.dataset.pageHidden = String(document.hidden); });
+
 function go(view, { updateHash = true, preserveCorrection = false } = {}) {
   if (!preserveCorrection) correctionId = null;
   currentView = views[view] ? view : "overview";
@@ -52,6 +70,7 @@ function go(view, { updateHash = true, preserveCorrection = false } = {}) {
   document.querySelector("#sidebar").classList.remove("open");
   renderIcons(workspace);
   bindViewEvents();
+  updateWallpaperControl();
   updateConnectionState();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }

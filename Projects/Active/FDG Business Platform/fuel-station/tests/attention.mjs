@@ -6,6 +6,7 @@ globalThis.localStorage={ getItem:()=>null, setItem:()=>{} };
 const state=loadState();
 const original=JSON.stringify(allReportRows(state));
 assert.equal(attentionIssues(state).length,3);
+assert.equal(attentionIssues(state).find(i=>i.id==='workbook-july2025').severity,'High');
 assert.equal(attentionLabel(state),"2 source reviews · 1 rate setup");
 assert.match(attentionCenter(state),/details class="attention-issue/);
 assert.throws(()=>reviewIssue(state,{issueId:"workbook-july2025",status:"Resolved",reason:"fixed"}),/evidence/);

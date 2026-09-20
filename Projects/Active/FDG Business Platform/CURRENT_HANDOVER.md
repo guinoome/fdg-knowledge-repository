@@ -1,5 +1,7 @@
 # FDG Business Platform — Current Agent Handover
 
+Latest visual milestone: [[HANDOVER_Fuel_Live_Wallpaper_2026-09-20]] — approved package-led station HUD, responsive wallpaper assets and ambient motion controls. Read its release status before relying on publication. Fuel source/owner gates remain intact.
+
 Current: [[HANDOVER_Fuel_Glass_Motion_2026-09-20]] — animated Fuel glass, dialog lifecycle, material/contrast refinement and outstanding goal gates. Check release status there; prior milestones are preserved.
 
 Current refinement: [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]] — full Fuel glass treatment, Attention Center, dated utility evidence, calibration provenance and seven-day/₱500 entry rollout. Governing update: [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]]. Fuel owner acceptance still gates Restaurant.

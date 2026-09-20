@@ -5,7 +5,7 @@ import { requireManager } from "./closeouts.js";
 
 const definitions = [
   { id: "premium-test-20250430", severity: "Critical", title: "Premium 30 L test allocation", summary: "Returned test fuel needs source reconciliation.", source: "NJ Gas Station Online.xlsx · April 2025", locator: "Exact source cell not yet verified", action: "Review allocation" },
-  { id: "workbook-july2025", severity: "Medium", title: "Broken workbook references", summary: "July 2025 is excluded from trusted reporting.", source: "NJ Gas Station Online.xlsx · July 2025", locator: "Affected cells/import fields not yet verified", action: "Review source" },
+  { id: "workbook-july2025", severity: "High", title: "Broken workbook references", summary: "July 2025 is excluded from trusted reporting.", source: "NJ Gas Station Online.xlsx · July 2025", locator: "Affected cells/import fields not yet verified", action: "Review source" },
   { id: "utility-rate-basis", severity: "Information", title: "Utility rate changes", summary: "Record effective-dated rates and billing evidence.", source: "Workbook electricity formulas · multiple periods", locator: "Rate provenance needs owner verification", action: "Review rate basis" },
 ];
 export const issueStates = ["Open", "Under Review", "Resolved", "Accepted Exception"];
