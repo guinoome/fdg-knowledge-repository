@@ -116,3 +116,54 @@ New enterprise functions require Founder approval and must demonstrate a respons
 NEX-STD-036 remains preserved as the earlier organizational baseline. This standard extends it from an engineering-centered organizational model into an enterprise-wide operating model.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+
+---
+
+# Legal-Form and Business-Structure Neutrality
+
+This enterprise operating model is intentionally independent of legal form, ownership form, company size, and current headcount.
+
+It may be applied to, among others:
+
+- sole proprietorship / single proprietor
+- partnership or professional partnership where legally applicable
+- corporation
+- one-person corporation
+- subsidiary
+- holding-company / group structure
+- joint venture
+- cooperative or association where applicable
+- project-specific entity or special-purpose vehicle
+- business unit, branch, division, department, or operating site within a larger enterprise
+- founder-led startup, SME, or large enterprise
+
+The functions remain conceptually stable while implementation scales.
+
+For a small sole proprietorship, one person may legitimately perform several functions, provided conflicts of interest, statutory requirements, professional authority, and necessary segregation of duties are controlled.
+
+For a larger corporation, the same functions may be separated into dedicated departments, managers, teams, shared-service centers, committees, subsidiaries, or independent assurance units.
+
+Legal form affects governance authority, statutory offices, registration, taxation, reporting, capital structure, employment obligations, audit requirements, and other compliance duties. Those requirements shall be supplied by the appropriate Legal, Finance, Governance, HR, Audit, and specialist authorities without changing the fundamental enterprise-function architecture.
+
+# Canonical Cross-System Wikilinks
+
+The enterprise functions are supported by existing FDG intelligence systems rather than duplicated into new top-level systems:
+
+- [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS — FDG Business Intelligence System]]
+- [[13_FDG_Legal_Intelligence_System/README|FLIS — FDG Legal Intelligence System]]
+- [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FAIS — FDG Audit Intelligence System]]
+- [[12_FDG_Security_Intelligence_System/README|FSIS — FDG Security Intelligence System]]
+- [[14_FDG_Service_Intelligence_System/README|FSvIS — FDG Service Intelligence System]]
+- [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS — Engineering Intelligence]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|FBPOIS — Building Plant Operations Intelligence]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS — Project Intelligence]]
+- [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS — Platform Intelligence]]
+- [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS — External Intelligence]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS — Workflow Automation Intelligence]]
+- [[09_FDG_Ecosystem_Integration_Hub/09_FDG_Ecosystem_Integration_Hub_Master_Index|FDG Ecosystem Integration Hub]]
+- [[10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index|FDG CORE Intelligence]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|Enterprise Function Maturity Standard]]
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|Enterprise Function Control, Record and KPI Catalog]]
+- [[06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION|Enterprise Function Evolution Record — 2026-09-27]]
