@@ -246,3 +246,11 @@ Escalation and learning: serious incidents escalate to Executive, Legal and rele
 Every enterprise function shall maintain the records and controls appropriate to its actual scale and legal context. The catalog defines the organizational knowledge baseline; operational implementation must be proportionate, evidence-based and governed.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+---
+
+## Related Enterprise Knowledge
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|NEX-STD-125 Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|NEX-STD-126 Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
