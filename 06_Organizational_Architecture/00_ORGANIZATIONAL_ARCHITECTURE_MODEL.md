@@ -262,3 +262,19 @@ End of Standard
 **Also noting:** this document's own "Organizational Layers" section describes a 9-layer model that differs from both `NEX-STD-026` (Repository Structure) and the 5-layer Candidate built earlier this session. Three different layer models now identified across the repository — flagged in this session's journal, not reconciled here.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+
+---
+
+## Approved Enterprise Evolution — 2026-09-27
+
+This original engineering-centered organizational model remains preserved as the historical baseline.
+
+Founder-approved evolution now adds an explicit enterprise-function layer without deleting or rewriting the original model:
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|NEX-STD-125 Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|NEX-STD-126 Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
+- [[06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION|Enterprise Function Evolution Record — 2026-09-27]]
+
+The earlier model and the enterprise-function model are complementary: the earlier standard defines how capability is organized; the new standards define which enterprise specialties own recurring organizational outcomes and how those specialties interface.
