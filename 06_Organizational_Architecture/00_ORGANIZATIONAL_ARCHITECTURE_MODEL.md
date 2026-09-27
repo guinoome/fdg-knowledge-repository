@@ -278,3 +278,4 @@ Founder-approved evolution now adds an explicit enterprise-function layer withou
 - [[06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION|Enterprise Function Evolution Record — 2026-09-27]]
 
 The earlier model and the enterprise-function model are complementary: the earlier standard defines how capability is organized; the new standards define which enterprise specialties own recurring organizational outcomes and how those specialties interface.
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
