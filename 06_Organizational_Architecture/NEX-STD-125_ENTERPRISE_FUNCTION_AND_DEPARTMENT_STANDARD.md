@@ -161,3 +161,12 @@ Engineering and Operations remain accountable for safe technical execution. HR s
 When ownership is unclear, assign the responsibility to the function whose professional specialty determines the correctness of the outcome, then define the interfaces required from other functions.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+---
+
+## Related Enterprise Knowledge
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|NEX-STD-126 Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
+- [[06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION|Enterprise Function Evolution Record — 2026-09-27]]
