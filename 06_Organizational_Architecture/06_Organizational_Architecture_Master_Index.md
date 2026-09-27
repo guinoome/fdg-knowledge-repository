@@ -28,3 +28,11 @@
 - [[06_Organizational_Architecture/RESPONSIBILITY_STANDARD|RESPONSIBILITY STANDARD]]
 - [[06_Organizational_Architecture/SPECIALIZATION_STANDARD|SPECIALIZATION STANDARD]]
 - [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|WORK PACKAGE STANDARD]]
+
+## Enterprise Operating Model — Approved 2026-09-27
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|NEX-STD-125 Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|NEX-STD-126 Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
+- [[06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION|Enterprise Function Evolution Record — 2026-09-27]]
