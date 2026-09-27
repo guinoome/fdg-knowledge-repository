@@ -76,3 +76,10 @@ A Very Strong knowledge rating is a statement about completeness of the canonica
 Each function shall progressively add role descriptions, SOPs, templates, data models, dashboards, training, automation, controls, and operating evidence without changing the enterprise ownership boundary unless governance approves an evolution.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+---
+
+## Very Strong Evidence Completion — 2026-09-27
+
+[[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]] completes the enterprise baseline by explicitly defining critical records, controls, competencies, KPIs, major risks, and learning/escalation expectations for all 16 canonical functions.
+
+The Very Strong rating therefore rests on the combined evidence of NEX-STD-124 through NEX-STD-128 rather than on a maturity label alone.
