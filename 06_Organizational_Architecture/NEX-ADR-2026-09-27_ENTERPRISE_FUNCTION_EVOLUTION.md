@@ -55,3 +55,21 @@ NEX-STD-036 and all pre-existing FBIS, FLIS, FMIS, FEIS, FAIS and other intellig
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
 - [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
+
+---
+
+## Applicability and Link-Graph Addendum — 2026-09-27
+
+The Founder confirmed that the enterprise-function architecture must work across business and company structures, including sole proprietorships and corporations.
+
+NEX-STD-124 now explicitly defines the model as legal-form and business-structure neutral. Functions remain stable while authority, segregation, statutory offices, taxation, reporting, staffing, and governance controls scale according to the actual legal and operating structure.
+
+The enterprise-function standards were also cross-linked through Obsidian wikilinks, including the Organizational Architecture Master Index, sibling standards NEX-STD-124 through NEX-STD-128, the evolution record, and relevant FDG intelligence-system navigation files. This preserves graph discoverability and reduces dependence on filename search or collaborator memory.
+
+## Related Enterprise Knowledge
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|NEX-STD-125 Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|NEX-STD-126 Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
