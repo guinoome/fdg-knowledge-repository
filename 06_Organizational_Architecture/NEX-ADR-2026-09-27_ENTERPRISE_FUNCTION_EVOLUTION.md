@@ -54,3 +54,4 @@ The Founder also directed that prior knowledge must not be deleted. The reposito
 NEX-STD-036 and all pre-existing FBIS, FLIS, FMIS, FEIS, FAIS and other intelligence-system materials remain preserved. New clarifications are additive and document the changed interpretation rather than erasing the original reasoning.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
