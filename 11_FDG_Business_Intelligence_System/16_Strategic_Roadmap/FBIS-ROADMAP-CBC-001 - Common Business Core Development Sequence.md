@@ -77,3 +77,13 @@ structures.
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-COM-0001 - FDG Business Platform Commercialization Thesis|Commercialization thesis]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index|16 Strategic Roadmap Master Index]] → this document
+
+---
+
+## Organizational Interpretation Clarification — 2026-09-27
+
+Phases in this roadmap describe staged development of shared data, transaction, financial and intelligence capabilities. They do not define whether Finance, HR, Procurement, Sales, Marketing or other enterprise functions exist.
+
+Example: Phase 3 Financial Foundation is the implementation sequence for financial data/system capability. Finance, Accounting and Treasury is already a canonical enterprise function under NEX-STD-124 and NEX-STD-125. Its staffing and operational deployment maturity are tracked separately from the FBIS software/data roadmap.
+
+See [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|Enterprise Function Maturity Standard]].
