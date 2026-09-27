@@ -73,3 +73,11 @@ Where fraud, error, conflict of interest, professional liability, or assurance r
 Unresolved ownership conflicts escalate through the Delegation Standard, Decision Authority Standard, Enterprise Operating Model, and Founder governance.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+---
+
+## Related Enterprise Knowledge
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|NEX-STD-125 Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
