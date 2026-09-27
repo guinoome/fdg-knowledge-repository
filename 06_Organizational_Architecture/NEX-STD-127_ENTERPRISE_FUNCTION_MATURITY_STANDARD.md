@@ -83,3 +83,10 @@ Each function shall progressively add role descriptions, SOPs, templates, data m
 [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]] completes the enterprise baseline by explicitly defining critical records, controls, competencies, KPIs, major risks, and learning/escalation expectations for all 16 canonical functions.
 
 The Very Strong rating therefore rests on the combined evidence of NEX-STD-124 through NEX-STD-128 rather than on a maturity label alone.
+
+## Related Enterprise Knowledge
+
+- [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|NEX-STD-124 Enterprise Operating Model]]
+- [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|NEX-STD-125 Enterprise Function and Department Standard]]
+- [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|NEX-STD-126 Cross-Functional Ownership and Interface Matrix]]
+- [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
