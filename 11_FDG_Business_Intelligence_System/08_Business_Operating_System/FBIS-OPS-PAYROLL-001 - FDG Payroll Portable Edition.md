@@ -18,14 +18,22 @@ Product characteristics:
 - No installation required
 - Portable between approved computers using USB storage
 - Single-company isolated workspace
+- Multi-branch capable within that company
+- Multi-project / multi-site capable within that company
+- Department and cost-center aware
+- One or multiple Payroll Officers according to company structure
+- One HR Head approval authority across all branches/sites for this first package
 - LAN/WLAN multi-user capable without Internet
 - Encrypted local data
 - Tamper-evident audit trail
 - Automatic save, recovery and backup
 - Role-based authority and approval
+- Governed suggestion capture on major dashboards
 - Cloud-ready future architecture
 
-Multi-company selection is explicitly outside this first package and belongs to a later package.
+**Single-company first package with internal organizational complexity support:** one company workspace may contain multiple branches, departments, cost centers, and projects/sites while remaining one isolated company database and one authoritative audit chain.
+
+Multi-company capability is explicitly a future package/update and is outside the first sellable edition.
 
 ## Local Network Runtime
 
@@ -50,6 +58,77 @@ One portable workspace equals one company.
 A company's users, employees, payroll records, attachments, statutory identifiers, audit events and backups shall remain isolated from other client companies.
 
 No multi-company selector is included in this first product package.
+
+## Single-Company Multi-Branch / Multi-Project Model
+
+The first sellable package supports one legal/company workspace with multiple internal operating structures.
+
+Supported first-package structures include:
+
+- multiple branches
+- multiple offices
+- multiple construction projects
+- multiple operating sites
+- multiple departments
+- multiple cost centers
+- employee branch assignment
+- employee project/site assignment
+- branch and project/site filtering
+- branch and project/site payroll reporting
+
+The purpose is to support companies such as construction firms that may operate several projects and field sites under one company.
+
+Example:
+
+`ABC Construction → Cebu Main → San Juan Waterline Project → Operations → Skilled Worker`
+
+This remains one company database.
+
+### Payroll Officer Coverage
+
+A company may designate:
+
+- one Payroll Officer for the entire company; or
+- multiple Payroll Officers assigned by branch, site, project, department, or approved coverage scope.
+
+Each Payroll Officer sees and acts only within the authority assigned by the Owner / authorized administrator.
+
+Every preparation, correction, submission and return remains attributed to the exact Payroll Officer and role used.
+
+### Single HR Head Approval Gate
+
+For the first package, the company has **one HR Head approval authority for payroll across all branches, projects and sites**.
+
+Multiple Payroll Officers may prepare and submit payroll from different branches/sites, but submitted payroll converges to one HR Head approval queue.
+
+Canonical pattern:
+
+`Branch/Site Payroll Officer(s) → Single HR Head Review/Approval → Finance Review → Higher Approval / Posting`
+
+The HR Head shall not silently edit submitted Payroll Officer work. The HR Head may approve, question, or return records with reasons.
+
+### First-Package Scope Boundaries
+
+Included now:
+
+- single company
+- multi-branch
+- multi-project / multi-site
+- branch/project assignment
+- branch/project filtering
+- branch/project payroll reporting
+- suggestion box / continuous-improvement capture
+
+Deferred to later updates:
+
+- multi-company workspace
+- inter-branch transfer workflow automation
+- payroll allocation split by percentage across multiple projects
+- advanced cost-allocation rules
+- project billing integration
+- full project-accounting integration
+
+These later capabilities shall extend the existing model without changing the first-package audit, authority or company-isolation principles.
 
 ## Employee Profile
 
@@ -119,6 +198,21 @@ Job title and system role remain distinct.
 Every transaction records both the authenticated user and the role exercised for that action.
 
 Role combination is allowed for smaller companies, but the audit event must still identify the role used.
+
+## Payroll Authority Topology
+
+For the first package:
+
+- Payroll Officer count: configurable as one or many
+- HR Head count for payroll approval: one
+- Finance roles: configurable according to company size
+- Owner / highest authority: configurable final authority according to company policy
+
+A Payroll Officer may be scoped to one branch/site/project or to several.
+
+The single HR Head receives the consolidated approval queue for all branches/sites.
+
+This topology is intentional for the first sellable package and may evolve only through a governed future version.
 
 ## Role Separation
 
@@ -371,9 +465,56 @@ The product shall use role-specific dashboards rather than one dashboard with ev
 
 The current desktop target is defined in [[11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS-UX-PAYROLL-001 - FDG Payroll Role Dashboard Experience|FDG Payroll Role Dashboard Experience]].
 
+## Continuous Improvement / Suggestion Capture
+
+Every major role dashboard shall provide a visible **Suggestion Box / Suggest Improvement** action.
+
+The purpose is to capture improvement ideas without relying on informal messages that can be lost.
+
+Suggestion records should include, where applicable:
+
+- suggestion ID
+- submitted timestamp
+- authenticated user
+- role used
+- department
+- branch
+- project/site
+- current module/page
+- category
+- title
+- description
+- optional priority
+- optional supporting attachment in a future controlled version
+- status
+- reviewer / decision authority
+- resolution note
+- implemented-version reference where applicable
+
+Suggested categories:
+
+- Bug / issue
+- Improvement suggestion
+- Missing feature
+- Payroll calculation concern
+- Workflow concern
+- Approval concern
+- Report request
+- HR record concern
+- Branch / project concern
+- Other
+
+Suggested lifecycle:
+
+`New → Under Review → Approved / Rejected → Planned → Implemented`
+
+Suggestion history shall be auditable. A suggestion may be closed or rejected, but the original submission shall remain preserved.
+
+Suggestions are organizational-learning inputs and should feed future FDG Payroll product evolution.
+
 ## Future Expansion
 
-Later packages may add:
+Later packages/updates may add:
 
 - richer biometric integrations
 - full timesheets
@@ -383,11 +524,17 @@ Later packages may add:
 - government remittance workflows
 - controlled bank payroll interface
 - employee self-service
-- multi-branch
-- multi-company package
+- **multi-company workspace/package**
+- inter-branch transfer workflow automation
+- project labor allocation split by percentage
+- advanced cost-allocation rules
+- project billing integration
+- full project-accounting integration
 - encrypted cloud synchronization
 - Google Workspace integration
 - broader HRIS
+
+**Multi-company is future scope.** The first package remains one company workspace even when it contains multiple branches, projects, sites, departments and cost centers.
 
 These extensions shall preserve the single authoritative audit chain and existing organizational ownership boundaries.
 
