@@ -1,4 +1,22 @@
 // Map provider codes, never raw messages (which can contain account details).
+export function authLinkFeedback(href) {
+  const url = new URL(href);
+  const fragment = new URLSearchParams(url.hash.slice(1));
+  const sources = [url.searchParams, fragment];
+  if (!sources.some(params => params.has('error') || params.has('error_code'))) return null;
+  const expired = sources.some(params => params.get('error_code') === 'otp_expired');
+  for (const params of sources) {
+    for (const key of ['error', 'error_code', 'error_description']) params.delete(key);
+  }
+  url.hash = fragment.toString();
+  return {
+    message: expired
+      ? 'This email link is invalid or has expired. Request a fresh confirmation or password recovery email, then open it in the browser where you requested it.'
+      : 'This email link could not be verified. Request a new link and open it in the browser where you requested it. If this continues, contact FDG.',
+    cleanUrl: url.href
+  };
+}
+
 export function authErrorMessage(error, action = 'signup') {
   if (error?.code === 'over_email_send_rate_limit') return 'Email sending is temporarily limited. Wait before trying again; repeated attempts will not help. If this continues, FDG needs to configure its email service.';
   if (error?.code === 'over_request_rate_limit' || error?.status === 429) return 'Too many requests. Please wait before trying again.';

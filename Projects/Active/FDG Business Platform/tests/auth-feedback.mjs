@@ -1,5 +1,15 @@
 import assert from 'node:assert/strict';
-import {authErrorMessage, bindPasswordVisibility} from '../account/auth-feedback.js';
+import {authErrorMessage, authLinkFeedback, bindPasswordVisibility} from '../account/auth-feedback.js';
+const expiredLink = authLinkFeedback('https://fdgbusinessplatforms.vercel.app/account/?mode=signup#error=access_denied&error_code=otp_expired&error_description=PRIVATE_EMAIL_OR_TOKEN');
+assert.match(expiredLink.message, /expired/);
+assert.equal(expiredLink.cleanUrl, 'https://fdgbusinessplatforms.vercel.app/account/?mode=signup');
+assert(!JSON.stringify(expiredLink).includes('PRIVATE_EMAIL_OR_TOKEN'));
+const invalidLink = authLinkFeedback('https://fdgbusinessplatforms.vercel.app/account/?error=untrusted&error_description=%3Cscript%3E&mode=signup');
+assert.match(invalidLink.message, /could not be verified/);
+assert.equal(invalidLink.cleanUrl, 'https://fdgbusinessplatforms.vercel.app/account/?mode=signup');
+assert.equal(authLinkFeedback('https://fdgbusinessplatforms.vercel.app/account/?code=successful-pkce-code'), null);
+assert.equal(authLinkFeedback('https://fdgbusinessplatforms.vercel.app/account/#access_token=successful-session&type=recovery'), null);
+assert.equal(authLinkFeedback('https://fdgbusinessplatforms.vercel.app/account/?mode=signup'), null);
 assert.match(authErrorMessage({code:'over_email_send_rate_limit',status:429}), /Email sending is temporarily limited/);
 assert.match(authErrorMessage({status:429}), /Too many requests/);
 assert.match(authErrorMessage({code:'email_address_not_authorized'}), /connect its email-sending service/);

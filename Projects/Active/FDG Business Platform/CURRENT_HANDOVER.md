@@ -1,5 +1,7 @@
 # FDG Business Platform — Current Agent Handover
 
+Client release validation (2026-09-29): [[HANDOVER_Client_Release_Validation_2026-09-29]]. Published clear expired-email-link feedback; reran actual billing database tests including independent-branch cancellation, no trial restart and no new invoice after stopping renewals. Signup/recovery delivery is still blocked on secure SMTP setup. The former browser session/key is unavailable; do not claim it remains accessible. Live billing and secure paid Fuel entitlements are not implemented/released. Do not invite paying operational clients yet.
+
 Repository reconciliation (2026-09-29): [[REPOSITORY_RECONCILIATION_2026-09-29]]. Preserve the vault's local Fuel history and GitHub organizational/payroll history. SMTP remains pending; repository synchronization does not establish email delivery or deployment completion.
 
 SMTP continuation (2026-09-28): [[HANDOVER_Brevo_SMTP_2026-09-28]]. Brevo Free account and verified sender inspected; user approved creation of an FDG-only SMTP key and storage only in the separate FDG Supabase project. Key generated, but not yet installed: Supabase dashboard requires GitHub sign-in. Brevo SMTP IP blocking is active with zero authorized IPs. Do not disable it without approval. Signup/recovery delivery remains unverified; no ML Printing or payment changes.

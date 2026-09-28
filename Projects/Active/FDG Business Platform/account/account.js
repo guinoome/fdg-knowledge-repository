@@ -1,10 +1,14 @@
 import { createClient } from '@supabase/supabase-js';
 import { authConfig } from './config.js';
 import { createBilling } from './billing.js';
-import { authErrorMessage, bindPasswordVisibility } from './auth-feedback.js';
+import { authErrorMessage, authLinkFeedback, bindPasswordVisibility } from './auth-feedback.js';
 
 const $ = id => document.getElementById(id);
 const hidePasswords = bindPasswordVisibility(document);
+// Consume failed callback metadata without displaying provider text or keeping it in history.
+const linkFeedback = authLinkFeedback(location.href);
+let linkError = linkFeedback?.message || '';
+if (linkFeedback) history.replaceState(history.state, '', linkFeedback.cleanUrl);
 // PKCE verifier must survive an email opening in another tab; session tokens must not.
 const authStorage = {
   getItem: key => (key.endsWith('-code-verifier') ? localStorage : sessionStorage).getItem(key),
@@ -44,7 +48,7 @@ async function verify() {
   if (!navigator.onLine) { hidePrivate(); message('Offline. Reconnect to verify your account.'); return; }
   const { data: { user: verified }, error } = await client.auth.getUser();
   if (run !== generation) return;
-  if (error || !verified) { showLogin(); message('Sign in to your FDG account.'); return; }
+  if (error || !verified) { showLogin(); message(linkError || 'Sign in to your FDG account.'); return; }
   const active = await client.rpc('fdg_session_is_active');
   if (run !== generation) return;
   if (active.error || !active.data) { hidePrivate(); showLogin(); message('Session expired or unavailable. Sign in again.'); return; }
@@ -63,7 +67,7 @@ function bind(formId, action) {
   $(formId).addEventListener('submit', async event => {
     event.preventDefault(); const form = event.currentTarget;
     const button = form.querySelector('[type=submit]'); button.disabled = true;
-    try { await action(form); } catch { message('The request could not be completed. Check your connection and try again.'); }
+    try { linkError = ''; await action(form); } catch { message('The request could not be completed. Check your connection and try again.'); }
     finally { button.disabled = false; }
   });
 }

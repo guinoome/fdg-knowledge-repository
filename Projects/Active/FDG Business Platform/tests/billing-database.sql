@@ -4,7 +4,7 @@ begin;
 do $$
 declare
  u uuid:=gen_random_uuid(); other_user uuid:=gen_random_uuid(); sess uuid:=gen_random_uuid(); other_sess uuid:=gen_random_uuid();
- s public.fdg_billing_subscriptions; repeated public.fdg_billing_subscriptions;
+ s public.fdg_billing_subscriptions; repeated public.fdg_billing_subscriptions; second_branch public.fdg_billing_subscriptions;
  i public.fdg_billing_invoices; repeated_i public.fdg_billing_invoices; claim jsonb; again jsonb;
  denied boolean; n integer; result text; anchor timestamptz:='2026-01-31 12:00:00+00';
 begin
@@ -13,6 +13,7 @@ begin
  perform set_config('request.jwt.claims',jsonb_build_object('sub',u,'role','authenticated','session_id',sess)::text,true);
  set local role authenticated;
  s:=public.fdg_test_start_subscription(' Test branch ');
+ second_branch:=public.fdg_test_start_subscription('Independent second branch');
  repeated:=public.fdg_test_start_subscription('test BRANCH');
  if s.id<>repeated.id or s.monthly_centavos<>50000 or s.livemode or s.trial_ends_at-s.trial_started_at<>interval '7 days' then raise exception 'FAIL trial/price/idempotency'; end if;
  denied:=false;
@@ -70,6 +71,21 @@ begin
  if repeated.renewals_enabled or repeated.renewals_stopped_at is null then raise exception 'FAIL stop renewals audit'; end if;
  repeated_i:=public.fdg_test_issue_invoice(s.id);
  if repeated_i.id<>i.id then raise exception 'FAIL outstanding invoice preservation'; end if;
+ repeated:=public.fdg_test_start_subscription('test BRANCH');
+ if repeated.renewals_enabled or repeated.trial_ends_at<>anchor then raise exception 'FAIL stopped trial restarted'; end if;
+ select * into repeated from public.fdg_billing_subscriptions where id=second_branch.id;
+ if not repeated.renewals_enabled then raise exception 'FAIL cancellation crossed branch boundary'; end if;
+ reset role;
+ set local role service_role;
+ claim:=public.fdg_test_claim_checkout(i.id,u);
+ perform public.fdg_test_save_checkout((claim->'attempt'->>'id')::uuid,'cs_secondfixture','https://checkout.paymongo.com/secondfixture');
+ result:=public.fdg_test_settle_invoice((claim->'attempt'->>'id')::uuid,i.id,'cs_secondfixture','pay_secondfixture',50000,'PHP',repeat('c',64));
+ if result<>'paid' then raise exception 'FAIL outstanding invoice settlement after cancellation'; end if;
+ reset role;
+ set local role authenticated;
+ denied:=false;
+ begin perform public.fdg_test_issue_invoice(s.id); exception when others then if sqlerrm='Renewals stopped' then denied:=true; else raise; end if; end;
+ if not denied then raise exception 'FAIL invoice generated after renewals stopped'; end if;
  reset role;
  update auth.sessions set created_at=now()-interval '13 hours' where id=sess;
  set local role authenticated;

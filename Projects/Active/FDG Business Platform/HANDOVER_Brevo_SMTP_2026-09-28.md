@@ -1,5 +1,7 @@
 # Brevo SMTP continuation — 2026-09-28
 
+Update 2026-09-29: the previous browser-control session and its temporary key are unavailable. Key presence was checked only by variable availability, not by searching credential stores. User was asked to generate a replacement directly in Brevo and enter it only in FDG Supabase. No replacement/configuration is confirmed. See [[HANDOVER_Client_Release_Validation_2026-09-29]]. The observations below are the earlier checkpoint, not proof of current delivery.
+
 ## Current milestone
 
 Fix confirmation and recovery email delivery for the separate FDG Supabase project `nyrvzzuunnkdgsbbbjvo`. Preserve email confirmation, password policy, RLS, session controls, and all payment/ML Printing boundaries. The shipped password visibility/error-feedback correction remains unchanged.
