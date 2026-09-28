@@ -13,6 +13,20 @@ Define the desktop visual and information architecture target for the first FDG 
 
 The system uses one governed visual language with different dashboards according to organizational role.
 
+## First-Package Structural Scope
+
+The first FDG Payroll Portable Edition is:
+
+- single company
+- multi-branch
+- multi-project / multi-site
+- multi-department
+- cost-center aware where relevant
+- one or multiple Payroll Officers according to assigned coverage
+- one HR Head approval authority across all branches/sites/projects
+
+Multi-company selection or switching is **future scope** and shall not appear in the first-package UX.
+
 ## Shared Design Language
 
 All role dashboards should communicate that the system is:
