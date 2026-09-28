@@ -6,3 +6,7 @@ tests/
 **/*.md
 fuel-station/docs/
 fuel-station/tests/
+supabase/
+node_modules/
+.env*
+public/

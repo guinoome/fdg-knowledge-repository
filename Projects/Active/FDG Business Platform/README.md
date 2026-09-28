@@ -1,6 +1,10 @@
 # FDG Business Platform
 
-Latest refinement: [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]] · [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]]. Seven-day prototype trials, entry plans from ₱500/month/module or branch, and reviewed Fuel evidence workflows. Existing quotes preserved; no actual payment provider.
+Landing remaster: [[HANDOVER_Landing_Remaster_2026-09-27]] · [[docs/LANDING_PAGE_REMASTER_DECISION_2026-09-27]]. The premium FDG ecosystem hero is published; discovery begins below the fold. Real Log In and trial signup routes, responsive desktop/tablet/mobile compositions, automated checks, build and production desktop/mobile visual acceptance passed.
+
+Connected TEST milestone: [[HANDOVER_PayMongo_Connected_2026-09-28]] — PHP500/module/branch/month after seven days, manually paid. On `fdgbusinessplatforms-paymongo-test.vercel.app/account/`, hosted QRPh simulation, signed provider settlement, duplicate replay protection, account isolation, paid-state refresh and logout passed. Only the approved test alias is public; immutable Preview remains protected. Unsigned webhook calls return 401. Production billing remains disabled; no real charges or ML Printing changes. Direct GCash/Maya are inactive. [[HANDOVER_Real_Authentication_2026-09-27]] retains the SMTP/recovery gate.
+
+Fuel refinement: [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17]] · [[HANDOVER_Fuel_Attention_Rollout_2026-09-17]]. Seven-day prototype trials, entry plans from ₱500/month/module or branch, and reviewed Fuel evidence workflows. Existing quotes preserved; operational demo entitlements remain separate from TEST account billing.
 
 The FDG Business Platform is a premium, mobile-first ecosystem hub for discovering and opening domain-native operating modules through one account. This folder is the authoritative implementation inside the local FDG Knowledge Repository; GitHub is a mirror.
 
@@ -24,7 +28,7 @@ Fuel Operations is the first connected operational module. Micro Fuel Station is
 
 ## Truth and security boundary
 
-This release is an interactive product and architecture prototype. Identity, subscription, invitation, cancellation, and billing records stay in local browser storage. No production authentication, payment provider, live integration, regulatory compliance, or secure multi-tenant authorization is claimed. Production writes will require server-side authorization, durable audit handling, and a reviewed payment integration.
+Operational modules remain an interactive product and architecture prototype. Their demo subscription, invitation, cancellation, billing and Fuel records stay in local browser storage. Real client authentication, server-isolated profiles and isolated TEST billing are implemented separately under `/account/`; see their current handovers for verification and email-delivery gates. Client login does not authenticate the demo role selector or migrate demo records. No live-money payment, regulatory compliance, secure operational multi-tenancy or cloud Fuel ledger is claimed.
 
 ## Run locally
 
@@ -48,6 +52,7 @@ The validation scripts install no dependencies. Browser QA covers desktop and a 
 - [Unified account and modular subscription architecture](docs/UNIFIED_ACCOUNT_MODULAR_ARCHITECTURE.md)
 - [Active merge mandate](docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate.md)
 - [Visual fidelity ledger](docs/UNIFIED_PLATFORM_VISUAL_FIDELITY_LEDGER.md)
+- [Landing remaster decision and fidelity record](docs/LANDING_PAGE_REMASTER_DECISION_2026-09-27.md)
 - [Current handover](CURRENT_HANDOVER.md)
 - [Build preflight](BUILD_PREFLIGHT.md)
 - [Design references](design/references/)

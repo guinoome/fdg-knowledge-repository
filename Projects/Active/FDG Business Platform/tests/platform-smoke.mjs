@@ -28,6 +28,12 @@ for (const route of ["home", "discover", "platforms", "portfolio", "account", "p
 }
 assert.match(views, /No payment provider is connected/, "payment boundary must be explicit");
 assert.match(views, /must not terminate the FDG account or another subscription/, "cancellation isolation must be visible");
+assert.match(views, /One Platform\.<br>Many Businesses\.<br><em>Brighter Tomorrows\.<\/em>/, "landing hero must keep the approved headline");
+assert.match(views, /Discover Our Business Platforms/, "platform discovery must follow the first viewport");
+assert.match(views, /Start Free 7-Day Trial/, "trial conversion path must be visible");
+assert.match(views, /\/account\/\?mode=signup&amp;intent=trial/, "trial CTA must open real account signup mode");
+assert.doesNotMatch(views, /500\+|10k\+|2\.5x/, "landing proof must not use fabricated customer or growth metrics");
+assert.match(views, /MODULES\.map\(landingModuleCard\)/, "landing discovery must be driven by the canonical module catalog");
 assert.match(store, /scope: id/, "module-specific audit scope must be retained");
 assert.match(store, /moduleId:/, "subscription records must retain module scope");
 assert.match(store, /branchName:/, "subscription records must retain branch scope");

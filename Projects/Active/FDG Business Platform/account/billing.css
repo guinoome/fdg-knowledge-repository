@@ -1,0 +1,4 @@
+.billing{margin-top:28px;padding-top:20px;border-top:1px solid #c1e3d755;overflow-wrap:anywhere}
+@media(min-width:761px){main{align-items:start}.intro{position:sticky;top:32px}}
+.billing h3{font-size:22px;margin:0 0 12px}.test-label{display:inline-block;font-size:11px;letter-spacing:1px;color:#ffd98c;border:1px solid #ffd98c70;border-radius:5px;padding:3px 6px;vertical-align:middle}
+.billing-item{padding:18px 0;border-top:1px solid #c1e3d744;margin-top:22px}.billing-item h4{font-size:20px;margin:0}.billing-item p{margin:8px 0}.billing-invoice{border-left:2px solid #a1ee70;padding:6px 14px;margin-top:18px}.billing>button{margin-top:12px}.billing .actions{gap:8px}.billing .actions button{flex:1} [data-billing-status]{font-size:14px;color:#e2f8ba}

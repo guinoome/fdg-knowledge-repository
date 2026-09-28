@@ -64,21 +64,60 @@ function moduleRow(module) {
   </article>`;
 }
 
+function landingModuleCard(module) {
+  return `<a class="landing-module-card module-${module.id}" href="#platform=${module.id}">
+    <span class="landing-module-shade" aria-hidden="true"></span>
+    <span class="landing-module-copy">${icon(module.icon)}<span><strong>${escapeHtml(module.shortName)}</strong><small>${escapeHtml(module.outcome)}</small></span></span>
+    <span class="landing-module-arrow" aria-hidden="true">${icon("arrow")}</span>
+  </a>`;
+}
+
 function homeView(state) {
-  const category = CATEGORIES.find((item) => item.id === state.selectedCategory) ?? CATEGORIES[0];
-  const featured = MODULES.filter((module) => state.selectedCategory === "all" || module.category === state.selectedCategory).slice(0, 4);
-  return `<main>
-    <section class="ecosystem-hero" data-category-scene="${state.selectedCategory}">
-      <img src="./assets/fdg-business-ecosystem-hero-v1.png" alt="Original FDG concept of connected Filipino business operations" fetchpriority="high">
-      <div class="hero-copy"><p class="truth-label">Interactive ecosystem · prototype</p><h1>One account.<br>Every business you’re building.</h1><p>Discover industry-specific operating platforms designed for real people, real operations, and responsible growth.</p><div class="hero-actions"><button class="button button-lime" data-route="discover">Explore platforms ${icon("arrow")}</button><button class="button button-outline" data-route="platforms">My Platforms</button></div><div class="hero-trust"><span>${icon("shield")} One shared identity</span><span>${icon("branch")} Separate module and branch scopes</span></div></div>
-      <div class="hero-caption"><span>FDG-owned concept environment</span><b>No live integrations connected</b></div>
+  return `<main class="landing-main">
+    <section class="landing-hero" aria-labelledby="landing-title">
+      <picture class="landing-hero-media">
+        <img src="./assets/fdg-business-platform-hero-v2.png" alt="FDG business ecosystem at dusk with fuel, food, retail, automotive, and logistics operations" fetchpriority="high">
+      </picture>
+      <div class="landing-hero-veil" aria-hidden="true"></div>
+      <header class="landing-header">
+        <a class="landing-logo" href="#home" aria-label="FDG Business Platform home">${logo()}</a>
+        <nav class="landing-nav" aria-label="Landing navigation">
+          <a href="#home">Home</a><button data-scroll="landing-platforms">Platforms</button><a href="#discover">Solutions</a><a href="#discover">Pricing</a><a href="#resources">Resources</a>
+          <a class="landing-nav-login" href="/account/">Log In</a>
+          <a class="landing-nav-trial" href="/account/?mode=signup&amp;intent=trial">Start Free 7-Day Trial</a>
+        </nav>
+        <div class="landing-header-actions"><a href="/account/">Log In</a><a class="landing-trial-link" href="/account/?mode=signup&amp;intent=trial">Start Free 7-Day Trial</a></div>
+        <button class="landing-menu" type="button" data-landing-menu aria-expanded="false" aria-label="Open menu">${icon("menu")}</button>
+      </header>
+      <div class="landing-hero-copy">
+        <p class="landing-eyebrow">Business platforms built for real operations</p>
+        <h1 id="landing-title">One Platform.<br>Many Businesses.<br><em>Brighter Tomorrows.</em></h1>
+        <p>Run each business with workflows made for its industry, while one FDG account keeps every module and branch within reach.</p>
+        <div class="landing-hero-actions"><button class="landing-button landing-button-primary" data-scroll="landing-platforms">Explore Platforms ${icon("arrow")}</button><a class="landing-button landing-button-glass" href="/account/?mode=signup&amp;intent=trial">Start Free 7-Day Trial</a></div>
+      </div>
+      <div class="landing-proof" aria-label="FDG platform facts">
+        <span><b>One account</b><small>Across your businesses</small></span>
+        <span><b>Multi-branch ready</b><small>Add locations as you grow</small></span>
+        <span><b>7-day free trial</b><small>For every module</small></span>
+        <span><b>Starts at ₱500</b><small>Per module or branch</small></span>
+      </div>
+      <button class="landing-scroll-cue" data-scroll="landing-platforms"><span>Discover Our Business Platforms</span><i aria-hidden="true"></i></button>
     </section>
-    <section class="ecosystem-selector section-shell"><div class="section-heading"><div><h2>Explore by business outcome</h2><p>${escapeHtml(category.lead)}</p></div><button class="text-link" data-route="discover">View full catalog ${icon("arrow")}</button></div>${categoryRail(state)}
-      <div class="opportunity-track">${featured.map((module) => `<a class="opportunity-card tone-${module.tone}" href="#platform=${module.id}">${icon(module.icon)}<span><small>${escapeHtml(module.availability)}</small><strong>${escapeHtml(module.shortName)}</strong><em>${escapeHtml(module.outcome)}</em></span>${icon("arrow")}</a>`).join("")}</div>
+
+    <section class="landing-discover" id="landing-platforms" aria-labelledby="platforms-title">
+      <div class="landing-section-heading"><p>Designed around the work</p><h2 id="platforms-title">Discover Our Business Platforms</h2><span>Start with the operation you need now. Add branches and independent modules as the business grows.</span></div>
+      <div class="landing-module-grid">${MODULES.map(landingModuleCard).join("")}</div>
+      <a class="landing-text-link" href="#discover">Explore the full platform catalog ${icon("arrow")}</a>
     </section>
-    <section class="account-story section-shell"><div class="story-copy"><h2>Start with one branch. Keep the path to a portfolio open.</h2><p>7-day free trial for every module. Plans start at ₱500/month per module or branch, depending on setup. One FDG account, separate subscriptions and operational workspaces. Trial and billing flows currently remain local demonstrations.</p><button class="button button-dark" data-route="platforms">See the portfolio bridge ${icon("arrow")}</button></div><div class="growth-path"><span><b>01</b>One entrepreneur</span><i></i><span><b>02</b>One business</span><i></i><span><b>03</b>Multiple branches</span><i></i><span><b>04</b>Enterprise network</span></div></section>
-    <section class="how-it-works section-shell"><div class="section-heading"><div><h2>Discover. Activate. Operate.</h2><p>A short path into a dedicated domain workspace.</p></div></div><ol><li><b>1</b><h3>Find the right platform</h3><p>Search by business, workflow, or growth goal.</p></li><li><b>2</b><h3>Activate independently</h3><p>Choose a module plan and branch scope without buying the whole ecosystem.</p></li><li><b>3</b><h3>Open real operations</h3><p>Enter a domain-native workspace. Fuel Operations is connected first.</p></li></ol></section>
-    <section class="truth-band"><div><strong>Prototype boundary</strong><p>Identity, subscriptions, permissions, cancellation, and payment states are local workflow demonstrations. No charge is made and no production identity is claimed.</p></div><button class="button button-lime" data-route="account">Review account model</button></section>
+
+    <section class="landing-story" aria-labelledby="landing-story-title">
+      <div><p>One identity. Clear boundaries.</p><h2 id="landing-story-title">A platform that grows without flattening your businesses.</h2><span>Each module keeps its own workspace, branch scope, people, and subscription. The account keeps access simple; the operating data stays in the right context.</span></div>
+      <ol class="landing-growth-path"><li><b>01</b>One business</li><li><b>02</b>Multiple branches</li><li><b>03</b>More modules</li><li><b>04</b>Independent plans</li></ol>
+    </section>
+
+    <section class="landing-how" aria-labelledby="landing-how-title"><div class="landing-section-heading"><p>Simple to begin</p><h2 id="landing-how-title">Discover. Activate. Operate.</h2></div><ol><li><b>1</b><h3>Choose a platform</h3><p>Find the business workflow that fits the operation.</p></li><li><b>2</b><h3>Start the free trial</h3><p>Create an FDG account and define the first branch.</p></li><li><b>3</b><h3>Open the workspace</h3><p>Work inside a focused, domain-native operating environment.</p></li></ol></section>
+
+    <section class="landing-final-cta"><p>Build what’s next.</p><h2>Start with one platform. Keep every opportunity open.</h2><div><a class="landing-button landing-button-primary" href="/account/?mode=signup&amp;intent=trial">Start Free 7-Day Trial ${icon("arrow")}</a><a class="landing-button landing-button-glass" href="/account/">Log In</a></div><small>Fuel Operations is the first connected workspace. Other modules are clearly marked as roadmap previews.</small></section>
   </main>`;
 }
 
@@ -123,7 +162,7 @@ function subscriptionRow(subscription) {
 function platformsView(state) {
   const filters = ["All", "Active", "Trial", "Setup incomplete", "Cancelled"];
   const visible = state.subscriptions.filter((item) => state.platformFilter === "All" || item.status === state.platformFilter);
-  return `<main class="page-shell"><header class="page-intro"><div><p>Your portfolio bridge</p><h1>My Platforms</h1><span>One prototype identity. Separate module instances, branch scopes, users, and billing states.</span></div><button class="button button-primary" data-route="discover">${icon("plus")} Add platform</button></header><div class="local-banner">${icon("shield")}<span><b>Local prototype account</b>No production authentication or billing provider is connected.</span></div><div class="filter-tabs">${filters.map((filter) => `<button class="${state.platformFilter === filter ? "is-selected" : ""}" data-platform-filter="${filter}">${filter}</button>`).join("")}</div><section class="subscription-list">${visible.length ? visible.map(subscriptionRow).join("") : `<div class="empty-state"><h2>No platforms in this state.</h2><p>Choose another filter or explore the catalog.</p></div>`}</section><section class="portfolio-actions"><button data-route="portfolio">${icon("opportunity")}<span><b>Portfolio analytics</b>Compare domains without forcing them into one score.</span>${icon("arrow")}</button><button data-route="permissions">${icon("shield")}<span><b>People & permissions</b>Review roles by module and branch.</span>${icon("arrow")}</button></section></main>`;
+  return `<main class="page-shell"><header class="page-intro"><div><p>Your portfolio bridge</p><h1>My Platforms</h1><span>One prototype identity. Separate module instances, branch scopes, users, and billing states.</span></div><button class="button button-primary" data-route="discover">${icon("plus")} Add platform</button></header><div class="local-banner">${icon("shield")}<span><b>Local prototype account</b>Demo records are not linked to client login. No billing provider is connected.</span></div><div class="filter-tabs">${filters.map((filter) => `<button class="${state.platformFilter === filter ? "is-selected" : ""}" data-platform-filter="${filter}">${filter}</button>`).join("")}</div><section class="subscription-list">${visible.length ? visible.map(subscriptionRow).join("") : `<div class="empty-state"><h2>No platforms in this state.</h2><p>Choose another filter or explore the catalog.</p></div>`}</section><section class="portfolio-actions"><button data-route="portfolio">${icon("opportunity")}<span><b>Portfolio analytics</b>Compare domains without forcing them into one score.</span>${icon("arrow")}</button><button data-route="permissions">${icon("shield")}<span><b>People & permissions</b>Review roles by module and branch.</span>${icon("arrow")}</button></section></main>`;
 }
 
 function portfolioView(state) {
@@ -179,5 +218,6 @@ function pageContent(state, route) {
 }
 
 export function renderApp(state, route) {
-  return `<div class="app-shell"><aside class="side-rail"><button class="logo-button" data-route="home" aria-label="FDG Business Platform home">${logo()}</button><nav>${shellNav(route)}</nav><div class="rail-statement"><i></i><p>Different businesses.<br><b>One account.</b><br>A stronger tomorrow.</p></div><span class="prototype-marker">PROTOTYPE · LOCAL STATE</span></aside><div class="app-main"><header class="topbar"><button class="mobile-menu" data-menu aria-label="Open navigation">${icon("menu")}</button><button class="mobile-logo" data-route="home">${logo()}</button><button class="global-search" data-route="search">${icon("discover")}<span>Search platforms, opportunities, or help</span></button><div class="topbar-account"><span><b>${escapeHtml(state.account.person)}</b><small>${escapeHtml(state.account.organization)}</small></span><button data-route="account" aria-label="Open account">JD</button></div></header>${pageContent(state, route)}<nav class="mobile-dock" aria-label="Primary navigation">${mobileNav(route)}</nav></div></div><div id="toast" class="toast" role="status" aria-live="polite"></div>`;
+  if (route.page === "home") return `${homeView(state)}<div id="toast" class="toast" role="status" aria-live="polite"></div>`;
+  return `<div class="app-shell"><aside class="side-rail"><button class="logo-button" data-route="home" aria-label="FDG Business Platform home">${logo()}</button><nav>${shellNav(route)}</nav><div class="rail-statement"><i></i><p>Different businesses.<br><b>One account.</b><br>A stronger tomorrow.</p></div><span class="prototype-marker">PROTOTYPE · LOCAL STATE</span></aside><div class="app-main"><header class="topbar"><button class="mobile-menu" data-menu aria-label="Open navigation">${icon("menu")}</button><button class="mobile-logo" data-route="home">${logo()}</button><button class="global-search" data-route="search">${icon("discover")}<span>Search platforms, opportunities, or help</span></button><div class="topbar-account"><a class="topbar-login" href="/account/">Log In</a></div></header>${pageContent(state, route)}<nav class="mobile-dock" aria-label="Primary navigation">${mobileNav(route)}</nav></div></div><div id="toast" class="toast" role="status" aria-live="polite"></div>`;
 }

@@ -1,4 +1,4 @@
-const CACHE = "fdg-business-platform-v10";
+const CACHE = "fdg-business-platform-v12";
 const SHELL = [
   "./",
   "./index.html",
@@ -11,12 +11,16 @@ const SHELL = [
   "./fuel-station/data/nj-gas-station.js",
   "./assets/icon.svg",
   "./assets/fdg-business-ecosystem-hero-v1.png",
+  "./assets/fdg-business-platform-hero-v2.png",
   "./manifest.webmanifest",
 ];
 
 self.addEventListener("install", (event) => event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener("activate", (event) => event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key.startsWith("fdg-business-platform-") && key !== CACHE).map((key) => caches.delete(key)))).then(() => self.clients.claim())));
 self.addEventListener("fetch", (event) => {
+  // Private sessions and authenticated responses are never available offline.
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin || url.pathname === '/account' || url.pathname.startsWith('/account/') || url.pathname.startsWith('/api/')) return;
   if (event.request.method !== "GET") return;
   event.respondWith(fetch(event.request).then((response) => {
     if (response.ok && new URL(event.request.url).origin === self.location.origin) {

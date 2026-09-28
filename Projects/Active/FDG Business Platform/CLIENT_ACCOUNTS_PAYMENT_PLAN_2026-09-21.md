@@ -1,5 +1,7 @@
 # Client accounts and payments — decision plan, not implementation
 
+> Status update 2026-09-27: the owner authorized a separate Free FDG Business Platform Supabase project. Identity/profile implementation has started and passed live-provider isolation tests; see [[HANDOVER_Real_Authentication_2026-09-27]]. Billing terms are now confirmed: PHP500 per module per branch monthly after seven days, manual payments, existing merchant account with isolated FDG configuration. Test-only billing code/database are implemented; provider configuration, end-to-end checkout proof and deployment remain pending. See [[HANDOVER_PayMongo_Test_Billing_2026-09-27]]. Operational membership/ledger integration remains roadmap. The original recommendation/decision language below is historical.
+
 ## Recommendation
 
 Start FDG Business Platform in a separate Supabase project under the same organization, retaining one FDG account across its modules and branch-scoped memberships/subscriptions. Do not merge the Fuel ledger into ML Printing's production schema as a shortcut. Sharing a project is possible, but increases the impact of auth configuration changes, migrations, quota pressure and recovery operations. Separate projects cost more operational effort but provide clearer isolation. This is a recommendation awaiting owner selection, not an infrastructure change.

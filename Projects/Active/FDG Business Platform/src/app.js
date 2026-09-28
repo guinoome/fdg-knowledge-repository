@@ -12,11 +12,13 @@ function routeFromHash() {
 }
 
 function go(page, id = "") {
+  if (page === 'account') { location.assign('/account/'); return; }
   location.hash = `#${page}${id ? `=${id}` : ""}`;
 }
 
 function render() {
   const route = routeFromHash();
+  if (route.page === 'account') { location.replace('/account/'); return; }
   if (route.page === "activate" && (!state.activation || (route.id && state.activation.moduleId !== route.id))) {
     startActivation(state, route.id || "fuel");
   }
@@ -37,6 +39,22 @@ function toast(message) {
 }
 
 function handleClick(event) {
+  const scrollTarget = event.target.closest("[data-scroll]");
+  if (scrollTarget) {
+    document.getElementById(scrollTarget.dataset.scroll)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector(".landing-nav")?.classList.remove("is-open");
+    document.querySelector("[data-landing-menu]")?.setAttribute("aria-expanded", "false");
+    return;
+  }
+
+  const landingMenu = event.target.closest("[data-landing-menu]");
+  if (landingMenu) {
+    const nav = document.querySelector(".landing-nav");
+    const open = nav?.classList.toggle("is-open") ?? false;
+    landingMenu.setAttribute("aria-expanded", String(open));
+    return;
+  }
+
   const route = event.target.closest("button[data-route], a[data-route]");
   if (route) return go(route.dataset.route);
 

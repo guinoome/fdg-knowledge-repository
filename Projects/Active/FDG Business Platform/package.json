@@ -4,7 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/platform-smoke.mjs && node fuel-station/tests/data-smoke.mjs && node fuel-station/tests/reliability.mjs && node fuel-station/tests/operations.mjs && node fuel-station/tests/meters.mjs && node fuel-station/tests/sales-period.mjs && node fuel-station/tests/station-scene.mjs && node fuel-station/tests/attention.mjs && node fuel-station/tests/glass-motion.mjs",
-    "check": "node --check src/app.js && node --check src/views.js && node --check src/store.js && node --check src/icons.js && node --check data/catalog.js && node --check sw.js && npm --prefix fuel-station run check"
+    "build": "node scripts/build-site.mjs",
+    "pretest": "npm run test:payments",
+    "precheck": "npm run check:payments",
+    "test:payments": "node --test tests/payments.test.mjs",
+    "check:payments": "node --check server/paymongo.js && node --check server/payment-handlers.js && node --check api/payments.js && node --check api/paymongo-webhook.js && node --check account/billing.js",
+    "build:auth": "node scripts/build-auth.mjs",
+    "test": "node tests/auth-contract.mjs && node tests/platform-smoke.mjs && node fuel-station/tests/data-smoke.mjs && node fuel-station/tests/reliability.mjs && node fuel-station/tests/operations.mjs && node fuel-station/tests/meters.mjs && node fuel-station/tests/sales-period.mjs && node fuel-station/tests/station-scene.mjs && node fuel-station/tests/attention.mjs && node fuel-station/tests/glass-motion.mjs",
+    "check": "node --check account/account.js && node --check account/config.js && node --check scripts/build-auth.mjs && node --check src/app.js && node --check src/views.js && node --check src/store.js && node --check src/icons.js && node --check data/catalog.js && node --check sw.js && npm --prefix fuel-station run check"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

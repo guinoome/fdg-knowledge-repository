@@ -1,6 +1,20 @@
 # FDG Business Platform — Current Agent Handover
 
-Latest: [[HANDOVER_Dispenser_Meters_2026-09-21]] — per-dispenser/product totalizers and compact hero navigation. Account/payment work remains plan-only: [[CLIENT_ACCOUNTS_PAYMENT_PLAN_2026-09-21]].
+Repository reconciliation (2026-09-29): [[REPOSITORY_RECONCILIATION_2026-09-29]]. Preserve the vault's local Fuel history and GitHub organizational/payroll history. SMTP remains pending; repository synchronization does not establish email delivery or deployment completion.
+
+SMTP continuation (2026-09-28): [[HANDOVER_Brevo_SMTP_2026-09-28]]. Brevo Free account and verified sender inspected; user approved creation of an FDG-only SMTP key and storage only in the separate FDG Supabase project. Key generated, but not yet installed: Supabase dashboard requires GitHub sign-in. Brevo SMTP IP blocking is active with zero authorized IPs. Do not disable it without approval. Signup/recovery delivery remains unverified; no ML Printing or payment changes.
+
+Latest account correction (2026-09-28): [[HANDOVER_Signup_Feedback_2026-09-28]]. Published Show/Hide password and accurate signup/recovery errors. Actual signup failures are provider HTTP 429 email-rate limits, not a proven password error. SMTP/provider selection remains pending; do not call email onboarding fixed. Production account UI and mobile/desktop QA passed; payment isolation unchanged.
+
+Latest verified checkpoint (2026-09-28): [[HANDOVER_PayMongo_Connected_2026-09-28]]. The approved public TEST alias is connected: hosted QRPh simulation, signed provider settlement of PHP500, duplicate replay protection, and account isolation passed. Production payments remain disabled; ML Printing untouched. Disposable QA accounts and their FDG billing records were removed after evidence capture. Provider test audit records remain. No new approval is required to use the dedicated test URL with an existing confirmed FDG account.
+
+Latest landing milestone: [[HANDOVER_Landing_Remaster_2026-09-27]] — the public home is now a full-viewport FDG ecosystem hero with live HTML copy, truthful proof points, responsive glass navigation, below-fold module discovery, and real Log In / Start Free 7-Day Trial routing. Local desktop/tablet/mobile QA passed; production deployment `dpl_4Zq4RqDKVvJiJYaoYVxrhmzKrH97` was verified at 1440×900 and 390×844 on 2026-09-28. Full automated suite, syntax checks and build pass. See the connected-payment handover for screenshot evidence and remaining gates.
+
+Payment implementation history: [[HANDOVER_PayMongo_Test_Billing_2026-09-27]], superseded for connection/release status by [[HANDOVER_PayMongo_Connected_2026-09-28]]. PHP500/module/branch/month after seven days, manual TEST payment. Only `fdgbusinessplatforms-paymongo-test.vercel.app` is public for webhooks; immutable Preview remains protected. QRPh is configured; direct GCash/Maya are inactive. Live-money enablement is a separate approval milestone.
+
+Authentication: [[HANDOVER_Real_Authentication_2026-09-27]] — real Supabase authentication and private profile implemented/tested against a separate Free FDG project. Email delivery/end-to-end recovery and deployment remain gated; do not call client onboarding complete.
+
+Previous operational milestone: [[HANDOVER_Dispenser_Meters_2026-09-21]] — per-dispenser/product totalizers and compact hero navigation. [[CLIENT_ACCOUNTS_PAYMENT_PLAN_2026-09-21]] remains the roadmap for operational authorization and payments.
 
 Latest visual milestone: [[HANDOVER_Fuel_Live_Wallpaper_2026-09-20]] — approved package-led station HUD, responsive wallpaper assets and ambient motion controls. Read its release status before relying on publication. Fuel source/owner gates remain intact.
 
