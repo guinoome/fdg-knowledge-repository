@@ -21,10 +21,19 @@ User authorized reconciling local and GitHub work while preserving both historie
 
 - `npm test`: passed, including 17 payment tests, authentication contracts and Fuel operational/visual contracts.
 - `npm run check`: passed for application, payment and Fuel JavaScript.
+- Build verification uses a fresh external output directory. The default build correctly refused the existing nonempty `public` directory; no existing output was deleted.
 - Scoped high-confidence secret scan found no private SMTP/API/key signatures. `.env.example` contains empty secret placeholders; browser config contains only a publishable Supabase key.
 - Stage only reviewed application paths and this reconciliation note. Do not stage the unrelated untracked ML Printing `.authoritative-worktree` or local secrets/build outputs.
 - Merge histories without force-push, reset, broad file copying or discarding either side. Re-fetch before pushing and stop if unexpected conflicts appear.
 - Final release gate: both local main refs must equal their corresponding live GitHub main refs; both pre-merge histories must be ancestors of the merged vault; normalized application source and release content must match. Report remaining untracked/ignored local-only files explicitly.
+
+## Merge result
+
+- Vault snapshot `88c7572` records the reviewed application work; merge `5cf8744` preserves both initial histories with no conflicts. All 18 remotely changed organizational/payroll files were brought into the local vault.
+- The vault's staged application subtree and the application release commit had identical Git tree `8c7dd8d57ed1caa781b1d9c83bfb49bc83e7b425` before this result note was added. This comparison includes file contents and paths, not just commit counts.
+- No tracked modifications remain outside the documentation update. The unrelated ML Printing `.authoritative-worktree` remains untracked, local-only and untouched. Ignored runtime files are intentionally not mirrored.
+- Whitespace inspection identified an existing generated-bundle warning and a blank line at EOF in the already-published initial SQL migration. These were preserved byte-for-byte, not silently reformatted during synchronization.
+- Publication is validated by comparing live remote main hashes after normal pushes; no force-push is used. Keep this reconciliation distinct from product/email-delivery acceptance.
 
 ## Remaining product gate
 
