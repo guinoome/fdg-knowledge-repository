@@ -131,3 +131,19 @@ dashboards are projections of those facts.
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-IDEA-0001 - FDG Business Platform|FDG Business Platform idea]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index|06 Business Architecture Master Index]] → this document
+
+---
+
+## Enterprise Function Ownership Clarification — 2026-09-27
+
+The Common Business Core supplies shared business primitives and governed financial meaning; it does not replace enterprise departments.
+
+Finance, Accounting and Treasury is the organizational owner of chart of accounts, journals, receivables, payables, payment allocation, cost centers, financial close, cash/treasury, project profitability and financial reporting.
+
+Human Resources and People Operations is the organizational owner of the employee lifecycle and people operations.
+
+Procurement, Purchasing and Supply Chain is the organizational owner of sourcing, supplier qualification, approved vendors, purchase orders and procurement execution.
+
+The presence of these entities and flows in FBIS is therefore evidence of the business-information architecture supporting those departments. The status of a software-development phase shall not be used to infer that the corresponding enterprise function does not exist.
+
+See [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|Enterprise Operating Model]] and [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|Cross-Functional Ownership Matrix]].

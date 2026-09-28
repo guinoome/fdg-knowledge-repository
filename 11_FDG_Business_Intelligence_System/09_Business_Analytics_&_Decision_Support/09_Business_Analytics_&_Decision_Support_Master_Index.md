@@ -3,6 +3,7 @@
 [[11_FDG_Business_Intelligence_System_Master_Index|FBIS System Master Index]]
 
 ## Domain Documents
+- [[09_Business_Analytics_&_Decision_Support/FBIS-UX-PAYROLL-001 - FDG Payroll Role Dashboard Experience|FDG Payroll Role Dashboard Experience]]
 - [[09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework|Commercial_Reporting_Framework]]
 - [[09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report|Daily_Commercial_Report]]
 - [[09_Business_Analytics_&_Decision_Support/FBIS_Executive_Dashboard|FBIS_Executive_Dashboard]]
@@ -20,6 +21,8 @@
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|11 FDG Business Intelligence System Master Index]] → this document
 
 ## Direct Child Documents
+
+- [[11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS-UX-PAYROLL-001 - FDG Payroll Role Dashboard Experience|FDG Payroll Role Dashboard Experience]]
 
 - [[11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework|Commercial Reporting Framework]]
 - [[11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report|Daily Commercial Report]]
