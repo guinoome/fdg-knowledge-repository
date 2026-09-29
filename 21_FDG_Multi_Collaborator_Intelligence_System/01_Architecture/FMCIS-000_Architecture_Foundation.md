@@ -68,4 +68,23 @@ During the current phase, Francis reviews and approves the result. FMCIS prepare
 
 When Nex becomes continuously available, FMCIS can pass the same structured engagement intelligence to Nex without changing the underlying workflow.
 
+## Baby Nex Builder and Runtime Independence
+
+FMCIS distinguishes **who builds Baby Nex** from **what Baby Nex depends on at runtime**.
+
+Current implementation direction:
+
+- Claude Code may serve as the primary Baby Nex v1 builder.
+- Codex, Nex, automated tests, and other collaborators may provide independent review and verification.
+- Multi-agent development is not required by default; one primary builder with multiple reviewers is preferred until added orchestration proves useful.
+- Baby Nex runtime must use FDG-owned knowledge, model, tool, memory, and governance interfaces.
+- Anthropic, OpenAI, local models, and future providers remain replaceable behind adapters.
+
+> **Claude may build Baby Nex; Baby Nex must never require Claude to survive.**
+
+See:
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-003_Work_Package_Allocation|Work Package Allocation]]
+- [[00_Nex/NEX-BOOTSTRAP|Nex Bootstrap]]
+
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS-0000 - FMCIS Master Index]] → this document
