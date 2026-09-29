@@ -46,3 +46,24 @@
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-016_NEX_CORE_INTEGRATION_ARCHITECTURE_STANDARD|FEIP-STD-016 NEX CORE INTEGRATION ARCHITECTURE STANDARD]]
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-017_DEPLOYMENT_AND_INFRASTRUCTURE_ARCHITECTURE_STANDARD|FEIP-STD-017 DEPLOYMENT AND INFRASTRUCTURE ARCHITECTURE STANDARD]]
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-018_IMPLEMENTATION_ROADMAP_AND_MATURITY_MODEL_STANDARD|FEIP-STD-018 IMPLEMENTATION ROADMAP AND MATURITY MODEL STANDARD]]
+
+
+---
+
+## Approved Architecture Extension — 2026-09-30
+
+The following FEIS branches are now canonical entry points for company-system and construction-management development:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/01_Engineering_Company_Core/FEIS-ECC-0000 - Engineering Company Core|FDG Engineering Company Core]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FDG Engineering Construction Management]]
+- [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0000 - Digital Construction Knowledge Library Architecture|FDG Digital Construction & Engineering Knowledge Library]]
+
+### Construction Management Build Entry
+
+Collaborators beginning Construction Management work shall start from:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management Master Index]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog|Bidding to Turnover Template Catalog]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|Multi-Collaborator Build Handover]]
+
+This extension is additive. Existing FEIP standards remain valid unless a controlled evolution explicitly changes them.
