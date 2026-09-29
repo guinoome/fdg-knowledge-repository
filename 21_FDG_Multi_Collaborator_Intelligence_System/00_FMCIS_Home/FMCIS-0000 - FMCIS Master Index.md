@@ -90,6 +90,7 @@ Founder / Final Authority
 - [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/README|Engagement records]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/04_Memory/README|FMCIS Memory]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/README|Nex Interface]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/06_Templates/README|Templates]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/07_Dashboard_Roadmap/README|Dashboard Roadmap]]
 
@@ -162,6 +163,38 @@ Founder / Final Authority
 - Every failed loop must produce information that improves the next loop.
 - FMCIS remembers the work; Nex remembers what the organization learned.
 - Automate execution before automating authority.
+
+## Baby Nex Provider-Neutral Runtime Direction — 2026-09-30
+
+FMCIS now records the approved implementation direction for Baby Nex:
+
+> **One primary builder, multiple independent reviewers.**
+
+Claude Code may build Baby Nex v1 end-to-end when it is the strongest implementation choice. Codex, Nex, automated tests, and future collaborators provide independent review and verification.
+
+Baby Nex itself must remain provider-neutral:
+
+```text
+FDG Knowledge Repository
+        ↓
+FDG Knowledge Access Layer
+        ↓
+Baby Nex Core
+        ↓
+FDG Model / Tool Interfaces
+        ↓
+Anthropic | OpenAI | Local | Future Providers
+```
+
+The builder is replaceable. The model provider is replaceable. FDG-owned knowledge, interfaces, tests, governance, and organizational learning are the enduring assets.
+
+Canonical direction:
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001 — Baby Nex Provider-Neutral Runtime Architecture]]
+
+Related:
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|Agentic Framework]]
+- [[00_Nex/NEX-BOOTSTRAP|Nex Bootstrap]]
+- [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|Work Package Standard]]
 
 ## Current Implementation Rule
 
