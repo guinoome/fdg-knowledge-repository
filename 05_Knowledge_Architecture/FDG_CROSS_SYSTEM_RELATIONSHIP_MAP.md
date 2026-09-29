@@ -62,3 +62,22 @@ This map shows the evidence-supported relationships between FDG system mothers. 
 ## Review rule
 
 Add a cross-system link only when the relationship identifies authority, governance, a dependency, an approved interface, evidence flow, or a defined consumer. Shared terminology alone is not enough.
+
+
+---
+
+## Approved Relationship Extension — 2026-09-30
+
+Within [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS]], the following new governed relationships apply:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/01_Engineering_Company_Core/FEIS-ECC-0000 - Engineering Company Core|Engineering Company Core]] provides shared company/project/user/authority foundations for commercial engineering modules.
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] governs bidding-to-turnover construction execution, progress, quality, commercial preparation, completion and continuity.
+- [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0000 - Digital Construction Knowledge Library Architecture|Digital Construction & Engineering Knowledge Library]] governs cataloged construction/engineering knowledge intended for reuse and commercialization while the FDG Knowledge Repository remains source of truth.
+
+### Relationship Boundaries
+
+- Construction Management consumes company-core identity, project and authority primitives.
+- Construction Management returns validated lessons and reusable knowledge to the governed knowledge architecture.
+- DCKL may distribute knowledge through templates, modules, training, services or future APIs but does not become a second source of truth.
+- FBIS remains the business/commercial intelligence authority; FEIS may produce project-commercial operational records and controlled billing preparation without replacing enterprise finance/commercial governance.
+- FMCIS coordinates collaborators building these systems and enforces Work Package ownership boundaries.
