@@ -362,3 +362,43 @@ Engineering capability scales when objectives are transformed into standardized 
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+
+
+---
+
+# Approved Work Ownership Addendum — 2026-09-30
+
+## 11. Modification Boundary
+
+Every multi-collaborator Work Package should additionally declare:
+
+- owned files / modules / directories,
+- approved shared interfaces,
+- read-only dependencies,
+- prohibited modification areas,
+- expected handover artifact.
+
+## Ownership Rule
+
+A Work Package grants execution authority only within its defined scope.
+
+A collaborator must not rewrite another active Work Package's implementation unless explicit authority to do so is included in the assignment.
+
+Cross-package dependencies may be inspected and referenced. Required changes outside the Work Package must be raised to the responsible owner or coordinator.
+
+## Handover Requirement
+
+A completed or paused Work Package should leave enough structured state that another qualified collaborator can continue without reconstructing prior work from memory or conversation history.
+
+At minimum, the handover should state:
+
+- objective,
+- completed work,
+- current state,
+- open work,
+- owned files,
+- dependencies,
+- decisions,
+- tests / evidence,
+- known defects or risks,
+- next action.
