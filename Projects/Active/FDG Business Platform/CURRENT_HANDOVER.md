@@ -1,5 +1,7 @@
 # FDG Business Platform — Current Agent Handover
 
+Latest continuation (2026-09-29): [[HANDOVER_SMTP_Callback_Billing_2026-09-29]]. Replacement SMTP key submitted directly and user confirmed saved; actual recovery failed with unauthorized-IP evidence. IP protection unchanged. Same-origin callback correction and unavailable-billing control guard implemented/tested. User now approved isolated FDG LIVE PayMongo setup in Production, with a separate webhook and client launch gated on payment/branch-access tests. ML Printing remains out of scope. Read the new handover before older test-only permission/status notes.
+
 Client release validation (2026-09-29): [[HANDOVER_Client_Release_Validation_2026-09-29]]. Published clear expired-email-link feedback; reran actual billing database tests including independent-branch cancellation, no trial restart and no new invoice after stopping renewals. Signup/recovery delivery is still blocked on secure SMTP setup. The former browser session/key is unavailable; do not claim it remains accessible. Live billing and secure paid Fuel entitlements are not implemented/released. Do not invite paying operational clients yet.
 
 Repository reconciliation (2026-09-29): [[REPOSITORY_RECONCILIATION_2026-09-29]]. Preserve the vault's local Fuel history and GitHub organizational/payroll history. SMTP remains pending; repository synchronization does not establish email delivery or deployment completion.

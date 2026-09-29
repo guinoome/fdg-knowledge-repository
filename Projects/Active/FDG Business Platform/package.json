@@ -7,7 +7,7 @@
     "build": "node scripts/build-site.mjs",
     "pretest": "npm run test:payments",
     "precheck": "npm run check:payments",
-    "test:payments": "node --test tests/payments.test.mjs",
+    "test:payments": "node --test tests/payments.test.mjs tests/billing-ui.test.mjs",
     "check:payments": "node --check server/paymongo.js && node --check server/payment-handlers.js && node --check api/payments.js && node --check api/paymongo-webhook.js && node --check account/billing.js",
     "build:auth": "node scripts/build-auth.mjs",
     "test": "node tests/auth-contract.mjs && node tests/platform-smoke.mjs && node fuel-station/tests/data-smoke.mjs && node fuel-station/tests/reliability.mjs && node fuel-station/tests/operations.mjs && node fuel-station/tests/meters.mjs && node fuel-station/tests/sales-period.mjs && node fuel-station/tests/station-scene.mjs && node fuel-station/tests/attention.mjs && node fuel-station/tests/glass-motion.mjs",

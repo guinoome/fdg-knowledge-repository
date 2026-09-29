@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { authConfig } from './config.js';
+import { authConfig, emailRedirectForOrigin } from './config.js';
 import { createBilling } from './billing.js';
 import { authErrorMessage, authLinkFeedback, bindPasswordVisibility } from './auth-feedback.js';
 
@@ -22,6 +22,8 @@ const accountParams = new URLSearchParams(location.search);
 let user = null, recovering = false, signingUp = accountParams.get('mode') === 'signup', generation = 0, checkTimer, profileDirty = false;
 $('profile-form').addEventListener('input', () => { profileDirty = true; });
 const message = text => { $('status').textContent = text; };
+const emailRedirect = emailRedirectForOrigin(location.origin);
+const unsupportedEmailOrigin = `Account emails are not available on this preview. Open ${authConfig.redirect} to create your account or request recovery, then open the email in that same browser.`;
 function hidePrivate() {
   hidePasswords();
   billing.clear();
@@ -73,9 +75,10 @@ function bind(formId, action) {
 }
 bind('login-form', async form => {
   const email = form.elements.email.value.trim(), password = form.elements.password.value;
+  if (signingUp && !emailRedirect) return message(unsupportedEmailOrigin);
   if (signingUp && password.length < 12) return message('Use at least 12 characters for a new password.');
   const result = signingUp
-    ? await client.auth.signUp({ email, password, options: { emailRedirectTo: authConfig.redirect } })
+    ? await client.auth.signUp({ email, password, options: { emailRedirectTo: emailRedirect } })
     : await client.auth.signInWithPassword({ email, password });
   form.elements.password.value = '';
   if (result.error) return message(signingUp ? authErrorMessage(result.error) : 'Sign-in failed. Check your email, password and email confirmation, or try again later.');
@@ -95,7 +98,8 @@ bind('profile-form', async form => {
   message(result.error || !result.data?.length ? 'Not saved. Your session may have expired; sign in again.' : 'Profile saved securely.');
 });
 bind('recovery-form', async form => {
-  const { error } = await client.auth.resetPasswordForEmail(form.elements.email.value.trim(), { redirectTo: authConfig.redirect });
+  if (!emailRedirect) return message(unsupportedEmailOrigin);
+  const { error } = await client.auth.resetPasswordForEmail(form.elements.email.value.trim(), { redirectTo: emailRedirect });
   message(error ? authErrorMessage(error, 'recovery') : 'If the account is eligible, a recovery email will arrive. Open it in this same browser profile.');
 });
 bind('password-form', async form => {

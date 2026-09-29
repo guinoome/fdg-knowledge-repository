@@ -1,5 +1,7 @@
 # Client release validation — 2026-09-29
 
+Superseding continuation: [[HANDOVER_SMTP_Callback_Billing_2026-09-29]]. SMTP replacement is now saved (user confirmed); actual recovery failure is unauthorized IP. Callback origin and unavailable-billing UI corrections are tested. Isolated LIVE setup is now authorized, but live payments and client operational access are not yet released. Preserve all unfinished acceptance gates below.
+
 ## Result
 
 **Not yet client-production ready.** The user requested verified signup through subscriptions. Continued the pending SMTP milestone, tested available boundaries, and corrected one reproducible recovery UX defect. Do not equate test billing with operational access or production subscriptions.

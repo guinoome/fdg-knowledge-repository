@@ -5,3 +5,13 @@ export const authConfig = {
   storageKey: 'fdg-client-auth-v1',
   redirect: 'https://fdgbusinessplatforms.vercel.app/account/'
 };
+
+// PKCE verification must return to the same approved origin that requested mail.
+// Do not derive callbacks from arbitrary preview hosts or a user-supplied return URL.
+const emailOrigins = new Set([
+  'https://fdgbusinessplatforms.vercel.app',
+  'https://fdgbusinessplatforms-paymongo-test.vercel.app'
+]);
+export function emailRedirectForOrigin(origin) {
+  return emailOrigins.has(origin) ? `${origin}/account/` : null;
+}
