@@ -246,6 +246,16 @@ Entry, verified: [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS Home]]
 
 **Internal linking fixed 2026-08-11:** all 12 `00_Index.md` files used `[[../00_FPI_Home]]` relative-path syntax, and internal links used `[[subfolder/file]]` without the full vault prefix — both patterns do not resolve in Obsidian wikilinks, which require full vault-relative paths. Converted to `[[17_FDG_Platform_Intelligence_System/...]]` paths throughout during integration.
 
+## 21 FDG Multi-Collaborator Intelligence System (FMCIS)
+
+FMCIS coordinates external collaborators and native agent environments without replacing the Agentic Framework or making any provider the organizational source of truth.
+
+Entry: [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS Master Index]]
+
+Baby Nex runtime direction: [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
+
+Current architectural rule: one primary builder may implement a work package end-to-end, while independent collaborators review and verify. Provider-specific capability is isolated behind FDG-owned interfaces so the organization can replace Claude, Codex, OpenAI, Anthropic, local models, or future providers without losing its knowledge architecture.
+
 ## Projects/Active
 
 Where specs become running code.
