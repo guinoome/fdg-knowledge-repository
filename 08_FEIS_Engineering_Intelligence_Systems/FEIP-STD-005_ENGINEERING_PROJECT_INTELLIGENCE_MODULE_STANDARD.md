@@ -51,3 +51,27 @@ The FEIP Project Intelligence Module shall support:
 # Project Intelligence Architecture
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|08 FEIS Engineering Intelligence Systems Master Index]] → this document
+
+
+---
+
+# Approved Evolution Addendum — 2026-09-30
+
+The Project Intelligence Module now explicitly recognizes construction management as an end-to-end company capability rather than a reporting-only function.
+
+## Construction Management Scope
+
+Project intelligence should support the governed lifecycle:
+
+Opportunity → Bid / Tender → Award → Contract Setup → Mobilization → Planning → Procurement / Submittals → Site Execution → QA/QC → Progress Measurement → Billing → Testing & Commissioning → Punch List → Turnover / Closeout → Warranty / Lessons Learned.
+
+See:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0001 - Construction Management Lifecycle Architecture|Construction Management Lifecycle Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog|Bidding to Turnover Template Catalog]]
+
+## Continuity Requirement
+
+A project system must preserve enough context, evidence, status, decisions and next actions for a qualified successor to continue work when personnel change.
+
+See [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0003 - Project Continuity and Personnel Handover Standard|Project Continuity and Personnel Handover Standard]].
