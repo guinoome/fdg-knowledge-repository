@@ -4,6 +4,10 @@
 
 ## Domain Documents
 - [[08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition|FDG Payroll Portable Edition]]
+- [[08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard|Expense Evidence and Audit Trail Standard]]
+- [[08_Business_Operating_System/FDG_Receipt_Expense_Intelligence|FDG Receipt & Expense Intelligence]]
+- [[08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow|Receipt OCR and Verification Workflow]]
+- [[08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture|Receipt Storage and Synchronization Architecture]]
 - [[08_Business_Operating_System/Order_Transaction_Intelligence|Order_Transaction_Intelligence]]
 - [[08_Business_Operating_System/Payment_Lifecycle|Payment_Lifecycle]]
 - [[08_Business_Operating_System/Payment_Operations|Payment_Operations]]
@@ -22,6 +26,10 @@
 ## Direct Child Documents
 
 - [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition|FDG Payroll Portable Edition]]
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard|Expense Evidence and Audit Trail Standard]]
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence|FDG Receipt & Expense Intelligence]]
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow|Receipt OCR and Verification Workflow]]
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture|Receipt Storage and Synchronization Architecture]]
 
 - [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence|Order Transaction Intelligence]]
 - [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Lifecycle|Payment Lifecycle]]
