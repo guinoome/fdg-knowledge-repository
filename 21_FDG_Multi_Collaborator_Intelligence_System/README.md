@@ -28,3 +28,12 @@ GitHub is reference-only. The working package is intended for the local Obsidian
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-CURRENT-DESIGN-RECAP|FMCIS-CURRENT-DESIGN-RECAP]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-INDEX-LINKING-MAP|FMCIS-INDEX-LINKING-MAP]]
+
+
+## Baby Nex integration
+
+Baby Nex uses FMCIS for collaborator coordination while remaining architecturally independent of any single builder or model provider.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
+
+> **Runtime principle:** Claude may build Baby Nex; Baby Nex must never require Claude to survive.
