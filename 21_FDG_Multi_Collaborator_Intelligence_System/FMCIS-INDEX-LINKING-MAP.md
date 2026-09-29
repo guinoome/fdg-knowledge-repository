@@ -52,6 +52,13 @@ The existing FDG repository uses vault-relative Obsidian wikilinks and section M
 - [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD|FDG CORE Intelligence Architecture]]
 - [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS]]
 
+## Baby Nex / Nex Interface
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/README|Nex Interface]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-000_Architecture_Foundation|FMCIS Architecture Foundation]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-003_Work_Package_Allocation|Work Package Allocation]]
+
 ## Future integration points
 
 These are proposed, not automatic changes to existing files:
@@ -65,3 +72,12 @@ These are proposed, not automatic changes to existing files:
 No existing repository file is modified by this local package.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/README|README]] → this document
+
+
+## Integration update — 2026-09-30
+
+The Baby Nex provider-neutral runtime direction is now linked into FMCIS. The architecture preserves the FDG Knowledge Repository as source of truth, permits Claude Code as the primary v1 builder, uses independent reviewers such as Codex/Nex, and keeps model/tool providers behind replaceable FDG-owned interfaces.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS Master Index]]
+- [[03_Agentic Framework/03_Agentic Framework_Master_Index|Agentic Framework Master Index]]
+- [[00_Nex/00_Master Index|Nex Core Master Index]]
