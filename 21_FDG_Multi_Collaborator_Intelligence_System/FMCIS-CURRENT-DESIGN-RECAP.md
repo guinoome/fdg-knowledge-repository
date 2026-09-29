@@ -20,6 +20,10 @@
 16. The future dashboard should eliminate permanent manual copy/paste.
 17. The dashboard should eventually become FMCIS intake, coordination, observability, memory, and approval workspace.
 18. GitHub is read-only reference; the working system is local.
+19. Baby Nex v1 should default to one primary builder with multiple independent reviewers rather than forced multi-agent development.
+20. Claude Code may build Baby Nex v1 end-to-end when it is the strongest implementation choice.
+21. Baby Nex must remain provider-neutral: FDG owns the knowledge, interfaces, memory, governance, tests, and architecture; Anthropic, OpenAI, local models, and future providers remain replaceable behind adapters.
+22. Critical organizational knowledge must not exist only inside a collaborator conversation or provider-specific memory.
 
 ## Core statement
 
@@ -41,3 +45,10 @@
 Design FMCIS-001 — Formal Engagement Lifecycle.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/README|README]] → this document
+
+
+## Baby Nex runtime direction
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001 — Baby Nex Provider-Neutral Runtime Architecture]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/README|Nex Interface]]
+- [[03_Agentic Framework/AGENTIC_FRAMEWORK|Agentic Framework]]
