@@ -47,4 +47,20 @@ Safe-correction deployments: Production `dpl_BsHzYsjWU5cxL2e55F7iD8bdnRi9` (`fdg
 
 [Brevo IP security](https://help.brevo.com/hc/en-us/articles/5740111683858-Authorize-and-block-IP-addresses-for-API-and-SMTP-security) confirms SMTP has no learning phase and blocked unknown IPs cannot send. [Supabase's team reply](https://github.com/orgs/supabase/discussions/29370) dated 2024-10-11 says SMTP allowlist IPs are not exposed; treat this as dated evidence, not a guaranteed current support commitment. [Current IPv4 add-on docs](https://supabase.com/docs/guides/platform/ipv4-address) guarantee database ingress only, not static outbound IPs. Do not buy that add-on as an SMTP fix or authorize guessed IPs.
 
-Resume the authorized live milestone from the current PayMongo sign-in/settings state. Do not recreate the SMTP key merely because the browser session was lost: it has been saved, and the remaining observed delivery failure is unauthorized IP. Preserve [[HANDOVER_Client_Release_Validation_2026-09-29]] release gates.
+Resume the authorized live milestone from the current PayMongo Developers email-code dialog. The existing LIVE secret's Show control was opened; PayMongo requires user-controlled verification. The user was asked to enter the six-digit code directly and click Verify and continue. No LIVE key has been read/saved, no live webhook has been registered, and no live checkout or charge has been created. Do not regenerate shared merchant keys. Do not recreate the SMTP key merely because the browser session was lost: it has been saved, and the remaining observed delivery failure is unauthorized IP. Preserve [[HANDOVER_Client_Release_Validation_2026-09-29]] release gates.
+
+## Verified publication and rendered guard acceptance
+
+- Safe implementation checkpoint pushed and remote refs verified: vault main `818ecedf5102ce021565b2382b19386ea42d152e`; application main `2f190c8aa5b73f730ca3eb52d547330bfd18b873`. Vault application subtree and release repository root both hash to `3772c440fc8d43de06aaef7b8b8d9c8d9d72df4d`. This handover addendum follows that code checkpoint.
+- Read-only GET verification confirmed Production and the approved public test alias serve byte-identical account bundle, HTML and billing CSS to that checkpoint. Production anonymous billing remains 503; test alias anonymous billing is 401. This is intentional gating, not live activation.
+- Browser plugin unavailable; regular installed Playwright/Chrome fallback used. The isolated synthetic billing harness rendered actual account HTML/CSS and billing code at 390×900 and 1440×900. Page identity, nonblank render, absence of framework overlay, console health, no horizontal overflow, and screenshots passed.
+- Interaction loop: unavailable response disables branch input/trial; Refresh remains enabled and sends GET only; a synthetic available response restores controls; clearing the account hides and disables billing. No real sign-in, email, trial or payment was created by this harness.
+- Evidence outside the repository: `C:/codex-work/fdg-billing-guard-qa-20260929.cjs`, `C:/codex-work/fdg-billing-unavailable-390-20260929.png`, and `C:/codex-work/fdg-billing-unavailable-1440-20260929.png`. Screenshots visually reviewed: readable glass presentation; no clipping or overlapping controls.
+
+## Live renewal acceptance contract — approved, implementation pending
+
+- An expired branch's PHP500 renewal buys one calendar month beginning at confirmed payment; never invoice the inactive gap.
+- Pending, failed, cancelled or browser-return-only payment must not grant access. Confirmation must come from authenticated provider evidence plus atomic server settlement.
+- Settlement replay must preserve the original access dates, not extend a second month. Price, module, branch ownership and payment mode remain server-owned.
+- Cover late payment after a long gap, month-end/leap-year dates, duplicate/out-of-order callbacks, wrong branch/account, wrong amount/currency, and TEST events attempting LIVE access in the live milestone tests.
+- Existing TEST invoice history and its earlier anchored-period fixtures are unchanged. This approved live rule has not yet been wired into settlement; do not describe it as released.
