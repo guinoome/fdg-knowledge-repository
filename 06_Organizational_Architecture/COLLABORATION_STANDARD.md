@@ -260,3 +260,35 @@ The FDG Ecosystem succeeds when independently specialized collaborators operate 
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[06_Organizational_Architecture/06_Organizational_Architecture_Master_Index|06 Organizational Architecture Master Index]] → this document
+
+
+---
+
+# Approved Collaboration Guardrail Addendum — 2026-09-30
+
+## Non-Rewrite Rule
+
+A collaborator shall not rewrite, refactor, replace, clean up, or take over another collaborator's assigned work unless explicitly authorized by:
+
+- the governing Work Package,
+- the accountable work owner,
+- Nex / authorized coordinator within delegated authority, or
+- Francis as final authority.
+
+Reading another collaborator's work for context does not grant modification authority.
+
+## Cross-Package Improvement Rule
+
+When a collaborator identifies an issue outside its assigned modification scope, it shall:
+
+1. preserve the existing work,
+2. document the evidence and impact,
+3. identify the affected Work Package or owner,
+4. propose a patch, extension, successor artifact, or review item,
+5. escalate conflicts through the defined coordination interface.
+
+Silent overwrite is prohibited.
+
+## Objective
+
+This rule protects parallel execution, accountability, auditability, and multi-collaborator velocity while still allowing controlled improvement.
