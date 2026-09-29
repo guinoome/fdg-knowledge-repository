@@ -179,3 +179,21 @@ Start with [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-000_Architecture_Foundation|FMCIS-000 Architecture Foundation]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/README|README]]
+
+
+---
+
+## Approved Execution Guardrail — 2026-09-30
+
+FMCIS coordination now includes a mandatory non-rewrite boundary:
+
+> Agents and collaborators own only their assigned Work Packages. They may not rewrite another collaborator's assigned work unless explicitly requested or authorized.
+
+Cross-package improvements must be surfaced as dependencies, patches, review items, or successor work rather than silent replacement.
+
+See:
+
+- [[06_Organizational_Architecture/COLLABORATION_STANDARD|Collaboration Standard]]
+- [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|Work Package Standard]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-003_Work_Package_Allocation|FMCIS-003 Work Package Allocation]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|Construction Management Build Handover]]
