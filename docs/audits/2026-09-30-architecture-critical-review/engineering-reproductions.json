@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "reviewed_commit": "392c1e29a78f91f9824096ce3552e3ad990e72e2",
+  "source_path": "Projects/Active/AI/FDG-FP/FDG-FP-HydroCal.html",
+  "source_blob": "73a66de056ffd36fb38bd1fdc56ad5398ed7e590",
+  "runtime": "Isolated JavaScript V8; extracted original helpers and Hydraulic.calculate with explicit DOM/form stubs",
+  "meaning": "reproduced=true confirms the historical defect or unsafe rule, not a passing acceptance test",
+  "cases": [
+    {
+      "id": "HC-01",
+      "kind": "source-function execution",
+      "inputs": {
+        "flow_gpm": 500,
+        "pressure_psi": 100,
+        "efficiency_percent": 80
+      },
+      "actual_bhp": 15.782828282828282,
+      "reference_water_head_ft": 231,
+      "reference_bhp": 36.458333333333336,
+      "understatement_percent": 56.709956709956714,
+      "reproduced": true
+    },
+    {
+      "id": "HC-02",
+      "kind": "source-expression execution",
+      "static_pressure": 0,
+      "actual_fallback": 80,
+      "expected": 0,
+      "reproduced": true
+    },
+    {
+      "id": "HC-03",
+      "kind": "source-function execution; helper-level only",
+      "inputs": {
+        "flow_gpm": 100,
+        "minutes": 60,
+        "reserve_percent": 60,
+        "dead_percent": 40
+      },
+      "actual_gallons": 6000,
+      "expected": "Reject zero usable fraction",
+      "reproduced": true
+    },
+    {
+      "id": "HC-04",
+      "kind": "source rule check; missing engineering context independently inspected",
+      "actual_decision_rule": "npshA > 10 with fixed atmospheric, vapor and friction inputs",
+      "expected": "Manufacturer NPSHR and applicable margin evidence; no universal available-head PASS",
+      "reproduced": true
+    },
+    {
+      "id": "HC-05",
+      "kind": "source-function execution",
+      "inputs": {
+        "flow_gpm": 10000,
+        "max_velocity_ft_s": 1
+      },
+      "actual": {
+        "nominal": 12,
+        "id": 11.938,
+        "velocity": 28.663328193087555
+      },
+      "expected": "No catalogue size meets the limit; do not recommend a passing size",
+      "reproduced": true
+    },
+    {
+      "id": "HC-02B",
+      "kind": "actual Hydraulic.calculate with DOM stubs; form validation not exercised",
+      "inputs": {
+        "flow_gpm": 200,
+        "static_pressure_psi": 0,
+        "length_ft": 0,
+        "elevation_ft": 0
+      },
+      "actual_residual_psi": 80,
+      "expected_residual_psi": 0,
+      "reproduced": true
+    },
+    {
+      "id": "HC-06",
+      "kind": "actual Hydraulic.calculate with DOM stubs",
+      "inputs": {
+        "flow_gpm": 200,
+        "static_pressure_psi": 80,
+        "length_ft": 0,
+        "elevation_ft": 300
+      },
+      "actual_residual_psi": -49.900000000000006,
+      "velocity_pass": true,
+      "rendered_all_acceptable": true,
+      "expected": "No global acceptable verdict with negative residual pressure",
+      "reproduced": true
+    }
+  ],
+  "limitations": [
+    "No end-to-end browser or PDF/chart tests",
+    "Storage test at helper level, outside current reserve-field maximum",
+    "NPSH case is source-rule inspection, not a pump/system assessment",
+    "Water reference power is a dimensional cross-check, not motor selection or code compliance"
+  ]
+}

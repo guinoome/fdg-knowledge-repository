@@ -162,3 +162,10 @@
 ## Proposed Pre-OS runtime foundation
 
 - [[07_Nex_Core_Intelligence/NEX_PRE_OS_RUNTIME_FOUNDATION_INDEX|Nex Pre-OS Runtime Foundation Index]] — Proposed; import does not establish operational runtime status.
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|Intelligence expansion backlog]] prioritizes capability evidence, diagnostic reasoning, uncertainty, safety assurance and controlled learning. It connects to [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|the proposed CORE execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|28 acceptance cases]].

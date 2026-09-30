@@ -40,3 +40,10 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 ## Direct Audit Records
 
 - [[docs/audits/2026-08-29-pre-github-baseline/Knowledge Graph Parent Trace Report|Knowledge Graph Parent Trace Report]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Repository-wide structural review]] includes a pinned inventory, unresolved/ambiguous link candidates and preservation checks. [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|The proposed regression protocol]] distinguishes present gaps from demonstrated regressions across comparable snapshots.

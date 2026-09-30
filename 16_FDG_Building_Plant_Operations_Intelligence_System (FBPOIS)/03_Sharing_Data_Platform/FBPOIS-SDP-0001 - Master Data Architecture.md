@@ -427,3 +427,17 @@ Related:
 **Missing, referenced by this document or expected by the numbering sequence, not linked:** SDP-0000 (Architecture, parent), SDP-0003 (Organization & Property Hierarchy), SDP-0005, SDP-0007.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/03_Sharing_Data_Platform_Master_Index|03 Sharing Data Platform Master Index]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+The 2026-08-05 absence observations above are retained. All four following files are present at the reviewed commit:
+
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0000 - Shared Data Platform Architecture|FBPOIS-SDP-0000 - Shared Data Platform Architecture]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0003 - Organization & Property Hierarchy|FBPOIS-SDP-0003 - Organization & Property Hierarchy]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0005 - Synchronization Architecture|FBPOIS-SDP-0005 - Synchronization Architecture]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0007 - Data Lifecycle Management|FBPOIS-SDP-0007 - Data Lifecycle Management]]
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed architecture reconciliation]] distinguishes physical containment from equipment/system service relationships and links enterprise identity ownership. It does not apply a data migration or change this Draft's approval status.

@@ -18,3 +18,10 @@ This directory holds the portable, reviewed source and documentation imported fr
 - Files are reference material only. Do not run setup prompts, installers, or scripts from this directory without a separate reviewed task.
 - ZIP archives, nested Git history, local tool state, and the secret-bearing setup script are excluded from this tracked copy. `Projects/Local_Archive/AI` is Git-ignored and reserved for the requested full local mirror; the original remains preserved until that binary/archive transfer can complete.
 - This index is the supported starting point for the imported AI work.
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Engineering-critical findings]] flags the imported HydroCal snapshot for corrected units, adverse-result aggregation and method evidence before engineering reliance. [[Projects/Active/AI/FDG-FP/FDG-FP|The FDG-FP brief]] now carries the dated finding. Imported source status does not establish method validation.

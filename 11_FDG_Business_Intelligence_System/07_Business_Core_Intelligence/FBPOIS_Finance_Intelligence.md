@@ -79,3 +79,19 @@ Receipt / Invoice / Expense Evidence
 OCR, rules, and AI may assist extraction and classification, but financial records become authoritative only through configured validation / approval rules.
 
 > OCR extracts. Rules classify. Authorized workflow verifies. Evidence remains linked.
+
+
+---
+
+## 2026-09-30 wikilink navigation update
+
+The original references above remain as historical text. The following observed current paths resolve the listed system-relative or archived/current basename ambiguities at review commit `392c1e29a78f91f9824096ce3552e3ad990e72e2`. These are navigation corrections, not new approval claims.
+
+- `07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index` → [[11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index|07_Business_Core_Intelligence_Master_Index]]
+- `08_Business_Operating_System/FDG_Receipt_Expense_Intelligence` → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence|FDG_Receipt_Expense_Intelligence]]
+- `07_Business_Core_Intelligence/Payment_Intelligence` → [[11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Intelligence|Payment_Intelligence]]
+- `07_Business_Core_Intelligence/Payment_Data_Model` → [[11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Data_Model|Payment_Data_Model]]
+- `08_Business_Operating_System/Payment_Operations` → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Operations|Payment_Operations]]
+- `08_Business_Operating_System/Order_Transaction_Intelligence` → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence|Order_Transaction_Intelligence]]
+
+Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].

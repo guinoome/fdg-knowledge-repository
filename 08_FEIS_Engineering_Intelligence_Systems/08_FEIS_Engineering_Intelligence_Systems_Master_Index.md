@@ -67,3 +67,10 @@ Collaborators beginning Construction Management work shall start from:
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|Multi-Collaborator Build Handover]]
 
 This extension is additive. Existing FEIP standards remain valid unless a controlled evolution explicitly changes them.
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Engineering-critical findings]] records reproducible HydroCal defects requiring correction and independent validation. [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|Proposed execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|acceptance cases]] extend typed-unit, applicability and review controls; they are not approved engineering methods.

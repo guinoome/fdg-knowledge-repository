@@ -69,3 +69,15 @@ Duplicate detection may warn; authorized users decide according to workflow.
 - Superseded
 
 Financial reports should respect the configured trust state.
+
+
+---
+
+## 2026-09-30 wikilink navigation update
+
+The original references above remain as historical text. The following observed current paths resolve the listed system-relative or archived/current basename ambiguities at review commit `392c1e29a78f91f9824096ce3552e3ad990e72e2`. These are navigation corrections, not new approval claims.
+
+- `08_Business_Operating_System/08_Business_Operating_System_Master_Index` → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index|08_Business_Operating_System_Master_Index]]
+- `08_Business_Operating_System/FDG_Receipt_Expense_Intelligence` → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence|FDG_Receipt_Expense_Intelligence]]
+
+Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].

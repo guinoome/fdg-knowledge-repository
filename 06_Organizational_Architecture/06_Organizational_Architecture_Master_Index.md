@@ -37,3 +37,10 @@
 - [[06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD|NEX-STD-127 Enterprise Function Maturity Standard]]
 - [[06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION|Enterprise Function Evolution Record — 2026-09-27]]
 - [[06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG|NEX-STD-128 Enterprise Function Control, Record and KPI Catalog]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed architecture reconciliation]] reuses NEX-STD-124–128 and distinguishes enterprise functions, knowledge-system ownership and deployed capability. [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|The intelligence backlog]] adds measurable proof requirements without inventing departments, staff or legal entities.

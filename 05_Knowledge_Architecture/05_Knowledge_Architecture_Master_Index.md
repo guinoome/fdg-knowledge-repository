@@ -35,3 +35,10 @@
 ## Proposed runtime bridge
 
 - [[05_Knowledge_Architecture/CANONICAL_TRUTH_RESOLUTION_STANDARD|Canonical Truth Resolution Standard]] — Proposed; subject to review and approval.
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Enterprise architecture reconciliation]] is a Proposed cross-system responsibility and identity-contract clarification. [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|Regression protocol]] defines same-snapshot checks; [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|the review]] records measured navigation and authority candidates.

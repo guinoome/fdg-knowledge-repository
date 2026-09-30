@@ -62,3 +62,12 @@ FEXIS may continuously learn, but it shall not continuously redefine truth.
 - [[18_FDG_External_Intelligence_System/17_Deployment/FEXIS-DEP-0000 - Deployment Architecture|FEXIS-DEP-0000 - Deployment Architecture]]
 - [[18_FDG_External_Intelligence_System/18_Roadmap/FEXIS-ROADMAP|FEXIS-ROADMAP]]
 - [[18_FDG_External_Intelligence_System/README|README]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+The current tracked folder is `18_FDG_External_Intelligence_System`; the earlier “17” system label remains preserved as historical text. This is a navigation correction, not a renumbering or charter approval.
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Architecture reconciliation]] records the unresolved numbering/governance distinction; [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|intelligence expansion]] connects external source freshness to controlled learning.

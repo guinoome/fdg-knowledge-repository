@@ -94,3 +94,12 @@ If authority cannot be resolved from repository evidence, Nex must expose the am
 The eligibility rule explicitly requires Approved status, consistent with [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|Document Control]]. This closes the package's unspecified handling of Proposed, Review, and absent status. The standard itself remains Proposed; this clarification does not approve it or any retrieved document.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[05_Knowledge_Architecture/05_Knowledge_Architecture_Master_Index|Knowledge Architecture Master Index]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+Proposed clarification for the next resolver revision: version/date may order versions of the same governed identity and scope. It must not silently choose between different competing authorities or invent approval evidence. Preserve both claims and return AMBIGUOUS when authority cannot be resolved.
+
+Evidence and ownership context: [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|architecture reconciliation]] · [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|regression protocol]]. This addendum does not change the resolver's Proposed status.

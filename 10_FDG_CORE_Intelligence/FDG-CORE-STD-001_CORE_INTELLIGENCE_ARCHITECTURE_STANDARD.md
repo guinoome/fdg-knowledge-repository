@@ -242,3 +242,12 @@ FDG CORE Intelligence transforms validated organizational knowledge into transpa
 [[FDG Ecosystem]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index|10 FDG CORE Intelligence Master Index]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+The earlier connection table's absence claims are historical. The reviewed tree contains [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS]], [[13_FDG_Legal_Intelligence_System/00_FLIS_CORE/FLIS-0002 - Legal Intelligence Architecture|FLIS architecture]] and [[14_FDG_Service_Intelligence_System/00_FSvIS_CORE/FSvIS-0002 - Service Intelligence Architecture|Service Intelligence architecture]]. Presence does not itself establish approval.
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The proposed reconciliation]] interprets CORE's shared mechanisms alongside its existing non-replacement boundary: domain owners retain authority over records and methods. [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|The execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|acceptance cases]] propose a testable bridge; no existing standard is silently superseded.

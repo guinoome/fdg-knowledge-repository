@@ -107,3 +107,14 @@ Capture here first, tags-first, whatever's on your mind. Nothing needs sorting b
 ## Repository integrity follow-up
 
 - [[docs/2026-09-07-repository-audit-and-preos-merge|2026-09-07 repository audit and Pre-OS integration record]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Architecture-critical review and evidence]] · [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed responsibility reconciliation]] · [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|Intelligence expansion backlog]].
+
+Earlier production/test-count descriptions are historical observations, not a fresh validation of the reviewed commit. [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|The engineering review]] reproduces HydroCal defects and records FWIS role-enforcement documentation/source drift. The FWIS source must be recovered or its capability claim reconciled before reliance on that role matrix.
+
+The FLIS baseline/admission labels remain conflicting authority claims until a scoped dated approval record resolves them. Folder 15 has no tracked files in the reviewed Git tree; Git does not prove whether an empty reserved directory exists in a separate local vault. Current paths establish file presence, not approval or deployment.

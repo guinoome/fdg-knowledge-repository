@@ -30,3 +30,23 @@
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture|FDG Common Business Core Architecture]]
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy|Payment Integration Strategy]]
 - [[11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract|Provider Webhook Contract]]
+
+
+---
+
+## 2026-09-30 wikilink navigation update
+
+The original references above remain as historical text. The following observed current paths resolve the listed system-relative or archived/current basename ambiguities at review commit `392c1e29a78f91f9824096ce3552e3ad990e72e2`. These are navigation corrections, not new approval claims.
+
+- `11_FDG_Business_Intelligence_System_Master_Index` → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|11_FDG_Business_Intelligence_System_Master_Index]]
+- `06_Business_Architecture/FBIS_API_Architecture` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_API_Architecture|FBIS_API_Architecture]]
+- `06_Business_Architecture/FBIS_Domain_Boundary` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Domain_Boundary|FBIS_Domain_Boundary]]
+- `06_Business_Architecture/FBIS_Integration_Map` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Integration_Map|FBIS_Integration_Map]]
+- `06_Business_Architecture/FBIS_Reference_Architecture` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Reference_Architecture|FBIS_Reference_Architecture]]
+- `06_Business_Architecture/FBIS_System_Architecture` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_System_Architecture|FBIS_System_Architecture]]
+- `06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture|FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture]]
+- `06_Business_Architecture/Payment_Integration_Strategy` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy|Payment_Integration_Strategy]]
+- `06_Business_Architecture/Provider_Webhook_Contract` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract|Provider_Webhook_Contract]]
+- `06_Business_Architecture/06_Business_Architecture_Master_Index` → [[11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index|06_Business_Architecture_Master_Index]]
+
+Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].

@@ -30,3 +30,10 @@
 - [[10_FDG_CORE_Intelligence/FDG-CORE-STD-010_INTELLIGENCE_ORCHESTRATION_STANDARD|FDG-CORE-STD-010 INTELLIGENCE ORCHESTRATION STANDARD]]
 - [[10_FDG_CORE_Intelligence/FDG-CORE-STD-011_CONTINUOUS_LEARNING_STANDARD|FDG-CORE-STD-011 CONTINUOUS LEARNING STANDARD]]
 - [[10_FDG_CORE_Intelligence/FDG-CORE-STD-012_CORE_INTELLIGENCE_EVOLUTION_ROADMAP|FDG-CORE-STD-012 CORE INTELLIGENCE EVOLUTION ROADMAP]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|Engineering reasoning execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|28 acceptance cases]] are Proposed implementation/review addenda. [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Critical findings]] supplies the observed failure cases; [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|architecture reconciliation]] clarifies mechanism versus domain authority.

@@ -37,3 +37,10 @@ FAIS identifies assurance gaps; FEIS or the responsible engineer owns engineerin
 This document is part of the initial FAIS baseline. It may be expanded through controlled future milestones. Recommendations do not become FDG policy until approved through the applicable governance authority.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FAIS-0000 - FDG Audit Intelligence System]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Engineering-critical findings]] records the reproduced HydroCal defects and FWIS capability drift. [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|Acceptance cases]] specifies future closure evidence; application corrections and independent engineering validation remain open.

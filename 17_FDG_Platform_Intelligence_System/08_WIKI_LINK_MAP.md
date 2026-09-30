@@ -26,3 +26,21 @@ Important cross-system links:
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope|FBPOIS]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+The original paths above remain preserved. [Draft PR #1](https://github.com/guinoome/fdg-knowledge-repository/pull/1) proposes a different layout and remains unmerged at review. Related concepts are already tracked on main at:
+
+- [[17_FDG_Platform_Intelligence_System/01_EDGE_CONTROL_PLANE/01_FDGEI_Edge_Control_Plane_Architecture|Edge/control-plane architecture]]
+- [[17_FDG_Platform_Intelligence_System/02_DATA_PROTECTION/01_Continuous_Data_Protection_Model|Continuous data protection]]
+- [[17_FDG_Platform_Intelligence_System/03_LICENSING/01_Entitlement_Notification_Model|Entitlement notification]]
+- [[17_FDG_Platform_Intelligence_System/05_TELEMETRY_FEEDBACK/01_Platform_Feedback_and_Telemetry_Boundary|Telemetry boundary]]
+- [[17_FDG_Platform_Intelligence_System/04_CLIENT_IT_IP/01_Client_IT_Operational_Visibility|Client IT visibility]]
+- [[17_FDG_Platform_Intelligence_System/06_FPS_GATE/01_FPS_Implementation_Gate|FPS implementation gate]]
+
+Use [[19_FWAIS — FDG Workflow Automation Intelligence System/00_Architecture/FWAIS_Master_Architecture|FWAIS master architecture]] for the cross-system file target instead of a directory-only link. These links show observed counterparts, not a claim that the PR and main texts are equivalent. The specific offline-first lifecycle file referenced above is absent on main and remains unresolved pending reconciliation; no placeholder was created.
+
+Evidence: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].

@@ -334,3 +334,14 @@ Closed by this work: attachment bytes, administrative builders, offline referenc
 - `../FWIS-Shift-Turnover-Prototype/` — the validation prototype this ports from; its schema carried over, its code did not
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+**Verified documentation/source discrepancy; remediation open.** At `392c1e29a78f91f9824096ce3552e3ad990e72e2`, this README names role-control implementation and test files absent from the tracked tree: `src/authz.js`, `supabase/authority.sql`, `supabase/generate-authority.mjs`, `verify/role-test.mjs` and `verify/role-harness.html`. The tracked schema has property-membership controls but not the claimed `guard_role_authority` enforcement.
+
+Earlier implementation/test-count statements are preserved. They do not prove the described role matrix in this snapshot. The mismatch already appears in the August history; this review does not establish a recent deletion or the state of any live database.
+
+[[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|ACR-04 evidence and recovery package]] requires recovery of the actual source or explicit capability reconciliation, followed by real positive/negative database permission tests. No FWIS application source was changed in this knowledge-review package.

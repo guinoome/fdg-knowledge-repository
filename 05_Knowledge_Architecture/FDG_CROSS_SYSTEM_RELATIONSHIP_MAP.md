@@ -81,3 +81,12 @@ Within [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligen
 - DCKL may distribute knowledge through templates, modules, training, services or future APIs but does not become a second source of truth.
 - FBIS remains the business/commercial intelligence authority; FEIS may produce project-commercial operational records and controlled billing preparation without replacing enterprise finance/commercial governance.
 - FMCIS coordinates collaborators building these systems and enforces Work Package ownership boundaries.
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The proposed reconciliation]] connects ECC, CBC and FBPOIS shared entities while retaining domain record ownership. It also records the FLIS approval-label conflict and historical absence/numbering discrepancies. Current file presence does not promote Draft or Proposed knowledge.
+
+Engineering consequences and supporting evidence: [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|critical findings]] · [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|repository review]].

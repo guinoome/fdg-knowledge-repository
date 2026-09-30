@@ -1,0 +1,1927 @@
+{
+  "schema_version": "1.0",
+  "reviewed_commit": "392c1e29a78f91f9824096ce3552e3ad990e72e2",
+  "original_reference_occurrences": 274,
+  "affected_notes": 86,
+  "method": "Append explicit existing current-FBIS destinations; original source references retained; never rewrite OLD content or invent missing targets.",
+  "corrections": [
+    {
+      "source": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "line": 6,
+      "old_target": "00_FBIS_Home/FBIS_Home",
+      "destination": "11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS_Home.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "line": 11,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "line": 12,
+      "old_target": "00_FBIS_Home/00_FBIS_Home_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 6,
+      "old_target": "01_Business_Governance/FBIS_Audit_Model",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Audit_Model.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 7,
+      "old_target": "01_Business_Governance/FBIS_Decision_Log",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Decision_Log.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 8,
+      "old_target": "01_Business_Governance/FBIS_Governance",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Governance.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 9,
+      "old_target": "01_Business_Governance/FBIS_Security_and_Audit",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Security_and_Audit.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 14,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "line": 15,
+      "old_target": "01_Business_Governance/01_Business_Governance_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Audit_Model.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Audit_Model.md",
+      "line": 11,
+      "old_target": "01_Business_Governance/01_Business_Governance_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS_Home.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS_Home.md",
+      "line": 9,
+      "old_target": "00_FBIS_Home/00_FBIS_Home_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Decision_Log.md",
+      "line": 22,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Decision_Log.md",
+      "line": 23,
+      "old_target": "01_Business_Governance/01_Business_Governance_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Governance.md",
+      "line": 20,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Governance.md",
+      "line": 21,
+      "old_target": "01_Business_Governance/01_Business_Governance_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "line": 6,
+      "old_target": "02_Business_Identity/FBIS_Identity",
+      "destination": "11_FDG_Business_Intelligence_System/02_Business_Identity/FBIS_Identity.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "line": 11,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "line": 12,
+      "old_target": "02_Business_Identity/02_Business_Identity_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/02_Business_Identity/FBIS_Identity.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/02_Business_Identity/FBIS_Identity.md",
+      "line": 9,
+      "old_target": "02_Business_Identity/02_Business_Identity_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "line": 6,
+      "old_target": "03_Business_Principles/FBIS_Business_Principles",
+      "destination": "11_FDG_Business_Intelligence_System/03_Business_Principles/FBIS_Business_Principles.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "line": 11,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "line": 12,
+      "old_target": "03_Business_Principles/03_Business_Principles_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Security_and_Audit.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Security_and_Audit.md",
+      "line": 11,
+      "old_target": "01_Business_Governance/01_Business_Governance_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/03_Business_Principles/FBIS_Business_Principles.md",
+      "line": 17,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/03_Business_Principles/FBIS_Business_Principles.md",
+      "line": 18,
+      "old_target": "03_Business_Principles/03_Business_Principles_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "line": 6,
+      "old_target": "04_Business_Knowledge_Management/FBIS_Continuous_Learning",
+      "destination": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Continuous_Learning.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "line": 7,
+      "old_target": "04_Business_Knowledge_Management/FBIS_Knowledge_Governance",
+      "destination": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Knowledge_Governance.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "line": 12,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "line": 13,
+      "old_target": "04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 6,
+      "old_target": "05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 7,
+      "old_target": "05_Business_Knowledge_Architecture/FBIS_Core_Entities",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Core_Entities.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 8,
+      "old_target": "05_Business_Knowledge_Architecture/FBIS_Data_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Data_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 9,
+      "old_target": "05_Business_Knowledge_Architecture/FBIS-DATA-CBDM-001 - Philippine Common Business Data Model",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS-DATA-CBDM-001 - Philippine Common Business Data Model.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 14,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "line": 15,
+      "old_target": "05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Knowledge_Governance.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Knowledge_Governance.md",
+      "line": 11,
+      "old_target": "04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Continuous_Learning.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Continuous_Learning.md",
+      "line": 11,
+      "old_target": "04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model.md",
+      "line": 11,
+      "old_target": "05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Data_Architecture.md",
+      "line": 15,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Data_Architecture.md",
+      "line": 16,
+      "old_target": "05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 6,
+      "old_target": "06_Business_Architecture/FBIS_API_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_API_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 7,
+      "old_target": "06_Business_Architecture/FBIS_Domain_Boundary",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Domain_Boundary.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 8,
+      "old_target": "06_Business_Architecture/FBIS_Integration_Map",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Integration_Map.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 9,
+      "old_target": "06_Business_Architecture/FBIS_Reference_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Reference_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 10,
+      "old_target": "06_Business_Architecture/FBIS_System_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_System_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 11,
+      "old_target": "06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 12,
+      "old_target": "06_Business_Architecture/Payment_Integration_Strategy",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 13,
+      "old_target": "06_Business_Architecture/Provider_Webhook_Contract",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 18,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "line": 19,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Core_Entities.md",
+      "line": 25,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Core_Entities.md",
+      "line": 26,
+      "old_target": "05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_API_Architecture.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_API_Architecture.md",
+      "line": 11,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Domain_Boundary.md",
+      "line": 19,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Domain_Boundary.md",
+      "line": 20,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Integration_Map.md",
+      "line": 14,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Integration_Map.md",
+      "line": 15,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy.md",
+      "line": 16,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy.md",
+      "line": 17,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_System_Architecture.md",
+      "line": 14,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_System_Architecture.md",
+      "line": 15,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract.md",
+      "line": 11,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Reference_Architecture.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Reference_Architecture.md",
+      "line": 11,
+      "old_target": "06_Business_Architecture/06_Business_Architecture_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 6,
+      "old_target": "07_Business_Core_Intelligence/Business_Intelligence_Framework",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Business_Intelligence_Framework.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 7,
+      "old_target": "07_Business_Core_Intelligence/Customer_Commercial_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Commercial_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 8,
+      "old_target": "07_Business_Core_Intelligence/Customer_Value",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Value.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/Discount_Rules",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Discount_Rules.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 10,
+      "old_target": "07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/PayMongo_Phase_1_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/PayMongo_Phase_1_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 12,
+      "old_target": "07_Business_Core_Intelligence/Payment_Data_Model",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Data_Model.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 13,
+      "old_target": "07_Business_Core_Intelligence/Payment_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 14,
+      "old_target": "07_Business_Core_Intelligence/Payment_Provider_Abstraction",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Provider_Abstraction.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 15,
+      "old_target": "07_Business_Core_Intelligence/Payment_Validation_Rules",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Validation_Rules.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 16,
+      "old_target": "07_Business_Core_Intelligence/Pricing_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 17,
+      "old_target": "07_Business_Core_Intelligence/Pricing_Rules",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Rules.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 18,
+      "old_target": "07_Business_Core_Intelligence/Revenue_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 19,
+      "old_target": "07_Business_Core_Intelligence/Revenue_KPI_Framework",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_KPI_Framework.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 20,
+      "old_target": "07_Business_Core_Intelligence/Sales_Funnel",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Funnel.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 21,
+      "old_target": "07_Business_Core_Intelligence/Sales_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 22,
+      "old_target": "07_Business_Core_Intelligence/Voucher_Abuse_Controls",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Abuse_Controls.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 23,
+      "old_target": "07_Business_Core_Intelligence/Voucher_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 24,
+      "old_target": "07_Business_Core_Intelligence/Zero_Value_Order_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Zero_Value_Order_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 29,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "line": 30,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Commercial_Intelligence.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Commercial_Intelligence.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Provider_Abstraction.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Provider_Abstraction.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/PayMongo_Phase_1_Architecture.md",
+      "line": 12,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/PayMongo_Phase_1_Architecture.md",
+      "line": 13,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Data_Model.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Data_Model.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Intelligence.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Intelligence.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 17,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 18,
+      "old_target": "08_Business_Operating_System/FDG_Receipt_Expense_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 71,
+      "old_target": "07_Business_Core_Intelligence/Payment_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 72,
+      "old_target": "07_Business_Core_Intelligence/Payment_Data_Model",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Data_Model.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 73,
+      "old_target": "08_Business_Operating_System/Payment_Operations",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Operations.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 74,
+      "old_target": "08_Business_Operating_System/Order_Transaction_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "line": 75,
+      "old_target": "08_Business_Operating_System/FDG_Receipt_Expense_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Rules.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Rules.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Discount_Rules.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Discount_Rules.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_Intelligence.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_Intelligence.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Business_Intelligence_Framework.md",
+      "line": 16,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Business_Intelligence_Framework.md",
+      "line": 17,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Abuse_Controls.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Abuse_Controls.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Funnel.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Funnel.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Intelligence.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Intelligence.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Intelligence.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Intelligence.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard.md",
+      "line": 10,
+      "old_target": "08_Business_Operating_System/FDG_Receipt_Expense_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 6,
+      "old_target": "08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 7,
+      "old_target": "08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 8,
+      "old_target": "08_Business_Operating_System/FDG_Receipt_Expense_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 10,
+      "old_target": "08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 11,
+      "old_target": "08_Business_Operating_System/Order_Transaction_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 12,
+      "old_target": "08_Business_Operating_System/Payment_Lifecycle",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Lifecycle.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 13,
+      "old_target": "08_Business_Operating_System/Payment_Operations",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Operations.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 14,
+      "old_target": "08_Business_Operating_System/Refund_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 15,
+      "old_target": "08_Business_Operating_System/Refund_Rules",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Rules.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 16,
+      "old_target": "08_Business_Operating_System/Transaction_State_Model",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Transaction_State_Model.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 21,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "line": 22,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Validation_Rules.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Validation_Rules.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Zero_Value_Order_Intelligence.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Zero_Value_Order_Intelligence.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Intelligence.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Intelligence.md",
+      "line": 11,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Value.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Value.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "line": 17,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "line": 18,
+      "old_target": "07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "line": 101,
+      "old_target": "08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "line": 102,
+      "old_target": "08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "line": 103,
+      "old_target": "08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "line": 104,
+      "old_target": "07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Lifecycle.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Lifecycle.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Operations.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Operations.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow.md",
+      "line": 10,
+      "old_target": "08_Business_Operating_System/FDG_Receipt_Expense_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 6,
+      "old_target": "09_Business_Analytics_&_Decision_Support/FBIS-UX-PAYROLL-001 - FDG Payroll Role Dashboard Experience",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS-UX-PAYROLL-001 - FDG Payroll Role Dashboard Experience.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 7,
+      "old_target": "09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 8,
+      "old_target": "09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 9,
+      "old_target": "09_Business_Analytics_&_Decision_Support/FBIS_Executive_Dashboard",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Executive_Dashboard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 10,
+      "old_target": "09_Business_Analytics_&_Decision_Support/FBIS_KPI_Definitions",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_KPI_Definitions.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 11,
+      "old_target": "09_Business_Analytics_&_Decision_Support/FBIS_Payment_Dashboard",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Payment_Dashboard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 12,
+      "old_target": "09_Business_Analytics_&_Decision_Support/FBIS_Reconciliation_Dashboard",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Reconciliation_Dashboard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 13,
+      "old_target": "09_Business_Analytics_&_Decision_Support/FBIS_Voucher_Dashboard",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Voucher_Dashboard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 18,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "line": 19,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Intelligence.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Intelligence.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_KPI_Framework.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_KPI_Framework.md",
+      "line": 9,
+      "old_target": "07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Executive_Dashboard.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Executive_Dashboard.md",
+      "line": 11,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report.md",
+      "line": 9,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture.md",
+      "line": 10,
+      "old_target": "08_Business_Operating_System/FDG_Receipt_Expense_Intelligence",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_KPI_Definitions.md",
+      "line": 16,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_KPI_Definitions.md",
+      "line": 17,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Rules.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Rules.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Voucher_Dashboard.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Voucher_Dashboard.md",
+      "line": 9,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework.md",
+      "line": 9,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Transaction_State_Model.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Transaction_State_Model.md",
+      "line": 9,
+      "old_target": "08_Business_Operating_System/08_Business_Operating_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Reconciliation_Dashboard.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Reconciliation_Dashboard.md",
+      "line": 9,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Payment_Dashboard.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Payment_Dashboard.md",
+      "line": 9,
+      "old_target": "09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "line": 6,
+      "old_target": "10_FDG_Business_Standards/FBIS_Payment_Validation_Standard",
+      "destination": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Payment_Validation_Standard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "line": 7,
+      "old_target": "10_FDG_Business_Standards/FBIS_Testing_Standard",
+      "destination": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Testing_Standard.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "line": 12,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "line": 13,
+      "old_target": "10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Testing_Standard.md",
+      "line": 10,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Testing_Standard.md",
+      "line": 11,
+      "old_target": "10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Payment_Validation_Standard.md",
+      "line": 17,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Payment_Validation_Standard.md",
+      "line": 18,
+      "old_target": "10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "line": 6,
+      "old_target": "12_Business_Playbooks/FBIS-PLB-001_Inquiry_to_Proposal_Engineering_Loop",
+      "destination": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-001_Inquiry_to_Proposal_Engineering_Loop.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "line": 7,
+      "old_target": "12_Business_Playbooks/Payment_Exception_Playbook",
+      "destination": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/Payment_Exception_Playbook.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "line": 12,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "line": 13,
+      "old_target": "12_Business_Playbooks/12_Business_Playbooks_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-001_Inquiry_to_Proposal_Engineering_Loop.md",
+      "line": 15,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-001_Inquiry_to_Proposal_Engineering_Loop.md",
+      "line": 16,
+      "old_target": "12_Business_Playbooks/12_Business_Playbooks_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS_Commercial_Intelligence_Framework.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS_Commercial_Intelligence_Framework.md",
+      "line": 9,
+      "old_target": "11_Business_Frameworks/11_Business_Frameworks_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "line": 6,
+      "old_target": "11_Business_Frameworks/FBIS_Commercial_Intelligence_Framework",
+      "destination": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS_Commercial_Intelligence_Framework.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "line": 11,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "line": 12,
+      "old_target": "11_Business_Frameworks/11_Business_Frameworks_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "line": 6,
+      "old_target": "13_Case_Studies/FBIS_PayMongo_Phase_1_Case",
+      "destination": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS_PayMongo_Phase_1_Case.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "line": 7,
+      "old_target": "13_Case_Studies/FBIS-CASE-DIZLOG-001 - DizLog Business Platform Reference",
+      "destination": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DIZLOG-001 - DizLog Business Platform Reference.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "line": 8,
+      "old_target": "13_Case_Studies/FBIS-CASE-ODOO-OGIS-001 - Odoo OGIS Hospitality Reference",
+      "destination": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-ODOO-OGIS-001 - Odoo OGIS Hospitality Reference.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "line": 13,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "line": 14,
+      "old_target": "13_Case_Studies/13_Case_Studies_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/Payment_Exception_Playbook.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/Payment_Exception_Playbook.md",
+      "line": 9,
+      "old_target": "12_Business_Playbooks/12_Business_Playbooks_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Transaction_Record_Template.md",
+      "line": 29,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Transaction_Record_Template.md",
+      "line": 30,
+      "old_target": "14_Templates_&_Tools/14_Templates_&_Tools_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS_PayMongo_Phase_1_Case.md",
+      "line": 12,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS_PayMongo_Phase_1_Case.md",
+      "line": 13,
+      "old_target": "13_Case_Studies/13_Case_Studies_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Voucher_Record_Template.md",
+      "line": 25,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Voucher_Record_Template.md",
+      "line": 26,
+      "old_target": "14_Templates_&_Tools/14_Templates_&_Tools_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "line": 6,
+      "old_target": "15_Business_Library/FBIS_Architecture_Quick_Reference",
+      "destination": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Architecture_Quick_Reference.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "line": 7,
+      "old_target": "15_Business_Library/FBIS_Terminology",
+      "destination": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Terminology.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "line": 13,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "line": 14,
+      "old_target": "15_Business_Library/15_Business_Library_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Terminology.md",
+      "line": 24,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Terminology.md",
+      "line": 25,
+      "old_target": "15_Business_Library/15_Business_Library_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Architecture_Quick_Reference.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Architecture_Quick_Reference.md",
+      "line": 9,
+      "old_target": "15_Business_Library/15_Business_Library_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "line": 6,
+      "old_target": "14_Templates_&_Tools/FBIS_Transaction_Record_Template",
+      "destination": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Transaction_Record_Template.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "line": 7,
+      "old_target": "14_Templates_&_Tools/FBIS_Voucher_Record_Template",
+      "destination": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Voucher_Record_Template.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "line": 12,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "line": 13,
+      "old_target": "14_Templates_&_Tools/14_Templates_&_Tools_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "line": 6,
+      "old_target": "99_Inbox/README",
+      "destination": "11_FDG_Business_Intelligence_System/99_Inbox/README.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "line": 11,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "line": 12,
+      "old_target": "99_Inbox/99_Inbox_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Roadmap.md",
+      "line": 24,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Roadmap.md",
+      "line": 25,
+      "old_target": "16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/99_Inbox/README.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/99_Inbox/README.md",
+      "line": 9,
+      "old_target": "99_Inbox/99_Inbox_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "line": 3,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "line": 6,
+      "old_target": "16_Strategic_Roadmap/FBIS_Future_Modules",
+      "destination": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Future_Modules.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "line": 7,
+      "old_target": "16_Strategic_Roadmap/FBIS_Roadmap",
+      "destination": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Roadmap.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "line": 8,
+      "old_target": "16_Strategic_Roadmap/FBIS-ROADMAP-CBC-001 - Common Business Core Development Sequence",
+      "destination": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS-ROADMAP-CBC-001 - Common Business Core Development Sequence.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "line": 13,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "line": 14,
+      "old_target": "16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Future_Modules.md",
+      "line": 8,
+      "old_target": "11_FDG_Business_Intelligence_System_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "basis": "Current FBIS sole system index and preserved OLD tree"
+    },
+    {
+      "source": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Future_Modules.md",
+      "line": 9,
+      "old_target": "16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index",
+      "destination": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "basis": "Exact existing path under the current FBIS root"
+    }
+  ]
+}

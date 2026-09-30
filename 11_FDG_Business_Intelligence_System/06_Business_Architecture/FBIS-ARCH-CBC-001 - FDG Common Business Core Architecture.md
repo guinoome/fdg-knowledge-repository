@@ -147,3 +147,10 @@ Procurement, Purchasing and Supply Chain is the organizational owner of sourcing
 The presence of these entities and flows in FBIS is therefore evidence of the business-information architecture supporting those departments. The status of a software-development phase shall not be used to infer that the corresponding enterprise function does not exist.
 
 See [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|Enterprise Operating Model]] and [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|Cross-Functional Ownership Matrix]].
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed ECC–CBC–FBPOIS reconciliation]] records overlapping organization, identity and project primitives. The proposal links semantic IDs and record owners before introducing shared implementation. This note's existing Proposed status and single-company/multi-company distinctions remain controlling within their scope.

@@ -1033,3 +1033,12 @@ The application must resemble commercial engineering software and be suitable fo
 The generated HTML should be several thousand lines long if necessary to ensure completeness and functionality.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+**Engineering reliance blocked pending correction and independent validation.** The reviewed `FDG-FP-HydroCal.html` has a reproducible psi/feet-head pump-power mismatch and can display favorable hydraulic/recommendation results despite adverse conditions. Its NPSH PASS lacks the required manufacturer/application evidence.
+
+The original build brief above is preserved; its requested features are not evidence that the delivered application is validated. [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Engineering-critical findings]] records exact inputs, source locations and limitations. [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|Acceptance cases]] defines proposed closure criteria. This review did not modify or certify the calculator.

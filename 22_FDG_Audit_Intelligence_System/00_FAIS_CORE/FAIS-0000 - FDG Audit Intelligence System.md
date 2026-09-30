@@ -99,3 +99,10 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 - [[22_FDG_Audit_Intelligence_System/20_Audit_Templates_and_Tools/FAIS-TPL-2006 - Verification Record Template|FAIS-TPL-2006 - Verification Record Template]]
 - [[22_FDG_Audit_Intelligence_System/99_ARCHIVE/FAIS-ARC-9900 - Archive Governance|FAIS-ARC-9900 - Archive Governance]]
 - [[22_FDG_Audit_Intelligence_System/README|README]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Architecture-critical repository review]] records findings and open remediation. Supporting records: [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|engineering-critical findings]] and [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|proposed regression protocol]]. The review is not completion of the evidence-gated commercial mandate.

@@ -41,3 +41,10 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 ## Direct Audit Mandates
 
 - [[22_FDG_Audit_Intelligence_System/07_Financial_and_Commercial_Audit/FAIS-FCA-0701 - FDG Enterprise Commercial and Revenue Architecture Audit Mandate|FAIS-FCA-0701 — FDG Enterprise, Commercial & Revenue Architecture Audit Mandate]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|The architecture review]] preserves [[22_FDG_Audit_Intelligence_System/07_Financial_and_Commercial_Audit/FAIS-FCA-0701 - FDG Enterprise Commercial and Revenue Architecture Audit Mandate|FAIS-FCA-0701]] and its evidence gate. For legal/commercial architecture the outcome is **Architecture Withheld — Evidence Gate Not Passed**. No seller, registration, invoice entitlement, IP ownership or legal-entity hierarchy was inferred. The full commercial mandate remains open.

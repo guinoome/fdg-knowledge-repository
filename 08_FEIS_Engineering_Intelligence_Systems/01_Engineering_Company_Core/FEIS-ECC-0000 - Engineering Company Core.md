@@ -98,3 +98,10 @@ Jurisdiction-specific codes, forms, terminology, tax/commercial requirements, an
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-015_DATA_ARCHITECTURE_AND_DATABASE_MODEL_STANDARD|Data Architecture and Database Model]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS]] → this document
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The Proposed cross-system reconciliation]] links this engineering foundation to CBC and FBPOIS identity/record contracts. It does not amend the approved ECC direction. Shared mechanisms and domain acceptance are separated in [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|the proposed CORE reasoning contract]].

@@ -339,3 +339,10 @@ Future Work Begins Here
 ## Direct Child Documents
 
 - [[00_Nex/00_Nex_Master_Index|00 Nex Master Index]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Architecture-critical repository review]] connects current evidence, preserved historical observations and open corrective actions. New proposals: [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|enterprise ownership reconciliation]], [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|engineering reasoning execution contract]], [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|intelligence expansion backlog]]. These additions do not replace approved standards.

@@ -60,3 +60,10 @@
 - [[Projects/Active/ML Projects/ML-DES/infra/README|README]]
 - [[Projects/Active/ML Projects/ML-DES/README|README]]
 - [[Projects/Active/ML Projects/ML-Restaurant Management System/Restaurant Management System|Restaurant Management System]]
+
+
+---
+
+## 2026-09-30 architecture review addendum
+
+[[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Open engineering/capability findings]] links the HydroCal correction package and FWIS role-source recovery. [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|Proposed regression protocol]] requires source/test/deployment evidence before renewing capability claims.
