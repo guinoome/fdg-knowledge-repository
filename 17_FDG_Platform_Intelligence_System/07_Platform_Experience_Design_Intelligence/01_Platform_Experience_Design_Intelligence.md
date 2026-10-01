@@ -70,3 +70,14 @@ FDG should maintain reusable design patterns rather than independently redesigni
 This architecture is governed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|FDG Premium Experience Design & Implementation Mandate]]. It extends this earlier note by requiring every major platform to combine domain-native product experience, honest client-facing value, real workflow, mobile-first execution, and measurable business value. Existing themes and dashboard patterns remain reusable primitives, not a sufficient product identity by themselves.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|00 Index]] → this document
+
+## Embedded Creative & Communication Capability
+
+FPIS now includes a governed shared creation/communication pattern through:
+
+[[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|FDG Creative & Communication Studio]]
+
+This capability allows FDG products to embed image, video, content, voice/communication, assistant and reusable asset workflows directly inside the operating experience while preserving provider-neutral architecture, tenant branding, provenance, approval, security and audit boundaries.
+
+The Studio extends Platform Experience & Design Intelligence; it does not create a separate top-level intelligence system.
+
