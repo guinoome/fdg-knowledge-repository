@@ -548,3 +548,22 @@ These extensions shall preserve the single authoritative audit chain and existin
 - [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FDG Audit Intelligence System]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS Master Index]] → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index|Business Operating System]] → this document
+
+---
+
+## Future Attendance and Employee Mobile Integration
+
+Future payroll integration may use a shared FDG attendance layer supporting both registered company Android terminals and registered employee phones.
+
+Employees may eventually use their own phone for self-service access to their own attendance, work-time summaries, leave, loan, payroll status and posted payslips.
+
+Normal on-site personal-phone attendance should rely on rotating signed site QR plus configured proximity/site evidence rather than a reusable static QR.
+
+Approved drivers and off-site assignments may use an authorized premises-exemption workflow and shall be visibly tagged for Payroll review.
+
+These future capabilities do not change FDG Payroll's authority: Payroll consumes validated/approved attendance facts and remains the authoritative payroll engine.
+
+See:
+
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-ATTENDANCE-001 - FDG Android Attendance Terminal|FDG Android Attendance]]
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-EMPLOYEE-001 - FDG Employee Mobile Self-Service|FDG Employee Mobile Self-Service]]
