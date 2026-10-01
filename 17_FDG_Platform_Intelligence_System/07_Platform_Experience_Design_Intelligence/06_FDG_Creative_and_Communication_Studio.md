@@ -1,16 +1,53 @@
-# FDG Creative & Communication Studio
+# FDG Creative Studio — Creative & Communication Capability
 
 **Status:** Approved Capability Direction  
 **Date:** 2026-10-02  
 **Domain:** FPIS — Platform Experience & Design Intelligence  
 **Type:** Shared embedded platform capability  
+**UI Name:** FDG Creative Studio  
+**Capability Description:** Creative & Communication Capability  
 **Naming principle:** FDG-powered, provider-neutral
 
 ---
 
+## Naming Standard
+
+The canonical **user-facing UI name is:**
+
+**FDG Creative Studio**
+
+Do not label the user-facing workspace:
+
+- AI Studio
+- Generative AI Studio
+- Model Studio
+- OpenAI Studio
+- Provider-specific Studio
+- FDG Creative & Communication Studio
+
+The broader phrase **Creative & Communication Capability** may be used internally in architecture, governance and documentation to describe scope, but the visible product/module name remains **FDG Creative Studio**.
+
+### Rationale
+
+Users should experience a capability and workflow, not a model/provider brand.
+
+The UI name shall remain stable even when the underlying provider changes.
+
+Recommended separation:
+
+`UI: FDG Creative Studio`
+
+→ `Capability Layer: Creative / Communication / Assistant`
+
+→ `Provider Adapter Layer`
+
+→ `OpenAI / Runway / Higgsfield / Local Model / Future Provider`
+
+Provider names may appear only in authorized administrative, diagnostics, cost, provenance or configuration views where technically relevant.
+
 ## Purpose
 
-Define a reusable **FDG Creative & Communication Studio** that can be embedded inside FDG business, engineering, service, marketing, CRM, project and future enterprise platforms.
+Define a reusable **FDG Creative Studio** that can be embedded inside FDG business, engineering, service, marketing, CRM, project and future enterprise platforms.
 
 The concept is inspired by the pattern of putting creation and communication capabilities directly inside the operational product so users do not have to leave the platform to create content, prepare media, communicate with customers, or invoke an assistant.
 
@@ -26,7 +63,7 @@ Example:
 
 `Customer / Project / Product / Campaign / Service Context`
 
-→ `FDG Creative & Communication Studio`
+→ `FDG Creative Studio`
 
 → `Create / Review / Approve / Publish or Use`
 
@@ -44,7 +81,7 @@ Recommended architecture:
 
 → `Authorized Context Layer`
 
-→ `FDG Creative & Communication Studio`
+→ `FDG Creative Studio`
 
 → `Provider Adapter Layer`
 
@@ -487,7 +524,7 @@ The Studio shall not:
 
 ## Canonical Position
 
-The FDG Creative & Communication Studio is a **shared FPIS capability**.
+The **FDG Creative Studio** is a shared FPIS creative and communication capability.
 
 It should be built once and reused across FDG products through governed configuration and provider adapters.
 
