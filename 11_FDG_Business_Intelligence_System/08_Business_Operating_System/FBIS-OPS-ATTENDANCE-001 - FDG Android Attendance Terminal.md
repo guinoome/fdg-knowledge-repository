@@ -366,3 +366,60 @@ Do not build separate attendance databases per FDG project when the shared capab
 - [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FDG Audit Intelligence System]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS Master Index]] → [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index|Business Operating System]] → this document
+
+---
+
+## Approved Dual-Mode Attendance Expansion — 2026-10-01
+
+The attendance architecture is expanded from company-terminal use into a shared dual-capture model.
+
+Employees may create attendance through either:
+
+1. a registered company Android terminal; or
+2. their own registered employee phone when permitted by policy.
+
+Both methods write to the same canonical attendance ledger and are subject to the same identity, validation, audit, correction and payroll controls.
+
+### Company Terminal Mode
+
+`Employee → Company Android Terminal → Identity Check → Clock In / Clock Out → Attendance Ledger`
+
+### Employee Phone On-Site Mode
+
+`Employee Phone → Rotating Signed Site QR → Proximity / Site Evidence → Clock In / Clock Out → Attendance Ledger`
+
+Normal personal-phone on-site attendance should use a frequently rotating cryptographically signed QR rather than a static daily QR.
+
+Recommended additional evidence may include approved local Wi-Fi/network evidence, BLE proximity and optional GPS/geofence evidence.
+
+A QR screenshot or relayed image alone shall not be considered high-confidence premises evidence where stronger proximity controls are configured.
+
+### Duplicate Prevention
+
+If an employee already has a valid Clock In state, another Clock In from either company terminal or personal phone shall be classified as duplicate/conflict rather than creating a second work session.
+
+### Off-Site / Mobile Exemption
+
+Drivers, field employees and other approved off-site assignments may receive an authorized premises-attendance exemption.
+
+The exemption is created by an authorized department/HR/payroll workflow, not by the employee.
+
+Resulting attendance should carry a visible evidence tag such as `OFF-SITE AUTHORIZED` and retain assignment, approval and evidence references.
+
+### Employee Self-Service
+
+The personal-phone experience is defined further in [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-EMPLOYEE-001 - FDG Employee Mobile Self-Service|FDG Employee Mobile Self-Service]].
+
+Employees may eventually view their own work time, attendance history, leave balances/requests, loan balances, payroll status and posted payslips without gaining access to other employees' data.
+
+### Offline Rule
+
+Both company-terminal and employee-phone modes must tolerate temporary loss of Internet or payroll-host connectivity by preserving encrypted, uniquely identified, tamper-evident pending events for later synchronization.
+
+### Attendance Authority Boundary
+
+Raw captured attendance remains evidence, not automatically final payroll input.
+
+`Capture → Validate → Supervisor/Department Verification where required → Payroll Officer Review → Single HR Head Approval → Payroll Calculation`
+
+Existing append-only correction, audit, time-integrity and conflict rules remain in force.
