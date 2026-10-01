@@ -3,6 +3,8 @@
 [[11_FDG_Business_Intelligence_System_Master_Index|FBIS System Master Index]]
 
 ## Domain Documents
+- [[08_Business_Operating_System/FBIS-OPS-ATTENDANCE-001 - FDG Android Attendance Terminal|FDG Android Attendance Terminal]]
+- [[08_Business_Operating_System/FBIS-OPS-EMPLOYEE-001 - FDG Employee Mobile Self-Service|FDG Employee Mobile Self-Service]]
 - [[08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition|FDG Payroll Portable Edition]]
 - [[08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard|Expense Evidence and Audit Trail Standard]]
 - [[08_Business_Operating_System/FDG_Receipt_Expense_Intelligence|FDG Receipt & Expense Intelligence]]
@@ -24,6 +26,9 @@
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|11 FDG Business Intelligence System Master Index]] → this document
 
 ## Direct Child Documents
+
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-ATTENDANCE-001 - FDG Android Attendance Terminal|FDG Android Attendance Terminal]]
+- [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-EMPLOYEE-001 - FDG Employee Mobile Self-Service|FDG Employee Mobile Self-Service]]
 
 - [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition|FDG Payroll Portable Edition]]
 - [[11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard|Expense Evidence and Audit Trail Standard]]
