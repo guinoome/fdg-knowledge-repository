@@ -4,6 +4,8 @@
 
 ### Documents
 
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|06 — FDG Creative & Communication Studio]] *(Approved Capability Direction 2026-10-02 — shared embedded creation, communication, asset and assistant workspace)*
+
 - [[HANDOVER_Fuel_Glass_Motion_2026-09-20|Fuel smoked transparent glass — material, motion, accessibility and release evidence]]
 
 - [[FUEL_REMASTER_ATTENTION_ROLLOUT_2026-09-17|Fuel all-pages glass, Attention Center and rollout refinement]]
