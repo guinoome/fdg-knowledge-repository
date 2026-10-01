@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: Actual Hydraulic.calculate retains zero and rejects missing/nonfinite source evidence
+ok 1 - Actual Hydraulic.calculate retains zero and rejects missing/nonfinite source evidence
+  ---
+  duration_ms: 14.139431
+  type: 'test'
+  ...
+# Subtest: Actual Hydraulic.calculate retains adverse pressure despite passing velocity; PDF carries FAIL
+ok 2 - Actual Hydraulic.calculate retains adverse pressure despite passing velocity; PDF carries FAIL
+  ---
+  duration_ms: 3.232041
+  type: 'test'
+  ...
+# Subtest: Main pump, illustrative curve and jockey use converted pressure; NPSH remains unassessed
+ok 3 - Main pump, illustrative curve and jockey use converted pressure; NPSH remains unassessed
+  ---
+  duration_ms: 3.156627
+  type: 'test'
+  ...
+# Subtest: Actual numeric validator rejects blank/nonfinite and preserves explicitly entered zero
+ok 4 - Actual numeric validator rejects blank/nonfinite and preserves explicitly entered zero
+  ---
+  duration_ms: 1.517361
+  type: 'test'
+  ...
+# Subtest: PipeSizing renders no feasible candidate with no green recommendation
+ok 5 - PipeSizing renders no feasible candidate with no green recommendation
+  ---
+  duration_ms: 1.928493
+  type: 'test'
+  ...
+# Subtest: New result archives original numbers; material input invalidation blocks draft export
+ok 6 - New result archives original numbers; material input invalidation blocks draft export
+  ---
+  duration_ms: 1.640478
+  type: 'test'
+  ...
+# Subtest: Reload preserves legacy answers, stores original JSON and requires explicit recalculation
+ok 7 - Reload preserves legacy answers, stores original JSON and requires explicit recalculation
+  ---
+  duration_ms: 1.698275
+  type: 'test'
+  ...
+# Subtest: Failed preservation backup prevents overwriting the original local project
+ok 8 - Failed preservation backup prevents overwriting the original local project
+  ---
+  duration_ms: 1.506776
+  type: 'test'
+  ...
+# Subtest: Actual PDF method emits draft, unknown NPSH and unknown pressure without approval claims
+ok 9 - Actual PDF method emits draft, unknown NPSH and unknown pressure without approval claims
+  ---
+  duration_ms: 2.058339
+  type: 'test'
+  ...
+# Subtest: Stale results block PDF export before any document is emitted
+ok 10 - Stale results block PDF export before any document is emitted
+  ---
+  duration_ms: 2.562871
+  type: 'test'
+  ...
+# Subtest: ACR-01: 500 US GPM, 100 psi, 80% gives 36.458333 BHP for stated water reference
+ok 11 - ACR-01: 500 US GPM, 100 psi, 80% gives 36.458333 BHP for stated water reference
+  ---
+  duration_ms: 0.883174
+  type: 'test'
+  ...
+# Subtest: Pressure conversion accounts for specific gravity without double multiplying pressure power
+ok 12 - Pressure conversion accounts for specific gravity without double multiplying pressure power
+  ---
+  duration_ms: 0.136326
+  type: 'test'
+  ...
+# Subtest: Pump helper rejects undefined, nonfinite and invalid efficiency/domain
+ok 13 - Pump helper rejects undefined, nonfinite and invalid efficiency/domain
+  ---
+  duration_ms: 0.681088
+  type: 'test'
+  ...
+# Subtest: Zero-flow curve point remains valid, without division by zero efficiency
+ok 14 - Zero-flow curve point remains valid, without division by zero efficiency
+  ---
+  duration_ms: 0.118328
+  type: 'test'
+  ...
+# Subtest: ACR-02c: an exhausted catalogue returns no feasible candidate
+ok 15 - ACR-02c: an exhausted catalogue returns no feasible candidate
+  ---
+  duration_ms: 0.208465
+  type: 'test'
+  ...
+# Subtest: A feasible catalogue query still returns a useful result
+ok 16 - A feasible catalogue query still returns a useful result
+  ---
+  duration_ms: 0.367896
+  type: 'test'
+  ...
+# Subtest: Pipe helper rejects invalid inputs rather than fabricating a candidate
+ok 17 - Pipe helper rejects invalid inputs rather than fabricating a candidate
+  ---
+  duration_ms: 0.427105
+  type: 'test'
+  ...
+# Subtest: ACR-02d: storage domain failures are explicit; valid reserve remains calculated
+ok 18 - ACR-02d: storage domain failures are explicit; valid reserve remains calculated
+  ---
+  duration_ms: 0.234604
+  type: 'test'
+  ...
+# Subtest: All executable inline scripts parse
+ok 19 - All executable inline scripts parse
+  ---
+  duration_ms: 1.835252
+  type: 'test'
+  ...
+# Subtest: The exact historical source remains preserved as a non-executable evidence snapshot
+ok 20 - The exact historical source remains preserved as a non-executable evidence snapshot
+  ---
+  duration_ms: 1.121153
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 118.376344

@@ -103,3 +103,12 @@ The eligibility rule explicitly requires Approved status, consistent with [[01_G
 Proposed clarification for the next resolver revision: version/date may order versions of the same governed identity and scope. It must not silently choose between different competing authorities or invent approval evidence. Preserve both claims and return AMBIGUOUS when authority cannot be resolved.
 
 Evidence and ownership context: [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|architecture reconciliation]] · [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|regression protocol]]. This addendum does not change the resolver's Proposed status.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Proposed scoped-resolution clarification: preserve original status text, and resolve approval for the exact identity, clauses, intended use and effective time. An Approver field is not a completed approval. “Approved Direction” can govern a direction without approving every implementation. Version/date only orders the same governed identity/scope after approval eligibility; it cannot settle different authorities. Attach a decision record to exact content/version and preserve alternatives when unresolved.
+
+This clarification and the resolver remain Proposed. See [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] and [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]].

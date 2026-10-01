@@ -1,0 +1,244 @@
+{
+  "baseline": "2425ee27785c67b2e0740e745d9e793f1552ef84",
+  "before": {
+    "files": 1981,
+    "markdown": 1233,
+    "wiki_links": 5903,
+    "unresolved": 544,
+    "ambiguous": 173,
+    "documents_with_id": 254,
+    "duplicate_id_groups": 0,
+    "markdown_without_resolved_wiki_inlinks": 178,
+    "byClass": {
+      "current-path": {
+        "OK": 3858,
+        "AMBIGUOUS": 99,
+        "UNRESOLVED": 246
+      },
+      "import/reference": {
+        "OK": 381,
+        "AMBIGUOUS": 0,
+        "UNRESOLVED": 245
+      },
+      "historical": {
+        "OK": 573,
+        "AMBIGUOUS": 74,
+        "UNRESOLVED": 19
+      },
+      "project": {
+        "OK": 374,
+        "AMBIGUOUS": 0,
+        "UNRESOLVED": 34
+      }
+    },
+    "approved_without_effective_date": 156
+  },
+  "after": {
+    "files": 1997,
+    "markdown": 1238,
+    "wiki_links": 6003,
+    "unresolved": 544,
+    "ambiguous": 173,
+    "documents_with_id": 259,
+    "duplicate_id_groups": 0,
+    "markdown_without_resolved_wiki_inlinks": 178,
+    "byClass": {
+      "current-path": {
+        "OK": 3948,
+        "AMBIGUOUS": 99,
+        "UNRESOLVED": 246
+      },
+      "project": {
+        "OK": 384,
+        "AMBIGUOUS": 0,
+        "UNRESOLVED": 34
+      },
+      "import/reference": {
+        "OK": 381,
+        "AMBIGUOUS": 0,
+        "UNRESOLVED": 245
+      },
+      "historical": {
+        "OK": 573,
+        "AMBIGUOUS": 74,
+        "UNRESOLVED": 19
+      }
+    },
+    "approved_without_effective_date": 156
+  },
+  "markdownAddenda": [
+    {
+      "path": "01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK.md",
+      "originalBlob": "0c4f3c8e124999e8ec0a765173fe2253140525ca",
+      "originalBytes": 6472,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "05_Knowledge_Architecture/05_Knowledge_Architecture_Master_Index.md",
+      "originalBlob": "171a89a75783d86062a5b42b02e7e82517cc96ed",
+      "originalBytes": 2355,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "05_Knowledge_Architecture/CANONICAL_TRUTH_RESOLUTION_STANDARD.md",
+      "originalBlob": "ef01b25a2e284ced39e68768e72ad9a3b2c7ab1a",
+      "originalBytes": 5305,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30.md",
+      "originalBlob": "29d998144cc6537080ada1c02df04cef9d1e56ca",
+      "originalBytes": 11603,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/01_Engineering_Company_Core/FEIS-ECC-0000 - Engineering Company Core.md",
+      "originalBlob": "44a4d4879884bb35f325476a0c73348acb62b35b",
+      "originalBytes": 4783,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/09_FDG_Ecosystem_Integration_Hub_Master_Index.md",
+      "originalBlob": "0d64b33e41cc72c8d267d8b925f9dd872aa0acc6",
+      "originalBytes": 2541,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30.md",
+      "originalBlob": "0a851f0428d2aeb898dbb3b3c2d813d2a49fa895",
+      "originalBytes": 10937,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30.md",
+      "originalBlob": "71d2998ffbb06039f901c0b3a8dab71f9202b611",
+      "originalBytes": 6085,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture.md",
+      "originalBlob": "54cc66031e7fcbfcb689639d021fac2234e1d815",
+      "originalBytes": 6463,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/README.md",
+      "originalBlob": "2531fed2048431a6abee641bd4b1be6a72bf2e05",
+      "originalBytes": 7392,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-IMPL-0003 - Local Completion Record.md",
+      "originalBlob": "d07280e47bb56685eca474f6583727e3dec83cce",
+      "originalBytes": 11708,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0001 - Master Data Architecture.md",
+      "originalBlob": "d10952670446b151afbb8eca1a991c7e2dedb045",
+      "originalBytes": 8481,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30.md",
+      "originalBlob": "83f6224a99f7397ffb74180df8838f8d278b4091",
+      "originalBytes": 7714,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30.md",
+      "originalBlob": "2aa80b8110d21ef78f55e9b369f53ce960b35e65",
+      "originalBytes": 11973,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "FDG Ecosystem.md",
+      "originalBlob": "bdd48b6409510e25bf45877e9c728f7389b9b58b",
+      "originalBytes": 11894,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "Projects/Active/FWIS-Shift-Turnover-Prototype/CLAUDE.md",
+      "originalBlob": "9f9cd008a32b36df16f6b9cdc391ae278ab91e7e",
+      "originalBytes": 18262,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "Projects/Active/FWIS/README.md",
+      "originalBlob": "4720ebe198d22c77c834e4be4ab2ed5523879c92",
+      "originalBytes": 34087,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "Projects/Active/FWIS/supabase/README.md",
+      "originalBlob": "a9a524acc76c525506bf61cc4a67606ea566be9d",
+      "originalBytes": 8645,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "README.md",
+      "originalBlob": "9e43396598c4e0f183bc16babb27daaa05d7e0d0",
+      "originalBytes": 9202,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW.md",
+      "originalBlob": "3feaf51bc51ef09ebb04a119b34cb1bec0d85413",
+      "originalBytes": 12590,
+      "preservedAsExactPrefix": true
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/VERIFICATION.md",
+      "originalBlob": "0a1d62967313d84f3e0c3ca7e2926f7b0c80a3e3",
+      "originalBytes": 5909,
+      "preservedAsExactPrefix": true
+    }
+  ],
+  "addedWikiLinks": 100,
+  "addedWikiLinksNotUniquelyResolved": [],
+  "newDuplicateIds": [],
+  "approvalEvidenceQueueCount": 156,
+  "targets": [
+    {
+      "path": "05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01.md",
+      "gitBlob": "1ca53585ddb24b9833628c4486553f66a8d3c405"
+    },
+    {
+      "path": "05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30.md",
+      "gitBlob": "333a554dcbf587654e729332d76315e0ee0fd54c"
+    },
+    {
+      "path": "05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01.md",
+      "gitBlob": "60523b0b1731ff748aaadd70a7d2d363c69a1ea7"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01.md",
+      "gitBlob": "ac95bebebade776f0f645309b3a48a7712619c04"
+    },
+    {
+      "path": "01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK.md",
+      "gitBlob": "e44ca94a18915b973466397df346064b7fac34cc"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-FP/FDG-FP-HydroCal.html",
+      "gitBlob": "593561cfaac26a05e4f775ba4e42caa8c5a1cf6e"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-FP/history/FDG-FP-HydroCal.pre-2026-10-01.html.txt",
+      "gitBlob": "73a66de056ffd36fb38bd1fdc56ad5398ed7e590"
+    },
+    {
+      "path": "Projects/Active/FWIS/capabilities-2026-10-01.json",
+      "gitBlob": "9aeea8621b21c5fbe7bfebd93c2fd95e19499d86"
+    },
+    {
+      "path": "Projects/Active/FWIS/verify/capability-check.mjs",
+      "gitBlob": "130e78b84dc43eb69b87c1e8f3a2df7d463f00d2"
+    }
+  ],
+  "limitations": [
+    "File targets only; headings, block IDs and YAML aliases not resolved",
+    "Existing unresolved/ambiguous references preserved",
+    "This check cannot verify approval or engineering correctness"
+  ]
+}

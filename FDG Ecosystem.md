@@ -118,3 +118,12 @@ Capture here first, tags-first, whatever's on your mind. Nothing needs sorting b
 Earlier production/test-count descriptions are historical observations, not a fresh validation of the reviewed commit. [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|The engineering review]] reproduces HydroCal defects and records FWIS role-enforcement documentation/source drift. The FWIS source must be recovered or its capability claim reconciled before reliance on that role matrix.
 
 The FLIS baseline/admission labels remain conflicting authority claims until a scoped dated approval record resolves them. Folder 15 has no tracked files in the reviewed Git tree; Git does not prove whether an empty reserved directory exists in a separate local vault. Current paths establish file presence, not approval or deployment.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Scope reconciliation: the FLIS README declares approval of its folder structure on 2026-08-29 and expressly excludes blanket legal-content verification. The root map's Draft/admission label remains an unresolved admission claim. These are separate scopes, not a reason to treat all FLIS content as approved or erase the structural claim. No independent approval record was located in this review. See AUTH-02 in [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] and decision D2 in [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]].
+
+Current fixes and limits: [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]].

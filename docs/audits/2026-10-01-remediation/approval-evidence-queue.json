@@ -1,0 +1,1099 @@
+{
+  "baseline": "2425ee27785c67b2e0740e745d9e793f1552ef84",
+  "scope": "Recognized exact Approved headers; not a finding that approval never occurred",
+  "count": 156,
+  "documents": [
+    {
+      "path": "00_Nex/CONSTITUTIONAL_AUTHORITY.md",
+      "document_id": null,
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "01_Governance/NEX-STD-002_DOCUMENT_CONTROL.md",
+      "document_id": "NEX-STD-002",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD.md",
+      "document_id": "NEX-STD-003",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "01_Governance/NEX-STD-004_OPERATING_PRINCIPLES.md",
+      "document_id": "NEX-STD-004",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "01_Governance/NEX-STD-005_CONSTITUTION.md",
+      "document_id": "NEX-STD-005",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "02_Identity/00_IDENTITY_MODEL.md",
+      "document_id": "NEX-STD-123",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "02_Identity/COLLABORATION_FRAMEWORK.md",
+      "document_id": "NEX-STD-010",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "02_Identity/IDENTITY.md",
+      "document_id": "NEX-STD-009",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "02_Identity/SOUL.md",
+      "document_id": "NEX-STD-008",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "02_Identity/USER.md",
+      "document_id": "NEX-STD-007",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/00_AGENTIC_MODEL.md",
+      "document_id": "NEX-STD-011",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/AGENTIC_FRAMEWORK.md",
+      "document_id": "NEX-STD-017",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/AGENT_LIFECYCLE.md",
+      "document_id": "NEX-STD-016",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/AGENT_READINESS_5R.md",
+      "document_id": "NEX-STD-014",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/AUTHORITY_LEVELS.md",
+      "document_id": "NEX-STD-013",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/CONTEXT_REQUIREMENTS.md",
+      "document_id": "NEX-STD-015",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "03_Agentic Framework/ENGINEERING_OBJECTIVE.md",
+      "document_id": "NEX-STD-012",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/00_KNOWLEDGE_MODEL.md",
+      "document_id": "NEX-STD-018",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_APPROVAL_STANDARD.md",
+      "document_id": "NEX-STD-022",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD.md",
+      "document_id": "NEX-STD-020",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_EVOLUTION_STANDARD.md",
+      "document_id": "NEX-STD-024",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_LIFECYCLE.md",
+      "document_id": "NEX-STD-019",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_PRESERVATION_STANDARD.md",
+      "document_id": "NEX-STD-023",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_REVIEW_STANDARD.md",
+      "document_id": "NEX-STD-021",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/00_ARCHITECTURE_MODEL.md",
+      "document_id": "NEX-STD-025",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/ARCHIVE_STANDARD.md",
+      "document_id": "NEX-STD-035",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/KNOWLEDGE_ASSET_STANDARD.md",
+      "document_id": "NEX-STD-029",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/KNOWLEDGE_ASSET_TEMPLATE_STANDARD.md",
+      "document_id": "NEX-STD-034",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/LINKING_STANDARD.md",
+      "document_id": "NEX-STD-032",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/MAP_OF_CONTENT_STANDARD.md",
+      "document_id": "NEX-STD-027",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/METADATA_STANDARD.md",
+      "document_id": "NEX-STD-031",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/NAMING_STANDARD.md",
+      "document_id": "NEX-STD-030",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/REPOSITORY_ORGANIZATION_STANDARD.md",
+      "document_id": "NEX-STD-028",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/REPOSITORY_STRUCTURE_STANDARD.md",
+      "document_id": "NEX-STD-026",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "05_Knowledge_Architecture/TAGGING_STANDARD.md",
+      "document_id": "NEX-STD-033",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/00_ORGANIZATIONAL_ARCHITECTURE_MODEL.md",
+      "document_id": "NEX-STD-036",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/COLLABORATION_STANDARD.md",
+      "document_id": "NEX-STD-041",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/CONTINUOUS_IMPROVEMENT_STANDARD.md",
+      "document_id": "NEX-STD-046",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/DECISION_AUTHORITY_STANDARD.md",
+      "document_id": "NEX-STD-040",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/DELEGATION_STANDARD.md",
+      "document_id": "NEX-STD-043",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/ENGINEERING_CAPABILITY_STANDARD.md",
+      "document_id": "NEX-STD-037",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/ENGINEERING_ROLE_STANDARD.md",
+      "document_id": "NEX-STD-038",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/INTERFACE_STANDARD.md",
+      "document_id": "NEX-STD-045",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION.md",
+      "document_id": null,
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/RESPONSIBILITY_STANDARD.md",
+      "document_id": "NEX-STD-039",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/SPECIALIZATION_STANDARD.md",
+      "document_id": "NEX-STD-042",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "06_Organizational_Architecture/WORK_PACKAGE_STANDARD.md",
+      "document_id": "NEX-STD-044",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/AGENTIC_FRAMEWORK_EVOLUTION_STANDARD.md",
+      "document_id": "NEX-STD-052",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/AGENT_CONTEXT_ARCHITECTURE_STANDARD.md",
+      "document_id": "NEX-STD-053",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/AGENT_LIFECYCLE_AND_GOVERNANCE_STANDARD.md",
+      "document_id": "NEX-STD-056",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/DECISION_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-055",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/KNOWLEDGE_RETRIEVAL_AND_MEMORY_STANDARD.md",
+      "document_id": "NEX-STD-054",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_AGENT_READINESS_ASSESSMENT_STANDARD.md",
+      "document_id": "NEX-STD-072",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CHANGE_MANAGEMENT_AND_EVOLUTION_CONTROL_STANDARD.md",
+      "document_id": "NEX-STD-084",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_COLLABORATOR_ECOSYSTEM_STANDARD.md",
+      "document_id": "NEX-STD-063",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_COLLABORATOR_HANDOFF_AND_TEAM_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-082",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CONTEXT_PACKAGE_STANDARD.md",
+      "document_id": "NEX-STD-059",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD.md",
+      "document_id": "NEX-STD-064",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_AGENT_ECOSYSTEM_ARCHITECTURE_STANDARD.md",
+      "document_id": "NEX-STD-096",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_AUTOMATION_GOVERNANCE_AND_INTELLIGENCE_AUGMENTATION_STANDARD.md",
+      "document_id": "NEX-STD-107",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_CONTINUOUS_IMPROVEMENT_AND_ENGINEERING_LEARNING_SYSTEM_STANDARD.md",
+      "document_id": "NEX-STD-122",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_MANAGEMENT_STANDARD.md",
+      "document_id": "NEX-STD-108",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_DAILY_OPERATING_RHYTHM_STANDARD.md",
+      "document_id": "NEX-STD-091",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_ANALYTICS_AND_METRICS_STANDARD.md",
+      "document_id": "NEX-STD-094",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_ANALYTICS_AND_PERFORMANCE_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-121",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_ASSET_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-114",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_CALCULATION_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-117",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_DECISION_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-102",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_DECISION_SUPPORT_SYSTEM_STANDARD.md",
+      "document_id": "NEX-STD-120",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_EQUIPMENT_KNOWLEDGE_MODEL_STANDARD.md",
+      "document_id": "NEX-STD-115",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_KNOWLEDGE_ACQUISITION_AND_LEARNING_STANDARD.md",
+      "document_id": "NEX-STD-103",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_QUALITY_ASSURANCE_AND_VALIDATION_STANDARD.md",
+      "document_id": "NEX-STD-105",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_REPORT_GENERATION_STANDARD.md",
+      "document_id": "NEX-STD-118",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_WORKFLOW_ORCHESTRATION_STANDARD.md",
+      "document_id": "NEX-STD-104",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_EXECUTIVE_INTELLIGENCE_REPORTING_STANDARD.md",
+      "document_id": "NEX-STD-093",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FAILURE_MODE_AND_RELIABILITY_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-116",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FEIP_INTEGRATION_ARCHITECTURE_STANDARD.md",
+      "document_id": "NEX-STD-097",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FEIP_OPERATIONAL_DATA_INTEGRATION_STANDARD.md",
+      "document_id": "NEX-STD-119",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FINAL_VALIDATION_AND_VERSION_RELEASE_STANDARD.md",
+      "document_id": "NEX-STD-099",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_GOVERNANCE_COMPLETION_AND_OPERATIONAL_ACTIVATION_STANDARD.md",
+      "document_id": "NEX-STD-087",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IDENTITY_AND_OPERATING_CONTEXT_STANDARD.md",
+      "document_id": "NEX-STD-100",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IMPLEMENTATION_BLUEPRINT_AND_FIRST_90_DAY_EXECUTION_PLAN.md",
+      "document_id": "NEX-STD-111",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IMPLEMENTATION_PACKAGE_STANDARD.md",
+      "document_id": "NEX-STD-088",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IMPLEMENTATION_ROADMAP_STANDARD.md",
+      "document_id": "NEX-STD-086",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_INITIAL_DEPLOYMENT_CHECKLIST_STANDARD.md",
+      "document_id": "NEX-STD-090",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD.md",
+      "document_id": "NEX-STD-047",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_KNOWLEDGE_GRAPH_AND_RELATIONSHIP_INTELLIGENCE_STANDARD.md",
+      "document_id": "NEX-STD-095",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_KNOWLEDGE_NOTE_CREATION_AND_MANAGEMENT_STANDARD.md",
+      "document_id": "NEX-STD-113",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_LONG_TERM_ARCHITECTURE_EVOLUTION_ROADMAP_STANDARD.md",
+      "document_id": "NEX-STD-110",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_MATURITY_ASSESSMENT_AND_CAPABILITY_ROADMAP_STANDARD.md",
+      "document_id": "NEX-STD-109",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_MATURITY_MODEL_AND_CAPABILITY_ASSESSMENT_STANDARD.md",
+      "document_id": "NEX-STD-085",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_OBSIDIAN_KNOWLEDGE_REPOSITORY_IMPLEMENTATION_STANDARD.md",
+      "document_id": "NEX-STD-112",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_OFFLINE_FIRST_AND_DATA_RESILIENCE_STANDARD.md",
+      "document_id": "NEX-STD-098",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_OPERATING_WORKFLOW_STANDARD.md",
+      "document_id": "NEX-STD-057",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_SECURITY_ACCESS_CONTROL_AND_TRUST_ARCHITECTURE_STANDARD.md",
+      "document_id": "NEX-STD-106",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_WEEKLY_AND_MONTHLY_REVIEW_STANDARD.md",
+      "document_id": "NEX-STD-092",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_DATA_GOVERNANCE_AND_INTELLIGENCE_MEMORY_STANDARD.md",
+      "document_id": "NEX-STD-075",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_AUTOMATION_GOVERNANCE_STANDARD.md",
+      "document_id": "NEX-STD-073",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_CONTEXT_MANAGEMENT_STANDARD.md",
+      "document_id": "NEX-STD-076",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_DECISION_RECORD_STANDARD.md",
+      "document_id": "NEX-STD-069",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_KNOWLEDGE_GRAPH_STANDARD.md",
+      "document_id": "NEX-STD-071",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_PERFORMANCE_AND_CONTINUOUS_OPTIMIZATION_STANDARD.md",
+      "document_id": "NEX-STD-080",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_REASONING_AND_ANALYSIS_STANDARD.md",
+      "document_id": "NEX-STD-077",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_REVIEW_AND_DESIGN_ASSURANCE_STANDARD.md",
+      "document_id": "NEX-STD-078",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_RISK_MANAGEMENT_STANDARD.md",
+      "document_id": "NEX-STD-079",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_IDENTITY_STANDARD.md",
+      "document_id": "NEX-STD-049",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_INFORMATION_ARCHITECTURE_AND_TAXONOMY_STANDARD.md",
+      "document_id": "NEX-STD-067",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_KNOWLEDGE_CAPTURE_AND_LESSONS_LEARNED_STANDARD.md",
+      "document_id": "NEX-STD-068",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_KNOWLEDGE_REPOSITORY_INTEGRATION_STANDARD.md",
+      "document_id": "NEX-STD-058",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_KNOWLEDGE_REPOSITORY_OPERATING_PROCEDURE_STANDARD.md",
+      "document_id": "NEX-STD-081",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_OPERATING_CONSTITUTION.md",
+      "document_id": "NEX-STD-048",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_PERFORMANCE_AND_MATURITY_ASSESSMENT_STANDARD.md",
+      "document_id": "NEX-STD-065",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_QUALITY_ASSURANCE_AND_VALIDATION_STANDARD.md",
+      "document_id": "NEX-STD-061",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_REVIEW_AND_APPROVAL_GATE_STANDARD.md",
+      "document_id": "NEX-STD-060",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SECURITY_AND_TRUST_STANDARD.md",
+      "document_id": "NEX-STD-062",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SECURITY_PRIVACY_AND_TRUST_OPERATING_MODEL_STANDARD.md",
+      "document_id": "NEX-STD-083",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SOUL_STANDARD.md",
+      "document_id": "NEX-STD-050",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SYSTEM_ARCHITECTURE_AND_INTEGRATION_STANDARD.md",
+      "document_id": "NEX-STD-074",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_TEMPLATE_AND_ARTIFACT_STANDARD.md",
+      "document_id": "NEX-STD-066",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_WORK_PACKAGE_MANAGEMENT_STANDARD.md",
+      "document_id": "NEX-STD-070",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/USER_CONTEXT_STANDARD.md",
+      "document_id": "NEX-STD-051",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD.md",
+      "document_id": "FEIP-STD-001",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-002_ENGINEERING_DASHBOARD_AND_OPERATIONAL_VISIBILITY_STANDARD.md",
+      "document_id": "FEIP-STD-002",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-003_ASSET_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-003",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-004_MAINTENANCE_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-004",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-005_ENGINEERING_PROJECT_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-005",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-006_ENGINEERING_CALCULATION_ENGINE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-006",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-007_ENGINEERING_REPORT_AND_DOCUMENT_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-007",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-008_ENGINEERING_ANALYTICS_AND_PERFORMANCE_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-008",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-009_KNOWLEDGE_INTEGRATION_AND_ENGINEERING_MEMORY_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-009",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-010_ENGINEERING_INVENTORY_AND_SPARE_PARTS_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-010",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-011_ENGINEERING_BUDGET_AND_COST_INTELLIGENCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-011",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-012_ENGINEERING_WORKFLOW_AND_AUTOMATION_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-012",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-013_SECURITY_ACCESS_AND_GOVERNANCE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-013",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-014_INTEGRATION_AND_API_ARCHITECTURE_MODULE_STANDARD.md",
+      "document_id": "FEIP-STD-014",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-015_DATA_ARCHITECTURE_AND_DATABASE_MODEL_STANDARD.md",
+      "document_id": "FEIP-STD-015",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-016_NEX_CORE_INTEGRATION_ARCHITECTURE_STANDARD.md",
+      "document_id": "FEIP-STD-016",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-017_DEPLOYMENT_AND_INFRASTRUCTURE_ARCHITECTURE_STANDARD.md",
+      "document_id": "FEIP-STD-017",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-018_IMPLEMENTATION_ROADMAP_AND_MATURITY_MODEL_STANDARD.md",
+      "document_id": "FEIP-STD-018",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-001",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-002_CALCULATION_ENGINE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-002",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-003_OPTIMIZATION_ENGINE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-003",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-004_REVIEW_AND_COMPLIANCE_ENGINE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-004",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-005_ENGINEERING_INTELLIGENCE_ENGINE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-005",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-006_DECISION_INTELLIGENCE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-006",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-007_MEMORY_AND_CONTEXT_ENGINE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-007",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-008_EVIDENCE_AND_PROVENANCE_ENGINE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-008",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-009_KNOWLEDGE_SURVEILLANCE_STANDARD.md",
+      "document_id": "FDG-CORE-STD-009",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-010_INTELLIGENCE_ORCHESTRATION_STANDARD.md",
+      "document_id": "FDG-CORE-STD-010",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-011_CONTINUOUS_LEARNING_STANDARD.md",
+      "document_id": "FDG-CORE-STD-011",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-012_CORE_INTELLIGENCE_EVOLUTION_ROADMAP.md",
+      "document_id": "FDG-CORE-STD-012",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0009 - Methodology Validation and Computation Registry.md",
+      "document_id": null,
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0000 - FBPOIS Master Architecture.md",
+      "document_id": "FBPOIS-ARCH-0000",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope.md",
+      "document_id": "FBPOIS-ARCH-0001",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-ARCH-0000 - Facility Workspace Intelligence System.md",
+      "document_id": "FWIS-ARCH-0000",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-ARCH-0001 - Functional Architecture.md",
+      "document_id": "FWIS-ARCH-0001",
+      "status": "Approved",
+      "evidenceState": "approval-declared; effective-date-evidence-incomplete",
+      "action": "Recover real evidence or record a prospective scoped decision; do not backdate"
+    }
+  ]
+}

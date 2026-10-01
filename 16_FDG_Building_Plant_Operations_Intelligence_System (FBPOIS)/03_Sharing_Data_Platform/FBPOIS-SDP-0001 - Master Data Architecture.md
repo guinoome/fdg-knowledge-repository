@@ -441,3 +441,12 @@ The 2026-08-05 absence observations above are retained. All four following files
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0007 - Data Lifecycle Management|FBPOIS-SDP-0007 - Data Lifecycle Management]]
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed architecture reconciliation]] distinguishes physical containment from equipment/system service relationships and links enterprise identity ownership. It does not apply a data migration or change this Draft's approval status.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+The original hierarchy remains preserved. For cross-system exchange, the proposed addendum distinguishes located_in, member_of_system, supplies, depends_on, owned_by and operated_by. A pump can serve several zones. FBPOIS owns operational identity/condition, FEIS owns design/acceptance and Finance owns book value. These linked records need not share one database or one containment tree.
+
+Review: [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]] · [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] · [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]]. No schema migration or new approval is made here.

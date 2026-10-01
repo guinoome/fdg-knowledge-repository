@@ -105,3 +105,12 @@ Jurisdiction-specific codes, forms, terminology, tax/commercial requirements, an
 ## 2026-09-30 architecture review addendum
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The Proposed cross-system reconciliation]] links this engineering foundation to CBC and FBPOIS identity/record contracts. It does not amend the approved ECC direction. Shared mechanisms and domain acceptance are separated in [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|the proposed CORE reasoning contract]].
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Preserve the approved engineering-company-core direction. The proposed integration seam treats common employee, legal-entity, vendor and project references as scoped projections of the relevant function's authoritative records. ECC owns engineering workspace/evidence semantics, not HR employment or Finance postings. This adds a candidate interface without changing the approved direction.
+
+Review: [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]] · [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] · [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]]. No schema migration or new approval is made here.

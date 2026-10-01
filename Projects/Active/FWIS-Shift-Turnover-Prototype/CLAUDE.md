@@ -236,3 +236,14 @@ The vault is a git repository as of 2026-08-02. It holds both governance knowled
 - Governance documents under `01_Governance/` and `07_Nex_Core_Intelligence/` are Founder-approved artifacts. Changing one is a governance change, not a code change — commit it separately from code, and note the approval in the message body.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Active/FWIS-Shift-Turnover-Prototype/README|README]] → this document
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Current-source correction: the tracked snapshot lacks authz.js, authority.sql, generate-authority.mjs and the dedicated role test/harness. It also lacks the documented guard_role_authority, role_levels and workflow_authority SQL. Existing property membership, revision and immutable-record guards do not prove per-transition authority or separation of duties. Do not use the historical role/WF003/WF004 completion claims as current deployment evidence.
+
+The original record is preserved. Source recovery was attempted across fetched refs and the cited index commits; the missing implementation was not found. The current capability manifest distinguishes source evidence from historical tests, and its release command remains blocked. This gate is not installed in a deployment pipeline and does not modify a live database.
+
+Read [[Projects/Active/FWIS/CURRENT_CAPABILITIES_2026-10-01|current FWIS capability evidence]] for verified scope, commands and recovery/replacement requirements.

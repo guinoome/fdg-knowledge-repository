@@ -71,3 +71,12 @@ Related: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_
 **Change history:** 2026-09-30 — initial preservation and verification record.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Architecture-critical review]] → this verification record
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+The preceding review remains the immutable historical account of the September snapshot. Under the user's follow-up instruction, the identified HydroCal source defects have been corrected and targeted tests added. FWIS capability claims are explicitly reconciled with tracked source; its missing role implementation and database verification remain open. Ownership and approval proposals now have scoped decisions for Francis.
+
+Current disposition, exact test scope and remaining release blockers: [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]]. Architecture contents and decisions: [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]]. This is not independent engineering/security closure of every finding.

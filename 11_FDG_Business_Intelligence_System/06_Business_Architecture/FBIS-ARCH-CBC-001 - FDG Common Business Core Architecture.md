@@ -154,3 +154,12 @@ See [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|Ente
 ## 2026-09-30 architecture review addendum
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed ECC–CBC–FBPOIS reconciliation]] records overlapping organization, identity and project primitives. The proposal links semantic IDs and record owners before introducing shared implementation. This note's existing Proposed status and single-company/multi-company distinctions remain controlling within their scope.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+CBC remains a Proposed candidate. HR, Finance, Procurement and Commercial retain functional ownership of their respective records. A shared kernel implements those contracts; it does not supersede ECC's approved direction or FBPOIS operational ownership. Technical acceptance, physical asset condition and financial asset value remain separately governed linked records.
+
+Review: [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]] · [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] · [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]]. No schema migration or new approval is made here.

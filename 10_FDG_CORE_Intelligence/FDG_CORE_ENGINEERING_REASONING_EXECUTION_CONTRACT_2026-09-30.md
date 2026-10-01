@@ -121,3 +121,20 @@ Related: [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_
 
 
 **Change history:** 2026-09-30 — initial additive review record; no predecessor removed or superseded by this publication.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+### Capability evidence and change-impact additions — proposed
+
+Keep capability claims as separate dimensions: declared design, source present, tests executed, intended-use validation, authorized release and observed deployed behavior. A source file or passing isolated test cannot stand in for the other dimensions. Every claim names a pinned source, evidence, scope and unresolved blockers.
+
+Maintain a dependency graph from method/rule version through input/evidence revisions to results, findings, approval and issued reports. Method corrections identify affected results for review without rewriting historical numbers. Counterevidence and failed assumptions are retained as first-class findings; a favorable model narrative cannot suppress them.
+
+For multi-step reasoning, store a concise decision/evidence trace (facts, assumptions, alternatives, calculation references, rejected options, uncertainty and next action). Do not require or treat a model's private internal reasoning as engineering evidence. Deterministic computations and externally checkable artifacts supply the reproducible basis.
+
+The first implementation work corrected bounded HydroCal defects and added regression tests. It did not build the full CORE engine, authority resolver, tenant enforcement, uncertainty model or automated release mechanism. Human review and field applicability remain open.
+
+Ownership bindings: [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]]. Executed scope: [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]].
