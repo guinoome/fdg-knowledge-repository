@@ -89,3 +89,12 @@ review.
 - [[13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-TPL-1401 - Legal Decision Record|FLIS-TPL-1401 - Legal Decision Record]]
 - [[13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-TPL-1402 - Evidence Record|FLIS-TPL-1402 - Evidence Record]]
 - [[13_FDG_Legal_Intelligence_System/99_ARCHIVE/FLIS-9900 - Archive Governance|FLIS-9900 - Archive Governance]]
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Scope reconciliation: the FLIS README declares approval of its folder structure on 2026-08-29 and expressly excludes blanket legal-content verification. The root map's Draft/admission label remains an unresolved admission claim. These are separate scopes, not a reason to treat all FLIS content as approved or erase the structural claim. No independent approval record was located in this review. See AUTH-02 in [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] and decision D2 in [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]].
+
+Current fixes and limits: [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]].

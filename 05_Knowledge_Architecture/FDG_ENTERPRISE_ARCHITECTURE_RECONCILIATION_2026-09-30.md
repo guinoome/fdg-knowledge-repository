@@ -110,3 +110,25 @@ Related: [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CON
 
 
 **Change history:** 2026-09-30 — initial additive review record; no predecessor removed or superseded by this publication.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+### Ownership seam — proposed revision 0.2 addendum
+
+The original proposal and its metadata remain above. This addendum makes the proposed seam explicit; no new canonical standard or approval is declared.
+
+| Existing core | Accountable record scope | Excluded ownership |
+| --- | --- | --- |
+| CBC / FBIS | Reusable business modules under HR, Finance, Procurement and Commercial ownership | Does not own engineering acceptance, operational asset condition or all enterprise identity |
+| ECC / FEIS | Engineering workspaces, domain methods, evidence and technical decisions; reusable company context | Does not create a competing employee/payroll/vendor ledger or override business owners |
+| FBPOIS shared data | Property context, installed assets, operational condition, work orders and maintenance | Does not make financial book value, employment or design evidence its own master |
+| Integration Hub | Contract stewardship, identifier mapping and controlled exchange | Does not become a global writer or mandatory universal database |
+
+Approve the integration seam separately from adoption of the whole CBC product candidate. Preserve ECC's declared approved direction. For each exchanged record, name a functional owner, record steward, single authoritative writer per tenant/scope, implementation custodian, business/technical approver and independent reviewer where required.
+
+The FLIS conflict is narrower than the original summary: its README explicitly declares folder-structure approval and excludes blanket legal-content verification. Structure approval evidence, ecosystem admission and content validation therefore have separate unresolved dispositions.
+
+Full ownership, event, offline-conflict and handover rules: [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]]. Claim-by-claim reconciliation: [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]]. Decisions D1–D6: [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]].

@@ -172,3 +172,16 @@ Before changing architecture, pull/review the latest governed state. Before publ
 [Architecture-critical review](docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW.md) records the repository scan, verified engineering findings, architecture conflicts and remaining work. [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The reconciliation]] and [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|the reasoning execution contract]] are Proposed.
 
 [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Engineering findings]] includes reproducible HydroCal defects and FWIS authorization claims absent from the tracked source. Do not treat the affected capabilities as validated by earlier README/test-count statements. Original knowledge is preserved; dated additions provide the update.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Start with the [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]] to review the proposed ownership boundaries and decisions D1–D6.
+
+- [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]]
+- [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]]
+- [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]]
+
+Historical knowledge remains intact; proposed architecture is not promoted by publication.

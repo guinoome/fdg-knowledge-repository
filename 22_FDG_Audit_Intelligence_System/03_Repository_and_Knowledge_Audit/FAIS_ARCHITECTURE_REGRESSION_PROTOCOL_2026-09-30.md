@@ -88,3 +88,12 @@ Related: [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_
 
 
 **Change history:** 2026-09-30 — initial additive review record; no predecessor removed or superseded by this publication.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+The October remediation applies the existing snapshot scanner to the working tree and checks original Markdown as exact preserved prefixes. New file-target wikilinks are verified separately from unresolved historical links. HydroCal's original source is preserved byte-for-byte; new regression tests exercise corrected behavior. FWIS's inventory distinguishes absent controls from historical claims.
+
+Commands, evidence and exclusions: [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]]. Approval-claim queue: [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]].

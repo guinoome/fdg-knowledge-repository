@@ -380,12 +380,6 @@ td input:focus,td select:focus{border-color:var(--primary)}
 
 <!-- PAGES -->
 <main class="content" id="contentArea">
-  <div id="engineeringReviewNotice" class="alert alert-warning" role="status" style="margin-bottom:16px">
-    <div><strong>Preliminary engineering worksheet — review required.</strong>
-    Calculations do not establish code compliance, pump selection or engineering approval.
-    Saved results are preserved; recalculate before exporting a new draft.
-    <span id="optionalLibraryNotice"></span></div>
-  </div>
 
 <!-- HOME -->
 <div class="page active" id="page-home">
@@ -638,7 +632,7 @@ td input:focus,td select:focus{border-color:var(--primary)}
         <div class="form-group"><label class="form-label">Required Flow <span class="tip" data-tip="Total system demand including hose allowance">?</span></label><div class="input-group"><input type="number" id="fpFlow" value="500" min="0" step="10"><span class="input-unit">GPM</span></div></div>
       </div>
       <div class="form-row">
-        <div class="form-group"><label class="form-label">Required Differential Pressure <span class="tip" data-tip="Total Dynamic Head — sum of static head, friction loss, and pressure required at highest point">?</span></label><div class="input-group"><input type="number" id="fpHead" value="100" min="0" step="1"><span class="input-unit">psi</span></div></div>
+        <div class="form-group"><label class="form-label">Required Head / TDH <span class="tip" data-tip="Total Dynamic Head — sum of static head, friction loss, and pressure required at highest point">?</span></label><div class="input-group"><input type="number" id="fpHead" value="100" min="0" step="1"><span class="input-unit">psi</span></div></div>
         <div class="form-group"><label class="form-label">Pump Efficiency <span class="tip" data-tip="Typical fire pump efficiency is 65–85%">?</span></label><div class="input-group"><input type="number" id="fpEfficiency" value="80" min="30" max="95" step="1"><span class="input-unit">%</span></div></div>
       </div>
       <div class="form-row">
@@ -1013,26 +1007,23 @@ const WATER_SOURCES = [
 const $ = id => document.getElementById(id);
 const qs = sel => document.querySelector(sel);
 const qsa = sel => document.querySelectorAll(sel);
-const numVal = id => $(id)?.value.trim() === '' ? NaN : Number($(id)?.value);
+const numVal = id => parseFloat($(id)?.value) || 0;
 const fmt = (n, d=2) => Number(n).toFixed(d);
 const fmtComma = n => Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmtInt = n => Math.round(Number(n)).toLocaleString('en-US');
 const validateInputs = (pageId) => {
+  if(window.App && App.isRestoring) return true;
   const inputs = qsa(`#${pageId} input[type="number"]`);
   for(const input of inputs) {
-    const val = input.value.trim() === '' ? NaN : Number(input.value);
+    const val = parseFloat(input.value);
     const min = parseFloat(input.getAttribute('min'));
     const max = parseFloat(input.getAttribute('max'));
     const label = input.closest('.form-group')?.querySelector('.form-label')?.textContent?.replace('?','').trim() || 'Input';
-    if(!Number.isFinite(val)) { toast(`⚠️ ${label} requires a finite value; zero must be entered explicitly.`, 'error'); return false; }
     if(!isNaN(min) && val < min) { toast(`⚠️ ${label} must be at least ${min}`, 'error'); return false; }
     if(!isNaN(max) && val > max) { toast(`⚠️ ${label} must be at most ${max}`, 'error'); return false; }
   }
   return true;
 };
-
-// Remediation version identifies calculation provenance, not engineering approval.
-const HYDROCAL_METHOD_VERSION = '2026-10-01.1';
 
 /* ---- ENGINEERING FORMULAS ---- */
 const Eng = {
@@ -1053,21 +1044,8 @@ const Eng = {
   pressureFromK(Q, K) { return K>0 ? Math.pow(Q/K, 2) : 0; },
   /** Elevation head psi: 0.433 psi per foot */
   elevationHead(ft) { return 0.433 * ft; },
-  /** GPM and feet of liquid head; efficiency is percent. */
-  pumpBHP(Q, headFt, eff, specificGravity = 1) {
-    if(![Q,headFt,eff,specificGravity].every(Number.isFinite) ||
-       Q < 0 || headFt < 0 || eff <= 0 || eff > 100 || specificGravity <= 0)
-      throw new RangeError('Invalid pump-power input domain');
-    return (Q * headFt * specificGravity) / (3960 * (eff / 100));
-  },
-  pressureToHeadFt(pressurePsi, specificGravity = 1) {
-    if(![pressurePsi,specificGravity].every(Number.isFinite) || pressurePsi < 0 || specificGravity <= 0)
-      throw new RangeError('Pressure must be finite and nonnegative; specific gravity must be positive');
-    return pressurePsi * 2.31 / specificGravity;
-  },
-  pumpBHPFromPsi(Q, pressurePsi, eff, specificGravity = 1) {
-    return this.pumpBHP(Q, this.pressureToHeadFt(pressurePsi, specificGravity), eff, specificGravity);
-  },
+  /** Pump BHP */
+  pumpBHP(Q, H, eff) { return (Q * H) / (3960 * (eff/100)); },
   /** Motor HP with safety factor */
   motorHP(bhp, safety) { return bhp * (1 + safety/100); },
   /** Round up to standard motor HP */
@@ -1077,11 +1055,9 @@ const Eng = {
   },
   /** Storage volume (gallons) accounting for reserve and dead volumes */
   storageVolume(gpm, minutes, reservePct, deadPct) {
-    if(![gpm,minutes,reservePct,deadPct].every(Number.isFinite) ||
-       gpm <= 0 || minutes <= 0 || reservePct < 0 || deadPct < 0 ||
-       reservePct + deadPct >= 100)
-      throw new RangeError('Storage requires positive flow/duration and a positive usable fraction');
-    return gpm * minutes / (1 - reservePct / 100 - deadPct / 100);
+    const base = gpm * minutes;
+    const denom = 1 - reservePct/100 - deadPct/100;
+    return denom > 0 ? base / denom : base;
   },
   /** Tank dimensions — cylindrical (H ≈ D assumption) */
   tankDimensions(gallons) {
@@ -1097,14 +1073,13 @@ const Eng = {
   },
   /** Recommend pipe size for flow and max velocity */
   recommendPipe(Q, maxVel) {
-    if(![Q,maxVel].every(Number.isFinite) || Q <= 0 || maxVel <= 0)
-      throw new RangeError('Pipe sizing requires positive finite flow and velocity limit');
     for(const nom of PIPE_SIZES_SORTED){
       const d = PIPE_DATA[String(nom)].id;
       const v = this.velocity(Q, d);
       if(v <= maxVel) return {nominal:nom, id:d, velocity:v};
     }
-    return null; // No feasible catalogue size is a result, never a recommendation.
+    const last = PIPE_SIZES_SORTED[PIPE_SIZES_SORTED.length-1];
+    return {nominal:last, id:PIPE_DATA[String(last)].id, velocity:this.velocity(Q, PIPE_DATA[String(last)].id)};
   },
   // Unit conversions
   gpmToLpm: gpm => gpm * 3.785,
@@ -1172,13 +1147,11 @@ const App = {
     Cost.init();
     this.applyTheme();
     this.bindAllInputs();
-    this.bindCalculationInvalidation();
     this.updateProgress();
     this.initCharts();
     Diagram.generate();
-    $('statusText').textContent = 'Preliminary — engineering review required';
-    if(typeof Chart === 'undefined') $('optionalLibraryNotice').textContent = ' Charts unavailable offline; calculations and JSON export remain available.';
-    toast('FDG-FP review worksheet loaded', 'info');
+    $('statusText').textContent = 'Ready — ' + new Date().toLocaleString();
+    toast('🔥 FDG-FP v2.0 loaded successfully', 'success');
   },
 
   getDefaultState() {
@@ -1188,9 +1161,8 @@ const App = {
       occupancy:'',
       hazard:'light',
       waterSource:'municipal',
-      waterSupply:{staticPressure:null,residualPressure:null,flowResidual:null,elevation:0,pipeDia:6},
+      waterSupply:{staticPressure:80,residualPressure:60,flowResidual:1000,elevation:0,pipeDia:6},
       settings:{units:'imperial',theme:'light',defaultCode:'NFPA13',companyName:'',engineerName:'',logo:'',fontSize:'14'},
-      calculationRevisions:[],
       pressureSegments:[],
       materialItems:[],
       costItems:[],
@@ -1201,13 +1173,6 @@ const App = {
   loadState() {
     try {
       const saved = localStorage.getItem('fdg_fp_state_v2');
-      try {
-        if(saved && !localStorage.getItem('fdg_fp_pre_remediation_2026_10_01'))
-          localStorage.setItem('fdg_fp_pre_remediation_2026_10_01', saved);
-      } catch(backupError) {
-        // Never replace the original when its preservation backup cannot be written.
-        this.preservationBackupUnavailable = true;
-      }
       this.state = saved ? Object.assign(this.getDefaultState(), JSON.parse(saved)) : this.getDefaultState();
       // Deep merge nested objects
       this.state.project = Object.assign(this.getDefaultState().project, this.state.project);
@@ -1222,16 +1187,26 @@ const App = {
     
     this.restoreFormValues();
     
-    // Preserve saved answers. Reopening a file must never recalculate from form defaults.
-    this.markResultsForReview('Saved result — explicit recalculation required');
-    this.pushHistory();
+    // Restore calculation visual states silently
+    App.isRestoring = true;
+    setTimeout(() => {
+      const c = this.state.calculations;
+      if(c.sprinkler) Sprinkler.calculate();
+      if(c.hydraulic) Hydraulic.calculate();
+      if(c.pipeSize) PipeSize.calculate();
+      if(c.standpipe) Standpipe.calculate();
+      if(c.firePump) FirePump.calculate();
+      if(c.waterTank) WaterTank.calculate();
+      if(c.hoseReel) HoseReel.calculate();
+      if(c.extinguisher) Extinguisher.calculate();
+      if(c.waterSupply) WaterSupply.analyze();
+      if(c.elevation) ElevAnalysis.calculate();
+      App.isRestoring = false;
+      this.pushHistory(); // push initial loaded state
+    }, 50);
   },
 
   saveState() {
-    if(this.preservationBackupUnavailable) {
-      $('autoSaveStatus').textContent = 'Storage full — original retained; export JSON to save current work';
-      return;
-    }
     try {
       localStorage.setItem('fdg_fp_state_v2', JSON.stringify(this.state));
       $('autoSaveStatus').textContent = 'Autosaved ' + new Date().toLocaleTimeString();
@@ -1252,8 +1227,6 @@ const App = {
       this.historyIndex--;
       this.state = JSON.parse(this.history[this.historyIndex]);
       this.restoreFormValues();
-      this.markResultsForReview('History restored — explicit recalculation required');
-      this.hideCalculationResults();
       this.saveState();
       toast('↩️ Undo','info',1500);
     } else { toast('Nothing to undo','info',1200); }
@@ -1264,8 +1237,6 @@ const App = {
       this.historyIndex++;
       this.state = JSON.parse(this.history[this.historyIndex]);
       this.restoreFormValues();
-      this.markResultsForReview('History restored — explicit recalculation required');
-      this.hideCalculationResults();
       this.saveState();
       toast('↪️ Redo','info',1500);
     }
@@ -1278,9 +1249,9 @@ const App = {
       const el=$(elId); if(el) el.value = p[key]||'';
     }
     const ws = this.state.waterSupply||{};
-    if($('wsStaticPressure')) $('wsStaticPressure').value = ws.staticPressure ?? '';
-    if($('wsResidualPressure')) $('wsResidualPressure').value = ws.residualPressure ?? '';
-    if($('wsFlowResidual')) $('wsFlowResidual').value = ws.flowResidual ?? '';
+    if($('wsStaticPressure')) $('wsStaticPressure').value = ws.staticPressure||80;
+    if($('wsResidualPressure')) $('wsResidualPressure').value = ws.residualPressure||60;
+    if($('wsFlowResidual')) $('wsFlowResidual').value = ws.flowResidual||1000;
     if($('wsElevation')) $('wsElevation').value = ws.elevation||0;
     if($('wsPipeDia')) $('wsPipeDia').value = ws.pipeDia||6;
     const s = this.state.settings;
@@ -1314,76 +1285,12 @@ const App = {
     const wsMap = {wsStaticPressure:'staticPressure',wsResidualPressure:'residualPressure',wsFlowResidual:'flowResidual',wsElevation:'elevation',wsPipeDia:'pipeDia'};
     for(const [elId, key] of Object.entries(wsMap)){
       const el=$(elId);
-      if(el) el.addEventListener('input',()=>{this.state.waterSupply[key]=el.value.trim()===''?null:Number(el.value); this.pushHistory();});
+      if(el) el.addEventListener('input',()=>{this.state.waterSupply[key]=parseFloat(el.value)||0; this.pushHistory();});
     }
     $('setUnits')?.addEventListener('change',e=>{this.state.settings.units=e.target.value; $('unitDisplay').textContent=e.target.value==='metric'?'Metric':'Imperial'; this.pushHistory();});
     $('setDefaultCode')?.addEventListener('change',e=>{this.state.settings.defaultCode=e.target.value; this.pushHistory();});
     $('setCompany')?.addEventListener('input',e=>{this.state.settings.companyName=e.target.value; this.pushHistory();});
     $('setEngineer')?.addEventListener('input',e=>{this.state.settings.engineerName=e.target.value; this.pushHistory();});
-  },
-
-  markResultsForReview(reason, keys = Object.keys(this.state.calculations || {})) {
-    for(const key of keys) {
-      const result = this.state.calculations[key];
-      if(result) { result.requiresRecalculation = true; result.reviewReason = reason; }
-    }
-  },
-
-  bindCalculationInvalidation() {
-    const affected = {
-      'page-watersupply':['waterSupply','hydraulic'],
-      'page-sprinkler':['sprinkler'], 'page-hydraulic':['hydraulic'],
-      'page-pipesize':['pipeSize'], 'page-standpipe':['standpipe'],
-      'page-firepump':['firePump'], 'page-watertank':['waterTank'],
-      'page-hosereel':['hoseReel'], 'page-extinguisher':['extinguisher'],
-      'page-elevation':['elevation']
-    };
-    const invalidate = event => {
-      const keys = affected[event.target.closest('.page')?.id];
-      if(keys && event.target.matches('input,select,textarea')) {
-        this.markResultsForReview('Inputs changed — recalculate before a new draft', keys);
-        this.hideCalculationResults(keys);
-        this.updateValidation();
-      }
-    };
-    $('contentArea').addEventListener('input', invalidate);
-    $('contentArea').addEventListener('change', invalidate);
-  },
-
-  hideCalculationResults(keys = Object.keys(this.state.calculations || {})) {
-    const outputs = {sprinkler:['sprinklerResults'], hydraulic:['hydraulicResults'], pipeSize:['pipeSizeResults'],
-      standpipe:['standpipeResults'], firePump:['pumpResults','pumpCurveCard'], waterTank:['tankResults'],
-      hoseReel:['hoseReelResults'], extinguisher:['extResults'], waterSupply:['waterSupplyResults'], elevation:['elevResults']};
-    for(const id of keys.flatMap(key => outputs[key] || [])) {
-      if($(id)) $(id).style.display='none';
-    }
-  },
-
-  recordCalculation(key, result) {
-    const previous = this.state.calculations[key];
-    if(!Array.isArray(this.state.calculationRevisions)) this.state.calculationRevisions = [];
-    if(previous) this.state.calculationRevisions.push({
-      key, preservedAt:new Date().toISOString(), result:JSON.parse(JSON.stringify(previous))
-    });
-    result.methodVersion = HYDROCAL_METHOD_VERSION;
-    result.releaseState = 'review-required';
-    result.requiresRecalculation = false;
-    result.calculatedAt = new Date().toISOString();
-    const page = {pipeSize:'pipesize', firePump:'firepump', waterTank:'watertank',
-      hoseReel:'hosereel', waterSupply:'watersupply'}[key] || key;
-    result.inputSnapshot = Object.fromEntries(Array.from(qsa('#page-'+page+' input, #page-'+page+' select'))
-      .filter(input => input.id).map(input => [input.id,input.value]));
-    result.sourceSnapshot = JSON.parse(JSON.stringify(this.state.waterSupply));
-    this.state.calculations[key] = result;
-  },
-
-  canExportDraft() {
-    const saved = Object.values(this.state.calculations || {}).filter(Boolean);
-    if(saved.some(r => r.requiresRecalculation || r.methodVersion !== HYDROCAL_METHOD_VERSION)) {
-      toast('Saved or changed results require explicit recalculation. JSON export preserves the original evidence.', 'error');
-      return false;
-    }
-    return true;
   },
 
   startAutoSave() { this.autoSaveTimer = setInterval(()=>this.saveState(), 5000); },
@@ -1477,16 +1384,33 @@ const App = {
   },
 
   updateValidation() {
-    const items = Object.entries(this.state.calculations || {}).filter(([,result]) => result);
-    $('homeValidation').style.display = items.length ? 'block' : 'none';
-    $('homeValidationContent').replaceChildren();
-    for(const [key, result] of items) {
-      const row = document.createElement('p');
-      row.textContent = key + ': ' + (result.requiresRecalculation ? 'RECALCULATION REQUIRED'
-        : result.requirementOutcome === 'fail' ? 'FAIL — engineering review required'
-        : 'INSUFFICIENT EVIDENCE — engineering review required');
-      $('homeValidationContent').appendChild(row);
+    const calcs = this.state.calculations;
+    const items = [];
+    if(calcs.sprinkler){
+      const s = calcs.sprinkler;
+      items.push({label:'Sprinkler Pressure', val:`${fmt(s.pressurePerHead,1)} psi`, pass:s.pressurePerHead>=7, note:`Min 7 psi required`});
     }
+    if(calcs.hydraulic){
+      const h = calcs.hydraulic;
+      items.push({label:'Pipe Velocity', val:`${fmt(h.velocity,1)} ft/s`, pass:h.velOk, note:`Max ${h.maxVel} ft/s allowed`});
+    }
+    if(calcs.firePump){
+      const fp = calcs.firePump;
+      items.push({label:'NPSH Available', val:`${fmt(fp.npshA,1)} ft`, pass:fp.npshA>=10, note:`Min 10 ft recommended`});
+    }
+    if(!items.length){ $('homeValidation').style.display='none'; return; }
+    $('homeValidation').style.display='block';
+    $('homeValidationContent').innerHTML = `
+      <div class="grid grid-3">${items.map(it=>`
+        <div class="stat-card">
+          <div class="stat-icon ${it.pass?'green':'red'}">${it.pass?'✅':'⚠️'}</div>
+          <div class="stat-info">
+            <div class="stat-value" style="font-size:1.1rem">${it.val}</div>
+            <div class="stat-label">${it.label}</div>
+            <div class="stat-sub">${it.note} — <span class="tag ${it.pass?'tag-pass':'tag-fail'}">${it.pass?'PASS':'FAIL'}</span></div>
+          </div>
+        </div>`).join('')}
+      </div>`;
   },
 
   /* Theme */
@@ -1521,18 +1445,7 @@ const App = {
     const reader = new FileReader();
     reader.onload = e=>{
       try {
-        const imported = JSON.parse(e.target.result);
-        if(!imported || typeof imported !== 'object' || Array.isArray(imported)) throw new Error('Invalid project');
-        const defaults = this.getDefaultState();
-        const preservedImport = {importedAt:new Date().toISOString(), sourceJSON:e.target.result};
-        const previousProject = JSON.stringify(this.state);
-        this.state = Object.assign(defaults, imported);
-        for(const key of ['project','settings','waterSupply','calculations'])
-          this.state[key] = Object.assign(this.getDefaultState()[key], imported[key] || {});
-        this.state.importEvidence = [...(Array.isArray(imported.importEvidence)?imported.importEvidence:[]), preservedImport,
-          {preservedAt:new Date().toISOString(), previousProject}];
-        this.markResultsForReview('Imported result — explicit recalculation required');
-        this.hideCalculationResults();
+        this.state = Object.assign(this.getDefaultState(), JSON.parse(e.target.result));
         this.restoreFormValues(); this.saveState(); this.pushHistory();
         PressureLoss.render(); Material.render(); Cost.render();
         this.renderHomeStats(); this.updateProgress();
@@ -1572,8 +1485,6 @@ const App = {
   },
 
   selectFireCode(id) {
-    this.markResultsForReview('Design context changed');
-    this.hideCalculationResults();
     this.state.fireCode = id;
     this.highlightSelection('fireCodeGrid', id);
     const code = FIRE_CODES.find(c=>c.id===id);
@@ -1598,8 +1509,6 @@ const App = {
   },
 
   selectOccupancy(id) {
-    this.markResultsForReview('Design context changed');
-    this.hideCalculationResults();
     this.state.occupancy = id;
     this.highlightSelection('occupancyGrid', id);
     const occ = OCCUPANCIES.find(o=>o.id===id);
@@ -1631,8 +1540,6 @@ const App = {
   },
 
   selectHazard(id) {
-    this.markResultsForReview('Design context changed');
-    this.hideCalculationResults();
     this.state.hazard = id;
     this.highlightSelection('hazardGrid', id);
     const h = HAZARDS[id];
@@ -1661,8 +1568,6 @@ const App = {
   },
 
   selectWaterSource(id) {
-    this.markResultsForReview('Design context changed');
-    this.hideCalculationResults();
     this.state.waterSource = id;
     this.highlightSelection('waterSourceGrid', id);
     this.pushHistory();
@@ -1724,7 +1629,6 @@ const App = {
   },
 
   initCharts() {
-    if(typeof Chart === 'undefined') return;
     const tc = getComputedStyle(document.documentElement).getPropertyValue('--text').trim()||'#1A1A2E';
     const gc = getComputedStyle(document.documentElement).getPropertyValue('--border').trim()||'#E2E4EA';
     Chart.defaults.color = tc; Chart.defaults.borderColor = gc;
@@ -1748,7 +1652,6 @@ const App = {
   },
 
   updateCharts() {
-    if(typeof Chart === 'undefined') return;
     this.destroyCharts();
     const tc = getComputedStyle(document.documentElement).getPropertyValue('--text').trim()||'#1A1A2E';
     Chart.defaults.color = tc;
@@ -1774,9 +1677,9 @@ const App = {
     const pressCtx = $('chartPressure');
     if(pressCtx) {
       const segs = this.state.pressureSegments||[];
-      let cumP = Number.isFinite(this.state.waterSupply?.staticPressure) ? this.state.waterSupply.staticPressure : null;
+      let cumP = this.state.waterSupply?.staticPressure||80;
       const labels=['Source'], data=[cumP];
-      segs.forEach((s,i)=>{ cumP = cumP === null ? null : cumP - (s.totalLoss||0); labels.push(s.label||'Seg '+(i+1)); data.push(cumP); });
+      segs.forEach((s,i)=>{ cumP -= (s.totalLoss||0); labels.push(s.label||'Seg '+(i+1)); data.push(Math.max(cumP,0)); });
       this.charts.pressure = new Chart(pressCtx,{
         type:'line',
         data:{labels,datasets:[{label:'Pressure (psi)',data,borderColor:'#D32F2F',backgroundColor:'rgba(211,47,47,.15)',fill:true,tension:.35,pointBackgroundColor:'#D32F2F',pointRadius:5}]},
@@ -1854,7 +1757,7 @@ const WaterSupply = {
     if(!validateInputs('page-watersupply')) return;
     const Ps = numVal('wsStaticPressure'), Pr = numVal('wsResidualPressure');
     const Qr = numVal('wsFlowResidual'), elev = numVal('wsElevation'), dia = numVal('wsPipeDia');
-    if(Ps < Pr || Qr <= 0){ toast('Enter positive test flow and static pressure no lower than residual pressure','error'); return; }
+    if(!Ps||!Qr){ toast('❌ Enter static pressure and flow','error'); return; }
 
     const elevHead = Eng.elevationHead(elev);
     const adjStatic = Ps + elevHead;
@@ -1864,7 +1767,7 @@ const WaterSupply = {
     const availableAt0 = Ps; // static pressure
 
     const result = {Ps,Pr,Qr,elev,dia,elevHead,adjStatic,velAtFlow,pf};
-    App.recordCalculation('waterSupply', result);
+    App.state.calculations.waterSupply = result;
     App.pushHistory();
     App.logCalculation('Water Supply','Static: '+Ps+' psi, Residual: '+Pr+' psi @ '+Qr+' GPM', result);
 
@@ -1911,7 +1814,7 @@ const Sprinkler = {
     const maxSpacing = 15; // ft, standard spray
 
     const result = {K,density,area,spacing,coverage,totalFlow,operatingHeads,flowPerHead,pressurePerHead,totalHeads,hose,systemDemand,minP};
-    App.recordCalculation('sprinkler', result);
+    App.state.calculations.sprinkler = result;
     App.pushHistory(); App.renderHomeStats(); App.updateProgress();
     App.logCalculation('Sprinkler',`${fmt(systemDemand,0)} GPM system demand`,result);
 
@@ -1947,7 +1850,7 @@ const Sprinkler = {
         <div class="formula">Formula: System Demand = Sprinkler Q + Hose Allowance</div>
         <div class="step">Q_sys = ${fmt(totalFlow,0)} + ${hose}</div>
         <div class="answer">Q_sys = ${fmt(systemDemand,0)} GPM</div>
-        ${warns.length?`<div class="remark">${warns.join('<br>')}</div>`:'<div class="remark">No warning from these limited checks. Code compliance and design acceptance require independent review.</div>'}
+        ${warns.length?`<div class="remark">${warns.join('<br>')}</div>`:'<div class="remark">✅ All sprinkler parameters within acceptable range per NFPA 13.</div>'}
       </div>
       <div class="table-container" style="margin-top:14px">
         <table><thead><tr><th>Parameter</th><th>Symbol</th><th>Value</th><th>Unit</th><th>Status</th></tr></thead><tbody>
@@ -1991,13 +1894,10 @@ const Hydraulic = {
     const code = FIRE_CODES.find(c=>c.id===App.state.fireCode);
     const maxVel = code ? code.params.velocityMax : 32;
     const velOk = velocity <= maxVel;
-    const sourceP = App.state.waterSupply?.staticPressure;
-    const residualP = Number.isFinite(sourceP) && sourceP >= 0 ? sourceP - totalLoss : null;
-    const pressureOk = residualP !== null && residualP >= 0;
-    const requirementOutcome = !velOk || (residualP !== null && residualP < 0) ? 'fail' : 'insufficient-evidence';
+    const residualP = (App.state.waterSupply?.staticPressure||80) - totalLoss;
 
-    const result = {Q,C,D,L,fittings,totalLength,pf,frictionLoss,elevLoss,totalLoss,velocity,velOk,maxVel,residualP,pressureOk,requirementOutcome,sourceBasis:'Static pressure only; demand-flow adequacy not established'};
-    App.recordCalculation('hydraulic', result);
+    const result = {Q,C,D,L,fittings,totalLength,pf,frictionLoss,elevLoss,totalLoss,velocity,velOk,maxVel,residualP};
+    App.state.calculations.hydraulic = result;
     App.pushHistory();
     App.logCalculation('Hydraulic',`${fmt(totalLoss)} psi loss @ ${Q} GPM`,result);
 
@@ -2031,8 +1931,8 @@ const Hydraulic = {
         <div class="formula">Velocity V = Q / (A × 448.831) where A = π/4 × (D/12)²</div>
         <div class="step">V = ${Q} / ((π/4 × (${D}/12)²) × 448.831)</div>
         <div class="answer">V = ${fmt(velocity)} ft/s ${velOk?`<span class="tag tag-pass">PASS ≤ ${maxVel} ft/s</span>`:`<span class="tag tag-fail">FAIL > ${maxVel} ft/s</span>`}</div>
-        <div class="answer">Static-reference residual estimate: ${residualP === null ? "Not calculated — source pressure required" : fmt(residualP) + " psi"}</div>
-        <div class="remark">${requirementOutcome === 'fail' ? 'FAIL — adverse velocity or residual pressure.' : 'INSUFFICIENT EVIDENCE — supply adequacy and project criteria require review.'} Static pressure is not available pressure at design flow.</div>
+        <div class="answer">Residual Pressure at End: ${fmt(residualP)} psi</div>
+        ${!velOk?`<div class="remark">⚠️ Velocity exceeds allowable limit per ${code?.name||'NFPA 13'}. Increase pipe diameter.</div>`:'<div class="remark">✅ All hydraulic parameters acceptable.</div>'}
       </div>`;
     toast('✅ Hydraulic calculation complete','success');
   }
@@ -2062,25 +1962,25 @@ const PipeSizing = {
       if(v > maxVel*1.5) status = 'undersized';
       else if(v > maxVel) status = 'warn';
       else if(v < 1.5) status = 'oversized';
-      return {nominal:nom, id:d, velocity:v, friction:p, status, recommended:rec !== null && nom===rec.nominal};
+      return {nominal:nom, id:d, velocity:v, friction:p, status, recommended:nom===rec.nominal};
     });
 
-    App.recordCalculation('pipeSize', {Q,maxVel,C,recommended:rec,unit,requirementOutcome:rec?'insufficient-evidence':'fail'});
+    App.state.calculations.pipeSize = {Q,maxVel,C,recommended:rec,unit};
     App.pushHistory();
-    App.logCalculation('Pipe Sizing',rec ? `${rec.nominal}" velocity candidate for ${Q} GPM` : 'NO_FEASIBLE_CANDIDATE',{Q,maxVel,recommended:rec});
+    App.logCalculation('Pipe Sizing',`${rec.nominal}" recommended for ${Q} GPM`,{Q,maxVel,recommended:rec});
 
     $('pipeSizeResults').style.display='block';
     $('pipeSizeOutput').innerHTML=`
       <div class="grid grid-2" style="margin-bottom:14px">
-        <div class="stat-card"><div class="stat-icon ${rec?'blue':'red'}">${rec?'🔩':'⚠️'}</div><div class="stat-info"><div class="stat-value">${rec ? rec.nominal+'"'+(unit==='mm'?' ('+fmt(Eng.inToMm(rec.nominal),0)+' mm)':'') : 'No feasible size'}</div><div class="stat-label">Velocity-only catalogue candidate — engineering review required</div></div></div>
-        <div class="stat-card"><div class="stat-icon blue">💨</div><div class="stat-info"><div class="stat-value">${rec ? fmt(rec.velocity)+' ft/s' : 'No candidate'}</div><div class="stat-label">Velocity at Recommended Size</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">✅</div><div class="stat-info"><div class="stat-value">${rec.nominal}" ${unit==='mm'?'('+fmt(Eng.inToMm(rec.nominal),0)+' mm)':''}</div><div class="stat-label">Recommended Nominal Size</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">💨</div><div class="stat-info"><div class="stat-value">${fmt(rec.velocity)} ft/s</div><div class="stat-label">Velocity at Recommended Size</div></div></div>
       </div>
       <div class="table-container">
         <table><thead><tr><th>Nom (in)</th>${unit==='mm'?'<th>Nom (mm)</th>':''}<th>ID (in)</th><th>Vel (ft/s)</th><th>Friction (psi/ft)</th><th>Status</th></tr></thead>
         <tbody>${results.map(r=>`<tr style="${r.recommended?'background:var(--primary-alpha);font-weight:700':''}">
           <td>${r.nominal}"</td>${unit==='mm'?`<td>${fmt(Eng.inToMm(r.nominal),0)} mm</td>`:''}
           <td>${fmt(r.id,3)}</td><td>${fmt(r.velocity)}</td><td>${fmt(r.friction,5)}</td>
-          <td>${r.recommended?'<span class="tag tag-pass">Velocity criterion met</span>':r.status==='oversized'?'<span class="tag tag-warn">Oversized</span>':r.status==='undersized'?'<span class="tag tag-fail">Undersized</span>':r.status==='warn'?'<span class="tag tag-warn">High Velocity</span>':'<span class="tag tag-info">OK</span>'}</td>
+          <td>${r.recommended?'<span class="tag tag-pass">✅ RECOMMENDED</span>':r.status==='oversized'?'<span class="tag tag-warn">Oversized</span>':r.status==='undersized'?'<span class="tag tag-fail">Undersized</span>':r.status==='warn'?'<span class="tag tag-warn">High Velocity</span>':'<span class="tag tag-info">OK</span>'}</td>
         </tr>`).join('')}</tbody></table>
       </div>`;
     toast('✅ Pipe sizing complete','success');
@@ -2107,9 +2007,10 @@ const Standpipe = {
     const elevPressure = Eng.elevationHead(totalHeight);
     const totalPressure = req.pressure + elevPressure;
     const totalValves = floors * valvesPerFloor * risers;
+    const rec = Eng.recommendPipe(flowDemand, 25);
 
     const result = {cls,risers,floors,floorHt,valvesPerFloor,flowDemand,totalHeight,elevPressure,totalPressure,totalValves,pipeSize:req.pipeSize};
-    App.recordCalculation('standpipe', result);
+    App.state.calculations.standpipe = result;
     App.pushHistory();
     App.logCalculation('Standpipe',`Class ${cls}: ${flowDemand} GPM @ ${fmt(totalPressure,0)} psi`,result);
 
@@ -2149,40 +2050,40 @@ const FirePump = {
     const type = $('fpType').value;
     if(!Q||!H){ toast('❌ Enter flow rate and head','error'); return; }
 
-    const headFt = Eng.pressureToHeadFt(H);
-    const bhp = Eng.pumpBHP(Q, headFt, eff);
+    const bhp = Eng.pumpBHP(Q, H, eff);
     const motorHp = Eng.motorHP(bhp, safety);
     const stdHp = Eng.stdMotorHP(motorHp);
-    const npshA = null; // No site fluid conditions, manufacturer NPSHR or governed margin supplied.
+    const npshA = Eng.npshA(14.7, suction, 0.5, 2);
     const tdh = H;
     const shutoffH = H * 1.4; // approx shutoff at 140% rated head
     const kw = stdHp * 0.746;
 
-    const result = {Q,H,headFt,eff,safety,suction,type,bhp,motorHp,stdHp,npshA,tdh,shutoffH,kw,npshStatus:'insufficient-evidence',requirementOutcome:'insufficient-evidence'};
-    App.recordCalculation('firePump', result);
+    const result = {Q,H,eff,safety,suction,type,bhp,motorHp,stdHp,npshA,tdh,shutoffH,kw};
+    App.state.calculations.firePump = result;
     App.pushHistory(); App.renderHomeStats(); App.updateProgress();
     App.logCalculation('Fire Pump',`${stdHp} HP @ ${Q} GPM / ${H} psi`,result);
 
     $('pumpResults').style.display='block';
     $('pumpCalcOutput').innerHTML=`
       <div class="grid grid-2" style="margin-bottom:14px">
-        <div class="stat-card"><div class="stat-icon red">⚡</div><div class="stat-info"><div class="stat-value">${stdHp} HP</div><div class="stat-label">Indicative rating — not a motor selection</div><div class="stat-sub">${fmt(kw,0)} kW equivalent</div></div></div>
-        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">Not assessed</div><div class="stat-label">NPSH Available</div></div></div>
+        <div class="stat-card"><div class="stat-icon red">⚡</div><div class="stat-info"><div class="stat-value">${stdHp} HP</div><div class="stat-label">Motor Rating</div><div class="stat-sub">${fmt(kw,0)} kW equivalent</div></div></div>
+        <div class="stat-card"><div class="stat-icon blue">📐</div><div class="stat-info"><div class="stat-value">${fmt(npshA,1)} ft</div><div class="stat-label">NPSH Available</div></div></div>
       </div>
       <div class="calc-block">
         <div class="formula">BHP = (Q × H) / (3960 × η)</div>
         <div class="step">Given: Q = ${Q} GPM | H = ${H} psi | η = ${eff}%</div>
-        <div class="step">Water reference: H = ${H} psi × 2.31 = ${fmt(headFt,2)} ft</div><div class="step">BHP = (${Q} × ${fmt(headFt,2)}) / (3960 × ${eff/100})</div>
+        <div class="step">BHP = (${Q} × ${H}) / (3960 × ${eff/100})</div>
         <div class="answer">BHP = ${fmt(bhp,2)} HP</div>
         <br>
         <div class="formula">Motor HP = BHP × (1 + Safety Factor)</div>
         <div class="step">Motor HP = ${fmt(bhp,2)} × (1 + ${safety/100})</div>
         <div class="answer">Motor HP = ${fmt(motorHp,2)} HP → Standard: <strong>${stdHp} HP</strong></div>
         <br>
-        <div class="answer">NPSH: INSUFFICIENT EVIDENCE</div>
-        <div class="step">Supply verified site/fluid conditions, manufacturer NPSHR and the applicable margin before assessment.</div>
+        <div class="formula">NPSH_A = (P_atm + P_suction − P_vapor − P_friction) × 2.31</div>
+        <div class="step">NPSH_A = (14.7 + ${suction} − 0.5 − 2) × 2.31</div>
+        <div class="answer">NPSH_A = ${fmt(npshA,1)} ft ${npshA>10?'<span class="tag tag-pass">PASS</span>':'<span class="tag tag-fail">LOW — Verify NPSH</span>'}</div>
         <div class="step">Shutoff Head (approx): ${fmt(shutoffH,0)} psi (140% of rated)</div>
-        <div class="remark">Preliminary power estimate only. Manufacturer performance, the full operating envelope and applicable code edition require independent engineering review before pump or motor selection.</div>
+        <div class="remark">✅ Pump Type: ${type==='electric'?'Electric Motor Drive':'Diesel Engine Drive'} — Per NFPA 20. Select ${stdHp} HP rated pump.</div>
       </div>`;
 
     // Pump curve chart
@@ -2192,39 +2093,36 @@ const FirePump = {
     for(let pct=0; pct<=150; pct+=10){
       const q = Q*pct/100;
       const h = H*(1.4 - 0.4*Math.pow(pct/100,2));
-      flowPts.push(q); headPts.push(h); powerPts.push(Eng.pumpBHPFromPsi(q,h,eff));
+      flowPts.push(q); headPts.push(h); powerPts.push(Eng.pumpBHP(q,h,eff));
     }
-    if(typeof Chart === 'undefined') { $('pumpCurveCard').style.display='none'; return; }
     App.charts.pumpCurve = new Chart($('chartPumpCurve'),{
       type:'line',
       data:{labels:flowPts.map(f=>fmt(f,0)),datasets:[
         {label:'Head (psi)',data:headPts,borderColor:'#D32F2F',backgroundColor:'rgba(211,47,47,.1)',fill:true,yAxisID:'y',tension:.3,pointRadius:3},
         {label:'BHP',data:powerPts,borderColor:'#1565C0',borderDash:[5,5],yAxisID:'y1',tension:.3,pointRadius:3}
       ]},
-      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index'},scales:{y:{position:'left',title:{display:true,text:'Head (psi)'}},y1:{position:'right',title:{display:true,text:'BHP'},grid:{drawOnChartArea:false}}},plugins:{title:{display:true,text:'Illustrative curve only — not manufacturer performance'}}}
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index'},scales:{y:{position:'left',title:{display:true,text:'Head (psi)'}},y1:{position:'right',title:{display:true,text:'BHP'},grid:{drawOnChartArea:false}}},plugins:{title:{display:true,text:'Fire Pump Performance Curve'}}}
     });
     toast('✅ Fire pump calculation complete','success');
   },
 
   calcJockey() {
-    if(!validateInputs('page-firepump')) return;
     const mainFlow = numVal('fpFlow'), mainHead = numVal('fpHead');
-    if(mainFlow <= 0 || mainHead <= 0) { toast('Enter positive main-pump flow and differential pressure','error'); return; }
     const jFlow = Math.max(mainFlow*0.01, 5);
     const jHead = mainHead*1.1 + 5;
-    const jBHP = Eng.pumpBHPFromPsi(jFlow, jHead, 60);
+    const jBHP = Eng.pumpBHP(jFlow, jHead, 60);
     const jHP = Eng.stdMotorHP(jBHP*1.15);
     showModal('🔸 Jockey Pump Sizing',`
       <div class="calc-block">
-        <div class="formula">Illustrative jockey-pump estimate — engineering review required</div>
+        <div class="formula">Jockey Pump Design Per NFPA 20</div>
         <div class="formula">Flow = max(1% of Main Flow, 5 GPM min)</div>
         <div class="step">Q_j = max(${mainFlow}×0.01, 5) = ${fmt(jFlow,1)} GPM</div>
         <div class="formula">Head = Main Head × 1.1 + 5 psi</div>
         <div class="step">H_j = ${mainHead} × 1.1 + 5 = ${fmt(jHead,1)} psi</div>
-        <div class="formula">BHP = (Q × pressure in psi × 2.31 ft/psi) / (3960 × η), water reference, η = 60%</div>
+        <div class="formula">BHP = (Q × H) / (3960 × η) where η = 60%</div>
         <div class="step">BHP = ${fmt(jBHP,2)} HP</div>
         <div class="answer">Jockey Pump: <strong>${jHP} HP</strong> @ ${fmt(jFlow,0)} GPM, ${fmt(jHead,0)} psi</div>
-        <div class="remark">Flow, pressure and efficiency above are illustrative assumptions. Confirm leakage, controls, manufacturer performance and applicable project requirements before selection.</div>
+        <div class="remark">✅ Jockey pump maintains system pressure and prevents main pump from cycling. Install with dedicated pressure controller.</div>
       </div>`,
       '<button class="btn btn-primary" onclick="closeModal()">Close</button>');
   }
@@ -2242,9 +2140,7 @@ const WaterTank = {
     if(!flow){ toast('❌ Enter system flow rate','error'); return; }
 
     const baseVolume = flow * duration;
-    let totalVolume;
-    try { totalVolume = Eng.storageVolume(flow, duration, reservePct, deadPct); }
-    catch(error) { toast(error.message, 'error'); return; }
+    const totalVolume = Eng.storageVolume(flow, duration, reservePct, deadPct);
     const reserveVolume = totalVolume * reservePct / 100;
     const deadVolume = totalVolume * deadPct / 100;
     const usableVolume = baseVolume;
@@ -2253,7 +2149,7 @@ const WaterTank = {
     const totalVolumeL = totalVolume * 3.785;
 
     const result = {flow,duration,reservePct,deadPct,baseVolume,totalVolume,reserveVolume,deadVolume,usableVolume,dims,refillTime,type,totalVolumeL};
-    App.recordCalculation('waterTank', result);
+    App.state.calculations.waterTank = result;
     App.pushHistory(); App.renderHomeStats(); App.updateProgress();
     App.logCalculation('Water Tank',`${fmtComma(totalVolume)} gal for ${duration} min`,result);
 
@@ -2280,7 +2176,7 @@ const WaterTank = {
         <div class="answer">Diameter = ${fmt(dims.diameter,2)} ft (${fmt(Eng.inToMm(dims.diameter*12)/25.4*0.3048,2)} m) | Height = ${fmt(dims.height,2)} ft (${fmt(Eng.ftToM(dims.height),2)} m)</div>`:''}
         ${refill>0?`<div class="formula">Refill Time = Total Volume / Refill Rate</div>
         <div class="answer">T = ${fmtComma(totalVolume)} / ${refill} = ${fmt(refillTime,0)} minutes (${fmt(refillTime/60,2)} hrs)</div>`:''}
-        <div class="remark">Storage arithmetic only for the entered duration and fractions. Applicable criteria, accessories and engineering approval require review.</div>
+        <div class="remark">✅ Tank sized per NFPA 22 requirements for ${duration}-minute fire duration. Provide level indicators, overflow, and drain per code.</div>
       </div>`;
     toast('✅ Water tank calculation complete','success');
   }
@@ -2301,8 +2197,8 @@ const HoseReel = {
     const totalFlow = flowPerReel * simul;
     const pipeRec = Eng.recommendPipe(totalFlow, 15);
 
-    const result = {area,hoseLen,pressure,flowPerReel,radius,simul,coveragePerReel,reelsRequired,totalFlow,pipeSize:pipeRec?.nominal ?? null,requirementOutcome:pipeRec?'insufficient-evidence':'fail'};
-    App.recordCalculation('hoseReel', result);
+    const result = {area,hoseLen,pressure,flowPerReel,radius,simul,coveragePerReel,reelsRequired,totalFlow,pipeSize:pipeRec.nominal};
+    App.state.calculations.hoseReel = result;
     App.pushHistory();
     App.logCalculation('Hose Reel',`${reelsRequired} reels, ${totalFlow} GPM total`,result);
 
@@ -2311,7 +2207,7 @@ const HoseReel = {
       <div class="grid grid-3" style="margin-bottom:14px">
         <div class="stat-card"><div class="stat-icon red">🔴</div><div class="stat-info"><div class="stat-value">${reelsRequired}</div><div class="stat-label">Hose Reels Required</div></div></div>
         <div class="stat-card"><div class="stat-icon blue">💧</div><div class="stat-info"><div class="stat-value">${totalFlow} GPM</div><div class="stat-label">Total Flow Demand</div></div></div>
-        <div class="stat-card"><div class="stat-icon ${pipeRec?'blue':'red'}">🔩</div><div class="stat-info"><div class="stat-value">${pipeRec ? pipeRec.nominal+'"' : 'No feasible size'}</div><div class="stat-label">Velocity-only pipe candidate</div></div></div>
+        <div class="stat-card"><div class="stat-icon green">🔩</div><div class="stat-info"><div class="stat-value">${pipeRec.nominal}"</div><div class="stat-label">Supply Pipe Size</div></div></div>
       </div>
       <div class="calc-block">
         <div class="formula">Coverage per Reel = π × r²</div>
@@ -2320,7 +2216,7 @@ const HoseReel = {
         <div class="step">N = ⌈${area.toLocaleString()} / ${fmtComma(coveragePerReel)}⌉ = ${reelsRequired}</div>
         <div class="formula">Total Flow = Flow per Reel × Simultaneous Reels</div>
         <div class="answer">Q = ${flowPerReel} × ${simul} = ${totalFlow} GPM</div>
-        <div class="remark">${pipeRec ? 'Preliminary estimate — verify actual coverage, available pressure and project criteria before selection.' : 'FAIL — no catalogue pipe meets the velocity limit. No supply pipe is recommended.'}</div>
+        <div class="remark">✅ Provide ${reelsRequired} hose reel(s) with ${hoseLen} ft hose, ${pressure} psi nozzle pressure, ${pipeRec.nominal}" supply pipe.</div>
       </div>`;
     toast('✅ Hose reel calculation complete','success');
   }
@@ -2351,7 +2247,7 @@ const Extinguisher = {
     };
     const recommended = typeMap[fireClass];
     const result = {occ,area,travelDist,fireClass,coveragePerExt,qtyRequired,rating:c.rating,type:recommended.name,size:recommended.size};
-    App.recordCalculation('extinguisher', result);
+    App.state.calculations.extinguisher = result;
     App.pushHistory();
     App.logCalculation('Fire Extinguisher',`${qtyRequired} × ${recommended.size} ${recommended.name}`,result);
 
@@ -2392,7 +2288,7 @@ const ElevAnalysis = {
     const floorElevations = Array.from({length:floors},(_,i)=>ground + i*floorHt);
 
     const result = {ground,pump,tankBot,topSpr,floors,floorHt,sucionHead,staticHead,elevPressureTop,elevPressurePump,totalStaticH};
-    App.recordCalculation('elevation', result);
+    App.state.calculations.elevation = result;
     App.pushHistory();
     App.logCalculation('Elevation','Static head: '+fmt(totalStaticH)+' psi',result);
 
@@ -2405,7 +2301,6 @@ const ElevAnalysis = {
     // Destroy old chart and render new one on the existing canvas
     if(App.charts.elevation) App.charts.elevation.destroy();
     const elevCtx = $('chartElevation');
-    if(typeof Chart === 'undefined') return;
     App.charts.elevation = new Chart(elevCtx,{
       type:'bar',
       data:{labels,datasets:[{label:'Elevation (ft)',data,backgroundColor:data.map(d=>d<0?'rgba(21,101,192,.7)':d===topSpr?'rgba(46,125,50,.8)':'rgba(211,47,47,.5)'),borderRadius:4,borderWidth:1}]},
@@ -2735,8 +2630,6 @@ const Settings = {
    ============================================================ */
 const Reports = {
   async generatePDF() {
-    if(!App.canExportDraft()) return;
-    if(!window.jspdf) { toast('PDF library unavailable. JSON export retains the project and evidence offline.', 'error'); return; }
     toast('📄 Generating PDF report...','info',6000);
     try {
       const {jsPDF} = window.jspdf;
@@ -2755,7 +2648,7 @@ const Reports = {
         doc.setTextColor(255,255,255); doc.setFontSize(11); doc.setFont(undefined,'bold');
         doc.text(company,M,11);
         doc.setFontSize(8); doc.setFont(undefined,'normal');
-        doc.text('DRAFT - ENGINEERING REVIEW REQUIRED',W-M,8,{align:'right'});
+        doc.text('FDGuinoo FP Calculator v2.0',W-M,8,{align:'right'});
         doc.text(proj.name||'Untitled Project',W-M,14,{align:'right'});
         y=26;
         if(title){
@@ -2768,7 +2661,7 @@ const Reports = {
       const addFooter=()=>{
         doc.setDrawColor(200,200,200); doc.setLineWidth(.3); doc.line(M,H-12,W-M,H-12);
         doc.setFontSize(7); doc.setTextColor(...gray); doc.setFont(undefined,'normal');
-        doc.text('DRAFT - Not approved for engineering use | Method '+HYDROCAL_METHOD_VERSION,M,H-7);
+        doc.text('Generated by FDG-FP-HydroCal v2.0 | '+new Date().toLocaleString(),M,H-7);
         doc.text('Page '+doc.getNumberOfPages(),W-M,H-7,{align:'right'});
       };
 
@@ -2781,7 +2674,7 @@ const Reports = {
         doc.setFontSize(8); doc.setTextColor(...gray); doc.setFont(undefined,'normal');
         doc.text(label+':',M+indent,y);
         doc.setTextColor(...dark); doc.setFont(undefined,'bold');
-        doc.text(String(value ?? '—'),M+indent+52,y);
+        doc.text(String(value||'—'),M+indent+52,y);
         y+=6;
       };
 
@@ -2831,7 +2724,7 @@ const Reports = {
         doc.setFontSize(8); doc.setTextColor(...gray);
         doc.text('Prepared By: '+(proj.preparedBy||'—'),M+10,y); y+=6;
         doc.text('Checked By: '+(proj.checkedBy||'—'),M+10,y); y+=6;
-        doc.text('Proposed Approver (unverified): '+(proj.approvedBy||'—'),M+10,y);
+        doc.text('Approved By: '+(proj.approvedBy||'—'),M+10,y);
       }
       addFooter();
 
@@ -2862,9 +2755,7 @@ const Reports = {
       if(hyd && inc('Hydraulic')){ addSectionTitle('Hydraulic Calculation');
         addField('Flow Rate',fmt(hyd.Q,0)+' GPM'); addField('Pipe Diameter',fmt(hyd.D,3)+' in ID');
         addField('Velocity',fmt(hyd.velocity,2)+' ft/s'); addField('Friction Loss',fmt(hyd.frictionLoss,2)+' psi');
-        addField('Total Loss',fmt(hyd.totalLoss,2)+' psi');
-        addField('Static-reference residual',hyd.residualP === null ? 'Missing source pressure' : fmt(hyd.residualP,2)+' psi');
-        addField('Finding',hyd.requirementOutcome === 'fail' ? 'FAIL - review required' : 'Insufficient evidence'); }
+        addField('Total Loss',fmt(hyd.totalLoss,2)+' psi'); }
         
       const sp=App.state.calculations.standpipe;
       if(sp && inc('Standpipe')){ addSectionTitle('Standpipe System (NFPA 14)');
@@ -2874,7 +2765,7 @@ const Reports = {
       const hr=App.state.calculations.hoseReel;
       if(hr && inc('Hose Reel')){ addSectionTitle('Hose Reel System');
         addField('Reels Required',hr.reelsRequired); addField('Total Flow',fmt(hr.totalFlow,0)+' GPM');
-        addField('Supply Pipe Size',hr.pipeSize === null ? 'NO FEASIBLE CANDIDATE' : hr.pipeSize+'"'); }
+        addField('Supply Pipe Size',hr.pipeSize+'"'); }
 
       const ext=App.state.calculations.extinguisher;
       if(ext && inc('Extinguisher')){ addSectionTitle('Fire Extinguisher (NFPA 10)');
@@ -2889,9 +2780,8 @@ const Reports = {
       const fp=App.state.calculations.firePump;
       if(fp && inc('Fire Pump')){ checkPage(50); addSectionTitle('Fire Pump (NFPA 20)');
         addField('Required Flow',fmt(fp.Q,0)+' GPM'); addField('Required Head',fmt(fp.H,0)+' psi');
-        addField('Indicative motor rating only',fp.stdHp+' HP'); addField('Pump Type',fp.type==='electric'?'Electric Motor':'Diesel Engine');
-        addField('Efficiency',fp.eff+'%'); addField('NPSH', 'Insufficient evidence - not assessed');
-        addField('Head (water reference)',fmt(fp.headFt,2)+' ft'); addField('Shaft power',fmt(fp.bhp,2)+' BHP'); }
+        addField('Motor Rating',fp.stdHp+' HP'); addField('Pump Type',fp.type==='electric'?'Electric Motor':'Diesel Engine');
+        addField('Efficiency',fp.eff+'%'); addField('NPSH Available',fmt(fp.npshA,1)+' ft'); }
 
       const wt=App.state.calculations.waterTank;
       if(wt && inc('Water Tank')){ checkPage(40); addSectionTitle('Water Storage Tank (NFPA 22)');
@@ -2947,12 +2837,12 @@ const Reports = {
       }
 
       // ---- SIGNATURE PAGE ----
-      doc.addPage(); addHeader('Draft Review Record');
+      doc.addPage(); addHeader('Certification & Signatures');
       y=50;
       doc.setFontSize(9); doc.setTextColor(...dark); doc.setFont(undefined,'normal');
-      doc.text('Preliminary worksheet. Code compliance and engineering approval are not established.',W/2,y,{align:'center'}); y+=6;
-      doc.text('Named persons below are user-entered references, not verified approvals.',W/2,y,{align:'center'}); y+=20;
-      const sigs=[['Prepared By:',proj.preparedBy],['Checked By:',proj.checkedBy],['Proposed Approver (unverified):',proj.approvedBy]];
+      doc.text('This fire protection engineering report has been prepared in accordance with',W/2,y,{align:'center'}); y+=6;
+      doc.text(code.name+' and all applicable fire codes and standards.',W/2,y,{align:'center'}); y+=20;
+      const sigs=[['Prepared By:',proj.preparedBy],['Checked By:',proj.checkedBy],['Approved By:',proj.approvedBy]];
       sigs.forEach(([label,name])=>{
         checkPage(35);
         doc.setFontSize(9); doc.setTextColor(...gray); doc.text(label,M+20,y); y+=12;
@@ -2965,14 +2855,13 @@ const Reports = {
       });
       addFooter();
 
-      doc.save((proj.name||'FDG-FP-Report')+'-DRAFT.pdf');
+      doc.save((proj.name||'FDG-FP-Report')+'.pdf');
       toast('✅ PDF report generated','success');
     } catch(err){ console.error(err); toast('❌ PDF error: '+err.message,'error'); }
   },
 
   exportCSV() {
-    if(!App.canExportDraft()) return;
-    let csv='Section,Parameter,Value,Unit\nStatus,Release,DRAFT - ENGINEERING REVIEW REQUIRED,\n';
+    let csv='Section,Parameter,Value,Unit\n';
     const h=HAZARDS[App.state.hazard]||HAZARDS.light;
     csv+=`Design,Density,${h.density},GPM/ft²\nDesign,Area,${h.area},ft²\nDesign,Hose Allowance,${h.hose},GPM\nDesign,Duration,${h.duration},min\n`;
     const spr=App.state.calculations.sprinkler;
@@ -2982,7 +2871,7 @@ const Reports = {
     const wt=App.state.calculations.waterTank;
     if(wt){ csv+=`Tank,Total Volume,${fmt(wt.totalVolume,0)},gallons\nTank,Duration,${wt.duration},min\n`; }
     const blob=new Blob([csv],{type:'text/csv'}); const a=document.createElement('a');
-    a.href=URL.createObjectURL(blob); a.download='FDG-FP-Summary-DRAFT.csv'; a.click();
+    a.href=URL.createObjectURL(blob); a.download='FDG-FP-Summary.csv'; a.click();
     toast('📥 CSV exported','success');
   }
 };

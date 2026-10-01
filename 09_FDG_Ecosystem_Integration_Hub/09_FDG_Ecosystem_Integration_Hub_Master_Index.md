@@ -30,3 +30,16 @@
 - [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-010_PLATFORM_OPERATIONS_STANDARD|FDG-PH-STD-010 PLATFORM OPERATIONS STANDARD]]
 - [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-011_SCALABILITY_ARCHITECTURE_STANDARD|FDG-PH-STD-011 SCALABILITY ARCHITECTURE STANDARD]]
 - [[09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-012_IMPLEMENTATION_ROADMAP_STANDARD|FDG-PH-STD-012 IMPLEMENTATION ROADMAP STANDARD]]
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+Start with the [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]] to review the proposed ownership boundaries and decisions D1–D6.
+
+- [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]]
+- [[09_FDG_Ecosystem_Integration_Hub/FDG_SHARED_RECORD_CONTRACT_2026-10-01|Shared Record Contract]]
+- [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]]
+
+Historical knowledge remains intact; proposed architecture is not promoted by publication.

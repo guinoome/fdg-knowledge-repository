@@ -61,3 +61,21 @@ No test count can substitute for these scoped gates.
 
 
 **Change history:** 2026-09-30 — initial additive review record; no predecessor removed or superseded by this publication.
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+### Executed subset and remaining acceptance — 2026-10-01
+
+| Cases | Current evidence | Remaining limitation |
+| --- | --- | --- |
+| R01, R04–R09 | Targeted source/helper tests cover pressure conversion, zero/missing values, invalid domains, adverse pressure, exhausted catalogue, storage and withheld NPSH | DOM/storage/report sinks are controlled fixtures; no full browser or field validation |
+| R10 | Actual illustrative-curve configuration and report wording exercised | No provenance-validation engine for arbitrary imported vendor evidence |
+| R18/R26 | Prior numeric result retained, reload marked stale, predecessor archived on recalculation, stale PDF export blocked | No full signed report store, immutable approval service or exact historical PDF reproduction |
+| R02/R03 and R11–R17/R19–R25/R27–R28 | Not implemented or not fully verified as CORE acceptance cases in this package | Do not claim all 28 cases pass |
+
+Twenty calculator regression tests pass. Their count is not a one-to-one count of accepted CORE cases, and the tests do not confer engineering release approval.
+
+Evidence and commands: [[docs/audits/2026-10-01-remediation/REMEDIATION_AND_VERIFICATION|remediation and verification]].
