@@ -1,0 +1,55 @@
+{
+  "manifestVersion": 1,
+  "reviewDate": "2026-10-01",
+  "sourceBaseline": "2425ee27785c67b2e0740e745d9e793f1552ef84",
+  "scope": "Tracked FWIS source only; deployment state unknown",
+  "capabilities": [
+    {
+      "id": "property-isolation-and-record-guards",
+      "sourceState": "present",
+      "verification": "source-inspected; database tests not rerun",
+      "observations": [
+        {"kind": "file", "path": "supabase/schema.sql", "expected": true},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.is_member(", "expected": true},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.stamp_record(", "expected": true},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.guard_revision(", "expected": true},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.guard_accepted_immutable(", "expected": true},
+        {"kind": "file", "path": "verify/live-test.mjs", "expected": true}
+      ]
+    },
+    {
+      "id": "workflow-role-enforcement",
+      "sourceState": "absent",
+      "verification": "not reproducible from this snapshot",
+      "observations": [
+        {"kind": "file", "path": "src/authz.js", "expected": false},
+        {"kind": "file", "path": "supabase/authority.sql", "expected": false},
+        {"kind": "file", "path": "supabase/generate-authority.mjs", "expected": false},
+        {"kind": "file", "path": "verify/role-test.mjs", "expected": false},
+        {"kind": "file", "path": "verify/role-harness.html", "expected": false},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.guard_role_authority(", "expected": false},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "public.role_levels", "expected": false},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "public.workflow_authority", "expected": false},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.assign_reference(", "expected": false},
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.evaluate_escalations(", "expected": false}
+      ]
+    },
+    {
+      "id": "development-self-membership-helper",
+      "sourceState": "present",
+      "verification": "source-present; not suitable evidence of production membership control",
+      "observations": [
+        {"kind": "text", "path": "supabase/schema.sql", "text": "function public.dev_join_demo_properties(", "expected": true}
+      ]
+    }
+  ],
+  "release": {
+    "approved": false,
+    "blockers": [
+      "Missing role enforcement implementation and reproducible authority generation/tests",
+      "Real database positive, negative, cross-property and separation-of-duties tests required",
+      "Development membership helper must be excluded or restricted in a reviewed production migration",
+      "Independent security review and deployment-bound release decision required"
+    ]
+  }
+}
