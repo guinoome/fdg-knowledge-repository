@@ -438,3 +438,22 @@ The strength of the FDG Ecosystem is determined not by how much knowledge it con
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[01_Governance/01_Governance_Master_Index|01 Governance Master Index]] → this document
+
+
+---
+
+## 2026-10-01 remediation and architecture review update
+
+### Proposed clarification for prospective ratification
+
+The framework remains **Draft**. References from other documents do not approve it, and this addendum does not erase those documents' declared approvals.
+
+Source tiers are discovery and provenance aids. They are not a universal ranking of legal force, applicability, scientific correctness or numerical confidence. A source's applicable jurisdiction, adopted edition, subject expertise, primary evidence and known limitations must be assessed for the particular decision. Publisher category alone cannot resolve a conflict.
+
+Publishing a clearly labeled candidate or evidence record is distinct from approving it as an organizational standard or authorizing engineering use. Human technical authority comes from applicable qualifications and delegated scope, not a collaborator/model identity. A proposed approver field is not an approval event.
+
+For a prospective ratification, bind the exact framework version plus this clarification, actual approver/date, scope and exclusions in a decision record. Do not backdate prior references. Until then, identify decisions relying solely on this Draft and use independently approved controlling clauses where available.
+
+This additive clarification is prepared under the user's instruction to fix findings and enhance architecture. It does not itself amend the framework's status.
+
+Review AUTH-03 and D3: [[05_Knowledge_Architecture/FDG_AUTHORITY_RECONCILIATION_REGISTER_2026-10-01|authority reconciliation register]] · [[05_Knowledge_Architecture/FDG_ARCHITECTURE_REVIEW_PACKET_2026-10-01|architecture review packet]].
