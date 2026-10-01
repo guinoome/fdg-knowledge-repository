@@ -75,9 +75,11 @@ This architecture is governed by [[17_FDG_Platform_Intelligence_System/07_Platfo
 
 FPIS now includes a governed shared creation/communication pattern through:
 
-[[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|FDG Creative & Communication Studio]]
+[[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|FDG Creative Studio]]
 
 This capability allows FDG products to embed image, video, content, voice/communication, assistant and reusable asset workflows directly inside the operating experience while preserving provider-neutral architecture, tenant branding, provenance, approval, security and audit boundaries.
 
 The Studio extends Platform Experience & Design Intelligence; it does not create a separate top-level intelligence system.
+
+The user-facing name is **FDG Creative Studio**. Provider-centric labels such as **AI Studio** shall not be used for the normal product experience; underlying models/providers remain replaceable and may be shown only where administratively relevant.
 
