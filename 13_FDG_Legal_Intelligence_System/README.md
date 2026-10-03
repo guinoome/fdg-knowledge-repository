@@ -89,3 +89,23 @@ review.
 - [[13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-TPL-1401 - Legal Decision Record|FLIS-TPL-1401 - Legal Decision Record]]
 - [[13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-TPL-1402 - Evidence Record|FLIS-TPL-1402 - Evidence Record]]
 - [[13_FDG_Legal_Intelligence_System/99_ARCHIVE/FLIS-9900 - Archive Governance|FLIS-9900 - Archive Governance]]
+
+
+---
+
+## Approved Founder-Directed Extension — 2026-10-03
+
+The following cross-system regulatory-compliance capability is added as an additive FLIS domain extension. It does not replace existing FLIS authority, FEIS engineering authority, FBPOIS operational authority, or FDG CORE mechanisms.
+
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM — FDG Regulatory Compliance Intelligence Module]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1501 - Philippine Environmental and Sanitary Compliance Capability Pack|Philippine Environmental and Sanitary Compliance Capability Pack]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1502 - Regulatory Applicability Rule and Evidence Schema|Regulatory Applicability Rule and Evidence Schema]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1503 - Permit Obligation Lifecycle and Workflow|Permit Obligation Lifecycle and Workflow]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1504 - Philippine Permit and Obligation Catalog|Philippine Permit and Obligation Catalog]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1505 - Cross-System Integration Contract|Cross-System Integration Contract]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1506 - Compliance Calendar Alerts and Regulatory Change Standard|Compliance Calendar, Alerts and Regulatory Change Standard]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1507 - Acceptance Tests and Minimum Implementation Dataset|Acceptance Tests and Minimum Implementation Dataset]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1508 - Philippine Regulatory Source Register|Philippine Regulatory Source Register]]
+
+Architectural rule: one canonical regulatory-compliance module is shared by FEIS, FBPOIS, FBIS / FDG Business Platform, FPJIS and other approved consumers. Legal/regulatory authority stays in FLIS; consuming systems supply or use operational evidence through governed interfaces.
+
