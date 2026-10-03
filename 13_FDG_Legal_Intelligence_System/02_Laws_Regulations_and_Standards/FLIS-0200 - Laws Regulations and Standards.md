@@ -31,3 +31,13 @@ Store or reference authoritative sources where legally and technically
 practical. Summaries must be identified as summaries.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[13_FDG_Legal_Intelligence_System/README|README]] → this document
+
+
+## Applied Regulatory Capability
+
+The canonical applied regulatory-compliance layer is [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM]].
+
+Its initial Philippine official-source register is [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1508 - Philippine Regulatory Source Register|FLIS-RCIM-1508]].
+
+FRCIM consumes the verified authority maintained here; it does not replace this legal source domain.
+
