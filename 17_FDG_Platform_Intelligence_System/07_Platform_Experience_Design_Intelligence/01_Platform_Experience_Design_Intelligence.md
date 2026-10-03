@@ -83,3 +83,16 @@ The Studio extends Platform Experience & Design Intelligence; it does not create
 
 The user-facing name is **FDG Creative Studio**. Provider-centric labels such as **AI Studio** shall not be used for the normal product experience; underlying models/providers remain replaceable and may be shown only where administratively relevant.
 
+---
+
+## Predictive Intelligence Command Center Pattern
+
+FPIS governs the visual and interaction pattern for the shared [[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG Machine Learning & Predictive Intelligence capability]].
+
+The preferred user-facing pattern is the **FDG Predictive Intelligence Command Center**: a dense, premium, engineering-grade command interface that may combine KPI cards, risk heatmaps, confidence gauges, actual-versus-predicted trends, model-health status, 3D operating envelopes, prediction funnels, site/asset maps, recommendations, and verified-outcome panels.
+
+The interface shall visually distinguish measured facts, deterministic calculations, statistical inference, machine-learning predictions, human engineering conclusions, approved decisions, and verified outcomes.
+
+The visual language may use dark command-center presentation, glass layers, luminous trends, heatmaps, radial indicators, and animated live states, but semantic engineering status and evidence clarity take priority over decorative intensity.
+
+Prediction cards shall expose confidence, horizon, model version, contributing signals, evidence, limitations, recommended action, approval state, and eventual outcome where available.
