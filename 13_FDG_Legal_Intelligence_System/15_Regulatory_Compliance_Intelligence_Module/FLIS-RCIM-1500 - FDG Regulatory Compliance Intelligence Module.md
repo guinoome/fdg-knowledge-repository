@@ -196,3 +196,8 @@ Initial implementation shall start with deterministic rule records and a manuall
 - [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1508 - Philippine Regulatory Source Register|Source register]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[13_FDG_Legal_Intelligence_System/README|FLIS]] → this document
+
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1509 - Security Privacy and Trust Profile|Security, Privacy and Trust Profile]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1510 - Implementation Roadmap and Agent Handover|Implementation Roadmap and Agent Handover]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/15_Regulatory_Compliance_Intelligence_Module_Master_Index|FRCIM Master Index]]
+
