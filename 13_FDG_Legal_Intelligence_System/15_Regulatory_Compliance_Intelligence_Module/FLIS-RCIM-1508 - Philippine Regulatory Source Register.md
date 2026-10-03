@@ -141,7 +141,7 @@ Evidence class: A
 
 ### SRC-PH-SAN-001
 Authority: Presidential Decree No. 856 — Code on Sanitation of the Philippines  
-Source family: Lawphil / DOH official issuances  
+Primary source: https://lawphil.net/statutes/presdecs/pd1975/pd_856_1975.html  
 Evidence class: A
 
 ### SRC-PH-SAN-002
@@ -160,6 +160,7 @@ Note: competent DOH regional/local implementation must be resolved for the actua
 ### SRC-PH-WR-001
 Authority: Presidential Decree No. 1067 — Water Code of the Philippines  
 Regulator: National Water Resources Board  
+Primary law: https://lawphil.net/statutes/presdecs/pd1976/pd_1067_1976.html
 Official regulator: https://nwrb.gov.ph/  
 Evidence class: A/B
 
