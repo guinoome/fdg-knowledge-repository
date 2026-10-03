@@ -251,3 +251,13 @@ FDG CORE Intelligence transforms validated organizational knowledge into transpa
 The earlier connection table's absence claims are historical. The reviewed tree contains [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS]], [[13_FDG_Legal_Intelligence_System/00_FLIS_CORE/FLIS-0002 - Legal Intelligence Architecture|FLIS architecture]] and [[14_FDG_Service_Intelligence_System/00_FSvIS_CORE/FSvIS-0002 - Service Intelligence Architecture|Service Intelligence architecture]]. Presence does not itself establish approval.
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The proposed reconciliation]] interprets CORE's shared mechanisms alongside its existing non-replacement boundary: domain owners retain authority over records and methods. [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|The execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|acceptance cases]] propose a testable bridge; no existing standard is silently superseded.
+
+---
+
+## Predictive Intelligence Architecture Extension — 2026-10-03
+
+[[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG-CORE-STD-013 Machine Learning & Predictive Intelligence]] extends CORE with reusable forecasting, anomaly detection, predictive modeling, model registry, validation, drift monitoring, and prediction-to-outcome learning.
+
+This extension does not replace the original CORE engine architecture. Predictive intelligence composes the existing Evidence & Provenance, Engineering Intelligence, Decision Intelligence, Optimization, Orchestration, and Continuous Learning capabilities.
+
+Domain systems retain their authority. FPIS owns user-facing experience governance for predictive command centers.
