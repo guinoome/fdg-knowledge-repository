@@ -113,3 +113,27 @@ FLIS regulatory authority
 
 FRCIM is shared capability, not a new competing system mother. It prevents FEIS, FBPOIS and business modules from maintaining divergent copies of the same law, permit rule or compliance obligation.
 
+---
+
+## Machine Learning & Predictive Intelligence Relationship Extension — 2026-10-03
+
+[[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG Machine Learning & Predictive Intelligence]] is the canonical shared predictive capability.
+
+Relationship contract:
+
+Domain source records and evidence
+→ FDG CORE evidence/provenance
+→ governed feature engineering
+→ validated model / statistical method
+→ prediction record with confidence and limitations
+→ domain interpretation
+→ Decision Intelligence
+→ human approval / governed workflow
+→ measured outcome
+→ model performance review
+→ Continuous Learning
+→ governed repository improvement where justified.
+
+FEIS, FBPOIS, FBIS, FPJIS and other domain systems shall not create competing canonical model-governance frameworks. They may define domain-specific application profiles, features, acceptance thresholds and workflows while using the shared CORE prediction and model-governance contract.
+
+FPIS governs the predictive dashboard/command-center experience. FWAIS may execute approved response workflows. FAIS may independently audit model controls and prediction outcomes. FSIS governs security requirements. Domain authorities retain their records and decision rights.
