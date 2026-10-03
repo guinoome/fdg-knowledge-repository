@@ -20,3 +20,20 @@
 - [[Projects/Active/FDG Business Platform/README|FDG Business Platform]] — client-facing ecosystem hub and module portfolio experience.
 - [[Projects/Active/FDG Business Platform/docs/UNIFIED_ACCOUNT_MODULAR_ARCHITECTURE|Unified Account and Modular Subscription Architecture]] — separates account navigation from module, branch, permissions, billing, and operational scopes.
 - [[Projects/Active/FDG Business Platform/fuel-station/README|Fuel Operations]] — first connected, domain-native operational module; implementation evidence does not replace FBPOIS knowledge authority.
+
+
+---
+
+## Cross-System Regulatory Compliance Module — 2026-10-03
+
+FBPOIS consumes the canonical [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FDG Regulatory Compliance Intelligence Module (FRCIM)]] for facility environmental and operating compliance.
+
+Primary FBPOIS uses include permit passports, PTO/WDP condition monitoring, PCO records, SMR/CMR evidence, hazardous-waste chain-of-custody, chemical inventory, sanitary compliance, recurring inspections, reporting and renewals.
+
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1503 - Permit Obligation Lifecycle and Workflow|Permit Obligation Lifecycle and Workflow]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1504 - Philippine Permit and Obligation Catalog|Philippine Permit and Obligation Catalog]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1506 - Compliance Calendar Alerts and Regulatory Change Standard|Compliance Calendar and Regulatory Change]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1505 - Cross-System Integration Contract|Cross-System Integration Contract]]
+
+Boundary: FBPOIS remains the operating-record authority for facility/asset data and monitoring evidence. It references FRCIM obligations instead of duplicating regulatory rules.
+
