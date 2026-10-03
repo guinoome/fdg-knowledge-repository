@@ -329,3 +329,11 @@ FDG CORE Intelligence shall evolve through disciplined engineering governance, e
 **End of Standard**
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index|10 FDG CORE Intelligence Master Index]] → this document
+
+---
+
+## Stage 7 Activation Note — 2026-10-03
+
+The architecture for Stage 7 — Predictive Engineering Intelligence is now defined by [[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG-CORE-STD-013 Machine Learning & Predictive Intelligence Standard]].
+
+Implementation remains progressive: deterministic engineering methods first, then statistical detection, machine learning, optimization, and only later controlled autonomy where risk, authority, evidence, rollback, and monitoring requirements are satisfied.
