@@ -109,3 +109,7 @@ The following cross-system regulatory-compliance capability is added as an addit
 
 Architectural rule: one canonical regulatory-compliance module is shared by FEIS, FBPOIS, FBIS / FDG Business Platform, FPJIS and other approved consumers. Legal/regulatory authority stays in FLIS; consuming systems supply or use operational evidence through governed interfaces.
 
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/15_Regulatory_Compliance_Intelligence_Module_Master_Index|FRCIM Master Index]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1509 - Security Privacy and Trust Profile|Security, Privacy and Trust Profile]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1510 - Implementation Roadmap and Agent Handover|Implementation Roadmap and Agent Handover]]
+
