@@ -90,3 +90,26 @@ Within [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligen
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The proposed reconciliation]] connects ECC, CBC and FBPOIS shared entities while retaining domain record ownership. It also records the FLIS approval-label conflict and historical absence/numbering discrepancies. Current file presence does not promote Draft or Proposed knowledge.
 
 Engineering consequences and supporting evidence: [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|critical findings]] · [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|repository review]].
+
+
+---
+
+## Regulatory Compliance Relationship Extension — 2026-10-03
+
+[[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM]] is the canonical cross-system regulatory-compliance module.
+
+Relationship contract:
+
+FLIS regulatory authority
+→ FRCIM applicability/obligation record
+→ FDG CORE compliance/evidence mechanisms
+→ FEIS engineering evidence and project change
+→ FBPOIS operating/monitoring evidence
+→ FBIS / Business Platform entity, branch and client-service context
+→ FPJIS project gates
+→ FWAIS approved automation
+→ FAIS independent audit/CAPA
+→ back to FLIS regulatory-change intelligence and organizational learning.
+
+FRCIM is shared capability, not a new competing system mother. It prevents FEIS, FBPOIS and business modules from maintaining divergent copies of the same law, permit rule or compliance obligation.
+
