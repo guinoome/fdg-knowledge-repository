@@ -81,3 +81,20 @@ This extension is additive. Existing FEIP standards remain valid unless a contro
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-019_ENGINEERING_DATA_INTEGRITY_AND_TRANSACTION_LINEAGE_STANDARD|FEIP-STD-019 ENGINEERING DATA INTEGRITY AND TRANSACTION LINEAGE STANDARD]]
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-020_SERVICE_DELIVERY_AND_FIELD_OPERATIONS_STANDARD|FEIP-STD-020 SERVICE DELIVERY AND FIELD OPERATIONS STANDARD]]
 - [[08_FEIS_Engineering_Intelligence_Systems/FEIP-SEC-ADD-001_FIELD_SERVICE_SECURITY_PRIVACY_AND_TRUST_CONTROLS|FEIP-SEC-ADD-001 FIELD SERVICE SECURITY PRIVACY AND TRUST CONTROLS]]
+
+
+---
+
+## Cross-System Regulatory Compliance Module — 2026-10-03
+
+FEIS consumes the canonical [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FDG Regulatory Compliance Intelligence Module (FRCIM)]] for project, design, equipment, environmental, sanitary and permit-readiness workflows.
+
+Key FEIS interfaces:
+
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1501 - Philippine Environmental and Sanitary Compliance Capability Pack|Philippine Environmental and Sanitary Compliance Capability Pack]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1504 - Philippine Permit and Obligation Catalog|Philippine Permit and Obligation Catalog]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1505 - Cross-System Integration Contract|Cross-System Integration Contract]]
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1507 - Acceptance Tests and Minimum Implementation Dataset|Acceptance Tests]]
+
+Boundary: FEIS owns engineering facts and engineering evidence; FLIS/FRCIM owns the regulatory requirement and applicability record. FEIS shall not create a duplicate legal source catalog.
+
