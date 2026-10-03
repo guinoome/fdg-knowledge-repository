@@ -29,3 +29,8 @@ The original references above remain as historical text. The following observed 
 - `11_Business_Frameworks/11_Business_Frameworks_Master_Index` → [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index|11_Business_Frameworks_Master_Index]]
 
 Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].
+
+
+## Transcript-derived build blueprints
+
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-001_FDG_Lean_Service_Business_Build_Blueprint|FDG Lean Service Business Build Blueprint]] — Draft v0.1.0; enhanced client journey, reuse boundaries, portable context, automation controls, pilot metrics, and acceptance tests. Added 2026-10-03; does not promote proposals to an approved baseline.
