@@ -33,3 +33,11 @@ A news article or AI summary may trigger investigation but does not
 itself establish a regulatory change.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[13_FDG_Legal_Intelligence_System/README|README]] → this document
+
+
+## FRCIM Propagation Interface
+
+Verified regulatory changes affecting environmental, sanitary, permit or operating-compliance rules shall propagate through [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1506 - Compliance Calendar Alerts and Regulatory Change Standard|FLIS-RCIM-1506]] to affected rule versions and obligation instances.
+
+Historical determinations remain preserved. A new rule version triggers re-evaluation; it does not rewrite the prior regulatory record.
+
