@@ -346,3 +346,11 @@ Future Work Begins Here
 ## 2026-09-30 architecture review addendum
 
 [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Architecture-critical repository review]] connects current evidence, preserved historical observations and open corrective actions. New proposals: [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|enterprise ownership reconciliation]], [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|engineering reasoning execution contract]], [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|intelligence expansion backlog]]. These additions do not replace approved standards.
+
+---
+
+## Predictive Intelligence Extension — 2026-10-03
+
+[[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG-CORE-STD-013 Machine Learning & Predictive Intelligence Standard]] defines the shared FDG capability for governed anomaly detection, forecasting, predictive modeling, model registry, validation, drift monitoring, confidence, and prediction-to-outcome learning.
+
+Architectural decision: predictive intelligence extends FDG CORE rather than creating a separate system mother. Domain systems retain authority, and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/01_Platform_Experience_Design_Intelligence|FPIS]] governs the FDG Predictive Intelligence Command Center experience.
