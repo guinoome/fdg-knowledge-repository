@@ -37,3 +37,13 @@
 ## 2026-09-30 architecture review addendum
 
 [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|Engineering reasoning execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|28 acceptance cases]] are Proposed implementation/review addenda. [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Critical findings]] supplies the observed failure cases; [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|architecture reconciliation]] clarifies mechanism versus domain authority.
+
+
+---
+
+## Regulatory Compliance Application Profile — 2026-10-03
+
+[[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM]] applies the existing [[10_FDG_CORE_Intelligence/FDG-CORE-STD-004_REVIEW_AND_COMPLIANCE_ENGINE_STANDARD|Review & Compliance Engine]], [[10_FDG_CORE_Intelligence/FDG-CORE-STD-008_EVIDENCE_AND_PROVENANCE_ENGINE_STANDARD|Evidence & Provenance Engine]], [[10_FDG_CORE_Intelligence/FDG-CORE-STD-009_KNOWLEDGE_SURVEILLANCE_STANDARD|Knowledge Surveillance]] and decision/orchestration capabilities to regulatory obligations.
+
+This is an application profile, not a duplicate CORE engine. Regulatory authority remains in FLIS.
+
