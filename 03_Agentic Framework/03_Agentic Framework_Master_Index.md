@@ -8,6 +8,7 @@
 - [[AUTHORITY_LEVELS]]
 - [[CONTEXT_REQUIREMENTS]]
 - [[ENGINEERING_OBJECTIVE]]
+- [[TOP_TIER_REPOSITORY_REVIEW_WATCH]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
 
@@ -29,3 +30,5 @@ The Agentic Framework remains the governing operating model. Execution/orchestra
 - [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS — Multi-Collaborator Intelligence]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS — Workflow Automation Intelligence]]
+
+- [[03_Agentic Framework/TOP_TIER_REPOSITORY_REVIEW_WATCH|Top-Tier Repository Review Watch]]
