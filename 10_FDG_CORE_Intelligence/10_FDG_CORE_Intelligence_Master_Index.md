@@ -47,3 +47,10 @@
 
 This is an application profile, not a duplicate CORE engine. Regulatory authority remains in FLIS.
 
+---
+
+## Machine Learning & Predictive Intelligence Capability — 2026-10-03
+
+- [[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG-CORE-STD-013 Machine Learning & Predictive Intelligence Standard]]
+
+This capability activates the Predictive Engineering Intelligence direction already identified in the CORE roadmap. It is a shared CORE capability, not a new top-level Intelligence System. Domain systems retain record and decision authority; FPIS governs the predictive command-center experience.
