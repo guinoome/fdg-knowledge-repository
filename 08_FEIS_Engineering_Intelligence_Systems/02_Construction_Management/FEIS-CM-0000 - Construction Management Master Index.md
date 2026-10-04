@@ -65,3 +65,37 @@ Construction Management may be sold as a complete package or decomposed into com
 Shared data and authority models must prevent module silos.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS]] → this document
+
+
+---
+
+## Construction Manager Workbench Architecture Extension — 2026-10-04
+
+The Construction Management package now includes a provider-replaceable role-intelligence layer for Construction Managers. This extension is additive and does not replace the lifecycle, operational-record, reporting, commercial, QA/QC, closeout or collaboration architecture already defined above.
+
+### New Canonical Documents
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard|FEIS-CM-0005 — Construction Manager Role Intelligence and Guided Workflow]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard|FEIS-CM-0006 — Construction Document Intelligence and Verification]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard|FEIS-CM-0007 — Construction Manager Embedded Learning and Competency]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|FEIS-CM-0901 — Construction Manager Workbench Upgrade Blueprint]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0001 - Tixu Construction Manager Benchmark Extraction 2026-10-04|FEIS-CM-RSCH-0001 — Tixu Construction Manager Benchmark Extraction]]
+
+### Direction
+
+The target experience is the **FDG Construction Manager Workbench**:
+
+Project operating system + governed construction knowledge + document intelligence + role-aware workflow assistance + embedded capability development.
+
+The Workbench must remain:
+
+- model/provider replaceable
+- evidence linked
+- permission aware
+- revision aware
+- human reviewed at consequential decision boundaries
+- backed by canonical structured records
+- compatible with Capture Once → Validate Once → Reuse Everywhere
+- connected to the Digital Construction Knowledge Library
+
+A blank chat interface is not the product architecture.
