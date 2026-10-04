@@ -80,3 +80,29 @@ Parallel execution is determined by dependency analysis, not by a fixed agent co
 - [[20_FPJIS_FDG_Project_Intelligence_System/31_Project_Lifecycle/FPJIS_Project_Lifecycle|FPJIS Project Lifecycle]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/32_Reusable_Blueprint_Library/Blueprint_Promotion|Blueprint Promotion]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/README|README]]
+
+---
+
+## FDG Solar Visayas Proposal-to-Project Relationship — 2026-10-04
+
+For future solar implementation, an accepted FDG Solar Visayas quotation should create or update a project using the exact accepted engineering baseline rather than re-keying capacity/BOM values.
+
+~~~text
+Approved FEIS Solar Design
+→ Approved Technical BOM
+→ Accepted Quotation
+→ FPJIS Project Baseline
+→ Installation
+→ Inspection / T&C
+→ Turnover
+~~~
+
+Engineering source:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FDG Solar Visayas Future Upgrade Blueprint]]
+
+Implementation project:
+
+[[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]]
+
+Any post-acceptance technical change requires a linked variation/revision; project state must not silently diverge from the accepted design.
