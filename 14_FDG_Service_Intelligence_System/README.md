@@ -132,3 +132,17 @@ Initial architecture baseline, created 2026-08-29. It is deliberately designed f
 - [[14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/Service_Experiments/README|README]]
 - [[14_FDG_Service_Intelligence_System/99_Archive/README|README]]
 - [[14_FDG_Service_Intelligence_System/FSvIS-MANIFEST|FSvIS-MANIFEST]]
+
+---
+
+## FDG Solar Engineering Service Funnel — 2026-10-04
+
+A future service-packaging opportunity is defined by [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004 — Arka360 Philippines Benchmark & Incremental Enhancement Register]].
+
+Potential service progression:
+
+Free Solar Engineering Tool → Preliminary Assessment → Paid Detailed Solar Design → Electrical / SLD / Drawing Package → Permit / Interconnection Support → Installation / Project Service → Testing & Commissioning → Turnover → O&M.
+
+Service Intelligence owns service packaging, scope, pricing framework and delivery model. FEIS Solar remains the authority for technical calculations, engineering records and drawings. FRCIM remains the authority for regulatory obligation/applicability records.
+
+Implementation/product reference: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
