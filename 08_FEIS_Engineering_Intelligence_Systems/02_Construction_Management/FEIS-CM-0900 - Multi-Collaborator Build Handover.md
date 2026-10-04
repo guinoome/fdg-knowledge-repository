@@ -113,3 +113,26 @@ without asking the departing collaborator to reconstruct history.
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0003 - Project Continuity and Personnel Handover Standard|Project Continuity and Handover]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+
+---
+
+## Construction Manager Workbench Extension — 2026-10-04
+
+Collaborators building role-aware Construction Management assistance must also read:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard|Role Intelligence and Guided Workflow]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard|Document Intelligence and Verification]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard|Embedded Learning and Competency]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|Construction Manager Workbench Upgrade Blueprint]]
+
+Additional non-negotiables:
+
+- do not build a Claude-only or OpenAI-only construction architecture
+- do not use prompt text as the sole workflow definition
+- do not let generated text silently become project truth
+- preserve source evidence and document revision
+- use Conflict — Review Required where governing information disagrees
+- keep professional/commercial approval boundaries explicit
+- implement the smallest testable workbench slice before broad automation
+- return only reviewed lessons/capability improvements into the DCKL
