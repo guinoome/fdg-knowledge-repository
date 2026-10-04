@@ -654,3 +654,58 @@ Additional acceptance tests:
 - **Constraint inspector:** a recommendation identifies the governing constraint and supporting rule/evidence rather than only a final size.
 
 These tests are additive to all earlier acceptance tests.
+
+---
+
+# Photonik Data and Acceptance Extension — 2026-10-04
+
+This specification is additively extended by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+Future contracts shall support:
+
+~~~text
+DatasheetIngestionJob
+HardwareComparisonSet
+HardwareSubstitutionCandidate
+ExperienceProjection
+LoadProfileArchetype
+FutureLoadScenario
+GridConnectionMode
+OffGridLoadItem
+GeneratorSource
+StorageCoupling
+TariffTemplate
+RoofPlanePerformance
+SitePlanRevision
+HandoverPackage
+ProposalLocaleProfile
+LearningScenario
+ClientReviewEvent
+SolarCostGroup
+SolarCostLine
+~~~
+
+Additional acceptance tests:
+
+- **Datasheet ingestion:** extracted values remain Proposed until reviewed; missing critical fields prevent Design Eligible status.
+- **Variant separation:** a multi-model datasheet creates distinct model variants and never collapses differing electrical limits into one generic product.
+- **Public/pro workspace consistency:** identical governed inputs/rules produce the same engineering result across public and professional projections.
+- **Archetype labeling:** assumed load shapes are visibly distinguished from measured interval data.
+- **Future-load isolation:** projected EV/AC/business-growth loads never overwrite historical actual consumption.
+- **Grid-mode integrity:** ON_GRID and OFF_GRID invoke the correct workflow and required evidence without relying on battery presence alone.
+- **Off-grid seasonal adequacy:** the design demonstrates energy adequacy against the governed worst-period method rather than annual average only.
+- **Maximum-demand adequacy:** inverter/generator power selection evaluates simultaneous/peak demand and surge requirements where applicable.
+- **Generator dispatch balance:** PV, battery, generator and load energy reconcile within defined tolerance.
+- **Storage coupling:** AC/DC/hybrid topology changes propagate to losses, wiring, protection, BOM and drawing outputs.
+- **Tariff template provenance:** reused tariff bands retain utility, effective date, source and approval status.
+- **Weighted tariff:** weighted effective rate identifies the load profile used and does not masquerade as an interval bill calculation.
+- **Roof-plane scoring:** relative performance ranking is reproducible from the selected yield/orientation method.
+- **Site plan derivation:** site-plan strings, routes and equipment locations are traceable to source design objects.
+- **Handover readiness:** Ready for Installation cannot be reached while required package items are missing or superseded.
+- **Datasheet attachment:** a selected product attaches only its approved matching datasheet revision.
+- **Localization integrity:** translated proposal text does not modify numeric engineering truth, warnings, acceptance state or provenance.
+- **Client-review lineage:** requested changes identify the customer-review event that caused the new design/commercial revision.
+
+These tests are additive to all prior acceptance criteria.
