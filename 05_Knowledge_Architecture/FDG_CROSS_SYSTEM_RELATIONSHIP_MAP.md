@@ -168,3 +168,29 @@ Implementation target:
 [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
 
 The capability roadmap does not assign the project's release/revision number; numbering remains subject to the approved implementation change set.
+
+---
+
+## Solar Electrical and Dispatch Extension — 2026-10-04
+
+The additive Philippines-facing Arka360 benchmark is recorded in [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004]].
+
+It does not change existing system ownership.
+
+Additional relationship detail:
+
+FEIS Solar owns SolarElectricalGraph, strings/MPPT, cable/protection engineering, SLD/3LD technical basis, PV+ESS dispatch engineering and solar design scenarios/revisions.
+
+[[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM]] owns Philippine utility, electrical, permit and interconnection obligation/applicability truth.
+
+[[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS_Commercial_Intelligence_Framework|FBIS]] owns commercial pricing/financing and accepted commercial state.
+
+[[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/01_Platform_Experience_Design_Intelligence|FPIS]] owns roof/electrical/3D/proposal experience.
+
+[[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] owns accepted-design-to-project implementation context.
+
+[[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS]] owns approved workflow automation.
+
+[[14_FDG_Service_Intelligence_System/README|FDG Service Intelligence]] owns paid detailed design, drawing and permit-support service packaging.
+
+Implementation remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
