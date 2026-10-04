@@ -72,3 +72,29 @@ Knowledge Object + Workflow + Rules + Evidence + Computation + Authority + Outpu
 Operational Work → Structured Evidence → Review → Lesson Learned → Governed Knowledge → FDG Module / Template / Training / Service → New Operational Work.
 
 This extension preserves the FDG Knowledge Repository as source of truth and does not create a separate knowledge repository.
+
+---
+
+# Solar Engineering Learning Mode Extension — 2026-10-04
+
+The Solar Energy Intelligence branch may reuse approved engineering rules, scenario comparisons and calculation evidence as interactive learning material.
+
+Source architecture:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+Target pattern:
+
+~~~text
+Approved Engineering Rule / Scenario
+→ Learning Question or Trade-Off
+→ User Choice
+→ Deterministic Comparison
+→ Explanation
+→ Rule / Evidence Reference
+→ Learning Result
+~~~
+
+Learning Mode may support homeowner education, sales-engineer training, junior designer training, technician familiarization and client proposal explanation.
+
+Training content must not create a second simplified source of engineering truth.
