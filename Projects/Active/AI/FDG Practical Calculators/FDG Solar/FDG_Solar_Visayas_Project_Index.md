@@ -43,3 +43,13 @@ Future product revision numbering is not predetermined by the FEIS capability ro
 The implementation/release owner assigns the version/revision based on the actual approved change set.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document
+
+---
+
+## Arka360 Philippines Incremental Upgrade Knowledge
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|Arka360 Philippines Benchmark & Incremental Enhancement Register]]
+
+This research is an additive upgrade input only. It does not replace the existing FDG Solar architecture or Solset benchmark.
+
+New future implementation focus includes SolarElectricalGraph, visual string/MPPT workspace, cable/protection engineering, generated SLD/3LD, interval battery dispatch, tariff/settlement profiles, essential-load backup, scenario-vs-revision separation, immutable shared/accepted proposal snapshots, configurable survey templates, engineering export adapters, Engineering Impact Trace and Design Constraint Inspector.
