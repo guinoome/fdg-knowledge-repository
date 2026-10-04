@@ -124,3 +124,32 @@ The first major commercialization surface should be [[08_FEIS_Engineering_Intell
 - [[13_FDG_Legal_Intelligence_System/04_Intellectual_Property/FDG_IP_Register/FLIS-TPL-0401 - IP Asset Record Template|IP Asset Record Template]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS]] → this document
+
+
+---
+
+## Role-Aware Executable Knowledge Extension — 2026-10-04
+
+The DCKL may package approved knowledge not only as documents/templates, but as provider-neutral executable guidance for project roles.
+
+A reusable role capability may combine:
+
+Knowledge Object + Task Definition + Required Context + Rules + Evidence + Verification + Workflow Destination + Authority + Acceptance Tests
+
+For Construction Management, the first role-aware implementation is the [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard|FDG Construction Manager Workbench]].
+
+The DCKL should eventually support governed role packs such as:
+
+- Construction Manager
+- Site Engineer
+- QA/QC
+- Project Controls
+- Commercial / QS
+- Testing & Commissioning
+- Turnover / Closeout
+
+These are not separate knowledge silos. They are different governed experiences over shared canonical knowledge and project data.
+
+Embedded learning and competency evidence are governed by [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard|FEIS-CM-0007]].
+
+External benchmark provenance for the 2026-10-04 construction-manager upgrade is preserved in [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0001 - Tixu Construction Manager Benchmark Extraction 2026-10-04|FEIS-CM-RSCH-0001]].
