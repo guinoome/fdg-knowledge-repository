@@ -65,3 +65,13 @@ No future FDG Solar Visayas revision number is made canonical by these documents
 This is an additive delta to the existing Solset-derived and FDG-native Solar Energy Intelligence architecture. It preserves all prior knowledge and adds only material gaps identified from the Philippines-facing Arka360 workflow, especially electrical topology, visual string/MPPT design, cable/protection engineering, SLD/3LD generation, battery dispatch strategies, tariff/settlement profiles, proposal snapshots, configurable site surveys and engineering export adapters.
 
 Implementation target remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Photonik Incremental Benchmark — 2026-10-04
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005 — Photonik Benchmark and Incremental Enhancement Register]]
+
+This is an additive delta to the existing FDG Solar architecture and prior Solset/Arka360 benchmark work. It adds only material gaps, including governed datasheet ingestion, hardware comparison/substitution intelligence, public capability projections from the same kernel, load-shape archetype fallbacks, future electrification scenarios, dedicated off-grid engineering, generator modeling, AC/DC storage coupling, tariff templates, roof-plane performance scoring, site-plan composition, handover-package completeness, multilingual proposal localization and Solar Engineering Learning Mode.
+
+Implementation target remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
