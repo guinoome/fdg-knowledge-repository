@@ -114,3 +114,18 @@ The first implementation target is [[Projects/Active/AI/FDG Practical Calculator
 This extension does not create a separate top-level system mother. FEIS owns solar engineering meaning; FBIS, FPJIS, FWAIS, FRCIM, FPIS, FSIS, FAIS and FDG CORE retain their existing cross-system authorities.
 
 Future FDG Solar Visayas release/revision numbering remains unassigned and is determined by actual approved implementation scope.
+
+
+---
+
+## Construction Manager Workbench Extension — 2026-10-04
+
+FDG Engineering Construction Management now has an additive role-intelligence/workbench layer:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard|Construction Manager Role Intelligence and Guided Workflow]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard|Construction Document Intelligence and Verification]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard|Construction Manager Embedded Learning and Competency]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|Construction Manager Workbench Upgrade Blueprint]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0001 - Tixu Construction Manager Benchmark Extraction 2026-10-04|External Benchmark Extraction]]
+
+This extension preserves the existing FEIS Construction Management lifecycle and data model. It adds role-aware context, governed task packs, document verification, embedded learning and provider-neutral assistance.
