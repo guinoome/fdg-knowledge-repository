@@ -554,3 +554,32 @@ Two governed intelligence surfaces are added:
 **Design Constraint Inspector** — identifies the governing physical, electrical, roof, commercial, utility or regulatory constraint behind the recommended system.
 
 These extensions strengthen explainability and lifecycle traceability without changing existing ownership boundaries.
+
+---
+
+# Photonik Additive Architecture Extension — 2026-10-04
+
+The existing Solar Energy Intelligence architecture is further extended, not replaced, by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005 — Photonik Benchmark and Incremental Enhancement Register]].
+
+New future architecture concepts include:
+
+- governed DatasheetIngestionJob before hardware becomes Design Eligible;
+- HardwareComparisonSet / substitution analysis based on engineering compatibility, not only price or wattage;
+- ExperienceProjection so public/homeowner tools and the professional workspace consume one canonical kernel;
+- evidence-labeled LoadProfileArchetype fallbacks when interval data is unavailable;
+- FutureLoadScenario for EV, cooling, electrification and business/occupancy growth;
+- GridConnectionMode independent from PV/ESS system family;
+- dedicated off-grid engineering with OffGridLoadItem, maximum demand, seasonal load and autonomy;
+- GeneratorSource integrated into the dispatch model;
+- explicit StorageCoupling for AC-coupled, DC-coupled and integrated-hybrid storage;
+- reusable TariffTemplate with import/export time bands and weighted effective-rate views;
+- RoofPlanePerformance scoring;
+- SitePlanRevision generated from layout/electrical/cable/equipment data;
+- HandoverPackage readiness;
+- ProposalLocaleProfile for multilingual customer outputs without changing engineering truth;
+- LearningScenario for deterministic solar education/training;
+- ClientReviewEvent for preserving why customer-facing design revisions occurred.
+
+These additions preserve all earlier Solset and Arka360-derived requirements.
