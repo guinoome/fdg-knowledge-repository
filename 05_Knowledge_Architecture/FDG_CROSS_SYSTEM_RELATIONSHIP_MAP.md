@@ -194,3 +194,44 @@ FEIS Solar owns SolarElectricalGraph, strings/MPPT, cable/protection engineering
 [[14_FDG_Service_Intelligence_System/README|FDG Service Intelligence]] owns paid detailed design, drawing and permit-support service packaging.
 
 Implementation remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Solar Public Tool, Off-Grid and Hardware Intake Extension — 2026-10-04
+
+The additive Photonik benchmark is recorded in:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+It does not alter existing system authority.
+
+Additional relationship detail:
+
+~~~text
+FEIS Solar
+├── governed datasheet ingestion proposal/review
+├── hardware comparison / engineering substitution
+├── future-load and off-grid engineering
+├── generator / storage-coupling design
+├── roof-plane performance / site-plan generation
+└── handover-package engineering content
+
+FPIS
+├── public/homeowner/pro ExperienceProjection
+├── multilingual proposal rendering
+└── learning/review experience
+
+FBIS
+└── cost groups / margin / discount / incentive / tax semantics
+
+FRCIM
+└── Philippine tariff, utility, permit, electrical and interconnection authority
+
+FWAIS
+└── approved extraction/review/routing/handover workflows
+
+FEIP Knowledge Integration
+└── governed Solar Engineering Learning Mode
+~~~
+
+Implementation remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
