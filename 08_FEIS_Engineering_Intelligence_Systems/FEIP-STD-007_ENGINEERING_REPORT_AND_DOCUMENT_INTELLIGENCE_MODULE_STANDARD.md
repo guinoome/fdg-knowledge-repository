@@ -63,3 +63,17 @@ Source architecture:
 The generated document/drawing artifact shall retain the source design revision, electrical-graph revision, generator version, units and generation timestamp.
 
 If the governing topology changes, the dependent document must be invalidated or regenerated rather than silently remaining current.
+
+---
+
+# Solar Handover Package Extension — 2026-10-04
+
+The future FDG Solar documentation chain is extended by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+A configurable Solar HandoverPackage may include the accepted design reference, approved site plan, equipment schedule, accepted proposal/commercial reference, approved manufacturer datasheets, SLD/3LD where required, site survey evidence, permit/interconnection documents, installation notes and revision register.
+
+Required documents shall be checked through a readiness gate. A package with missing, stale or wrong-model datasheets shall not be represented as Ready for Installation.
+
+Where a selected HardwareItem has an approved datasheet, the correct document revision should be attached/referenced automatically.
