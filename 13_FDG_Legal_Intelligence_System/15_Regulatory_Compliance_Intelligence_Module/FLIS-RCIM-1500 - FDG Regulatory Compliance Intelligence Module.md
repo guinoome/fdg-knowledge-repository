@@ -201,3 +201,16 @@ Initial implementation shall start with deterministic rule records and a manuall
 - [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1510 - Implementation Roadmap and Agent Handover|Implementation Roadmap and Agent Handover]]
 - [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/15_Regulatory_Compliance_Intelligence_Module_Master_Index|FRCIM Master Index]]
 
+---
+
+## Solar Engineering Consumer Profile — 2026-10-04
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence]] consumes FRCIM for solar-related legal/regulatory applicability, permit, utility/interconnection, professional-document, product-certification and jurisdiction-specific obligation intelligence.
+
+Boundary:
+
+- FEIS Solar owns technical facts, calculations, design evidence and engineering status.
+- FRCIM owns the applicable regulatory obligation, source authority, jurisdiction, effective dates and compliance status.
+- FDG Solar Visayas shall not hard-code foreign or Philippine regulatory rules as permanent calculator truth without a governed FRCIM source record.
+
+Implementation target: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
