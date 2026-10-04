@@ -34,3 +34,5 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 ## Transcript-derived build blueprints
 
 - [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-001_FDG_Lean_Service_Business_Build_Blueprint|FDG Lean Service Business Build Blueprint]] — Draft v0.1.0; enhanced client journey, reuse boundaries, portable context, automation controls, pilot metrics, and acceptance tests. Added 2026-10-03; does not promote proposals to an approved baseline.
+
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FDG Social Platform Launch & Content Engine Blueprint]] — Draft v0.1.0; reusable social launch funnel, content archetypes, batch orchestration, keyword/DM automation, channel adapters, commercial attribution and validation controls. Added 2026-10-04; derived from research and requires validation before promotion.
