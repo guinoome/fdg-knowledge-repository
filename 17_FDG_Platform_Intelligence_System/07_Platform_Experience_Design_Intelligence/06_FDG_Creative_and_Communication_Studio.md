@@ -529,3 +529,31 @@ The **FDG Creative Studio** is a shared FPIS creative and communication capabili
 It should be built once and reused across FDG products through governed configuration and provider adapters.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS Home]] → [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|Platform Experience & Design Intelligence]] → this document
+
+---
+
+## Social Platform Launch & Content Engine Relationship — 2026-10-04
+
+The Creative Studio supplies the governed creation and asset layer for the research-derived:
+
+[[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FDG Social Platform Launch & Content Engine Blueprint]]
+
+Relationship:
+
+~~~text
+Marketing campaign strategy
+→ FDG Creative Studio campaign kit / content production
+→ reusable content archetypes
+→ FWAIS orchestration and connector execution
+→ social channels
+→ CTA / lead capture
+→ FBIS commercial funnel
+→ outcome measurement
+→ learning
+~~~
+
+The Studio does not own campaign strategy, lead qualification, sales closure or commercial records. It owns the governed creative experience and reusable media/communication assets that those workflows consume.
+
+Source analysis:
+
+[[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_03_Social_Content_Batch_Automation_and_Platform_Launch|Transcript 03 — Social Content Batch Automation and Platform Launch]]
