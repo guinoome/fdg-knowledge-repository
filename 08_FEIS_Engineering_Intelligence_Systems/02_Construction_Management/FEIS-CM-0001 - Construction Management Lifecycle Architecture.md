@@ -88,3 +88,26 @@ The system must therefore track state at project, contract package, system, area
 - [[14_FDG_Service_Intelligence_System/05_Service_Delivery/FSvIS-DEL-0003 - Handover and Closeout Standard|Service Handover and Closeout]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+
+---
+
+## Role-Intelligence Overlay — 2026-10-04
+
+Every lifecycle stage may be supported by the [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard|Construction Manager Workbench]], but the Workbench is an overlay rather than a new lifecycle.
+
+It may help the user:
+
+- understand current project state
+- review documents
+- identify missing evidence
+- compare revisions
+- prepare drafts
+- prioritize work
+- surface risks and constraints
+- launch governed workflow actions
+- learn the relevant FDG workflow
+
+Document-derived answers and recommendations shall comply with [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard|Construction Document Intelligence and Verification]].
+
+Role onboarding and workflow learning shall comply with [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard|Construction Manager Embedded Learning and Competency]].
