@@ -25,3 +25,17 @@ This directory holds the portable, reviewed source and documentation imported fr
 ## 2026-09-30 architecture review addendum
 
 [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Engineering-critical findings]] flags the imported HydroCal snapshot for corrected units, adverse-result aggregation and method evidence before engineering reliance. [[Projects/Active/AI/FDG-FP/FDG-FP|The FDG-FP brief]] now carries the dated finding. Imported source status does not establish method validation.
+
+---
+
+## FDG Solar Visayas Engineering Upgrade
+
+FDG Solar Visayas is connected to the FEIS Solar Energy Intelligence branch rather than being treated as an isolated calculator project.
+
+Start from:
+
+- [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas Project Index]]
+- [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover|Future Upgrade Handover]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence Master Index]]
+
+The connected implementation repository is guinoome/fdgsolar-visayas. Product revision numbering is assigned by implementation/release governance rather than pre-fixed by the capability roadmap.
