@@ -120,3 +120,8 @@ Use these Obsidian wiki links as the primary navigation map.
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_01_Automation_Projects_That_Land_Clients|Transcript 01 Automation Projects That Land Clients]]
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_02_Agent_Built_Workflows_n8n_Cloud_Code|Transcript 02 Agent Built Workflows n8n Cloud Code]]
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/README|README]]
+
+## Social launch automation research — 2026-10-04
+
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_03_Social_Content_Batch_Automation_and_Platform_Launch|Transcript 03 — Social Content Batch Automation and Platform Launch]] — source-derived analysis of reusable content skills, batch production, connector actions, keyword-triggered lead capture, scheduling and governance.
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FDG Social Platform Launch & Content Engine Blueprint]] — FBIS/Marketing application blueprint derived from the source analysis.
