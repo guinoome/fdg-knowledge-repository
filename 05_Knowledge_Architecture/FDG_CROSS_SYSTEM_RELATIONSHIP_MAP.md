@@ -137,3 +137,34 @@ Domain source records and evidence
 FEIS, FBPOIS, FBIS, FPJIS and other domain systems shall not create competing canonical model-governance frameworks. They may define domain-specific application profiles, features, acceptance thresholds and workflows while using the shared CORE prediction and model-governance contract.
 
 FPIS governs the predictive dashboard/command-center experience. FWAIS may execute approved response workflows. FAIS may independently audit model controls and prediction outcomes. FSIS governs security requirements. Domain authorities retain their records and decision rights.
+
+---
+
+## Solar Engineering Intelligence Relationship Extension — 2026-10-04
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence]] is the canonical engineering branch for the future FDG Solar Visayas calculation, design, energy, electrical-validation, engineering-BOM and technical-proposal capability.
+
+Relationship contract:
+
+~~~text
+Customer / Site / Load Evidence
+→ FEIS Solar Engineering Calculation & Design
+→ Engineering BOM / Technical Basis
+→ FBIS Commercial Context
+→ Customer Proposal / Acceptance
+→ FPJIS Project Baseline
+→ FWAIS Approved Workflow Execution
+→ FRCIM Regulatory / Utility Obligation Context
+→ Installation / T&C / Turnover Evidence
+→ O&M / Measured Performance
+→ FDG CORE Analytics / Future Predictive Intelligence
+→ Continuous Learning
+~~~
+
+FPIS governs the customer-facing and 2D/3D experience. FSIS governs access/security. FAIS may independently audit calculation provenance, approval controls and lifecycle consistency.
+
+Implementation target:
+
+[[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+The capability roadmap does not assign the project's release/revision number; numbering remains subject to the approved implementation change set.
