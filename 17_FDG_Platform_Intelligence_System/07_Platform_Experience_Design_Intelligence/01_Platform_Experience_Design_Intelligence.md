@@ -96,3 +96,17 @@ The interface shall visually distinguish measured facts, deterministic calculati
 The visual language may use dark command-center presentation, glass layers, luminous trends, heatmaps, radial indicators, and animated live states, but semantic engineering status and evidence clarity take priority over decorative intensity.
 
 Prediction cards shall expose confidence, horizon, model version, contributing signals, evidence, limitations, recommended action, approval state, and eventual outcome where available.
+
+---
+
+## Solar Engineering Experience Relationship — 2026-10-04
+
+FPIS governs the future customer-facing, mobile, 2D/3D and interactive-proposal experience for:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FDG Solar Visayas Future Upgrade Blueprint]].
+
+Experience may include roof geometry, panel layout, sun/shade visualization, energy flow, monthly generation, interactive BOM, scenario comparison, savings and proposal acceptance.
+
+FEIS remains the authority for the underlying calculations, limits, units, validation states and engineering assumptions. Generated or inferred geometry remains Proposed / Pending Verification until reviewed.
+
+Project entry: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
