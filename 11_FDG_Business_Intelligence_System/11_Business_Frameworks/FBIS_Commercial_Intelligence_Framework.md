@@ -44,3 +44,40 @@ FEIS Solar Design Revision
 The quotation shall reference the exact FEIS design/BOM revision it prices.
 
 Project entry: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Solar Cost Group and Pricing Basis Extension — 2026-10-04
+
+The Photonik benchmark adds useful commercial-structure detail without changing the existing FEIS/FBIS ownership boundary.
+
+Source:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+Recommended solar cost/commercial separation:
+
+~~~text
+Engineering Cost Basis
+├── Equipment
+├── Labour
+├── Logistics / Access
+├── Design / Engineering
+├── Permit / Administrative
+├── After-Sales Provision
+└── Other Approved Overheads
+        ↓
+Commercial Pricing
+├── Fixed Margin / Job
+├── Per-Watt Margin
+├── Percentage Margin if authorized
+├── Incentive / Rebate
+├── Discount
+└── Tax
+~~~
+
+A rebate/incentive is not automatically a discount. Discount authority and margin impact must remain explicit.
+
+Solar commercial line bases may include per unit, per W, per kWp, per hour/day, fixed per project, actual, estimated or externally quoted.
+
+The existing FDG progressive installation-labor model remains an engineering-cost input and is not replaced by this extension.
