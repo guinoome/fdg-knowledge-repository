@@ -636,3 +636,34 @@ Engineering Content
 This also links to [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FDG Social Platform Launch & Content Engine Blueprint]].
 
 Marketing shall not invent technical values. Solar capacities, savings, equipment limits and engineering claims must come from the deterministic solar calculation/design record or other approved evidence.
+
+---
+
+# Public Solar Tool Projection Extension — 2026-10-04
+
+The public tool strategy is extended by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+The preferred acquisition pattern is:
+
+~~~text
+Educational Content
+→ Useful No-Signup Preliminary Tool
+→ Engineering Result + Assumptions
+→ Optional Comparison / Learning
+→ Qualified CTA
+→ Detailed Assessment / Proposal
+~~~
+
+Public tools must be experience projections of the canonical FDG Solar kernel rather than independent calculators with separate formulas.
+
+Potential content-to-tool routes include:
+- EV-ready solar sizing;
+- off-grid load table;
+- battery value explorer;
+- roof-plane comparison;
+- string-voltage checker;
+- future-load/electrification planner.
+
+This preserves the FDG Solar Visayas position as an Engineering Knowledge Center and provides value before lead capture.
