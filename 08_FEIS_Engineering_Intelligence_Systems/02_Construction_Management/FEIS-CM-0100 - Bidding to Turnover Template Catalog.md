@@ -360,3 +360,43 @@ This chain reduces repeated encoding while preserving validation boundaries.
 - [[10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0005 - Testing and Commissioning Reference Implementation|T&C Reference Implementation]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+
+---
+
+## Template-to-Task-Pack Evolution — 2026-10-04
+
+Templates remain governed projections/schemas. Where a recurring role workflow exists, the template may also be wrapped by a provider-neutral Task / Skill Pack defined by [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard|FEIS-CM-0005]].
+
+A Task / Skill Pack may guide the user through:
+
+Template / Record Need  
+→ Required Context  
+→ Source/Evidence Collection  
+→ Analysis / Comparison / Drafting  
+→ Verification  
+→ Human Decision / Approval  
+→ Canonical Record  
+→ Derived Reports / Outputs  
+→ Knowledge Return
+
+This evolution must not create duplicate truth. The underlying structured record remains authoritative.
+
+High-priority mappings include:
+
+- Bid / No-Bid Decision Record → Bid / No-Bid Review Task Pack
+- Tender Requirements Compliance Matrix → Tender Compliance Matrix Task Pack
+- Tender Addendum Register → Addendum Impact Review Task Pack
+- Scope Boundary / Interface Matrix → Scope Gap / Interface Review Task Pack
+- Daily Site Progress Event → Daily Priority / Missing Evidence Task Pack
+- Look-Ahead Schedule + Constraint Register → Look-Ahead Constraint Review Task Pack
+- Inspection Request / ITP → Inspection Readiness Task Pack
+- Progress Billing Checklist → Billing Support Completeness Task Pack
+- Variation / Change Request → Variation Event Triage Task Pack
+- Punch List → Punch Closure Readiness Task Pack
+- Turnover Master Checklist → Turnover Completeness Matrix Task Pack
+- Lessons Learned Record → Knowledge Return Task Pack
+
+Document-intensive packs shall comply with [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard|FEIS-CM-0006]].
+
+Build sequencing and acceptance criteria are defined in [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|FEIS-CM-0901]].
