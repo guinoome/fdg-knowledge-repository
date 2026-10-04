@@ -21,3 +21,26 @@ The original references above remain as historical text. The following observed 
 - `11_Business_Frameworks/11_Business_Frameworks_Master_Index` → [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index|11_Business_Frameworks_Master_Index]]
 
 Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].
+
+---
+
+## Solar Technical-to-Commercial Relationship — 2026-10-04
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence]] produces the technical design basis, engineering BOM, estimated engineering cost basis and performance assumptions for FDG Solar Visayas.
+
+FBIS retains commercial ownership of customer/deal semantics, pricing governance beyond engineering cost basis, commercial offer state, payment/revenue records and customer value.
+
+Preferred lineage:
+
+~~~text
+FEIS Solar Design Revision
+→ Engineering BOM / Technical Basis
+→ Controlled Commercial Pricing
+→ Quotation Revision
+→ Customer Acceptance
+→ Commercial / Project Handoff
+~~~
+
+The quotation shall reference the exact FEIS design/BOM revision it prices.
+
+Project entry: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
