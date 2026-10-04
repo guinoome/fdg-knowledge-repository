@@ -67,3 +67,11 @@
 ## 2026-09-30 architecture review addendum
 
 [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|Open engineering/capability findings]] links the HydroCal correction package and FWIS role-source recovery. [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|Proposed regression protocol]] requires source/test/deployment evidence before renewing capability claims.
+
+---
+
+## FDG Solar Visayas
+
+- [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas Project Index]] — implementation project, marketing knowledge, FEIS engineering architecture and future-upgrade handover.
+- [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover|FDG Solar Visayas Future Upgrade Handover]] — build entry for the next major engineering-capability upgrade.
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence]] — canonical engineering knowledge for the future solar design, calculation, BOM, proposal and lifecycle capability.
