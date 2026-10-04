@@ -110,3 +110,15 @@ Experience may include roof geometry, panel layout, sun/shade visualization, ene
 FEIS remains the authority for the underlying calculations, limits, units, validation states and engineering assumptions. Generated or inferred geometry remains Proposed / Pending Verification until reviewed.
 
 Project entry: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Solar Cross-View Engineering Experience Extension — 2026-10-04
+
+The future FDG Solar Visayas experience may implement the cross-view engineering requirements in [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004]].
+
+The experience should synchronize roof layout, panel/string assignment, MPPT/inverter topology, cable routes, SLD/3LD, BOM and validation state so users can move between physical and electrical views without losing context.
+
+FPIS owns the interaction and visualization layer. FEIS remains authority for calculations, topology, units, engineering status and accepted design revisions.
+
+Two premium explainability surfaces are recommended: **Engineering Impact Trace** and **Design Constraint Inspector**.
