@@ -314,3 +314,55 @@ Additional future work packages:
 **Explainability Package** — Engineering Impact Trace, Design Constraint Inspector and cross-view roof/string/SLD/BOM highlighting.
 
 These packages remain future scope and do not authorize rewriting another collaborator's active work or assigning an arbitrary product revision number.
+
+---
+
+# Photonik Additive Handover Update — 2026-10-04
+
+Future implementation agents shall also read:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005 — Photonik Benchmark & Incremental Enhancement Register]].
+
+Do not remove or supersede the existing Solset, Arka360, calculation-kernel, electrical, dispatch, lifecycle, marketing or governance requirements.
+
+Additional future work packages:
+
+**Hardware Data Intake Package**
+- datasheet upload;
+- proposed AI extraction;
+- field confidence;
+- model-variant separation;
+- human verification;
+- approved HardwareItem creation;
+- approved datasheet linkage.
+
+**Off-Grid Engineering Package**
+- GridConnectionMode;
+- seasonal load table;
+- maximum-demand/simultaneity logic;
+- worst-period adequacy;
+- generator source;
+- autonomy and unmet-load analysis.
+
+**Future Load Package**
+- EV;
+- cooling/electrification;
+- occupancy/business growth;
+- current vs future design comparison.
+
+**Customer/Public Experience Package**
+- same-kernel homeowner/public/pro projections;
+- no-signup preliminary value;
+- multi-language proposal localization;
+- guided customer design review.
+
+**Handover Package**
+- generated site plan;
+- equipment schedule;
+- accepted proposal/commercial reference;
+- correct approved datasheets;
+- SLD/3LD where required;
+- permit/interconnection documents;
+- readiness gate.
+
+These additions remain future scope and do not assign a product revision number.
