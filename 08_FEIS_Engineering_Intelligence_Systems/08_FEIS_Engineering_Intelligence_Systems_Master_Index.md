@@ -98,3 +98,19 @@ Key FEIS interfaces:
 
 Boundary: FEIS owns engineering facts and engineering evidence; FLIS/FRCIM owns the regulatory requirement and applicability record. FEIS shall not create a duplicate legal source catalog.
 
+---
+
+## Solar Energy Intelligence Extension — 2026-10-04
+
+FEIS now contains a proposed future capability branch for solar engineering:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence Master Index]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0000 - Solar Engineering Intelligence Architecture|Solar Engineering Intelligence Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FDG Solar Visayas Future Upgrade Blueprint]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0003 - Solar Calculation Kernel Data Contract and Acceptance Tests|Solar Calculation Kernel & Acceptance Tests]]
+
+The first implementation target is [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+This extension does not create a separate top-level system mother. FEIS owns solar engineering meaning; FBIS, FPJIS, FWAIS, FRCIM, FPIS, FSIS, FAIS and FDG CORE retain their existing cross-system authorities.
+
+Future FDG Solar Visayas release/revision numbering remains unassigned and is determined by actual approved implementation scope.
