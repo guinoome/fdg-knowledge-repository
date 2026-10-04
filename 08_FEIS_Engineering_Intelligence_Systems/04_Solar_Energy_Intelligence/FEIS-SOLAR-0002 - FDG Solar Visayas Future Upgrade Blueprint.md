@@ -604,3 +604,41 @@ The capability phases above remain valid. The following items are elevated or ad
 These are priority overlays only. They do not assign or change a product revision number.
 
 Implementation handover remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover|FDG Solar Visayas Future Upgrade Handover]].
+
+---
+
+# Photonik Incremental Priority Overlay — 2026-10-04
+
+The existing phase order and Arka360 priority overlay remain valid. The following additions from [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]] are layered onto that plan.
+
+## P0/P1
+
+- governed manufacturer-datasheet ingestion;
+- hardware record verification states before design eligibility;
+- grid-connection mode (ON_GRID / OFF_GRID);
+- load-profile archetypes as fallback between bill-only and interval data;
+- future-load/electrification scenarios;
+- off-grid appliance load table;
+- summer/winter or seasonal off-grid load model;
+- maximum-demand / simultaneous-load calculation;
+- generator source model;
+- explicit AC/DC/integrated-hybrid storage coupling;
+- reusable tariff templates;
+- handover-package completeness gate.
+
+## P1/P2
+
+- hardware comparison/substitution workspace;
+- roof-plane performance scorecard;
+- site-plan composer generated from layout + electrical graph;
+- automatic approved datasheet attachment;
+- customer design-review events;
+- solar cost-group/pricing basis refinement.
+
+## P2/P3
+
+- canonical-kernel Experience Projection for public/homeowner/professional surfaces;
+- multilingual proposal localization;
+- Solar Engineering Learning Mode.
+
+No prior capability is removed, and no product revision number is assigned.
