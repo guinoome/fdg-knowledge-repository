@@ -290,3 +290,27 @@ The implementation project may choose semantic versioning, product revision numb
 The label must follow the approved scope; the scope must not be forced to fit a conversational version number.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas Project Index]] → this document
+
+---
+
+# Arka360 Philippines Additive Handover Update — 2026-10-04
+
+Before starting the next major solar upgrade, also read:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004 — Arka360 Philippines Benchmark and Incremental Enhancement Register]].
+
+Do not remove or rewrite the earlier calculation-kernel, Solset, marketing, provenance or lifecycle requirements.
+
+Additional future work packages:
+
+**Electrical Design Package** — SolarElectricalGraph, visual string/MPPT assignment, cable routes, conductor/protection calculation, electrical validator and SLD/3LD generation.
+
+**Storage & Tariff Package** — PV-only / PV+ESS / ESS-only system families, interval load ingestion, tariff/settlement profile, Energy Dispatch Engine, essential-load model and self-consumption / zero-export / TOU / peak-shaving / backup strategies.
+
+**Proposal Integrity Package** — scenario vs revision model, working proposal, immutable shared snapshot, immutable accepted snapshot and proposal visibility classes.
+
+**Interoperability Package** — DXF/SVG/PDF/JSON adapters, PVSyst-compatible export, 3D interchange and export provenance.
+
+**Explainability Package** — Engineering Impact Trace, Design Constraint Inspector and cross-view roof/string/SLD/BOM highlighting.
+
+These packages remain future scope and do not authorize rewriting another collaborator's active work or assigning an arbitrary product revision number.
