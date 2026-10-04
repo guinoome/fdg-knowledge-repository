@@ -560,3 +560,47 @@ The source of truth is the approved change set and test evidence, not the label.
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|Premium Experience Mandate]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|Solar Energy Intelligence Master Index]] → this document
+
+---
+
+# Incremental Priority Overlay from Arka360 Philippines — 2026-10-04
+
+The capability phases above remain valid. The following items are elevated or added based on [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004]].
+
+## P1 — elevate immediately after the deterministic foundation
+
+- visual string / MPPT designer;
+- SolarElectricalGraph;
+- cable route model;
+- cable and protection calculation engine;
+- SLD generated from topology;
+- 3LD generated from topology;
+- interval load profile support;
+- tariff/settlement engine;
+- battery dispatch engine;
+- essential-load backup designer.
+
+## P2 — additive workflow requirements
+
+- explicit PV_ONLY, PV_PLUS_ESS and ESS_ONLY design families;
+- DesignScenario separate from DesignRevision;
+- Primary/Recommended working-scenario state;
+- proposal Working View vs Shared Snapshot vs Accepted Snapshot;
+- configurable site-survey templates;
+- engineering export adapter layer;
+- Engineering Impact Trace;
+- Design Constraint Inspector;
+- Electrical Validator panel.
+
+## P3 — advanced simulation/interoperability
+
+- hourly/8760 simulation class;
+- peak-shaving constraint;
+- geometry-derived cable lengths;
+- PVSyst-compatible export path;
+- DXF/SVG/3D export adapters;
+- cross-view traceability between roof, strings, SLD and BOM.
+
+These are priority overlays only. They do not assign or change a product revision number.
+
+Implementation handover remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover|FDG Solar Visayas Future Upgrade Handover]].
