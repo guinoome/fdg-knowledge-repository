@@ -536,3 +536,21 @@ Earlier planning references such as Rev 4.0 are not canonical unless separately 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|Premium Experience Mandate]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|Solar Energy Intelligence Master Index]] → this document
+
+---
+
+# Arka360 Philippines Additive Architecture Extension — 2026-10-04
+
+The existing architecture is extended, not replaced, by the incremental requirements captured in:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004 — Arka360 Philippines Benchmark and Incremental Enhancement Register]].
+
+New future architecture objects include DesignScenario, DesignRevision, SolarElectricalGraph, StringAssignment, MPPTAssignment, CableRoute, ProtectionDevice, ElectricalValidationResult, SLDRevision, ThreeLineDiagramRevision, DispatchProfile, DispatchIntervalResult, BatteryOperatingStrategy, EssentialLoad, TariffSettlementProfile, SiteSurveyTemplate, SiteSurveyResponse, ProposalSharedSnapshot, ProposalAcceptedSnapshot, ExportArtifact, EngineeringImpactTrace and DesignConstraintResult.
+
+Two governed intelligence surfaces are added:
+
+**Engineering Impact Trace** — explains which calculations, documents and BOM lines changed after an engineering edit.
+
+**Design Constraint Inspector** — identifies the governing physical, electrical, roof, commercial, utility or regulatory constraint behind the recommended system.
+
+These extensions strengthen explainability and lifecycle traceability without changing existing ownership boundaries.
