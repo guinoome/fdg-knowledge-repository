@@ -125,3 +125,12 @@ Use these Obsidian wiki links as the primary navigation map.
 
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_03_Social_Content_Batch_Automation_and_Platform_Launch|Transcript 03 — Social Content Batch Automation and Platform Launch]] — source-derived analysis of reusable content skills, batch production, connector actions, keyword-triggered lead capture, scheduling and governance.
 - [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FDG Social Platform Launch & Content Engine Blueprint]] — FBIS/Marketing application blueprint derived from the source analysis.
+
+## FDG Solar Visayas Workflow Relationship — 2026-10-04
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FDG Solar Visayas Future Upgrade Blueprint]] — FEIS domain plan that FWAIS may later orchestrate.
+- [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover|FDG Solar Visayas Future Upgrade Handover]] — implementation handover.
+
+Potential approved automations include lead/bill intake, engineering-review routing, proposal approval, customer acceptance handoff, project creation, procurement demand, commissioning/turnover tasks, O&M reminders and monitoring exceptions.
+
+FWAIS does not calculate solar engineering values or expand engineering authority.
