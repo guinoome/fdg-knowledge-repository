@@ -122,3 +122,25 @@ The experience should synchronize roof layout, panel/string assignment, MPPT/inv
 FPIS owns the interaction and visualization layer. FEIS remains authority for calculations, topology, units, engineering status and accepted design revisions.
 
 Two premium explainability surfaces are recommended: **Engineering Impact Trace** and **Design Constraint Inspector**.
+
+---
+
+## Solar Public Projection and Localization Extension — 2026-10-04
+
+The future FDG Solar Visayas experience may expose simplified public/homeowner tools and the full professional workspace as different experience projections of the same FEIS solar kernel.
+
+Source:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005]].
+
+FPIS should support:
+
+- no-signup preliminary value before lead capture where commercially appropriate;
+- public quick sizing, battery exploration, roof capacity and string checks without duplicate formula logic;
+- progressive disclosure from homeowner to professional detail;
+- multilingual proposal rendering through ProposalLocaleProfile;
+- roof-plane performance ranking;
+- guided client design review;
+- Solar Engineering Learning Mode presentation.
+
+Localization may change language, formatting and explanatory copy, but may not change canonical engineering values, status semantics, assumptions, warnings or provenance.
