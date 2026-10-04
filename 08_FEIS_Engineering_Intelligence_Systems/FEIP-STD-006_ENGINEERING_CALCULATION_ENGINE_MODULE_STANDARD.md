@@ -47,3 +47,16 @@ The FEIP Calculation Engine shall provide:
 # Calculation Engine Architecture
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|08 FEIS Engineering Intelligence Systems Master Index]] → this document
+
+---
+
+# Solar Calculation Application Profile — 2026-10-04
+
+The future FDG Solar Visayas calculation capability is governed by:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0000 - Solar Engineering Intelligence Architecture|Solar Engineering Intelligence Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0003 - Solar Calculation Kernel Data Contract and Acceptance Tests|Solar Calculation Kernel & Acceptance Tests]]
+
+Solar calculations shall be deterministic and regression-testable where physical/economic equations are available. Provider/model outputs may explain validated results but may not become the source of string sizing, inverter limits, PV capacity, yield, BOM quantity, price or regulated engineering conclusions.
+
+All dependent solar outputs must be recalculated when a governing input or equipment selection changes.
