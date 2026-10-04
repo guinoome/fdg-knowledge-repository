@@ -629,3 +629,28 @@ before changing calculation behavior.
 Do not rewrite another collaborator's active work package without authorization. Surface overlaps/conflicts for review.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|Solar Energy Intelligence Master Index]] → this document
+
+---
+
+# Electrical, Dispatch and Proposal Snapshot Extension — 2026-10-04
+
+This specification is extended by [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004]].
+
+Future domain contracts shall support DesignScenario, DesignRevision, SolarElectricalGraph, StringAssignment, MPPTAssignment, CableRoute, ProtectionDevice, ElectricalValidationResult, DispatchProfile, BatteryOperatingStrategy, EssentialLoad, TariffSettlementProfile, ProposalSharedSnapshot, ProposalAcceptedSnapshot, EngineeringImpactTrace and DesignConstraintResult.
+
+Additional acceptance tests:
+
+- **Scenario vs revision integrity:** a different engineering option creates a new scenario; editing the same option creates a revision under that scenario.
+- **String cross-view integrity:** selecting a string or MPPT maps to the exact physical modules assigned in the roof/layout model.
+- **SLD derivation:** changing stringing, inverter topology, battery, protection or conductor count invalidates/regenerates SLD/3LD.
+- **Cable-route lineage:** route-derived length retains route, source, revision and confidence; estimates remain visibly estimated.
+- **Dispatch energy balance:** every interval reconciles PV, grid, battery, load and losses within defined numeric tolerance.
+- **Battery limits:** dispatch never exceeds SOC, usable-energy, charge-power, discharge-power or compatible inverter/PCS limits.
+- **Tariff dependency:** tariff changes recalculate economics/dispatch while preserving physical design unless the active optimization objective explicitly permits a design change.
+- **Peak-shaving constraint:** enabled dispatch respects the configured demand ceiling and does not create an unreported new peak.
+- **Shared proposal immutability:** a shared proposal snapshot remains unchanged after later design edits.
+- **Accepted proposal immutability:** an accepted snapshot references the exact accepted scenario, revision, BOM and commercial basis.
+- **Impact trace completeness:** engineering edits report invalidated/recalculated dependent domains and protected unchanged context.
+- **Constraint inspector:** a recommendation identifies the governing constraint and supporting rule/evidence rather than only a final size.
+
+These tests are additive to all earlier acceptance tests.
