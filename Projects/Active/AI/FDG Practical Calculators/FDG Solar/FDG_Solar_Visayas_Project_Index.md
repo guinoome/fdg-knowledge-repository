@@ -53,3 +53,13 @@ The implementation/release owner assigns the version/revision based on the actua
 This research is an additive upgrade input only. It does not replace the existing FDG Solar architecture or Solset benchmark.
 
 New future implementation focus includes SolarElectricalGraph, visual string/MPPT workspace, cable/protection engineering, generated SLD/3LD, interval battery dispatch, tariff/settlement profiles, essential-load backup, scenario-vs-revision separation, immutable shared/accepted proposal snapshots, configurable survey templates, engineering export adapters, Engineering Impact Trace and Design Constraint Inspector.
+
+---
+
+## Photonik Incremental Upgrade Knowledge
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|Photonik Benchmark & Incremental Enhancement Register]]
+
+This research is additive and preserves the existing FDG Solar, Solset and Arka360 knowledge.
+
+New future implementation focus includes governed datasheet ingestion, hardware comparison/substitution, public/homeowner/pro experience projections from the same kernel, load-profile archetypes, future electrification scenarios, explicit ON_GRID/OFF_GRID mode, off-grid seasonal load engineering, generator modeling, storage coupling, tariff templates, roof-plane performance scoring, site-plan composition, handover-package readiness, multilingual proposal localization and Solar Engineering Learning Mode.
