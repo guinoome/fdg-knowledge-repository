@@ -55,3 +55,13 @@ The capability phases in this branch are **not product revision numbers**.
 No future FDG Solar Visayas revision number is made canonical by these documents. Product versioning/revision numbering shall be assigned when implementation scope is approved and released under project governance. Earlier references such as "Rev 4.0" are illustrative planning language only unless separately approved in the implementation repository.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS Master Index]] → this document
+
+---
+
+## Arka360 Philippines Incremental Benchmark — 2026-10-04
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004 — Arka360 Philippines Benchmark and Incremental Enhancement Register]]
+
+This is an additive delta to the existing Solset-derived and FDG-native Solar Energy Intelligence architecture. It preserves all prior knowledge and adds only material gaps identified from the Philippines-facing Arka360 workflow, especially electrical topology, visual string/MPPT design, cable/protection engineering, SLD/3LD generation, battery dispatch strategies, tariff/settlement profiles, proposal snapshots, configurable site surveys and engineering export adapters.
+
+Implementation target remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
