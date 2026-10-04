@@ -49,3 +49,17 @@ The FEIP Report and Document Intelligence Module shall support:
 # Document Intelligence Architecture
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|08 FEIS Engineering Intelligence Systems Master Index]] → this document
+
+---
+
+# Solar Electrical Drawing Application Profile — 2026-10-04
+
+Future FDG Solar SLD, 3LD, cable schedules, protection schedules and equipment schedules shall be generated from the governed solar electrical topology rather than maintained as disconnected manual truth.
+
+Source architecture:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004 — Arka360 Philippines Benchmark & Incremental Enhancement Register]]
+
+The generated document/drawing artifact shall retain the source design revision, electrical-graph revision, generator version, units and generation timestamp.
+
+If the governing topology changes, the dependent document must be invalidated or regenerated rather than silently remaining current.
