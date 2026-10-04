@@ -134,3 +134,31 @@ Use these Obsidian wiki links as the primary navigation map.
 Potential approved automations include lead/bill intake, engineering-review routing, proposal approval, customer acceptance handoff, project creation, procurement demand, commissioning/turnover tasks, O&M reminders and monitoring exceptions.
 
 FWAIS does not calculate solar engineering values or expand engineering authority.
+
+## FDG Solar Datasheet and Handover Workflow Extension — 2026-10-04
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005 — Photonik Benchmark & Incremental Enhancement Register]]
+
+Potential FWAIS orchestration includes:
+
+~~~text
+Manufacturer Datasheet
+→ proposed field extraction
+→ technical review queue
+→ verification
+→ approved HardwareItem
+→ design eligibility
+~~~
+
+and:
+
+~~~text
+Accepted Solar Design
+→ handover completeness check
+→ missing-document task routing
+→ approved datasheet attachment
+→ engineering review
+→ Ready for Procurement / Installation
+~~~
+
+FWAIS orchestrates the workflow and exception handling. FEIS Solar retains engineering authority over extracted specifications, equipment eligibility and handover technical content.
