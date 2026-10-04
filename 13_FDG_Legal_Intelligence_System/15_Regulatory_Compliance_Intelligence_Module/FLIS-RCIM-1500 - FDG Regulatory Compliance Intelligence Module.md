@@ -214,3 +214,13 @@ Boundary:
 - FDG Solar Visayas shall not hard-code foreign or Philippine regulatory rules as permanent calculator truth without a governed FRCIM source record.
 
 Implementation target: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Solar Electrical, Tariff and Interconnection Extension — 2026-10-04
+
+The additive solar benchmark in [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004]] introduces a future TariffSettlementProfile, cable/protection engineering context and richer project electrical topology.
+
+FRCIM remains the source for Philippine applicability and authority related to utility/interconnection rules, tariff/settlement eligibility, permits, professional-document requirements, electrical/regulatory obligations and effective-dated jurisdiction rules.
+
+FEIS Solar may calculate technical/economic consequences from an approved FRCIM rule record, but it must not infer or permanently hard-code regulatory entitlement from a third-party software benchmark.
