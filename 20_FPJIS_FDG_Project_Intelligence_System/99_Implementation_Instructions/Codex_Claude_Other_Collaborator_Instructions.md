@@ -37,3 +37,21 @@ Primary principle:
 The implementation agent should implement the blueprint, not redesign the project through improvisation.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/README|README]] → this document
+
+
+---
+
+## Compiled Execution Package Rule — 2026-10-06
+
+Where a [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Top-Tier Execution Package]] exists, the implementation collaborator shall treat it as the bounded execution contract.
+
+The collaborator should:
+
+- read only the cited canonical repository paths needed for its task
+- follow the Golden Path
+- preserve in-scope/out-of-scope boundaries
+- run the defined tests
+- return completion evidence
+- stop/escalate when an explicit escalation trigger occurs
+
+The collaborator should not spend tokens rediscovering settled architecture or silently redesigning the FPJIS blueprint.
