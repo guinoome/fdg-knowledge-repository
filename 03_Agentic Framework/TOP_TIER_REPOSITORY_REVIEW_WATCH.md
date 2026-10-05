@@ -96,3 +96,32 @@ Each completed top-tier review should record:
 Use top-tier models as replaceable independent reviewers that strengthen FDG organizational knowledge. The repository remains the durable source of truth; no reviewer, model, platform, or conversation becomes the sole holder of FDG knowledge.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[03_Agentic Framework/03_Agentic Framework_Master_Index|03 Agentic Framework Master Index]] → this document
+
+
+---
+
+## Architecture Compiler / Token-Efficiency Integration — 2026-10-06
+
+Top-tier repository review should not be confused with using the strongest model for every implementation step.
+
+For project/build work, top-tier capability should preferentially compile ambiguous intent and repository knowledge into precise execution packages that lower-cost agents can implement deterministically.
+
+See:
+
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
+
+The preferred cost pattern is:
+
+```text
+Top-tier architecture/review
+        ↓
+Repository-backed execution package
+        ↓
+Lower-cost primary builder
+        ↓
+Automated validation
+        ↓
+Top-tier re-entry only on defined escalation
+```
+
+This preserves independent top-tier review while avoiding repeated expensive rediscovery.
