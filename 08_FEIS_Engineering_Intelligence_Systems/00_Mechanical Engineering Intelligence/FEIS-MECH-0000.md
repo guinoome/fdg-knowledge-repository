@@ -494,3 +494,18 @@ Future companion specifications include:
 > **End of FEIS-MECH-0000**
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/00_Mechanical Engineering Intelligence_Master_Index|00 Mechanical Engineering Intelligence Master Index]] → this document
+
+
+---
+
+## Cross-Discipline Integration Addendum — 2026-10-05
+
+Mechanical Engineering Intelligence remains the canonical deep Mechanical discipline branch.
+
+Cross-discipline project workflows, role-Workbench composition, MEPF interfaces and Auxiliary/ELV coordination are governed by:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0000 - Multidiscipline Engineering Capability and Role Workbench Architecture|Multidiscipline Engineering Capability and Role Workbench Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0001 - Architecture Civil MEPF Auxiliary Capability Map|Architecture, Civil, MEPF & Auxiliary Capability Map]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0002 - Common Engineering Practice Workflow and Task Pack Standard|Common Engineering Practice Workflow and Task Pack Standard]]
+
+This relationship is additive. Mechanical technical methods remain owned by the Mechanical branch; universal project workflow should not be duplicated here.
