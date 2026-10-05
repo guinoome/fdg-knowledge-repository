@@ -16,3 +16,18 @@
 ## Direct Child Documents
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/Codex_Claude_Other_Collaborator_Instructions|Codex Claude Other Collaborator Instructions]]
+
+
+---
+
+## Top-Tier Architecture Compiler Integration — 2026-10-06
+
+For major/ambiguous/high-risk projects, use:
+
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
+
+before assigning routine implementation.
+
+FPJIS should provide the approved blueprint and quality gate; the top-tier Architecture Compiler converts it into a bounded execution package; implementation collaborators execute only the relevant package.
+
+This reduces token/cost waste caused by every coding agent independently rediscovering project architecture.
