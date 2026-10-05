@@ -320,3 +320,32 @@ No provider-specific feature may become the sole storage location of the workflo
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|Workbench Upgrade Blueprint]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+
+---
+
+## Multidiscipline Discipline-Workbench Relationship — 2026-10-05
+
+The Construction Manager Workbench coordinates project delivery across disciplines; it does not replace discipline engineering Workbenches.
+
+Discipline-specific technical review should use:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0000 - Multidiscipline Engineering Capability and Role Workbench Architecture|Multidiscipline Engineering Capability and Role Workbench Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0001 - Architecture Civil MEPF Auxiliary Capability Map|Architecture, Civil, MEPF & Auxiliary Capability Map]]
+
+Example relationship:
+
+```text
+Construction Manager Workbench
+    ├── Architectural Workbench
+    ├── Civil Workbench
+    ├── Mechanical Workbench
+    ├── Electrical Workbench
+    ├── Plumbing/Sanitary Workbench
+    ├── Fire Protection Workbench
+    └── Auxiliary/ELV Workbench
+             ↓
+       Shared Project Truth
+```
+
+The Construction Manager may see cross-discipline risks, interfaces, readiness and decisions while discipline professionals retain technical review/approval authority appropriate to their roles.
