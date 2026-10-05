@@ -52,3 +52,30 @@ Design FMCIS-001 — Formal Engagement Lifecycle.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001 — Baby Nex Provider-Neutral Runtime Architecture]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/README|Nex Interface]]
 - [[03_Agentic Framework/AGENTIC_FRAMEWORK|Agentic Framework]]
+
+
+---
+
+## Top-Tier Architecture Compiler Direction — 2026-10-06
+
+FMCIS should use top-tier capability selectively to compile difficult/ambiguous work into deterministic packages rather than assigning top-tier models to routine implementation.
+
+Canonical protocol:
+
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
+
+Preferred engagement pattern:
+
+```text
+FPJIS Blueprint
+    ↓
+Top-Tier Architecture Compiler
+    ↓
+FMCIS Work Packages
+    ↓
+Lowest-cost capable builder(s)
+    ↓
+Tests / independent review as required
+```
+
+This extends the existing principle: maximize useful intelligence per unit of time, token, and cost.
