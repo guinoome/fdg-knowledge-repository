@@ -129,3 +129,22 @@ FDG Engineering Construction Management now has an additive role-intelligence/wo
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0001 - Tixu Construction Manager Benchmark Extraction 2026-10-04|External Benchmark Extraction]]
 
 This extension preserves the existing FEIS Construction Management lifecycle and data model. It adds role-aware context, governed task packs, document verification, embedded learning and provider-neutral assistance.
+
+
+---
+
+## Multidiscipline Engineering Intelligence Extension — 2026-10-05
+
+FEIS now includes a cross-discipline integration layer for Architectural, Civil, MEPF and Auxiliary/ELV engineering capability:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/00_Multidiscipline_Engineering_Intelligence_Master_Index|Multidiscipline Engineering Intelligence Master Index]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0000 - Multidiscipline Engineering Capability and Role Workbench Architecture|Multidiscipline Engineering Capability and Role Workbench Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0001 - Architecture Civil MEPF Auxiliary Capability Map|Architecture, Civil, MEPF & Auxiliary Capability Map]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0002 - Common Engineering Practice Workflow and Task Pack Standard|Common Engineering Practice Workflow and Task Pack Standard]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0900 - Top Tier Cross Model Review Handover|Top-Tier Cross-Model Review Handover]]
+
+Architecture rule:
+
+> Do not create a new module merely because a profession exists. Reuse universal project capabilities, preserve discipline-specific technical semantics in FEIS, and compose role-specific Workbenches over one shared project truth.
+
+This extension does not replace the existing Mechanical Engineering Intelligence branch, Construction Management, Project Intelligence, DCKL, or shared FEIP standards.
