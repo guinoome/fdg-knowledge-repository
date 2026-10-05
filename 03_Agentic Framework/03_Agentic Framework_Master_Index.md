@@ -9,6 +9,7 @@
 - [[CONTEXT_REQUIREMENTS]]
 - [[ENGINEERING_OBJECTIVE]]
 - [[TOP_TIER_REPOSITORY_REVIEW_WATCH]]
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
 
