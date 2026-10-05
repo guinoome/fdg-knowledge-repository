@@ -1109,6 +1109,8 @@ Security Agent
 
 The agents must share the Obsidian knowledge repository as the authoritative design context.
 
+**Source-location clarification — 2026-10-06:** the Obsidian repository here is a working mirror of canonical GitHub `guinoome/fdg-knowledge-repository`. Agents use its current governed design context and return authorized durable knowledge updates to GitHub, as recorded in [[00_Nex/NEX-BOOTSTRAP|Nex Bootstrap]]. This clarification concerns knowledge provenance; FMIS retains its local/offline application requirements.
+
 No agent should independently redefine FMIS architecture.
 
 ---

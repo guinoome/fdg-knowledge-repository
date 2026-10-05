@@ -106,3 +106,8 @@ Implementation project:
 [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]]
 
 Any post-acceptance technical change requires a linked variation/revision; project state must not silently diverge from the accepted design.
+
+## Architecture Compiler Execution Template — 2026-10-06
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]] — reusable A–Q task contract with compact context capsule, under the existing [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Implementation_Package_Specification|Implementation Package Specification]].
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]] — governing instruction for bounded, repository-backed execution using the lowest capable tier.

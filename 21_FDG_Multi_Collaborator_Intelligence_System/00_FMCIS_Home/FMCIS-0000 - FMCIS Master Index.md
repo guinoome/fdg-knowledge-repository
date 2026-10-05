@@ -198,6 +198,8 @@ Related:
 
 ## Current Implementation Rule
 
+**Current direction — 2026-10-06:** GitHub is the canonical source of truth and receives authorized knowledge updates. The following two paragraphs are historical and superseded by **Canonical Source-of-Truth Evolution — 2026-10-06** below.
+
 GitHub is a read-only reference for FMCIS design. This package is intended for the local Obsidian FDG Knowledge Repository.
 
 No GitHub write is required for this package.

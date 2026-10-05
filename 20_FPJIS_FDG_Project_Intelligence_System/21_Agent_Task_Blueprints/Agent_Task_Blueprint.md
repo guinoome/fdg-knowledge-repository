@@ -50,3 +50,7 @@ Each task should include:
 - completion evidence
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+## Compiled Task Handoff — 2026-10-06
+
+For tasks governed by the [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]], instantiate the [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|A–Q Execution Package and Agent Context Capsule]]. Assign one accountable owner, explicit modification boundaries, dependency inputs, acceptance evidence and escalation triggers. Select the lowest capable tier; additional collaborators require a dependency or review justification, not a fixed team size.

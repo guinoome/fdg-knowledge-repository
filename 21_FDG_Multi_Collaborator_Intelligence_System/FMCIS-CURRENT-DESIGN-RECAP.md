@@ -2,6 +2,8 @@
 
 ## Agreed principles
 
+> **Current source-of-truth note — 2026-10-06:** item 18 is historical and superseded. GitHub `guinoome/fdg-knowledge-repository` is canonical and receives authorized updates; local copies are working mirrors. See **Source-of-Truth Clarification — 2026-10-06** below.
+
 1. FMCIS dynamically assembles capability teams; it does not permanently define a fixed team.
 2. Chief of Staff / Lead Coordinator translates intent into coordinated work but has no authority above Nex.
 3. Nex remains the FDG Architecture & Intelligence Authority.
@@ -79,3 +81,9 @@ Tests / independent review as required
 ```
 
 This extends the existing principle: maximize useful intelligence per unit of time, token, and cost.
+
+## Source-of-Truth Clarification — 2026-10-06
+
+Agreed principle 18 above is retained as historical implementation context. For current operation it is superseded by the **Canonical Source-of-Truth Evolution — 2026-10-06** in the [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS Master Index]] and the [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]]: GitHub `guinoome/fdg-knowledge-repository` is canonical; local copies are working mirrors, and validated durable knowledge returns to GitHub through authorized updates.
+
+For bounded execution, reuse the [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|FPJIS Execution Package and Context Capsule]] through the [[21_FDG_Multi_Collaborator_Intelligence_System/06_Templates/README|FMCIS Templates entry point]]. This applies the existing direction without changing the planned FMCIS lifecycle, allocation or approval-gate designs.

@@ -819,3 +819,15 @@ This protocol succeeds when:
 - [[22_FDG_Audit_Intelligence_System/11_AI_Agent_and_Collaborator_Audit/FAIS-AIA-1100 - AI Agent and Collaborator Audit|AI Agent and Collaborator Audit]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[03_Agentic Framework/03_Agentic Framework_Master_Index|Agentic Framework]] → this protocol
+
+---
+
+## Execution Template Integration — 2026-10-06
+
+The founder-supplied `FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL.md` (effective 2026-10-06) was reviewed against this fuller canonical protocol at repository checkpoint `886e96744b899e05ae55178c924413411d960ef5`. Its operating direction is already represented here; the existing protocol is retained rather than replaced by the shorter supplied copy.
+
+Francis explicitly reconfirmed on 2026-10-06: GitHub is the new source of truth and is no longer read-only. The repository entry points and affected FMCIS guidance now state that authorized durable knowledge updates return to GitHub; local copies remain working mirrors. Earlier local-only instructions are marked historical where encountered, with their original content preserved.
+
+Use the [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]] to instantiate sections A–Q and the compact Agent Context Capsule. The template implements this protocol under the existing FPJIS readiness and build-authorization controls; it is not a separate authority or an approved project package.
+
+The [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-CURRENT-DESIGN-RECAP|FMCIS Current Design Recap]] now explicitly points to the existing source-of-truth evolution so its historical read-only GitHub statement cannot be mistaken for current direction.

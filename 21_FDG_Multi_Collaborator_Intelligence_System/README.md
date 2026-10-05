@@ -2,6 +2,8 @@
 
 ## FMCIS — FDG Multi-Collaborator Intelligence System
 
+**Current source of truth — 2026-10-06:** GitHub `guinoome/fdg-knowledge-repository` is canonical and receives authorized updates. Local copies are working mirrors. This supersedes the original local-only instructions preserved below; see the [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS Master Index]] and [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]].
+
 This is the local working package for the 21st FDG Intelligence System.
 
 ### Current status
@@ -17,6 +19,8 @@ Architecture foundation established. The eight architecture work packages are in
 FMCIS is not a second Nex and not a replacement for the existing Agentic Framework. It is the organizational layer that assembles the right capability team and coordinates external collaborators and their native agent environments.
 
 ### Local-only rule
+
+> **Historical rule — superseded 2026-10-06:** the following read-only instruction and local path describe the earlier working arrangement. Use the current source-of-truth direction above.
 
 GitHub is reference-only. The working package is intended for the local Obsidian repository:
 

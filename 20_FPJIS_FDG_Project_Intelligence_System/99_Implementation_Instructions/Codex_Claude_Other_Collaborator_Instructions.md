@@ -55,3 +55,7 @@ The collaborator should:
 - stop/escalate when an explicit escalation trigger occurs
 
 The collaborator should not spend tokens rediscovering settled architecture or silently redesigning the FPJIS blueprint.
+
+### Execution Package Entry Point — 2026-10-06
+
+The [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Execution Package Template]] supplies the A–Q form and compact context capsule. Execute the task-specific completed package, not this blank form. Verify its cited sources, relevant changes since its checkpoint, modification ownership and applicable authorization. Return results against its acceptance criteria; report checks not run and unresolved gaps explicitly.

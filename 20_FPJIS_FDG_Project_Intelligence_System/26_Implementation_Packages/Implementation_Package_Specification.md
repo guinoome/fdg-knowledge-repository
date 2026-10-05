@@ -35,3 +35,9 @@ FDG_PROJECT_PACKAGE/
 The package should minimize unnecessary context and maximize deterministic instructions.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+## Compiled Execution Form — 2026-10-06
+
+Use the [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]] for the A–Q execution contract and compact context capsule required by the [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]]. Store each completed instance with its project/work-package records and link its exact repository checkpoint, approved blueprints and decisions.
+
+The reusable form does not bypass the readiness requirement above. Record the [[20_FPJIS_FDG_Project_Intelligence_System/28_Quality_Gates/Design_Quality_Gate|Design Quality Gate]] evidence and build authorization separately before implementation; a filled template does not establish either result.

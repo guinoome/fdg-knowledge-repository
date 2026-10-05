@@ -49,6 +49,8 @@ Nex augments engineering capability.
 
 The FDG Knowledge Repository is the authoritative organizational knowledge base.
 
+**Founder clarification — 2026-10-06:** the canonical repository is GitHub `guinoome/fdg-knowledge-repository`. GitHub accepts authorized updates and is no longer a read-only reference. Local Obsidian repositories and other checkouts are working mirrors. Retrieve the current GitHub baseline, preserve others' changes, and return validated durable knowledge through traceable commits under the existing ownership and review controls. See the [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]].
+
 Conversation history is never the primary source of truth.
 
 Whenever repository knowledge is available:

@@ -20,6 +20,8 @@ This is the single entry point. Everything in the vault is reachable within a cl
 
 ## The governed repository
 
+**Current source of truth — 2026-10-06:** GitHub `guinoome/fdg-knowledge-repository` is canonical and receives authorized knowledge updates. Local vaults are working mirrors. The [[README|Repository Source-of-Truth Rules]] and [[00_Nex/NEX-BOOTSTRAP|Nex Bootstrap]] carry this founder-confirmed operating direction.
+
 **[[00_Nex/00_Master Index|Nex Core Master Index]]** — the authoritative entry to every section (see the current 00–22 map below), each of which also links directly here. Start there for anything governed rather than looking for a duplicate list here — per `NEX-STD-032 Linking Standard`, link to the authoritative source instead of copying it.
 
 A few high-traffic destinations, each opened and read directly, not assumed from filename:

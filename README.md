@@ -72,6 +72,8 @@ Legacy folders such as `11_FDG_Business_Intelligence_System_OLD` are not canonic
 
 ## Source-of-Truth Rules
 
+**Founder direction — 2026-10-06:** [GitHub `guinoome/fdg-knowledge-repository`](https://github.com/guinoome/fdg-knowledge-repository) is the canonical FDG Knowledge Repository. It is the destination for authorized knowledge updates, not a read-only reference. Local Obsidian and other checkouts are working mirrors; validated decisions, blueprints, work packages, handovers and learning return to GitHub. See the [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]].
+
 - **FDG Ecosystem — Center** governs repository-level navigation and the cross-system mother map.
 - **Nex Core** governs engineering and organizational operating standards.
 - Each intelligence system's **Master Index / Home** governs that system's internal structure.
