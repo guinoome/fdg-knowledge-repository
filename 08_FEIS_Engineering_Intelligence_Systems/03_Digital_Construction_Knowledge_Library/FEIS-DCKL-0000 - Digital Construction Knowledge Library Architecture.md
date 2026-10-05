@@ -153,3 +153,30 @@ These are not separate knowledge silos. They are different governed experiences 
 Embedded learning and competency evidence are governed by [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard|FEIS-CM-0007]].
 
 External benchmark provenance for the 2026-10-04 construction-manager upgrade is preserved in [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0001 - Tixu Construction Manager Benchmark Extraction 2026-10-04|FEIS-CM-RSCH-0001]].
+
+
+---
+
+## Multidiscipline Knowledge Packaging Extension — 2026-10-05
+
+The DCKL may package discipline technical knowledge as profiles over shared engineering workflow families rather than duplicating complete workflow libraries.
+
+Example:
+
+```text
+Specification Review Task Pack
+    ├── Architectural Profile
+    ├── Civil Profile
+    ├── Mechanical Profile
+    ├── Electrical Profile
+    ├── Plumbing/Sanitary Profile
+    ├── Fire Protection Profile
+    └── Auxiliary/ELV Profile
+```
+
+The canonical architecture is defined by:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0000 - Multidiscipline Engineering Capability and Role Workbench Architecture|FEIS-MDE-0000]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0002 - Common Engineering Practice Workflow and Task Pack Standard|FEIS-MDE-0002]]
+
+Future external research or course benchmarking should extract reusable capability patterns, not copy proprietary course material or automatically create profession-specific modules.
