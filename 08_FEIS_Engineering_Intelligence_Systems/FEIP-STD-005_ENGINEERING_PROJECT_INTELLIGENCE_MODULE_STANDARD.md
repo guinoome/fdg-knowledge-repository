@@ -75,3 +75,24 @@ See:
 A project system must preserve enough context, evidence, status, decisions and next actions for a qualified successor to continue work when personnel change.
 
 See [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0003 - Project Continuity and Personnel Handover Standard|Project Continuity and Personnel Handover Standard]].
+
+
+---
+
+## Multidiscipline Role Workbench Addendum — 2026-10-05
+
+Project Intelligence is shared across engineering disciplines.
+
+Universal project objects and workflows should not be recreated independently for Architectural, Civil, Mechanical, Electrical, Plumbing/Sanitary, Fire Protection or Auxiliary/ELV roles.
+
+The discipline boundary is defined by:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0000 - Multidiscipline Engineering Capability and Role Workbench Architecture|FEIS-MDE-0000 — Multidiscipline Engineering Capability and Role Workbench Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0001 - Architecture Civil MEPF Auxiliary Capability Map|FEIS-MDE-0001 — Architecture, Civil, MEPF & Auxiliary Capability Map]]
+- [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0002 - Common Engineering Practice Workflow and Task Pack Standard|FEIS-MDE-0002 — Common Engineering Practice Workflow and Task Pack Standard]]
+
+Role-specific Workbenches should compose:
+
+Shared Project Context + Discipline Technical Semantics + Governed Task Packs + User Authority + Evidence
+
+rather than create separate project truth.
