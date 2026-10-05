@@ -230,3 +230,36 @@ See:
 - [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|Work Package Standard]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-003_Work_Package_Allocation|FMCIS-003 Work Package Allocation]]
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|Construction Management Build Handover]]
+
+
+---
+
+## Canonical Source-of-Truth Evolution — 2026-10-06
+
+The current FDG operating direction is:
+
+> **GitHub `guinoome/fdg-knowledge-repository` is the canonical FDG Knowledge Repository / source of truth.**
+
+Local Obsidian or other local repository copies may be used as working mirrors/editing environments, but validated durable knowledge must return to the canonical GitHub repository.
+
+The earlier statement in this document that "GitHub is a read-only reference; the working system is local" is retained as historical implementation context but is **superseded for current operation** by this addendum.
+
+FMCIS engagements must therefore:
+
+- retrieve approved context from the canonical repository
+- store durable engagement decisions/work packages/validated learning back into the repository
+- avoid leaving critical knowledge only in chat or provider memory
+- preserve local-first/offline-capable execution where required
+
+Related:
+
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
+- [[07_Nex_Core_Intelligence/NEX_CONTEXT_PACKAGE_STANDARD|Nex Context Package Standard]]
+
+## Cost-Aware Execution Extension
+
+For expensive reasoning tasks, FMCIS should use the Top-Tier Architecture Compiler pattern:
+
+Top-tier reasoning → precise repository-backed work packages → lowest-cost capable implementation agent → tests → selective escalation.
+
+This does not lower quality gates. It moves quality into architecture, context, contracts and acceptance evidence.
