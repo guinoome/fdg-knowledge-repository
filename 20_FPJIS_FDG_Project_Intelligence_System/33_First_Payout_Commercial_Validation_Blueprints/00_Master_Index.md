@@ -1,7 +1,7 @@
 ---
 document_id: FPJIS-FPCV-0000
 title: FDG First-Payout Commercial Validation Blueprint Package
-status: Blueprint Package - Draft for Review
+status: Blueprint Package Complete - Not Build Authorized
 owner: Francis
 architecture_authority: Nex
 created: 2026-10-07
@@ -55,6 +55,8 @@ This package governs the future **FDG Commercial Validation Workspace** and the 
 15. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/14_Agent_Golden_Path_and_Handover|14 Agent Golden Path and Handover]]
 16. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/15_Current_Market_Signal_Register_2026-10-07|15 Current Market Signal Register]]
 17. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/16_Visual_Blueprint_Index|16 Visual Blueprint Index]]
+18. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/17_Blueprint_Package_Verification_and_Readiness_Report|17 Blueprint Package Verification and Readiness Report]]
+19. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/18_Prepared_Build_Start_Execution_Package|18 Prepared Build-Start Execution Package]]
 
 ## Canonical Cross-System Authorities
 
