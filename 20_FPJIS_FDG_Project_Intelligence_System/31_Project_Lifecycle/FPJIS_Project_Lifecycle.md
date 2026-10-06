@@ -33,3 +33,39 @@
 31 Blueprint Promotion / Project Closure
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+---
+
+## Local-First Gate Interpretation — 2026-10-07
+
+Steps 23–27 are not a continuous automatic sequence.
+
+The required interpretation is:
+
+```text
+Local Implementation
+→ Local Testing
+→ Local Acceptance Evidence
+→ Release Candidate
+→ Release Approval
+→ Optional Online Architecture / Staging
+→ Remote Validation where uniquely required
+→ Explicit Production Authorization
+→ Optional Deployment
+```
+
+A project may remain local indefinitely.
+
+Remote hosting, shared infrastructure and payment integration must not be used as substitutes for incomplete local implementation.
+
+Where a project uses online architecture, the release decision must identify:
+- why remote infrastructure is required;
+- exact release/commit;
+- target environment;
+- data/security scope;
+- cost;
+- rollback;
+- approving authority.
+
+Detailed reference:
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/08_Local_Validation_Release_and_Deployment_Gates|Local Validation, Release and Deployment Gates]].
