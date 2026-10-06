@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+<style>
+  .bg{fill:#07111f}.panel{fill:#0f2137;stroke:#35516f;stroke-width:2}.panel2{fill:#102a46;stroke:#4a7196;stroke-width:2}
+  .accent{fill:#1c8b76}.warn{fill:#a86b24}.stop{fill:#8a3340}.text{fill:#f4f7fb;font:600 22px system-ui,sans-serif}
+  .small{fill:#c9d7e6;font:500 16px system-ui,sans-serif}.tiny{fill:#9fb2c7;font:500 13px system-ui,sans-serif}
+  .title{fill:#ffffff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc1db;font:500 17px system-ui,sans-serif}
+  .line{stroke:#6f93b2;stroke-width:3;fill:none}.dash{stroke:#6f93b2;stroke-width:2;stroke-dasharray:8 8;fill:none}
+</style>
+<rect class="bg" width="1500" height="1000"/>
+<text class="title" x="70" y="70">Market Intelligence Monitoring Loop</text>
+<text class="sub" x="70" y="105">External signals inform tests; they never auto-authorize builds.</text>
+<circle cx="750" cy="520" r="165" fill="#102a46" stroke="#4a7196" stroke-width="3"/>
+<text class="text" x="640" y="500">FBIS Opportunity</text><text class="text" x="665" y="535">Register</text><text class="small" x="628" y="575">Reviewed commercial impact</text>
+<rect class="panel" x="100" y="210" rx="22" width="280" height="120"/><text class="text" x="153" y="258">Official Data</text><text class="small" x="142" y="292">PSA • DOE • DTI • Regulators</text>
+<rect class="panel" x="1120" y="210" rx="22" width="280" height="120"/><text class="text" x="1192" y="258">Marketplaces</text><text class="small" x="1150" y="292">Notion • Gumroad • Others</text>
+<rect class="panel" x="100" y="700" rx="22" width="280" height="120"/><text class="text" x="143" y="748">Industry Research</text><text class="small" x="130" y="782">FM • Construction • Solar</text>
+<rect class="panel" x="1120" y="700" rx="22" width="280" height="120"/><text class="text" x="1195" y="748">Customers</text><text class="small" x="1165" y="782">Interviews • Objections • Usage</text>
+<rect class="panel2" x="560" y="155" rx="22" width="380" height="120"/><text class="text" x="650" y="202">Signal Register</text><text class="small" x="604" y="235">Source • Date • Evidence • Interpretation</text>
+<rect class="accent" x="560" y="760" rx="22" width="380" height="120"/><text class="text" x="650" y="807">Next Market Test</text><text class="small" x="603" y="840">Interview • Price test • Sample • Outreach</text>
+<path class="line" d="M380 270C520 270 560 250 560 220M1120 270C980 270 940 250 940 220M380 760C500 760 570 650 630 620M1120 760C1000 760 930 650 870 620"/>
+<path class="line" d="M750 275V355M750 685V760"/>
+<text class="tiny" x="85" y="935">Noise filter: Source class A–E • fact separated from interpretation • stale signals flagged • promotion only after review.</text>
+</svg>
