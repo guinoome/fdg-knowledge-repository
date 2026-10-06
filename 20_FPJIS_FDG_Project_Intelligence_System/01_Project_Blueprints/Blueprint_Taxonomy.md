@@ -32,8 +32,28 @@ Standard blueprint types:
 26 Release Blueprint
 27 Intelligence Consultation Blueprint
 28 Reuse Blueprint
+29 Commercial Validation Blueprint
 
 Additional blueprint types may be introduced when a recurring project pattern is identified.
+
+## Commercial Validation Blueprint
+
+A Commercial Validation Blueprint defines how an existing FDG capability is tested for willingness to pay before major productization.
+
+It should include:
+- target buyer/problem;
+- offer;
+- price hypothesis;
+- evidence requirements;
+- market-signal inputs;
+- paid-pilot gate;
+- delivery/economics measurement;
+- repeatability;
+- automation/productization gate;
+- stop/continue/scale decision.
+
+Reference implementation:
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|FDG First-Payout Commercial Validation Blueprint Package]].
 
 ## Blueprint inheritance
 
