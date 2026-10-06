@@ -79,6 +79,7 @@ Parallel execution is determined by dependency analysis, not by a fixed agent co
 - [[20_FPJIS_FDG_Project_Intelligence_System/30_Shared_Infrastructure/Shared_Supabase_Foundation|Shared Supabase Foundation]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/31_Project_Lifecycle/FPJIS_Project_Lifecycle|FPJIS Project Lifecycle]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/32_Reusable_Blueprint_Library/Blueprint_Promotion|Blueprint Promotion]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|First-Payout Commercial Validation Blueprint Package]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/README|README]]
 
 ---
@@ -111,3 +112,13 @@ Any post-acceptance technical change requires a linked variation/revision; proje
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]] — reusable A–Q task contract with compact context capsule, under the existing [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Implementation_Package_Specification|Implementation Package Specification]].
 - [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]] — governing instruction for bounded, repository-backed execution using the lowest capable tier.
+
+## First-Payout Commercial Validation Package — 2026-10-07
+
+The founder-directed first-payout program is now represented as a complete FPJIS blueprint package:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|FDG First-Payout Commercial Validation Blueprint Package]]
+
+It includes portfolio, UX, workflow, data, pricing, offline runtime, local validation, deployment gates, market monitoring, testing, FMCIS work packages, security/professional boundaries, KPI/evidence, agent handover and repository-native SVG visual blueprints.
+
+The package explicitly prevents remote deployment from becoming the primary development/test environment. Build authorization and deployment authorization remain separate gates.
