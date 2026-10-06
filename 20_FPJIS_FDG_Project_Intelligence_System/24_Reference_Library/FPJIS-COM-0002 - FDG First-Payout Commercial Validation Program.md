@@ -118,3 +118,13 @@ The complete candidate register is governed in:
 The next candidate may enter active validation only when the current experiment has enough evidence to continue in a routinized form, pause, or terminate. This prevents uncontrolled idea switching while still allowing low-cost digital-product tests that do not require software development.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-COM-0001 - FDG Business Platform Commercialization Thesis|Commercialization Thesis]] → this program.
+
+## Complete Build Blueprint Package — 2026-10-07
+
+The implementation-grade blueprint package for this program is:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|FDG First-Payout Commercial Validation Blueprint Package]]
+
+It defines project scope, portfolio, UX, workflows/state machines, data contracts, pricing/promotion/payment, offline-first runtime, local release gates, current-market monitoring, tests, FMCIS work packages, security/legal boundaries, KPI/evidence, agent Golden Path and repository-native SVG diagrams.
+
+This program remains a commercial-validation architecture. The existence of a complete blueprint does not itself authorize coding or remote deployment.
