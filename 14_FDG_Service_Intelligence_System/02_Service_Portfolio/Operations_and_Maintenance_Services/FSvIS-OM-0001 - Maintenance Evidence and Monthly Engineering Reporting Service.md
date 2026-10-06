@@ -174,3 +174,11 @@ Each pilot should produce:
 ## Change history
 
 - 2026-10-06 — v0.1.0: Initial founder-directed pilot definition created under the first-payout commercial validation program.
+
+## FPJIS pilot implementation relationship — 2026-10-07
+
+Project-level validation, local-first implementation requirements, data/evidence handling, release gates and future agent execution are governed by:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|FDG First-Payout Commercial Validation Blueprint Package]].
+
+FSvIS continues to own the service definition and maturity. The FPJIS package must not silently alter this service's scope, exclusions, acceptance criteria or professional boundaries.
