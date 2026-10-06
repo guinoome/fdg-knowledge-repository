@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<style>
+  .bg{fill:#07111f}.panel{fill:#0f2137;stroke:#35516f;stroke-width:2}.panel2{fill:#102a46;stroke:#4a7196;stroke-width:2}
+  .accent{fill:#1c8b76}.warn{fill:#a86b24}.stop{fill:#8a3340}.text{fill:#f4f7fb;font:600 22px system-ui,sans-serif}
+  .small{fill:#c9d7e6;font:500 16px system-ui,sans-serif}.tiny{fill:#9fb2c7;font:500 13px system-ui,sans-serif}
+  .title{fill:#ffffff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc1db;font:500 17px system-ui,sans-serif}
+  .line{stroke:#6f93b2;stroke-width:3;fill:none}.dash{stroke:#6f93b2;stroke-width:2;stroke-dasharray:8 8;fill:none}
+</style>
+<rect class="bg" width="1600" height="900"/>
+<text class="title" x="70" y="70">Local-First Release Gate — Hosting Comes Last</text>
+<text class="sub" x="70" y="105">Production must never become the primary testing environment.</text>
+<g transform="translate(80,220)">
+<rect class="panel2" x="0" y="0" rx="20" width="220" height="140"/><text class="text" x="52" y="53">Blueprint</text><text class="small" x="38" y="86">G0–G5</text><text class="tiny" x="28" y="116">No deployment</text>
+<rect class="panel2" x="260" y="0" rx="20" width="220" height="140"/><text class="text" x="302" y="53">Local Build</text><text class="small" x="310" y="86">G6</text><text class="tiny" x="282" y="116">Offline-capable</text>
+<rect class="panel2" x="520" y="0" rx="20" width="220" height="140"/><text class="text" x="555" y="53">Local Test</text><text class="small" x="570" y="86">G7</text><text class="tiny" x="545" y="116">Backup + restore</text>
+<rect class="accent" x="780" y="0" rx="20" width="220" height="140"/><text class="text" x="807" y="53">Release RC</text><text class="small" x="830" y="86">G8</text><text class="tiny" x="810" y="116">Approved artifact</text>
+<rect class="warn" x="1040" y="0" rx="20" width="220" height="140"/><text class="text" x="1090" y="53">Staging</text><text class="small" x="1092" y="86">G9 optional</text><text class="tiny" x="1065" y="116">Only for remote-only tests</text>
+<rect class="stop" x="1300" y="0" rx="20" width="220" height="140"/><text class="text" x="1345" y="53">Production</text><text class="small" x="1340" y="86">Separate approval</text><text class="tiny" x="1334" y="116">Never implied</text>
+<path class="line" d="M220 70H260M480 70H520M740 70H780M1000 70H1040M1260 70H1300"/>
+</g>
+<rect class="panel" x="230" y="490" rx="24" width="1140" height="220"/>
+<text class="text" x="300" y="540">Mandatory local evidence before remote deployment</text>
+<text class="small" x="310" y="585">✓ Core workflows pass   ✓ Offline works   ✓ Persistence survives restart   ✓ Backup/export works</text>
+<text class="small" x="310" y="625">✓ Restore verified   ✓ Empty/error/restricted states reviewed   ✓ Security checks passed</text>
+<text class="small" x="310" y="665">✓ No S1/S2 defects   ✓ Rollback plan   ✓ Cost gate   ✓ Exact commit approval</text>
+<text class="tiny" x="70" y="830">Default: ALLOW_REMOTE_DEPLOY=false • Push to main ≠ production • Preview/staging are deliberate, not automatic.</text>
+</svg>
