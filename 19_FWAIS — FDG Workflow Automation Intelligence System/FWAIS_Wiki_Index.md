@@ -162,3 +162,10 @@ Accepted Solar Design
 ~~~
 
 FWAIS orchestrates the workflow and exception handling. FEIS Solar retains engineering authority over extracted specifications, equipment eligibility and handover technical content.
+
+## Commercial validation market-monitoring relationship — 2026-10-07
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/09_Market_Intelligence_Monitoring_Blueprint|FPJIS Market Intelligence Monitoring Blueprint]] — defines the controlled Observe → Capture → Verify → Interpret → Review → Test loop for construction, facility, solar, workflow and business-operation market signals.
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/15_Current_Market_Signal_Register_2026-10-07|Current Market Signal Register]] — dated evidence snapshot; not canonical market truth.
+
+FWAIS may later automate scheduled collection, stale-source review and routing after the monitoring workflow is manually validated. It must not convert a market trend directly into a build requirement or product feature.
