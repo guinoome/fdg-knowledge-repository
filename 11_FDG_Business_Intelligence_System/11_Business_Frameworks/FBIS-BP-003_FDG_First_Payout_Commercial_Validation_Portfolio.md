@@ -255,3 +255,17 @@ FMCIS collaborators may review or contribute only within assigned work packages;
 ## Change history
 
 - 2026-10-06 — v0.1.0: Created first-payout opportunity portfolio; recorded founder direction to freeze major new development, launch service/product validation lanes, test PHP 4,999 flagship pricing and a verified Founding Five 50% promotion.
+
+## 13. FPJIS implementation blueprint — 2026-10-07
+
+The cross-system implementation and future coding path is governed by:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|FDG First-Payout Commercial Validation Blueprint Package]].
+
+FBIS remains the commercial authority. FPJIS provides project blueprints, gates and implementation contracts; it does not take over pricing/revenue authority.
+
+Current-market monitoring implementation:
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/09_Market_Intelligence_Monitoring_Blueprint|Market Intelligence Monitoring Blueprint]].
+
+Dated market evidence:
+[[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/15_Current_Market_Signal_Register_2026-10-07|Current Market Signal Register — 2026-10-07]].
