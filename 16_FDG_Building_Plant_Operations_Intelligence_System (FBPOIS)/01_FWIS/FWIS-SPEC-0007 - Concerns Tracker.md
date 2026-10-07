@@ -466,3 +466,14 @@ Related:
 | 1.0 | Initial Draft | Concerns Tracker Functional Specification |
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document
+
+## H-PMS Interface Extension — 2026-10-07
+
+Hotel guest, Front Office and Housekeeping engineering concerns may originate in the Hotel Property Management System (**H-PMS**) and be handed off to this Concerns Tracker through a governed interface.
+
+The H-PMS supplies only the hospitality context needed for execution: property/room, guest-impact category, description, access constraint, timing/arrival priority and evidence. Unnecessary guest personally identifiable information must not be copied into FBPOIS.
+
+This Concerns Tracker remains authoritative for the engineering concern after handoff.
+
+Detailed contract:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
