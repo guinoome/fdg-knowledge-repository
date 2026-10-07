@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="850" viewBox="0 0 1750 850">
+<style>
+.bg{fill:#07111f}.p{fill:#10253b;stroke:#3f6385;stroke-width:2}.p2{fill:#13324d;stroke:#5984a6;stroke-width:2}.ok{fill:#1b7f70}.warn{fill:#9b6929}.bad{fill:#843440}
+.t{fill:#f5f8fb;font:700 22px system-ui,sans-serif}.s{fill:#c9d8e7;font:500 16px system-ui,sans-serif}.xs{fill:#9fb4c8;font:500 13px system-ui,sans-serif}.ttl{fill:#fff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc2df;font:500 17px system-ui,sans-serif}
+.l{stroke:#7398b7;stroke-width:3;fill:none}.d{stroke:#7398b7;stroke-width:2;stroke-dasharray:9 8;fill:none}
+</style>
+<rect class="bg" width="1750" height="850"/><text class="ttl" x="70" y="70">Hospitality Release Gate — Local First, Production Last</text><text class="sub" x="70" y="105">Live OTA, payment and guest data are late-stage integrations, not coding prerequisites.</text>
+<g transform="translate(65,235)">
+<rect class="p" x="0" y="0" rx="17" width="160" height="120"/><text class="s" x="55" y="42">H0–H2</text><text class="s" x="24" y="78">Blueprint</text><path class="l" d="M160 60H180"/><rect class="p" x="180" y="0" rx="17" width="160" height="120"/><text class="s" x="235" y="42">H3</text><text class="s" x="204" y="78">Build Auth</text><path class="l" d="M340 60H360"/><rect class="p2" x="360" y="0" rx="17" width="160" height="120"/><text class="s" x="415" y="42">H4–H5</text><text class="s" x="384" y="78">Local Vertical</text><path class="l" d="M520 60H540"/><rect class="p2" x="540" y="0" rx="17" width="160" height="120"/><text class="s" x="595" y="42">H6–H7</text><text class="s" x="564" y="78">Edge + Resilience</text><path class="l" d="M700 60H720"/><rect class="ok" x="720" y="0" rx="17" width="160" height="120"/><text class="s" x="775" y="42">H8</text><text class="s" x="744" y="78">Release RC</text><path class="l" d="M880 60H900"/><rect class="warn" x="900" y="0" rx="17" width="160" height="120"/><text class="s" x="955" y="42">H9</text><text class="s" x="924" y="78">Staging</text><path class="l" d="M1060 60H1080"/><rect class="bad" x="1080" y="0" rx="17" width="160" height="120"/><text class="s" x="1135" y="42">H10</text><text class="s" x="1104" y="78">Production Auth</text><path class="l" d="M1240 60H1260"/><rect class="warn" x="1260" y="0" rx="17" width="160" height="120"/><text class="s" x="1315" y="42">H11</text><text class="s" x="1284" y="78">Pilot Property</text><path class="l" d="M1420 60H1440"/><rect class="ok" x="1440" y="0" rx="17" width="160" height="120"/><text class="s" x="1495" y="42">H12</text><text class="s" x="1464" y="78">Expansion</text>
+</g>
+<rect class="p" x="290" y="510" rx="22" width="1170" height="190"/><text class="t" x="355" y="557">Before staging / production</text>
+<text class="s" x="360" y="600">✓ Full synthetic guest journey locally   ✓ Night audit   ✓ Offline WAN loss   ✓ Backup/restore</text>
+<text class="s" x="360" y="637">✓ No S1/S2 defects   ✓ RBAC/audit   ✓ Migration plan   ✓ Rollback   ✓ Cost gate</text>
+<text class="s" x="360" y="674">✓ Exact approved commit   ✓ Live connector-specific sandbox tests   ✓ Founder/authority decision</text>
+<text class="xs" x="70" y="790">Default: ALLOW_REMOTE_DEPLOY=false • ALLOW_PRODUCTION_CONNECTORS=false • Git push ≠ hotel production release.</text>
+</svg>
