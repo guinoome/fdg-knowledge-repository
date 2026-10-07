@@ -37,3 +37,12 @@ Primary FBPOIS uses include permit passports, PTO/WDP condition monitoring, PCO 
 
 Boundary: FBPOIS remains the operating-record authority for facility/asset data and monitoring evidence. It references FRCIM obligations instead of duplicating regulatory rules.
 
+## Hospitality Operations Interface — 2026-10-07
+
+The future FDG Hospitality Operations Platform consumes FBPOIS/FWIS as the authoritative source for engineering concerns, room engineering status, OOO/OOS, maintenance work, plant operations and technical evidence:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/06_Housekeeping_Guest_Request_and_Engineering_Blueprint|Hospitality Housekeeping / Guest Request / Engineering Blueprint]]
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Blueprint Package]]
+
+Hospitality may display room engineering state and guest impact, but it must not create a duplicate maintenance authority or independently clear FBPOIS engineering restrictions.
