@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="900" viewBox="0 0 1650 900">
+<style>
+.bg{fill:#07111f}.p{fill:#10253b;stroke:#3f6385;stroke-width:2}.p2{fill:#13324d;stroke:#5984a6;stroke-width:2}.ok{fill:#1b7f70}.warn{fill:#9b6929}.bad{fill:#843440}
+.t{fill:#f5f8fb;font:700 22px system-ui,sans-serif}.s{fill:#c9d8e7;font:500 16px system-ui,sans-serif}.xs{fill:#9fb4c8;font:500 13px system-ui,sans-serif}.ttl{fill:#fff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc2df;font:500 17px system-ui,sans-serif}
+.l{stroke:#7398b7;stroke-width:3;fill:none}.d{stroke:#7398b7;stroke-width:2;stroke-dasharray:9 8;fill:none}
+</style>
+<rect class="bg" width="1650" height="900"/><text class="ttl" x="70" y="70">Distribution Adapter Architecture</text><text class="sub" x="70" y="105">FDG owns reservation/rate semantics; channel providers remain replaceable.</text>
+<rect class="p2" x="90" y="320" rx="24" width="350" height="180"/><text class="t" x="180" y="370">FDG PMS Core</text><text class="s" x="132" y="410">Availability • Rates • Restrictions</text><text class="s" x="155" y="442">Reservations • Modifications</text><text class="s" x="185" y="474">Cancellations</text>
+<rect class="ok" x="590" y="305" rx="24" width="420" height="210"/><text class="t" x="690" y="355">Distribution Service</text><text class="s" x="640" y="400">Mapping • Idempotency • Outbox/Inbox</text><text class="s" x="664" y="435">Health • Retry • Reconciliation</text><text class="s" x="702" y="470">Provider-Neutral Contract</text>
+<rect class="p" x="1160" y="135" rx="20" width="350" height="120"/><text class="t" x="1213" y="182">Channel Manager</text><text class="s" x="1220" y="217">Preferred initial strategy</text>
+<rect class="p" x="1160" y="315" rx="20" width="350" height="120"/><text class="t" x="1238" y="362">Direct OTA</text><text class="s" x="1194" y="397">Only when justified/certified</text>
+<rect class="p" x="1160" y="495" rx="20" width="350" height="120"/><text class="t" x="1220" y="542">Booking Engine</text><text class="s" x="1208" y="577">Direct website reservation</text>
+<rect class="p" x="1160" y="675" rx="20" width="350" height="120"/><text class="t" x="1217" y="722">Central / CRS</text><text class="s" x="1197" y="757">Multi-property reservation</text>
+<path class="l" d="M440 410H590M1010 410H1100M1100 410V195H1160M1100 410V375H1160M1100 410V555H1160M1100 410V735H1160"/>
+<text class="xs" x="75" y="850">Benchmark vendors may advertise hundreds of OTA links. FDG v1 validates one adapter contract and provider replacement—not connector count.</text>
+</svg>
