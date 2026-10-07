@@ -70,3 +70,13 @@ Before production identity or payments are connected, implement server-side auth
 - [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS Master Index]]
 - [[09_FDG_Ecosystem_Integration_Hub/09_FDG_Ecosystem_Integration_Hub_Master_Index|Integration Hub Master Index]]
 - [[Projects/Active/FDG Business Platform/CURRENT_HANDOVER|Current Agent Handover]]
+
+## Hospitality Future Vertical Relationship — 2026-10-07
+
+The approved future Hospitality industry direction now has a detailed FPJIS blueprint:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]].
+
+Hospitality may later appear as a Business Platform module/instance under the shared account experience or as a standalone flagship product sharing platform services. This relationship does **not** mark Hospitality as an implemented Business Platform module and does not authorize production deployment.
+
+The hospitality blueprint preserves this architecture's rule that the hub owns discovery/account/module navigation while detailed hotel operations remain domain-native.
