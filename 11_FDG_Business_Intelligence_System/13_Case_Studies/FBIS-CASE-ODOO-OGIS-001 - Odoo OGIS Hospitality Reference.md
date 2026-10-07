@@ -70,3 +70,14 @@ accounting entities.
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-IDEA-0001 - FDG Business Platform|FDG Business Platform idea]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index|13 Case Studies Master Index]] → this document
+
+## FDG hospitality blueprint evolution — 2026-10-07
+
+The shared-core + industry-capability pattern described in this case study is now instantiated in:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]].
+
+A second current benchmark is:
+[[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-EXCEED-HMS-001 - Exceed Hotel Software Reference|Exceed Hotel Software Reference]].
+
+The FDG blueprint extends the pattern with property-edge/offline operation, FBPOIS engineering/maintenance integration, provider-neutral distribution, evidence/provenance and controlled local-to-hosted release gates.
