@@ -107,3 +107,11 @@ Concept → Architecture → Prototype → Local Validation → Integration → 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/03_FDG_Premium_Experience_Design_and_Implementation_Mandate|FDG Premium Experience Design & Implementation Mandate]] — Active Mandate; extends earlier FPIS design direction with mobile-first, client-magnet, domain-native, truth-protecting implementation gates.
 - [[Projects/Active/FDG Business Platform/docs/FDG_Business_Platform_Unified_Account_Modular_Subscription_Merge_Mandate|FDG Business Platform Unified Account, Modular Subscription & Experience Merge Mandate]] — Active Mandate; applies FPIS experience ownership to a shared ecosystem hub while retaining module and branch boundaries.
 - [[Projects/Active/FDG Business Platform/docs/UNIFIED_PLATFORM_VISUAL_FIDELITY_LEDGER|FDG Business Platform Visual Fidelity Ledger]] — browser-evidenced comparison between approved direction and the working responsive implementation.
+
+## Hospitality Product Surface — 2026-10-07
+
+FPIS may provide the experience shell, responsive patterns, white-label capability, platform lifecycle and optional hosted product surfaces for:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]].
+
+FPIS does not own reservation, stay, folio, housekeeping, engineering, F&B or financial semantics. The hospitality package remains local-first/property-edge capable and must pass FPJIS release gates before hosted deployment.
