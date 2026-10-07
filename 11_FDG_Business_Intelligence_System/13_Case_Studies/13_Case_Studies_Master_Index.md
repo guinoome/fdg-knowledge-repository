@@ -35,3 +35,8 @@ The original references above remain as historical text. The following observed 
 - `13_Case_Studies/13_Case_Studies_Master_Index` → [[11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index|13_Case_Studies_Master_Index]]
 
 Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].
+
+## Hospitality benchmark extension — 2026-10-07
+
+- [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-EXCEED-HMS-001 - Exceed Hotel Software Reference|Exceed Hotel Software Reference]] — current integrated hospitality benchmark covering PMS/front office, POS, distribution, booking engine, multi-property and analytics; research evidence only.
+- [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]] — FDG-native implementation architecture derived from shared-core principles and multiple benchmarks.
