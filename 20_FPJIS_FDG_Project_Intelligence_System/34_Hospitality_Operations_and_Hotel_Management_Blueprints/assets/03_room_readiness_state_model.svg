@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<style>
+.bg{fill:#07111f}.p{fill:#10253b;stroke:#3f6385;stroke-width:2}.p2{fill:#13324d;stroke:#5984a6;stroke-width:2}.ok{fill:#1b7f70}.warn{fill:#9b6929}.bad{fill:#843440}
+.t{fill:#f5f8fb;font:700 22px system-ui,sans-serif}.s{fill:#c9d8e7;font:500 16px system-ui,sans-serif}.xs{fill:#9fb4c8;font:500 13px system-ui,sans-serif}.ttl{fill:#fff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc2df;font:500 17px system-ui,sans-serif}
+.l{stroke:#7398b7;stroke-width:3;fill:none}.d{stroke:#7398b7;stroke-width:2;stroke-dasharray:9 8;fill:none}
+</style>
+<rect class="bg" width="1600" height="1000"/><text class="ttl" x="70" y="70">Room Readiness — Independent State Model</text><text class="sub" x="70" y="105">Never use one editable “room status” field to represent different departments.</text>
+<rect class="p" x="120" y="190" rx="22" width="290" height="180"/><text class="t" x="205" y="238">Occupancy</text><text class="s" x="165" y="278">Vacant • Due In • Occupied</text><text class="s" x="173" y="310">Due Out • Departed</text>
+<rect class="p" x="480" y="190" rx="22" width="290" height="180"/><text class="t" x="555" y="238">Housekeeping</text><text class="s" x="525" y="278">Dirty • Cleaning • Clean</text><text class="s" x="522" y="310">Inspect • Ready • DND</text>
+<rect class="p" x="840" y="190" rx="22" width="290" height="180"/><text class="t" x="926" y="238">Engineering</text><text class="s" x="887" y="278">Normal • Concern • Restricted</text><text class="s" x="895" y="310">OOS • OOO • Cleared</text>
+<rect class="p" x="1200" y="190" rx="22" width="290" height="180"/><text class="t" x="1277" y="238">Sales</text><text class="s" x="1240" y="278">Sellable • Held • Blocked</text><text class="s" x="1225" y="310">Group • House Use • Maint</text>
+<path class="l" d="M265 370V540M625 370V540M985 370V540M1345 370V540"/>
+<rect class="p2" x="420" y="535" rx="28" width="760" height="160"/><text class="t" x="655" y="585">Derived Room Readiness Engine</text><text class="s" x="520" y="625">Sellable + Housekeeping Ready + Engineering Clear + No Blocking Hold</text><text class="s" x="605" y="658">Override requires authority, reason, duration and audit</text>
+<path class="l" d="M800 695V795"/>
+<rect class="ok" x="565" y="795" rx="22" width="470" height="95"/><text class="t" x="665" y="833">READY FOR ASSIGNMENT</text><text class="s" x="635" y="865">Calculated state — not manually invented</text>
+</svg>
