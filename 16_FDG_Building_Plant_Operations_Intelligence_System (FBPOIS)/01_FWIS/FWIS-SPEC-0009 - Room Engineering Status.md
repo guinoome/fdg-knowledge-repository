@@ -450,3 +450,21 @@ Related:
 | 1.0 | Initial Draft | Room Engineering Status Functional Specification |
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document
+
+## H-PMS Interface Extension — 2026-10-07
+
+Room Engineering Status is the canonical FBPOIS engineering-state provider to the Hotel Property Management System (**H-PMS**).
+
+H-PMS may display:
+- current engineering restriction;
+- concern/work-order summary;
+- expected return to service;
+- verification/clearance;
+- stale/offline interface warning.
+
+FBPOIS may consume bounded H-PMS context such as occupied/vacant state, departure/arrival timing, room-access window, Housekeeping coordination and sales/arrival priority. It does not need unrestricted guest identity or folio data.
+
+Engineering release is a prerequisite to hospitality room readiness, not an automatic declaration that the room is sellable.
+
+Detailed contract:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
