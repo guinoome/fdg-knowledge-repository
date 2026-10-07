@@ -182,3 +182,17 @@ FBPOIS/FEIS own:
 - technical evidence.
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this document.
+
+## H-PMS ↔ FBPOIS Architectural Relationship — 2026-10-07
+
+The Hotel Property Management System (**H-PMS**) is not isolated from FBPOIS. It is the hospitality operational layer that consumes and contributes context to FBPOIS for guestrooms and hotel facilities.
+
+Canonical relationship:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
+
+High-level rule:
+```text
+H-PMS owns guest/reservation/stay/housekeeping/folio context.
+FBPOIS owns engineering concern/work/PM/asset/OOO-OOS/technical clearance.
+Room readiness is derived from both.
+```
