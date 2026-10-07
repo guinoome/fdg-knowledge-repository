@@ -82,3 +82,11 @@ for common business primitives and integrated workflows.
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-IDEA-0001 - FDG Business Platform|FDG Business Platform idea]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index|13 Case Studies Master Index]] → this document
+
+## Hospitality implementation relationship — 2026-10-07
+
+The DizLog lesson—shared business primitives feeding integrated operational/financial intelligence—is now applied to hospitality through:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]].
+
+Hospitality does not duplicate customer, supplier, employee, product/service, inventory, purchasing, payment or accounting primitives. It adds hotel-specific room, reservation, stay, folio, housekeeping and distribution semantics.
