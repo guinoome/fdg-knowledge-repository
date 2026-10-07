@@ -169,3 +169,11 @@ FWAIS orchestrates the workflow and exception handling. FEIS Solar retains engin
 - [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/15_Current_Market_Signal_Register_2026-10-07|Current Market Signal Register]] — dated evidence snapshot; not canonical market truth.
 
 FWAIS may later automate scheduled collection, stale-source review and routing after the monitoring workflow is manually validated. It must not convert a market trend directly into a build requirement or product feature.
+
+## Hospitality workflow relationship — 2026-10-07
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/08_Distribution_Channel_Manager_and_Booking_Engine_Blueprint|Distribution / Channel Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/09_Guest_Experience_CRM_and_Communication_Blueprint|Guest Experience / Communication Blueprint]]
+
+FWAIS may later orchestrate validated hospitality workflows such as pre-arrival messaging, guest-request routing, housekeeping priority, maintenance escalation, distribution reconciliation and report scheduling. It must not independently own hotel domain truth or automate material financial/reservation authority before validation.
