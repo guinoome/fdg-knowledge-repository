@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1050" viewBox="0 0 1700 1050">
+<style>
+.bg{fill:#07111f}.p{fill:#10253b;stroke:#3f6385;stroke-width:2}.p2{fill:#13324d;stroke:#5984a6;stroke-width:2}.ok{fill:#1b7f70}.warn{fill:#9b6929}.bad{fill:#843440}
+.t{fill:#f5f8fb;font:700 22px system-ui,sans-serif}.s{fill:#c9d8e7;font:500 16px system-ui,sans-serif}.xs{fill:#9fb4c8;font:500 13px system-ui,sans-serif}.ttl{fill:#fff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc2df;font:500 17px system-ui,sans-serif}
+.l{stroke:#7398b7;stroke-width:3;fill:none}.d{stroke:#7398b7;stroke-width:2;stroke-dasharray:9 8;fill:none}
+</style>
+<rect class="bg" width="1700" height="1050"/><text class="ttl" x="70" y="70">Property-Edge Offline Architecture</text><text class="sub" x="70" y="105">Core hotel operation survives WAN loss; external services become queued/stale.</text>
+<rect class="p" x="80" y="220" rx="20" width="250" height="115"/><text class="t" x="125" y="265">Front Desk</text><text class="s" x="118" y="300">Reservation • Folio</text>
+<rect class="p" x="80" y="390" rx="20" width="250" height="115"/><text class="t" x="115" y="435">Housekeeping</text><text class="s" x="125" y="470">Rooms • Tasks</text>
+<rect class="p" x="80" y="560" rx="20" width="250" height="115"/><text class="t" x="150" y="605">F&B</text><text class="s" x="112" y="640">Order • KOT • Charge</text>
+<rect class="p" x="80" y="730" rx="20" width="250" height="115"/><text class="t" x="125" y="775">Engineering</text><text class="s" x="118" y="810">Concern • Work</text>
+<rect class="p2" x="520" y="360" rx="28" width="500" height="330"/><text class="t" x="675" y="410">PROPERTY EDGE</text><text class="s" x="610" y="455">Local Operational API / Service</text><text class="s" x="620" y="495">Local Transaction Database</text><text class="s" x="655" y="535">Audit / Event Outbox</text><text class="s" x="650" y="575">Attachments / Backup</text><text class="s" x="625" y="615">Business Date / Time Authority</text><rect class="ok" x="645" y="642" rx="16" width="250" height="35"/><text class="xs" x="690" y="665">Works without internet</text>
+<path class="l" d="M330 277H520M330 447H520M330 617H520M330 787C430 787 430 650 520 650"/>
+<rect class="warn" x="1190" y="180" rx="22" width="340" height="120"/><text class="t" x="1270" y="228">Distribution</text><text class="s" x="1248" y="263">OTA / Channel Manager</text>
+<rect class="warn" x="1190" y="350" rx="22" width="340" height="120"/><text class="t" x="1272" y="398">Payments</text><text class="s" x="1244" y="433">Gateway / Bank / E-wallet</text>
+<rect class="warn" x="1190" y="520" rx="22" width="340" height="120"/><text class="t" x="1250" y="568">Communication</text><text class="s" x="1238" y="603">Email • WhatsApp • SMS</text>
+<rect class="warn" x="1190" y="690" rx="22" width="340" height="120"/><text class="t" x="1265" y="738">Central Cloud</text><text class="s" x="1228" y="773">Multi-property • Remote Mgmt</text>
+<path class="d" d="M1020 430C1110 430 1110 240 1190 240M1020 490H1190M1020 550C1110 550 1110 580 1190 580M1020 620C1110 620 1110 750 1190 750"/>
+<rect class="bad" x="1130" y="875" rx="18" width="420" height="70"/><text class="s" x="1180" y="917">WAN DOWN → Queue / Stale / Reconcile</text>
+</svg>
