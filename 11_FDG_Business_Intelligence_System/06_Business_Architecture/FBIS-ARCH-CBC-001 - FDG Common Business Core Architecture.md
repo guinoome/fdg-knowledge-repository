@@ -154,3 +154,16 @@ See [[06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL|Ente
 ## 2026-09-30 architecture review addendum
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed ECC–CBC–FBPOIS reconciliation]] records overlapping organization, identity and project primitives. The proposal links semantic IDs and record owners before introducing shared implementation. This note's existing Proposed status and single-company/multi-company distinctions remain controlling within their scope.
+
+## Hospitality Capability Pack Implementation — 2026-10-07
+
+Hospitality is now explicitly implemented at blueprint level as an industry capability pack over this Common Business Core:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]].
+
+Boundary:
+- CBC/shared systems retain Party/Customer, Supplier, Employee, Product/Service, Inventory, Procurement, Payment, Invoice and financial-interface primitives.
+- Hospitality adds Property configuration, RoomType, Room, RatePlan, Reservation, Stay, RoomAssignment, GroupBlock, Folio operational semantics, Housekeeping, GuestRequest and Distribution mappings.
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|FBPOIS/FWIS]] retains engineering/maintenance/OOO-OOS operational authority.
+
+This extension does not change this document's Proposed candidate status.
