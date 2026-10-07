@@ -122,3 +122,9 @@ The founder-directed first-payout program is now represented as a complete FPJIS
 It includes portfolio, UX, workflow, data, pricing, offline runtime, local validation, deployment gates, market monitoring, testing, FMCIS work packages, security/professional boundaries, KPI/evidence, agent handover and repository-native SVG visual blueprints.
 
 The package explicitly prevents remote deployment from becoming the primary development/test environment. Build authorization and deployment authorization remain separate gates.
+
+## Hospitality Operations Blueprint Package — 2026-10-07
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]] — complete local-first, offline/property-edge hospitality architecture covering PMS/front office, reservations, folio/night audit, housekeeping, guest requests, FBPOIS engineering integration, F&B, inventory/procurement interfaces, distribution/channel adapter, booking engine, guest communications, security, analytics, testing, release gates, FMCIS work packages and repository-native SVG visual blueprints.
+
+The package is architecturally complete enough for bounded execution packages but remains **Not Build Authorized** until a separate approval record exists.
