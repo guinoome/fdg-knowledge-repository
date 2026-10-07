@@ -243,3 +243,10 @@ A guest room should accumulate:
 This enables CAPEX/reliability intelligence without duplicating maintenance truth.
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this document.
+
+## Formal H-PMS ↔ FBPOIS Interface — 2026-10-07
+
+This document's engineering handoff is formalized in:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
+
+Use **H-PMS** internally where “PMS” could be confused with preventive-maintenance terminology.
