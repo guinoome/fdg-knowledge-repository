@@ -269,3 +269,22 @@ Current-market monitoring implementation:
 
 Dated market evidence:
 [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/15_Current_Market_Signal_Register_2026-10-07|Current Market Signal Register — 2026-10-07]].
+
+## 14. Hospitality opportunity extension — 2026-10-07
+
+Hospitality is added as a staged opportunity family, not as authorization to build a complete hotel PMS.
+
+Blueprint:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]].
+
+Recommended first-payout sequence:
+1. Hotel Engineering Maintenance & Monthly Reporting.
+2. Hotel Operations Control Toolkit.
+3. Housekeeping + Engineering Room Readiness Pack.
+4. Hotel Shift Turnover / Daily Operations.
+5. Guest Request / Service Recovery Tracker.
+6. PMS Readiness / Process Mapping engagement.
+7. Department-level local pilot.
+8. Integrated hospitality software only after repeated evidence.
+
+This opportunity family should inherit the same rule as the rest of the portfolio: benchmark feature breadth is not build authorization.
