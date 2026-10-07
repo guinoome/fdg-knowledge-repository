@@ -48,6 +48,13 @@ Reuse:
 - [[12_FDG_Security_Intelligence_System/README|FSIS]];
 - [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FAIS]].
 
+## Terminology Control
+
+Within FDG architecture, use **H-PMS** when referring to the Hotel Property Management System if “PMS” could be confused with preventive-maintenance terminology.
+
+Canonical relationship:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|H-PMS ↔ FBPOIS Interface]].
+
 ## Mandatory Design Principles
 
 - Local-First.
@@ -88,7 +95,12 @@ Reuse:
 18. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/17_FMCIS_Work_Packages_and_Agent_Golden_Path|17 FMCIS Work Packages and Agent Golden Path]]
 19. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/18_Commercialization_and_Service_Ladder|18 Commercialization and Service Ladder]]
 20. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/19_Visual_Blueprint_Index|19 Visual Blueprint Index]]
-21. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/20_Blueprint_Verification_and_Readiness_Report|20 Blueprint Verification and Readiness Report]]\n22. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/21_Prepared_Build_Start_Execution_Package|21 Prepared Build-Start Execution Package]]\n23. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/22_Implementation_Onboarding_Migration_and_Support_Blueprint|22 Implementation Onboarding Migration and Support]]\n24. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/23_Multi_Property_Central_Reservation_and_Group_Blueprint|23 Multi-Property Central Reservation and Group]]\n25. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/24_Property_Configuration_and_Administration_Blueprint|24 Property Configuration and Administration]]
+21. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/20_Blueprint_Verification_and_Readiness_Report|20 Blueprint Verification and Readiness Report]]
+22. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/21_Prepared_Build_Start_Execution_Package|21 Prepared Build-Start Execution Package]]
+23. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/22_Implementation_Onboarding_Migration_and_Support_Blueprint|22 Implementation Onboarding Migration and Support]]
+24. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/23_Multi_Property_Central_Reservation_and_Group_Blueprint|23 Multi-Property Central Reservation and Group]]
+25. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/24_Property_Configuration_and_Administration_Blueprint|24 Property Configuration and Administration]]
+26. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|25 Hotel PMS ↔ FBPOIS Interface Blueprint]]
 
 ## Current Status
 
