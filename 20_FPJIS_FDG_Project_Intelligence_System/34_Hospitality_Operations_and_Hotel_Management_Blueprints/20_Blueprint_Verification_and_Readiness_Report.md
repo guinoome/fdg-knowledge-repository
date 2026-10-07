@@ -112,3 +112,17 @@ Revalidate if:
 - live customer/property pilot is proposed.
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this report.
+
+## Repository Integrity Verification — 2026-10-07
+
+Current package inventory after the implementation annexes:
+- **32 files total**
+- **25 Markdown blueprints**
+- **7 SVG visual blueprints**
+
+Wikilink validation:
+- first two validation passes across the original 22 Markdown files checked 87 full-path Wikilinks with zero unresolved targets;
+- after adding the final onboarding/migration/support, multi-property/CRS, and property-configuration annexes, the changed master plus three new annexes were revalidated;
+- 39 full-path links in that changed/new set were checked with **zero unresolved targets**.
+
+This verifies repository path integrity for the blueprint package at the reviewed GitHub state. It does not prove implementation correctness because no application has been authorized or built.
