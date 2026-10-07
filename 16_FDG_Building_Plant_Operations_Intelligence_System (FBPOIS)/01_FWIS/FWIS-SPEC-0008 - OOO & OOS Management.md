@@ -466,3 +466,14 @@ Related:
 | 1.0 | Initial Draft | OOO & OOS Management Functional Specification |
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document
+
+## H-PMS Interface Extension — 2026-10-07
+
+For hotel guestrooms, the Hotel Property Management System (**H-PMS**) consumes FBPOIS OOO/OOS state as an input to hospitality room sellability and readiness.
+
+FBPOIS remains authoritative for the engineering/operational restriction record under its configured OOO/OOS workflow. H-PMS must not silently clear or overwrite an active FBPOIS restriction.
+
+A room may return to sellable hospitality inventory only after all applicable gates pass, including FBPOIS engineering clearance plus Housekeeping/Front Office readiness.
+
+Detailed contract:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
