@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1050" viewBox="0 0 1700 1050">
+<style>
+.bg{fill:#07111f}.p{fill:#10253b;stroke:#3f6385;stroke-width:2}.p2{fill:#13324d;stroke:#5984a6;stroke-width:2}.ok{fill:#1b7f70}.warn{fill:#9b6929}.bad{fill:#843440}
+.t{fill:#f5f8fb;font:700 22px system-ui,sans-serif}.s{fill:#c9d8e7;font:500 16px system-ui,sans-serif}.xs{fill:#9fb4c8;font:500 13px system-ui,sans-serif}.ttl{fill:#fff;font:700 34px system-ui,sans-serif}.sub{fill:#9fc2df;font:500 17px system-ui,sans-serif}
+.l{stroke:#7398b7;stroke-width:3;fill:none}.d{stroke:#7398b7;stroke-width:2;stroke-dasharray:9 8;fill:none}
+</style>
+<rect class="bg" width="1700" height="1050"/>
+<text class="ttl" x="70" y="70">FDG Hospitality Operations Platform — System Architecture</text>
+<text class="sub" x="70" y="106">Hospitality semantics extend the shared core; engineering, finance and integrations retain their own authority.</text>
+<rect class="p2" x="580" y="145" rx="24" width="540" height="105"/><text class="t" x="700" y="188">Hospitality Capability Pack</text><text class="s" x="665" y="220">Reservations • Rooms • Stay • Folio • Housekeeping</text>
+<rect class="p" x="80" y="330" rx="20" width="280" height="125"/><text class="t" x="142" y="378">Common Business Core</text><text class="s" x="118" y="413">Party • Product • Inventory</text><text class="s" x="122" y="438">Procurement • Payment • Finance</text>
+<rect class="p" x="405" y="330" rx="20" width="280" height="125"/><text class="t" x="485" y="378">FBPOIS / FEIS</text><text class="s" x="443" y="413">Engineering • Maintenance</text><text class="s" x="456" y="438">OOO/OOS • Evidence</text>
+<rect class="p" x="730" y="330" rx="20" width="280" height="125"/><text class="t" x="817" y="378">F&B / Ancillary</text><text class="s" x="766" y="413">POS • KOT • Room Charge</text><text class="s" x="790" y="438">Spa • Events • Activities</text>
+<rect class="p" x="1055" y="330" rx="20" width="280" height="125"/><text class="t" x="1130" y="378">Distribution</text><text class="s" x="1096" y="413">Channel Adapter • OTA</text><text class="s" x="1105" y="438">Booking Engine • CRS</text>
+<rect class="p" x="1380" y="330" rx="20" width="240" height="125"/><text class="t" x="1446" y="378">Platform</text><text class="s" x="1410" y="413">Identity • UX • Audit</text><text class="s" x="1400" y="438">Security • Integration</text>
+<rect class="p2" x="250" y="610" rx="24" width="360" height="145"/><text class="t" x="330" y="658">Property Edge</text><text class="s" x="292" y="694">Local DB • LAN • Backup</text><text class="s" x="282" y="720">Front Desk • HK • F&B • Eng</text>
+<rect class="p2" x="670" y="610" rx="24" width="360" height="145"/><text class="t" x="758" y="658">Operational Views</text><text class="s" x="710" y="694">Role-specific workspaces</text><text class="s" x="710" y="720">Attention Center • Reports</text>
+<rect class="p2" x="1090" y="610" rx="24" width="360" height="145"/><text class="t" x="1190" y="658">Optional Cloud</text><text class="s" x="1130" y="694">Multi-property • Remote Sync</text><text class="s" x="1148" y="720">Providers • Hosted Booking</text>
+<rect class="ok" x="485" y="875" rx="22" width="730" height="95"/><text class="t" x="655" y="914">Canonical Knowledge + Source Code: GitHub</text><text class="s" x="590" y="946">Private hotel/guest operational data remains outside public repository</text>
+<path class="l" d="M850 250V330M850 455V610M610 682H670M1030 682H1090M850 755V875"/>
+<path class="d" d="M220 455C220 540 430 540 430 610M545 455C545 530 430 530 430 610M1195 455C1195 530 1270 530 1270 610"/>
+</svg>
