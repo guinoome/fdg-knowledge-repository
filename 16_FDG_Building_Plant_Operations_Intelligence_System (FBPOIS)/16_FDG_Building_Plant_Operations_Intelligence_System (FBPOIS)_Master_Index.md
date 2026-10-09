@@ -46,3 +46,26 @@ The future FDG Hospitality Operations Platform consumes FBPOIS/FWIS as the autho
 [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Blueprint Package]]
 
 Hospitality may display room engineering state and guest impact, but it must not create a duplicate maintenance authority or independently clear FBPOIS engineering restrictions.
+
+---
+
+## Maintenance Readiness Relationship — 2026-10-09
+
+FBPOIS/FMIS consumes the engineering semantics defined by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]].
+
+Operational implementation remains in [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|FMIS]].
+
+The relationship adds:
+- work-readiness assessment;
+- Planning Backlog / Ready Backlog;
+- structured constraints;
+- JobPlan / WorkPackage linkage;
+- maintenance kitting/reservation state;
+- capacity-aware schedule commitments;
+- break-in work;
+- post-maintenance testing / return-to-service;
+- asset maintenance-readiness handover.
+
+It does not merge FEIS and FBPOIS or transfer facility maintenance-record ownership to FEIS.
