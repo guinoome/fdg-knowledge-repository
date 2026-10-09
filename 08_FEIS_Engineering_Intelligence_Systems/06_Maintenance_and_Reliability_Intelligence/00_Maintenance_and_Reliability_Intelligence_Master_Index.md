@@ -58,3 +58,5 @@ These are related but separate readiness states.
 This branch is additive. Existing PM evidence, Fire Pump workflows, FMIS records, work-order states, reliability metrics, procurement logic, and prior maintenance standards remain valid unless a future controlled evolution explicitly supersedes them.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS Master Index]] → this document
+
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0004 - Maintenance Program Readiness and Maturity Assessment Standard|FEIS-MNT-0004 — Maintenance Program Readiness & Maturity Assessment Standard]] — explainable organization/site-level assessment across governance, asset data, strategy, work management, planning/scheduling, materials, workforce, execution, reliability, systems, project handover and continuous improvement. Critical blockers remain visible independently of any aggregate score.
