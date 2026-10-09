@@ -45,3 +45,32 @@ Engineering/Maintenance Need and Technical Specification → PR/SRF → Approval
 Procurement owns sourcing, supplier qualification, approved vendors, commercial comparison, PO execution and expediting. Finance owns payable, payment and accounting controls. Engineering owns the originating technical requirement and technical acceptance. Legal supplies applicable commercial/legal requirements.
 
 See [[06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX|Cross-Functional Ownership and Interface Matrix]].
+
+---
+
+## Maintenance Kitting and Reservation Extension — 2026-10-09
+
+Material availability for planned work is extended to:
+
+~~~text
+Identified
+→ On Hand
+→ Reserved
+→ Picked
+→ Kitted
+→ Staged
+→ Issued
+→ Consumed / Returned
+~~~
+
+Ready-to-Schedule criteria may require Reserved, Kitted or Staged status according to criticality/site policy.
+
+FMIS should surface:
+- work orders blocked by material;
+- shortage age;
+- expected delivery;
+- reservation expiry;
+- incomplete kit;
+- material substitution requiring review.
+
+Procurement ownership boundaries remain unchanged.
