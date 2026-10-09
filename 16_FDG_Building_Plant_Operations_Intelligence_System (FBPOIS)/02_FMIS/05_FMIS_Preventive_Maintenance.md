@@ -47,3 +47,26 @@ H-PMS does not own PM completion, maintenance evidence or technical acceptance.
 
 Detailed contract:
 [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
+
+---
+
+## PM Readiness and Job Plan Extension — 2026-10-09
+
+PM occurrence scheduling should consume an approved PM Definition / JobPlan and evaluate readiness before schedule commitment.
+
+Applicable checks include:
+- asset/access availability;
+- required trade/competency;
+- expected duration;
+- required parts/consumables;
+- tools/test instruments;
+- permit/isolation;
+- contractor/vendor service where applicable;
+- post-maintenance test and evidence requirements.
+
+PM compliance shall not be improved by scheduling PM work that is materially unready or by closing incomplete execution.
+
+Execution feedback should propose updates to the reusable JobPlan while preserving approval/version history.
+
+See:
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard|Maintenance Work Readiness Standard]].
