@@ -486,3 +486,36 @@ They reduce the probability of failure.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+---
+
+# Maintenance Work-Management Reliability Extension — 2026-10-09
+
+Reliability intelligence may also consume work-management quality signals from:
+
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]].
+
+Relevant signals include:
+
+- repeat emergency/break-in work;
+- planning defects;
+- repeated waiting-material conditions;
+- failed post-maintenance tests;
+- reopened work orders;
+- repeated repair on the same failure mode;
+- large recurring estimate-vs-actual variance;
+- missing-tool / missing-document patterns;
+- access or contractor constraints repeatedly preventing critical work.
+
+These signals do not replace physical failure evidence. They identify **maintenance-system causes and latent organizational conditions** that may increase failure recurrence, MTTR, downtime or maintenance cost.
+
+The reliability loop therefore extends to:
+
+~~~text
+Failure / Work-Management Evidence
+→ Cause / Constraint Pattern
+→ Reliability Review
+→ PM / JobPlan / Spare / Design / Process Improvement
+→ Measured Outcome
+→ Learning
+~~~
