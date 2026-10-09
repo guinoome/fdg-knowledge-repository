@@ -51,3 +51,26 @@ Future capabilities may include condition monitoring, anomaly detection, predict
 > FMIS transforms maintenance activity and plant condition into structured, traceable engineering intelligence that improves reliability, operational continuity, and management decisions.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document
+
+---
+
+## Maintenance Readiness Priority Overlay — 2026-10-09
+
+The existing FMIS phases remain valid. Add the following dependency-aware priority before advanced predictive capability:
+
+1. separate work-order workflow status from readiness state;
+2. Planning Backlog / Ready Backlog;
+3. structured constraints and waiting-reason taxonomy;
+4. JobPlan / WorkPackage versioning;
+5. material reservation/kitting;
+6. schedulable labor capacity;
+7. schedule commitment/change history;
+8. break-in work tracking;
+9. execution feedback / planning accuracy;
+10. post-maintenance-test and return-to-service records;
+11. asset maintenance-readiness handover gate.
+
+Engineering rules:
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]].
+
+Do not jump directly to predictive maintenance while basic work-readiness and planning data remains unreliable.
