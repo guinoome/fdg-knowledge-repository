@@ -49,3 +49,20 @@ Human Resources and People Operations owns recruitment and hiring process, emplo
 Engineering and HR reconcile through workforce planning, hiring requisitions, technical interviews/assessments, competency records, training needs and performance inputs.
 
 See [[06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD|Enterprise Function and Department Standard]].
+
+---
+
+## Planner, Scheduler and Capacity Extension — 2026-10-09
+
+FMIS should distinguish the functions of planning and scheduling even when one person performs both roles.
+
+Planning determines scope, method, labor/trade, duration, materials, tools, safety, access prerequisites and acceptance criteria.
+
+Scheduling determines when ready work will be performed, by which crew, within which maintenance/operations window and available capacity.
+
+Schedulable capacity should account for leave, training, meetings, planned administrative time and any reserved emergency capacity.
+
+Required metrics include schedule load, Ready Backlog coverage by trade/crew, schedule compliance and break-in work.
+
+Detailed rules:
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard|FEIS-MNT-0001]].
