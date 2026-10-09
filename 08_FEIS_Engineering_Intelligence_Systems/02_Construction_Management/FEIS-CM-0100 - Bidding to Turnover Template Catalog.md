@@ -400,3 +400,45 @@ High-priority mappings include:
 Document-intensive packs shall comply with [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard|FEIS-CM-0006]].
 
 Build sequencing and acceptance criteria are defined in [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|FEIS-CM-0901]].
+
+---
+
+## Maintenance Management Readiness Gate — 2026-10-09
+
+Project turnover is extended by the maintenance-management readiness requirements defined in:
+
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard|FEIS-MNT-0002 — Asset Maintenance Readiness & Project Handover]].
+
+Passing Testing & Commissioning does not by itself establish that an asset/system is maintainable in operations.
+
+Before responsibility transfer, the turnover workflow should verify, according to asset criticality and approved readiness profile:
+
+- asset hierarchy/master data;
+- technical attributes and commissioning baseline;
+- maintenance strategy;
+- PM definitions and initial due dates;
+- reusable JobPlans where warranted;
+- critical spares/consumables;
+- special tools/test equipment;
+- correct O&M manuals, datasheets and as-built drawings;
+- warranty/service obligations;
+- isolation/LOTO information;
+- operator/maintenance training;
+- condition/performance baseline;
+- regulatory inspection/calibration obligations;
+- validated FMIS/CMMS setup;
+- open punch/readiness blockers with owner and due date.
+
+Recommended project closeout sequence:
+
+~~~text
+Physical Completion
+→ Testing & Commissioning Acceptance
+→ Turnover Document Completeness
+→ Asset / Maintenance Data Validation
+→ Spares / Tools / Training Verification
+→ Maintenance-Ready Gate
+→ Operations Responsibility Transfer
+~~~
+
+The Turnover Master Checklist and Asset/Equipment Register remain valid; this extension makes their maintenance-readiness consequences explicit rather than creating a duplicate turnover process.
