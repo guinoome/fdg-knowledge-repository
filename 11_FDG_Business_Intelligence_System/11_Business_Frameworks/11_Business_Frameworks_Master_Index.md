@@ -40,3 +40,8 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 ## Commercial validation
 
 - [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio|FDG First-Payout Commercial Validation Portfolio]] — Draft founder-directed portfolio for validating paid services and professional capability packs before major new software development. Includes first-payment ranking, PHP 4,999 flagship pricing hypothesis, Founding Five promotion, evidence measures and cross-system ownership.
+
+
+## Integrated commercial operating loop — 2026-10-09
+
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004 Outcome-to-Learning Business Operating Loop]] — Draft cross-system reuse blueprint and controlled engineering-service pilot handover. Connects existing BP-001, BP-002, BP-003 and FSvIS-OM-0001; does not commission runtime. Related [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|business specialist agent capability profiles]] and [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DAILYS-001 - Dailys Outcome-to-Learning Business Reference|Dailys research case]].

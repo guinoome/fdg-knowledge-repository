@@ -40,3 +40,8 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 
 - [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-EXCEED-HMS-001 - Exceed Hotel Software Reference|Exceed Hotel Software Reference]] — current integrated hospitality benchmark covering PMS/front office, POS, distribution, booking engine, multi-property and analytics; research evidence only.
 - [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]] — FDG-native implementation architecture derived from shared-core principles and multiple benchmarks.
+
+
+## Outcome-to-learning business case — 2026-10-09
+
+- [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DAILYS-001 - Dailys Outcome-to-Learning Business Reference|Dailys Outcome-to-Learning Business Reference (FBIS-CASE-DAILYS-001)]] — user-provided video scene/narration and checked public-site characteristics; independent revenue/agent implementation unverified. Research evidence only. See [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]] for proposed extension.

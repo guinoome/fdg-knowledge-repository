@@ -33,3 +33,8 @@ The Agentic Framework remains the governing operating model. Execution/orchestra
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS — Workflow Automation Intelligence]]
 
 - [[03_Agentic Framework/TOP_TIER_REPOSITORY_REVIEW_WATCH|Top-Tier Repository Review Watch]]
+
+
+## Proposed business specialist capabilities — 2026-10-09
+
+- [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|FDG Business Specialist Agent Capability Profiles: CFO / CMO / Customer Service]] — Draft scoped roles under Nex orchestration. Existing NEX-STD-013 and NEX-STD-125/126 retain authority; no agents commissioned. See [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]] for business-loop integration.
