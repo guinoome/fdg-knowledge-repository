@@ -35,3 +35,9 @@ Operations & Maintenance Services may consume the governed engineering capabilit
 [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]].
 
 This enables future service validation around backlog readiness, planning/scheduling improvement, asset-maintenance handover, JobPlan/WorkPackage setup, and maintenance-program readiness without creating a separate technical source of truth.
+
+Potential future assessment/service architecture is defined in:
+
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0004 - Maintenance Program Readiness and Maturity Assessment Standard|Maintenance Program Readiness & Maturity Assessment]].
+
+This remains a capability/service candidate, not a claim of validated market demand or an expansion of an existing client contract.
