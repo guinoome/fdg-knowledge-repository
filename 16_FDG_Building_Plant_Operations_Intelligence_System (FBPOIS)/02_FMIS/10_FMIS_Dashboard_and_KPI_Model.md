@@ -51,3 +51,45 @@ The architecture can consolidate multiple Chief Engineers/properties where autho
 The established engineering workflow includes a daily snapshot around 07:45. FMIS contributes critical maintenance, plant/equipment status, PM condition, major work orders, OOO/OOS maintenance impact, material/procurement risks, contractor delays, and priority actions.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document
+
+---
+
+## Maintenance Planning and Readiness KPI Extension — 2026-10-09
+
+Add planning/readiness visibility:
+
+### Backlog
+- total backlog labor hours;
+- awaiting-planning hours;
+- in-planning hours;
+- waiting-material hours;
+- waiting-access hours;
+- Ready Backlog hours;
+- backlog age / constraint age.
+
+### Planning & Scheduling
+- Ready Backlog coverage by trade/crew;
+- planning lead time;
+- schedule load;
+- schedule compliance by work-order count;
+- schedule compliance by labor hours;
+- break-in rate;
+- planned-work percentage;
+- emergency-work percentage.
+
+### Quality
+- estimate accuracy;
+- first-pass work-package quality;
+- missing-material/tool events;
+- failed PMT;
+- rework/reopened work;
+- JobPlan change candidates.
+
+### Asset Readiness
+- new/modified assets pending maintenance-readiness review;
+- critical readiness blockers;
+- PM setup completeness;
+- spares/document/training readiness.
+
+Definitions and anti-gaming rules:
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0003 - Maintenance Readiness Data Model KPI and Acceptance Tests|FEIS-MNT-0003]].
