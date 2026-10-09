@@ -148,3 +148,18 @@ Architecture rule:
 > Do not create a new module merely because a profession exists. Reuse universal project capabilities, preserve discipline-specific technical semantics in FEIS, and compose role-specific Workbenches over one shared project truth.
 
 This extension does not replace the existing Mechanical Engineering Intelligence branch, Construction Management, Project Intelligence, DCKL, or shared FEIP standards.
+
+---
+
+## Maintenance & Reliability Intelligence Extension — 2026-10-09
+
+FEIS now contains an additive maintenance-work-management and maintenance-readiness branch:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|Maintenance & Reliability Intelligence Master Index]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0000 - Maintenance and Reliability Intelligence Architecture|Maintenance & Reliability Intelligence Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard|Work Readiness, Planning & Scheduling]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard|Asset Maintenance Readiness & Project Handover]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0003 - Maintenance Readiness Data Model KPI and Acceptance Tests|Maintenance Readiness Data Model, KPI & Acceptance Tests]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-RSCH-0001 - Maintenance Ready Benchmark and Evidence Register|Maintenance Ready Benchmark & Evidence Register]]
+
+This extension preserves FEIP-STD-003, 004 and 010. FEIS owns engineering maintenance methods/readiness criteria; FBPOIS/FMIS owns facility maintenance execution records, backlog, assignments and plant/equipment maintenance status.
