@@ -74,3 +74,16 @@ The `implementation/` subfolder holds the canonical FMIS application — Python,
 Do not convert FMIS into another AppSheet-like application and do not turn the current prototype directly into the production architecture. Reuse validated workflows and concepts while implementing the approved FBPOIS enterprise architecture.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|FBPOIS Master Index]] → this document
+
+---
+
+## Maintenance Readiness Extension — 2026-10-09
+
+FMIS consumes the FEIS maintenance-readiness standards for planning quality, Ready Backlog semantics, asset maintenance readiness and KPI definitions:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard|Work Readiness, Planning & Scheduling]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard|Asset Maintenance Readiness]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0003 - Maintenance Readiness Data Model KPI and Acceptance Tests|Data Model, KPI & Acceptance Tests]]
+
+FMIS remains the operational system for facility work orders, PM occurrences, backlog, assignments, maintenance history and plant/equipment status. FEIS does not replace FMIS execution ownership.
