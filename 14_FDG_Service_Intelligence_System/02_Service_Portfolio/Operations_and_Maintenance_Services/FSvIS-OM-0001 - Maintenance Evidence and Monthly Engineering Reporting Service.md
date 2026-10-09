@@ -182,3 +182,28 @@ Project-level validation, local-first implementation requirements, data/evidence
 [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index|FDG First-Payout Commercial Validation Blueprint Package]].
 
 FSvIS continues to own the service definition and maturity. The FPJIS package must not silently alter this service's scope, exclusions, acceptance criteria or professional boundaries.
+
+---
+
+## Maintenance Readiness Adjacent Service Opportunity — 2026-10-09
+
+The current pilot scope remains unchanged.
+
+A future adjacent service opportunity, to be validated only after real delivery evidence, is a **Maintenance Readiness Assessment / Backlog-to-Ready Improvement Service** based on:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard|FEIS Maintenance Work Readiness]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard|Asset Maintenance Readiness]]
+
+Possible bounded deliverables may include:
+- maintenance-program readiness assessment;
+- backlog classification;
+- waiting-reason / constraint register;
+- Ready-to-Schedule criteria;
+- JobPlan / WorkPackage setup for selected recurring jobs;
+- critical-spares readiness review;
+- maintenance KPI baseline;
+- project-to-maintenance handover readiness review.
+
+This is a **candidate service**, not an automatic expansion of FSvIS-OM-0001 and not evidence that customers have paid for it.
+
+The existing productization rule remains: validate repeated customer value before building additional software solely for this service.
