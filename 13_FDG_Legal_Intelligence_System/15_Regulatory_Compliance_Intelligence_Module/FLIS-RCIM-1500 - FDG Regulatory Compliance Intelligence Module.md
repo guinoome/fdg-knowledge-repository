@@ -224,3 +224,16 @@ The additive solar benchmark in [[08_FEIS_Engineering_Intelligence_Systems/04_So
 FRCIM remains the source for Philippine applicability and authority related to utility/interconnection rules, tariff/settlement eligibility, permits, professional-document requirements, electrical/regulatory obligations and effective-dated jurisdiction rules.
 
 FEIS Solar may calculate technical/economic consequences from an approved FRCIM rule record, but it must not infer or permanently hard-code regulatory entitlement from a third-party software benchmark.
+
+---
+
+## Maintenance Readiness Consumer Profile — 2026-10-09
+
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]] may consume FRCIM for maintenance-related legal/regulatory applicability such as statutory inspection, calibration, permit, certification, licensed-personnel, life-safety, environmental and other effective-dated obligations.
+
+Boundary:
+
+- FRCIM owns the regulatory requirement, source authority, jurisdiction, applicability and effective dates.
+- FEIS owns the engineering maintenance method/readiness consequences.
+- FBPOIS/FMIS owns the facility maintenance schedule/execution evidence.
+- A maintenance-readiness gate shall reference governed obligation records rather than maintain an independent legal-rule catalogue.
