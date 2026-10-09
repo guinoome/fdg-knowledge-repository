@@ -235,3 +235,39 @@ FEIP Knowledge Integration
 ~~~
 
 Implementation remains [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Maintenance Readiness Relationship Extension — 2026-10-09
+
+[[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]] defines the engineering semantics for work readiness, JobPlans, WorkPackages, maintenance planning/scheduling quality, asset maintenance readiness, and project-to-maintenance handover.
+
+Relationship contract:
+
+~~~text
+Project / Asset Change
+→ Construction / Installation Evidence
+→ Testing & Commissioning
+→ FEIS Asset Maintenance-Ready Gate
+→ FBPOIS / FMIS Asset + PM + Work-Management Records
+→ Planning Backlog
+→ Ready Backlog
+→ Schedule / Execution
+→ Post-Maintenance Test / Return to Service
+→ Failure / Reliability Evidence
+→ FDG CORE Analytics / Predictive Intelligence
+→ Governed Learning
+~~~
+
+Authority boundaries remain:
+
+- FEIS owns engineering methods, maintainability criteria, JobPlan technical semantics and maintenance-readiness acceptance logic.
+- FBPOIS/FMIS owns facility maintenance requests, work orders, PM occurrences, operating backlog, assignments, execution records and plant/equipment status.
+- FPJIS / FEIS Construction Management owns project implementation and turnover context.
+- Procurement / FBIS retain sourcing, commercial and financial authority according to existing interfaces.
+- [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM]] owns regulatory obligation/applicability truth.
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS]] may automate approved readiness/routing/scheduling workflows without expanding engineering authority.
+- [[22_FDG_Audit_Intelligence_System/17_Corrective_and_Preventive_Actions/FAIS-CAPA-1700 - Corrective and Preventive Action|FAIS CAPA]] may independently verify process/control failures and corrective action.
+- FDG CORE supplies shared evidence/provenance and predictive mechanisms.
+
+The distinction between **Work Ready**, **Asset Maintenance Ready**, and **Maintenance Program Ready** is canonical and must remain visible across system integrations.
