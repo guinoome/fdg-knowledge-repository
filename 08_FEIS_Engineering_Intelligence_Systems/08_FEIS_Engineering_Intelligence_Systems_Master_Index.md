@@ -163,3 +163,5 @@ FEIS now contains an additive maintenance-work-management and maintenance-readin
 - [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-RSCH-0001 - Maintenance Ready Benchmark and Evidence Register|Maintenance Ready Benchmark & Evidence Register]]
 
 This extension preserves FEIP-STD-003, 004 and 010. FEIS owns engineering maintenance methods/readiness criteria; FBPOIS/FMIS owns facility maintenance execution records, backlog, assignments and plant/equipment maintenance status.
+
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0004 - Maintenance Program Readiness and Maturity Assessment Standard|Maintenance Program Readiness & Maturity Assessment]] — organization/site-level maintenance capability assessment with evidence levels, maturity states, critical-blocker logic and improvement roadmap.
