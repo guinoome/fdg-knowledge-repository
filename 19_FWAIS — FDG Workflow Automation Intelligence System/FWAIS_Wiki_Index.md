@@ -177,3 +177,38 @@ FWAIS may later automate scheduled collection, stale-source review and routing a
 - [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/09_Guest_Experience_CRM_and_Communication_Blueprint|Guest Experience / Communication Blueprint]]
 
 FWAIS may later orchestrate validated hospitality workflows such as pre-arrival messaging, guest-request routing, housekeeping priority, maintenance escalation, distribution reconciliation and report scheduling. It must not independently own hotel domain truth or automate material financial/reservation authority before validation.
+
+## Maintenance Work Readiness Automation Relationship — 2026-10-09
+
+FWAIS may orchestrate approved maintenance-readiness workflows defined by:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard|Maintenance Work Readiness, Planning & Scheduling]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard|Asset Maintenance Readiness & Project Handover]]
+
+Potential automations include:
+
+~~~text
+Approved Work Order
+→ detect missing readiness dimensions
+→ create/route constraints
+→ notify constraint owners
+→ monitor blocker aging
+→ propose Ready-to-Schedule state
+→ generate WorkPackage from approved JobPlan
+→ propose schedule candidates from Ready Backlog + capacity
+→ notify operations/crew
+→ collect execution feedback
+→ route JobPlan change candidates
+~~~
+
+For new/modified assets:
+
+~~~text
+T&C / Turnover Evidence
+→ readiness completeness check
+→ missing data/document/spare/training tasks
+→ FMIS load validation
+→ readiness review queue
+~~~
+
+FWAIS shall not infer high-consequence technical readiness, waive safety/permit controls, authorize material substitution, approve failed post-maintenance tests, or return critical equipment to service without the required domain authority.
