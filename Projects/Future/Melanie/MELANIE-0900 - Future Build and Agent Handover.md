@@ -212,3 +212,15 @@ The first slice is done only when:
 - no duplicate manual encoding is required for those outputs.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → [[Projects/Future/Melanie/Melanie_Project_Master_Index|Melanie]] → this document
+
+---
+
+## Detailed Build Specification — Mandatory Before Coding
+
+Before implementation, also read:
+
+[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]].
+
+This is the implementation contract for the first Construction Project Control vertical and includes the screen map, domain entities, state machines, Capture Once dependencies, offline/sync contract, permissions, toolkit migration, build work packages and acceptance gates.
+
+Use its WP0–WP12 sequence as the default work-package decomposition unless implementation evidence justifies a controlled change.
