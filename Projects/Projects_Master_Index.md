@@ -87,3 +87,5 @@
 Melanie is a future implementation project inside the existing FDG Knowledge Repository. Its first major vertical is Construction Management / Project Controls using the existing FEIS Engineering Company Core, FEIS-CM, DCKL, FPIS, FBIS, FWAIS, FSIS, FAIS, FLIS/FRCIM and FDG CORE architecture.
 
 It must not become a separate knowledge source or duplicate the existing construction system.
+
+- [[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]] — implementation-ready first-vertical specification covering Project Control Console screens, domain/state contracts, offline PWA, Capture Once propagation, toolkit migration, tests, WP0–WP12 build sequence, and release/commercial validation gates.
