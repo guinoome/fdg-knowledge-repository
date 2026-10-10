@@ -82,3 +82,16 @@ Reference implementation and detailed gate:
 [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/08_Local_Validation_Release_and_Deployment_Gates|FPCV Local Validation, Release and Deployment Gates]].
 
 Projects may specialize this control, but may not weaken it silently.
+
+## Runtime, Release and Operations Contract Links — 2026-10-10
+
+The local-first release pattern is now supported by three generic implementation contracts:
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Offline_Sync_Resilience_Blueprint|Offline / Sync / Resilience Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Release_Blueprint|Release Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Operations_Observability_and_Recovery_Blueprint|Operations / Observability / Recovery Blueprint]]
+
+Generic standard:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/08_Release_Operations_Observability_and_Recovery_Standard|Release, Operations, Observability & Recovery Standard]].
+
+Projects requiring offline operation must define conflict, idempotency, permission revalidation, restart resilience, and restore behavior rather than treating offline as a frontend cache detail.
