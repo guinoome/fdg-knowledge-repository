@@ -1589,3 +1589,36 @@ without duplicate encoding, hidden source changes, or unsupported capability cla
 - [[05_Knowledge_Architecture/FDG_CROSS_SYSTEM_RELATIONSHIP_MAP|FDG Cross-System Relationship Map]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FDG Engineering Construction Management]] → this document
+
+## Current Implementation Workspace Decision — 2026-10-10
+
+The implementation-repository decision is now partially resolved.
+
+### Current staging workspace
+
+~~~text
+guinoome/fdg-knowledge-repository
+Projects/fdg-construction-os/
+~~~
+
+Project entry:
+[[Projects/fdg-construction-os/README|FDG Construction OS Staging Project Workspace]]
+
+### Future dedicated implementation repository
+
+~~~text
+guinoome/fdg-construction-os
+~~~
+
+The current staging workspace may hold project status, roadmap, handover and early implementation preparation. It must not turn the Knowledge Repository into the permanent application-code repository.
+
+Migration is governed by:
+[[Projects/fdg-construction-os/FDG_CONSTRUCTION_OS_REPOSITORY_MIGRATION_PLAN|FDG Construction OS Repository Migration Plan]].
+
+Future build sessions must update:
+[[Projects/fdg-construction-os/FDG_CONSTRUCTION_OS_IMPLEMENTATION_STATUS|Implementation Status Ledger]]
+
+and follow:
+[[Projects/fdg-construction-os/FDG_CONSTRUCTION_OS_FUTURE_AGENT_HANDOVER|Future Agent Handover]].
+
+This resolves the project location without changing FEIS-CM as canonical construction authority.
