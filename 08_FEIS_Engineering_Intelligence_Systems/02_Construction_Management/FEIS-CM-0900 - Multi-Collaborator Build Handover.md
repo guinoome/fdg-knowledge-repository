@@ -136,3 +136,88 @@ Additional non-negotiables:
 - keep professional/commercial approval boundaries explicit
 - implement the smallest testable workbench slice before broad automation
 - return only reviewed lessons/capability improvements into the DCKL
+
+## FDG Project Operations OS Build Extension — 2026-10-10
+
+For the future Construction Project Management / FDG Project Operations OS build, collaborators must also read:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902 — FDG Project Operations OS Complete Detailed Blueprint]].
+
+Canonical naming:
+
+~~~text
+FDG Project Operations OS
+→ initial reference implementation: FDG Engineering Construction Management
+→ cross-role experience: FDG Project Control Console
+→ first role experience: FDG Construction Manager Workbench
+~~~
+
+The Project Operations OS is a composition of existing FDG capabilities, not a new intelligence-system mother.
+
+### First vertically complete build slice
+
+Implement the smallest slice that proves:
+
+~~~text
+Field Capture
+→ Validation
+→ Canonical Project Record
+→ Dashboard
+→ Daily Report
+→ Weekly Report
+→ Progress / S-Curve
+~~~
+
+Minimum supporting scope:
+- Organization
+- Named User
+- Role
+- Project
+- Project Membership
+- WBS
+- Daily Site Event
+- Progress Quantity
+- Manpower
+- Photo Evidence
+- Risk / Constraint / Action
+- basic RFI
+- basic Inspection
+- offline/local draft and sync
+
+### Mandatory maturity labels
+
+~~~text
+DESIGNED
+BUILD_READY
+IMPLEMENTED
+TESTED
+DEPLOYED
+COMMERCIALLY_VALIDATED
+~~~
+
+Do not claim a capability beyond available evidence.
+
+### Offline acceptance
+
+At least one field workflow must demonstrate:
+- capture without network;
+- local persistence;
+- later sync;
+- conflict handling;
+- retained user/device attribution.
+
+### Completion handover
+
+Every major build work package must leave:
+- implemented scope;
+- files changed;
+- schema/migrations;
+- tests;
+- known limitations;
+- unresolved conflicts;
+- decisions;
+- deployment state;
+- next work package;
+- repository knowledge updates.
+
+Do not create a separate top-level Project Operations OS repository folder unless governed architecture explicitly authorizes it.
