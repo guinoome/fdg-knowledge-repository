@@ -878,3 +878,39 @@ and when one validated site update can legitimately propagate through multiple d
 - [[05_Knowledge_Architecture/FDG_CROSS_SYSTEM_RELATIONSHIP_MAP|FDG Cross-System Relationship Map]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → [[Projects/Future/Melanie/Melanie_Project_Master_Index|Melanie]] → this document
+
+---
+
+## Detailed Construction Project Control Build Contract — 2026-10-10
+
+The complete build-oriented specification for the first Melanie vertical is now:
+
+[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]].
+
+It operationalizes this blueprint into:
+- role/persona map;
+- full Plan / Estimate / Execute / Track / Document screen map;
+- shared domain model;
+- progress-state separation;
+- RFI / submittal / inspection / NCR / variation state machines;
+- Capture Once dependency graph;
+- report projection contracts;
+- toolkit migration model;
+- offline synchronization and conflict states;
+- named-user/session and authority model;
+- Attention Center;
+- project search/memory;
+- continuation brief;
+- role Workbench contract;
+- automation boundaries;
+- predictive-intelligence progression;
+- modular-monolith technical architecture;
+- API principles;
+- data-integrity/evidence/audit contracts;
+- commercial journey;
+- pilot demo script;
+- WP0–WP12 implementation packages;
+- unit/integration/E2E/regression testing strategy;
+- first-release, full-vertical and commercial-validation gates.
+
+This is additive. The current document remains the master future-project blueprint; MELANIE-0100 is the build specification beneath it.
