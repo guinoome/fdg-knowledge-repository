@@ -58,3 +58,9 @@ Use:
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Module Roadmap & Finished Session Standard]].
 
 A coding session that leaves a large module half-built should normally be re-scoped into a smaller complete vertical slice before execution.
+
+Reusable implementation log:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Project_Implementation_Status_Log_Template|Project Implementation Status Log Template]]
+
+Use it or an equivalent project-specific ledger so every coding session records completed scope, tests, evidence, percentage changes, blockers, and next bounded work.
