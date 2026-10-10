@@ -122,3 +122,11 @@ Canonical generic templates added/clarified:
 - [[20_FPJIS_FDG_Project_Intelligence_System/32_Reusable_Blueprint_Library/Reuse_Blueprint|Reuse Blueprint]]
 
 A project may introduce a new blueprint type only when an existing type cannot represent a recurring required contract without distortion.
+
+### Requirement Blueprint Template
+
+The generic requirement record is:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Requirement_Blueprint|Requirement Blueprint]]
+
+It implements BP-REQUIREMENT and works with the reference-mapping and traceability standards above.
