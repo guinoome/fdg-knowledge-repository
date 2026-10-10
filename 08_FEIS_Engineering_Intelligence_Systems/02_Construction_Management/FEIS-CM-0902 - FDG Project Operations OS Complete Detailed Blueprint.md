@@ -1590,4 +1590,4 @@ without duplicate encoding, hidden source changes, or unsupported capability cla
 - [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform]]
 - [[05_Knowledge_Architecture/FDG_CROSS_SYSTEM_RELATIONSHIP_MAP|FDG Cross-System Relationship Map]]
 
-> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → [[Projects/Future/FDG Project Operations OS/Melanie_Project_Master_Index|FDG Project Operations OS]] → this document
+> **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FDG Engineering Construction Management]] → this document
