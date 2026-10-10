@@ -31,3 +31,30 @@ before assigning routine implementation.
 FPJIS should provide the approved blueprint and quality gate; the top-tier Architecture Compiler converts it into a bounded execution package; implementation collaborators execute only the relevant package.
 
 This reduces token/cost waste caused by every coding agent independently rediscovering project architecture.
+
+## Finished Coding Session and Status-Log Rule — 2026-10-10
+
+Implementation collaborators should not maximize feature breadth per session.
+
+They should maximize **accepted completeness of the bounded authorized slice**.
+
+Before coding:
+- confirm work-package readiness;
+- confirm build authorization;
+- confirm acceptance criteria;
+- confirm dependencies and file ownership.
+
+Before ending:
+- complete the user outcome or explicitly mark BLOCKED;
+- run required tests;
+- record tests not run;
+- update requirement/evidence links;
+- update implementation/validation percentages;
+- update project implementation status;
+- append the build/session log;
+- identify the next bounded package.
+
+Use:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Module Roadmap & Finished Session Standard]].
+
+A coding session that leaves a large module half-built should normally be re-scoped into a smaller complete vertical slice before execution.
