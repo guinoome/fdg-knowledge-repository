@@ -271,3 +271,37 @@ Authority boundaries remain:
 - FDG CORE supplies shared evidence/provenance and predictive mechanisms.
 
 The distinction between **Work Ready**, **Asset Maintenance Ready**, and **Maintenance Program Ready** is canonical and must remain visible across system integrations.
+
+---
+
+## Construction Project Control Console and Toolkit Relationship — 2026-10-10
+
+Two new additive projections clarify the Construction Management product without creating another system:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]] — simplified Plan / Estimate / Execute / Track / Document experience over canonical FEIS-CM project records.
+- [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform]] — commercialization and migration path from governed knowledge artifacts into the full project operating system.
+
+Authority remains:
+
+~~~text
+DCKL
+→ governed reusable construction knowledge/templates
+
+FEIS-CM
+→ construction lifecycle / project-control semantics / operational truth
+
+FPIS
+→ user-facing Console and toolkit/platform experience
+
+FBIS
+→ pricing / customer / subscription / revenue
+
+Service Intelligence
+→ setup / migration / training / managed services
+
+FPJIS
+→ FDG project blueprint/build governance
+  (not the construction project-control product)
+~~~
+
+Files such as XLSX/DOCX/PDF remain valid distribution/export formats, but the full platform must not treat them as competing project databases.
