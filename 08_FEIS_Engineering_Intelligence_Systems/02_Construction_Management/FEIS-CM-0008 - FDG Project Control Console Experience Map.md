@@ -565,3 +565,19 @@ Do not use the five-area framing to:
 - [[20_FPJIS_FDG_Project_Intelligence_System/00_Architecture/FPJIS_Master_Architecture|FPJIS Master Architecture]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+---
+
+## Future Melanie Implementation Relationship — 2026-10-10
+
+The future [[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Melanie Project]] is the planned implementation context for the Project Control Console.
+
+Melanie should present:
+
+~~~text
+PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
+~~~
+
+as the simple operating surface while preserving the full FEIS-CM lifecycle, Capture Once architecture, role authority, evidence, revision control, and project continuity underneath.
+
+The Console must remain a projection over canonical records rather than becoming five disconnected feature databases.
