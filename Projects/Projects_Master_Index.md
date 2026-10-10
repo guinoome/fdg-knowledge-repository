@@ -75,3 +75,15 @@
 - [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas Project Index]] — implementation project, marketing knowledge, FEIS engineering architecture and future-upgrade handover.
 - [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover|FDG Solar Visayas Future Upgrade Handover]] — build entry for the next major engineering-capability upgrade.
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|FEIS Solar Energy Intelligence]] — canonical engineering knowledge for the future solar design, calculation, BOM, proposal and lifecycle capability.
+
+---
+
+## Future Melanie Project
+
+- [[Projects/Future/Melanie/Melanie_Project_Master_Index|Future Melanie Project — Master Index]]
+- [[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|MELANIE-0001 — Complete Detailed Blueprint]]
+- [[Projects/Future/Melanie/MELANIE-0900 - Future Build and Agent Handover|MELANIE-0900 — Future Build & Agent Handover]]
+
+Melanie is a future implementation project inside the existing FDG Knowledge Repository. Its first major vertical is Construction Management / Project Controls using the existing FEIS Engineering Company Core, FEIS-CM, DCKL, FPIS, FBIS, FWAIS, FSIS, FAIS, FLIS/FRCIM and FDG CORE architecture.
+
+It must not become a separate knowledge source or duplicate the existing construction system.
