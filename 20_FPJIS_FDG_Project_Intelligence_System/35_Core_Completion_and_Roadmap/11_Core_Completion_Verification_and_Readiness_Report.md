@@ -119,3 +119,18 @@ Revalidate when:
 - additional project packages produce reusable patterns;
 - security/agent governance changes;
 - release/deployment governance changes.
+
+## Repository Integrity Verification — 2026-10-10
+
+After the core-completion package, generic templates, and cross-links were added, a repository link-integrity pass checked:
+
+- **52 FPJIS files**
+- **230 full-path Wikilinks**
+- **0 unresolved full-path Wikilinks**
+
+The validation set included:
+- all 15 Core Completion & Roadmap documents;
+- all newly added generic blueprint/status templates;
+- the updated FPJIS architecture, taxonomy, project/module/screen/workflow/data/database/API/security/testing/deployment/review/revision/quality/lifecycle/implementation-package and implementation-instruction documents.
+
+This proves repository path integrity for the reviewed set. It does not prove future software implementation correctness.
