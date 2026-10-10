@@ -99,3 +99,25 @@ The Workbench must remain:
 - connected to the Digital Construction Knowledge Library
 
 A blank chat interface is not the product architecture.
+
+---
+
+## Project Control Console Experience Projection — 2026-10-10
+
+The Construction Management product now has a simplified customer/user-facing control map:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FEIS-CM-0008 — FDG Project Control Console Experience Map]]
+
+~~~text
+PLAN
+→ ESTIMATE
+→ EXECUTE
+→ TRACK
+→ DOCUMENT
+~~~
+
+This is an experience/navigation projection over the existing canonical lifecycle. It does not create a second Construction Management system, alter lifecycle authority, or split project truth into separate modules.
+
+The related low-friction commercialization path is:
+
+[[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform Commercial Upgrade Path]].
