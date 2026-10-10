@@ -44,3 +44,14 @@ Do not blindly copy reference material.
 Record the intended lesson and the resulting requirement.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+
+---
+
+## FREIS — Deep Project Reconstruction — 2026-10-11
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Mandate_and_Method|FREIS mandate and method]] — founder-directed responsibility to deeply investigate other projects as references for future knowledge updates and projects.
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Investigation_Template|Investigation template]] — coverage, sources, claims, reconstruction, applicability and validation.
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Research_to_Coding_Contract|Research-to-coding contract]] — explicit Markdown architecture and implementation handover for interchangeable agents.
+
+This reference package does not allocate a new numbered system or authorize a software build.
