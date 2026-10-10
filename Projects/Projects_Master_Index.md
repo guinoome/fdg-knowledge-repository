@@ -107,3 +107,35 @@ Canonical construction knowledge remains under:
 [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FEIS Construction Management]].
 
 The repository should not create a separate top-level Project Operations OS folder unless a future governed repository decision explicitly authorizes one.
+
+## FDG Construction OS Staging Workspace — 2026-10-10
+
+The future FDG Construction OS now has a temporary project workspace inside this repository:
+
+[[Projects/fdg-construction-os/README|FDG Construction OS — Staging Project Workspace]]
+
+Current repository boundary:
+
+~~~text
+fdg-knowledge-repository
+└── Projects/fdg-construction-os
+    ├── project charter
+    ├── build roadmap
+    ├── implementation status
+    ├── future-agent handover
+    └── repository migration plan
+~~~
+
+This workspace is for project staging, status and handover. It is **not** intended to become the permanent production application repository.
+
+Future target:
+
+~~~text
+guinoome/fdg-construction-os
+~~~
+
+Canonical construction authority remains:
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FEIS Construction Management]].
+
+The complete build blueprint remains:
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902]].
