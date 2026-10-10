@@ -124,14 +124,29 @@ The related low-friction commercialization path is:
 
 ---
 
-## Future Melanie Implementation Relationship — 2026-10-10
+## FDG Project Operations OS / Construction Project Management Future Build — 2026-10-10
 
-The first major future implementation program for this Construction Management architecture is:
+The future implementation blueprint for this Construction Management architecture is:
 
-[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|Melanie Construction Project Control Platform — Detailed Build Specification]].
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902 — FDG Project Operations OS Complete Detailed Blueprint]].
+
+Canonical identity:
+
+~~~text
+FDG Project Operations OS
+        ↓
+Initial Reference Implementation:
+FDG Engineering Construction Management
+        ↓
+Project Control Console
+        ↓
+Construction Manager Workbench
+~~~
 
 FEIS-CM remains the canonical construction-management knowledge authority.
 
-Melanie consumes and implements FEIS-CM, including the [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|Project Control Console]], Capture Once reporting, role Workbenches, document intelligence, project continuity, toolkit migration and turnover architecture.
+The future build consumes and implements FEIS-CM, including Capture Once reporting, Project Control Console, role Workbenches, document intelligence, project continuity, toolkit migration, T&C and turnover.
+
+This is an implementation profile over existing FDG capabilities, not a new system mother or separate source of truth.
 
 Implementation findings may return to FEIS-CM only through governed evidence and controlled knowledge evolution.
