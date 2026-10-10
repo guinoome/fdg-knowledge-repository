@@ -128,3 +128,47 @@ The package explicitly prevents remote deployment from becoming the primary deve
 - [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|FDG Hospitality Operations & Hotel Management Blueprint Package]] — complete local-first, offline/property-edge hospitality architecture covering PMS/front office, reservations, folio/night audit, housekeeping, guest requests, FBPOIS engineering integration, F&B, inventory/procurement interfaces, distribution/channel adapter, booking engine, guest communications, security, analytics, testing, release gates, FMCIS work packages and repository-native SVG visual blueprints.
 
 The package is architecturally complete enough for bounded execution packages but remains **Not Build Authorized** until a separate approval record exists.
+
+## Core Completion, Module Readiness and Roadmap — 2026-10-10
+
+The generic FPJIS framework is now hardened by:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/00_Master_Index|FPJIS Core Completion & Roadmap]].
+
+Current weighted generic **Blueprint Implementation Readiness** baseline:
+
+**89.5%**
+
+This is not an FPJIS-software completion percentage.
+
+Every FPJIS project should separately display:
+
+~~~text
+Blueprint Implementation Readiness
+Implementation Completion
+Validation Completion
+Operational Maturity
+~~~
+
+A project does not need to be 100% defined overall before useful implementation begins.
+
+A bounded module/work package may be built when:
+- its own applicable implementation-readiness scope reaches 100%;
+- no hard blocker remains;
+- build authorization exists;
+- acceptance evidence is defined.
+
+This supports finished vertical slices rather than hanging partially implemented projects.
+
+New generic core templates include:
+- [[20_FPJIS_FDG_Project_Intelligence_System/03_Role_Blueprints/Role_Blueprint|Role Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Reference_to_Requirement_Mapping_Blueprint|Reference-to-Requirement Mapping]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Nonfunctional_Requirements_Blueprint|Nonfunctional Requirements]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/12_Security_Blueprints/Security_Privacy_Threat_Model_Blueprint|Security / Privacy / Threat Model]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Offline_Sync_Resilience_Blueprint|Offline / Sync / Resilience]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Release_Blueprint|Release Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Operations_Observability_and_Recovery_Blueprint|Operations / Observability / Recovery]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/32_Reusable_Blueprint_Library/Reuse_Blueprint|Reuse Blueprint]]
+
+Material FPJIS core changes are recorded in:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/12_FPJIS_Update_Log|FPJIS Update Log]].
