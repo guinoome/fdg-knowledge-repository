@@ -165,3 +165,6 @@ FEIS now contains an additive maintenance-work-management and maintenance-readin
 This extension preserves FEIP-STD-003, 004 and 010. FEIS owns engineering maintenance methods/readiness criteria; FBPOIS/FMIS owns facility maintenance execution records, backlog, assignments and plant/equipment maintenance status.
 
 - [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0004 - Maintenance Program Readiness and Maturity Assessment Standard|Maintenance Program Readiness & Maturity Assessment]] — organization/site-level maintenance capability assessment with evidence levels, maturity states, critical-blocker logic and improvement roadmap.
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]] — simplified Plan / Estimate / Execute / Track / Document experience projection over the full Construction Management lifecycle.
+- [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform Commercial Upgrade Path]] — governed template/toolkit entry product with migration path to the full structured project operating system.
