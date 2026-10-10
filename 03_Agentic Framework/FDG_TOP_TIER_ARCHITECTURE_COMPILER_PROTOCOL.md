@@ -831,3 +831,12 @@ Francis explicitly reconfirmed on 2026-10-06: GitHub is the new source of truth 
 Use the [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]] to instantiate sections A–Q and the compact Agent Context Capsule. The template implements this protocol under the existing FPJIS readiness and build-authorization controls; it is not a separate authority or an approved project package.
 
 The [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-CURRENT-DESIGN-RECAP|FMCIS Current Design Recap]] now explicitly points to the existing source-of-truth evolution so its historical read-only GitHub statement cannot be mistaken for current direction.
+
+
+---
+
+## FREIS and Astra-Level Markdown Extension — 2026-10-11
+
+Francis directed that deep reverse engineering of other projects become durable reference knowledge and that coding starts from Astra-level Markdown even when other, older or lower-cost agents implement. This is an artifact-quality requirement, not a provider dependency or guarantee of identical intelligence.
+
+Use [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Research_to_Coding_Contract|the FREIS research-to-coding contract]] with the existing A–Q template. Resolve task-specific architecture, exact build steps, contracts, fixtures, expected outcomes and evidence mapping before coding. Reuse unchanged approved packages; record material deltas. Existing FPJIS readiness, authorization and finished-session controls apply. Research is governed by [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Mandate_and_Method|the FREIS mandate]].
