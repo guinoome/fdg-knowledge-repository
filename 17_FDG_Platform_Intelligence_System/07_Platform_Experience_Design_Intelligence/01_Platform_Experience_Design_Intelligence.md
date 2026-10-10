@@ -144,3 +144,29 @@ FPIS should support:
 - Solar Engineering Learning Mode presentation.
 
 Localization may change language, formatting and explanatory copy, but may not change canonical engineering values, status semantics, assumptions, warnings or provenance.
+
+---
+
+## Construction Project Control Console Experience — 2026-10-10
+
+FPIS may render the Construction Management capability through the simplified experience defined in:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]].
+
+Preferred top-level construction control navigation:
+
+~~~text
+PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
+~~~
+
+This is a user-facing projection only. FEIS-CM remains authority for construction lifecycle, records, calculations, states and engineering semantics.
+
+Role-specific default emphasis may differ without forking data:
+- Project Manager: Plan + Track
+- Construction Manager: Plan + Execute + Track
+- Site Engineer: Execute + Document
+- Project Controls: Plan + Track
+- QS/Commercial: Estimate + Track + Document
+- QA/QC: Execute + Document + Track
+- Document Control: Document + Track
+- T&C/Turnover: Execute + Document + Track
