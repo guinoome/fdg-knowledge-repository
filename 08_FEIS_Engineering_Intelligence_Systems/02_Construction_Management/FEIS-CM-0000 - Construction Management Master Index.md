@@ -121,3 +121,17 @@ This is an experience/navigation projection over the existing canonical lifecycl
 The related low-friction commercialization path is:
 
 [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform Commercial Upgrade Path]].
+
+---
+
+## Future Melanie Implementation Relationship — 2026-10-10
+
+The first major future implementation program for this Construction Management architecture is:
+
+[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|Melanie Construction Project Control Platform — Detailed Build Specification]].
+
+FEIS-CM remains the canonical construction-management knowledge authority.
+
+Melanie consumes and implements FEIS-CM, including the [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|Project Control Console]], Capture Once reporting, role Workbenches, document intelligence, project continuity, toolkit migration and turnover architecture.
+
+Implementation findings may return to FEIS-CM only through governed evidence and controlled knowledge evolution.
