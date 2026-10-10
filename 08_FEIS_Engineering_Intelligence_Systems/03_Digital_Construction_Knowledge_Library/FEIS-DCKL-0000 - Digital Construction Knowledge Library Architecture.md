@@ -180,3 +180,31 @@ The canonical architecture is defined by:
 - [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/FEIS-MDE-0002 - Common Engineering Practice Workflow and Task Pack Standard|FEIS-MDE-0002]]
 
 Future external research or course benchmarking should extract reusable capability patterns, not copy proprietary course material or automatically create profession-specific modules.
+
+---
+
+## Construction Toolkit to Full Platform Extension — 2026-10-10
+
+The DCKL commercialization ladder is extended by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|FEIS-DCKL-0001 — Construction Toolkit → Full Platform Commercial Upgrade Path]].
+
+The construction toolkit is a distribution form of governed DCKL knowledge, not a separate knowledge system.
+
+Preferred progression:
+
+~~~text
+Public Knowledge / Mini Tool
+→ FDG Construction Toolkit
+→ Connected Toolkit
+→ FDG Engineering Construction Management
+→ Company / Multi-Project
+→ Enterprise / White-Label
+→ Professional Services
+~~~
+
+Once a customer upgrades to the full platform, exported XLSX/DOCX/PDF files become controlled artifacts/views; they should not remain competing parallel sources of project truth.
+
+The corresponding platform experience projection is:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]].
