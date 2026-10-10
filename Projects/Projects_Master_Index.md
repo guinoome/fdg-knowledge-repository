@@ -78,14 +78,32 @@
 
 ---
 
-## Future Melanie Project
+## Construction Project Management / FDG Project Operations OS — Future Build
 
-- [[Projects/Future/Melanie/Melanie_Project_Master_Index|Future Melanie Project — Master Index]]
-- [[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|MELANIE-0001 — Complete Detailed Blueprint]]
-- [[Projects/Future/Melanie/MELANIE-0900 - Future Build and Agent Handover|MELANIE-0900 — Future Build & Agent Handover]]
+This future build belongs to the existing FDG Engineering Construction Management architecture. It is **not** a separate project named Melanie and does not create a new top-level knowledge system.
 
-Melanie is a future implementation project inside the existing FDG Knowledge Repository. Its first major vertical is Construction Management / Project Controls using the existing FEIS Engineering Company Core, FEIS-CM, DCKL, FPIS, FBIS, FWAIS, FSIS, FAIS, FLIS/FRCIM and FDG CORE architecture.
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902 — FDG Project Operations OS Complete Detailed Blueprint]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|FEIS-CM-0900 — Multi-Collaborator Build Handover]]
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|FEIS-CM-0901 — Construction Manager Workbench Upgrade Blueprint]]
 
-It must not become a separate knowledge source or duplicate the existing construction system.
+Canonical relationship:
 
-- [[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]] — implementation-ready first-vertical specification covering Project Control Console screens, domain/state contracts, offline PWA, Capture Once propagation, toolkit migration, tests, WP0–WP12 build sequence, and release/commercial validation gates.
+~~~text
+FDG Project Operations OS
+        ↓
+Initial Reference Implementation:
+FDG Engineering Construction Management
+        ↓
+FDG Project Control Console
+PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
+        ↓
+FDG Construction Manager Workbench
++ other role Workbenches
+        ↓
+Field PWA / Reports / QAQC / Commercial / Turnover
+~~~
+
+Canonical construction knowledge remains under:
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FEIS Construction Management]].
+
+The repository should not create a separate top-level Project Operations OS folder unless a future governed repository decision explicitly authorizes one.
