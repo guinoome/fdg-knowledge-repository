@@ -620,3 +620,13 @@ Free Resource
 ~~~
 
 Toolkit structure should therefore remain migration-compatible with Melanie's Company Core and canonical construction records.
+
+---
+
+## Melanie Future Platform Target — 2026-10-10
+
+The future full-platform implementation target for this construction toolkit upgrade path is:
+
+[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE Construction Project Control Platform]].
+
+DCKL remains the governed knowledge/toolkit source. Melanie is the future implementation environment that can import/migrate toolkit data into canonical project records and project-control workflows.
