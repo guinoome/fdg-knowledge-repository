@@ -603,9 +603,9 @@ Actual product claims must distinguish:
 
 ---
 
-## Future Melanie Commercial Destination — 2026-10-10
+## FDG Project Operations OS Commercial Destination — 2026-10-10
 
-The future [[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Melanie Project]] is the intended full-platform destination for the Construction Toolkit commercial ladder.
+The intended full-platform destination for the Construction Toolkit commercial ladder is the future **FDG Project Operations OS** implementation of [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|FDG Engineering Construction Management]].
 
 Preferred migration path:
 
@@ -613,20 +613,17 @@ Preferred migration path:
 Free Resource
 → FDG Construction Toolkit
 → Connected Toolkit
-→ Melanie / FDG Engineering Construction Management
+→ FDG Engineering Construction Management
+   implemented through FDG Project Operations OS
 → Multi-Project
 → Enterprise / White-Label
 → Professional Services
 ~~~
 
-Toolkit structure should therefore remain migration-compatible with Melanie's Company Core and canonical construction records.
+Toolkit structure should therefore remain migration-compatible with the shared Engineering Company Core and canonical construction records.
 
----
+Detailed future build target:
 
-## Melanie Future Platform Target — 2026-10-10
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FDG Project Operations OS Complete Detailed Blueprint]].
 
-The future full-platform implementation target for this construction toolkit upgrade path is:
-
-[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE Construction Project Control Platform]].
-
-DCKL remains the governed knowledge/toolkit source. Melanie is the future implementation environment that can import/migrate toolkit data into canonical project records and project-control workflows.
+DCKL remains the governed knowledge/toolkit source. The future Project Operations OS implementation may import/migrate toolkit data into canonical project records and workflows, but it does not replace DCKL or FEIS-CM.
