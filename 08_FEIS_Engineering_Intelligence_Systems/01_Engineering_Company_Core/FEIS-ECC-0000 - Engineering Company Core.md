@@ -105,3 +105,21 @@ Jurisdiction-specific codes, forms, terminology, tax/commercial requirements, an
 ## 2026-09-30 architecture review addendum
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|The Proposed cross-system reconciliation]] links this engineering foundation to CBC and FBPOIS identity/record contracts. It does not amend the approved ECC direction. Shared mechanisms and domain acceptance are separated in [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|the proposed CORE reasoning contract]].
+
+---
+
+## Future Melanie Implementation Profile — 2026-10-10
+
+[[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Future Melanie]] is a planned implementation of the Engineering Company Core plus Construction Management as the first major commercial vertical.
+
+Melanie must consume the Company Core rather than recreate organization, branch, user, project, role, evidence, approval, document, audit, handover, and subscription concepts independently.
+
+The implementation shall remain:
+- Philippine-first, international-ready;
+- modular;
+- independently sellable by capability where commercially appropriate;
+- local-first/offline-capable for field workflows;
+- named-user accountable;
+- compatible with future FDG Engineering modules.
+
+Melanie is an implementation project, not a new source of architectural authority.
