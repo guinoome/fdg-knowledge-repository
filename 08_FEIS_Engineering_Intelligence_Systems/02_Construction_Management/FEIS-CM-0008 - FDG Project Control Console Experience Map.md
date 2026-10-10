@@ -568,26 +568,22 @@ Do not use the five-area framing to:
 
 ---
 
-## Future Melanie Implementation Relationship — 2026-10-10
+## FDG Project Operations OS Implementation Relationship — 2026-10-10
 
-The future [[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Melanie Project]] is the planned implementation context for the Project Control Console.
+The Project Control Console is a primary cross-role experience within the future **FDG Project Operations OS** implementation of FDG Engineering Construction Management.
 
-Melanie should present:
+Implementation blueprint:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902 — FDG Project Operations OS Complete Detailed Blueprint]].
+
+The Console presents:
 
 ~~~text
 PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
 ~~~
 
-as the simple operating surface while preserving the full FEIS-CM lifecycle, Capture Once architecture, role authority, evidence, revision control, and project continuity underneath.
+as the simple operating surface while preserving the full FEIS-CM lifecycle, Capture Once architecture, role authority, evidence, revision control and project continuity underneath.
 
-The Console must remain a projection over canonical records rather than becoming five disconnected feature databases.
+The Console remains a projection over canonical records. It must not become five disconnected feature databases.
 
----
-
-## Melanie Future Implementation Target — 2026-10-10
-
-The future implementation project for this Project Control Console experience is:
-
-[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]].
-
-The Console remains FEIS-CM governed. Melanie implements it; Melanie does not become a competing source of construction-management truth.
+The FDG Project Operations OS implements the governed Console; it does not become a competing source of construction-management truth.
