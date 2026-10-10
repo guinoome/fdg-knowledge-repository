@@ -340,3 +340,39 @@ Governed Learning
 FPJIS continues to govern FDG project blueprint/build discipline; it does not become the construction operating system.
 
 Melanie shall preserve domain authority and return validated learning to the canonical knowledge system.
+
+---
+
+## Melanie Construction Implementation Relationship — 2026-10-10
+
+[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|Melanie Construction Project Control Platform]] is a future implementation project over existing FDG capabilities, not a new system-of-record authority.
+
+~~~text
+FDG Knowledge Repository
+        ↓
+FEIS Engineering Company Core
++ FEIS Construction Management
++ DCKL
++ FPIS
++ FBIS
++ FWAIS
++ FSIS
++ FRCIM
++ FAIS
++ FDG CORE
+        ↓
+Melanie Future Implementation
+        ↓
+Project Control Console
+PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
+        ↓
+Role Workbenches / Field PWA / Reports / Toolkit Migration
+        ↓
+Operational Evidence
+        ↓
+Governed Learning Return
+        ↓
+FDG Knowledge Repository
+~~~
+
+Melanie does not supersede FEIS-CM, DCKL, FPJIS, or any cross-system authority. Its purpose is to implement and validate the governed architecture.
