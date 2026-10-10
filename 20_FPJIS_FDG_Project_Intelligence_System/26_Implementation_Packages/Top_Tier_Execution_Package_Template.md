@@ -179,3 +179,40 @@ Completion evidence / knowledge-return path:
 The receiving builder verifies source availability, relevant checkpoint changes and authorization before acting. If the capsule conflicts with the full package or governing sources, surface the conflict rather than choosing an interpretation silently. Exclude unrelated history and full transcripts; retain every constraint needed for the bounded task.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Implementation_Package_Specification|Implementation Package Specification]] → this template
+
+## Module Readiness and Finished-Session Extension — 2026-10-10
+
+Each instantiated execution package should additionally record:
+
+~~~text
+Project Blueprint Readiness: __%
+Module Blueprint Readiness: __%
+Work-Package Applicable Readiness: __%
+Implementation Completion Before: __%
+Validation Completion Before: __%
+Operational Maturity Before: __%
+~~~
+
+Before execution, Work-Package Applicable Readiness must be 100% and build authorization must exist.
+
+At completion return:
+
+~~~text
+Implementation Completion After
+Validation Completion After
+Requirements Implemented
+Acceptance Criteria Passed
+Acceptance Criteria Failed / Deferred
+Tests Run
+Tests Not Run
+Evidence Added
+Status Log Updated
+Manifest Updated
+Next Work Package
+~~~
+
+The preferred end state is CLOSED or BLOCKED WITH EVIDENCE, not an ambiguous partially implemented package.
+
+Use:
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Module Roadmap & Finished Session Standard]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/10_Requirement_Implementation_Evidence_Manifest_Contract|Requirement / Implementation / Evidence Manifest]]
