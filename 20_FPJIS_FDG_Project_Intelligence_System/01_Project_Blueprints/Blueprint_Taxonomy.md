@@ -67,3 +67,58 @@ Successful project blueprints should be candidates for promotion into:
 99_Blueprint_Library
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+## Semantic Blueprint Identity Normalization — 2026-10-10
+
+The earlier numeric taxonomy is retained for historical organization, but folder numbers are no longer treated as semantic blueprint identity.
+
+Use stable semantic blueprint types such as:
+
+~~~text
+BP-PROJECT
+BP-USER
+BP-ROLE
+BP-REQUIREMENT
+BP-REFERENCE-MAP
+BP-NFR
+BP-DASHBOARD
+BP-SCREEN
+BP-WORKFLOW
+BP-MODULE
+BP-DATA
+BP-DATABASE
+BP-API
+BP-BUSINESS-RULE
+BP-SECURITY-THREAT
+BP-ENTITLEMENT
+BP-SUBSCRIPTION
+BP-PAYMENT
+BP-COMMUNICATION
+BP-NOTIFICATION
+BP-AUTOMATION
+BP-INTEGRATION
+BP-OFFLINE-SYNC
+BP-RELEASE
+BP-OPERATIONS
+BP-TESTING
+BP-AGENT-TASK
+BP-DECISION
+BP-REVISION
+BP-REUSE
+BP-COMMERCIAL-VALIDATION
+~~~
+
+Canonical generic templates added/clarified:
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/03_Role_Blueprints/Role_Blueprint|Role Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Reference_to_Requirement_Mapping_Blueprint|Reference-to-Requirement Mapping Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Nonfunctional_Requirements_Blueprint|Nonfunctional Requirements Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Commercial_Validation_Blueprint|Commercial Validation Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/16_Communication_Blueprints/Notification_Blueprint|Notification Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/12_Security_Blueprints/Security_Privacy_Threat_Model_Blueprint|Security / Privacy / Threat Model Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Offline_Sync_Resilience_Blueprint|Offline / Sync / Resilience Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Release_Blueprint|Release Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Operations_Observability_and_Recovery_Blueprint|Operations / Observability / Recovery Blueprint]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/32_Reusable_Blueprint_Library/Reuse_Blueprint|Reuse Blueprint]]
+
+A project may introduce a new blueprint type only when an existing type cannot represent a recurring required contract without distortion.
