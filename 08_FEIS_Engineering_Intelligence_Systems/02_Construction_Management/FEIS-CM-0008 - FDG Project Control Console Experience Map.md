@@ -581,3 +581,13 @@ PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
 as the simple operating surface while preserving the full FEIS-CM lifecycle, Capture Once architecture, role authority, evidence, revision control, and project continuity underneath.
 
 The Console must remain a projection over canonical records rather than becoming five disconnected feature databases.
+
+---
+
+## Melanie Future Implementation Target — 2026-10-10
+
+The future implementation project for this Project Control Console experience is:
+
+[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]].
+
+The Console remains FEIS-CM governed. Melanie implements it; Melanie does not become a competing source of construction-management truth.
