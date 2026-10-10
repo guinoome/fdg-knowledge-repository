@@ -637,3 +637,25 @@ Canonical project record
 ~~~
 
 Therefore the Console answers **where to work**, while the Workbench answers **what this role should do next, why, and with what evidence/authority**.
+
+## FDG Project Operations OS Detailed Blueprint Relationship — 2026-10-10
+
+The Construction Manager Workbench is the first role-oriented experience within the broader future implementation defined by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902 — FDG Project Operations OS Complete Detailed Blueprint]].
+
+Relationship:
+
+~~~text
+FDG Project Operations OS
+        ↓
+FDG Engineering Construction Management
+        ↓
+FDG Project Control Console
+        ↓
+FDG Construction Manager Workbench
+        ↓
+Evidence-linked task guidance and workflow actions
+~~~
+
+The Workbench remains provider-neutral and cannot become a separate source of project truth.
