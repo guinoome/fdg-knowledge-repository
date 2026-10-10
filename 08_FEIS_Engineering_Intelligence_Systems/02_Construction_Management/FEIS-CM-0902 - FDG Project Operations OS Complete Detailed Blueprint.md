@@ -120,7 +120,7 @@ These remain connected systems/interfaces.
 
 ## 4. Required Reading Before Build
 
-1. [[Projects/Future/FDG Project Operations OS/FDG Project Operations OS-0001 - Complete Detailed Blueprint|FDG Project Operations OS Complete Detailed Blueprint]]
+1. [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|FEIS-CM-0900 — Multi-Collaborator Build Handover]]
 2. [[08_FEIS_Engineering_Intelligence_Systems/01_Engineering_Company_Core/FEIS-ECC-0000 - Engineering Company Core|Engineering Company Core]]
 3. [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management Master Index]]
 4. [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0001 - Construction Management Lifecycle Architecture|Construction Lifecycle]]
@@ -135,7 +135,6 @@ These remain connected systems/interfaces.
 13. [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|Construction Manager Workbench]]
 14. [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0000 - Digital Construction Knowledge Library Architecture|DCKL]]
 15. [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Toolkit → Platform]]
-16. [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|FEIS-CM-0900 — Multi-Collaborator Build Handover]]
 
 ## 5. Capability Maturity Labels
 
@@ -1584,7 +1583,6 @@ without duplicate encoding, hidden source changes, or unsupported capability cla
 ## 61. Related Knowledge
 
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management Master Index]]
-- [[Projects/Future/FDG Project Operations OS/FDG Project Operations OS-0001 - Complete Detailed Blueprint|FDG Project Operations OS Complete Detailed Blueprint]]
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|FEIS-CM-0900 — Multi-Collaborator Build Handover]]
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]]
 - [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform]]
