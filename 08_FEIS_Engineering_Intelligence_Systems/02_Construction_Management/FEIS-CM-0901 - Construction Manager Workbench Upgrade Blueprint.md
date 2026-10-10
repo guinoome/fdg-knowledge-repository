@@ -603,3 +603,37 @@ No Tixu proprietary course content is copied.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+---
+
+## Project Control Console Relationship — 2026-10-10
+
+The [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]] provides the simplified cross-role navigation model:
+
+~~~text
+PLAN
+→ ESTIMATE
+→ EXECUTE
+→ TRACK
+→ DOCUMENT
+~~~
+
+The Construction Manager Workbench remains the role-aware intelligence/execution layer.
+
+Relationship:
+
+~~~text
+Project Control Console
+        ↓
+selected project-control area
+        ↓
+Role / Authority / Current Project State
+        ↓
+Construction Manager Workbench Task
+        ↓
+Evidence-linked guidance / action
+        ↓
+Canonical project record
+~~~
+
+Therefore the Console answers **where to work**, while the Workbench answers **what this role should do next, why, and with what evidence/authority**.
