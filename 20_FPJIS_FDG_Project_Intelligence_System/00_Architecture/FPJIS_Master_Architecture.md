@@ -86,3 +86,75 @@ NOT READY — REVISION REQUIRED
 This is an engineering control, not an aesthetic preference.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
+
+## Modular Implementation-Readiness Extension — 2026-10-10
+
+Project-wide completeness and bounded-module implementation readiness are separate.
+
+The project-level gates G0–G10 remain valid.
+
+For implementation execution, G5/G6 may be scoped explicitly to a bounded module/work package without implying that every future module in the project is fully defined.
+
+Required rule:
+
+~~~text
+Overall Project Blueprint Readiness may be <100%
+
+BUT
+
+Authorized Module / Work Package
+must be 100% implementation-ready
+for its bounded applicable scope
+before coding begins.
+~~~
+
+Track four independent measures:
+
+~~~text
+Blueprint Implementation Readiness
+Implementation Completion
+Validation Completion
+Operational Maturity
+~~~
+
+See:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|Implementation Readiness Rubric]].
+
+### Finished-session principle
+
+If a module is too large to finish as a coherent accepted capability, reduce it into a smaller vertical slice before authorization.
+
+A coding session should target:
+
+~~~text
+User Outcome
+→ Complete Workflow
+→ Canonical Data
+→ Permission Boundary
+→ Edge / Error States
+→ Tests
+→ Evidence
+→ Acceptance
+→ Closure
+~~~
+
+rather than broad partial scaffolding.
+
+### Requirement proof chain
+
+FPJIS now requires traceability through:
+
+~~~text
+Need
+→ Requirement
+→ Acceptance Criterion
+→ Blueprint
+→ Work Package
+→ Implementation
+→ Test
+→ Evidence
+→ Outcome
+~~~
+
+governed by:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/03_Requirements_Traceability_and_Verification_Standard|Requirements Traceability & Verification Standard]].
