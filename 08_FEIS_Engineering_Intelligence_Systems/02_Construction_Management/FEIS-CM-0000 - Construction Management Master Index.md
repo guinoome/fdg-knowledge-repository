@@ -150,3 +150,13 @@ The future build consumes and implements FEIS-CM, including Capture Once reporti
 This is an implementation profile over existing FDG capabilities, not a new system mother or separate source of truth.
 
 Implementation findings may return to FEIS-CM only through governed evidence and controlled knowledge evolution.
+
+## FDG Construction OS Project Workspace Link — 2026-10-10
+
+The temporary future-product staging workspace is:
+
+[[Projects/fdg-construction-os/README|FDG Construction OS — Staging Project Workspace]].
+
+It is governed by this FEIS-CM architecture and [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902]].
+
+The staging workspace does not become a new domain authority. When sustained application development begins, implementation should migrate to the dedicated repository planned as `guinoome/fdg-construction-os`, while FEIS-CM remains canonical construction-management knowledge.
