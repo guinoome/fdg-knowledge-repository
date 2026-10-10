@@ -57,6 +57,8 @@ This percentage measures the generic blueprint framework—not FPJIS software im
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/10_Requirement_Implementation_Evidence_Manifest_Contract|10 — Requirement/Implementation/Evidence Manifest Contract]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/11_Core_Completion_Verification_and_Readiness_Report|11 — Core Completion Verification & Readiness Report]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/12_FPJIS_Update_Log|12 — FPJIS Update Log]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/13_FPJIS_Roadmap_Percentage_Register|13 — FPJIS Roadmap Percentage Register]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/14_FPJIS_Core_Implementation_Backlog|14 — FPJIS Core Implementation Backlog]]
 
 ## Generic Missing Blueprint Templates Added
 
