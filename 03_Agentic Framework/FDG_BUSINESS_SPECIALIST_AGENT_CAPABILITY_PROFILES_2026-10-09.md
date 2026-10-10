@@ -120,3 +120,11 @@ Agent profile ID/version; accountable enterprise function; intended outcome; per
 **Commissioning gate:** role definition is **not** agent implementation. Record test datasets, pass/fail outputs, approved permissions, human sign-off, monitoring baseline and exact live tool scopes before marking any role Operational.
 
 See implementation proposal: [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]]. Source study: [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DAILYS-001 - Dailys Outcome-to-Learning Business Reference|Dailys Video]].
+
+## 9. Pilot 001 controlled evaluation seam — 2026-10-10
+
+The first proposed measurement context is the **maintenance-evidence monthly-reporting pilot**, not a multi-vertical agent launch:
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/19_Pilot_001_Maintenance_Reporting_Commercial_Execution_Charter|Pilot 001 Execution Charter]] governs a bounded human-operated commercial service and makes optional specialist testing secondary to actual client value.
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria|Pilot 001 Operator Record Pack]] defines synthetic/sanitized fixture-based CFO, CMO and support shadow reviews with approval, provenance and safety constraints.
+
+**Draft profiles remain uncommissioned.** A copied agent checklist does not create credentials, permissions, a deployed model runtime, public-facing communication or delegated functional authority.

@@ -105,3 +105,14 @@ This package governs the future **FDG Commercial Validation Workspace** and the 
 See [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/16_Visual_Blueprint_Index|Visual Blueprint Index]] for maintainable SVG diagrams stored with this package.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → this package.
+
+## Pilot 001 Operational Addendum — 2026-10-10
+
+The following **additive** pilot-specific records extend—not replace—the existing 00–18 blueprints, including the package's Not Build Authorized decision:
+
+19. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/19_Pilot_001_Maintenance_Reporting_Commercial_Execution_Charter|Pilot 001 Maintenance Reporting Commercial Execution Charter]] — prepared controlled manual/assisted service pilot, owner interfaces, gates, milestones, economics, acceptance and shadow agent sequencing.
+20. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria|Pilot 001 Operator Record Pack and Acceptance Criteria]] — **blank** private-workspace copy templates for client intake, offer, payment verification, engineering source evidence, report acceptance, costs/effort, customer support, agent shadow evaluation and go/no-go learning.
+
+Service scope and price remain owned by [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|FSvIS-OM-0001]]. The commercial operating-loop proposal remains [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]]. The three specialist profiles remain [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|Draft business agent profiles]].
+
+**Status:** blueprint/operational preparation only. This update creates no customer, verified payment, active agent, code build, public outreach, campaign authorization or deployment, and does not modify existing manual-vs-software release gates.

@@ -207,3 +207,11 @@ Possible bounded deliverables may include:
 This is a **candidate service**, not an automatic expansion of FSvIS-OM-0001 and not evidence that customers have paid for it.
 
 The existing productization rule remains: validate repeated customer value before building additional software solely for this service.
+
+## Pilot 001 execution charter relationship — 2026-10-10
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/19_Pilot_001_Maintenance_Reporting_Commercial_Execution_Charter|FPJIS-FPCV-P001-1900 — Pilot 001 Commercial Execution Charter]] operationalizes the existing service definition for **one paying client / one agreed facility or asset group / one reporting cycle** without changing this file's S1 Pilot Definition status, deliverables, exclusions, pricing hypothesis or signoff boundaries.
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria|FPJIS-FPCV-P001-2000 — Blank Pilot Operator Record Pack]] supplies private-workspace evidence and acceptance templates.
+- [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|Draft CFO, CMO and Customer Service Agent Profiles]] may be evaluated in a separately approved synthetic-data/shadow test only; agent design does not alter service delivery authority.
+
+A complete execution charter does not certify a real client, paid pilot or accepted engineering report.

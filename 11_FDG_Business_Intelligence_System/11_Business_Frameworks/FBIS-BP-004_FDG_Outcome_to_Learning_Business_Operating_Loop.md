@@ -164,3 +164,11 @@ Status at creation: **blueprint captured and cross-linked; no agents, apps, perm
 Before implementing, read only current: repository README, Agentic Master, NEX-STD-013, NEX-STD-125/126, current Business Platform handover, FSvIS-OM-0001, FBIS-BP-001/002/003, and related canonical FPJIS/FMCIS/FSIS/FWAIS/Integration Hub documents for touched scope. Check audit memory and avoid rereading already validated same-scope material unless changed. Preserve unrelated collaborators' work and leave conflicts visible.
 
 Use the outcome ladder: **imagine → challenge → build small → validate → measure → learn → integrate → standardize → automate → scale.** Measure true client value and operational reliability first. Founder approval remains required where standards demand it.
+
+## 11. Pilot 001 commercial experiment binding — 2026-10-10
+
+The first **bounded assisted-service** validation of this proposed business loop is specified in:
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/19_Pilot_001_Maintenance_Reporting_Commercial_Execution_Charter|FPJIS-FPCV-P001-1900 — Maintenance Evidence & Monthly Engineering Reporting Commercial Execution Charter]].
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria|FPJIS-FPCV-P001-2000 — Pilot Operator Records and Acceptance Criteria]].
+
+This reuses the existing First-Payout Commercial Validation Blueprint Package and [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|FSvIS-OM-0001]]; it does not open another system, presume CFO/CMO/customer-service agents exist, enable payment integrations or authorize new software.
