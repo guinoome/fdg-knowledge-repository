@@ -102,3 +102,15 @@ It shall not:
 - claim features are built merely because blueprints exist.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document
+
+---
+
+## Construction Project Control Detailed Build Specification — 2026-10-10
+
+The implementation-ready specification for Melanie's first major vertical is:
+
+- [[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|MELANIE-0100 — Construction Project Control Platform Detailed Build Specification]]
+
+This document compiles the current FDG Construction Management, Project Control Console, Digital Construction Knowledge Library, toolkit-to-platform commercial path, offline field architecture, Capture Once reporting, role Workbenches, project continuity, document/QAQC workflows, commercial-state separation, T&C/turnover, security/evidence boundaries, acceptance tests and phased build work packages into one implementation contract.
+
+MELANIE-0001 remains the overall project architecture. MELANIE-0100 is the detailed first-vertical build specification.
