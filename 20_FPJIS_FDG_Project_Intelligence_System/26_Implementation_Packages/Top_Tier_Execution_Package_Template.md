@@ -216,3 +216,10 @@ The preferred end state is CLOSED or BLOCKED WITH EVIDENCE, not an ambiguous par
 Use:
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Module Roadmap & Finished Session Standard]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/10_Requirement_Implementation_Evidence_Manifest_Contract|Requirement / Implementation / Evidence Manifest]]
+
+
+---
+
+## Research-to-Coding Precision Extension — 2026-10-11
+
+For work informed by external projects, apply [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Research_to_Coding_Contract|FREIS research-to-coding precision]]. Add claim/source → lesson → requirement → blueprint/contract → file/symbol → acceptance check → actual evidence traceability. Golden Path steps identify dependencies, exact actions, expected behavior and checks. Record concrete fixtures and expected outputs; remove blocking placeholders before execution. This extends A–Q rather than creating a competing template.
