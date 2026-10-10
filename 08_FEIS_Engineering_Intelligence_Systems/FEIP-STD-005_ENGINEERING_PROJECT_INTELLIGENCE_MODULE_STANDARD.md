@@ -96,3 +96,13 @@ Role-specific Workbenches should compose:
 Shared Project Context + Discipline Technical Semantics + Governed Task Packs + User Authority + Evidence
 
 rather than create separate project truth.
+
+---
+
+## Project Control Console Experience Addendum — 2026-10-10
+
+Project Intelligence may be presented through the simplified cross-role experience defined in:
+
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]].
+
+The five areas — Plan, Estimate, Execute, Track and Document — are a navigation/experience layer over shared project intelligence. They must not create separate project truths or duplicate the approved construction lifecycle.
