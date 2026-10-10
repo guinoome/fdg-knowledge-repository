@@ -305,3 +305,38 @@ FPJIS
 ~~~
 
 Files such as XLSX/DOCX/PDF remain valid distribution/export formats, but the full platform must not treat them as competing project databases.
+
+---
+
+## Future Melanie Project Implementation Profile — 2026-10-10
+
+[[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Melanie]] is a future implementation profile spanning existing FDG systems; it is not a new top-level intelligence system.
+
+Relationship:
+
+~~~text
+FDG Knowledge Repository
+        ↓
+Engineering Company Core
+        ↓
+Melanie Shared Company Foundation
+        ↓
+FEIS Construction Management
+        ↓
+Project Control Console
+        ↓
+Role Workbenches / Field PWA
+        ↓
+FBIS commercial + FPIS experience
+FWAIS workflow + FSIS security
+FRCIM legal/regulatory + FAIS assurance
+FDG CORE evidence/intelligence
+        ↓
+Operational Outcomes
+        ↓
+Governed Learning
+~~~
+
+FPJIS continues to govern FDG project blueprint/build discipline; it does not become the construction operating system.
+
+Melanie shall preserve domain authority and return validated learning to the canonical knowledge system.
