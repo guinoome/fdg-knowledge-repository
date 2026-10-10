@@ -600,3 +600,23 @@ Actual product claims must distinguish:
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/01_Platform_Experience_Design_Intelligence|FPIS Experience Intelligence]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0000 - Digital Construction Knowledge Library Architecture|DCKL]] → this document
+
+---
+
+## Future Melanie Commercial Destination — 2026-10-10
+
+The future [[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Melanie Project]] is the intended full-platform destination for the Construction Toolkit commercial ladder.
+
+Preferred migration path:
+
+~~~text
+Free Resource
+→ FDG Construction Toolkit
+→ Connected Toolkit
+→ Melanie / FDG Engineering Construction Management
+→ Multi-Project
+→ Enterprise / White-Label
+→ Professional Services
+~~~
+
+Toolkit structure should therefore remain migration-compatible with Melanie's Company Core and canonical construction records.
