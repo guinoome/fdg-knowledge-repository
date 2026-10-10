@@ -308,9 +308,9 @@ Files such as XLSX/DOCX/PDF remain valid distribution/export formats, but the fu
 
 ---
 
-## Future Melanie Project Implementation Profile — 2026-10-10
+## FDG Project Operations OS / Construction Project Management Implementation Profile — 2026-10-10
 
-[[Projects/Future/Melanie/MELANIE-0001 - Complete Detailed Blueprint|Melanie]] is a future implementation profile spanning existing FDG systems; it is not a new top-level intelligence system.
+[[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FDG Project Operations OS]] is an implementation profile spanning existing FDG capabilities; it is not a new top-level intelligence system.
 
 Relationship:
 
@@ -319,9 +319,9 @@ FDG Knowledge Repository
         ↓
 Engineering Company Core
         ↓
-Melanie Shared Company Foundation
-        ↓
 FEIS Construction Management
+        ↓
+FDG Project Operations OS
         ↓
 Project Control Console
         ↓
@@ -337,42 +337,19 @@ Operational Outcomes
 Governed Learning
 ~~~
 
-FPJIS continues to govern FDG project blueprint/build discipline; it does not become the construction operating system.
+Canonical boundaries:
 
-Melanie shall preserve domain authority and return validated learning to the canonical knowledge system.
+- FEIS owns construction lifecycle, engineering semantics and acceptance logic.
+- Engineering Company Core is the initial shared contract home for organization/project/user/common records.
+- FPIS owns reusable experience, edge/control-plane and deployment/synchronization patterns where applicable.
+- DCKL owns governed reusable construction knowledge/toolkits.
+- FBIS owns commercial/customer/subscription/revenue semantics.
+- FWAIS owns approved workflow automation.
+- FSIS owns security controls.
+- FRCIM/FLIS owns regulatory authority.
+- FAIS owns independent assurance.
+- FPJIS continues to govern FDG project blueprint/build discipline; it does not become the construction operating system.
 
----
+The FDG Project Operations OS must preserve these authorities and return validated learning to canonical knowledge.
 
-## Melanie Construction Implementation Relationship — 2026-10-10
-
-[[Projects/Future/Melanie/MELANIE-0100 - Construction Project Control Platform Detailed Build Specification|Melanie Construction Project Control Platform]] is a future implementation project over existing FDG capabilities, not a new system-of-record authority.
-
-~~~text
-FDG Knowledge Repository
-        ↓
-FEIS Engineering Company Core
-+ FEIS Construction Management
-+ DCKL
-+ FPIS
-+ FBIS
-+ FWAIS
-+ FSIS
-+ FRCIM
-+ FAIS
-+ FDG CORE
-        ↓
-Melanie Future Implementation
-        ↓
-Project Control Console
-PLAN | ESTIMATE | EXECUTE | TRACK | DOCUMENT
-        ↓
-Role Workbenches / Field PWA / Reports / Toolkit Migration
-        ↓
-Operational Evidence
-        ↓
-Governed Learning Return
-        ↓
-FDG Knowledge Repository
-~~~
-
-Melanie does not supersede FEIS-CM, DCKL, FPJIS, or any cross-system authority. Its purpose is to implement and validate the governed architecture.
+Do not create a separate top-level OS folder merely because the architecture is called an OS; repository placement remains under the existing governed construction-management branch unless a future repository decision explicitly changes it.
