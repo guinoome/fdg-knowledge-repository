@@ -80,7 +80,7 @@
 
 ## Construction Project Management / FDG Project Operations OS — Future Build
 
-This future build belongs to the existing FDG Engineering Construction Management architecture. It is **not** a separate project named Melanie and does not create a new top-level knowledge system.
+This future build belongs to the existing FDG Engineering Construction Management architecture and does not create a new top-level knowledge system.
 
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902 — FDG Project Operations OS Complete Detailed Blueprint]]
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover|FEIS-CM-0900 — Multi-Collaborator Build Handover]]
