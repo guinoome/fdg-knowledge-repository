@@ -146,3 +146,24 @@ Free Solar Engineering Tool → Preliminary Assessment → Paid Detailed Solar D
 Service Intelligence owns service packaging, scope, pricing framework and delivery model. FEIS Solar remains the authority for technical calculations, engineering records and drawings. FRCIM remains the authority for regulatory obligation/applicability records.
 
 Implementation/product reference: [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas]].
+
+---
+
+## Construction Toolkit and Platform Service Relationship — 2026-10-10
+
+Service Intelligence may package implementation, migration, configuration, training, review and managed-support services around:
+
+[[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform Commercial Upgrade Path]].
+
+Potential services include:
+- toolkit setup;
+- spreadsheet/data cleanup;
+- toolkit-to-platform migration;
+- project-control setup;
+- reporting architecture;
+- company standardization;
+- turnover/closeout setup;
+- user onboarding/training;
+- managed reporting or review.
+
+Technical project-control truth remains governed by FEIS-CM; Service Intelligence governs the service offer/delivery model.
