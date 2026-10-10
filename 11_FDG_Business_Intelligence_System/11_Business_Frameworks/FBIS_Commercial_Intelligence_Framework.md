@@ -81,3 +81,33 @@ A rebate/incentive is not automatically a discount. Discount authority and margi
 Solar commercial line bases may include per unit, per W, per kWp, per hour/day, fixed per project, actual, estimated or externally quoted.
 
 The existing FDG progressive installation-labor model remains an engineering-cost input and is not replaced by this extension.
+
+---
+
+## Construction Toolkit Commercial Upgrade Relationship — 2026-10-10
+
+Commercial packaging for the construction knowledge/toolkit pathway is defined technically by:
+
+[[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform Commercial Upgrade Path]].
+
+FBIS retains authority for:
+- pricing;
+- promotions;
+- payment;
+- subscription/entitlement;
+- customer/deal state;
+- upgrade-credit rules;
+- revenue and commercial analytics.
+
+FEIS/DCKL define the technical/knowledge capability and migration compatibility but shall not hard-code temporary campaign pricing.
+
+The preferred customer ladder is:
+
+~~~text
+Free Knowledge / Mini Tool
+→ Construction Toolkit
+→ Connected Toolkit
+→ FDG Engineering Construction Management
+→ Multi-Project / Enterprise
+→ Professional Services
+~~~
