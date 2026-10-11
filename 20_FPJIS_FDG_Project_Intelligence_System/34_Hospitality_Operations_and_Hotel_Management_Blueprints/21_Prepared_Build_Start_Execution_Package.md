@@ -206,3 +206,13 @@ Stop if:
 - out-of-scope project files must be changed.
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this prepared execution package.
+
+## L1 Destination Clarification — 2026-10-11
+
+This prepared build-start package is the **first foundation work package inside**, not the entirety of, the approved L1 slice:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|Engineering Operations + Hotel Room Readiness]].
+
+The complete L1 outcome is room concern → FBPOIS engineering → OOO/OOS/restriction → repair → verification/clearance → Housekeeping → derived Ready.
+
+Do not expand from the foundation directly into full Reservations, Folio, OTA, POS or other H-PMS modules.
