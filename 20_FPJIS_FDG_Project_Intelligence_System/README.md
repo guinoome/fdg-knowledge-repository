@@ -185,3 +185,12 @@ Francis clarified that the Astra architecture-compilation requirement applies to
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/12_FPJIS_Update_Log|FPJIS Update Log]] — controlled change record.
 
 Use existing approved blueprints and extend their gaps. Complete the applicable bounded module before coding it; overall project incompleteness need not block a ready authorized vertical slice. Same accepted behavior is the target; tests and evidence establish the result.
+
+
+---
+
+## Current Top-Tier Compiler and Auditor Rule — 2026-10-11
+
+This clarification supersedes the Astra-specific provider selection above. **A top-tier OpenAI or Anthropic agent prepares complete detailed Markdown blueprints and audits the submitted implementation.** Packages specify architecture, files, contracts, ordered build steps, expected results, tests and recovery. Haiku, Sonnet, Sol or other capable agents implement against the same acceptance criteria.
+
+[[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|The current compiler–builder–auditor contract]] defines audit evidence, correction/retest loops, revision-bound results and organizational learning. [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|The execution template]] records role identities, audit verdict and repository return. Work is accepted from verified evidence; required audits pending or blocking findings remain visible.
