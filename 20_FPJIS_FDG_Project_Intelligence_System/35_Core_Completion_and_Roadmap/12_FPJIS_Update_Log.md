@@ -109,3 +109,24 @@ Unresolved full-path Wikilinks: 0
 Repository path integrity: PASS.
 
 Software implementation of a future FPJIS checker/Project Blueprint Board remains intentionally separate from this blueprint-framework hardening.
+
+
+---
+
+## 2026-10-11 — FPJIS-ASTRA-COMPILATION-002
+
+**Direction:** Francis requires full detailed Astra-prepared Markdown FPJIS blueprints and build instructions before project coding, so Haiku, Sonnet, Sol and other builders target the same accepted outcomes.
+
+**Scope:** All FPJIS-governed project coding; extends the earlier FREIS-specific requirement. Reuses the existing Architecture Compiler Protocol and A–Q template.
+
+**Updated:** [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]], [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Execution Package Template]], [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS Home]] and this log. No files superseded.
+
+**Decision:** Architecture compiler resolves consequential design ambiguity, completes applicable module blueprints, and supplies exact steps/contracts/fixtures/expected results before builder execution. Record actual compiler identity; do not claim Astra authorship when another model compiles. Behavioral equivalence is validated through shared acceptance evidence, not assumed from model names.
+
+**Readiness impact:** No percentage recalculated. Existing 100%-ready bounded-package and authorization controls retained. No project built or deployed.
+
+**Validation:** Current affected documents reviewed; additive changes preserve prior content; seven new links in the three guidance additions resolve to fetched documents. No software tests applicable to this documentation update. Model-equivalence/cost improvements not measured.
+
+**Next action:** Instantiate or update the detailed blueprint and execution package for the next identified coding project, then measure acceptance and rework.
+
+**Guidance commits:** `61158653c47093ef07eb6e0d07b3f53473a30d30`, `3981dace4e459ae4e1026761d3de2dfd630eeb51`, `ef9b1edc7f504c2d381d017724a5f3cc4a7bd4e1`.
