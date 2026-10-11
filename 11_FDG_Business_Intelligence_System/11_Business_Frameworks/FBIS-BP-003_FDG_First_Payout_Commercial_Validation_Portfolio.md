@@ -288,3 +288,17 @@ Recommended first-payout sequence:
 8. Integrated hospitality software only after repeated evidence.
 
 This opportunity family should inherit the same rule as the rest of the portfolio: benchmark feature breadth is not build authorization.
+
+## 15. Hospitality L1 promotion — 2026-10-11
+
+Hospitality now has a preferred first narrow product/operations slice:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|FDG Engineering Operations + Hotel Room Readiness]].
+
+Commercial principle:
+- do not require replacement of the hotel's existing PMS;
+- solve Room Readiness + Engineering coordination first;
+- validate with a professional toolkit, managed service, local app or department pilot;
+- add broader H-PMS capability only when real usage reveals the next bottleneck.
+
+Its formal first-payment friction score should be reassessed before campaign launch rather than inherited from the full Hospitality platform.
