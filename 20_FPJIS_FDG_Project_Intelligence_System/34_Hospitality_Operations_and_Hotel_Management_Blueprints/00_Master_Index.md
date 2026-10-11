@@ -114,3 +114,14 @@ Canonical relationship:
 - Remote production deployment: not authorized.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → this package.
+
+## First Commercial / Implementation Slice — 2026-10-11
+
+The complete Hospitality architecture remains preserved, but the preferred L1 slice is:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|Engineering Operations + Hotel Room Readiness]]
+
+This slice does **not** require replacing an existing hotel PMS. It may begin as a standalone/local room-readiness layer, assisted import, or bounded adapter to an existing PMS.
+
+Governing generic standard:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|Architecture Complete, Build Narrow Standard]].
