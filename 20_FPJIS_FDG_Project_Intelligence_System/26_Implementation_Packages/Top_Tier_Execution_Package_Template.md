@@ -244,3 +244,24 @@ Applies to every project coding package, including work without external referen
 | Recovery, escalation, context capsule and finished-slice handover defined | | |
 
 Record actual compiler identity. A package compiled by another model must not claim Astra authorship. Haiku, Sonnet, Sol and other builders target the same acceptance contract; equivalence is assessed from results.
+
+
+---
+
+## Required Top-Tier Audit Record — 2026-10-11
+
+Use the current compiler–builder–auditor contract in [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Architecture Compiler Protocol]]. A top-tier OpenAI or Anthropic agent compiles blueprints and audits submitted coding work; Haiku, Sonnet, Sol or another capable builder implements the package.
+
+| Required record | Task-specific value |
+|---|---|
+| Compiler / builder / auditor identity and role overlap | |
+| Blueprint revision / submitted implementation commit | |
+| Audit scope and evidence paths | |
+| Requirements checked / omissions / checks NOT RUN | |
+| Finding IDs, severity, evidence, correction owner and retest | |
+| Verdict: PASS / CHANGES REQUIRED / BLOCKED | |
+| Corrected commit / retest evidence | |
+| Owner acceptance where required / final status | |
+| Repository manifest, status, lessons and handover updated | |
+
+A builder completion report is a submission for audit. Mark AUDIT PENDING until the required audit exists. CLOSED requires audit PASS and the applicable acceptance/knowledge-return obligations. Use risk-proportionate delta audits when existing evidence remains valid; record why it remains valid.
