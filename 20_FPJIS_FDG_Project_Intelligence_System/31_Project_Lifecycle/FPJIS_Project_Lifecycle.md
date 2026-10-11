@@ -116,3 +116,23 @@ Reference:
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Module Roadmap & Finished Session Standard]].
 
 A module closure must update the project evidence/status record before the next coding session begins.
+
+## Architecture-Broad / Execution-Narrow Interpretation — 2026-10-11
+
+The complete project architecture should be preserved early enough to prevent redesign, while implementation proceeds through the smallest useful vertical slices.
+
+Required interpretation:
+
+```text
+Full Architecture in GitHub
+→ Identify L1 First-Payout / First-Useful Slice
+→ 100% Readiness for That Bounded Scope
+→ Scoped Build Authorization
+→ Local Implementation
+→ Acceptance
+→ Real Use / Paid Evidence
+→ Promote Next Capability Only When Justified
+```
+
+Reference:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|Architecture Complete, Build Narrow Standard]].
