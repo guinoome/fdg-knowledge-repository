@@ -881,3 +881,72 @@ Finish a usable vertical slice, update the implementation/status/manifest record
 **Measure effectiveness:** clarification requests, rework, acceptance success, deviations and measured effort/cost. Detailed Markdown is a means to reproducibility, not proof of quality by itself.
 
 **Canonical form:** [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]].
+
+
+---
+
+## Current Compiler–Builder–Auditor Contract — 2026-10-11
+
+**Authority:** Francis's clarification on 2026-10-11. Applies to all FPJIS-governed coding. This section supersedes earlier Astra-specific selection wording; historical text above remains for traceability.
+
+### Roles and accountability
+
+- **Architecture compiler:** a top-tier OpenAI or Anthropic agent prepares complete, detailed Markdown FPJIS blueprints and executable packages. Select on demonstrated suitability for the task, record actual provider/model and version when available, and keep all outputs portable.
+- **Builder:** Haiku, Sonnet, Sol or another capable agent implements within the package's contracts and common acceptance criteria.
+- **Auditor:** a top-tier OpenAI or Anthropic agent audits the actual implementation and evidence before the work is marked accepted. Prefer an agent/session independent of the builder. The compiler may audit the implementation, but must challenge its own blueprint assumptions as well. Record overlap; builder self-review is not independent audit.
+- **Accountable owner:** retains project acceptance and existing authorization authority. Audit results do not grant deployment authority.
+
+The role is a capability requirement, not a permanent model ranking. Never claim a named model authored or audited work unless it actually did so. If the required auditor is unavailable, record AUDIT PENDING rather than claim acceptance. Other authorized work may continue.
+
+### Complete blueprint and package contract
+
+Reuse the existing A–Q format and authoritative FPJIS blueprints. Before coding a bounded package, provide:
+1. Context, outcome, scope, requirements with IDs, source versions/checkpoint, preserved decisions, assumptions and explicit blocking unknowns.
+2. Selected architecture, component boundaries, dependency sequence, rejected alternatives and decision rationale.
+3. Exact files/components and ownership; interfaces, schemas, types, constraints, API/event examples, permissions, error handling and state transitions.
+4. Engineering rules, units, formulas, rounding, invariants and worked examples; applicable UX layouts, design-system references, responsiveness and interaction states.
+5. Ordered build steps with prerequisites, action, path/symbol, expected result, verification and failure response.
+6. Repository-grounded setup and test commands, runtime/dependency requirements, fixtures and expected outputs/tolerances. Identify commands or assumptions not yet verified.
+7. Security/privacy/threat controls, local-first/offline behavior, persistence/sync/conflicts, provider boundaries, migrations and recovery where applicable.
+8. Acceptance matrix, audit scope, evidence destinations, rollback procedure and next-agent context capsule.
+
+Every applicable requirement must map to a blueprint, implementation location, acceptance check and eventual evidence. N/A requires a reason. No consequential design decision is silently delegated through “use best practices.” Scope completeness applies to the executable package; future modules may remain explicitly unresolved.
+
+### Verification and audit
+
+Audit the exact submitted commit or artifact version. Inspect requirements and governing decisions, changed code, relevant dependencies, test implementation and actual results. Do not approve solely from a builder summary or passing test count.
+
+Check:
+- requirement coverage and omissions;
+- contract and architectural conformance;
+- correctness of expected test values against independent rules/examples;
+- normal, boundary, invalid, failure and recovery behavior;
+- access boundaries, data handling, offline/sync behavior and migrations where relevant;
+- usable end-to-end behavior and visual requirements where applicable;
+- regressions, scope drift, unresolved limitations and evidence authenticity.
+
+Run risk-relevant checks where possible. Record commands, environment, actual result and evidence location; mark unavailable checks NOT RUN with their effect on the verdict. Audit detail scales with consequence and change scope, but every submitted coding package receives a recorded audit.
+
+Findings contain ID, severity, affected requirement/file, reproduction/evidence, impact, required correction, owner and retest condition. Use existing FAIS severity definitions rather than inventing a competing taxonomy.
+
+Audit verdict: PASS, CHANGES REQUIRED, or BLOCKED. Blocking defects and unmet mandatory acceptance criteria prevent acceptance. The builder corrects findings; the auditor rechecks affected behavior and relevant regressions. Never weaken an acceptance criterion solely to make failing code pass. Genuine requirement changes use a versioned decision and updated blueprint.
+
+### Checkpoints and efficient reuse
+
+Bind each package, audit and evidence set to its source and implementation revisions. Reuse unchanged validated evidence only when scope, dependencies, environment and assumptions remain applicable. Review deltas and their impact rather than repeating a whole repository audit. Re-audit invalidated evidence; agent identity alone is not a reuse criterion.
+
+A later code change cannot inherit PASS without an impact review. Record which evidence remains valid and which checks must rerun. Use bounded correction loops and escalate systemic failure or missing architecture to the compiler.
+
+### Completion and organizational learning
+
+Track implementation submitted, audit pending, changes required, blocked and accepted explicitly; map these into the project's existing lifecycle. CLOSED requires the applicable criteria passed, audit PASS, required owner acceptance, and repository evidence/status updates. A blocked session leaves a reproducible handover.
+
+Return actual compiler/builder/auditor identities, blueprint and implementation revisions, changed files, requirement coverage, test results and checks not run, audit findings/dispositions, remaining limitations, recovery status, decisions, lessons, updated manifests/indexes/wikilinks and next action.
+
+Keep proposed lessons distinct from reviewed standards. Preserve superseded decisions. Store portable Markdown and open evidence formats in the canonical GitHub repository; do not make a vendor session the only record.
+
+### Effectiveness measures
+
+Measure acceptance on first submission, escaped defects, correction cycles, clarification count, requirement coverage, effort/cost where observable and evidence reuse. “Same results” means the same validated behavior and acceptance thresholds, not identical code or guaranteed model capability. Improve blueprints when audits expose recurring ambiguity.
+
+**Implementation form:** [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|A–Q execution package]].
