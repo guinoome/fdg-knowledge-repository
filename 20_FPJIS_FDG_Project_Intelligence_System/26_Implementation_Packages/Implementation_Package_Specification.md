@@ -84,3 +84,21 @@ At completion, apply:
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Module Roadmap & Finished Session Standard]].
 
 This lets FDG ship complete bounded capabilities while the broader roadmap remains intentionally unfinished.
+
+## Architecture Complete, Build Narrow Gate — 2026-10-11
+
+Implementation packages must follow:
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|Architecture Complete, Build Narrow Standard]].
+
+The existence of a complete future architecture does not expand the current work package.
+
+Every implementation package must identify:
+- current capability level (L0–L5);
+- current commercial/operational slice;
+- explicitly authorized scope;
+- explicitly deferred architecture;
+- evidence/promotion condition for the next level.
+
+Agent rule:
+
+> The repository contains the full future architecture. Your work package does not. Implement only the explicitly authorized slice.
