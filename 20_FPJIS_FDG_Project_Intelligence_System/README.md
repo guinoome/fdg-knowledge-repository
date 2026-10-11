@@ -172,3 +172,16 @@ New generic core templates include:
 
 Material FPJIS core changes are recorded in:
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/12_FPJIS_Update_Log|FPJIS Update Log]].
+
+
+---
+
+## Mandatory Detailed Project Markdown Before Coding — 2026-10-11
+
+Francis clarified that the Astra architecture-compilation requirement applies to **all FPJIS project coding**, not only FREIS-derived work. Astra prepares detailed applicable blueprints and executable build instructions; Haiku, Sonnet, Sol or other agents implement against the same acceptance contract.
+
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Project-wide Astra compilation standard]] — compiler deliverables, completeness, precise build instructions and builder obligations.
+- [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Execution package and completeness checklist]] — reusable A–Q form.
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/12_FPJIS_Update_Log|FPJIS Update Log]] — controlled change record.
+
+Use existing approved blueprints and extend their gaps. Complete the applicable bounded module before coding it; overall project incompleteness need not block a ready authorized vertical slice. Same accepted behavior is the target; tests and evidence establish the result.
