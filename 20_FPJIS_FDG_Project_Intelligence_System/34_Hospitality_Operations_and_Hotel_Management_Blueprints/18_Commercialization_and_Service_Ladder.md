@@ -224,3 +224,23 @@ Do not build the entire platform merely because benchmark vendors have many modu
 Build the smallest connected capability that a real property validates.
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this document.
+
+## L1 Commercial Slice Decision — 2026-10-11
+
+The preferred first software/operational slice is now:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|FDG Engineering Operations + Hotel Room Readiness]].
+
+It combines:
+```text
+Room
+→ Guest / Front Office / Housekeeping Concern
+→ FBPOIS Engineering
+→ OOO/OOS / Restriction
+→ Repair
+→ Verification / Engineering Clearance
+→ Housekeeping Inspect
+→ READY
+```
+
+This can be sold/piloted without a full FDG H-PMS and can coexist with an incumbent PMS through manual, CSV or later API context exchange.
