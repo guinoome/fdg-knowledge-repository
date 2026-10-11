@@ -223,3 +223,24 @@ Use:
 ## Research-to-Coding Precision Extension — 2026-10-11
 
 For work informed by external projects, apply [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Research_to_Coding_Contract|FREIS research-to-coding precision]]. Add claim/source → lesson → requirement → blueprint/contract → file/symbol → acceptance check → actual evidence traceability. Golden Path steps identify dependencies, exact actions, expected behavior and checks. Record concrete fixtures and expected outputs; remove blocking placeholders before execution. This extends A–Q rather than creating a competing template.
+
+
+---
+
+## Project-Wide Compiler Completeness Checklist — 2026-10-11
+
+Applies to every project coding package, including work without external references. Follow [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Project-wide Astra compilation guidance]].
+
+| Check | Task-specific evidence / exact path | PASS / BLOCKED / N/A with reason |
+|---|---|---|
+| Actual architecture compiler and reviewed checkpoint recorded | | |
+| Project/module map and all applicable FPJIS blueprints linked | | |
+| Requirements, behaviors, contracts and expected outputs consistent | | |
+| Exact files, setup/configuration and ordered build steps supplied | | |
+| UI design/states, engineering logic and offline behavior specified where applicable | | |
+| Fixtures, expected outputs/tolerances and verification procedures provided | | |
+| Requirement-to-test-to-evidence manifest defined | | |
+| No blocking placeholder; package readiness and existing authority verified | | |
+| Recovery, escalation, context capsule and finished-slice handover defined | | |
+
+Record actual compiler identity. A package compiled by another model must not claim Astra authorship. Haiku, Sonnet, Sol and other builders target the same acceptance contract; equivalence is assessed from results.
