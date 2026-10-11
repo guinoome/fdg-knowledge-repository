@@ -840,3 +840,44 @@ The [[21_FDG_Multi_Collaborator_Intelligence_System/FMCIS-CURRENT-DESIGN-RECAP|F
 Francis directed that deep reverse engineering of other projects become durable reference knowledge and that coding starts from Astra-level Markdown even when other, older or lower-cost agents implement. This is an artifact-quality requirement, not a provider dependency or guarantee of identical intelligence.
 
 Use [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Research_to_Coding_Contract|the FREIS research-to-coding contract]] with the existing A–Q template. Resolve task-specific architecture, exact build steps, contracts, fixtures, expected outcomes and evidence mapping before coding. Reuse unchanged approved packages; record material deltas. Existing FPJIS readiness, authorization and finished-session controls apply. Research is governed by [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Mandate_and_Method|the FREIS mandate]].
+
+
+---
+
+## Project-Wide Astra Compilation Before Coding — Founder Clarification, 2026-10-11
+
+**Applicability:** All FPJIS-governed project coding, including projects without FREIS research. This clarification extends the earlier FREIS-specific addition.
+
+Francis's direction: Astra prepares full, detailed, complete Markdown describing how to build the project, so Haiku, Sonnet, Sol or other implementation agents can achieve the same accepted functional outcome. Astra is the requested architecture compiler; the durable standard remains agent-neutral. If Astra is unavailable, record that fact and the compiler actually used; do not label another model's work Astra-authored. Existing capability selection governs any substitute.
+
+“Same results” means conformance to the same requirements, interfaces, behavior, visual specifications where applicable, engineering tolerances and acceptance tests. It does not require byte-identical source code or claim identical model intelligence. Equivalence remains unproven until implementation evidence passes the defined checks.
+
+### Compiler deliverables
+
+Before the relevant coding starts, the compiler must review existing decisions and produce or extend:
+1. A project Markdown entry point: objective, architecture, module roadmap, dependencies, source checkpoint, document status and exact blueprint links.
+2. Complete applicable FPJIS blueprints for each executable module: users/roles, screens, workflows, data/database, API/events, business and engineering rules, security/privacy/threat model, entitlements, applicable payment/communication/automation/integration, offline/sync, testing, release/operations, decisions and revisions.
+3. A–Q execution packages with exact change maps, ordered build steps, contracts, fixtures, expected results, rollback and escalation boundaries.
+4. A requirement → blueprint → implementation → test → evidence manifest, plus a compact context capsule and completion handover.
+
+Complete means sufficient for the assigned builder to implement without inventing consequential architecture. Mark nonapplicable dimensions with reasons. Identify future unresolved scope explicitly; a 100%-ready authorized bounded module can proceed even when the entire project is incomplete.
+
+### Implementation precision
+
+Specify actual repository paths and component responsibilities, compatible runtime/dependency requirements, setup commands, configuration names without secrets, schema fields/types/constraints/units, formulas and rounding, state transitions, API payload examples, validation/error behavior, permissions and audit requirements. Define offline operation, persistence, sync/conflicts, provider boundaries and failure recovery.
+
+For screens, give layout/component hierarchy, design tokens or existing design-system references, responsive behavior, accessibility and every relevant state. Supply suitable visual references when they resolve ambiguity. A generic instruction such as “make a premium dashboard” is not an executable design.
+
+For every implementation step specify prerequisites, action, file/symbol, expected result, verification and failure handling. Supply pseudocode or worked examples for nontrivial logic and test inputs with expected outputs/tolerances. Commands must match the project; record unverified setup assumptions.
+
+### Ready-to-code and builder contract
+
+Check that source references resolve; requirements map to applicable blueprints and tests; contracts agree; no blocking TBD remains; applicable package readiness is 100%; existing authorization covers the work. Reuse prior approved packages and verified unchanged context, updating only relevant deltas.
+
+The builder reads the package/capsule, implements the steps, verifies expected results and returns acceptance evidence. It does not silently redesign architecture or fill missing rules by guessing. Escalate the affected gap with evidence while continuing independent authorized work.
+
+Finish a usable vertical slice, update the implementation/status/manifest records, and return CLOSED or BLOCKED WITH EVIDENCE. Record actual tests and checks not run. Refinements learned during execution return to the blueprints.
+
+**Measure effectiveness:** clarification requests, rework, acceptance success, deviations and measured effort/cost. Detailed Markdown is a means to reproducibility, not proof of quality by itself.
+
+**Canonical form:** [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package Template]].
