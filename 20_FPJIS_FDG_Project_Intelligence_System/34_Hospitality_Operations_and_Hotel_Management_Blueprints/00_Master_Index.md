@@ -101,6 +101,8 @@ Canonical relationship:
 24. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/23_Multi_Property_Central_Reservation_and_Group_Blueprint|23 Multi-Property Central Reservation and Group]]
 25. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/24_Property_Configuration_and_Administration_Blueprint|24 Property Configuration and Administration]]
 26. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|25 Hotel PMS ↔ FBPOIS Interface Blueprint]]
+27. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|26 Superseded Combined L1 Decision — Preserved History]]
+28. [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/27_Hotel_Room_Readiness_L1B_Vertical_Extension|27 Hotel Room Readiness — L1B Vertical Extension]]
 
 ## Current Status
 
@@ -115,13 +117,25 @@ Canonical relationship:
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → this package.
 
-## First Commercial / Implementation Slice — 2026-10-11
+## Implementation Sequence — Updated 2026-10-12
 
-The complete Hospitality architecture remains preserved, but the preferred L1 slice is:
+The complete Hospitality architecture remains preserved, but it is **not** the first build.
 
-[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|Engineering Operations + Hotel Room Readiness]]
+### L1A — Build the reusable core first
 
-This slice does **not** require replacing an existing hotel PMS. It may begin as a standalone/local room-readiness layer, assisted import, or bounded adapter to an existing PMS.
+[[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|FBPOIS Engineering Operations — Concern-to-Clearance]]
 
-Governing generic standard:
-[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|Architecture Complete, Build Narrow Standard]].
+Build/close gaps → test locally → pilot/sell/use → freeze baseline → improve through traceable patches.
+
+### L1B — Add Hospitality only after the core exists
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/27_Hotel_Room_Readiness_L1B_Vertical_Extension|Hotel Room Readiness — L1B Vertical Extension]]
+
+L1B reuses the accepted engineering engine and adds only room context, Housekeeping and readiness logic. It does **not** require replacing an existing hotel PMS.
+
+The previous combined L1 decision is preserved for history but superseded:
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|Superseded Combined L1 Decision]].
+
+Governing standards:
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|Architecture Complete, Build Narrow]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/16_Exist_First_Enhance_by_Traceable_Patches_Standard|Exist First, Enhance by Traceable Patches]].
