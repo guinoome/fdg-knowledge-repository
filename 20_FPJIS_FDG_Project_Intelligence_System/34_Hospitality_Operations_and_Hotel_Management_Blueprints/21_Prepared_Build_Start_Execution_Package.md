@@ -1,11 +1,25 @@
 ---
 document_id: FPJIS-HOSP-2100
 title: Prepared Hospitality Build-Start Execution Package
-status: Prepared - NOT BUILD AUTHORIZED
+status: Deferred L1B Package - Do Not Start Before FBPOIS L1A Acceptance
 created: 2026-10-07
 ---
 
 # Prepared Build-Start Execution Package
+
+## Sequencing Override — 2026-10-12
+
+This Hospitality build-start package is **deferred**.
+
+Do not start it before the reusable FBPOIS L1A baseline is accepted:
+
+[[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|FBPOIS Engineering Operations — Concern-to-Clearance]].
+
+After L1A is locally accepted/piloted, this package may be revised into the implementation package for:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/27_Hotel_Room_Readiness_L1B_Vertical_Extension|Hotel Room Readiness — L1B]].
+
+The objective is reuse, not rebuilding engineering capability inside Hospitality.
 
 ## A. Task Identity
 
@@ -207,12 +221,12 @@ Stop if:
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this prepared execution package.
 
-## L1 Destination Clarification — 2026-10-11
+## Current Destination — 2026-10-12
 
-This prepared build-start package is the **first foundation work package inside**, not the entirety of, the approved L1 slice:
+This package is now a **future L1B implementation package**, not the first project build.
 
-[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|Engineering Operations + Hotel Room Readiness]].
-
-The complete L1 outcome is room concern → FBPOIS engineering → OOO/OOS/restriction → repair → verification/clearance → Housekeeping → derived Ready.
-
-Do not expand from the foundation directly into full Reservations, Folio, OTA, POS or other H-PMS modules.
+Current sequence:
+1. close and accept FBPOIS L1A Concern-to-Clearance;
+2. freeze that engineering baseline;
+3. then revise/execute this package only for Room + Housekeeping + Readiness integration;
+4. do not implement Reservations, Folio, OTA, POS or other H-PMS modules unless separately promoted.
