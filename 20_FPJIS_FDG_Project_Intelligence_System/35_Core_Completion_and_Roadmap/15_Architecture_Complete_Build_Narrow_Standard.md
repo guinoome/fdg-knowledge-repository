@@ -215,22 +215,33 @@ If **no** to all:
 - autonomous procurement;
 - predictive project control.
 
-### Hospitality
+### Hospitality / FBPOIS Sequence
 
-**L1**
-- Engineering Operations + Hotel Room Readiness.
+**L1A — Reusable Core**
+- FBPOIS Engineering Operations: Concern-to-Clearance.
+- Build/close only the minimum reusable chain: concern → assignment/work → restriction/OOO/OOS where needed → evidence → verification → clearance/closeout → attention/report.
+- Reuse existing FWIS/FMIS implementation rather than rebuilding completed capability.
+
+**L1B — First Vertical Extension**
+- Hotel Room Readiness.
+- Add room context + Housekeeping + arrival/occupancy timing around the accepted L1A engineering core.
+- Do not bundle full H-PMS.
 
 **L2**
-- reservations/front-office essentials where validated.
+- next evidence-driven Hospitality capability, potentially bounded PMS integration, guest request/service recovery, Housekeeping expansion or front-office essentials.
 
 **L3**
-- folio/night audit, F&B, distribution as dictated by product direction and evidence.
+- folio/night audit, F&B, distribution only when validated.
 
 **L4**
 - multi-property/enterprise expansion.
 
 **L5**
 - autonomous revenue optimization/predictive guest operations.
+
+## Patch Evolution
+
+After the first bounded capability is locally accepted, enhancements should follow [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/16_Exist_First_Enhance_by_Traceable_Patches_Standard|Exist First, Enhance by Traceable Patches Standard]] rather than reopening the entire architecture.
 
 ## Deployment Rule
 
