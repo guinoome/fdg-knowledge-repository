@@ -289,16 +289,24 @@ Recommended first-payout sequence:
 
 This opportunity family should inherit the same rule as the rest of the portfolio: benchmark feature breadth is not build authorization.
 
-## 15. Hospitality L1 promotion — 2026-10-11
+## 15. FBPOIS L1A → Hospitality L1B sequence — 2026-10-12
 
-Hospitality now has a preferred first narrow product/operations slice:
+The preferred first reusable software/operations slice is now:
 
-[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|FDG Engineering Operations + Hotel Room Readiness]].
+[[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|FDG Engineering Operations — Concern-to-Clearance]].
 
-Commercial principle:
-- do not require replacement of the hotel's existing PMS;
-- solve Room Readiness + Engineering coordination first;
-- validate with a professional toolkit, managed service, local app or department pilot;
-- add broader H-PMS capability only when real usage reveals the next bottleneck.
+This is intentionally cross-industry and may serve hotels/resorts, malls, casinos, offices, condominiums, hospitals, schools, factories, warehouses, commercial buildings and plant/utility spaces.
 
-Its formal first-payment friction score should be reassessed before campaign launch rather than inherited from the full Hospitality platform.
+Commercial sequence:
+1. make Concern-to-Clearance exist and work locally;
+2. pilot/sell/use it;
+3. log improvements as specific patches;
+4. freeze/maintain the reusable core;
+5. then add the first hospitality vertical extension:
+   [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/27_Hotel_Room_Readiness_L1B_Vertical_Extension|Hotel Room Readiness — L1B]];
+6. do not require replacement of the hotel's existing PMS;
+7. let real bottlenecks determine subsequent capability promotion.
+
+The prior combined Engineering Operations + Hotel Room Readiness L1 decision is superseded but preserved in repository history.
+
+Formal first-payment friction scoring for L1A and L1B should be performed separately before campaign launch.
