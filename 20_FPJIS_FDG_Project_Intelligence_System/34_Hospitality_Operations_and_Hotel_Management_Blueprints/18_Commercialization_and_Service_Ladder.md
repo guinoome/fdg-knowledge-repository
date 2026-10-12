@@ -225,22 +225,44 @@ Build the smallest connected capability that a real property validates.
 
 > **Knowledge path:** [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/00_Master_Index|Hospitality Master Index]] → this document.
 
-## L1 Commercial Slice Decision — 2026-10-11
+## L1 Sequence Decision — Updated 2026-10-12
 
-The preferred first software/operational slice is now:
+Do not start Hospitality by building the combined Engineering + Room Readiness product.
 
-[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/26_Engineering_Operations_and_Hotel_Room_Readiness_First_Commercial_Slice|FDG Engineering Operations + Hotel Room Readiness]].
+### L1A — Reusable FBPOIS Core
 
-It combines:
+[[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|FDG Engineering Operations — Concern-to-Clearance]]
+
+Build/close only the reusable engineering chain first:
+
 ```text
-Room
-→ Guest / Front Office / Housekeeping Concern
-→ FBPOIS Engineering
-→ OOO/OOS / Restriction
-→ Repair
-→ Verification / Engineering Clearance
-→ Housekeeping Inspect
-→ READY
+Concern
+→ Assignment / Work
+→ Restriction / OOO/OOS where applicable
+→ Finding / Corrective Action
+→ Evidence
+→ Verification
+→ Clearance / Closeout
+→ Attention / Report
 ```
 
-This can be sold/piloted without a full FDG H-PMS and can coexist with an incumbent PMS through manual, CSV or later API context exchange.
+Then test locally, pilot/sell/use, freeze the baseline and enhance it through traceable patches.
+
+### L1B — Hospitality Extension
+
+Only after L1A exists and is accepted:
+
+[[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/27_Hotel_Room_Readiness_L1B_Vertical_Extension|Hotel Room Readiness — L1B]]
+
+Add:
+```text
+Room Context
++ Housekeeping
++ Arrival / Occupancy Timing
++ Accepted FBPOIS Engineering Clearance
+→ READY / NOT READY
+```
+
+This may coexist with the hotel's incumbent PMS through standalone, CSV/manual or later API integration.
+
+The previous combined L1 document is preserved as a superseded decision record.
