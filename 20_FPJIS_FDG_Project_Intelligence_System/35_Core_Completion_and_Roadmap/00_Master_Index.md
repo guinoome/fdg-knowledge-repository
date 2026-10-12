@@ -59,6 +59,8 @@ This percentage measures the generic blueprint framework—not FPJIS software im
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/12_FPJIS_Update_Log|12 — FPJIS Update Log]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/13_FPJIS_Roadmap_Percentage_Register|13 — FPJIS Roadmap Percentage Register]]
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/14_FPJIS_Core_Implementation_Backlog|14 — FPJIS Core Implementation Backlog]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|15 — Architecture Complete, Build Narrow Standard]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/16_Exist_First_Enhance_by_Traceable_Patches_Standard|16 — Exist First, Enhance by Traceable Patches Standard]]
 
 ## Generic Missing Blueprint Templates Added
 
@@ -87,10 +89,13 @@ This is the intended compounding loop.
 
 ## Architecture Complete, Build Narrow — 2026-10-11
 
-- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/15_Architecture_Complete_Build_Narrow_Standard|15 — Architecture Complete, Build Narrow Standard]]
-
 Governing rule:
 
 > **The full architecture remains in GitHub from day one. We simply do not build all of it from day one.**
 
 Every project should classify capability as L0 Architecture Only, L1 First-Payout Critical, L2 MVP Critical, L3 Post-MVP Validated, L4 Future/Optional, or L5 Research Only. Future architecture is preserved without automatically entering the active coding package.
+
+
+## Exist First, Enhance Later — 2026-10-12
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/16_Exist_First_Enhance_by_Traceable_Patches_Standard|Exist First, Enhance by Traceable Patches Standard]] requires the smallest useful capability to become a working named baseline first. Later improvements are individually numbered, tested and logged so agents can rework a specific patch without reopening the whole project.
