@@ -8,6 +8,7 @@
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/04_User_Roles_Master_Index|04_User_Roles]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04A_Workflow_Engine/04A_Workflow_Engine_Master_Index|04A_Workflow_Engine]]
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/05_API/05_API_Master_Index|05_API]]
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/00_Master_Index|06_Incremental Release & Patch Governance]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
 
@@ -69,3 +70,14 @@ The relationship adds:
 - asset maintenance-readiness handover.
 
 It does not merge FEIS and FBPOIS or transfer facility maintenance-record ownership to FEIS.
+
+
+## First Reusable Productized Slice — 2026-10-12
+
+The first narrow FBPOIS baseline is:
+
+[[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|FDG Engineering Operations — Concern-to-Clearance]]
+
+Target first baseline: `FBPOIS-L1A-R0.1.0`.
+
+This does **not** mean finishing all of FBPOIS. It composes the minimum reusable chain from existing FWIS/FM​IS knowledge and implementation, freezes a working local baseline, then evolves through [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-PATCH-0000 - Patch Register|traceable patches]].
