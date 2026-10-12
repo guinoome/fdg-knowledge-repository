@@ -1,13 +1,41 @@
 ---
 document_id: FPJIS-HOSP-2600
 title: Engineering Operations and Hotel Room Readiness - First Commercial Slice
-status: Approved L1 Slice Blueprint - Not Build Authorized
+status: Superseded - Do Not Implement as Combined L1
 owner: Francis
 created: 2026-10-11
-classification: L1 First-Payout Critical
+classification: Superseded Decision Record
 ---
 
 # Engineering Operations + Hotel Room Readiness
+
+## Supersession Notice — 2026-10-12
+
+This combined L1 decision is preserved as historical architecture but is **no longer the active implementation sequence**.
+
+Current sequence:
+
+```text
+L1A — FBPOIS Engineering Operations: Concern-to-Clearance
+→ build/close gaps
+→ local test
+→ pilot/sell/use
+→ freeze baseline
+
+THEN
+
+L1B — Hotel Room Readiness
+→ reuse accepted L1A
+→ add room + Housekeeping + readiness
+→ local test
+→ pilot/sell/use
+```
+
+Active references:
+- [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|L1A Concern-to-Clearance]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/27_Hotel_Room_Readiness_L1B_Vertical_Extension|L1B Hotel Room Readiness]]
+
+Do not use this document to authorize a combined implementation.
 
 ## Founder Direction
 
