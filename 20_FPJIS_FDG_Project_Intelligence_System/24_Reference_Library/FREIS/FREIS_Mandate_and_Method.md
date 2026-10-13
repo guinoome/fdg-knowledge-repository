@@ -68,3 +68,8 @@ Use portable Markdown and open schemas, with locally readable evidence manifests
 ## Update record
 
 2026-10-11: Captured Francis's mandate to deeply reverse engineer other projects for future knowledge and projects; extended existing coding package standards. This document is a method and responsibility record, not evidence that any external project has been researched.
+
+
+## Investigations — 2026-10-13
+
+[[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_Public_Research_2026-10-13|Urcoursez MEP public investigation]] and [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_FDG_Applicability_and_Validation_2026-10-13|FDG applicability/validation]] apply this method to engineering learning and task packs. The earlier statement of no researched external project described this mandate at creation; this linked investigation now supplies a dated research record.
