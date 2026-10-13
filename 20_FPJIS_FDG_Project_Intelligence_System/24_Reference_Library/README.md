@@ -55,3 +55,11 @@ Record the intended lesson and the resulting requirement.
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/FREIS_Research_to_Coding_Contract|Research-to-coding contract]] — explicit Markdown architecture and implementation handover for interchangeable agents.
 
 This reference package does not allocate a new numbered system or authorize a software build.
+
+
+## Urcoursez MEP research — 2026-10-13
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_Public_Research_2026-10-13|Public evidence, source register and access gaps]].
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_FDG_Applicability_and_Validation_2026-10-13|FDG reuse decisions, capability backlog and AHU validation proposal]].
+
+Public marketing is retained as reference evidence; original FDG adaptations remain proposed.
