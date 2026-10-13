@@ -58,3 +58,8 @@ Instead:
 This branch is an integration and capability-mapping layer. It does not absorb or replace future deep discipline branches.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS]] → this branch
+
+
+## External reference learning — Urcoursez, 2026-10-13
+
+[[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_Public_Research_2026-10-13|Public MEP research]] maps an external curriculum and offer without treating its claims as engineering authority. [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_FDG_Applicability_and_Validation_2026-10-13|Original FDG applicability and validation proposal]] reuses the common Task Pack standard for installation, controls, commissioning and handover; no separate discipline operating system is introduced. Technical adoption awaits project-specific source validation and review.
