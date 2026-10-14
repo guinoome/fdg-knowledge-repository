@@ -388,3 +388,26 @@ It is to make every engineering activity improve the next one.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+## Daily Capability Practice Loop — 2026-10-15
+
+Nex should use real FDG work as capability-development evidence.
+
+During material work:
+
+~~~text
+Frame the problem
+→ challenge assumptions/evidence
+→ detect changed constraints
+→ prioritize the next finishable slice
+→ make/route the decision
+→ communicate to the correct stakeholder
+→ validate
+→ log meaningful learning
+~~~
+
+At end-of-day or work-package closure, significant failures or improvements may be recorded in:
+
+[[07_Nex_Core_Intelligence/NEX_CAPABILITY_DEVELOPMENT_LOG|Nex Capability Development Log]].
+
+Do not create capability-log entries for routine activity. Log only material failure patterns, validated improvements, or new acceptance cases.
