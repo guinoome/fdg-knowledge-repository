@@ -168,3 +168,20 @@ This extension preserves FEIP-STD-003, 004 and 010. FEIS owns engineering mainte
 
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]] — simplified Plan / Estimate / Execute / Track / Document experience projection over the full Construction Management lifecycle.
 - [[08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path|Construction Toolkit → Full Platform Commercial Upgrade Path]] — governed template/toolkit entry product with migration path to the full structured project operating system.
+
+## QTO & Drawing Measurement Intelligence Extension — 2026-10-14
+
+FEIS now includes a canonical multidiscipline quantity-takeoff and drawing-measurement capability branch:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/00_QTO_and_Drawing_Measurement_Intelligence_Master_Index|FDG Engineering QTO & Drawing Measurement Intelligence]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0000 - FDG Engineering QTO Architecture|FDG Engineering QTO Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0001 - Measurement Calibration Geometry and Quantity Data Contract|Measurement / Calibration / Quantity Contract]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0002 - Provenance Evidence Review and Human Authority Standard|Provenance / Review / Human Authority]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0004 - Drawing Intelligence Sheet Graph Symbol and Schedule Extraction|Drawing Relationship Graph & Schedule Intelligence]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract|Construction OS Quantity-Lineage Contract]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-RSCH-0001 - OpenTakeoff Benchmark Extraction and FDG Gap Analysis|OpenTakeoff Benchmark Extraction]]
+- [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0008 - L1 Exist First Implementation Blueprint|QTO L1 Exist-First Blueprint]]
+
+Boundary: QTO is a FEIS capability pack. It is not the Construction OS. Construction OS consumes governed quantities/BOQ lineage while QTO retains drawing, calibration, geometry, provenance and technical review authority.
+
+Implementation rule: independently authored FDG kernel; no upstream AGPL source import without explicit FLIS/legal and technical authorization.
