@@ -429,3 +429,25 @@ Specify → Install → Fail / Perform → Improve Design and Asset Standards
 ```
 
 Learning artifacts must reference their source evidence and applicable context so local experience is not generalized beyond what the evidence supports.
+
+## QTO Quantity Lineage Extension — 2026-10-14
+
+Canonical QTO lineage is defined in:
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0001 - Measurement Calibration Geometry and Quantity Data Contract|Measurement / Calibration / Quantity Data Contract]]
+and
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract|Construction OS Integration Contract]].
+
+A material project quantity should be traceable through:
+
+```text
+Source Drawing + Revision
+→ Sheet/View
+→ Calibration
+→ Geometry / Count
+→ Quantity Item
+→ Review / Approval
+→ BOQ Snapshot
+→ Budget / Procurement / Progress / Billing references
+```
+
+Unknown scale/unit, superseded drawing, duplicate measurement, or unresolved item assignment must be surfaced rather than converted into authoritative quantity silently.
