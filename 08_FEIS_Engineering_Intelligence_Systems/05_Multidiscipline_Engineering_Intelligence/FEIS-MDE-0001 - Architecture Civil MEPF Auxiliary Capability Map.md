@@ -422,3 +422,13 @@ Each review should seek verified common practice while keeping standards, code r
 - [[13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module|FRCIM]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/00_Multidiscipline_Engineering_Intelligence_Master_Index|MDE Master Index]] → this document
+
+## Shared QTO Kernel — 2026-10-14
+
+Architectural, Civil, Mechanical, Electrical, Plumbing, Fire Protection and Auxiliary/ELV quantity workflows shall reuse one canonical measurement kernel:
+
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0005 - Multidiscipline QTO Semantics and Trade Capability Profiles|Multidiscipline QTO Semantics & Trade Profiles]].
+
+The universal kernel owns calibration, geometry/count, quantity, provenance and review. Discipline packs define what is measured, unit/basis rules, schedule/symbol families, item taxonomy, evidence requirements and qualified review authority.
+
+Do not create one independent takeoff engine per profession.
