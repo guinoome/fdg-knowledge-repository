@@ -169,3 +169,24 @@
 ## 2026-09-30 architecture review addendum
 
 [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|Intelligence expansion backlog]] prioritizes capability evidence, diagnostic reasoning, uncertainty, safety assurance and controlled learning. It connects to [[10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30|the proposed CORE execution contract]] and [[10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30|28 acceptance cases]].
+
+## Adaptive Reasoning & Execution Capability — 2026-10-15
+
+New capability-development standards:
+
+- [[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_REASONING_AND_EXECUTION_CAPABILITY_STANDARD|NEX-STD-092 — Adaptive Reasoning & Execution Capability Standard]]
+- [[07_Nex_Core_Intelligence/NEX_CORE_SIX_CAPABILITY_DEVELOPMENT_SCORECARD|NEX-STD-093 — Six-Capability Development Scorecard]]
+- [[07_Nex_Core_Intelligence/NEX_CAPABILITY_DEVELOPMENT_LOG|Nex Capability Development Log]]
+
+These operationalize six capability areas for Nex:
+
+~~~text
+Problem Solving
+Critical Thinking
+Adaptability
+Time / Priority Management
+Decision Making
+Human / Stakeholder Intelligence
+~~~
+
+The capability system is evidence-based. Numeric maturity scores must not be invented from documentation alone.
