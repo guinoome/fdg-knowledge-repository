@@ -64,9 +64,10 @@ The canonical QTO dataset is the source of truth. Excel, PDF, marked-up drawings
 10. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0008 - L1 Exist First Implementation Blueprint|L1 Exist-First Blueprint]]
 11. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0009 - QTO Workspace and Human Agent Review Experience|QTO UX / Review Experience]]
 12. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0010 - Scope Requirement Coverage RFI and Revision Control Standard|Scope / Coverage / RFI / Revision Control]]
-13. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-PATCH-0000 - Patch Register|Patch Register]]
-14. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-PATCH-TEMPLATE|Patch Template]]
-15. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0900 - Agent Build Handover|Agent Build Handover]]
+13. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0011 - Cross FEIS Drawing Measurement and Provenance Reuse Contract|Cross-FEIS Reuse Contract]]
+14. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-PATCH-0000 - Patch Register|Patch Register]]
+15. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-PATCH-TEMPLATE|Patch Template]]
+16. [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0900 - Agent Build Handover|Agent Build Handover]]
 
 ## Prior FDG Decisions Consolidated
 
