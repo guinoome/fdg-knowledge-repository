@@ -97,3 +97,23 @@ Baseline
 Numeric capability scores are intentionally NOT_BASELINED until sufficient real-case evidence is sampled.
 
 The next maturity step is to score real FDG work rather than assign speculative percentages.
+
+### Validation Pack Added
+
+- [[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_CAPABILITY_ACCEPTANCE_CASES|Nex Adaptive Capability Acceptance Cases]]
+
+Initial controlled cases cover:
+- symptom vs root problem;
+- vendor/marketing claims;
+- provider/tool failure;
+- changing requirements;
+- oversized coding sessions;
+- competing priorities;
+- reversible vs hard-to-reverse decisions;
+- authority boundaries;
+- technical disagreement;
+- audience-specific communication;
+- repository contradictions;
+- combined FPJIS/FMCIS execution.
+
+These cases provide the first governed mechanism for testing the capability standard.
