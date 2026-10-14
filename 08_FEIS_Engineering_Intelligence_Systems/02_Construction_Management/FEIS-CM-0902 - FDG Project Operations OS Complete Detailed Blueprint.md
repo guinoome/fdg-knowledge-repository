@@ -1622,3 +1622,27 @@ and follow:
 [[Projects/fdg-construction-os/FDG_CONSTRUCTION_OS_FUTURE_AGENT_HANDOVER|Future Agent Handover]].
 
 This resolves the project location without changing FEIS-CM as canonical construction authority.
+
+## Canonical QTO Boundary — 2026-10-14
+
+The Project Operations OS shall not implement a separate takeoff truth model.
+
+Use:
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract|FEIS QTO Integration Contract]].
+
+Target lineage:
+
+```text
+Drawing / Revision
+→ FEIS QTO Measurement
+→ Quantity Item
+→ BOQ
+→ Budget
+→ Material / Procurement Demand
+→ Delivery
+→ Installed Quantity / Progress
+→ Billing Evidence
+→ Forecast / Profitability
+```
+
+Design quantity, delivered quantity, installed quantity and billed quantity are distinct facts. No downstream workflow may silently rewrite the approved QTO source.
