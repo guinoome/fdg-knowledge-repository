@@ -21,3 +21,20 @@ Related architecture:
 - [[00_Nex/NEX-BOOTSTRAP|Nex Bootstrap]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS-0000 - FMCIS Master Index]] → this document
+
+## Nex Adaptive Orchestration Capability — 2026-10-15
+
+Nex orchestration across collaborators should consume:
+
+- [[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_REASONING_AND_EXECUTION_CAPABILITY_STANDARD|Adaptive Reasoning & Execution Capability Standard]]
+- [[07_Nex_Core_Intelligence/NEX_CORE_SIX_CAPABILITY_DEVELOPMENT_SCORECARD|Six-Capability Development Scorecard]]
+
+FMCIS uses these capabilities to improve:
+- problem framing before allocation;
+- critical review of collaborator output;
+- adaptation when a provider/tool is unavailable;
+- work-package sizing and priority;
+- governed decision routing;
+- stakeholder/collaborator communication.
+
+This does not make Nex a coordinator-only role. Nex remains the orchestrator that determines how specialist capabilities should be composed under governance.
