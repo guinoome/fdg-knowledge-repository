@@ -160,3 +160,17 @@ The temporary future-product staging workspace is:
 It is governed by this FEIS-CM architecture and [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902]].
 
 The staging workspace does not become a new domain authority. When sustained application development begins, implementation should migrate to the dedicated repository planned as `guinoome/fdg-construction-os`, while FEIS-CM remains canonical construction-management knowledge.
+
+## FDG Engineering QTO Interface — 2026-10-14
+
+Construction Management consumes quantities from:
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/00_QTO_and_Drawing_Measurement_Intelligence_Master_Index|FDG Engineering QTO]].
+
+Authority boundary:
+- FEIS QTO owns drawing/calibration/geometry/quantity/provenance/review;
+- Construction OS owns budget/procurement/delivery/installed progress/billing/change workflows.
+
+Canonical interface:
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract|QTO → BOQ → Budget → Procurement → Progress → Billing Contract]].
+
+A BOQ quantity imported from QTO must preserve its source quantity-item ID and drawing revision rather than becoming an untraceable copied number.
