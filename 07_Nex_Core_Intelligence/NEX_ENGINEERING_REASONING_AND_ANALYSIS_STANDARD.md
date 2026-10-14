@@ -487,3 +487,33 @@ It is the ability to produce reliable reasoning.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+## Six-Capability Reasoning Integration — 2026-10-15
+
+This reasoning standard is extended by:
+
+[[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_REASONING_AND_EXECUTION_CAPABILITY_STANDARD|NEX-STD-092 — Adaptive Reasoning & Execution Capability Standard]].
+
+For complex work, reasoning should explicitly combine:
+
+~~~text
+Problem Solving
+→ define/decompose the real problem
+
+Critical Thinking
+→ test evidence, assumptions, contradictions and uncertainty
+
+Adaptability
+→ preserve the objective while changing the method when evidence/constraints change
+
+Time / Priority Management
+→ choose the highest-value finishable next slice
+
+Decision Making
+→ compare options, authority, risk and reversibility
+
+Human / Stakeholder Intelligence
+→ communicate and coordinate the decision effectively
+~~~
+
+This supplements rather than replaces the existing Understand → Decompose → Analyze → Compare → Decide → Validate → Learn model.
