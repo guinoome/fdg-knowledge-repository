@@ -261,3 +261,14 @@ A document-intelligence implementation is not acceptable unless it can demonstra
 - [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint|Workbench Upgrade Blueprint]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index|Construction Management]] → this document
+
+## QTO Drawing Relationship Graph — 2026-10-14
+
+Construction document intelligence may feed the canonical QTO relationship graph:
+
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0004 - Drawing Intelligence Sheet Graph Symbol and Schedule Extraction|Drawing Intelligence / Sheet Graph / Symbol & Schedule Extraction]].
+
+Resolved drawing relationships should preserve source sheet/text/geometry evidence and may remain `Review Required` rather than inventing a schedule/tag match.
+
+Quantity completeness additionally requires:
+[[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0010 - Scope Requirement Coverage RFI and Revision Control Standard|Scope Requirement & Coverage Control]].
