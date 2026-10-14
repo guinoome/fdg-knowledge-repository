@@ -190,3 +190,9 @@ Human / Stakeholder Intelligence
 ~~~
 
 The capability system is evidence-based. Numeric maturity scores must not be invented from documentation alone.
+
+Additional validation pack:
+
+- [[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_CAPABILITY_ACCEPTANCE_CASES|Nex Adaptive Capability Acceptance Cases]]
+
+This pack converts the six capability areas into repeatable pass/fail cases so development can be validated rather than merely described.
