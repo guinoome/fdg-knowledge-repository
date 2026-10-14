@@ -408,3 +408,32 @@ Nex succeeds when FDG becomes more capable without depending on Nex.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+## Six-Capability Maturity Extension — 2026-10-15
+
+Nex performance assessment now includes the six-capability scorecard:
+
+[[07_Nex_Core_Intelligence/NEX_CORE_SIX_CAPABILITY_DEVELOPMENT_SCORECARD|NEX-STD-093 — Six-Capability Development Scorecard]].
+
+Capabilities:
+
+- Problem Solving
+- Critical Thinking
+- Adaptability
+- Time / Priority Management
+- Decision Making
+- Human / Stakeholder Intelligence
+
+Each is scored independently from 0–5 only when sufficient evidence exists.
+
+Do not average away a critical weakness.
+
+If evidence is insufficient, use:
+
+~~~text
+NOT_BASELINED
+~~~
+
+rather than assign a speculative score.
+
+The purpose is targeted capability improvement, not self-ranking.
