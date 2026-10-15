@@ -2443,6 +2443,76 @@
       "expectedSha": "4ab65e0c54a383c0007b7d98e101ba5cf3e16a32",
       "lines": 24,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/Checklists/README.md",
+      "sha": "f7833a8aa1b4057c5d39f5c116d064454b43cc24",
+      "expectedSha": "f7833a8aa1b4057c5d39f5c116d064454b43cc24",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/Delivery_Workflows/README.md",
+      "sha": "b6714912636e05f72a593d4c66bdd194fd12261a",
+      "expectedSha": "b6714912636e05f72a593d4c66bdd194fd12261a",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/FSvIS-DEL-0001 - Service Delivery Framework.md",
+      "sha": "e3e6916bd65e42770e1de93dec9e8a28d542fcde",
+      "expectedSha": "e3e6916bd65e42770e1de93dec9e8a28d542fcde",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/FSvIS-DEL-0002 - Service Engagement Lifecycle.md",
+      "sha": "61b8fd48ffdca69c9d37a7d0fd20048e1351b265",
+      "expectedSha": "61b8fd48ffdca69c9d37a7d0fd20048e1351b265",
+      "lines": 36,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/FSvIS-DEL-0003 - Handover and Closeout Standard.md",
+      "sha": "d1f5cbc03e3171c0e0291ed181bedb91299c3d44",
+      "expectedSha": "d1f5cbc03e3171c0e0291ed181bedb91299c3d44",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/Handover/README.md",
+      "sha": "784e9ea681b48080aafa96b4335eb7af322fbfb3",
+      "expectedSha": "784e9ea681b48080aafa96b4335eb7af322fbfb3",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/Service_Closeout/README.md",
+      "sha": "bed4cddd509a793ba8a30aa5d4915962c8fc64ea",
+      "expectedSha": "bed4cddd509a793ba8a30aa5d4915962c8fc64ea",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/05_Service_Delivery/Standard_Operating_Procedures/README.md",
+      "sha": "bbe4dbdde495d9a1bc6b2bd5cf55a7eb9f4575df",
+      "expectedSha": "bbe4dbdde495d9a1bc6b2bd5cf55a7eb9f4575df",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/Acceptance_Criteria/README.md",
+      "sha": "6577607bc2148dcc960c5da989247824ea139159",
+      "expectedSha": "6577607bc2148dcc960c5da989247824ea139159",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/FSvIS-QA-0001 - Service Quality Assurance Framework.md",
+      "sha": "fcb1cad06c48d89d48d1cd297606aaefd9dcb4e4",
+      "expectedSha": "fcb1cad06c48d89d48d1cd297606aaefd9dcb4e4",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
