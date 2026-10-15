@@ -2583,6 +2583,76 @@
       "expectedSha": "04f6d2478755d7710c4707647adaa7f7adb48418",
       "lines": 23,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/Performance_Benchmarks/README.md",
+      "sha": "e1722dfbd62582f99f4e2cd0394df4c812f13c98",
+      "expectedSha": "e1722dfbd62582f99f4e2cd0394df4c812f13c98",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/Quality_Performance/README.md",
+      "sha": "81801b2cd7234f87f82e277e5cc641e70e1aab72",
+      "expectedSha": "81801b2cd7234f87f82e277e5cc641e70e1aab72",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/Service_KPIs/README.md",
+      "sha": "67741646f050a698278f3c0eaddb93584e3f92dd",
+      "expectedSha": "67741646f050a698278f3c0eaddb93584e3f92dd",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/Cost_Models/README.md",
+      "sha": "4d37db7a53d58655bc9d4d14411804aa3012a8ca",
+      "expectedSha": "4d37db7a53d58655bc9d4d14411804aa3012a8ca",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/FSvIS-ECO-0001 - Service Economics Framework.md",
+      "sha": "e98f9f17f53fbe8b391e97c85cc641d2818fb125",
+      "expectedSha": "e98f9f17f53fbe8b391e97c85cc641d2818fb125",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/FSvIS-ECO-0002 - Cost Pricing and Margin Model.md",
+      "sha": "07d71774313ee7cd8164754c6fd2a71fe6def9f6",
+      "expectedSha": "07d71774313ee7cd8164754c6fd2a71fe6def9f6",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/Margin_Analysis/README.md",
+      "sha": "dcf9c7e9c14ce07b626d5767554a7b07c57b01c7",
+      "expectedSha": "dcf9c7e9c14ce07b626d5767554a7b07c57b01c7",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/Pricing_Intelligence/README.md",
+      "sha": "8859cd1d3c4c474e775d8810d3276f92d319932e",
+      "expectedSha": "8859cd1d3c4c474e775d8810d3276f92d319932e",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/Resource_Requirements/README.md",
+      "sha": "756ab8809fc804ce15e254c866b25ecf2e7f8b61",
+      "expectedSha": "756ab8809fc804ce15e254c866b25ecf2e7f8b61",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/08_Service_Economics/Service_Economic_Models/README.md",
+      "sha": "29e37aae3a77cf305b2cb90a7f138ae0e04dba9b",
+      "expectedSha": "29e37aae3a77cf305b2cb90a7f138ae0e04dba9b",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
