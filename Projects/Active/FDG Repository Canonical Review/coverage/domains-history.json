@@ -480,6 +480,83 @@
       "expectedSha": "f98ecc03f166713b17627ece667465d285db3d9d",
       "lines": 32,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Payment_Dashboard.md",
+      "sha": "ce09a43246201a6963c5a51a172987b4230266f2",
+      "expectedSha": "ce09a43246201a6963c5a51a172987b4230266f2",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Reconciliation_Dashboard.md",
+      "sha": "ebb41304f5d5dac214b4b3420d22a6ee1e2167f8",
+      "expectedSha": "ebb41304f5d5dac214b4b3420d22a6ee1e2167f8",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Voucher_Dashboard.md",
+      "sha": "3536a2459119eb378834ba03b55ec18a957ac186",
+      "expectedSha": "3536a2459119eb378834ba03b55ec18a957ac186",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "sha": "e09d62fc9beacfa7fa83c1d13bc4ad4926d916be",
+      "expectedSha": "e09d62fc9beacfa7fa83c1d13bc4ad4926d916be",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Payment_Validation_Standard.md",
+      "sha": "f36fba0f76090279ee3b9b46c06ce825581b9223",
+      "expectedSha": "f36fba0f76090279ee3b9b46c06ce825581b9223",
+      "lines": 33,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/10_FDG_Business_Standards/FBIS_Testing_Standard.md",
+      "sha": "e511225928ae272d8b68ac1774dba1dd2dec1c70",
+      "expectedSha": "e511225928ae272d8b68ac1774dba1dd2dec1c70",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "sha": "8c636307ff0f9863ca056d65f75ab672766a4154",
+      "expectedSha": "8c636307ff0f9863ca056d65f75ab672766a4154",
+      "lines": 48,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-001_FDG_Lean_Service_Business_Build_Blueprint.md",
+      "sha": "6f0f7898f6aea3afe935487980979a71ea21659d",
+      "expectedSha": "6f0f7898f6aea3afe935487980979a71ea21659d",
+      "lines": 186,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint.md",
+      "sha": "0d3c302a5f84cb6d221ba942fc57ec1714fd68f9",
+      "expectedSha": "0d3c302a5f84cb6d221ba942fc57ec1714fd68f9",
+      "lines": 840,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio.md",
+      "sha": "34fa6f6e5cb42ea619c155b12f4601792b7505e6",
+      "expectedSha": "34fa6f6e5cb42ea619c155b12f4601792b7505e6",
+      "lines": 313,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop.md",
+      "sha": "148a3c1154b40c1ae59dc06bed83a5a5a946359d",
+      "expectedSha": "148a3c1154b40c1ae59dc06bed83a5a5a946359d",
+      "lines": 175,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
