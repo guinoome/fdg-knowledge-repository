@@ -1259,6 +1259,123 @@
         "@/components/ui/empty-state",
         "@/components/ui/breadcrumbs"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/setup-notice.tsx",
+      "sha": "bde7da39f37a55e9298a7a1f7ba077e084d33b5e",
+      "expectedSha": "bde7da39f37a55e9298a7a1f7ba077e084d33b5e",
+      "lines": 36,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "@/lib/auth/session"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/avatar.tsx",
+      "sha": "8affab659059fe44b9c396342c119780a8057544",
+      "expectedSha": "8affab659059fe44b9c396342c119780a8057544",
+      "lines": 50,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-avatar",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/breadcrumbs.tsx",
+      "sha": "b2ed559a2caa21482f6153db977a290f7b3bb3ab",
+      "expectedSha": "b2ed559a2caa21482f6153db977a290f7b3bb3ab",
+      "lines": 66,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "lucide-react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/button.tsx",
+      "sha": "dbc2b93f4e6c6d9e5d1f608eef7cbaed7abaec15",
+      "expectedSha": "dbc2b93f4e6c6d9e5d1f608eef7cbaed7abaec15",
+      "lines": 65,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/card.tsx",
+      "sha": "fb5c9ef5902856345491ad5a276857cddc02018b",
+      "expectedSha": "fb5c9ef5902856345491ad5a276857cddc02018b",
+      "lines": 84,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/dropdown-menu.tsx",
+      "sha": "dedb8e9f7878476566e89b0eb7b1368b15dd4e0e",
+      "expectedSha": "dedb8e9f7878476566e89b0eb7b1368b15dd4e0e",
+      "lines": 78,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-dropdown-menu",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/empty-state.tsx",
+      "sha": "148995ee4580d245077520bb93d2218e4fc21e80",
+      "expectedSha": "148995ee4580d245077520bb93d2218e4fc21e80",
+      "lines": 50,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/file-drop.tsx",
+      "sha": "f35b97e9335e7079a9a740c837366f4f3df49733",
+      "expectedSha": "f35b97e9335e7079a9a740c837366f4f3df49733",
+      "lines": 143,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "@/lib/utils",
+        "@/services/upload",
+        "@/services/upload",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/input.tsx",
+      "sha": "a5867ae901a47775b4d17039fcdfbc07a2b56f31",
+      "expectedSha": "a5867ae901a47775b4d17039fcdfbc07a2b56f31",
+      "lines": 20,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@/lib/utils"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1271,6 +1388,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/setup-notice.tsx; 76/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/label.tsx; 85/422 complete"
   }
 }
