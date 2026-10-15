@@ -12,7 +12,7 @@ This repository is not a collection of isolated notes and it is not owned by any
 4. Follow links to the governing standard, domain knowledge, project, evidence, or implementation record.
 
 ## Current Repository Updates
-- **[FDG Cross-Provider Engineering Review Loop](03_Agentic%20Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md)** — governed Claude Code ↔ Codex independent review pattern with a pinned self-bootstrap under `tools/claudex-loop/`.
+- **[FDG Cross-Provider Engineering Review Loop](21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md)** — FMCIS-owned, provider-neutral independent review architecture (Claudex is one adapter); pinned bootstrap remains under `tools/claudex-loop/`.
 
 - **[Nex Pre-OS Runtime Foundation Index](07_Nex_Core_Intelligence/NEX_PRE_OS_RUNTIME_FOUNDATION_INDEX.md)** — proposed runtime bridge documents.
 - **[Repository Audit and Pre-OS Integration Record](docs/2026-09-07-repository-audit-and-preos-merge.md)** — validation evidence, findings, and remaining decisions.
