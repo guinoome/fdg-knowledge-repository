@@ -156,6 +156,45 @@
       "expectedSha": "d48b63b85463988e2f3fda5d4595112c347ff798",
       "lines": 253,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/AUTHORITY_LEVELS.md",
+      "sha": "231aa8fb27f745248a1fd0de5651b63c2367f444",
+      "expectedSha": "231aa8fb27f745248a1fd0de5651b63c2367f444",
+      "lines": 318,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/CONTEXT_REQUIREMENTS.md",
+      "sha": "c430264cc2b29cf58a82cc0f2f8add26bdc4badc",
+      "expectedSha": "c430264cc2b29cf58a82cc0f2f8add26bdc4badc",
+      "lines": 286,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/ENGINEERING_OBJECTIVE.md",
+      "sha": "91344ae5ba843b0230c1e7a1098e80c8d7f6d9d4",
+      "expectedSha": "91344ae5ba843b0230c1e7a1098e80c8d7f6d9d4",
+      "lines": 280,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09.md",
+      "sha": "409465e82eeadfa8442a7dcd1cd248f3982e97c4",
+      "expectedSha": "409465e82eeadfa8442a7dcd1cd248f3982e97c4",
+      "lines": 131,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL.md",
+      "sha": "f55f739a7700a0cca9c2b677f8d907e2464361ad",
+      "expectedSha": "f55f739a7700a0cca9c2b677f8d907e2464361ad",
+      "lines": 953,
+      "status": "FULL_TEXT_READ",
+      "ranges": [
+        "characters 0-17999",
+        "characters 18000-end"
+      ]
     }
   ],
   "failures": [],
@@ -164,6 +203,7 @@
     "This scope contains 202 tracked text files, all Markdown, across numbered roots 00-10 excluding FEIS root 08. Earlier unledgered reading is not counted.",
     "The top-level historical master index includes dated counts and observations that must not be treated as live inventory; its 2026-09-30 addendum labels new proposals as additions, not approved replacements.",
     "NEX-STD-006 Knowledge Governance Framework explicitly has Draft status despite constitutional framing; Approved documents and historical index prose reference it. Presence is not approval. Approved NEX-STD-002/-003/-004/-005 have blank effective and review dates.",
-    "Identity Model is currently NEX-STD-123 v1.0.1, with explicit 2026-08-29 reassignment; old collision warnings preserved elsewhere are historical. USER.md asserts Professional Mechanical Engineer (PME), which must be reconciled with verified credentials before external professional use."
+    "Identity Model is currently NEX-STD-123 v1.0.1, with explicit 2026-08-29 reassignment; old collision warnings preserved elsewhere are historical. USER.md asserts Professional Mechanical Engineer (PME), which must be reconciled with verified credentials before external professional use.",
+    "Architecture Compiler Protocol is Active Operating Instruction effective 2026-10-06 with sequential 2026-10-11 clarifications. Current Compiler–Builder–Auditor Contract supersedes Astra-specific selection wording, requires actual identities and independent top-tier audit before accepted coding package. CFO/CMO/customer-service profiles are design-only Draft, uncommissioned."
   ]
 }
