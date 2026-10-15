@@ -1189,6 +1189,41 @@
       "expectedSha": "9251962e45c73a853eb530415cff12a183c9d9c6",
       "lines": 51,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/10_FDG_CORE_Intelligence_Master_Index.md",
+      "sha": "fbce81b9e43cddafd3ddeeb9f88470ea0fa1927f",
+      "expectedSha": "fbce81b9e43cddafd3ddeeb9f88470ea0fa1927f",
+      "lines": 59,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD.md",
+      "sha": "81f210551e951c220ad21066da9a05faa4d731c5",
+      "expectedSha": "81f210551e951c220ad21066da9a05faa4d731c5",
+      "lines": 264,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-002_CALCULATION_ENGINE_STANDARD.md",
+      "sha": "b5afff189c1cb4312d13ba16fbddf273811a0f4c",
+      "expectedSha": "b5afff189c1cb4312d13ba16fbddf273811a0f4c",
+      "lines": 426,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-003_OPTIMIZATION_ENGINE_STANDARD.md",
+      "sha": "c4e7d9f7e033677d57275aa788bdde0a916ed4b8",
+      "expectedSha": "c4e7d9f7e033677d57275aa788bdde0a916ed4b8",
+      "lines": 418,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-004_REVIEW_AND_COMPLIANCE_ENGINE_STANDARD.md",
+      "sha": "96673cf7a1f35f98a9c749dc6ac6d879856a5a22",
+      "expectedSha": "96673cf7a1f35f98a9c749dc6ac6d879856a5a22",
+      "lines": 423,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
