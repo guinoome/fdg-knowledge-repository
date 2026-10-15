@@ -1103,6 +1103,76 @@
       "expectedSha": "048e878dc7a95138fd3dc2840701817981f38c74",
       "lines": 56,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/05_Voucher_Intelligence/Discount_Rules.md",
+      "sha": "d98a5a891fb1d411f0ae236e96ca8f9eff6a1917",
+      "expectedSha": "d98a5a891fb1d411f0ae236e96ca8f9eff6a1917",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/05_Voucher_Intelligence/Voucher_Abuse_Controls.md",
+      "sha": "1fa03ba757bc89fb4f5189316c3a68537a6de4e4",
+      "expectedSha": "1fa03ba757bc89fb4f5189316c3a68537a6de4e4",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/05_Voucher_Intelligence/Voucher_Intelligence.md",
+      "sha": "6ec71d122393da3ccf97098ad501f1a8e8b29636",
+      "expectedSha": "6ec71d122393da3ccf97098ad501f1a8e8b29636",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/05_Voucher_Intelligence/Zero_Value_Order.md",
+      "sha": "2c02de7203ca3197b7b856db9229e809b80cff5e",
+      "expectedSha": "2c02de7203ca3197b7b856db9229e809b80cff5e",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "sha": "50609936ffc8c71e0a636dc9e5a34fc29b681f20",
+      "expectedSha": "50609936ffc8c71e0a636dc9e5a34fc29b681f20",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/06_Customer_Commercial_Intelligence/Customer_Commercial_Intelligence.md",
+      "sha": "f84313d791f1fde6fa950240c0d7da6747e7b0dc",
+      "expectedSha": "f84313d791f1fde6fa950240c0d7da6747e7b0dc",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/06_Customer_Commercial_Intelligence/Customer_Value.md",
+      "sha": "2e66cf67211acd8416dc7d4a876a20327be63787",
+      "expectedSha": "2e66cf67211acd8416dc7d4a876a20327be63787",
+      "lines": 15,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "sha": "a99df2a0bd1699e4e68a698c95a3c4b64ccd57a8",
+      "expectedSha": "a99df2a0bd1699e4e68a698c95a3c4b64ccd57a8",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/07_Sales_Intelligence/Sales_Funnel.md",
+      "sha": "7878b9cfb73ddde8a1b34a59833b1a8a1ac873d8",
+      "expectedSha": "7878b9cfb73ddde8a1b34a59833b1a8a1ac873d8",
+      "lines": 15,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/07_Sales_Intelligence/Sales_Intelligence.md",
+      "sha": "1875d5256c81375568a55242950ebaefdc11af9d",
+      "expectedSha": "1875d5256c81375568a55242950ebaefdc11af9d",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
