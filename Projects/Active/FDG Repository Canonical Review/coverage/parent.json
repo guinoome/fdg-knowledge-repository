@@ -1056,10 +1056,91 @@
       "characters": 20382,
       "status": "FULL_TEXT_READ",
       "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/2026-09-07-repository-audit-and-preos-merge.md",
+      "sha": "84dcdc499e321d129df86b5121d4f59c047999db",
+      "expectedSha": "84dcdc499e321d129df86b5121d4f59c047999db",
+      "bytes": 8117,
+      "lines": 73,
+      "characters": 8111,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-08-29-pre-github-baseline/.gitkeep",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "expectedSha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "bytes": 1,
+      "lines": 2,
+      "characters": 1,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-08-29-pre-github-baseline/Knowledge Graph Parent Trace Report.md",
+      "sha": "c9613999701025ce2bdfc2d5b671d4e95e80d95b",
+      "expectedSha": "c9613999701025ce2bdfc2d5b671d4e95e80d95b",
+      "bytes": 3285,
+      "lines": 55,
+      "characters": 3279,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-08-29-pre-github-baseline/Pre-GitHub Repository Architecture and Integrity Baseline.md",
+      "sha": "40849ddb6d884e055673f176f105f52d6791e607",
+      "expectedSha": "40849ddb6d884e055673f176f105f52d6791e607",
+      "bytes": 15839,
+      "lines": 221,
+      "characters": 15811,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW.md",
+      "sha": "3feaf51bc51ef09ebb04a119b34cb1bec0d85413",
+      "expectedSha": "3feaf51bc51ef09ebb04a119b34cb1bec0d85413",
+      "bytes": 12590,
+      "lines": 119,
+      "characters": 12576,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/VERIFICATION.md",
+      "sha": "0a1d62967313d84f3e0c3ca7e2926f7b0c80a3e3",
+      "expectedSha": "0a1d62967313d84f3e0c3ca7e2926f7b0c80a3e3",
+      "bytes": 5909,
+      "lines": 74,
+      "characters": 5897,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/engineering-reproductions.json",
+      "sha": "dbe799f655a8e5caf0d1494c289ff637639dfcc8",
+      "expectedSha": "dbe799f655a8e5caf0d1494c289ff637639dfcc8",
+      "bytes": 3232,
+      "lines": 102,
+      "characters": 3232,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/navigation-corrections.json",
+      "sha": "43a23bb7d6c41cc81b3b8e6595a6f1a26101dbba",
+      "expectedSha": "43a23bb7d6c41cc81b3b8e6595a6f1a26101dbba",
+      "bytes": 114063,
+      "lines": 1928,
+      "characters": 114063,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+      "coverage": "All contiguous character ranges exposed and read"
     }
   ],
   "updatedOn": "2026-10-15",
-  "verifiedFullReadCount": 115,
+  "verifiedFullReadCount": 123,
   "pendingFile": null,
   "notes": [
     "All79 FEIS Markdown documents at the source checkpoint have now been fully read across original and resumed reads; authorizations/status vary. Reading is not runtime/test/deployment verification.",
