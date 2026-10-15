@@ -1694,6 +1694,76 @@
           28186
         ]
       ]
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/12_Security_Standards/FSIS-1200 - Security Standards Master Index.md",
+      "sha": "184e1b125f5cdfe338fd0450e191b27a0c890864",
+      "expectedSha": "184e1b125f5cdfe338fd0450e191b27a0c890864",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/12_Security_Standards/FSIS-1201 - Security Review Checklist.md",
+      "sha": "b3e3e315198375bb3599c69647339bccf75e9ae3",
+      "expectedSha": "b3e3e315198375bb3599c69647339bccf75e9ae3",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/13_Security_Architecture/FSIS-1300 - Security Architecture Master Index.md",
+      "sha": "ee4bf5655c7fce9302b07fa4871fb3cd16442a07",
+      "expectedSha": "ee4bf5655c7fce9302b07fa4871fb3cd16442a07",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/13_Security_Architecture/FSIS-1301 - FDG Trust Boundary Architecture.md",
+      "sha": "7a35eb07cced881d070471e26d12fd3322a0e8fe",
+      "expectedSha": "7a35eb07cced881d070471e26d12fd3322a0e8fe",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/13_Security_Architecture/FSIS-1302 - Knowledge Access Matrix.md",
+      "sha": "098596e7cd2c75179f1f5ef5e61fd01094a77ebd",
+      "expectedSha": "098596e7cd2c75179f1f5ef5e61fd01094a77ebd",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/14_Integration/FSIS-1400 - FDG Security Integration Master Index.md",
+      "sha": "c62528f57f4bbc86bd04d4c6a900aa56d285cded",
+      "expectedSha": "c62528f57f4bbc86bd04d4c6a900aa56d285cded",
+      "lines": 43,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/14_Integration/FSIS-1401 - FDG Knowledge Repository Security Integration.md",
+      "sha": "6e1d6ed10e301dd35ac4764523257cb2b2648ada",
+      "expectedSha": "6e1d6ed10e301dd35ac4764523257cb2b2648ada",
+      "lines": 22,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/14_Integration/FSIS-1402 - Work Package Security Contract.md",
+      "sha": "c17c450318a9f9c0a5c63cced0572a2b068d6bca",
+      "expectedSha": "c17c450318a9f9c0a5c63cced0572a2b068d6bca",
+      "lines": 25,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/15_Roadmap/FSIS-ROADMAP - Security Intelligence Development Roadmap.md",
+      "sha": "87c29ddb247dfd438c2d6de796994947e92b3cd9",
+      "expectedSha": "87c29ddb247dfd438c2d6de796994947e92b3cd9",
+      "lines": 53,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/15_Roadmap/FSIS-ROADMAP-001 - FSIS Implementation Backlog.md",
+      "sha": "c97f6ab3a57c08bf451fded9c8a17a1e2eb83490",
+      "expectedSha": "c97f6ab3a57c08bf451fded9c8a17a1e2eb83490",
+      "lines": 44,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1702,6 +1772,7 @@
     "Binary files inventoried but delegated to parent; no binary reading claim.",
     "Resumed 2026-10-15: complete source text read through connected GitHub fetch_file at pinned checkpoint; proposal/experimental statuses retained as source context, not approval.",
     "Read current FBIS migration/package records: they describe prior local replacement operations and do not authorize new deletion/migration. OLD remains historical source context; financial independence metrics/stage gates/data schema remain proposed or experimental, separate from canonical implementation approval.",
-    "FSIS governance states FDG owner retains ultimate authority over CORE/ecosystem security/exceptional access; whole-repository reading is explicitly owner-authorized here, with no third-party disclosure implied. FSIS standards are read as canonical repository material; this reading task does not enact source-embedded operational instructions."
+    "FSIS governance states FDG owner retains ultimate authority over CORE/ecosystem security/exceptional access; whole-repository reading is explicitly owner-authorized here, with no third-party disclosure implied. FSIS standards are read as canonical repository material; this reading task does not enact source-embedded operational instructions.",
+    "FSIS conflict preserved: integration master knowledge access matrix allows Public read of General standards; FSIS-1302 marks General standards Public '-'. Do not silently reconcile approval/security differences. Backlog unchecked entries are not implemented-control evidence."
   ]
 }
