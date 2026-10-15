@@ -150,26 +150,69 @@
       "lines": 17,
       "characters": 1033,
       "status": "FULL_TEXT_READ"
-    }
-  ],
-  "failures": [],
-  "notes": [
-    "Only content fully exposed to the reading agent is marked FULL_TEXT_READ; this is source reading, not runtime validation.",
-    "Projects/Projects_Master_Index.md was fully read by the parent agent and is not duplicated in this receipt."
-  ],
-  "partial": [
+    },
     {
       "path": "Projects/Active/AI/Engineering-Intelligence-Portal/EIP-Engineering-Intelligence-Portal.html",
       "sha": "a7ea2862e40f36ce66f78c8a66c6ca8052313643",
       "expectedSha": "a7ea2862e40f36ce66f78c8a66c6ca8052313643",
       "characters": 89739,
-      "readCharacterRanges": [
-        [
-          0,
-          44000
-        ]
-      ],
-      "status": "PARTIAL_TEXT_READ"
+      "lines": 1539,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal part 00.md",
+      "sha": "67e681c3a78741f95d7f8c1e0b361a82934fa467",
+      "expectedSha": "67e681c3a78741f95d7f8c1e0b361a82934fa467",
+      "characters": 7513,
+      "lines": 534,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal part 01.md",
+      "sha": "cf9ad555d6ab32e2dde1b0d5643d3b63ed1f7caf",
+      "expectedSha": "cf9ad555d6ab32e2dde1b0d5643d3b63ed1f7caf",
+      "characters": 6841,
+      "lines": 711,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal part 02.md",
+      "sha": "7aea86621dddc0857730d9c1a99545ea4e08abca",
+      "expectedSha": "7aea86621dddc0857730d9c1a99545ea4e08abca",
+      "characters": 6457,
+      "lines": 750,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal part 03.md",
+      "sha": "c05d38cc1f0e5cabada45d99f6749d289de72018",
+      "expectedSha": "c05d38cc1f0e5cabada45d99f6749d289de72018",
+      "characters": 6510,
+      "lines": 666,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal part 04.md",
+      "sha": "cd64b0e108ebc3e6ee0c71eff2b3616a29c69642",
+      "expectedSha": "cd64b0e108ebc3e6ee0c71eff2b3616a29c69642",
+      "characters": 6739,
+      "lines": 678,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal part 05.md",
+      "sha": "967974ad31085fcf501f4dff423a376033e797de",
+      "expectedSha": "967974ad31085fcf501f4dff423a376033e797de",
+      "characters": 6205,
+      "lines": 752,
+      "status": "FULL_TEXT_READ"
     }
-  ]
+  ],
+  "failures": [],
+  "notes": [
+    "Only content fully exposed to the reading agent is marked FULL_TEXT_READ; this is source reading, not runtime validation.",
+    "Projects/Projects_Master_Index.md was fully read by the parent agent and is not duplicated in this receipt.",
+    "EIP HTML completely exposed in contiguous character ranges [0,22000), [22000,44000), [44000,66000), [66000,88000), [88000,89739); read as source only, not executed."
+  ],
+  "partial": []
 }
