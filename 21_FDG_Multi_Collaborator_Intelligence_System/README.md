@@ -45,9 +45,11 @@ Baby Nex uses FMCIS for collaborator coordination while remaining architecturall
 
 ## Cross-provider engineering review
 
-FMCIS now consumes the provider-neutral review pattern defined by the Agentic Framework rather than duplicating it inside FMCIS:
+FMCIS is now the canonical owner of the provider-neutral cross-provider review capability. The Agentic Framework links to FMCIS without duplicating authority:
 
-- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]]
 - [[tools/claudex-loop/README|FDG Claudex Loop Bootstrap]]
 
 Current executable pairing: Claude Code ↔ Codex. The implementation is replaceable; FMCIS owns collaborator coordination, not the external Claudex tool.
+
+Related governance: [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004 Debate Protocol]] · [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005 Loop Termination]] (interim Claudex-derived controls; full designs remain planned).
