@@ -3228,6 +3228,41 @@
       "expectedSha": "e214697d9b6f38625dde40fda15c1070d09d6c3c",
       "lines": 141,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/03_Sharing_Data_Platform_Master_Index.md",
+      "sha": "7104ba855f6e751062ab4834045c7d2e2d1aa492",
+      "expectedSha": "7104ba855f6e751062ab4834045c7d2e2d1aa492",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0000 - Shared Data Platform Architecture.md",
+      "sha": "097c378d9b5fc1eef56e4d7d4eb44f9351f91d60",
+      "expectedSha": "097c378d9b5fc1eef56e4d7d4eb44f9351f91d60",
+      "lines": 370,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0001 - Master Data Architecture.md",
+      "sha": "d10952670446b151afbb8eca1a991c7e2dedb045",
+      "expectedSha": "d10952670446b151afbb8eca1a991c7e2dedb045",
+      "lines": 444,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0002 - Operational Asset Model.md",
+      "sha": "28669fc51b8fbd25d923ab77148e3b612a374ed2",
+      "expectedSha": "28669fc51b8fbd25d923ab77148e3b612a374ed2",
+      "lines": 393,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0003 - Organization & Property Hierarchy.md",
+      "sha": "9699ac34886d80574e1765081250ce1cb0e4230b",
+      "expectedSha": "9699ac34886d80574e1765081250ce1cb0e4230b",
+      "lines": 421,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
