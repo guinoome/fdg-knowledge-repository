@@ -1313,6 +1313,76 @@
       "expectedSha": "7f61d9302e4631fcdf86c8de7398c7f3a6798a08",
       "lines": 198,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "sha": "0a3be857cb031b613b58b821a883cfd7cad1e700",
+      "expectedSha": "0a3be857cb031b613b58b821a883cfd7cad1e700",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/13_Database/FBIS_Core_Entities.md",
+      "sha": "3d681c2df5e10f2a8296acaee1261bfafc3460e4",
+      "expectedSha": "3d681c2df5e10f2a8296acaee1261bfafc3460e4",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/13_Database/FBIS_Data_Architecture.md",
+      "sha": "05593a30ed7fb6d40dfbeae73364c1add73e7266",
+      "expectedSha": "05593a30ed7fb6d40dfbeae73364c1add73e7266",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/14_Security_Audit/FBIS_Audit_Model.md",
+      "sha": "3f9dd0391d932656f0cf34dadd9743a4eb055afe",
+      "expectedSha": "3f9dd0391d932656f0cf34dadd9743a4eb055afe",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/14_Security_Audit/FBIS_Security_and_Audit.md",
+      "sha": "efd99ab70b70869ba7a5e2bc5c2236b459452e18",
+      "expectedSha": "efd99ab70b70869ba7a5e2bc5c2236b459452e18",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "sha": "bae6dc5aae218a748000f1f066cabedeb38abd83",
+      "expectedSha": "bae6dc5aae218a748000f1f066cabedeb38abd83",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/15_Business_Library/15_Business_Library_Master_Index.md",
+      "sha": "265fd27517cadfd959f86c98c5048a22f727d925",
+      "expectedSha": "265fd27517cadfd959f86c98c5048a22f727d925",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/15_Integrations/FBIS_Integration_Map.md",
+      "sha": "19355c3ad3ee78d21a5376717abdeb4f32d95dc9",
+      "expectedSha": "19355c3ad3ee78d21a5376717abdeb4f32d95dc9",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/15_Integrations/Payment_Integration_Strategy.md",
+      "sha": "d774601d888eb46153212590f3c8892356660d31",
+      "expectedSha": "d774601d888eb46153212590f3c8892356660d31",
+      "lines": 25,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/16_Roadmap/FBIS_Future_Modules.md",
+      "sha": "d018187a677733459ba86e58664e76e12bd73be1",
+      "expectedSha": "d018187a677733459ba86e58664e76e12bd73be1",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
