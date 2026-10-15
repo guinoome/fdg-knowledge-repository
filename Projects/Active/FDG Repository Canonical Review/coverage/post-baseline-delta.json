@@ -2,7 +2,7 @@
   "repository": "guinoome/fdg-knowledge-repository",
   "baseline": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
   "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
-  "status": "IN_PROGRESS",
+  "status": "COMPLETE_AT_SOURCE_CHECKPOINT",
   "expectedChangedSourcePaths": 11,
   "documents": [
     {
@@ -28,10 +28,80 @@
       "status": "FULL_TEXT_READ",
       "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
       "lines": 27
+    },
+    {
+      "path": "README.md",
+      "sha": "dad8e53c0f4377f2d9050c183543c8c9bb57ccf9",
+      "expectedSha": "dad8e53c0f4377f2d9050c183543c8c9bb57ccf9",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 180
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/README.md",
+      "sha": "e2bd458f08853a171a2fbce6670295411c7d60df",
+      "expectedSha": "e2bd458f08853a171a2fbce6670295411c7d60df",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 54
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index.md",
+      "sha": "54fb6a8b132efbb11a25f92a94100b283c829516",
+      "expectedSha": "54fb6a8b132efbb11a25f92a94100b283c829516",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 270
+    },
+    {
+      "path": "03_Agentic Framework/03_Agentic Framework_Master_Index.md",
+      "sha": "68e949c640aedd7cd83e3962fbfcb148e3922d3c",
+      "expectedSha": "68e949c640aedd7cd83e3962fbfcb148e3922d3c",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 43,
+      "characters": 2414
+    },
+    {
+      "path": "tools/claudex-loop/README.md",
+      "sha": "aa43b60fa1116e3ccc73733771dd19a7b0e12dca",
+      "expectedSha": "aa43b60fa1116e3ccc73733771dd19a7b0e12dca",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 93,
+      "characters": 3141
+    },
+    {
+      "path": "tools/claudex-loop/UPSTREAM.json",
+      "sha": "ed223603f8e9e8aa6612c7fe1eb6d2cda9f4a797",
+      "expectedSha": "ed223603f8e9e8aa6612c7fe1eb6d2cda9f4a797",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 25,
+      "characters": 785
+    },
+    {
+      "path": "tools/claudex-loop/install.ps1",
+      "sha": "a260872d89636465f0564a44a8edd9e31f6c856c",
+      "expectedSha": "a260872d89636465f0564a44a8edd9e31f6c856c",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 92,
+      "characters": 3254
+    },
+    {
+      "path": "tools/claudex-loop/install.sh",
+      "sha": "a262fac2a25990e3e9e68febb9f324766dec9433",
+      "expectedSha": "a262fac2a25990e3e9e68febb9f324766dec9433",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 57,
+      "characters": 1880
     }
   ],
   "notes": [
     "Tracks non-review source changes after the pinned full-repository baseline.",
-    "New AGENTS/CLAUDE cross-provider loop applies to substantial implementation/migration/security/architecture work; current full-text reading and progress record maintenance does not require installing tools. No local installation or code execution performed."
+    "New AGENTS/CLAUDE cross-provider loop applies to substantial implementation/migration/security/architecture work; current full-text reading and progress record maintenance does not require installing tools. No local installation or code execution performed.",
+    "All 11 non-review changed source files fully read and SHA-matched at source checkpoint. Installer files were read only, not executed. Their destructive replacement of existing named skill directories is source behavior, not authorized execution."
   ]
 }
