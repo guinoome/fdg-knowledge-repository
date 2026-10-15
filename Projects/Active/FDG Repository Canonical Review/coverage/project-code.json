@@ -663,6 +663,113 @@
         "@/services/upload/signed-read",
         "@/lib/config"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/media/upload/route.ts",
+      "sha": "7ed338d076fd5fc18a5febf68750cbe58ba663c4",
+      "expectedSha": "7ed338d076fd5fc18a5febf68750cbe58ba663c4",
+      "lines": 88,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/lib/auth/session",
+        "@/services/media",
+        "@/services/upload"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/memories/[id]/route.ts",
+      "sha": "0d8f70163f131982d7db34d2d1ba39810636810a",
+      "expectedSha": "0d8f70163f131982d7db34d2d1ba39810636810a",
+      "lines": 42,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/lib/auth/session",
+        "@/services/memories",
+        "@/services/upload/signed-read"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/payments/paymongo/webhook/route.ts",
+      "sha": "aba43fc09009df1b64f09d55e41904e92585c079",
+      "expectedSha": "aba43fc09009df1b64f09d55e41904e92585c079",
+      "lines": 40,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/lib/logger",
+        "@/services/commerce"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/pdf/[generationId]/route.ts",
+      "sha": "f678ab3d373d0e48fe14c1233040ca526a8a191f",
+      "expectedSha": "f678ab3d373d0e48fe14c1233040ca526a8a191f",
+      "lines": 49,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/lib/auth/session",
+        "@/services/pdf"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/placeholder/[surface]/[seed]/route.ts",
+      "sha": "19ab0c74f4cb3ae69f00766a6249491868d9567d",
+      "expectedSha": "19ab0c74f4cb3ae69f00766a6249491868d9567d",
+      "lines": 64,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/lib/placeholder-art"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/qr/[slug]/route.ts",
+      "sha": "11ea983470c182eda3518467bfc9494d7dc68d14",
+      "expectedSha": "11ea983470c182eda3518467bfc9494d7dc68d14",
+      "lines": 56,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/features/website-generator/repository",
+        "@/lib/qr",
+        "@/lib/config",
+        "@/lib/env"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/e/[slug]/memories/page.tsx",
+      "sha": "f6bf861aea04a1e362ef5d548291c7908d796ded",
+      "expectedSha": "f6bf861aea04a1e362ef5d548291c7908d796ded",
+      "lines": 56,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "next/link",
+        "@/features/event-memories/components/memory-upload-form",
+        "@/services/memories"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/e/[slug]/memories/wall/page.tsx",
+      "sha": "e01a29f82d57f3b2616ac4e4c5c054001ddf78ed",
+      "expectedSha": "e01a29f82d57f3b2616ac4e4c5c054001ddf78ed",
+      "lines": 72,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "@/features/event-memories/components/live-wall-refresh",
+        "@/services/memories"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -675,6 +782,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/api/media/upload/route.ts; 37/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/e/[slug]/page.tsx; 45/422 complete"
   }
 }
