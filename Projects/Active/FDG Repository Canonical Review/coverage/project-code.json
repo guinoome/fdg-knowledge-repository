@@ -128,6 +128,138 @@
         "@/components/placeholder-module",
         "@/lib/config"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/layout.tsx",
+      "sha": "69cfe97bda9f1cf467e6614179014394db7dce96",
+      "expectedSha": "69cfe97bda9f1cf467e6614179014394db7dce96",
+      "lines": 59,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "@/components/nav/app-shell",
+        "@/lib/config/navigation",
+        "@/lib/config",
+        "@/lib/auth/session",
+        "@/lib/auth/roles",
+        "@/components/configuration-required",
+        "@/lib/logger"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/loading.tsx",
+      "sha": "d97b99c9317e491f114a093f5df29fe65f899bef",
+      "expectedSha": "d97b99c9317e491f114a093f5df29fe65f899bef",
+      "lines": 20,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/components/ui/skeleton"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/page.tsx",
+      "sha": "4697858d3e3916b38b0973d92c10ac92ed9bd10f",
+      "expectedSha": "4697858d3e3916b38b0973d92c10ac92ed9bd10f",
+      "lines": 59,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "next/link",
+        "lucide-react",
+        "@/components/page-header",
+        "@/components/ui/card",
+        "@/lib/config/navigation"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/production/page.tsx",
+      "sha": "59e0da1fdf116de6b125eabf2e7e68eae3526f2f",
+      "expectedSha": "59e0da1fdf116de6b125eabf2e7e68eae3526f2f",
+      "lines": 48,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "lucide-react",
+        "@/lib/auth/require-staff",
+        "@/services/orders",
+        "@/features/production/components/production-board",
+        "@/components/ui/empty-state",
+        "@/components/ui/breadcrumbs",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/promotions/page.tsx",
+      "sha": "3e3970000ca623f06c73e2b69d25480acb05eeb1",
+      "expectedSha": "3e3970000ca623f06c73e2b69d25480acb05eeb1",
+      "lines": 24,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "lucide-react",
+        "@/components/placeholder-module",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/reports/page.tsx",
+      "sha": "7bd41d57983237782130b31c0737644495f31a09",
+      "expectedSha": "7bd41d57983237782130b31c0737644495f31a09",
+      "lines": 71,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/lib/auth/require-staff",
+        "@/services/orders",
+        "@/components/ui/breadcrumbs",
+        "@/lib/config",
+        "@/features/orders/labels",
+        "@/services/orders"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/settings/page.tsx",
+      "sha": "4f065fda04745b1ddd189cd644b920902a25dcca",
+      "expectedSha": "4f065fda04745b1ddd189cd644b920902a25dcca",
+      "lines": 174,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "lucide-react",
+        "@/components/page-header",
+        "@/components/ui/card",
+        "@/lib/config",
+        "@/lib/auth/session"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/templates/page.tsx",
+      "sha": "f930eebc7b97599f398c3084f6c7cc81ed35ef49",
+      "expectedSha": "f930eebc7b97599f398c3084f6c7cc81ed35ef49",
+      "lines": 115,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "lucide-react",
+        "@/components/page-header",
+        "@/components/ui/empty-state",
+        "@/lib/auth/require-staff",
+        "@/lib/config",
+        "@/services/template-assets",
+        "@/features/admin-templates/components/asset-grid",
+        "@/features/admin-templates/components/upload-form",
+        "@/features/admin-templates/components/catalogue-row",
+        "@/features/admin-templates/components/new-template-form",
+        "@/features/admin-templates/catalogue-repository"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -139,6 +271,6 @@
     "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction."
   ],
   "handover": {
-    "nextAction": "Continue codeTodo from app/(dashboard)/admin/layout.tsx; 8/422 complete"
+    "nextAction": "Continue at app/(dashboard)/builder/[id]/[step]/page.tsx; 16/422 complete"
   }
 }
