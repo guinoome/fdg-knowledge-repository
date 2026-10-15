@@ -2961,6 +2961,41 @@
       "expectedSha": "1f0763c4cafffe18e4df3ca52532d72e00b9ead6",
       "lines": 480,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0009 - Room Engineering Status.md",
+      "sha": "670fbef5778fb78a0d3b2b7305122bc24565dff6",
+      "expectedSha": "670fbef5778fb78a0d3b2b7305122bc24565dff6",
+      "lines": 471,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0010 - Workflow Management.md",
+      "sha": "aca6c6d18f6ad06925c0a3cc8f4426a32c584a5f",
+      "expectedSha": "aca6c6d18f6ad06925c0a3cc8f4426a32c584a5f",
+      "lines": 436,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0011 - Utilities Monitoring.md",
+      "sha": "7f7be6a1973244423d0a7f70a737dc0cf5e698b2",
+      "expectedSha": "7f7be6a1973244423d0a7f70a737dc0cf5e698b2",
+      "lines": 543,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0012 - Plant Operations.md",
+      "sha": "9160e38786e580269e4684a2e261c53ef1c08515",
+      "expectedSha": "9160e38786e580269e4684a2e261c53ef1c08515",
+      "lines": 505,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0013 - Incident Management.md",
+      "sha": "e28a3b93d99be9171446e86cdedbc12b9e047bbe",
+      "expectedSha": "e28a3b93d99be9171446e86cdedbc12b9e047bbe",
+      "lines": 551,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
