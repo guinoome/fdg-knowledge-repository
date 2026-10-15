@@ -2065,6 +2065,55 @@
       "expectedSha": "30bb27cd0db423991f84dfb1ff0c5bf2ce0c416a",
       "lines": 30,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/12_Legal_Research_and_Precedents/FLIS-TPL-1201 - Legal Research Note.md",
+      "sha": "552d421acf40fe4654d5b6403e8a0e773bf269b7",
+      "expectedSha": "552d421acf40fe4654d5b6403e8a0e773bf269b7",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/13_Regulatory_Change_Intelligence/FLIS-1300 - Regulatory Change Intelligence.md",
+      "sha": "6578f0372ab18af576d1b8e80f08bf8d5bc567f8",
+      "expectedSha": "6578f0372ab18af576d1b8e80f08bf8d5bc567f8",
+      "lines": 44,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/13_Regulatory_Change_Intelligence/FLIS-TPL-1301 - Regulatory Change Record.md",
+      "sha": "a0670bb5302d05eeec600fdadce7ebf9e251328e",
+      "expectedSha": "a0670bb5302d05eeec600fdadce7ebf9e251328e",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-1400 - Legal Decision and Evidence Register.md",
+      "sha": "35940d4736d60f2d583ec7e158e11c692108ac3c",
+      "expectedSha": "35940d4736d60f2d583ec7e158e11c692108ac3c",
+      "lines": 36,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-TPL-1401 - Legal Decision Record.md",
+      "sha": "ab7e7ee882af3d3d2c2e5e8b8d9d1c7a85388c64",
+      "expectedSha": "ab7e7ee882af3d3d2c2e5e8b8d9d1c7a85388c64",
+      "lines": 33,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/14_Legal_Decision_and_Evidence_Register/FLIS-TPL-1402 - Evidence Record.md",
+      "sha": "63b1698183f591ec6342ce18d823ab2ef9c411b8",
+      "expectedSha": "63b1698183f591ec6342ce18d823ab2ef9c411b8",
+      "lines": 25,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/15_Regulatory_Compliance_Intelligence_Module_Master_Index.md",
+      "sha": "135c9d44452edfe0e6c6c5de8f7feeceb2e73591",
+      "expectedSha": "135c9d44452edfe0e6c6c5de8f7feeceb2e73591",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
