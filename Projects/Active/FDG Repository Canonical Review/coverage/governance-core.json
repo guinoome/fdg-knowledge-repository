@@ -1,7 +1,7 @@
 {
   "repository": "guinoome/fdg-knowledge-repository",
   "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
-  "status": "IN_PROGRESS",
+  "status": "COMPLETE",
   "documents": [
     {
       "path": "00_Nex/00_Master Index.md",
@@ -1378,6 +1378,48 @@
       "expectedSha": "ea484b2b1f9fa04e7a694d072522986a247acf38",
       "lines": 61,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0010 - Engineering Knowledge Graph and Intelligence Evolution.md",
+      "sha": "627f75403b26946395dac0b87b52823eae57fd01",
+      "expectedSha": "627f75403b26946395dac0b87b52823eae57fd01",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0011 - Implementation Roadmap and Acceptance Gates.md",
+      "sha": "6b680cc4fc6ebe7dcc73161e20b93cf65629fa62",
+      "expectedSha": "6b680cc4fc6ebe7dcc73161e20b93cf65629fa62",
+      "lines": 89,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0012 - Anti-Patterns Risks and Architecture Decision Rules.md",
+      "sha": "f9ecc2406d46d1f0e9da296f547e290d2ce69f34",
+      "expectedSha": "f9ecc2406d46d1f0e9da296f547e290d2ce69f34",
+      "lines": 58,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-DISCUSSION-LINEAGE.md",
+      "sha": "6774060fa41cbc92699d8ab88c7d26d727098c95",
+      "expectedSha": "6774060fa41cbc92699d8ab88c7d26d727098c95",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-HANDOVER - Repository Integration Mandate.md",
+      "sha": "eb9c0576e16f0ae92e5d6d2af7f92416fa33b900",
+      "expectedSha": "eb9c0576e16f0ae92e5d6d2af7f92416fa33b900",
+      "lines": 116,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-WIKILINK-MAP - FDG Ecosystem Integration Map.md",
+      "sha": "5f113164452f8c33a52e86e329531909a6863cb9",
+      "expectedSha": "5f113164452f8c33a52e86e329531909a6863cb9",
+      "lines": 50,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1400,6 +1442,19 @@
     "Pre-OS foundation, runtime access policy and execution ledger remain Proposed v0.1; listing an approver does not change their status. NEX-STD-048 contains a dated August 5 graph-linking inventory of 76 files, not current inventory. NEX-STD-060 requires reviewed approval before baseline promotion; read receipts remain evidence of reading, not governance adoption or operational validation.",
     "All 12 FDG Platform Hub standards under root 09 are Draft v1.0 stubs ending at an architecture/model heading, with no substantive architecture after it beyond navigation. They define intent, not approved implementation or operational controls.",
     "Approved CORE standards 001-010 specify deterministic explicit-unit calculations, hard constraints before optimization, Insufficient Evidence compliance status, human final authority, repository context over conversation memory, and surveillance recommendations without autonomous canonical change. CORE-STD-008 ranks validated FDG organizational evidence at Level C, unlike the user's operating instruction's Level A repository source; retain context-specific evidence ladders rather than silently merging them.",
-    "CORE-STD-012 states Stage 1 foundation complete and Stage 2 architecture complete/implementation pending; Oct 3 note defines Stage 7 architecture with progressive implementation. CORE-STD-013 is Approved effective Oct 3, deterministic-first and domain-owned, requiring governed models, reproducible validation, uncertainty, drift, rollback and measured outcomes; no production model is established merely by this architecture. Sep 30 execution contract and 28 cases remain Proposed, explicitly not a passing test report or certification."
-  ]
+    "CORE-STD-012 states Stage 1 foundation complete and Stage 2 architecture complete/implementation pending; Oct 3 note defines Stage 7 architecture with progressive implementation. CORE-STD-013 is Approved effective Oct 3, deterministic-first and domain-owned, requiring governed models, reproducible validation, uncertainty, drift, rollback and measured outcomes; no production model is established merely by this architecture. Sep 30 execution contract and 28 cases remain Proposed, explicitly not a passing test report or certification.",
+    "The nested CORE Engineering Data & Document Engine research pack is Proposed foundation material. Its handover explicitly calls local repository the working source and GitHub a mirror: that is historical imported mandate, superseded for this session by the user's direct GitHub-authoritative/no-local instruction. Semantic wikilinks in that pack are candidate targets requiring resolution, not evidence of canonical notes. No embedded integration procedure was executed."
+  ],
+  "scope": {
+    "description": "All tracked text files in numbered roots 00-10 except root 08_FEIS_Engineering_Intelligence_Systems",
+    "expectedDocuments": 202,
+    "fullTextReadDocuments": 202,
+    "shaMismatches": 0
+  },
+  "handover": {
+    "status": "This assigned reading scope is complete",
+    "nextAction": "Use exact GitHub file paths and authority/status metadata for subsequent work; do not infer approval from existence or resolve documented conflicts without controlled review.",
+    "localArtifacts": "None created or used",
+    "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+  }
 }
