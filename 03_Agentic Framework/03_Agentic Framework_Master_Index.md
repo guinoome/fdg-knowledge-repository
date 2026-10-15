@@ -10,6 +10,7 @@
 - [[ENGINEERING_OBJECTIVE]]
 - [[TOP_TIER_REPOSITORY_REVIEW_WATCH]]
 - [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
+- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
 
@@ -22,6 +23,7 @@
 - [[03_Agentic Framework/AUTHORITY_LEVELS|AUTHORITY LEVELS]]
 - [[03_Agentic Framework/CONTEXT_REQUIREMENTS|CONTEXT REQUIREMENTS]]
 - [[03_Agentic Framework/ENGINEERING_OBJECTIVE|ENGINEERING OBJECTIVE]]
+- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
 
 
 ## Related Execution and Orchestration Systems
