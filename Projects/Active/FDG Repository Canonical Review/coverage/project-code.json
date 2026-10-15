@@ -2112,6 +2112,41 @@
         "@/lib/utils",
         "../steps"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/step-nav.tsx",
+      "sha": "ed312c029fd4fbfaa135601f30ef7edb289d78fd",
+      "expectedSha": "ed312c029fd4fbfaa135601f30ef7edb289d78fd",
+      "lines": 113,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "lucide-react",
+        "@/lib/utils",
+        "@/lib/config",
+        "../steps"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/content-step.tsx",
+      "sha": "205578b2297921646c1ab494cbbcf588d85e5826",
+      "expectedSha": "205578b2297921646c1ab494cbbcf588d85e5826",
+      "lines": 464,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "../../actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/ui/button",
+        "@/components/ui/card",
+        "@/components/ui/label",
+        "@/components/ui/input",
+        "@/components/ui/textarea"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2134,6 +2169,6 @@
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/step-nav.tsx; 134/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/event-step.tsx; 136/422 complete"
   }
 }
