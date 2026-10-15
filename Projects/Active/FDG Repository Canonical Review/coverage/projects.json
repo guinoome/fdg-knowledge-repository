@@ -142,11 +142,34 @@
       "expectedSha": "d3b59cd13c2ceef2281bc5aeb514c90313f88b3c",
       "lines": 48,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/ARCHIVE_TRANSFER_STATUS.md",
+      "sha": "8654812b771e776a0ec40a3fae71653032a8d87a",
+      "expectedSha": "8654812b771e776a0ec40a3fae71653032a8d87a",
+      "lines": 17,
+      "characters": 1033,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
   "notes": [
     "Only content fully exposed to the reading agent is marked FULL_TEXT_READ; this is source reading, not runtime validation.",
     "Projects/Projects_Master_Index.md was fully read by the parent agent and is not duplicated in this receipt."
+  ],
+  "partial": [
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/EIP-Engineering-Intelligence-Portal.html",
+      "sha": "a7ea2862e40f36ce66f78c8a66c6ca8052313643",
+      "expectedSha": "a7ea2862e40f36ce66f78c8a66c6ca8052313643",
+      "characters": 89739,
+      "readCharacterRanges": [
+        [
+          0,
+          44000
+        ]
+      ],
+      "status": "PARTIAL_TEXT_READ"
+    }
   ]
 }
