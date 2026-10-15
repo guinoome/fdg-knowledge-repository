@@ -2513,6 +2513,76 @@
       "expectedSha": "fcb1cad06c48d89d48d1cd297606aaefd9dcb4e4",
       "lines": 21,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/FSvIS-QA-0002 - Verification Validation and Acceptance.md",
+      "sha": "138ec74b1af6ab57fab9e917e603a563cbe6c90f",
+      "expectedSha": "138ec74b1af6ab57fab9e917e603a563cbe6c90f",
+      "lines": 25,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/FSvIS-QA-0003 - Nonconformance and Corrective Action.md",
+      "sha": "110c79e7fe5a234cec05251b8eeae61bd0fc7c4f",
+      "expectedSha": "110c79e7fe5a234cec05251b8eeae61bd0fc7c4f",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/Nonconformance_and_Corrective_Action/README.md",
+      "sha": "cd141617f384bce9afe2fab0f3619fc28e11a2ce",
+      "expectedSha": "cd141617f384bce9afe2fab0f3619fc28e11a2ce",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/Quality_Criteria/README.md",
+      "sha": "e0cc26cef9bab2c97b4b7b860ee76ec19dfccb20",
+      "expectedSha": "e0cc26cef9bab2c97b4b7b860ee76ec19dfccb20",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/Service_Audits/README.md",
+      "sha": "fc83d014ddbadb49f381160fba1ff515fea33c3e",
+      "expectedSha": "fc83d014ddbadb49f381160fba1ff515fea33c3e",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/06_Service_Quality_and_Assurance/Verification_and_Validation/README.md",
+      "sha": "054a6bacbbed0c96553af686223bbe3b9f7e42c7",
+      "expectedSha": "054a6bacbbed0c96553af686223bbe3b9f7e42c7",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/Client_Outcomes/README.md",
+      "sha": "5a63bbb68991bf5ebc2c365a1d74cdd9ec5aee07",
+      "expectedSha": "5a63bbb68991bf5ebc2c365a1d74cdd9ec5aee07",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/Delivery_Performance/README.md",
+      "sha": "d208d867166c15db83cfc0ef502fdbe0ee1b5602",
+      "expectedSha": "d208d867166c15db83cfc0ef502fdbe0ee1b5602",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/FSvIS-PERF-0001 - Service Performance Intelligence Framework.md",
+      "sha": "447af19d2bad294a381b871284582495da3cc69a",
+      "expectedSha": "447af19d2bad294a381b871284582495da3cc69a",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/07_Service_Performance_Intelligence/FSvIS-PERF-0002 - Service KPI Standard.md",
+      "sha": "04f6d2478755d7710c4707647adaa7f7adb48418",
+      "expectedSha": "04f6d2478755d7710c4707647adaa7f7adb48418",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
