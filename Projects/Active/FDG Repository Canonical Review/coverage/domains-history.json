@@ -3045,6 +3045,41 @@
       "expectedSha": "5bc342bf695f12a5d209ad81a2df318b76465e89",
       "lines": 50,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/05_FMIS_Preventive_Maintenance.md",
+      "sha": "f99fbec3daedf2693a6c9069978606f15df0abc7",
+      "expectedSha": "f99fbec3daedf2693a6c9069978606f15df0abc7",
+      "lines": 73,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/06_FMIS_Corrective_Maintenance_and_Work_Orders.md",
+      "sha": "14e5996128307a570fdf0ce4486e0b2553318092",
+      "expectedSha": "14e5996128307a570fdf0ce4486e0b2553318092",
+      "lines": 67,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/07_FMIS_Maintenance_Resources_and_Workforce.md",
+      "sha": "f884e341813286837c1a6e0f1f84507af31d70ba",
+      "expectedSha": "f884e341813286837c1a6e0f1f84507af31d70ba",
+      "lines": 69,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/08_FMIS_Materials_Spares_and_Procurement.md",
+      "sha": "d09c31d6b725fda158bbad63715c28afa635212a",
+      "expectedSha": "d09c31d6b725fda158bbad63715c28afa635212a",
+      "lines": 77,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/09_FMIS_Maintenance_Status_and_Reliability.md",
+      "sha": "c980ccfdd8401d4aa3b226f7ebec158d548ee1e1",
+      "expectedSha": "c980ccfdd8401d4aa3b226f7ebec158d548ee1e1",
+      "lines": 60,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
