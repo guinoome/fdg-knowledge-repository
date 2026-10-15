@@ -1,0 +1,152 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "status": "IN_PROGRESS",
+  "documents": [
+    {
+      "path": "Projects/Active/AI/Insta Prompt.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "expectedSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "lines": 0,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/.env.example",
+      "sha": "3eb2d01f30c8f91b2a79c47d27d3881f2d7f7dde",
+      "expectedSha": "3eb2d01f30c8f91b2a79c47d27d3881f2d7f7dde",
+      "lines": 8,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/.gitignore",
+      "sha": "9ad55de28dd27b84e6f8354f88c2f81d9833045d",
+      "expectedSha": "9ad55de28dd27b84e6f8354f88c2f81d9833045d",
+      "lines": 14,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/.vercelignore",
+      "sha": "3d320102dae18dda734d0b28de374743ba9ab641",
+      "expectedSha": "3d320102dae18dda734d0b28de374743ba9ab641",
+      "lines": 12,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/HANDOVER_FDG_Business_Platform_2026-09-10_0754.md",
+      "sha": "ef281613f9d36b886a7676e1a6b7feebe2200101",
+      "expectedSha": "ef281613f9d36b886a7676e1a6b7feebe2200101",
+      "lines": 10,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/api/payments.js",
+      "sha": "d7cf405f58842a23a2dd91cfac1701b0f67b8fcd",
+      "expectedSha": "d7cf405f58842a23a2dd91cfac1701b0f67b8fcd",
+      "lines": 2,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/api/paymongo-webhook.js",
+      "sha": "d0d09aa84fb141454d1ee07b1b936e11d3351dda",
+      "expectedSha": "d0d09aa84fb141454d1ee07b1b936e11d3351dda",
+      "lines": 2,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/assets/icon.svg",
+      "sha": "948c2bccca7755d7bc7b5f67f15319c48e7afb2b",
+      "expectedSha": "948c2bccca7755d7bc7b5f67f15319c48e7afb2b",
+      "lines": 5,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/assets/icon.svg",
+      "sha": "948c2bccca7755d7bc7b5f67f15319c48e7afb2b",
+      "expectedSha": "948c2bccca7755d7bc7b5f67f15319c48e7afb2b",
+      "lines": 5,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/data/experience-config.js",
+      "sha": "0fd3298db836600bed5fe89adf6c4fcc9f4e25ba",
+      "expectedSha": "0fd3298db836600bed5fe89adf6c4fcc9f4e25ba",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/manifest.webmanifest",
+      "sha": "da30e0ad8ab97df68e1ab970b8426d0ffe36943d",
+      "expectedSha": "da30e0ad8ab97df68e1ab970b8426d0ffe36943d",
+      "lines": 12,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/src/ocr.js",
+      "sha": "072296a8500c5a298cd710a5442e03f8dadcca5b",
+      "expectedSha": "072296a8500c5a298cd710a5442e03f8dadcca5b",
+      "lines": 6,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/manifest.webmanifest",
+      "sha": "7312037ff096f2b6d93269ece811e08e1dbe12d6",
+      "expectedSha": "7312037ff096f2b6d93269ece811e08e1dbe12d6",
+      "lines": 10,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/scripts/build-auth.mjs",
+      "sha": "e6e00f669c0988117fd954610031177f15f0de37",
+      "expectedSha": "e6e00f669c0988117fd954610031177f15f0de37",
+      "lines": 6,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/supabase/migrations/202609270002_profile_timestamp_ownership.sql",
+      "sha": "64da660a14ca9b3a0e333ebb39205036c917d42f",
+      "expectedSha": "64da660a14ca9b3a0e333ebb39205036c917d42f",
+      "lines": 3,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.agents/skills/supabase/assets/feedback-issue-template.md",
+      "sha": "e81082532d36309e11f2721e8380636329221525",
+      "expectedSha": "e81082532d36309e11f2721e8380636329221525",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.claude/launch.json",
+      "sha": "80eeee40696cd33861a8593b7438009fa56abaee",
+      "expectedSha": "80eeee40696cd33861a8593b7438009fa56abaee",
+      "lines": 11,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.eslintrc.json",
+      "sha": "c17d5e9315e38849a28a2b32819cf6a7c2c0d758",
+      "expectedSha": "c17d5e9315e38849a28a2b32819cf6a7c2c0d758",
+      "lines": 4,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.gitattributes",
+      "sha": "d1de81d8ca1e713f0904f4e32586e7ed6b8a36e6",
+      "expectedSha": "d1de81d8ca1e713f0904f4e32586e7ed6b8a36e6",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.gitignore",
+      "sha": "d3b59cd13c2ceef2281bc5aeb514c90313f88b3c",
+      "expectedSha": "d3b59cd13c2ceef2281bc5aeb514c90313f88b3c",
+      "lines": 48,
+      "status": "FULL_TEXT_READ"
+    }
+  ],
+  "failures": [],
+  "notes": [
+    "Only content fully exposed to the reading agent is marked FULL_TEXT_READ; this is source reading, not runtime validation.",
+    "Projects/Projects_Master_Index.md was fully read by the parent agent and is not duplicated in this receipt."
+  ]
+}
