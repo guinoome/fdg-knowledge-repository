@@ -9,12 +9,83 @@
       "expectedSha": "d57e5b11f3c7e37f9a91cad11f5e4fea527e287a",
       "lines": 357,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "00_Nex/00_Nex_Master_Index.md",
+      "sha": "5f4840aab0740afe3a9b67e37a96f39d234b7b43",
+      "expectedSha": "5f4840aab0740afe3a9b67e37a96f39d234b7b43",
+      "lines": 10,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "00_Nex/CONSTITUTIONAL_AUTHORITY.md",
+      "sha": "0879c26312c4ab77815a64f14a9d4b3855a5d191",
+      "expectedSha": "0879c26312c4ab77815a64f14a9d4b3855a5d191",
+      "lines": 316,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "00_Nex/NEX-BOOTSTRAP.md",
+      "sha": "076c61a78cb5af6c07c3a45f25523e40e4257b56",
+      "expectedSha": "076c61a78cb5af6c07c3a45f25523e40e4257b56",
+      "lines": 387,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "00_Nex/REVIEW_PROTOCOL.md",
+      "sha": "958dcf56a584c287f8ab3d66332fff40a77bff24",
+      "expectedSha": "958dcf56a584c287f8ab3d66332fff40a77bff24",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "01_Governance/01_Governance_Master_Index.md",
+      "sha": "7dbf27c9cc9a5642777d82084af855c501ed8fa7",
+      "expectedSha": "7dbf27c9cc9a5642777d82084af855c501ed8fa7",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "01_Governance/NEX-STD-002_DOCUMENT_CONTROL.md",
+      "sha": "4867d0a256111e7101bb9885b6491515dbf1228a",
+      "expectedSha": "4867d0a256111e7101bb9885b6491515dbf1228a",
+      "lines": 344,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD.md",
+      "sha": "2536376ce4814ca574e481a01dc57764cd6665f3",
+      "expectedSha": "2536376ce4814ca574e481a01dc57764cd6665f3",
+      "lines": 305,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "01_Governance/NEX-STD-004_OPERATING_PRINCIPLES.md",
+      "sha": "1fd859e748bcbef00efee2568b8e143ae56a6c6e",
+      "expectedSha": "1fd859e748bcbef00efee2568b8e143ae56a6c6e",
+      "lines": 246,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "01_Governance/NEX-STD-005_CONSTITUTION.md",
+      "sha": "24d62937247657c199be7dfce84cf58bee0ce445",
+      "expectedSha": "24d62937247657c199be7dfce84cf58bee0ce445",
+      "lines": 252,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "01_Governance/NEX-STD-006_FDG_KNOWLEDGE_GOVERNANCE_FRAMEWORK.md",
+      "sha": "0c4f3c8e124999e8ec0a765173fe2253140525ca",
+      "expectedSha": "0c4f3c8e124999e8ec0a765173fe2253140525ca",
+      "lines": 441,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
   "notes": [
     "All content is read through connected GitHub tools at the pinned source checkpoint; no local repository source is used.",
     "This scope contains 202 tracked text files, all Markdown, across numbered roots 00-10 excluding FEIS root 08. Earlier unledgered reading is not counted.",
-    "The top-level historical master index includes dated counts and observations that must not be treated as live inventory; its 2026-09-30 addendum labels new proposals as additions, not approved replacements."
+    "The top-level historical master index includes dated counts and observations that must not be treated as live inventory; its 2026-09-30 addendum labels new proposals as additions, not approved replacements.",
+    "NEX-STD-006 Knowledge Governance Framework explicitly has Draft status despite constitutional framing; Approved documents and historical index prose reference it. Presence is not approval. Approved NEX-STD-002/-003/-004/-005 have blank effective and review dates."
   ]
 }
