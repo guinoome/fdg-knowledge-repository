@@ -2373,6 +2373,76 @@
       "expectedSha": "37ccb78074ed80c10ce6228c9cabe2f9933f2e0f",
       "lines": 24,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/Service_Boundaries/README.md",
+      "sha": "3b7581ed06a893eb266ffc3759c0bc242fea85c9",
+      "expectedSha": "3b7581ed06a893eb266ffc3759c0bc242fea85c9",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/Service_Dependency_Maps/README.md",
+      "sha": "f341b759936cadd7122dcdb7647218193526d45e",
+      "expectedSha": "f341b759936cadd7122dcdb7647218193526d45e",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/Service_Requirements/README.md",
+      "sha": "03c1049657f0810febddedd20c03c4c2e7dae598",
+      "expectedSha": "03c1049657f0810febddedd20c03c4c2e7dae598",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/Custom_Service_Framework/README.md",
+      "sha": "e7cf26aca1fff83e79e94dcce015434aff3fda17",
+      "expectedSha": "e7cf26aca1fff83e79e94dcce015434aff3fda17",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/FSvIS-PKG-0001 - Service Packaging Standard.md",
+      "sha": "379f3eae7e02e6359282f7e71ff6337c763375e0",
+      "expectedSha": "379f3eae7e02e6359282f7e71ff6337c763375e0",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/FSvIS-PKG-0002 - Service Tier and Option Framework.md",
+      "sha": "246efdd0b20ae1f6c2775a61359d003dbbdf0089",
+      "expectedSha": "246efdd0b20ae1f6c2775a61359d003dbbdf0089",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/Optional_Modules/README.md",
+      "sha": "9494226eeae3fd8b8d1daf9490ab52c5d22dce96",
+      "expectedSha": "9494226eeae3fd8b8d1daf9490ab52c5d22dce96",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/Service_Packages/README.md",
+      "sha": "0b30a4fbfc165ef63473058e0b2af1058ca5232f",
+      "expectedSha": "0b30a4fbfc165ef63473058e0b2af1058ca5232f",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/Service_Tiers/README.md",
+      "sha": "4d1d409de0f9d596f8f05c7148fcc0977b9c9f50",
+      "expectedSha": "4d1d409de0f9d596f8f05c7148fcc0977b9c9f50",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/04_Service_Packaging/Standard_Offerings/README.md",
+      "sha": "4ab65e0c54a383c0007b7d98e101ba5cf3e16a32",
+      "expectedSha": "4ab65e0c54a383c0007b7d98e101ba5cf3e16a32",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
