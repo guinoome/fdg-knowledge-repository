@@ -386,6 +386,147 @@
       "bytes": 6426,
       "status": "FULL_TEXT_READ",
       "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".claude/settings.local.json",
+      "sha": "187eb2b9f86a0a5c07a384d2ee417e9f777737ce",
+      "expectedSha": "187eb2b9f86a0a5c07a384d2ee417e9f777737ce",
+      "bytes": 245,
+      "lines": 9,
+      "characters": 245,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".gitattributes",
+      "sha": "c33fff5651904fe1e77b6a8256f906bc80f7b3bf",
+      "expectedSha": "c33fff5651904fe1e77b6a8256f906bc80f7b3bf",
+      "bytes": 561,
+      "lines": 23,
+      "characters": 559,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".github/workflows/deploy-fuel-station-pages.yml",
+      "sha": "ff1be2b5dcb6dfad54679114d33daba62dea9a96",
+      "expectedSha": "ff1be2b5dcb6dfad54679114d33daba62dea9a96",
+      "bytes": 953,
+      "lines": 42,
+      "characters": 953,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".gitignore",
+      "sha": "52a65ee5281b2e5a20ee2d37cee4895f5d9a5192",
+      "expectedSha": "52a65ee5281b2e5a20ee2d37cee4895f5d9a5192",
+      "bytes": 2163,
+      "lines": 65,
+      "characters": 2163,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/app.json",
+      "sha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "expectedSha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "bytes": 2,
+      "lines": 1,
+      "characters": 2,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/appearance.json",
+      "sha": "497824a414ac9d60e5f44cba459be06b9f9993ea",
+      "expectedSha": "497824a414ac9d60e5f44cba459be06b9f9993ea",
+      "bytes": 28,
+      "lines": 3,
+      "characters": 28,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/backlink.json",
+      "sha": "48ee91363b0f645efc51813570ba195dfff11563",
+      "expectedSha": "48ee91363b0f645efc51813570ba195dfff11563",
+      "bytes": 32,
+      "lines": 3,
+      "characters": 32,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/community-plugins.json",
+      "sha": "de63a8039bbeb2d264ae40c28623a5e22682a6e9",
+      "expectedSha": "de63a8039bbeb2d264ae40c28623a5e22682a6e9",
+      "bytes": 68,
+      "lines": 5,
+      "characters": 68,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/core-plugins.json",
+      "sha": "639b90da7172bebbc1a65e30ed0a1c611b5b26dc",
+      "expectedSha": "639b90da7172bebbc1a65e30ed0a1c611b5b26dc",
+      "bytes": 696,
+      "lines": 33,
+      "characters": 696,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/daily-notes.json",
+      "sha": "ece5c77f2bb1905e7ff5591b4c18f240b6ae229c",
+      "expectedSha": "ece5c77f2bb1905e7ff5591b4c18f240b6ae229c",
+      "bytes": 95,
+      "lines": 4,
+      "characters": 95,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/file-recovery.json",
+      "sha": "7da73c7a0744e9fa91d6026c66b9a90193ef907f",
+      "expectedSha": "7da73c7a0744e9fa91d6026c66b9a90193ef907f",
+      "bytes": 44,
+      "lines": 4,
+      "characters": 44,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": ".obsidian/graph.json",
+      "sha": "3cb0b5fa9e87cf3666b3b6d5bf9b326800ec803d",
+      "expectedSha": "3cb0b5fa9e87cf3666b3b6d5bf9b326800ec803d",
+      "bytes": 525,
+      "lines": 22,
+      "characters": 525,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "README.md",
+      "sha": "b881936b67cacfda1c59510d21b88689270a2d10",
+      "expectedSha": "b881936b67cacfda1c59510d21b88689270a2d10",
+      "bytes": 9720,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "No path change in GitHub compare to current pinned source"
+    },
+    {
+      "path": "FDG Ecosystem.md",
+      "sha": "5cea40a74fe6041f94e5709afce1bccc77757431",
+      "expectedSha": "5cea40a74fe6041f94e5709afce1bccc77757431",
+      "bytes": 13009,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "No path change in GitHub compare to current pinned source"
     }
-  ]
+  ],
+  "updatedOn": "2026-10-15",
+  "verifiedFullReadCount": 62,
+  "pendingFile": null
 }
