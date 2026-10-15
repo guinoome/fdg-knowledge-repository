@@ -2996,6 +2996,55 @@
       "expectedSha": "e28a3b93d99be9171446e86cdedbc12b9e047bbe",
       "lines": 551,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0014 - Reports.md",
+      "sha": "063cf6b58a7e3489722c3561d9d0a9239eca04cc",
+      "expectedSha": "063cf6b58a7e3489722c3561d9d0a9239eca04cc",
+      "lines": 414,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0015 - Analytics.md",
+      "sha": "37ed8c288b803f6d7306ee682c830d210b40f000",
+      "expectedSha": "37ed8c288b803f6d7306ee682c830d210b40f000",
+      "lines": 481,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index.md",
+      "sha": "bac53e6b0c948c2b7d02329d3653b637687d9e51",
+      "expectedSha": "bac53e6b0c948c2b7d02329d3653b637687d9e51",
+      "lines": 90,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/01_FMIS_System_Definition_and_Scope.md",
+      "sha": "b3c9ad6750ae647435a698acc1d5f54062814ae3",
+      "expectedSha": "b3c9ad6750ae647435a698acc1d5f54062814ae3",
+      "lines": 45,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/02_FMIS_Functional_Domain_Model.md",
+      "sha": "f24c4f15669cdc1610ab9145ab61f734c95d3079",
+      "expectedSha": "f24c4f15669cdc1610ab9145ab61f734c95d3079",
+      "lines": 38,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/03_FMIS_Data_Architecture.md",
+      "sha": "da014edfcd5171af68b9711a26933f81b19db169",
+      "expectedSha": "da014edfcd5171af68b9711a26933f81b19db169",
+      "lines": 66,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/04_FMIS_Plant_and_Equipment_Model.md",
+      "sha": "5bc342bf695f12a5d209ad81a2df318b76465e89",
+      "expectedSha": "5bc342bf695f12a5d209ad81a2df318b76465e89",
+      "lines": 50,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
