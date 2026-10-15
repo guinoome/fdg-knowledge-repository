@@ -119,6 +119,7 @@ Founder / Final Authority
 - [[03_Agentic Framework/AUTHORITY_LEVELS|Authority Levels]]
 - [[03_Agentic Framework/CONTEXT_REQUIREMENTS|Context Requirements]]
 - [[03_Agentic Framework/ENGINEERING_OBJECTIVE|Engineering Objective]]
+- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
 
 ### Knowledge
 
@@ -163,6 +164,7 @@ Founder / Final Authority
 - Every failed loop must produce information that improves the next loop.
 - FMCIS remembers the work; Nex remembers what the organization learned.
 - Automate execution before automating authority.
+- For material engineering work, prefer independent cross-provider review where it adds assurance; the builder must not be the sole grader when an independent provider is available.
 
 ## Baby Nex Provider-Neutral Runtime Direction — 2026-09-30
 
