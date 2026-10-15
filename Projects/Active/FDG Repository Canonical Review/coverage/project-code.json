@@ -1376,6 +1376,120 @@
         "react",
         "@/lib/utils"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/label.tsx",
+      "sha": "7e936898811c748e7ce5ebfdaf4d724bae86bc3e",
+      "expectedSha": "7e936898811c748e7ce5ebfdaf4d724bae86bc3e",
+      "lines": 23,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-label",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/select.tsx",
+      "sha": "1360f2a7ded8c071cd54c4eaa1cea3fe2bcc7dcf",
+      "expectedSha": "1360f2a7ded8c071cd54c4eaa1cea3fe2bcc7dcf",
+      "lines": 37,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/sheet.tsx",
+      "sha": "9b99c87443359d66b36a869162cc4f31ac3a1545",
+      "expectedSha": "9b99c87443359d66b36a869162cc4f31ac3a1545",
+      "lines": 69,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-dialog",
+        "lucide-react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/skeleton.tsx",
+      "sha": "76d9fcd64f704b3efd249efae536626571a5fdbf",
+      "expectedSha": "76d9fcd64f704b3efd249efae536626571a5fdbf",
+      "lines": 17,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/switch.tsx",
+      "sha": "6617ac62877716ff6e78fb6181b143b5b328cc1d",
+      "expectedSha": "6617ac62877716ff6e78fb6181b143b5b328cc1d",
+      "lines": 29,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-switch",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/textarea.tsx",
+      "sha": "432ac88ffb275c12fa92459fbb7d0c50e386e113",
+      "expectedSha": "432ac88ffb275c12fa92459fbb7d0c50e386e113",
+      "lines": 20,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/toast.tsx",
+      "sha": "dfa90c907db36ea0aea17ccea61e0d1154ccd8f9",
+      "expectedSha": "dfa90c907db36ea0aea17ccea61e0d1154ccd8f9",
+      "lines": 135,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@radix-ui/react-toast",
+        "class-variance-authority",
+        "lucide-react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/toaster.tsx",
+      "sha": "ea75dfe9f3f1050240809970ca94e96816d49f8d",
+      "expectedSha": "ea75dfe9f3f1050240809970ca94e96816d49f8d",
+      "lines": 59,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "@/components/ui/toast",
+        "@/lib/hooks/use-toast",
+        "@/lib/notifications/store"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/docs/storage-policies.sql",
+      "sha": "618cd1e426a3550c31f4355cb1566aa576edc908",
+      "expectedSha": "618cd1e426a3550c31f4355cb1566aa576edc908",
+      "lines": 103,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": []
     }
   ],
   "partialDocuments": [],
@@ -1388,6 +1502,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/ui/label.tsx; 85/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/actions.ts; 94/422 complete"
   }
 }
