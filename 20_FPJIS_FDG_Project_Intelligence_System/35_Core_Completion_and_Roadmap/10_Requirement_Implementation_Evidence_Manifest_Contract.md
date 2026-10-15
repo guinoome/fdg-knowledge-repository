@@ -168,3 +168,24 @@ A future FPJIS application may render this manifest as:
 - release gates;
 - module progress;
 - evidence navigation.
+
+## Linked-View Projection — 2026-10-15
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] defines an **additive proposed** view profile on existing requirement entries. The manifest is an index over canonical knowledge and must not become a duplicate editable requirements store.
+
+~~~yaml
+# Proposed optional additions to an existing requirement entry
+schema_version: fpjis-requirement-views/0.1-proposed
+parent_requirement_ids: []
+business_view_ref: null
+product_view_ref: null
+functional_view_ref: null
+software_view_ref: null
+design_refs: []
+approval_refs: []
+source_revision: null
+~~~
+
+Existing required fields, statuses, coverage formulas and backward compatibility remain in force. A missing optional field may be Not Applicable when dispositioned; **missing executed evidence never implies verification**. A schema/checker implementation still needs an authorized, versioned change and real tests.
+
+Worked proposed example: [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Pilot]].
