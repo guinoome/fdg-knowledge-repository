@@ -2723,6 +2723,76 @@
       "expectedSha": "d095127482ac5a7c39947d91d0db879a30ca77c6",
       "lines": 24,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/FSvIS-KNOW-0001 - Service Knowledge and Reuse Framework.md",
+      "sha": "6b4e087f87d16bf2304a6b99c56564a859f47710",
+      "expectedSha": "6b4e087f87d16bf2304a6b99c56564a859f47710",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/FSvIS-KNOW-0002 - Service Lessons Learned Standard.md",
+      "sha": "110b61d8eabb7772479a645b4051245d07889e36",
+      "expectedSha": "110b61d8eabb7772479a645b4051245d07889e36",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Lessons_Learned/README.md",
+      "sha": "8a20d50c3bf8531eee8625f2aebad2b0ccb2b8a3",
+      "expectedSha": "8a20d50c3bf8531eee8625f2aebad2b0ccb2b8a3",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Reference_Deliverables/README.md",
+      "sha": "8b5d4d2e229c489c5eefe0d6ac68e9256161f5e4",
+      "expectedSha": "8b5d4d2e229c489c5eefe0d6ac68e9256161f5e4",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Reusable_Service_Components/README.md",
+      "sha": "a8e056167786620c5575d976e8609b5088ba4543",
+      "expectedSha": "a8e056167786620c5575d976e8609b5088ba4543",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Templates/README.md",
+      "sha": "af28d4fc3206c4fefe0d9c04152a2f6742af455f",
+      "expectedSha": "af28d4fc3206c4fefe0d9c04152a2f6742af455f",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Templates/TEMPLATE - Service Blueprint.md",
+      "sha": "2c6f4cec6adbb9b093c3afbd8370bf8f953ab976",
+      "expectedSha": "2c6f4cec6adbb9b093c3afbd8370bf8f953ab976",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Templates/TEMPLATE - Service Definition Record.md",
+      "sha": "04fbe4ea00e4d434aee92029e7c5fe7fa08836e2",
+      "expectedSha": "04fbe4ea00e4d434aee92029e7c5fe7fa08836e2",
+      "lines": 67,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Templates/TEMPLATE - Service Improvement Record.md",
+      "sha": "290d02d9a8176cf0d616097b65fd6bad004fa9cf",
+      "expectedSha": "290d02d9a8176cf0d616097b65fd6bad004fa9cf",
+      "lines": 44,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/FSvIS-IMP-0001 - Continuous Service Improvement Framework.md",
+      "sha": "452467bd76b916b94152d5b7e09b71af7d01e0a4",
+      "expectedSha": "452467bd76b916b94152d5b7e09b71af7d01e0a4",
+      "lines": 22,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
