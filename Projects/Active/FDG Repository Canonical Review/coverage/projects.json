@@ -516,6 +516,20 @@
           581954
         ]
       ]
+    },
+    {
+      "path": "Projects/Active/AI/FDG-ERP/restaurant-management-system/app.js",
+      "sha": "a8bf55fb3b87237e792d287aa472302b1ed81f91",
+      "expectedSha": "a8bf55fb3b87237e792d287aa472302b1ed81f91",
+      "characters": 148954,
+      "lines": 2587,
+      "status": "FULL_TEXT_READ",
+      "readCharacterRanges": [
+        [
+          0,
+          148954
+        ]
+      ]
     }
   ],
   "failures": [],
@@ -525,20 +539,5 @@
     "EIP HTML completely exposed in contiguous character ranges [0,22000), [22000,44000), [44000,66000), [66000,88000), [88000,89739); read as source only, not executed.",
     "Scope transfer: all 422 source-pin paths under Projects/Active/ML Projects/ ending .ts, .tsx, .prisma or .sql are now assigned to coverage/project-code.json; no matching path had been fully read in this receipt at transfer time. All other apparent Projects text remains in this receipt scope, 405 apparent paths including parent-owned Projects_Master_Index.md."
   ],
-  "partial": [
-    {
-      "path": "Projects/Active/AI/FDG-ERP/restaurant-management-system/app.js",
-      "sha": "a8bf55fb3b87237e792d287aa472302b1ed81f91",
-      "expectedSha": "a8bf55fb3b87237e792d287aa472302b1ed81f91",
-      "characters": 148954,
-      "readCharacterRanges": [
-        [
-          0,
-          132000
-        ]
-      ],
-      "status": "PARTIAL_TEXT_READ",
-      "nextCharacter": 132000
-    }
-  ]
+  "partial": []
 }
