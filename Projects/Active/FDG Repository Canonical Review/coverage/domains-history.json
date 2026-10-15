@@ -1558,6 +1558,76 @@
       "expectedSha": "5e12d8d32b6f3a5cdc406c31477409a41f5c17e1",
       "lines": 38,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/04_Knowledge_Security/FSIS-0402 - Knowledge Compartmentalization Standard.md",
+      "sha": "2205d8e48920abeaf3df82557b1d1a6f28c4b7fd",
+      "expectedSha": "2205d8e48920abeaf3df82557b1d1a6f28c4b7fd",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/05_Collaborator_Security/FSIS-0500 - Collaborator Security Master Index.md",
+      "sha": "ec448d69c737ff790b1d48403ffa6f98b5461c02",
+      "expectedSha": "ec448d69c737ff790b1d48403ffa6f98b5461c02",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/05_Collaborator_Security/FSIS-0501 - External Collaborator Security Protocol.md",
+      "sha": "2b0f6ac0c22f09723286d9c4968dc5307fc43540",
+      "expectedSha": "2b0f6ac0c22f09723286d9c4968dc5307fc43540",
+      "lines": 22,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/06_AI_Security/FSIS-0600 - AI Security Master Index.md",
+      "sha": "cb9f694a56ed768f25ce93f3026d4214ff493c6b",
+      "expectedSha": "cb9f694a56ed768f25ce93f3026d4214ff493c6b",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/06_AI_Security/FSIS-0601 - AI Collaborator Security Standard.md",
+      "sha": "759b857cf1318fecb6fdf1f01804aec0905570bc",
+      "expectedSha": "759b857cf1318fecb6fdf1f01804aec0905570bc",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/06_AI_Security/FSIS-0602 - AI Context Boundary Protocol.md",
+      "sha": "68c522c36426308608fc3dd67ca23e6974a29c87",
+      "expectedSha": "68c522c36426308608fc3dd67ca23e6974a29c87",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/07_Intellectual_Property/FSIS-0700 - Intellectual Property Security Master Index.md",
+      "sha": "de6b45aebffa48e38c3c967187afaa5704715050",
+      "expectedSha": "de6b45aebffa48e38c3c967187afaa5704715050",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/07_Intellectual_Property/FSIS-0701 - FDG Ecosystem Protection Standard.md",
+      "sha": "b6d2ff01031009be5706b1f543180ede655e071a",
+      "expectedSha": "b6d2ff01031009be5706b1f543180ede655e071a",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0800 - Cybersecurity Master Index.md",
+      "sha": "078fd314dbd8f8c6ed6eea659a3b2c93ee7b5159",
+      "expectedSha": "078fd314dbd8f8c6ed6eea659a3b2c93ee7b5159",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0801 - Credential and Secrets Protection Standard.md",
+      "sha": "a82b8eab2cb16a7ce5a54967519417e6fb430cd7",
+      "expectedSha": "a82b8eab2cb16a7ce5a54967519417e6fb430cd7",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
