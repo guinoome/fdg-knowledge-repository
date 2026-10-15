@@ -118,3 +118,15 @@ Correctness
 ## Closure Rule
 
 A backlog item is complete only when the corresponding standard/tool/evidence exists and the update is logged.
+
+## Linked-View Requirement Pilot — 2026-10-15
+
+- [x] Record [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] as an extension of approved traceability and manifest contracts.
+- [x] Create [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Pilot]] with proposed AC IDs and negative cases, explicitly NOT TESTED.
+- [ ] Approve engineering methods, role/security/privacy and sync rule applicability with appropriate FDG authorities.
+- [ ] Authorize one complete bounded FPM vertical slice and execute/test it locally.
+- [ ] Establish source-to-code-to-test-to-evidence trace, independently inspect and obtain authorized acceptance.
+- [ ] Measure rework, handover, test coverage and operational benefit; promote only validated patterns.
+- [ ] Consider the optional schema/versioned checker/dashboard only after empirical validation.
+
+Do not revise generic FPJIS readiness (historically 89.5%) because additional documents or backlinks exist.
