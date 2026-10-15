@@ -254,6 +254,22 @@
       "characters": 6528,
       "lines": 706,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal rev 1.txt",
+      "sha": "84012273bbdc8d61821aed3d014fce88a636e1d4",
+      "expectedSha": "84012273bbdc8d61821aed3d014fce88a636e1d4",
+      "characters": 4276,
+      "lines": 279,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/Engineering-Intelligence-Portal/FDGuinoo Engineering Intelligence Portal.md",
+      "sha": "91e69de6310fc11da2f640de45fc14075c52a5a6",
+      "expectedSha": "91e69de6310fc11da2f640de45fc14075c52a5a6",
+      "characters": 8987,
+      "lines": 868,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -262,5 +278,19 @@
     "Projects/Projects_Master_Index.md was fully read by the parent agent and is not duplicated in this receipt.",
     "EIP HTML completely exposed in contiguous character ranges [0,22000), [22000,44000), [44000,66000), [66000,88000), [88000,89739); read as source only, not executed."
   ],
-  "partial": []
+  "partial": [
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Practical Calculator Rev. 1.1 (Full)-HVAC.html",
+      "sha": "1d3b513068d300e535a5e6b9b0ba6765955284e1",
+      "expectedSha": "1d3b513068d300e535a5e6b9b0ba6765955284e1",
+      "characters": 581954,
+      "readCharacterRanges": [
+        [
+          0,
+          22000
+        ]
+      ],
+      "status": "PARTIAL_TEXT_READ"
+    }
+  ]
 }
