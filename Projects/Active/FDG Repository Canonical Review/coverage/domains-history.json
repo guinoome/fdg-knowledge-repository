@@ -1383,6 +1383,76 @@
       "expectedSha": "d018187a677733459ba86e58664e76e12bd73be1",
       "lines": 20,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/16_Roadmap/FBIS_Roadmap.md",
+      "sha": "b20454d6585598caa24e736c2ac7056b1e490384",
+      "expectedSha": "b20454d6585598caa24e736c2ac7056b1e490384",
+      "lines": 47,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "sha": "fb17365566cad776016a12b1e8d916886e83ff2f",
+      "expectedSha": "fb17365566cad776016a12b1e8d916886e83ff2f",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/17_Governance/FBIS_Decision_Log.md",
+      "sha": "d23343bc5055f58335abff4fe90c8e48346958c5",
+      "expectedSha": "d23343bc5055f58335abff4fe90c8e48346958c5",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/17_Governance/FBIS_Governance.md",
+      "sha": "1241eb59d1f8e01a2657ee08f30c6e2324b1b7fb",
+      "expectedSha": "1241eb59d1f8e01a2657ee08f30c6e2324b1b7fb",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/18_Testing/FBIS_Testing_Strategy.md",
+      "sha": "371e37f3b2ea530d8bab0ce962bec37c68eb11f9",
+      "expectedSha": "371e37f3b2ea530d8bab0ce962bec37c68eb11f9",
+      "lines": 33,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/19_Continuous_Learning/FBIS_Continuous_Learning.md",
+      "sha": "af231af23b608cf316d4d34ef87d107ec2af2d66",
+      "expectedSha": "af231af23b608cf316d4d34ef87d107ec2af2d66",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/20_Templates/FBIS_Transaction_Record_Template.md",
+      "sha": "8f53084447e505975ddb00c1191e4a5be74d5218",
+      "expectedSha": "8f53084447e505975ddb00c1191e4a5be74d5218",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/20_Templates/FBIS_Voucher_Record_Template.md",
+      "sha": "8c31d400d96b59f340fa71cbde69d6e931dea941",
+      "expectedSha": "8c31d400d96b59f340fa71cbde69d6e931dea941",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/21_Reference/FBIS_Architecture_Quick_Reference.md",
+      "sha": "646601f4236e5aec7434c7481287f992e5ae3b86",
+      "expectedSha": "646601f4236e5aec7434c7481287f992e5ae3b86",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/21_Reference/FBIS_Terminology.md",
+      "sha": "8cb361897128f8b48193fab5625c09f8e0e00a2f",
+      "expectedSha": "8cb361897128f8b48193fab5625c09f8e0e00a2f",
+      "lines": 22,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
