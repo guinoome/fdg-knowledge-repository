@@ -566,6 +566,48 @@
       "expectedSha": "d2ac3eade894778a9e68d62d009afbb051784784",
       "lines": 130,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_COLLABORATOR_ECOSYSTEM_STANDARD.md",
+      "sha": "2965a86423ede5d700f6aada7899343ddb2f3384",
+      "expectedSha": "2965a86423ede5d700f6aada7899343ddb2f3384",
+      "lines": 422,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_COLLABORATOR_HANDOFF_AND_TEAM_INTELLIGENCE_STANDARD.md",
+      "sha": "f83d62b8a0cf05f643ca2cde8297b75f64d7207e",
+      "expectedSha": "f83d62b8a0cf05f643ca2cde8297b75f64d7207e",
+      "lines": 376,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CONTEXT_PACKAGE_STANDARD.md",
+      "sha": "3ff61b0deafd973f2d78160ac638e4a44dd1f3c5",
+      "expectedSha": "3ff61b0deafd973f2d78160ac638e4a44dd1f3c5",
+      "lines": 393,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD.md",
+      "sha": "c0f2d72b490e5a88ea2dc9b8a4f3916b405dafa8",
+      "expectedSha": "c0f2d72b490e5a88ea2dc9b8a4f3916b405dafa8",
+      "lines": 434,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_CAPABILITY_ACCEPTANCE_CASES.md",
+      "sha": "225ce83c12ba54fc5890f508496abda8690dc780",
+      "expectedSha": "225ce83c12ba54fc5890f508496abda8690dc780",
+      "lines": 358,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_REASONING_AND_EXECUTION_CAPABILITY_STANDARD.md",
+      "sha": "b27f872a551bca74037e2fede48b007232c53922",
+      "expectedSha": "b27f872a551bca74037e2fede48b007232c53922",
+      "lines": 473,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -579,6 +621,7 @@
     "Knowledge Management standards preserve review vs approval separation, require approval before baseline adoption, and emphasize reusable conclusions rather than raw conversation. Several Related Documents labels misassign Document Control to NEX-STD-001 and Decision Evolution to NEX-STD-002; actual governance files are NEX-STD-002 and NEX-STD-003.",
     "Canonical Truth Resolution Standard remains Proposed; enterprise architecture reconciliation remains Proposed; cross-system relationship map has working/pending global status plus specifically labeled approved and later scoped extensions. In root 05, KNOWLEDGE_PRESERVATION_STANDARD.md contains only a breadcrumb; root 04 holds the substantive Approved NEX-STD-023.",
     "NEX-STD-124 through 128 and Sep 27 evolution ADR are Approved, distinct 16 enterprise functions with single accountable outcome owners. Very Strong expressly concerns organizational knowledge architecture, not staffing, deployed software, legal registration or operating control effectiveness. Enterprise role, record owner, approver, executor and independent auditor remain distinct.",
-    "NEX-STD-052 and 056 use an Advisory-to-Optimization 0-4 agent-level taxonomy differing from foundational NEX-STD-013 Observe-to-Autonomous 0-5. Do not equate numeric levels across documents. Capability registry NEX-PREOS-004 is Proposed; registration is not execution authorization."
+    "NEX-STD-052 and 056 use an Advisory-to-Optimization 0-4 agent-level taxonomy differing from foundational NEX-STD-013 Observe-to-Autonomous 0-5. Do not equate numeric levels across documents. Capability registry NEX-PREOS-004 is Proposed; registration is not execution authorization.",
+    "Oct 15 Adaptive Reasoning NEX-STD-092 is Approved and the 12-case pack is Approved Capability Validation Pack; the controlled log explicitly leaves numeric maturity NOT_BASELINED. These define measurable behaviors, not demonstrated live runtime capability or model training."
   ]
 }
