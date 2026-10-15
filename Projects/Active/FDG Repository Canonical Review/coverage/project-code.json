@@ -879,6 +879,81 @@
         "@/lib/config",
         "@/lib/env"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/not-found.tsx",
+      "sha": "3282697cbba38a883542fa29c2d8380e2ea182d3",
+      "expectedSha": "3282697cbba38a883542fa29c2d8380e2ea182d3",
+      "lines": 55,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "next",
+        "lucide-react",
+        "@/components/ui/button",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/page.tsx",
+      "sha": "8c0a800d0c7f26e4aa7f50d0f5f797b44dd2a070",
+      "expectedSha": "8c0a800d0c7f26e4aa7f50d0f5f797b44dd2a070",
+      "lines": 172,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "next/image",
+        "next",
+        "lucide-react",
+        "@/components/ui/button",
+        "@/components/nav/site-header",
+        "@/components/messenger-button",
+        "@/lib/config",
+        "@/features/marketing/components/landing-hero",
+        "@/features/marketing/components/feature-highlights",
+        "@/features/marketing/components/template-showcase",
+        "@/features/marketing/components/faq-section",
+        "@/features/marketing/components/experience-proof-showcase"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/robots.ts",
+      "sha": "f8f36c88e4bb88c42cef899f43ef29b47efa89c7",
+      "expectedSha": "f8f36c88e4bb88c42cef899f43ef29b47efa89c7",
+      "lines": 22,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/lib/env"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/sitemap.ts",
+      "sha": "5f2141b8260050c39998de191f25bd3004fd86d2",
+      "expectedSha": "5f2141b8260050c39998de191f25bd3004fd86d2",
+      "lines": 20,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/lib/env",
+        "@/features/template-marketplace/repository",
+        "@/features/template-marketplace/criteria"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/templates/(catalog)/loading.tsx",
+      "sha": "ad34dcf5f3d9d4da39fd6d3956f256df7e1d600d",
+      "expectedSha": "ad34dcf5f3d9d4da39fd6d3956f256df7e1d600d",
+      "lines": 61,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/components/ui/skeleton"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -891,6 +966,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/not-found.tsx; 52/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/templates/(catalog)/page.tsx; 57/422 complete"
   }
 }
