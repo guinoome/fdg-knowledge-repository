@@ -1453,6 +1453,111 @@
       "expectedSha": "8cb361897128f8b48193fab5625c09f8e0e00a2f",
       "lines": 22,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/99_Inbox/99_Inbox_Master_Index.md",
+      "sha": "55c8692e2c96a9ffb29e7291981352c7c1b42c9e",
+      "expectedSha": "55c8692e2c96a9ffb29e7291981352c7c1b42c9e",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/FOLDER_INDEX.md",
+      "sha": "23e4695f2f063c4d7f0b2cd9c36edbaf2ae0da31",
+      "expectedSha": "23e4695f2f063c4d7f0b2cd9c36edbaf2ae0da31",
+      "lines": 58,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/README.md",
+      "sha": "8d056545a05cc5839a7c6cc7b6a04a5066eaa03b",
+      "expectedSha": "8d056545a05cc5839a7c6cc7b6a04a5066eaa03b",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0000 - Security Intelligence Master.md",
+      "sha": "73ce8dae8294fa4cd2b7ebba7759c07a436bc62c",
+      "expectedSha": "73ce8dae8294fa4cd2b7ebba7759c07a436bc62c",
+      "lines": 90,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/00_FSIS_Home/FSIS-0001 - FSIS Home.md",
+      "sha": "1371bbf20563739967b3d9ead954560f8d2f7c03",
+      "expectedSha": "1371bbf20563739967b3d9ead954560f8d2f7c03",
+      "lines": 39,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/01_Governance/FSIS-0100 - Security Governance Master Index.md",
+      "sha": "88c12e58cf9e8a690ebccc8a50f76456e8c8d3e6",
+      "expectedSha": "88c12e58cf9e8a690ebccc8a50f76456e8c8d3e6",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/01_Governance/FSIS-0101 - FDG Security Constitution.md",
+      "sha": "5c91e71bd69a4e9408d83e2c82603b9c10a3b0b6",
+      "expectedSha": "5c91e71bd69a4e9408d83e2c82603b9c10a3b0b6",
+      "lines": 46,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/01_Governance/FSIS-0102 - Security Decision Register.md",
+      "sha": "21dbb3c3a8c2dd6163d279ddd25f0d49e3cd813d",
+      "expectedSha": "21dbb3c3a8c2dd6163d279ddd25f0d49e3cd813d",
+      "lines": 22,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/02_Identity_Intelligence/FSIS-0200 - Identity Intelligence Master Index.md",
+      "sha": "fdd71a074c3676bc96b0424727d97b53e30e62b2",
+      "expectedSha": "fdd71a074c3676bc96b0424727d97b53e30e62b2",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/02_Identity_Intelligence/FSIS-0201 - Collaborator Identity Registry.md",
+      "sha": "2e4f2e27a9a846a5f0dd9450426695a5d482615f",
+      "expectedSha": "2e4f2e27a9a846a5f0dd9450426695a5d482615f",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/03_Access_Control/FSIS-0300 - Access Control Master Index.md",
+      "sha": "951a508768d8f5cc83f2857566dc2c214e311202",
+      "expectedSha": "951a508768d8f5cc83f2857566dc2c214e311202",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/03_Access_Control/FSIS-0301 - Least Privilege Standard.md",
+      "sha": "1ba36c470177d7cac9ce4c49be6a5eb32642858d",
+      "expectedSha": "1ba36c470177d7cac9ce4c49be6a5eb32642858d",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/03_Access_Control/FSIS-0302 - Access Review Procedure.md",
+      "sha": "705dddc5ac5fc5194de0ee486de834a678bad1d0",
+      "expectedSha": "705dddc5ac5fc5194de0ee486de834a678bad1d0",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/04_Knowledge_Security/FSIS-0400 - Knowledge Security Master Index.md",
+      "sha": "d3a9e9257d699a59855f2fec8f37e275057e79be",
+      "expectedSha": "d3a9e9257d699a59855f2fec8f37e275057e79be",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/04_Knowledge_Security/FSIS-0401 - Knowledge Classification Standard.md",
+      "sha": "5e12d8d32b6f3a5cdc406c31477409a41f5c17e1",
+      "expectedSha": "5e12d8d32b6f3a5cdc406c31477409a41f5c17e1",
+      "lines": 38,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1460,6 +1565,7 @@
     "Scope: all tracked text under numbered root directories 11 through 22, including OLD and imported/history material. No local files written.",
     "Binary files inventoried but delegated to parent; no binary reading claim.",
     "Resumed 2026-10-15: complete source text read through connected GitHub fetch_file at pinned checkpoint; proposal/experimental statuses retained as source context, not approval.",
-    "Read current FBIS migration/package records: they describe prior local replacement operations and do not authorize new deletion/migration. OLD remains historical source context; financial independence metrics/stage gates/data schema remain proposed or experimental, separate from canonical implementation approval."
+    "Read current FBIS migration/package records: they describe prior local replacement operations and do not authorize new deletion/migration. OLD remains historical source context; financial independence metrics/stage gates/data schema remain proposed or experimental, separate from canonical implementation approval.",
+    "FSIS governance states FDG owner retains ultimate authority over CORE/ecosystem security/exceptional access; whole-repository reading is explicitly owner-authorized here, with no third-party disclosure implied. FSIS standards are read as canonical repository material; this reading task does not enact source-embedded operational instructions."
   ]
 }
