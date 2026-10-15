@@ -318,6 +318,86 @@
       "characters": 5855,
       "lines": 601,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-ERP/restaurant-management-system/index.html",
+      "sha": "e82c350f1d27e16c4366b05537713a9838651899",
+      "expectedSha": "e82c350f1d27e16c4366b05537713a9838651899",
+      "characters": 8668,
+      "lines": 193,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-ERP/restaurant-management-system/styles.css",
+      "sha": "2da4dffbc359e02251d3cf4b7ad4baffb69bf922",
+      "expectedSha": "2da4dffbc359e02251d3cf4b7ad4baffb69bf922",
+      "characters": 28982,
+      "lines": 1290,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-FP/FDG-FP.md",
+      "sha": "3aef2cf235d6b110044801329990900a5d2bae3c",
+      "expectedSha": "3aef2cf235d6b110044801329990900a5d2bae3c",
+      "characters": 9341,
+      "lines": 1044,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-01A.md",
+      "sha": "b5c6085c734c27071a2d884768b036d33c03bfed",
+      "expectedSha": "b5c6085c734c27071a2d884768b036d33c03bfed",
+      "characters": 7917,
+      "lines": 521,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-01B.md",
+      "sha": "730514b9f1dda4cd15aab5188640d90366d046cc",
+      "expectedSha": "730514b9f1dda4cd15aab5188640d90366d046cc",
+      "characters": 6764,
+      "lines": 713,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-01C.md",
+      "sha": "b758fa40fd26c3d3b93f96b7b402aa8330a0c731",
+      "expectedSha": "b758fa40fd26c3d3b93f96b7b402aa8330a0c731",
+      "characters": 7555,
+      "lines": 736,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-01D.md",
+      "sha": "4c9b975a49712ab375313a349bdbb805520ed412",
+      "expectedSha": "4c9b975a49712ab375313a349bdbb805520ed412",
+      "characters": 9078,
+      "lines": 844,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-02A-1.md",
+      "sha": "5310f7515706e125ee129c2d757557a1165118f5",
+      "expectedSha": "5310f7515706e125ee129c2d757557a1165118f5",
+      "characters": 8258,
+      "lines": 762,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-02A-2.md",
+      "sha": "fa1c965851bcb489992985ecee0994666c680e4e",
+      "expectedSha": "fa1c965851bcb489992985ecee0994666c680e4e",
+      "characters": 8384,
+      "lines": 799,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-02A-3.md",
+      "sha": "b50e4c3c9b8c35acf0e30d17889eef4d36a295b1",
+      "expectedSha": "b50e4c3c9b8c35acf0e30d17889eef4d36a295b1",
+      "characters": 8684,
+      "lines": 761,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
