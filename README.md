@@ -12,6 +12,7 @@ This repository is not a collection of isolated notes and it is not owned by any
 4. Follow links to the governing standard, domain knowledge, project, evidence, or implementation record.
 
 ## Current Repository Updates
+- **[FDG Cross-Provider Engineering Review Loop](03_Agentic%20Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md)** — governed Claude Code ↔ Codex independent review pattern with a pinned self-bootstrap under `tools/claudex-loop/`.
 
 - **[Nex Pre-OS Runtime Foundation Index](07_Nex_Core_Intelligence/NEX_PRE_OS_RUNTIME_FOUNDATION_INDEX.md)** — proposed runtime bridge documents.
 - **[Repository Audit and Pre-OS Integration Record](docs/2026-09-07-repository-audit-and-preos-merge.md)** — validation evidence, findings, and remaining decisions.
@@ -110,6 +111,8 @@ README
 A collaborator must not assume that a file is authoritative from its filename alone. Check its status, backlinks, governing index, related decisions, and superseding records.
 
 Before a long-running collaborator session ends or approaches service limits, it should leave a concise handover containing the objective, evidence reviewed, decisions made, files changed, tests performed, unresolved issues, risks, and next executable action.
+
+For Codex and Claude Code repository sessions, the root `AGENTS.md` and `CLAUDE.md` provide the execution entry protocol. They can restore the reviewed Claudex Loop skills from the pinned bootstrap under `tools/claudex-loop/` when cross-provider review is warranted.
 
 ## Engineering Output Standard
 
