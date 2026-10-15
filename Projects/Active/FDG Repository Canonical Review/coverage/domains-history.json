@@ -3189,6 +3189,31 @@
       "lines": 0,
       "status": "FULL_TEXT_READ",
       "note": "Empty tracked text blob; no content to read."
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/fmis/services.py",
+      "sha": "7d6d524c78a1645715580c27e2810c1148bfb3e2",
+      "expectedSha": "7d6d524c78a1645715580c27e2810c1148bfb3e2",
+      "lines": 1336,
+      "status": "FULL_TEXT_READ",
+      "readCharacterRanges": [
+        [
+          0,
+          18000
+        ],
+        [
+          18000,
+          36000
+        ],
+        [
+          36000,
+          54000
+        ],
+        [
+          54000,
+          55655
+        ]
+      ]
     }
   ],
   "failures": [],
@@ -3203,6 +3228,7 @@
     "FSvIS-OM-0001 remains S1 Defined / Pilot Definition. Pricing PHP4999 / founding-five50% PHP2499.50 is experimental scope hypothesis; charter/readiness candidate additions explicitly do not certify a real paid client, market demand, accepted report or expanded service scope.",
     "FWIS implementation records Draft/Approver Pending: IMPL0000 older live backend53 assertions do not prove later role/reference/storage SQL. IMPL0003 explicitly says later live-test never ran realPostgreSQL; role-test JS mirror notSQL proof; intake1b unstarted; export content not automated tested,SpreadsheetML string cells; backup plaintext/nointegrity; missingIMPL0001/0002 links retained unresolved. Reading historical assertions is not current execution validation.",
     "FWIS-SPEC0001 retains 2026-08-05 'missing parents/specs' commentary contradicted by pinned tree and full-read receipts for FBPOIS/FWIS architecture andSPEC0002/0003. Historical absence notes are not current repository inventory. Most specifications Draft, architecture Approved; preserve distinctions.",
-    "FMIS evidence register explicitly corrects completion to NOT MET: exports/backup had no operatorcaller,restore accepts unrelateddatabase destructivepath; thirteen auditgaps and no before/after schema. Claims are dated2026-08-10; next code reads assess pinned source without running. Approved exceptions retain Tkinter+SQLite prototype canonical; PostgreSQL target/futureintegrations notimplemented."
+    "FMIS evidence register explicitly corrects completion to NOT MET: exports/backup had no operatorcaller,restore accepts unrelateddatabase destructivepath; thirteen auditgaps and no before/after schema. Claims are dated2026-08-10; next code reads assess pinned source without running. Approved exceptions retain Tkinter+SQLite prototype canonical; PostgreSQL target/futureintegrations notimplemented.",
+    "Pinned FMIS code vs evidence-register drift: app.py still caller-driven audit actor 'user'; services.py no session auth enforcement in write methods, no _audit helper,authenticate no audit/session actor;can_perform is separate query;passwords rawSHA256/defaultdemo. Tree lacks exporters/backup/UItests referenced in register. Historical56test claims cannot be applied to pinned code. Noexecution performed; identified by full-source read."
   ]
 }
