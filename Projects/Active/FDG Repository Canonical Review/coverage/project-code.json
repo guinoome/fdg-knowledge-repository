@@ -1895,14 +1895,73 @@
       "dependencies": [
         "zod"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/dashboard/overview.test.ts",
+      "sha": "ed94650c8e01d1dca0ace57a2028c61e36720539",
+      "expectedSha": "ed94650c8e01d1dca0ace57a2028c61e36720539",
+      "lines": 45,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./overview"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/dashboard/overview.ts",
+      "sha": "82c1e9898fa942f36abd811b7605a3d53423e01d",
+      "expectedSha": "82c1e9898fa942f36abd811b7605a3d53423e01d",
+      "lines": 120,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/lib/db",
+        "@/lib/logger"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/delivery/components/delivery-checklist.tsx",
+      "sha": "0daeeb5f491126a64e90283758c04fcf8a09216d",
+      "expectedSha": "0daeeb5f491126a64e90283758c04fcf8a09216d",
+      "lines": 63,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "@/lib/utils",
+        "../readiness"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/delivery/readiness.test.ts",
+      "sha": "cfad6631a33016935ad04c19414cd01e84472e84",
+      "expectedSha": "cfad6631a33016935ad04c19414cd01e84472e84",
+      "lines": 180,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./readiness"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/delivery/readiness.ts",
+      "sha": "86e1eeacfec5cdfa0db193e487a474a24e1d560a",
+      "expectedSha": "86e1eeacfec5cdfa0db193e487a474a24e1d560a",
+      "lines": 139,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": []
     }
   ],
   "partialDocuments": [],
   "failures": [
     {
       "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/dashboard/overview.test.ts",
-      "status": "RETRY_PENDING",
-      "error": "RemoteProtocolError: Server disconnected without sending a response; not counted."
+      "status": "RESOLVED_RETRY",
+      "error": "RemoteProtocolError: Server disconnected without sending a response; not counted.",
+      "resolution": "Re-fetched complete file through GitHub, full content read, pinned SHA verified."
     }
   ],
   "notes": [
@@ -1912,9 +1971,10 @@
     "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction.",
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness.",
     "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made.",
-    "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers."
+    "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers.",
+    "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Retry Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/dashboard/overview.test.ts; 119/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/delivery/repository.ts; 124/422 complete"
   }
 }
