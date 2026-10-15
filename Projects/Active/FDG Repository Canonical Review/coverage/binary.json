@@ -250,6 +250,46 @@
         "ML-DEP mobile neon debut invitation screenshot: Isabella Cruz, One night eighteen years in the making, Enter the Night CTA; subject partly cropped right.",
         "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/2209de01-9ffe-48b6-ba45-1d31021ce49f/3-Photo-3.jpg",
+      "sha": "1622c732fbec93026f8b7776c8e320f49d48b52e",
+      "expectedSha": "1622c732fbec93026f8b7776c8e320f49d48b52e",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "ML-DEP mobile launch invitation: ML Innovation Studio, The next chapter starts on stage, covered-car hero and Reveal the Launch CTA. Screenshot only.",
+        "Visual inspection, not implementation or runtime validation."
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/abfa30d6-4664-4eab-a20f-921fe384e17d/1-Photo-1.jpg",
+      "sha": "33b31af4deb70a672028912f73beed836fa41e86",
+      "expectedSha": "33b31af4deb70a672028912f73beed836fa41e86",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "ML Printing four-panel visual reference: premium Filipino invitation hero, seven experience categories, Capiz wedding invitation, Neon Eighteen debut and RSVP/timeline. Concept; small text not a complete transcription.",
+        "Visual inspection, not implementation or runtime validation."
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/bdfdac41-05f7-422c-83fd-aba92f05306b/2-Photo-2.jpg",
+      "sha": "fefff282e02f0bd6c5b6e90a3c0d9264ad16e993",
+      "expectedSha": "fefff282e02f0bd6c5b6e90a3c0d9264ad16e993",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "ML-DEP create-account mobile screenshot: Name/Email/Password, minimum8-character help, Create account and Sign in. No actual account action performed.",
+        "Visual inspection, not implementation or runtime validation."
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/e80cff3b-28df-4a90-b737-72c80a43a873/1-Photo-1.jpg",
+      "sha": "33b31af4deb70a672028912f73beed836fa41e86",
+      "expectedSha": "33b31af4deb70a672028912f73beed836fa41e86",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Exact duplicate of inspected four-panel ML Printing visual reference, SHA33b31af4deb70a672028912f73beed836fa41e86.",
+        "Visual inspection, not implementation or runtime validation."
+      ]
     }
   ],
   "failures": [
