@@ -95,6 +95,111 @@
       "expectedSha": "d6aad1e573ba6c88a3d078b59c87c01849e4f18d",
       "lines": 26,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Knowledge_Governance.md",
+      "sha": "354488a2417f96557c4a0f6ef04f2a0bae3f5e01",
+      "expectedSha": "354488a2417f96557c4a0f6ef04f2a0bae3f5e01",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "sha": "6cd92d1afd053749f3c57e877ee856b7a11a9f51",
+      "expectedSha": "6cd92d1afd053749f3c57e877ee856b7a11a9f51",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/Business_Intelligence_Data_Model.md",
+      "sha": "4327e890a10b5eef7f6ec13bbe1914b4681d76ac",
+      "expectedSha": "4327e890a10b5eef7f6ec13bbe1914b4681d76ac",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS-DATA-CBDM-001 - Philippine Common Business Data Model.md",
+      "sha": "2ed588ba7290794f5fcbf9f6d8569dceb83d6efb",
+      "expectedSha": "2ed588ba7290794f5fcbf9f6d8569dceb83d6efb",
+      "lines": 107,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Core_Entities.md",
+      "sha": "9f8aeed3f4364258d054d6091737cd24c2f12687",
+      "expectedSha": "9f8aeed3f4364258d054d6091737cd24c2f12687",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/05_Business_Knowledge_Architecture/FBIS_Data_Architecture.md",
+      "sha": "a7e089821e13feb9a60b943816d2cfc57e679667",
+      "expectedSha": "a7e089821e13feb9a60b943816d2cfc57e679667",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/06_Business_Architecture_Master_Index.md",
+      "sha": "ff0dc5765aee6e6a2f9ce23cb562e744c0a1a1b9",
+      "expectedSha": "ff0dc5765aee6e6a2f9ce23cb562e744c0a1a1b9",
+      "lines": 53,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS-ARCH-CBC-001 - FDG Common Business Core Architecture.md",
+      "sha": "f6ffecaabe6365c8a715de1bd1ab98df8f351584",
+      "expectedSha": "f6ffecaabe6365c8a715de1bd1ab98df8f351584",
+      "lines": 170,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_API_Architecture.md",
+      "sha": "db7a70b3669812483d8b729b52ebcd5a10e3a6d4",
+      "expectedSha": "db7a70b3669812483d8b729b52ebcd5a10e3a6d4",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Domain_Boundary.md",
+      "sha": "ae52b8c7dc2796ad54ae7d54ba381ee67be5d67e",
+      "expectedSha": "ae52b8c7dc2796ad54ae7d54ba381ee67be5d67e",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Integration_Map.md",
+      "sha": "9b71e4c85a9b731cf694b8c87d9f85cb635486aa",
+      "expectedSha": "9b71e4c85a9b731cf694b8c87d9f85cb635486aa",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_Reference_Architecture.md",
+      "sha": "772c1412f0b2cc10c10c61b317af5c1f6f7fdc61",
+      "expectedSha": "772c1412f0b2cc10c10c61b317af5c1f6f7fdc61",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/FBIS_System_Architecture.md",
+      "sha": "a9e463796ea9150fbf6075eff03cbe86cefa0882",
+      "expectedSha": "a9e463796ea9150fbf6075eff03cbe86cefa0882",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Payment_Integration_Strategy.md",
+      "sha": "0066e0af1b1e6f2c3c8518bb1c2537d97bbe5240",
+      "expectedSha": "0066e0af1b1e6f2c3c8518bb1c2537d97bbe5240",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/06_Business_Architecture/Provider_Webhook_Contract.md",
+      "sha": "d4a82bb7d364fde8472d5720a1f0bd19d88080bb",
+      "expectedSha": "d4a82bb7d364fde8472d5720a1f0bd19d88080bb",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
