@@ -1831,10 +1831,80 @@
         "@/components/form/form-status",
         "@/lib/config"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/reset-password-form.tsx",
+      "sha": "f5c55e4693396174fc0718c8850293938ade714a",
+      "expectedSha": "f5c55e4693396174fc0718c8850293938ade714a",
+      "lines": 67,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "react-dom",
+        "../actions",
+        "@/lib/forms/action-state",
+        "@/components/form/form-field",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/redirect.test.ts",
+      "sha": "7562f9f770c0325eff52c55a52a35c2c1092b2e9",
+      "expectedSha": "7562f9f770c0325eff52c55a52a35c2c1092b2e9",
+      "lines": 52,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./redirect"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/redirect.ts",
+      "sha": "7daacb6a0818edc3fbe1c2c1a263aff99faa4933",
+      "expectedSha": "7daacb6a0818edc3fbe1c2c1a263aff99faa4933",
+      "lines": 51,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/schema.test.ts",
+      "sha": "222b1ae68b19b5ec71304fc3c19ac69af551e43b",
+      "expectedSha": "222b1ae68b19b5ec71304fc3c19ac69af551e43b",
+      "lines": 92,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./schema"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/schema.ts",
+      "sha": "500a536e383cb071613e8b1770115c1152a8d362",
+      "expectedSha": "500a536e383cb071613e8b1770115c1152a8d362",
+      "lines": 60,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "zod"
+      ]
     }
   ],
   "partialDocuments": [],
-  "failures": [],
+  "failures": [
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/dashboard/overview.test.ts",
+      "status": "RETRY_PENDING",
+      "error": "RemoteProtocolError: Server disconnected without sending a response; not counted."
+    }
+  ],
   "notes": [
     "GitHub is the authoritative source; connected GitHub tools only. No local files, checkouts, downloads or code execution.",
     "This code reading scope is distinct from projects.json; exact identical blobs may reuse a full-text receipt with explicit source path and SHA. Historical/source-copy paths retain separate path receipts and placement labels.",
@@ -1845,6 +1915,6 @@
     "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/reset-password-form.tsx; 114/422 complete"
+    "nextAction": "Retry Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/dashboard/overview.test.ts; 119/422 complete"
   }
 }
