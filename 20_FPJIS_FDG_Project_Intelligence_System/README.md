@@ -200,3 +200,13 @@ This clarification supersedes the Astra-specific provider selection above. **A t
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] extends the existing FPJIS requirement blueprint, traceability standard and evidence manifest: business WHY, product/functional WHAT, system/software required behavior, architecture HOW, and objective verification/acceptance stay **linked to a canonical requirement ID** rather than duplicating documents.
 
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Fire Pump Pilot]] is an illustrative fire-pump offline evidence / conflict / provenance / approval-boundary pilot; NOT VERIFIED and NOT BUILD AUTHORIZED. No additional module, software, deployment or revision of the four canonical percentage metrics is claimed.
+
+
+## FMCIS Cross-Provider Verification Integration — 2026-10-15
+
+FPJIS owns project blueprints, implementation packages and acceptance criteria. Where a project's risk justifies independent agent verification, FPJIS **consumes** the FMCIS-owned capability rather than implementing a duplicate provider loop.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]] — cross-provider planning, review and inspection contract.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004]] / [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005]] — debate disposition and termination controls.
+
+FPJIS completion metrics must not count an unexecuted review or unstaged external skills as verified project completion. The actual proof, inspected artifact and unresolved findings belong in the project evidence record.
