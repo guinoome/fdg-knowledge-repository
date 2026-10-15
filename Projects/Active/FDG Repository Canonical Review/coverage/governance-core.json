@@ -776,6 +776,62 @@
       "expectedSha": "3634657c038a0764381b51b08110de31f1778795",
       "lines": 373,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IMPLEMENTATION_BLUEPRINT_AND_FIRST_90_DAY_EXECUTION_PLAN.md",
+      "sha": "58e2b811d7e160a5d9c1ed1688444860e50565f7",
+      "expectedSha": "58e2b811d7e160a5d9c1ed1688444860e50565f7",
+      "lines": 564,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IMPLEMENTATION_PACKAGE_STANDARD.md",
+      "sha": "31f8afc049027c12f4f54b19de5c8e638d8c73a5",
+      "expectedSha": "31f8afc049027c12f4f54b19de5c8e638d8c73a5",
+      "lines": 465,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IMPLEMENTATION_ROADMAP_STANDARD.md",
+      "sha": "0fc17bef0ccf0c34ddaf0c9095e71a7b48920bd5",
+      "expectedSha": "0fc17bef0ccf0c34ddaf0c9095e71a7b48920bd5",
+      "lines": 422,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_INITIAL_DEPLOYMENT_CHECKLIST_STANDARD.md",
+      "sha": "b364dc20892d01d2046076adf271c18f34db27a3",
+      "expectedSha": "b364dc20892d01d2046076adf271c18f34db27a3",
+      "lines": 444,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD.md",
+      "sha": "bd4fb03998638c098c12f33880ae02e40c1bf79d",
+      "expectedSha": "bd4fb03998638c098c12f33880ae02e40c1bf79d",
+      "lines": 424,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_KNOWLEDGE_GRAPH_AND_RELATIONSHIP_INTELLIGENCE_STANDARD.md",
+      "sha": "2c7d9baeca6663dd3811d27e5493b4372a21f155",
+      "expectedSha": "2c7d9baeca6663dd3811d27e5493b4372a21f155",
+      "lines": 582,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_KNOWLEDGE_NOTE_CREATION_AND_MANAGEMENT_STANDARD.md",
+      "sha": "f7d7499cc22d5f0d763799701c8a75afe2882070",
+      "expectedSha": "f7d7499cc22d5f0d763799701c8a75afe2882070",
+      "lines": 497,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_LONG_TERM_ARCHITECTURE_EVOLUTION_ROADMAP_STANDARD.md",
+      "sha": "2308533f42b43330d7c9b51c4d60a1710dd8c11b",
+      "expectedSha": "2308533f42b43330d7c9b51c4d60a1710dd8c11b",
+      "lines": 470,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -792,6 +848,7 @@
     "NEX-STD-052 and 056 use an Advisory-to-Optimization 0-4 agent-level taxonomy differing from foundational NEX-STD-013 Observe-to-Autonomous 0-5. Do not equate numeric levels across documents. Capability registry NEX-PREOS-004 is Proposed; registration is not execution authorization.",
     "Oct 15 Adaptive Reasoning NEX-STD-092 is Approved and the 12-case pack is Approved Capability Validation Pack; the controlled log explicitly leaves numeric maturity NOT_BASELINED. These define measurable behaviors, not demonstrated live runtime capability or model training.",
     "NEX-STD-096 uses Reference-to-Autonomous Optimization levels 0-4, another distinct authority taxonomy; its wording is not directly interchangeable with NEX-STD-013 or NEX-STD-052/056. NEX-STD-091 daily rhythm has an Oct 15 capability practice addendum requiring meaningful evidence rather than routine capability-log noise.",
-    "NEX-STD-116 has an Oct 9 work-management extension: planning defects, waiting materials, failed tests, reopened orders and tool/access constraints are reliability signals, expressly not substitutes for physical failure evidence. NEX-STD-097/-119 distinguish operational data ownership and future integration; approved architecture does not prove live platform integration. NEX-STD-087/-099 define activation/release gates; document existence alone is insufficient."
+    "NEX-STD-116 has an Oct 9 work-management extension: planning defects, waiting materials, failed tests, reopened orders and tool/access constraints are reliability signals, expressly not substitutes for physical failure evidence. NEX-STD-097/-119 distinguish operational data ownership and future integration; approved architecture does not prove live platform integration. NEX-STD-087/-099 define activation/release gates; document existence alone is insufficient.",
+    "NEX-STD-088/-090 prescribe a recommended older numbered repository layout with 04_Projects and NEX-STD-111 recommends Obsidian/local/cloud backup with Git described as future. Those text recommendations differ from the actual GitHub tree and the user's explicit GitHub-only Projects/Active policy; preserve as historical architectural reference, do not create local vaults or reorganize current repository from them. NEX-STD-047 Related Documents has stale IDs (e.g. Constitution as NEX-STD-003), so use verified file paths."
   ]
 }
