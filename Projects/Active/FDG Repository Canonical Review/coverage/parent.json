@@ -1137,15 +1137,137 @@
       "status": "FULL_TEXT_READ",
       "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
       "coverage": "All contiguous character ranges exposed and read"
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/probe-hydrocal.mjs",
+      "sha": "6774d8363bbd595c9024cb9c8d81d35ff244d6b9",
+      "expectedSha": "6774d8363bbd595c9024cb9c8d81d35ff244d6b9",
+      "bytes": 5468,
+      "lines": 64,
+      "characters": 5468,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/audits/2026-09-30-architecture-critical-review/scan-snapshot.mjs",
+      "sha": "484100be70cd27ab9c0deec7366573af5bd5e478",
+      "expectedSha": "484100be70cd27ab9c0deec7366573af5bd5e478",
+      "bytes": 6819,
+      "lines": 83,
+      "characters": 6819,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-08-10-fbpois-local-completion-fwis-fmis.md",
+      "sha": "034502ea54efa70c22260b143aec6e352936ac3d",
+      "expectedSha": "034502ea54efa70c22260b143aec6e352936ac3d",
+      "bytes": 68333,
+      "lines": 1557,
+      "characters": 68143,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+      "coverage": "All contiguous character ranges exposed and read"
+    },
+    {
+      "path": "gemini-scribe/Agent-Sessions/Agent Session 2026-08-02.md",
+      "sha": "6bc524a1cdd23a36a5b607ef89be3aac9ef8fc54",
+      "expectedSha": "6bc524a1cdd23a36a5b607ef89be3aac9ef8fc54",
+      "bytes": 403,
+      "lines": 17,
+      "characters": 401,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "gemini-scribe/Prompts/example-expert.md",
+      "sha": "dea1d1d529fa39a418294373b111f9077c1632bb",
+      "expectedSha": "dea1d1d529fa39a418294373b111f9077c1632bb",
+      "bytes": 652,
+      "lines": 20,
+      "characters": 650,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "gemini-scribe/Scheduled-Tasks/scheduled-tasks-state.json",
+      "sha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "expectedSha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "bytes": 2,
+      "lines": 1,
+      "characters": 2,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "notes.md",
+      "sha": "ba1590e828bd7a9aa22d78e65a9b5cdbb9762bdb",
+      "expectedSha": "ba1590e828bd7a9aa22d78e65a9b5cdbb9762bdb",
+      "bytes": 380,
+      "lines": 12,
+      "characters": 376,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "tools/Invoke-FDGRepositoryAudit.ps1",
+      "sha": "7e74e888afd54a4c7bce1daed6223c8c3e2f8b84",
+      "expectedSha": "7e74e888afd54a4c7bce1daed6223c8c3e2f8b84",
+      "bytes": 11693,
+      "lines": 211,
+      "characters": 11693,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "tools/Test-FDGRepositoryAudit.ps1",
+      "sha": "89d4d9b99153e90349cf0da71995f842b604f780",
+      "expectedSha": "89d4d9b99153e90349cf0da71995f842b604f780",
+      "bytes": 5817,
+      "lines": 125,
+      "characters": 5817,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "tools/new_child_registry_patch.py",
+      "sha": "ab414fa87e5b60c531cbb851260acbb62bda2450",
+      "expectedSha": "ab414fa87e5b60c531cbb851260acbb62bda2450",
+      "bytes": 2416,
+      "lines": 72,
+      "characters": 2416,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "tools/new_external_project_import_patch.py",
+      "sha": "9d436fade7485728638250a52551067e3910ddc7",
+      "expectedSha": "9d436fade7485728638250a52551067e3910ddc7",
+      "bytes": 2028,
+      "lines": 62,
+      "characters": 2028,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "tools/new_parent_link_patch.py",
+      "sha": "6d3470cadf6630fdec90b9db719b15b6ca779102",
+      "expectedSha": "6d3470cadf6630fdec90b9db719b15b6ca779102",
+      "bytes": 5393,
+      "lines": 114,
+      "characters": 5385,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
     }
   ],
   "updatedOn": "2026-10-15",
-  "verifiedFullReadCount": 123,
+  "verifiedFullReadCount": 135,
   "pendingFile": null,
   "notes": [
     "All79 FEIS Markdown documents at the source checkpoint have now been fully read across original and resumed reads; authorizations/status vary. Reading is not runtime/test/deployment verification.",
     "Maintenance extension has three independent readiness layers: Work/Asset/Program; proposed standards separate workflow status from readiness, require resource/safety/PMT/return-to-service gates and companion anti-gaming KPI evidence.",
     "QTO2026-10-14 package is approved architecture/standards but L1 coding authorization is separate. One calibrated measurement kernel, provenance method differs from actor, human-approved measurements protected, BOQ snapshot lineage, known-answer frozen benchmarking; no source code import from AGPLbenchmark.",
-    "Direct user's GitHub-only project storage instruction governs this engagement's artifacts. Product local-first architecture is a separate design dimension and is not silently rewritten by this reading task."
+    "Direct user's GitHub-only project storage instruction governs this engagement's artifacts. Product local-first architecture is a separate design dimension and is not silently rewritten by this reading task.",
+    "Full September audit records distinguish structural scans from semantic review, source defects from acceptance passes, and recorded verification from release approval. August local-completion plan is historical reference, not current execution authorization. Its unchecked tasks and expected results do not prove implementation or passing tests. RTK.md is absent from pinned recursive GitHub inventory."
   ]
 }
