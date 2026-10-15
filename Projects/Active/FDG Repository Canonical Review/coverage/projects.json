@@ -502,6 +502,20 @@
       "characters": 6717,
       "lines": 420,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Practical Calculator Rev. 1.1 (Full)-HVAC.html",
+      "sha": "1d3b513068d300e535a5e6b9b0ba6765955284e1",
+      "expectedSha": "1d3b513068d300e535a5e6b9b0ba6765955284e1",
+      "characters": 581954,
+      "lines": 3125,
+      "status": "FULL_TEXT_READ",
+      "readCharacterRanges": [
+        [
+          0,
+          581954
+        ]
+      ]
     }
   ],
   "failures": [],
@@ -511,20 +525,5 @@
     "EIP HTML completely exposed in contiguous character ranges [0,22000), [22000,44000), [44000,66000), [66000,88000), [88000,89739); read as source only, not executed.",
     "Scope transfer: all 422 source-pin paths under Projects/Active/ML Projects/ ending .ts, .tsx, .prisma or .sql are now assigned to coverage/project-code.json; no matching path had been fully read in this receipt at transfer time. All other apparent Projects text remains in this receipt scope, 405 apparent paths including parent-owned Projects_Master_Index.md."
   ],
-  "partial": [
-    {
-      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Practical Calculator Rev. 1.1 (Full)-HVAC.html",
-      "sha": "1d3b513068d300e535a5e6b9b0ba6765955284e1",
-      "expectedSha": "1d3b513068d300e535a5e6b9b0ba6765955284e1",
-      "characters": 581954,
-      "readCharacterRanges": [
-        [
-          0,
-          572000
-        ]
-      ],
-      "status": "PARTIAL_TEXT_READ",
-      "nextCharacter": 572000
-    }
-  ]
+  "partial": []
 }
