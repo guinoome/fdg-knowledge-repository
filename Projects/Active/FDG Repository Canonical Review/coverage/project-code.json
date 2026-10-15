@@ -2425,6 +2425,45 @@
       "status": "FULL_TEXT_READ",
       "placement": "Active project source at pinned GitHub path",
       "dependencies": []
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/marketing/components/experience-proof-showcase.tsx",
+      "sha": "af987e7a7687dc678777f74a4aa785837568921d",
+      "expectedSha": "af987e7a7687dc678777f74a4aa785837568921d",
+      "lines": 159,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/image",
+        "next/link",
+        "lucide-react",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/marketing/components/faq-section.tsx",
+      "sha": "2b7a24f34f41b67827e4bae36c40e61c44e220dc",
+      "expectedSha": "2b7a24f34f41b67827e4bae36c40e61c44e220dc",
+      "lines": 47,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "../content"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/marketing/components/feature-highlights.tsx",
+      "sha": "0585bb754d127abb26ad9fb9e2db58d99513d356",
+      "expectedSha": "0585bb754d127abb26ad9fb9e2db58d99513d356",
+      "lines": 88,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/image",
+        "lucide-react",
+        "../content"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2449,6 +2488,6 @@
     "Direct source/test contradiction: invitation-builder/schema.ts timeSchema and dateSchema apply nonempty regex before optional/transform; explicit empty strings sent by EventStep/saveEventStep therefore appear rejected, while schema.test.ts expects timeSchema.safeParse('').data undefined and comments promise blank autosave. Static conclusion only; tests not executed. hostSchema permits photoAssetId UUID and saveHostsStep persists it without an asset-owner check (unlike saveMediaStep); trace host-photo consumers before confirming exposure."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/marketing/components/experience-proof-showcase.tsx; 153/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/marketing/components/landing-hero.tsx; 156/422 complete"
   }
 }
