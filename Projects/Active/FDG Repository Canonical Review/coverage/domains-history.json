@@ -2233,6 +2233,76 @@
       "expectedSha": "f7f5d29d451a89d14645fd3f7a7557c0ac027cd8",
       "lines": 99,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/01_Service_Governance/FSvIS-GOV-0001 - Service Governance Framework.md",
+      "sha": "f0af7b8f12c8b5f56c4e7f9adab05034f2334585",
+      "expectedSha": "f0af7b8f12c8b5f56c4e7f9adab05034f2334585",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/01_Service_Governance/FSvIS-GOV-0002 - Service Decision Rights and Authorities.md",
+      "sha": "76cc72d84e778caacf58cd8577a5957cab6e53bd",
+      "expectedSha": "76cc72d84e778caacf58cd8577a5957cab6e53bd",
+      "lines": 37,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/01_Service_Governance/FSvIS-GOV-0003 - Service Lifecycle Governance.md",
+      "sha": "4a258983f5c34a7c4f9d9ed8e2e7aa3715a04795",
+      "expectedSha": "4a258983f5c34a7c4f9d9ed8e2e7aa3715a04795",
+      "lines": 34,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/01_Service_Governance/FSvIS-GOV-0004 - Service Document and Change Control.md",
+      "sha": "2a03bc9d51096ed46a6fdbf8135ab58e4320fda3",
+      "expectedSha": "2a03bc9d51096ed46a6fdbf8135ab58e4320fda3",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Assessment_and_Audit_Services/README.md",
+      "sha": "d8d68dc2ea9538ea586392077ae90768aa92c439",
+      "expectedSha": "d8d68dc2ea9538ea586392077ae90768aa92c439",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Consulting_Services/README.md",
+      "sha": "6a99522de642571ca8d68d13afb103a6278c44ba",
+      "expectedSha": "6a99522de642571ca8d68d13afb103a6278c44ba",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Design_Services/README.md",
+      "sha": "bf282f5721aa7896983a5d1f34fa8be72e0983c4",
+      "expectedSha": "bf282f5721aa7896983a5d1f34fa8be72e0983c4",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Digital_and_Platform_Services/README.md",
+      "sha": "3dd61a06e0c4cdf6df4e23ae34342a7006fc6f7e",
+      "expectedSha": "3dd61a06e0c4cdf6df4e23ae34342a7006fc6f7e",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Engineering_Services/README.md",
+      "sha": "f3f076db4168b62f9e3402bd229d3f1f06200d21",
+      "expectedSha": "f3f076db4168b62f9e3402bd229d3f1f06200d21",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/FSvIS-PORT-0001 - Service Portfolio Management.md",
+      "sha": "caf5c1cfa7470785e30cfb85f43d415c5bc4c39e",
+      "expectedSha": "caf5c1cfa7470785e30cfb85f43d415c5bc4c39e",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
