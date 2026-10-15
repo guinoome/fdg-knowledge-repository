@@ -1,0 +1,21 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "status": "IN_PROGRESS",
+  "scope": {
+    "description": "All source-pin paths under Projects/Active/ML Projects/ ending .ts/.tsx/.prisma/.sql",
+    "expectedDocuments": 422,
+    "expectedBytes": 1561309
+  },
+  "documents": [],
+  "partialDocuments": [],
+  "failures": [],
+  "notes": [
+    "GitHub is the authoritative source; connected GitHub tools only. No local files, checkouts, downloads or code execution.",
+    "This code reading scope is distinct from projects.json; exact identical blobs may reuse a full-text receipt with explicit source path and SHA. Historical/source-copy paths retain separate path receipts and placement labels.",
+    "Static reading observations are not confirmed runtime findings or test results."
+  ],
+  "handover": {
+    "nextAction": "Read first uncovered source-pin path through connected GitHub tools; save complete and partial coverage after bounded batches."
+  }
+}
