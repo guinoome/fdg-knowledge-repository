@@ -24,7 +24,7 @@ Baseline inventory: 2,171 tracked files, 1,409 Markdown, 2,073 apparent text and
 
 `docs/audits/2026-09-30-architecture-critical-review/repository-evidence.json`
 blob `a83e9f1d1af4877456919f23bc1d80f69436dadb`.
-Contiguous characters **[0, 22000)** read out of **1,013,039**. Fetch immutable full text again and resume at character 22,000. Count complete only after every remaining range is exposed and read.
+Contiguous characters **[0, 76000)** read out of **1,013,039**. Fetch immutable full text again and resume at character 76,000. Count complete only after every remaining range is exposed and read.
 
 ## Other scopes
 
