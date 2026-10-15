@@ -1133,6 +1133,62 @@
       "expectedSha": "691e39eade276d0e568a98890f8f31f623f2d510",
       "lines": 50,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-005_ECOSYSTEM_KNOWLEDGE_ARCHITECTURE_STANDARD.md",
+      "sha": "87579813e9b19670faa4d0f1370a80eb976ec733",
+      "expectedSha": "87579813e9b19670faa4d0f1370a80eb976ec733",
+      "lines": 51,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-006_USER_EXPERIENCE_ARCHITECTURE_STANDARD.md",
+      "sha": "afc7c5ff08c507dbdb9b5a0c6acde1de33843b3f",
+      "expectedSha": "afc7c5ff08c507dbdb9b5a0c6acde1de33843b3f",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-007_PLATFORM_SECURITY_GOVERNANCE_STANDARD.md",
+      "sha": "68fbebe294e2729efbdf149b12f898c617277832",
+      "expectedSha": "68fbebe294e2729efbdf149b12f898c617277832",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-008_INTEGRATION_MANAGEMENT_STANDARD.md",
+      "sha": "5204c92b5fe6b5a1cd357885ccd95e837520fe24",
+      "expectedSha": "5204c92b5fe6b5a1cd357885ccd95e837520fe24",
+      "lines": 50,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-009_BUSINESS_INTELLIGENCE_LAYER_STANDARD.md",
+      "sha": "47b89bc2e935f371797294ab25af2eaea04389e1",
+      "expectedSha": "47b89bc2e935f371797294ab25af2eaea04389e1",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-010_PLATFORM_OPERATIONS_STANDARD.md",
+      "sha": "9561be5123ad9a3bfa5d04784c1f63d2cf470f6d",
+      "expectedSha": "9561be5123ad9a3bfa5d04784c1f63d2cf470f6d",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-011_SCALABILITY_ARCHITECTURE_STANDARD.md",
+      "sha": "4b819868f7b4c636cce006187cc22451f3ac4f98",
+      "expectedSha": "4b819868f7b4c636cce006187cc22451f3ac4f98",
+      "lines": 50,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-012_IMPLEMENTATION_ROADMAP_STANDARD.md",
+      "sha": "9251962e45c73a853eb530415cff12a183c9d9c6",
+      "expectedSha": "9251962e45c73a853eb530415cff12a183c9d9c6",
+      "lines": 51,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1152,6 +1208,7 @@
     "NEX-STD-116 has an Oct 9 work-management extension: planning defects, waiting materials, failed tests, reopened orders and tool/access constraints are reliability signals, expressly not substitutes for physical failure evidence. NEX-STD-097/-119 distinguish operational data ownership and future integration; approved architecture does not prove live platform integration. NEX-STD-087/-099 define activation/release gates; document existence alone is insufficient.",
     "NEX-STD-088/-090 prescribe a recommended older numbered repository layout with 04_Projects and NEX-STD-111 recommends Obsidian/local/cloud backup with Git described as future. Those text recommendations differ from the actual GitHub tree and the user's explicit GitHub-only Projects/Active policy; preserve as historical architectural reference, do not create local vaults or reorganize current repository from them. NEX-STD-047 Related Documents has stale IDs (e.g. Constitution as NEX-STD-003), so use verified file paths.",
     "Live document-ID collision: NEX-STD-093 labels both Executive Intelligence Reporting (v1.0, blank dates) and Six-Capability Development Scorecard (v1.0, effective 2026-10-15). NEX-STD-092 similarly appears as adaptive capability and legacy weekly-review references. Cite exact paths/titles until controlled resolution. NEX-STD-085 uses maturity levels 1-5 and NEX-STD-109 uses 0-5 with differing labels; no numeric equivalence should be assumed. Scorecard expressly forbids baselines from documentation alone and uses NOT_BASELINED.",
-    "Pre-OS foundation, runtime access policy and execution ledger remain Proposed v0.1; listing an approver does not change their status. NEX-STD-048 contains a dated August 5 graph-linking inventory of 76 files, not current inventory. NEX-STD-060 requires reviewed approval before baseline promotion; read receipts remain evidence of reading, not governance adoption or operational validation."
+    "Pre-OS foundation, runtime access policy and execution ledger remain Proposed v0.1; listing an approver does not change their status. NEX-STD-048 contains a dated August 5 graph-linking inventory of 76 files, not current inventory. NEX-STD-060 requires reviewed approval before baseline promotion; read receipts remain evidence of reading, not governance adoption or operational validation.",
+    "All 12 FDG Platform Hub standards under root 09 are Draft v1.0 stubs ending at an architecture/model heading, with no substantive architecture after it beyond navigation. They define intent, not approved implementation or operational controls."
   ]
 }
