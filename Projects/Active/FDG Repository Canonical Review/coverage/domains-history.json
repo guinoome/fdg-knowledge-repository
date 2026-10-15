@@ -2905,6 +2905,27 @@
       "expectedSha": "d07280e47bb56685eca474f6583727e3dec83cce",
       "lines": 184,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0001 - Daily Operations.md",
+      "sha": "eb70da01f888b8f1ad1a40d7ef01329e1fa485cc",
+      "expectedSha": "eb70da01f888b8f1ad1a40d7ef01329e1fa485cc",
+      "lines": 417,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0002 - Engineering Dashboard.md",
+      "sha": "3d4d3e39d42370389159965885d32f9e71d752de",
+      "expectedSha": "3d4d3e39d42370389159965885d32f9e71d752de",
+      "lines": 451,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0003 - Shift Turnover.md",
+      "sha": "49a4d076d7e6e753671a0f9adb94ad001b4fd912",
+      "expectedSha": "49a4d076d7e6e753671a0f9adb94ad001b4fd912",
+      "lines": 562,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -2917,6 +2938,7 @@
     "FSIS conflict preserved: integration master knowledge access matrix allows Public read of General standards; FSIS-1302 marks General standards Public '-'. Do not silently reconcile approval/security differences. Backlog unchecked entries are not implemented-control evidence.",
     "FRCIM architecture extension approved source status differs from Philippine capability/catalog Verified Working Baseline. Reading repository legal/regulatory claims is not live revalidation of laws, source freshness, rule inputs, permit applicability or deployed compliance. Each production catalog item still requires source/requirement record; missing threshold facts must yield Insufficient Data.",
     "FSvIS-OM-0001 remains S1 Defined / Pilot Definition. Pricing PHP4999 / founding-five50% PHP2499.50 is experimental scope hypothesis; charter/readiness candidate additions explicitly do not certify a real paid client, market demand, accepted report or expanded service scope.",
-    "FWIS implementation records Draft/Approver Pending: IMPL0000 older live backend53 assertions do not prove later role/reference/storage SQL. IMPL0003 explicitly says later live-test never ran realPostgreSQL; role-test JS mirror notSQL proof; intake1b unstarted; export content not automated tested,SpreadsheetML string cells; backup plaintext/nointegrity; missingIMPL0001/0002 links retained unresolved. Reading historical assertions is not current execution validation."
+    "FWIS implementation records Draft/Approver Pending: IMPL0000 older live backend53 assertions do not prove later role/reference/storage SQL. IMPL0003 explicitly says later live-test never ran realPostgreSQL; role-test JS mirror notSQL proof; intake1b unstarted; export content not automated tested,SpreadsheetML string cells; backup plaintext/nointegrity; missingIMPL0001/0002 links retained unresolved. Reading historical assertions is not current execution validation.",
+    "FWIS-SPEC0001 retains 2026-08-05 'missing parents/specs' commentary contradicted by pinned tree and full-read receipts for FBPOIS/FWIS architecture andSPEC0002/0003. Historical absence notes are not current repository inventory. Most specifications Draft, architecture Approved; preserve distinctions."
   ]
 }
