@@ -2008,6 +2008,30 @@
         "react-dom",
         "../actions"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/actions.ts",
+      "sha": "2bfd790f03d38ea2b93e69f07eb1a5fc1197ef8f",
+      "expectedSha": "2bfd790f03d38ea2b93e69f07eb1a5fc1197ef8f",
+      "lines": 674,
+      "status": "FULL_TEXT_READ",
+      "ranges": [
+        "characters0-17999",
+        "characters18000-22655"
+      ],
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/cache",
+        "next/navigation",
+        "@/lib/db",
+        "@/lib/auth/session",
+        "@/lib/logger",
+        "@/lib/config",
+        "./repository",
+        "./steps",
+        "@/lib/invitation/completeness",
+        "./schema"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2030,6 +2054,6 @@
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/actions.ts; 128/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/draft-card.tsx; 129/422 complete"
   }
 }
