@@ -2323,6 +2323,48 @@
         "@/services/media",
         "@/lib/config"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/preview/invitation-preview.tsx",
+      "sha": "1823ad9269c908b7ad83ec5689de2a23ba5ecbda",
+      "expectedSha": "1823ad9269c908b7ad83ec5689de2a23ba5ecbda",
+      "lines": 412,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "@/lib/utils",
+        "@/lib/invitation/preview-model",
+        "@/lib/config",
+        "@/features/website-generator/experience/registry",
+        "@/features/website-generator/experience/themes"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/recommendations.test.ts",
+      "sha": "a3bea8de27f72e1ceb8d40a30b533c04bdde54a2",
+      "expectedSha": "a3bea8de27f72e1ceb8d40a30b533c04bdde54a2",
+      "lines": 83,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "@/services/recommendations",
+        "./recommendations"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/recommendations.ts",
+      "sha": "1f45522ec06434416b435b50b86d03cf2cfbfce4",
+      "expectedSha": "1f45522ec06434416b435b50b86d03cf2cfbfce4",
+      "lines": 66,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/services/recommendations",
+        "@/services/recommendations"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2346,6 +2388,6 @@
     "Builder source tracing observations: authorize() checks ownership but save actions do not enforce draft/completed state or optimistic version; autosave run returns while inFlight, does not reschedule if debounce expires during a long request, and unmount directly calls saveRef without sequencing. Potential unsaved/stale-write race requires controlled tests. ContentStep defines PersonList inside the parent render; React component identity/focus stability should be examined. These are static observations only."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/preview/invitation-preview.tsx; 145/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/repository.ts; 148/422 complete"
   }
 }
