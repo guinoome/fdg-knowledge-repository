@@ -211,3 +211,9 @@ A project/module is traceability-complete when an authorized reviewer can answer
 - Who accepted it?
 - What evidence proves it?
 - Has it produced the intended outcome?
+
+## Linked Requirements Views — 2026-10-15
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] clarifies BRD (business WHY), PRD (product/user WHAT), FRD (precise functional behavior), SyRS/SRS (required system/software behavior and constraints), architecture (implementation HOW) and V&V (objective proof and acceptance). These are **linked views over this existing FPJIS requirement record or linked requirement hierarchy**, not competing templates or an additional requirements system.
+
+Use [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Pilot]] as an illustrative fire-pump inspection record. Its ACs are proposed, not tested; it carries no build, engineering or deployment authority. Maintain all statuses and source/provenance controls already defined here. Never move to VERIFIED or ACCEPTED based merely on a model-generated test or declaration.
