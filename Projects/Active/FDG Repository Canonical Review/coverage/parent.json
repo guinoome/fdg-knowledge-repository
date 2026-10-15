@@ -796,9 +796,75 @@
       "characters": 3485,
       "status": "FULL_TEXT_READ",
       "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0010 - Scope Requirement Coverage RFI and Revision Control Standard.md",
+      "sha": "1059f84beddafb2141e8c6e1ac6a568d277eaea8",
+      "expectedSha": "1059f84beddafb2141e8c6e1ac6a568d277eaea8",
+      "bytes": 2979,
+      "lines": 151,
+      "characters": 2959,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0011 - Cross FEIS Drawing Measurement and Provenance Reuse Contract.md",
+      "sha": "0c7aab9121e6bd66d42f6dae6461b725576aebf1",
+      "expectedSha": "0c7aab9121e6bd66d42f6dae6461b725576aebf1",
+      "bytes": 3296,
+      "lines": 132,
+      "characters": 3290,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0900 - Agent Build Handover.md",
+      "sha": "d6d3bd6d197c098ace61a0abb5675a046e882078",
+      "expectedSha": "d6d3bd6d197c098ace61a0abb5675a046e882078",
+      "bytes": 3543,
+      "lines": 102,
+      "characters": 3523,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-PATCH-0000 - Patch Register.md",
+      "sha": "23b69129d8d374b041f2fe8edef59be45822b849",
+      "expectedSha": "23b69129d8d374b041f2fe8edef59be45822b849",
+      "bytes": 1790,
+      "lines": 58,
+      "characters": 1768,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-PATCH-TEMPLATE.md",
+      "sha": "41233da31442a2a169e5544133ca5e20cfe87e16",
+      "expectedSha": "41233da31442a2a169e5544133ca5e20cfe87e16",
+      "bytes": 1783,
+      "lines": 95,
+      "characters": 1779,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-RSCH-0001 - OpenTakeoff Benchmark Extraction and FDG Gap Analysis.md",
+      "sha": "aa1f25dd495d6a610600a335e66fc91686d9c94f",
+      "expectedSha": "aa1f25dd495d6a610600a335e66fc91686d9c94f",
+      "bytes": 7250,
+      "lines": 178,
+      "characters": 7218,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
     }
   ],
   "updatedOn": "2026-10-15",
-  "verifiedFullReadCount": 89,
-  "pendingFile": null
+  "verifiedFullReadCount": 95,
+  "pendingFile": null,
+  "notes": [
+    "All79 FEIS Markdown documents at the source checkpoint have now been fully read across original and resumed reads; authorizations/status vary. Reading is not runtime/test/deployment verification.",
+    "Maintenance extension has three independent readiness layers: Work/Asset/Program; proposed standards separate workflow status from readiness, require resource/safety/PMT/return-to-service gates and companion anti-gaming KPI evidence.",
+    "QTO2026-10-14 package is approved architecture/standards but L1 coding authorization is separate. One calibrated measurement kernel, provenance method differs from actor, human-approved measurements protected, BOQ snapshot lineage, known-answer frozen benchmarking; no source code import from AGPLbenchmark.",
+    "Direct user's GitHub-only project storage instruction governs this engagement's artifacts. Product local-first architecture is a separate design dimension and is not silently rewritten by this reading task."
+  ]
 }
