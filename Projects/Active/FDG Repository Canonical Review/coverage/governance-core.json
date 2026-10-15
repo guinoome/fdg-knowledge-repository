@@ -1336,6 +1336,48 @@
       "expectedSha": "6a55dc10702612384acb5634296396a742952b21",
       "lines": 74,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0004 - Document Design and Generation Standard.md",
+      "sha": "ef85dff367619cdd294e98117c4b404e8a7650f8",
+      "expectedSha": "ef85dff367619cdd294e98117c4b404e8a7650f8",
+      "lines": 108,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0005 - Testing and Commissioning Reference Implementation.md",
+      "sha": "348cb626dd3d52723d392e40c8a1cde9ec5b6cf0",
+      "expectedSha": "348cb626dd3d52723d392e40c8a1cde9ec5b6cf0",
+      "lines": 76,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0006 - Multi-Tenant Subscription Branding and Access.md",
+      "sha": "d80d64cb91ee697daec44c484799bf4573304d8e",
+      "expectedSha": "d80d64cb91ee697daec44c484799bf4573304d8e",
+      "lines": 79,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0007 - Module Contracts Events and Interoperability.md",
+      "sha": "277bb7a701852c6f432a77efe7996ef173d6a8cb",
+      "expectedSha": "277bb7a701852c6f432a77efe7996ef173d6a8cb",
+      "lines": 75,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0008 - Security Offline Sync and Data Governance.md",
+      "sha": "9e41cdd4cba949a2198a308b85d39c6492a16ff4",
+      "expectedSha": "9e41cdd4cba949a2198a308b85d39c6492a16ff4",
+      "lines": 64,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0009 - Methodology Validation and Computation Registry.md",
+      "sha": "ea484b2b1f9fa04e7a694d072522986a247acf38",
+      "expectedSha": "ea484b2b1f9fa04e7a694d072522986a247acf38",
+      "lines": 61,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
