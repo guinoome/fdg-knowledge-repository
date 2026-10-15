@@ -10,7 +10,7 @@
 - [[ENGINEERING_OBJECTIVE]]
 - [[TOP_TIER_REPOSITORY_REVIEW_WATCH]]
 - [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|FDG Top-Tier Architecture Compiler & Token-Efficiency Protocol]]
-- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → this document
 
@@ -23,12 +23,12 @@
 - [[03_Agentic Framework/AUTHORITY_LEVELS|AUTHORITY LEVELS]]
 - [[03_Agentic Framework/CONTEXT_REQUIREMENTS|CONTEXT REQUIREMENTS]]
 - [[03_Agentic Framework/ENGINEERING_OBJECTIVE|ENGINEERING OBJECTIVE]]
-- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
+- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|Cross-Provider Review Legacy Redirect]] (compatibility pointer only)
 
 
 ## Related Execution and Orchestration Systems
 
-The Agentic Framework remains the governing operating model. Execution/orchestration implementations link to it rather than duplicating it.
+The Agentic Framework governs generic agent behavior and readiness. FMCIS is the canonical owner of multi-provider collaboration, including cross-provider review. This index links to that authority rather than duplicating its standard.
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS — Multi-Collaborator Intelligence]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
