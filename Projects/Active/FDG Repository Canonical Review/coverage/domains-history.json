@@ -2793,6 +2793,62 @@
       "expectedSha": "452467bd76b916b94152d5b7e09b71af7d01e0a4",
       "lines": 22,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/FSvIS-IMP-0002 - New Service Development Gate.md",
+      "sha": "e8a87048e5a9abdd449c53c219a864d3efae6c1f",
+      "expectedSha": "e8a87048e5a9abdd449c53c219a864d3efae6c1f",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/Improvement_Register/README.md",
+      "sha": "1150de6f9dc52571f33494f3d6255aa97e4b45f0",
+      "expectedSha": "1150de6f9dc52571f33494f3d6255aa97e4b45f0",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/New_Service_Development/README.md",
+      "sha": "e60dcc19603e1d952462ae0575f731cd597545d5",
+      "expectedSha": "e60dcc19603e1d952462ae0575f731cd597545d5",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/Service_Enhancements/README.md",
+      "sha": "d397e7f9fded8069e2c3845c48547b8ed99f2a18",
+      "expectedSha": "d397e7f9fded8069e2c3845c48547b8ed99f2a18",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/12_Service_Improvement_and_Innovation/Service_Experiments/README.md",
+      "sha": "586719dcee4ee5021bd8dcb412a54c405f71e761",
+      "expectedSha": "586719dcee4ee5021bd8dcb412a54c405f71e761",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/99_Archive/README.md",
+      "sha": "bdc47dcc5312a5d7a098e2d3205dad6455d4818a",
+      "expectedSha": "bdc47dcc5312a5d7a098e2d3205dad6455d4818a",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/FSvIS-MANIFEST.md",
+      "sha": "42448399bacee724d04cba4a48e938db1e247fa9",
+      "expectedSha": "42448399bacee724d04cba4a48e938db1e247fa9",
+      "lines": 106,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/README.md",
+      "sha": "a8d6f4e602c763e651e37c72a1ccb41489cc8d8c",
+      "expectedSha": "a8d6f4e602c763e651e37c72a1ccb41489cc8d8c",
+      "lines": 170,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
