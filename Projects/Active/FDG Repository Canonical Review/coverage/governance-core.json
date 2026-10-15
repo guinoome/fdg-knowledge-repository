@@ -986,6 +986,48 @@
       "expectedSha": "d26408c0bc70a82607527c5f909b9d74c65d56ed",
       "lines": 400,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_KNOWLEDGE_REPOSITORY_INTEGRATION_STANDARD.md",
+      "sha": "1d6d34380bb676cd95004fb7bfb1215d6d972766",
+      "expectedSha": "1d6d34380bb676cd95004fb7bfb1215d6d972766",
+      "lines": 471,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_KNOWLEDGE_REPOSITORY_OPERATING_PROCEDURE_STANDARD.md",
+      "sha": "58b78b6ec03b9b05b8b4ce4c7e1b134176d368e9",
+      "expectedSha": "58b78b6ec03b9b05b8b4ce4c7e1b134176d368e9",
+      "lines": 496,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_OPERATING_CONSTITUTION.md",
+      "sha": "4beb63585daf7552f96567e91a473184d2a965ca",
+      "expectedSha": "4beb63585daf7552f96567e91a473184d2a965ca",
+      "lines": 460,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_PERFORMANCE_AND_MATURITY_ASSESSMENT_STANDARD.md",
+      "sha": "4b9076539bf01119f753f778c56dd5ecbf54a0e6",
+      "expectedSha": "4b9076539bf01119f753f778c56dd5ecbf54a0e6",
+      "lines": 440,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_PRE_OS_RUNTIME_FOUNDATION_INDEX.md",
+      "sha": "4cf5fbe8bd07238e5e5a36233795a8cd0dffb801",
+      "expectedSha": "4cf5fbe8bd07238e5e5a36233795a8cd0dffb801",
+      "lines": 135,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_QUALITY_ASSURANCE_AND_VALIDATION_STANDARD.md",
+      "sha": "811e69a25997b9975577afbf0144785a917170f4",
+      "expectedSha": "811e69a25997b9975577afbf0144785a917170f4",
+      "lines": 399,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
