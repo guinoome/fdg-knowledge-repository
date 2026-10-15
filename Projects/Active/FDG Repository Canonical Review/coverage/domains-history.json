@@ -333,6 +333,48 @@
       "expectedSha": "de6b0fb30d209efcd14b990745b6d92562e04199",
       "lines": 26,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Zero_Value_Order_Intelligence.md",
+      "sha": "24bb0f7929ce512c2f79dbf5e5c9c7293b0378f6",
+      "expectedSha": "24bb0f7929ce512c2f79dbf5e5c9c7293b0378f6",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "sha": "8d4aabf98e8645a42866d8d92ecd14743e1d35a0",
+      "expectedSha": "8d4aabf98e8645a42866d8d92ecd14743e1d35a0",
+      "lines": 68,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Expense_Evidence_and_Audit_Trail_Standard.md",
+      "sha": "6a30545fb31de8bbe744dbeffe1149b801cf7db1",
+      "expectedSha": "6a30545fb31de8bbe744dbeffe1149b801cf7db1",
+      "lines": 84,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-ATTENDANCE-001 - FDG Android Attendance Terminal.md",
+      "sha": "68f61128daa0e1233e48f8e273825c84d447e2d6",
+      "expectedSha": "68f61128daa0e1233e48f8e273825c84d447e2d6",
+      "lines": 426,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-EMPLOYEE-001 - FDG Employee Mobile Self-Service.md",
+      "sha": "4310a39ae62fd587cf58aa36435e94a059dec864",
+      "expectedSha": "4310a39ae62fd587cf58aa36435e94a059dec864",
+      "lines": 214,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FBIS-OPS-PAYROLL-001 - FDG Payroll Portable Edition.md",
+      "sha": "29495a40fd7c8c82432df0dac8bd338d0794411d",
+      "expectedSha": "29495a40fd7c8c82432df0dac8bd338d0794411d",
+      "lines": 570,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
