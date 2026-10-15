@@ -258,6 +258,69 @@
       "expectedSha": "c42b1510a8aaa65149795c17bc664c54c379529e",
       "lines": 281,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/00_ARCHITECTURE_MODEL.md",
+      "sha": "3c2b0a586b21d37652acd8879439f1bd0ec78dc7",
+      "expectedSha": "3c2b0a586b21d37652acd8879439f1bd0ec78dc7",
+      "lines": 215,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/05_Knowledge_Architecture_Master_Index.md",
+      "sha": "171a89a75783d86062a5b42b02e7e82517cc96ed",
+      "expectedSha": "171a89a75783d86062a5b42b02e7e82517cc96ed",
+      "lines": 45,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/ARCHIVE_STANDARD.md",
+      "sha": "af0478e02e052eec31e62f5119ab67e3bb0de712",
+      "expectedSha": "af0478e02e052eec31e62f5119ab67e3bb0de712",
+      "lines": 217,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/CANONICAL_TRUTH_RESOLUTION_STANDARD.md",
+      "sha": "ef01b25a2e284ced39e68768e72ad9a3b2c7ab1a",
+      "expectedSha": "ef01b25a2e284ced39e68768e72ad9a3b2c7ab1a",
+      "lines": 106,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/FDG_CROSS_SYSTEM_RELATIONSHIP_MAP.md",
+      "sha": "4c59c9adf2f91b681fd85ced643f37ac5ca5f446",
+      "expectedSha": "4c59c9adf2f91b681fd85ced643f37ac5ca5f446",
+      "lines": 356,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30.md",
+      "sha": "29d998144cc6537080ada1c02df04cef9d1e56ca",
+      "expectedSha": "29d998144cc6537080ada1c02df04cef9d1e56ca",
+      "lines": 113,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/KNOWLEDGE_ASSET_STANDARD.md",
+      "sha": "2b3144849899361d5150fc6e559cdcb272acb023",
+      "expectedSha": "2b3144849899361d5150fc6e559cdcb272acb023",
+      "lines": 199,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/KNOWLEDGE_ASSET_TEMPLATE_STANDARD.md",
+      "sha": "a1c7e44535610bdf4263a48ff5df9b9f994939bc",
+      "expectedSha": "a1c7e44535610bdf4263a48ff5df9b9f994939bc",
+      "lines": 240,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/KNOWLEDGE_PRESERVATION_STANDARD.md",
+      "sha": "356dac4ed16e0cb5cda29a38b8d45ed936b55370",
+      "expectedSha": "356dac4ed16e0cb5cda29a38b8d45ed936b55370",
+      "lines": 3,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -268,6 +331,7 @@
     "NEX-STD-006 Knowledge Governance Framework explicitly has Draft status despite constitutional framing; Approved documents and historical index prose reference it. Presence is not approval. Approved NEX-STD-002/-003/-004/-005 have blank effective and review dates.",
     "Identity Model is currently NEX-STD-123 v1.0.1, with explicit 2026-08-29 reassignment; old collision warnings preserved elsewhere are historical. USER.md asserts Professional Mechanical Engineer (PME), which must be reconciled with verified credentials before external professional use.",
     "Architecture Compiler Protocol is Active Operating Instruction effective 2026-10-06 with sequential 2026-10-11 clarifications. Current Compiler–Builder–Auditor Contract supersedes Astra-specific selection wording, requires actual identities and independent top-tier audit before accepted coding package. CFO/CMO/customer-service profiles are design-only Draft, uncommissioned.",
-    "Knowledge Management standards preserve review vs approval separation, require approval before baseline adoption, and emphasize reusable conclusions rather than raw conversation. Several Related Documents labels misassign Document Control to NEX-STD-001 and Decision Evolution to NEX-STD-002; actual governance files are NEX-STD-002 and NEX-STD-003."
+    "Knowledge Management standards preserve review vs approval separation, require approval before baseline adoption, and emphasize reusable conclusions rather than raw conversation. Several Related Documents labels misassign Document Control to NEX-STD-001 and Decision Evolution to NEX-STD-002; actual governance files are NEX-STD-002 and NEX-STD-003.",
+    "Canonical Truth Resolution Standard remains Proposed; enterprise architecture reconciliation remains Proposed; cross-system relationship map has working/pending global status plus specifically labeled approved and later scoped extensions. In root 05, KNOWLEDGE_PRESERVATION_STANDARD.md contains only a breadcrumb; root 04 holds the substantive Approved NEX-STD-023."
   ]
 }
