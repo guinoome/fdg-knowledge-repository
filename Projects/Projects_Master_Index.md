@@ -139,3 +139,14 @@ Canonical construction authority remains:
 
 The complete build blueprint remains:
 [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902]].
+
+
+---
+
+## GitHub Project Storage — Founder Direction, 2026-10-15
+
+For current and future project work in this engagement, GitHub `guinoome/fdg-knowledge-repository` is the authoritative storage location. Keep each project's entry point, blueprints, work packages, evidence and handover in its appropriate `Projects/` folder. Do not create project artifacts on Francis's local computer. Local vaults are stale and must not override current GitHub material.
+
+This direction does not claim existing external application repositories have already migrated. Identify any build/runtime requirement for local storage before writing locally.
+
+- [[Projects/Active/FDG Repository Canonical Review/README|FDG Repository Canonical Review]] — full tracked-file reading and coverage at a pinned GitHub checkpoint; currently in progress.

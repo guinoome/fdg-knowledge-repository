@@ -1,0 +1,391 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "priorCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+  "status": "IN_PROGRESS",
+  "method": "Complete text read through connected GitHub tools. Prior FEIS reads retained only because the GitHub comparison confirms no FEIS path changed between checkpoints.",
+  "documents": [
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/00_Mechanical Engineering Intelligence_Master_Index.md",
+      "sha": "a16a9f34721087f176c49ebb1007ce7307536440",
+      "bytes": 721,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-0000.md",
+      "sha": "add6ccd6d66beaad3b1ebdf1d881546aa6e80e89",
+      "bytes": 11671,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-0001.md",
+      "sha": "a60cfc5ab83967d6f89c8b8cd4630fbfc80f23b6",
+      "bytes": 8611,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-ROADMAP.md",
+      "sha": "7bf9cf588a620411fdbf5c8f17bcdc6cf6ff2755",
+      "bytes": 8348,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/01_Engineering_Company_Core/FEIS-ECC-0000 - Engineering Company Core.md",
+      "sha": "ce26dfc23f00477cc24aeff7df7fd2b2e6aac338",
+      "bytes": 5620,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index.md",
+      "sha": "04275eca53be93a96a007b69f855d9c3f03887b3",
+      "bytes": 10278,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0001 - Construction Management Lifecycle Architecture.md",
+      "sha": "f9560b9a1d690187f431befde8cdcffd61723744",
+      "bytes": 6369,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0002 - Capture Once Reporting and Progress Architecture.md",
+      "sha": "03cb86eebd7e6880d64074f65c32764f96e3d400",
+      "bytes": 3306,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0003 - Project Continuity and Personnel Handover Standard.md",
+      "sha": "77af993973389928de572a27694cd3c9673e342a",
+      "bytes": 2902,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0004 - Named User Session and Subscription Control Standard.md",
+      "sha": "cd4896ca6d0427a97962dab53a462431b9c16a55",
+      "bytes": 3036,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0005 - Construction Manager Role Intelligence and Guided Workflow Standard.md",
+      "sha": "8be343a93a4f22d8ae9b6f9417c633cdf130bd10",
+      "bytes": 10664,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard.md",
+      "sha": "dc0fa6b376357f714b7e580393d0cf75de410ce2",
+      "bytes": 8210,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0007 - Construction Manager Embedded Learning and Competency Standard.md",
+      "sha": "8c32f9ab8247ef9429258669227d54a096115aec",
+      "bytes": 6561,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map.md",
+      "sha": "81f6464711c1e4b0e178dd2049bd9fba3afa1080",
+      "bytes": 14613,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md",
+      "sha": "290a78b9d593714bc0daffa65412eed08d0b2e2f",
+      "bytes": 14260,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover.md",
+      "sha": "9fdcecfb2c4ee15fa2d3289e220512266704f0e0",
+      "bytes": 7982,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint.md",
+      "sha": "6eb67ab51a24f7e8e206f73de43cc66e9a34bbbd",
+      "bytes": 17404,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint.md",
+      "sha": "236986e9b8277f6593b877f18c43787a53b0fc5f",
+      "bytes": 35859,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0001 - Tixu Construction Manager Benchmark Extraction 2026-10-04.md",
+      "sha": "2ed56c2a8d651af21719b81552a3f726274a1718",
+      "bytes": 8203,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0000 - Digital Construction Knowledge Library Architecture.md",
+      "sha": "d2a44ce19acfb1fb17a6fb9eaee53c9f8d3dd5dc",
+      "bytes": 8539,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path.md",
+      "sha": "433f9967446a724aadd746b59824d88c185cf1f1",
+      "bytes": 15354,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index.md",
+      "sha": "5a11eb4715b79908eb9bdbf851cc7fe0339386eb",
+      "bytes": 7268,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0000 - Solar Engineering Intelligence Architecture.md",
+      "sha": "24f45f034f97cc2f3135c54843c637f3a6ecee86",
+      "bytes": 22908,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0001 - Solset Benchmark Extraction and FDG Gap Analysis.md",
+      "sha": "be434b1d29eae865343f09047c526e3dd25c52ee",
+      "bytes": 15170,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index.md",
+      "sha": "f4220d1526609339b1860807e2b520df96771f35",
+      "bytes": 18285,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-SEC-ADD-001_FIELD_SERVICE_SECURITY_PRIVACY_AND_TRUST_CONTROLS.md",
+      "sha": "3959c0673f4bd55dd59c96c23869b944ab3270c0",
+      "bytes": 10209,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-001_PLATFORM_ARCHITECTURE_AND_MODULE_DESIGN_STANDARD.md",
+      "sha": "24f23bc3f59a3ac62e5a83e6148f83158014c4dc",
+      "bytes": 5129,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-002_ENGINEERING_DASHBOARD_AND_OPERATIONAL_VISIBILITY_STANDARD.md",
+      "sha": "103dee6e55784261ed06a823c7d9cf401f6f9b9f",
+      "bytes": 906,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-003_ASSET_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "e50fa24da46b2da1d11621b266016176ab1a1ea8",
+      "bytes": 1749,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-004_MAINTENANCE_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "1e56fd46c9591c4f5f953bffb101f7ecde90fed2",
+      "bytes": 2802,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-005_ENGINEERING_PROJECT_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "1ec0e70d79b745c829e3e3153ef1db7db8eb8c01",
+      "bytes": 4120,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-006_ENGINEERING_CALCULATION_ENGINE_MODULE_STANDARD.md",
+      "sha": "e7425766a8212e73517892ed23ca308560226e33",
+      "bytes": 1838,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-007_ENGINEERING_REPORT_AND_DOCUMENT_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "c6255dc04678d174a583ff1a8e568b00248db2ef",
+      "bytes": 2704,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-008_ENGINEERING_ANALYTICS_AND_PERFORMANCE_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "c5f975f655ee13dee4195c975624672f81c3b7c8",
+      "bytes": 1926,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-009_KNOWLEDGE_INTEGRATION_AND_ENGINEERING_MEMORY_MODULE_STANDARD.md",
+      "sha": "a1fa13c6a0c5824d964fde1c16461138ebbe9e1e",
+      "bytes": 2876,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-010_ENGINEERING_INVENTORY_AND_SPARE_PARTS_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "2138d3baed93eccd08f91b72a552dbcf3547ee56",
+      "bytes": 1693,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-011_ENGINEERING_BUDGET_AND_COST_INTELLIGENCE_MODULE_STANDARD.md",
+      "sha": "6707a78dbf31ebc5f6e6d36fa79c9d3c852d55d7",
+      "bytes": 931,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-012_ENGINEERING_WORKFLOW_AND_AUTOMATION_MODULE_STANDARD.md",
+      "sha": "00892729f811cc82faa362f66a80f8ce47b404d1",
+      "bytes": 2001,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-013_SECURITY_ACCESS_AND_GOVERNANCE_MODULE_STANDARD.md",
+      "sha": "cfb78789bd97f735866bc6ff5c942f748c6bc849",
+      "bytes": 1745,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-014_INTEGRATION_AND_API_ARCHITECTURE_MODULE_STANDARD.md",
+      "sha": "439ad53a14da966b9aaeab0ec6cb484455feb429",
+      "bytes": 1603,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-015_DATA_ARCHITECTURE_AND_DATABASE_MODEL_STANDARD.md",
+      "sha": "0b727640b962c0fe6a3c8e8fe924abd4ae3ca633",
+      "bytes": 930,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-016_NEX_CORE_INTEGRATION_ARCHITECTURE_STANDARD.md",
+      "sha": "e91a8ba055d340f4f94bb5683885d7e38360d187",
+      "bytes": 954,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-017_DEPLOYMENT_AND_INFRASTRUCTURE_ARCHITECTURE_STANDARD.md",
+      "sha": "e568d92d09fd421d0f45a4ae7afe65658ba65f44",
+      "bytes": 924,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-018_IMPLEMENTATION_ROADMAP_AND_MATURITY_MODEL_STANDARD.md",
+      "sha": "8b04ed3669459cc92c5327c1bf4be23fbe365233",
+      "bytes": 882,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-019_ENGINEERING_DATA_INTEGRITY_AND_TRANSACTION_LINEAGE_STANDARD.md",
+      "sha": "874a7790f44d4063abf9421a77b163bcbae26af5",
+      "bytes": 12423,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-020_SERVICE_DELIVERY_AND_FIELD_OPERATIONS_STANDARD.md",
+      "sha": "1ed7cfae81803a1814f8cf888987c85e6d65c2c3",
+      "bytes": 14897,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "d41c1ab7004d537bd18f84a2c65bd88445cd6aa6",
+      "carriedForwardBy": "GitHub compare has zero changed FEIS paths"
+    },
+    {
+      "path": "Projects/Projects_Master_Index.md",
+      "sha": "ee45853c8b6b4b377d7345825003d349623036c7",
+      "bytes": 10003,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "00_Nex/NEX-BOOTSTRAP.md",
+      "sha": "076c61a78cb5af6c07c3a45f25523e40e4257b56",
+      "bytes": 6426,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    }
+  ]
+}
