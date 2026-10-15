@@ -1575,6 +1575,93 @@
       "dependencies": [
         "zod"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/actions.ts",
+      "sha": "4588497225dc08f37cadb35c90a4b5d84eedfdec",
+      "expectedSha": "4588497225dc08f37cadb35c90a4b5d84eedfdec",
+      "lines": 206,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/cache",
+        "@/lib/auth/require-staff",
+        "@/features/template-marketplace/repository",
+        "@/lib/config",
+        "@/lib/forms/action-state",
+        "@/services/template-assets",
+        "./catalogue-repository",
+        "./catalogue"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/catalogue-repository.ts",
+      "sha": "ac8b8fd811c5e6c0a0ebd5ccf83515ee8fb47727",
+      "expectedSha": "ac8b8fd811c5e6c0a0ebd5ccf83515ee8fb47727",
+      "lines": 210,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/lib/db",
+        "@/lib/logger",
+        "@/lib/placeholder-art",
+        "./catalogue"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/catalogue.test.ts",
+      "sha": "071ea3952215c10fd5dadadd6a943e1433ef15d1",
+      "expectedSha": "071ea3952215c10fd5dadadd6a943e1433ef15d1",
+      "lines": 144,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./catalogue"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/catalogue.ts",
+      "sha": "94bbeea71cd3d8b1d2fe8a1152b3ce7a63e320ea",
+      "expectedSha": "94bbeea71cd3d8b1d2fe8a1152b3ce7a63e320ea",
+      "lines": 137,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": []
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/asset-grid.tsx",
+      "sha": "2debb6b3d5f2f988ed4e5d11cc77bc02c2c5d1f7",
+      "expectedSha": "2debb6b3d5f2f988ed4e5d11cc77bc02c2c5d1f7",
+      "lines": 109,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/image",
+        "lucide-react",
+        "@/lib/utils",
+        "@/services/template-assets",
+        "@/services/template-assets/types",
+        "./assign-control",
+        "./delete-asset-button"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/assign-control.tsx",
+      "sha": "1f57465d5d74e726d85123c71860afc9f1686484",
+      "expectedSha": "1f57465d5d74e726d85123c71860afc9f1686484",
+      "lines": 137,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "lucide-react",
+        "@/components/form/submit-button",
+        "@/lib/forms/action-state",
+        "@/services/template-assets/types",
+        "../actions"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1588,6 +1675,6 @@
     "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/actions.ts; 99/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/catalogue-row.tsx; 105/422 complete"
   }
 }
