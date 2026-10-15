@@ -1,0 +1,20 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "status": "IN_PROGRESS",
+  "documents": [
+    {
+      "path": "00_Nex/00_Master Index.md",
+      "sha": "d57e5b11f3c7e37f9a91cad11f5e4fea527e287a",
+      "expectedSha": "d57e5b11f3c7e37f9a91cad11f5e4fea527e287a",
+      "lines": 357,
+      "status": "FULL_TEXT_READ"
+    }
+  ],
+  "failures": [],
+  "notes": [
+    "All content is read through connected GitHub tools at the pinned source checkpoint; no local repository source is used.",
+    "This scope contains 202 tracked text files, all Markdown, across numbered roots 00-10 excluding FEIS root 08. Earlier unledgered reading is not counted.",
+    "The top-level historical master index includes dated counts and observations that must not be treated as live inventory; its 2026-09-30 addendum labels new proposals as additions, not approved replacements."
+  ]
+}
