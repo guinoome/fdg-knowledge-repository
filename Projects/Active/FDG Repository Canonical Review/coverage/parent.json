@@ -856,10 +856,210 @@
       "characters": 7218,
       "status": "FULL_TEXT_READ",
       "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/10-second-granularity-rule.md",
+      "sha": "374ebe97859f5c46139a42f1fada2a2f3e0a7eb3",
+      "expectedSha": "374ebe97859f5c46139a42f1fada2a2f3e0a7eb3",
+      "bytes": 2782,
+      "lines": 45,
+      "characters": 2761,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/Candidates_Master_Index.md",
+      "sha": "3b48827fa675f0bfbc3e98ae8288f6a52ff6d3ec",
+      "expectedSha": "3b48827fa675f0bfbc3e98ae8288f6a52ff6d3ec",
+      "bytes": 765,
+      "lines": 22,
+      "characters": 763,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/README.md",
+      "sha": "bcf0ac2f84eabd5ac01086b1a4c3b27cf92f1a34",
+      "expectedSha": "bcf0ac2f84eabd5ac01086b1a4c3b27cf92f1a34",
+      "bytes": 2775,
+      "lines": 34,
+      "characters": 2742,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/WP-DRAFT-001_Graph_Linking_Phase1.md",
+      "sha": "14b977e26c5d409b7cade87808d0dd01c93d183a",
+      "expectedSha": "14b977e26c5d409b7cade87808d0dd01c93d183a",
+      "bytes": 7532,
+      "lines": 88,
+      "characters": 7476,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/_template.md",
+      "sha": "e539aa1029afa41fb576c43f27f7df01d0ea1522",
+      "expectedSha": "e539aa1029afa41fb576c43f27f7df01d0ea1522",
+      "bytes": 944,
+      "lines": 37,
+      "characters": 932,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/fdg-ecosystem-5-layer-model.md",
+      "sha": "04b01090f1ecce8ffed7bc3723f7f513a62e8ea8",
+      "expectedSha": "04b01090f1ecce8ffed7bc3723f7f513a62e8ea8",
+      "bytes": 5448,
+      "lines": 83,
+      "characters": 5326,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/stage-0-stage-1-operating-mode.md",
+      "sha": "ea47ced97c849850e2eec581be467ae4f8cc2dd7",
+      "expectedSha": "ea47ced97c849850e2eec581be467ae4f8cc2dd7",
+      "bytes": 3005,
+      "lines": 45,
+      "characters": 2988,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Candidates/vault-is-not-a-build-directory.md",
+      "sha": "a9c66a4f0de05a96b541f1c37eeeb93eeabfbb21",
+      "expectedSha": "a9c66a4f0de05a96b541f1c37eeeb93eeabfbb21",
+      "bytes": 4745,
+      "lines": 71,
+      "characters": 4718,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Journal/2026-08-04.md",
+      "sha": "437a9c23adee5ee4eb8ec99f8f56dfcdcabbe342",
+      "expectedSha": "437a9c23adee5ee4eb8ec99f8f56dfcdcabbe342",
+      "bytes": 3727,
+      "lines": 23,
+      "characters": 3689,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Journal/Journal_Master_Index.md",
+      "sha": "3780ec69486b44e528527ab037ff1de4e958215f",
+      "expectedSha": "3780ec69486b44e528527ab037ff1de4e958215f",
+      "bytes": 187,
+      "lines": 11,
+      "characters": 185,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "People/Collaborators.md",
+      "sha": "9820a37159620bf306821f870cdee6d162665242",
+      "expectedSha": "9820a37159620bf306821f870cdee6d162665242",
+      "bytes": 738,
+      "lines": 19,
+      "characters": 724,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "People/Founder.md",
+      "sha": "0bdc532ef4ef2fc38e0a5bd8cbdafc03b21ed7a9",
+      "expectedSha": "0bdc532ef4ef2fc38e0a5bd8cbdafc03b21ed7a9",
+      "bytes": 458,
+      "lines": 16,
+      "characters": 452,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "People/Nex.md",
+      "sha": "f0748318828ce54880017fc3f05e3bfcaf4d9a66",
+      "expectedSha": "f0748318828ce54880017fc3f05e3bfcaf4d9a66",
+      "bytes": 465,
+      "lines": 14,
+      "characters": 459,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "People/People_Master_Index.md",
+      "sha": "ea6d8d43ddf59a190e0788deef2d5bb748567325",
+      "expectedSha": "ea6d8d43ddf59a190e0788deef2d5bb748567325",
+      "bytes": 268,
+      "lines": 15,
+      "characters": 266,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Untitled 1.base",
+      "sha": "c6ab6096b938387c1f5b230561d5245128c650b8",
+      "expectedSha": "c6ab6096b938387c1f5b230561d5245128c650b8",
+      "bytes": 39,
+      "lines": 4,
+      "characters": 39,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Untitled 2.base",
+      "sha": "c6ab6096b938387c1f5b230561d5245128c650b8",
+      "expectedSha": "c6ab6096b938387c1f5b230561d5245128c650b8",
+      "bytes": 39,
+      "lines": 4,
+      "characters": 39,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Untitled.base",
+      "sha": "c6ab6096b938387c1f5b230561d5245128c650b8",
+      "expectedSha": "c6ab6096b938387c1f5b230561d5245128c650b8",
+      "bytes": 39,
+      "lines": 4,
+      "characters": 39,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Untitled.canvas",
+      "sha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "expectedSha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "bytes": 2,
+      "lines": 1,
+      "characters": 2,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "Untitled.md",
+      "sha": "0416a082aa87d91db9e20e1092564c68e66bb2de",
+      "expectedSha": "0416a082aa87d91db9e20e1092564c68e66bb2de",
+      "bytes": 95,
+      "lines": 3,
+      "characters": 91,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "claude-handoff-protocol.md",
+      "sha": "675f029e4b848543f9e0ac4ce4622872ddd3231c",
+      "expectedSha": "675f029e4b848543f9e0ac4ce4622872ddd3231c",
+      "bytes": 20533,
+      "lines": 291,
+      "characters": 20382,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
     }
   ],
   "updatedOn": "2026-10-15",
-  "verifiedFullReadCount": 95,
+  "verifiedFullReadCount": 115,
   "pendingFile": null,
   "notes": [
     "All79 FEIS Markdown documents at the source checkpoint have now been fully read across original and resumed reads; authorizations/status vary. Reading is not runtime/test/deployment verification.",
