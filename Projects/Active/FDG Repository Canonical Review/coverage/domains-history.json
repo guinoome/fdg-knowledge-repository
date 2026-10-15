@@ -2653,6 +2653,76 @@
       "expectedSha": "29e37aae3a77cf305b2cb90a7f138ae0e04dba9b",
       "lines": 24,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/09_Service_Risk_Intelligence/FSvIS-RISK-0001 - Service Risk Intelligence Framework.md",
+      "sha": "3c7fd9648c542c97f9c08f39032e2fec22a28dee",
+      "expectedSha": "3c7fd9648c542c97f9c08f39032e2fec22a28dee",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/09_Service_Risk_Intelligence/FSvIS-RISK-0002 - Service Risk Register Template.md",
+      "sha": "08c1bdef26e423922d3060e3ec9daf64c882a8ee",
+      "expectedSha": "08c1bdef26e423922d3060e3ec9daf64c882a8ee",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/Client_Journey/README.md",
+      "sha": "3f3617ba968fe375d51a6eef5b9718c750583a11",
+      "expectedSha": "3f3617ba968fe375d51a6eef5b9718c750583a11",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/Complaints/README.md",
+      "sha": "67246915ffec56b31c2a4ec5ab94608b3ba52959",
+      "expectedSha": "67246915ffec56b31c2a4ec5ab94608b3ba52959",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/FSvIS-EXP-0001 - Service Experience Intelligence Framework.md",
+      "sha": "d08c99a2e42f5d5ed690ed3619facec846ae7af3",
+      "expectedSha": "d08c99a2e42f5d5ed690ed3619facec846ae7af3",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/FSvIS-EXP-0002 - Feedback Complaint and Recovery Standard.md",
+      "sha": "600893774bb6966462b597e7709d6553dc1091eb",
+      "expectedSha": "600893774bb6966462b597e7709d6553dc1091eb",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/Feedback/README.md",
+      "sha": "e2375559a78f8002a3100ea1a0cc2b73c3215333",
+      "expectedSha": "e2375559a78f8002a3100ea1a0cc2b73c3215333",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/Service_Recovery/README.md",
+      "sha": "abda3efa5b7026284ed2bba215c7dbdbac18a68c",
+      "expectedSha": "abda3efa5b7026284ed2bba215c7dbdbac18a68c",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/10_Service_Experience_Intelligence/Service_Touchpoints/README.md",
+      "sha": "188b82146fd2a697b816364f9349f780472c6c22",
+      "expectedSha": "188b82146fd2a697b816364f9349f780472c6c22",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/11_Service_Knowledge_and_Reuse/Best_Practices/README.md",
+      "sha": "d095127482ac5a7c39947d91d0db879a30ca77c6",
+      "expectedSha": "d095127482ac5a7c39947d91d0db879a30ca77c6",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
