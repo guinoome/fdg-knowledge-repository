@@ -195,6 +195,69 @@
         "characters 0-17999",
         "characters 18000-end"
       ]
+    },
+    {
+      "path": "03_Agentic Framework/TOP_TIER_REPOSITORY_REVIEW_WATCH.md",
+      "sha": "6d02b135261dc21955b611409e3ba86c72fd5f9c",
+      "expectedSha": "6d02b135261dc21955b611409e3ba86c72fd5f9c",
+      "lines": 128,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/00_KNOWLEDGE_MODEL.md",
+      "sha": "82bb8bd8403816d6b768958cd65626cb9bd8a426",
+      "expectedSha": "82bb8bd8403816d6b768958cd65626cb9bd8a426",
+      "lines": 220,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/04_Knowledge_Management_Master_Index.md",
+      "sha": "5e21b77864cce36ac445968803a7f5c39e00c0c5",
+      "expectedSha": "5e21b77864cce36ac445968803a7f5c39e00c0c5",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_APPROVAL_STANDARD.md",
+      "sha": "70983b2fd7fb2ca154a127701e2ee9f13202659a",
+      "expectedSha": "70983b2fd7fb2ca154a127701e2ee9f13202659a",
+      "lines": 257,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD.md",
+      "sha": "595b1877707faf878e6f47183e37b0b1da58770b",
+      "expectedSha": "595b1877707faf878e6f47183e37b0b1da58770b",
+      "lines": 270,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_EVOLUTION_STANDARD.md",
+      "sha": "a3f274805d4854cdbceec201036569c0bc25143f",
+      "expectedSha": "a3f274805d4854cdbceec201036569c0bc25143f",
+      "lines": 294,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_LIFECYCLE.md",
+      "sha": "f543934ceef1f1579fccfe4847d5ea1f8ff3830d",
+      "expectedSha": "f543934ceef1f1579fccfe4847d5ea1f8ff3830d",
+      "lines": 323,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_PRESERVATION_STANDARD.md",
+      "sha": "f4586546b54ff2188c6463d283f6dbfe7faf4dba",
+      "expectedSha": "f4586546b54ff2188c6463d283f6dbfe7faf4dba",
+      "lines": 293,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "04_Knowledge_Management/KNOWLEDGE_REVIEW_STANDARD.md",
+      "sha": "c42b1510a8aaa65149795c17bc664c54c379529e",
+      "expectedSha": "c42b1510a8aaa65149795c17bc664c54c379529e",
+      "lines": 281,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -204,6 +267,7 @@
     "The top-level historical master index includes dated counts and observations that must not be treated as live inventory; its 2026-09-30 addendum labels new proposals as additions, not approved replacements.",
     "NEX-STD-006 Knowledge Governance Framework explicitly has Draft status despite constitutional framing; Approved documents and historical index prose reference it. Presence is not approval. Approved NEX-STD-002/-003/-004/-005 have blank effective and review dates.",
     "Identity Model is currently NEX-STD-123 v1.0.1, with explicit 2026-08-29 reassignment; old collision warnings preserved elsewhere are historical. USER.md asserts Professional Mechanical Engineer (PME), which must be reconciled with verified credentials before external professional use.",
-    "Architecture Compiler Protocol is Active Operating Instruction effective 2026-10-06 with sequential 2026-10-11 clarifications. Current Compiler–Builder–Auditor Contract supersedes Astra-specific selection wording, requires actual identities and independent top-tier audit before accepted coding package. CFO/CMO/customer-service profiles are design-only Draft, uncommissioned."
+    "Architecture Compiler Protocol is Active Operating Instruction effective 2026-10-06 with sequential 2026-10-11 clarifications. Current Compiler–Builder–Auditor Contract supersedes Astra-specific selection wording, requires actual identities and independent top-tier audit before accepted coding package. CFO/CMO/customer-service profiles are design-only Draft, uncommissioned.",
+    "Knowledge Management standards preserve review vs approval separation, require approval before baseline adoption, and emphasize reusable conclusions rather than raw conversation. Several Related Documents labels misassign Document Control to NEX-STD-001 and Decision Evolution to NEX-STD-002; actual governance files are NEX-STD-002 and NEX-STD-003."
   ]
 }
