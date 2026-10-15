@@ -23,4 +23,4 @@ Key rules:
 - Do not force the loop for trivial edits where the overhead adds no material assurance.
 - Claudex is replaceable tooling; FDG governance and repository knowledge remain authoritative.
 
-See `03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md`.
+See `21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md` (FMCIS canonical owner).
