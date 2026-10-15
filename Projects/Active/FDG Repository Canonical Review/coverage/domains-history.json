@@ -1764,6 +1764,97 @@
       "expectedSha": "c97f6ab3a57c08bf451fded9c8a17a1e2eb83490",
       "lines": 44,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/15_Roadmap/FSIS-ROADMAP-002 - FSIS Maturity Model.md",
+      "sha": "699272745b8eba338505ce75dd0058aeb126a005",
+      "expectedSha": "699272745b8eba338505ce75dd0058aeb126a005",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/FSIS-Master-Manifest.md",
+      "sha": "90b5e05dd724d166741e4512671574717b761681",
+      "expectedSha": "90b5e05dd724d166741e4512671574717b761681",
+      "lines": 46,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/README.md",
+      "sha": "208a982d1d868442a7a3062fe7dc14e0361e0a9d",
+      "expectedSha": "208a982d1d868442a7a3062fe7dc14e0361e0a9d",
+      "lines": 55,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/00_FLIS_CORE/FLIS-0000 - FDG Legal Intelligence System.md",
+      "sha": "83e0e1f7c7eac35c5a2e359691eaa0f4eaf2078a",
+      "expectedSha": "83e0e1f7c7eac35c5a2e359691eaa0f4eaf2078a",
+      "lines": 114,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/00_FLIS_CORE/FLIS-0001 - Charter and Scope.md",
+      "sha": "556199b2e1bc6ea16f08154abd73070eefdea5ff",
+      "expectedSha": "556199b2e1bc6ea16f08154abd73070eefdea5ff",
+      "lines": 78,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/00_FLIS_CORE/FLIS-0002 - Legal Intelligence Architecture.md",
+      "sha": "6627fce265ec7331e6fca00cab5b9916abf15a05",
+      "expectedSha": "6627fce265ec7331e6fca00cab5b9916abf15a05",
+      "lines": 65,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/00_FLIS_CORE/FLIS-ROADMAP.md",
+      "sha": "1645a5a58c2d1b2e94f2b76ff3a9a6494af72c4f",
+      "expectedSha": "1645a5a58c2d1b2e94f2b76ff3a9a6494af72c4f",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/01_Legal_Governance/FLIS-0100 - Legal Governance.md",
+      "sha": "6a64251b5ee27fc41717d3cb7f2e845ea356b786",
+      "expectedSha": "6a64251b5ee27fc41717d3cb7f2e845ea356b786",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/01_Legal_Governance/FLIS-TPL-0101 - Legal Source Record Template.md",
+      "sha": "afcba0c45be523bd43013ebce54c6e0db41a819f",
+      "expectedSha": "afcba0c45be523bd43013ebce54c6e0db41a819f",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/02_Laws_Regulations_and_Standards/FLIS-0200 - Laws Regulations and Standards.md",
+      "sha": "220ce745193912f6cf5cfa56fbd8d98b437187a1",
+      "expectedSha": "220ce745193912f6cf5cfa56fbd8d98b437187a1",
+      "lines": 44,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/02_Laws_Regulations_and_Standards/FLIS-TPL-0201 - Legal Requirement Record Template.md",
+      "sha": "bfda4150aa9927c1fb9f48c69922683133ac3641",
+      "expectedSha": "bfda4150aa9927c1fb9f48c69922683133ac3641",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/02_Laws_Regulations_and_Standards/Industry_Regulations/README.md",
+      "sha": "7a2ab59290c56ba1ed22c4a02dffd382b93b71b8",
+      "expectedSha": "7a2ab59290c56ba1ed22c4a02dffd382b93b71b8",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/02_Laws_Regulations_and_Standards/Local_Regulations/README.md",
+      "sha": "5e7bf267900918c4d80e1910b432870f7e426b89",
+      "expectedSha": "5e7bf267900918c4d80e1910b432870f7e426b89",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
