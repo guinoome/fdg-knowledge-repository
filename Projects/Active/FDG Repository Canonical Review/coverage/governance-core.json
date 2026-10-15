@@ -608,6 +608,62 @@
       "expectedSha": "b27f872a551bca74037e2fede48b007232c53922",
       "lines": 473,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_AGENT_ECOSYSTEM_ARCHITECTURE_STANDARD.md",
+      "sha": "4bcfda252da1b441ade5d6163f3ae5a04ab5086b",
+      "expectedSha": "4bcfda252da1b441ade5d6163f3ae5a04ab5086b",
+      "lines": 443,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_AUTOMATION_GOVERNANCE_AND_INTELLIGENCE_AUGMENTATION_STANDARD.md",
+      "sha": "145ea4748646fffd4848aaa77468fb5d850ede4f",
+      "expectedSha": "145ea4748646fffd4848aaa77468fb5d850ede4f",
+      "lines": 434,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_CONTEXT_PACKAGE_OPERATIONAL_STANDARD.md",
+      "sha": "d68b0f8a08a35517bf33ad33e7fcecf589d52842",
+      "expectedSha": "d68b0f8a08a35517bf33ad33e7fcecf589d52842",
+      "lines": 452,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_CONTINUOUS_IMPROVEMENT_AND_ENGINEERING_LEARNING_SYSTEM_STANDARD.md",
+      "sha": "6764be4a108928aa8d5dfd498c800d0bfe9a6a93",
+      "expectedSha": "6764be4a108928aa8d5dfd498c800d0bfe9a6a93",
+      "lines": 484,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_MANAGEMENT_STANDARD.md",
+      "sha": "94e4fd4f99529a90db82adbff5a0de94eea503ec",
+      "expectedSha": "94e4fd4f99529a90db82adbff5a0de94eea503ec",
+      "lines": 435,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_DAILY_OPERATING_RHYTHM_STANDARD.md",
+      "sha": "942b973046a4a5a5c9c0b275cc340b6281d3e2ae",
+      "expectedSha": "942b973046a4a5a5c9c0b275cc340b6281d3e2ae",
+      "lines": 414,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_ANALYTICS_AND_METRICS_STANDARD.md",
+      "sha": "004fbc9cf8309d242a9cdccc0c01b2228848ea1a",
+      "expectedSha": "004fbc9cf8309d242a9cdccc0c01b2228848ea1a",
+      "lines": 451,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_ANALYTICS_AND_PERFORMANCE_INTELLIGENCE_STANDARD.md",
+      "sha": "a0865d3b77a7d0863f5ac41553495f538119e871",
+      "expectedSha": "a0865d3b77a7d0863f5ac41553495f538119e871",
+      "lines": 486,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -622,6 +678,7 @@
     "Canonical Truth Resolution Standard remains Proposed; enterprise architecture reconciliation remains Proposed; cross-system relationship map has working/pending global status plus specifically labeled approved and later scoped extensions. In root 05, KNOWLEDGE_PRESERVATION_STANDARD.md contains only a breadcrumb; root 04 holds the substantive Approved NEX-STD-023.",
     "NEX-STD-124 through 128 and Sep 27 evolution ADR are Approved, distinct 16 enterprise functions with single accountable outcome owners. Very Strong expressly concerns organizational knowledge architecture, not staffing, deployed software, legal registration or operating control effectiveness. Enterprise role, record owner, approver, executor and independent auditor remain distinct.",
     "NEX-STD-052 and 056 use an Advisory-to-Optimization 0-4 agent-level taxonomy differing from foundational NEX-STD-013 Observe-to-Autonomous 0-5. Do not equate numeric levels across documents. Capability registry NEX-PREOS-004 is Proposed; registration is not execution authorization.",
-    "Oct 15 Adaptive Reasoning NEX-STD-092 is Approved and the 12-case pack is Approved Capability Validation Pack; the controlled log explicitly leaves numeric maturity NOT_BASELINED. These define measurable behaviors, not demonstrated live runtime capability or model training."
+    "Oct 15 Adaptive Reasoning NEX-STD-092 is Approved and the 12-case pack is Approved Capability Validation Pack; the controlled log explicitly leaves numeric maturity NOT_BASELINED. These define measurable behaviors, not demonstrated live runtime capability or model training.",
+    "NEX-STD-096 uses Reference-to-Autonomous Optimization levels 0-4, another distinct authority taxonomy; its wording is not directly interchangeable with NEX-STD-013 or NEX-STD-052/056. NEX-STD-091 daily rhythm has an Oct 15 capability practice addendum requiring meaningful evidence rather than routine capability-log noise."
   ]
 }
