@@ -1740,6 +1740,97 @@
         "../actions",
         "@/services/template-assets/constraints"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/actions.ts",
+      "sha": "1819bafaf33bc9bbd73cb13156bac06a631b3a2c",
+      "expectedSha": "1819bafaf33bc9bbd73cb13156bac06a631b3a2c",
+      "lines": 243,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "next/cache",
+        "@/lib/supabase/server",
+        "@/lib/env",
+        "@/lib/logger",
+        "@/lib/config",
+        "./schema",
+        "@/lib/forms/action-state",
+        "./redirect",
+        "@/lib/forms/action-state",
+        "wrong password",
+        "no such\n * account"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/forgot-password-form.tsx",
+      "sha": "38a16dfbb0bef54357a0effbc769f0975c97f192",
+      "expectedSha": "38a16dfbb0bef54357a0effbc769f0975c97f192",
+      "lines": 57,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "react-dom",
+        "../actions",
+        "@/lib/forms/action-state",
+        "@/components/form/form-field",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/login-form.tsx",
+      "sha": "1e51639696d0b4b40bf87d2a20a2909782b54bf2",
+      "expectedSha": "1e51639696d0b4b40bf87d2a20a2909782b54bf2",
+      "lines": 91,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "next/link",
+        "next/navigation",
+        "../actions",
+        "@/components/form/form-field",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/password-form.tsx",
+      "sha": "c35f05367591db58bf2d87988779d1da2f2d477d",
+      "expectedSha": "c35f05367591db58bf2d87988779d1da2f2d477d",
+      "lines": 55,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "../actions",
+        "@/lib/forms/action-state",
+        "@/components/form/form-field",
+        "@/components/form/submit-button",
+        "@/components/form/form-status"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/register-form.tsx",
+      "sha": "9656ae6b4c8c975200d6981e01323999b0caf560",
+      "expectedSha": "9656ae6b4c8c975200d6981e01323999b0caf560",
+      "lines": 83,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "next/link",
+        "../actions",
+        "@/components/form/form-field",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/lib/config"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1754,6 +1845,6 @@
     "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/actions.ts; 109/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/components/reset-password-form.tsx; 114/422 complete"
   }
 }
