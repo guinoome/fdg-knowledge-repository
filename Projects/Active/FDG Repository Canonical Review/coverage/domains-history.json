@@ -893,12 +893,83 @@
       "expectedSha": "f599ba37e319561fcc346cdbc35b8fd316283db9",
       "lines": 90,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Future_Modules.md",
+      "sha": "4669ddad6c40148343c756933fbdf6c2011fab9f",
+      "expectedSha": "4669ddad6c40148343c756933fbdf6c2011fab9f",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS_Roadmap.md",
+      "sha": "2e7b06ba0ce089f7c06e2f8582e093503703f832",
+      "expectedSha": "2e7b06ba0ce089f7c06e2f8582e093503703f832",
+      "lines": 40,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/99_Inbox/99_Inbox_Master_Index.md",
+      "sha": "cb5cc151bfba0b69aca8b9b8982432fc936cfb99",
+      "expectedSha": "cb5cc151bfba0b69aca8b9b8982432fc936cfb99",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/99_Inbox/README.md",
+      "sha": "05ea9cc8851e8e33e112c77495be4bd180e14648",
+      "expectedSha": "05ea9cc8851e8e33e112c77495be4bd180e14648",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/FOLDER_INDEX.md",
+      "sha": "808c5a9688a608618280ae276743bc9475cda108",
+      "expectedSha": "808c5a9688a608618280ae276743bc9475cda108",
+      "lines": 90,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/LOCAL_FOLDER_CLASSIFICATION.csv",
+      "sha": "0397abebb2bf0d708a071420a1e0545ff6bfeabf",
+      "expectedSha": "0397abebb2bf0d708a071420a1e0545ff6bfeabf",
+      "lines": 42,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/MIGRATION_AUDIT.md",
+      "sha": "7486608e4e74a80de18ba2a99253770e232d406b",
+      "expectedSha": "7486608e4e74a80de18ba2a99253770e232d406b",
+      "lines": 67,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/PACKAGE_MANIFEST.json",
+      "sha": "a35e778c7ae796746b1f99bd2ae0440010da7ac5",
+      "expectedSha": "a35e778c7ae796746b1f99bd2ae0440010da7ac5",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/README.md",
+      "sha": "b2636a19d93ebfdb31816f711198f5d85b87d5c0",
+      "expectedSha": "b2636a19d93ebfdb31816f711198f5d85b87d5c0",
+      "lines": 12,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/00_Architecture/FBIS_Domain_Boundary.md",
+      "sha": "891f9936d78dd11e29de8b614bf05cf9068d0f5d",
+      "expectedSha": "891f9936d78dd11e29de8b614bf05cf9068d0f5d",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
   "notes": [
     "Scope: all tracked text under numbered root directories 11 through 22, including OLD and imported/history material. No local files written.",
     "Binary files inventoried but delegated to parent; no binary reading claim.",
-    "Resumed 2026-10-15: complete source text read through connected GitHub fetch_file at pinned checkpoint; proposal/experimental statuses retained as source context, not approval."
+    "Resumed 2026-10-15: complete source text read through connected GitHub fetch_file at pinned checkpoint; proposal/experimental statuses retained as source context, not approval.",
+    "Read current FBIS migration/package records: they describe prior local replacement operations and do not authorize new deletion/migration. OLD remains historical source context; financial independence metrics/stage gates/data schema remain proposed or experimental, separate from canonical implementation approval."
   ]
 }
