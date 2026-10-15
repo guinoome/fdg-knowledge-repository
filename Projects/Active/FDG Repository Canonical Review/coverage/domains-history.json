@@ -3115,6 +3115,37 @@
       "expectedSha": "3712a3c5946ea4bd4e84e5b6844d850bb75681d4",
       "lines": 59,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/15_FMIS_Roadmap_and_Agent_Handover.md",
+      "sha": "1ea9f0ffe25538b522167af7144254f6398b37c5",
+      "expectedSha": "1ea9f0ffe25538b522167af7144254f6398b37c5",
+      "lines": 77,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/16_FMIS_Evidence_and_Decision_Register.md",
+      "sha": "23d9ec65de11b9b8229269a4c9239efe6ee7dbe9",
+      "expectedSha": "23d9ec65de11b9b8229269a4c9239efe6ee7dbe9",
+      "lines": 229,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/FMIS-AGENT-ENGINEERING-INSTRUCTIONS.md",
+      "sha": "ce1f01e79da72b206b1f98e8a291554b2d565445",
+      "expectedSha": "ce1f01e79da72b206b1f98e8a291554b2d565445",
+      "lines": 1417,
+      "status": "FULL_TEXT_READ",
+      "readCharacterRanges": [
+        [
+          0,
+          17000
+        ],
+        [
+          17000,
+          25391
+        ]
+      ]
     }
   ],
   "failures": [],
@@ -3128,6 +3159,7 @@
     "FRCIM architecture extension approved source status differs from Philippine capability/catalog Verified Working Baseline. Reading repository legal/regulatory claims is not live revalidation of laws, source freshness, rule inputs, permit applicability or deployed compliance. Each production catalog item still requires source/requirement record; missing threshold facts must yield Insufficient Data.",
     "FSvIS-OM-0001 remains S1 Defined / Pilot Definition. Pricing PHP4999 / founding-five50% PHP2499.50 is experimental scope hypothesis; charter/readiness candidate additions explicitly do not certify a real paid client, market demand, accepted report or expanded service scope.",
     "FWIS implementation records Draft/Approver Pending: IMPL0000 older live backend53 assertions do not prove later role/reference/storage SQL. IMPL0003 explicitly says later live-test never ran realPostgreSQL; role-test JS mirror notSQL proof; intake1b unstarted; export content not automated tested,SpreadsheetML string cells; backup plaintext/nointegrity; missingIMPL0001/0002 links retained unresolved. Reading historical assertions is not current execution validation.",
-    "FWIS-SPEC0001 retains 2026-08-05 'missing parents/specs' commentary contradicted by pinned tree and full-read receipts for FBPOIS/FWIS architecture andSPEC0002/0003. Historical absence notes are not current repository inventory. Most specifications Draft, architecture Approved; preserve distinctions."
+    "FWIS-SPEC0001 retains 2026-08-05 'missing parents/specs' commentary contradicted by pinned tree and full-read receipts for FBPOIS/FWIS architecture andSPEC0002/0003. Historical absence notes are not current repository inventory. Most specifications Draft, architecture Approved; preserve distinctions.",
+    "FMIS evidence register explicitly corrects completion to NOT MET: exports/backup had no operatorcaller,restore accepts unrelateddatabase destructivepath; thirteen auditgaps and no before/after schema. Claims are dated2026-08-10; next code reads assess pinned source without running. Approved exceptions retain Tkinter+SQLite prototype canonical; PostgreSQL target/futureintegrations notimplemented."
   ]
 }
