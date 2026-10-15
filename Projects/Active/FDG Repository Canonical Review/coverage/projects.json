@@ -548,11 +548,11 @@
       "readCharacterRanges": [
         [
           0,
-          66000
+          132000
         ]
       ],
       "status": "PARTIAL_TEXT_READ",
-      "nextCharacter": 66000
+      "nextCharacter": 132000
     }
   ]
 }
