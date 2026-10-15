@@ -87,6 +87,12 @@ Claudex Loop is an **execution capability**, not an FDG source of authority.
 
 FDG governance, work-package authority, acceptance criteria, repository evidence, and final human authority remain controlling. If Claudex is unavailable, the work may continue using another governed review mechanism, but it must not be represented as cross-provider verified unless an independent provider actually performed the review.
 
-Canonical FDG rule:
+Canonical FMCIS-owned rule:
 
-[[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
+[[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]]
+
+## Operational readiness
+
+Committing this bootstrap does **not** install external software on a workstation. Local CLI installation/authentication and a successful two-provider smoke test remain unverified until recorded. Repository entry instructions restore skills when missing; do not describe staged skills as an installed and operating cross-review.
+
+Related: [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004 Debate Protocol]] and [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005 Loop Termination]].
