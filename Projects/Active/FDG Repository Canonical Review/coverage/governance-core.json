@@ -720,6 +720,62 @@
       "expectedSha": "cd360d71c60308ac73db58376ec6cf81daa67ccd",
       "lines": 482,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_WORKFLOW_ORCHESTRATION_STANDARD.md",
+      "sha": "11cb2fd068628695dac20c4058cea93b5526c6b2",
+      "expectedSha": "11cb2fd068628695dac20c4058cea93b5526c6b2",
+      "lines": 462,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_EXECUTIVE_INTELLIGENCE_REPORTING_STANDARD.md",
+      "sha": "f25ad41e5a2832cb1c4bc45448ac5eff9460e885",
+      "expectedSha": "f25ad41e5a2832cb1c4bc45448ac5eff9460e885",
+      "lines": 379,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FAILURE_MODE_AND_RELIABILITY_INTELLIGENCE_STANDARD.md",
+      "sha": "afe59bf2c81e7c9b565cec4b5f9e737589bec305",
+      "expectedSha": "afe59bf2c81e7c9b565cec4b5f9e737589bec305",
+      "lines": 522,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FEIP_INTEGRATION_ARCHITECTURE_STANDARD.md",
+      "sha": "37161238b868fcd6b5a6074e1a26e0116ce5c768",
+      "expectedSha": "37161238b868fcd6b5a6074e1a26e0116ce5c768",
+      "lines": 419,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FEIP_OPERATIONAL_DATA_INTEGRATION_STANDARD.md",
+      "sha": "ae71d128ff7c69e55dc9cd240923931099f391e6",
+      "expectedSha": "ae71d128ff7c69e55dc9cd240923931099f391e6",
+      "lines": 456,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_FINAL_VALIDATION_AND_VERSION_RELEASE_STANDARD.md",
+      "sha": "0be375daaed722f0a78d7d18ddb446b59cbdb469",
+      "expectedSha": "0be375daaed722f0a78d7d18ddb446b59cbdb469",
+      "lines": 384,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_GOVERNANCE_COMPLETION_AND_OPERATIONAL_ACTIVATION_STANDARD.md",
+      "sha": "8c5c68d02f501989f99176139c9ccc21ddb353f7",
+      "expectedSha": "8c5c68d02f501989f99176139c9ccc21ddb353f7",
+      "lines": 403,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_IDENTITY_AND_OPERATING_CONTEXT_STANDARD.md",
+      "sha": "3634657c038a0764381b51b08110de31f1778795",
+      "expectedSha": "3634657c038a0764381b51b08110de31f1778795",
+      "lines": 373,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -735,6 +791,7 @@
     "NEX-STD-124 through 128 and Sep 27 evolution ADR are Approved, distinct 16 enterprise functions with single accountable outcome owners. Very Strong expressly concerns organizational knowledge architecture, not staffing, deployed software, legal registration or operating control effectiveness. Enterprise role, record owner, approver, executor and independent auditor remain distinct.",
     "NEX-STD-052 and 056 use an Advisory-to-Optimization 0-4 agent-level taxonomy differing from foundational NEX-STD-013 Observe-to-Autonomous 0-5. Do not equate numeric levels across documents. Capability registry NEX-PREOS-004 is Proposed; registration is not execution authorization.",
     "Oct 15 Adaptive Reasoning NEX-STD-092 is Approved and the 12-case pack is Approved Capability Validation Pack; the controlled log explicitly leaves numeric maturity NOT_BASELINED. These define measurable behaviors, not demonstrated live runtime capability or model training.",
-    "NEX-STD-096 uses Reference-to-Autonomous Optimization levels 0-4, another distinct authority taxonomy; its wording is not directly interchangeable with NEX-STD-013 or NEX-STD-052/056. NEX-STD-091 daily rhythm has an Oct 15 capability practice addendum requiring meaningful evidence rather than routine capability-log noise."
+    "NEX-STD-096 uses Reference-to-Autonomous Optimization levels 0-4, another distinct authority taxonomy; its wording is not directly interchangeable with NEX-STD-013 or NEX-STD-052/056. NEX-STD-091 daily rhythm has an Oct 15 capability practice addendum requiring meaningful evidence rather than routine capability-log noise.",
+    "NEX-STD-116 has an Oct 9 work-management extension: planning defects, waiting materials, failed tests, reopened orders and tool/access constraints are reliability signals, expressly not substitutes for physical failure evidence. NEX-STD-097/-119 distinguish operational data ownership and future integration; approved architecture does not prove live platform integration. NEX-STD-087/-099 define activation/release gates; document existence alone is insufficient."
   ]
 }
