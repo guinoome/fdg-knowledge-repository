@@ -1995,6 +1995,76 @@
       "expectedSha": "87c26c83ca904f42d424f87905437b1712e9d5e8",
       "lines": 30,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/06_Corporate_and_Business_Compliance/FLIS-0600 - Corporate and Business Compliance.md",
+      "sha": "2755a5c219d446bafbc87a5259262a684dd7a880",
+      "expectedSha": "2755a5c219d446bafbc87a5259262a684dd7a880",
+      "lines": 37,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/06_Corporate_and_Business_Compliance/FLIS-TPL-0601 - Compliance Obligation Register.md",
+      "sha": "063cc4e4097e3ca19b5fb4ca17393c224e5524e4",
+      "expectedSha": "063cc4e4097e3ca19b5fb4ca17393c224e5524e4",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/07_Employment_and_Collaboration_Law/FLIS-0700 - Employment and Collaboration Law.md",
+      "sha": "b4dd433625c2afd4bdbc646dc6f2a4c1a182ecd9",
+      "expectedSha": "b4dd433625c2afd4bdbc646dc6f2a4c1a182ecd9",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/08_Engineering_and_Professional_Liability/FLIS-0800 - Engineering and Professional Liability.md",
+      "sha": "457a66f9c36ce9751181776e333b000a6f4d0998",
+      "expectedSha": "457a66f9c36ce9751181776e333b000a6f4d0998",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/09_Procurement_and_Commercial_Law/FLIS-0900 - Procurement and Commercial Law.md",
+      "sha": "9d76932624fa86923612e679b9f244f95990f840",
+      "expectedSha": "9d76932624fa86923612e679b9f244f95990f840",
+      "lines": 42,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/10_Legal_Risk_Intelligence/FLIS-1000 - Legal Risk Intelligence.md",
+      "sha": "3e8555b411321584dc3a2a96ce1491dd0ce951bc",
+      "expectedSha": "3e8555b411321584dc3a2a96ce1491dd0ce951bc",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/10_Legal_Risk_Intelligence/FLIS-TPL-1001 - Legal Risk Record.md",
+      "sha": "5ed69964dc518c7328ba3e88bd9f01b828eabe64",
+      "expectedSha": "5ed69964dc518c7328ba3e88bd9f01b828eabe64",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/11_Disputes_Claims_and_Liability/FLIS-1100 - Disputes Claims and Liability.md",
+      "sha": "88d16e12271e1c6e931ff96b3633f244e66ad417",
+      "expectedSha": "88d16e12271e1c6e931ff96b3633f244e66ad417",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/11_Disputes_Claims_and_Liability/FLIS-TPL-1101 - Dispute and Claim Record.md",
+      "sha": "d13ebb38dedcb2a4da04dbac56eaa55185e23864",
+      "expectedSha": "d13ebb38dedcb2a4da04dbac56eaa55185e23864",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/12_Legal_Research_and_Precedents/FLIS-1200 - Legal Research and Precedents.md",
+      "sha": "30bb27cd0db423991f84dfb1ff0c5bf2ce0c416a",
+      "expectedSha": "30bb27cd0db423991f84dfb1ff0c5bf2ce0c416a",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
