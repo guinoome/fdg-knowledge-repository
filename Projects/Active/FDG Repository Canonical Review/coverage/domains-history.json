@@ -816,6 +816,83 @@
       "expectedSha": "1d387a5a5d0453b1f48afa3f6739f233930496f9",
       "lines": 57,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/20_External_Research_Strengthening_2026-09-07.md",
+      "sha": "6927adb8021f30f0f0d74c0bd608da4700ed5d64",
+      "expectedSha": "6927adb8021f30f0f0d74c0bd608da4700ed5d64",
+      "lines": 191,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/99_HANDOVER_FOR_REPOSITORY_AUDIT.md",
+      "sha": "8d03927f975f094d8d6954f49e198e960e6e5512",
+      "expectedSha": "8d03927f975f094d8d6954f49e198e960e6e5512",
+      "lines": 77,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/SHA256SUMS.txt",
+      "sha": "2db04df681c99bd4469c6e2c7f487003108733f7",
+      "expectedSha": "2db04df681c99bd4469c6e2c7f487003108733f7",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/manifest.json",
+      "sha": "bd5f53a2110be4fd8f84ca8105e90f847f6927ba",
+      "expectedSha": "bd5f53a2110be4fd8f84ca8105e90f847f6927ba",
+      "lines": 153,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/metrics/FBIS KPI Dictionary.md",
+      "sha": "cccb180b3b3888d125a9533f81d412fcdea85483",
+      "expectedSha": "cccb180b3b3888d125a9533f81d412fcdea85483",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/schemas/Opportunity Intelligence Data Model.json",
+      "sha": "cc78758d409665283dbfea756171a5a69aac6c67",
+      "expectedSha": "cc78758d409665283dbfea756171a5a69aac6c67",
+      "lines": 262,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/schemas/Opportunity Intelligence Data Model.md",
+      "sha": "38cb941981b0c1eddb534eb4ead9a8d0d020b7df",
+      "expectedSha": "38cb941981b0c1eddb534eb4ead9a8d0d020b7df",
+      "lines": 47,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/templates/FBIS Opportunity Assessment Template.md",
+      "sha": "e06d420b30378163b36b98f08c0128380f8538f5",
+      "expectedSha": "e06d420b30378163b36b98f08c0128380f8538f5",
+      "lines": 103,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/templates/Financial Independence Dashboard Template.md",
+      "sha": "67e827aa75d5158780ee10c8a6162f06c9f73a35",
+      "expectedSha": "67e827aa75d5158780ee10c8a6162f06c9f73a35",
+      "lines": 68,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/16_Strategic_Roadmap_Master_Index.md",
+      "sha": "aa36787abdcaecf4e8a6dbb76434fa735d0ed4ff",
+      "expectedSha": "aa36787abdcaecf4e8a6dbb76434fa735d0ed4ff",
+      "lines": 38,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/16_Strategic_Roadmap/FBIS-ROADMAP-CBC-001 - Common Business Core Development Sequence.md",
+      "sha": "f599ba37e319561fcc346cdbc35b8fd316283db9",
+      "expectedSha": "f599ba37e319561fcc346cdbc35b8fd316283db9",
+      "lines": 90,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
