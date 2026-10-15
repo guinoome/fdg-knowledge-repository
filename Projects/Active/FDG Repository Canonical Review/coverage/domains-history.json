@@ -1243,6 +1243,76 @@
       "expectedSha": "dd3f78296364c27e6ab30b470ec3b0fd12be0105",
       "lines": 21,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/10_Commercial_Dashboards/FBIS_Voucher_Dashboard.md",
+      "sha": "33f4497efef6dc0bed629a0df788a6fb3395988e",
+      "expectedSha": "33f4497efef6dc0bed629a0df788a6fb3395988e",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/10_FDG_Business_Standards/10_FDG_Business_Standards_Master_Index.md",
+      "sha": "15551210114cc516eb7284e8306753c9b902648d",
+      "expectedSha": "15551210114cc516eb7284e8306753c9b902648d",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/11_Business_Frameworks/11_Business_Frameworks_Master_Index.md",
+      "sha": "41d1d8bf585171bcdf040215749a5722c55d7980",
+      "expectedSha": "41d1d8bf585171bcdf040215749a5722c55d7980",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "sha": "072aa9a1d8f9df7b82f35c9d87d6ef1a938e4dbd",
+      "expectedSha": "072aa9a1d8f9df7b82f35c9d87d6ef1a938e4dbd",
+      "lines": 180,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/11_Reports/Commercial_Reporting_Framework.md",
+      "sha": "ed03878f91010b79fc5e3c83253c5a4f82c5450c",
+      "expectedSha": "ed03878f91010b79fc5e3c83253c5a4f82c5450c",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/11_Reports/Daily_Commercial_Report.md",
+      "sha": "e01054fbb9f4a16aafdb0c1d30b36e8be5f7ed8e",
+      "expectedSha": "e01054fbb9f4a16aafdb0c1d30b36e8be5f7ed8e",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/12_API/FBIS_API_Architecture.md",
+      "sha": "902bd540b06b4e66621efeb87f92bbcdc18eae1c",
+      "expectedSha": "902bd540b06b4e66621efeb87f92bbcdc18eae1c",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/12_API/Provider_Webhook_Contract.md",
+      "sha": "68bc96b92b18dc9797201cf87511044ed946fba8",
+      "expectedSha": "68bc96b92b18dc9797201cf87511044ed946fba8",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "sha": "426c20254942a61ab27cbf901ce81f1d2fb41803",
+      "expectedSha": "426c20254942a61ab27cbf901ce81f1d2fb41803",
+      "lines": 60,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/12_Business_Playbooks/FBIS-PLB-001_Inquiry_to_Proposal_Engineering_Loop.md",
+      "sha": "7f61d9302e4631fcdf86c8de7398c7f3a6798a08",
+      "expectedSha": "7f61d9302e4631fcdf86c8de7398c7f3a6798a08",
+      "lines": 198,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
