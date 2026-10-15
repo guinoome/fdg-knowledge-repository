@@ -200,6 +200,139 @@
       "expectedSha": "d4a82bb7d364fde8472d5720a1f0bd19d88080bb",
       "lines": 26,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/07_Business_Core_Intelligence_Master_Index.md",
+      "sha": "0d90527ff0ff39f9441751f352d5bb47adc15f17",
+      "expectedSha": "0d90527ff0ff39f9441751f352d5bb47adc15f17",
+      "lines": 86,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Business_Intelligence_Framework.md",
+      "sha": "949d17fae54b12e27241a911cf3d5a73f80678dd",
+      "expectedSha": "949d17fae54b12e27241a911cf3d5a73f80678dd",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Commercial_Intelligence.md",
+      "sha": "18943053005c3bc1b439e7a8e439d5e4515ed39f",
+      "expectedSha": "18943053005c3bc1b439e7a8e439d5e4515ed39f",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Customer_Value.md",
+      "sha": "aff219fe491edbe23f7a8bf2b4b233a2a1536fab",
+      "expectedSha": "aff219fe491edbe23f7a8bf2b4b233a2a1536fab",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Discount_Rules.md",
+      "sha": "4b64d951db99ad4b6d7c018c3ff70f06026dc8db",
+      "expectedSha": "4b64d951db99ad4b6d7c018c3ff70f06026dc8db",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/FBPOIS_Finance_Intelligence.md",
+      "sha": "197ae4817e7343c5d4614978ffa03f6146294383",
+      "expectedSha": "197ae4817e7343c5d4614978ffa03f6146294383",
+      "lines": 98,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/PayMongo_Phase_1_Architecture.md",
+      "sha": "a2df2ab7b97bc6bf323ad883233539beaabea749",
+      "expectedSha": "a2df2ab7b97bc6bf323ad883233539beaabea749",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Data_Model.md",
+      "sha": "c34f376837a160f1672f3d03c8699a0fe6098af9",
+      "expectedSha": "c34f376837a160f1672f3d03c8699a0fe6098af9",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Intelligence.md",
+      "sha": "a7b57ca30f682ad7b6a30e095d3f93a204810ae6",
+      "expectedSha": "a7b57ca30f682ad7b6a30e095d3f93a204810ae6",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Provider_Abstraction.md",
+      "sha": "8c9b9f8ff162ea858d0c6604e469e0df310d0a32",
+      "expectedSha": "8c9b9f8ff162ea858d0c6604e469e0df310d0a32",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Payment_Validation_Rules.md",
+      "sha": "a5c6c41858f7d0fe1404f32778b47cbd485070aa",
+      "expectedSha": "a5c6c41858f7d0fe1404f32778b47cbd485070aa",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Intelligence.md",
+      "sha": "85a389f1e5496f45c463c9dd233831b089a50912",
+      "expectedSha": "85a389f1e5496f45c463c9dd233831b089a50912",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Pricing_Rules.md",
+      "sha": "a175d5ea55996b94a9261f8d85f28be10d1b3408",
+      "expectedSha": "a175d5ea55996b94a9261f8d85f28be10d1b3408",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_Intelligence.md",
+      "sha": "ce4a92e1c8891b90f6e1874e75e42015895a481c",
+      "expectedSha": "ce4a92e1c8891b90f6e1874e75e42015895a481c",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Revenue_KPI_Framework.md",
+      "sha": "016f13d36e4ca23be80c83bf6cbf9fb288ea0980",
+      "expectedSha": "016f13d36e4ca23be80c83bf6cbf9fb288ea0980",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Funnel.md",
+      "sha": "5d8d23568a437871d849316d307ba53642779959",
+      "expectedSha": "5d8d23568a437871d849316d307ba53642779959",
+      "lines": 55,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Intelligence.md",
+      "sha": "d8c114eab1a9406dab733c9e6185a06d2de62da6",
+      "expectedSha": "d8c114eab1a9406dab733c9e6185a06d2de62da6",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Abuse_Controls.md",
+      "sha": "5b7b66d15c9949a513ca51bf8a5a0bae2f7f20ce",
+      "expectedSha": "5b7b66d15c9949a513ca51bf8a5a0bae2f7f20ce",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Voucher_Intelligence.md",
+      "sha": "de6b0fb30d209efcd14b990745b6d92562e04199",
+      "expectedSha": "de6b0fb30d209efcd14b990745b6d92562e04199",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
