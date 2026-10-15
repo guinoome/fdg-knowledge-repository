@@ -1,0 +1,21 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "status": "IN_PROGRESS",
+  "expectedTextFiles": 910,
+  "expectedBinaryFiles": 45,
+  "documents": [
+    {
+      "path": "11_FDG_Business_Intelligence_System/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "sha": "a47ab7ae463680cd85260fb5f1b2d4007148558c",
+      "expectedSha": "a47ab7ae463680cd85260fb5f1b2d4007148558c",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    }
+  ],
+  "failures": [],
+  "notes": [
+    "Scope: all tracked text under numbered root directories 11 through 22, including OLD and imported/history material. No local files written.",
+    "Binary files inventoried but delegated to parent; no binary reading claim."
+  ]
+}
