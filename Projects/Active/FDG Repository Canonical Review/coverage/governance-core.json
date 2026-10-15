@@ -1266,6 +1266,41 @@
       "expectedSha": "c1d943bc4cc8ba351212f92e076a55cf0e3ededd",
       "lines": 477,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-011_CONTINUOUS_LEARNING_STANDARD.md",
+      "sha": "a0a330d736c6b95ef4984ba93759582577b29a68",
+      "expectedSha": "a0a330d736c6b95ef4984ba93759582577b29a68",
+      "lines": 419,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-012_CORE_INTELLIGENCE_EVOLUTION_ROADMAP.md",
+      "sha": "588d096adb99171071dac58358cd3c82fe083ed1",
+      "expectedSha": "588d096adb99171071dac58358cd3c82fe083ed1",
+      "lines": 340,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD.md",
+      "sha": "00c4aeefe4110f6f18009aa33d34424094bd49b2",
+      "expectedSha": "00c4aeefe4110f6f18009aa33d34424094bd49b2",
+      "lines": 632,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30.md",
+      "sha": "0a851f0428d2aeb898dbb3b3c2d813d2a49fa895",
+      "expectedSha": "0a851f0428d2aeb898dbb3b3c2d813d2a49fa895",
+      "lines": 124,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG_CORE_REASONING_ACCEPTANCE_CASES_2026-09-30.md",
+      "sha": "71d2998ffbb06039f901c0b3a8dab71f9202b611",
+      "expectedSha": "71d2998ffbb06039f901c0b3a8dab71f9202b611",
+      "lines": 64,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1287,6 +1322,7 @@
     "Live document-ID collision: NEX-STD-093 labels both Executive Intelligence Reporting (v1.0, blank dates) and Six-Capability Development Scorecard (v1.0, effective 2026-10-15). NEX-STD-092 similarly appears as adaptive capability and legacy weekly-review references. Cite exact paths/titles until controlled resolution. NEX-STD-085 uses maturity levels 1-5 and NEX-STD-109 uses 0-5 with differing labels; no numeric equivalence should be assumed. Scorecard expressly forbids baselines from documentation alone and uses NOT_BASELINED.",
     "Pre-OS foundation, runtime access policy and execution ledger remain Proposed v0.1; listing an approver does not change their status. NEX-STD-048 contains a dated August 5 graph-linking inventory of 76 files, not current inventory. NEX-STD-060 requires reviewed approval before baseline promotion; read receipts remain evidence of reading, not governance adoption or operational validation.",
     "All 12 FDG Platform Hub standards under root 09 are Draft v1.0 stubs ending at an architecture/model heading, with no substantive architecture after it beyond navigation. They define intent, not approved implementation or operational controls.",
-    "Approved CORE standards 001-010 specify deterministic explicit-unit calculations, hard constraints before optimization, Insufficient Evidence compliance status, human final authority, repository context over conversation memory, and surveillance recommendations without autonomous canonical change. CORE-STD-008 ranks validated FDG organizational evidence at Level C, unlike the user's operating instruction's Level A repository source; retain context-specific evidence ladders rather than silently merging them."
+    "Approved CORE standards 001-010 specify deterministic explicit-unit calculations, hard constraints before optimization, Insufficient Evidence compliance status, human final authority, repository context over conversation memory, and surveillance recommendations without autonomous canonical change. CORE-STD-008 ranks validated FDG organizational evidence at Level C, unlike the user's operating instruction's Level A repository source; retain context-specific evidence ladders rather than silently merging them.",
+    "CORE-STD-012 states Stage 1 foundation complete and Stage 2 architecture complete/implementation pending; Oct 3 note defines Stage 7 architecture with progressive implementation. CORE-STD-013 is Approved effective Oct 3, deterministic-first and domain-owned, requiring governed models, reproducible validation, uncertainty, drift, rollback and measured outcomes; no production model is established merely by this architecture. Sep 30 execution contract and 28 cases remain Proposed, explicitly not a passing test report or certification."
   ]
 }
