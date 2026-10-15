@@ -2147,6 +2147,47 @@
         "@/components/ui/input",
         "@/components/ui/textarea"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/event-step.tsx",
+      "sha": "d1be1321bfa99aff2ad1485611093695b6a5c3c8",
+      "expectedSha": "d1be1321bfa99aff2ad1485611093695b6a5c3c8",
+      "lines": 222,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "../../actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/form/form-field",
+        "@/components/ui/label",
+        "@/components/ui/select"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/hosts-step.tsx",
+      "sha": "19183e29833af11f394fcd8adc858ac1f8cdbbc1",
+      "expectedSha": "19183e29833af11f394fcd8adc858ac1f8cdbbc1",
+      "lines": 253,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "../../actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/ui/button",
+        "@/components/ui/card",
+        "@/components/ui/label",
+        "@/components/ui/input",
+        "@/components/ui/select",
+        "@/components/ui/empty-state",
+        "lucide-react",
+        "@/lib/config/host-types",
+        "Bride & Groom"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2169,6 +2210,6 @@
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/event-step.tsx; 136/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/media-step.tsx; 138/422 complete"
   }
 }
