@@ -2253,6 +2253,51 @@
         "@/lib/config",
         "@/lib/hooks/use-toast"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/template-step.tsx",
+      "sha": "6fd6523ce2411e0b474b9fe285d4524c427ad783",
+      "expectedSha": "6fd6523ce2411e0b474b9fe285d4524c427ad783",
+      "lines": 165,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next/link",
+        "next/image",
+        "lucide-react",
+        "../../actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/ui/button",
+        "@/components/ui/empty-state",
+        "lucide-react",
+        "@/lib/config",
+        "@/lib/utils",
+        "@/lib/hooks/use-toast"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/venue-step.tsx",
+      "sha": "b35003d4cf25a72d193623cbc41b0b1cfc5d8e19",
+      "expectedSha": "b35003d4cf25a72d193623cbc41b0b1cfc5d8e19",
+      "lines": 303,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "../../actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/ui/button",
+        "@/components/ui/card",
+        "@/components/ui/label",
+        "@/components/ui/input",
+        "@/components/ui/select",
+        "@/components/ui/textarea",
+        "@/components/ui/empty-state"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2275,6 +2320,6 @@
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/template-step.tsx; 141/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/use-autosave.ts; 143/422 complete"
   }
 }
