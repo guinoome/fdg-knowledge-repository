@@ -881,6 +881,62 @@
       "expectedSha": "57638023b9ca6a1db3971ba705910c229db6ac43",
       "lines": 258,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_TEMPLATE_AND_ARTIFACT_LIBRARY_STANDARD.md",
+      "sha": "020f1ea1af612f9c568d54717b7b5ba9c4687dbc",
+      "expectedSha": "020f1ea1af612f9c568d54717b7b5ba9c4687dbc",
+      "lines": 660,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_WEEKLY_AND_MONTHLY_REVIEW_STANDARD.md",
+      "sha": "f4139b0096b68d923188289c1a739eebb0e45865",
+      "expectedSha": "f4139b0096b68d923188289c1a739eebb0e45865",
+      "lines": 364,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_DATA_GOVERNANCE_AND_INTELLIGENCE_MEMORY_STANDARD.md",
+      "sha": "3d5db3c630d10cd2d6d8c9b8a6c1661a8f337528",
+      "expectedSha": "3d5db3c630d10cd2d6d8c9b8a6c1661a8f337528",
+      "lines": 479,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_AUTOMATION_GOVERNANCE_STANDARD.md",
+      "sha": "9c0eff257b67b4588a52b73c0c874e18b238f069",
+      "expectedSha": "9c0eff257b67b4588a52b73c0c874e18b238f069",
+      "lines": 479,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_CONTEXT_MANAGEMENT_STANDARD.md",
+      "sha": "32e90d5f730a5751ab8c73d288b07463a82983e3",
+      "expectedSha": "32e90d5f730a5751ab8c73d288b07463a82983e3",
+      "lines": 416,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_DECISION_RECORD_STANDARD.md",
+      "sha": "ad65a76404e51e5f65f1a3e081b4396814a9a2bc",
+      "expectedSha": "ad65a76404e51e5f65f1a3e081b4396814a9a2bc",
+      "lines": 404,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_KNOWLEDGE_GRAPH_STANDARD.md",
+      "sha": "d9ac31c7b263eb54dd2f481558c2c5d4e2cee0f7",
+      "expectedSha": "d9ac31c7b263eb54dd2f481558c2c5d4e2cee0f7",
+      "lines": 476,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_PERFORMANCE_AND_CONTINUOUS_OPTIMIZATION_STANDARD.md",
+      "sha": "8d08ee37f135193438566af3d06ce5445b1d6cf7",
+      "expectedSha": "8d08ee37f135193438566af3d06ce5445b1d6cf7",
+      "lines": 423,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
