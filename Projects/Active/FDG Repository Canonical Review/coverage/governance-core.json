@@ -1224,6 +1224,48 @@
       "expectedSha": "96673cf7a1f35f98a9c749dc6ac6d879856a5a22",
       "lines": 423,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-005_ENGINEERING_INTELLIGENCE_ENGINE_STANDARD.md",
+      "sha": "bb2f25a0110c62509d93650e39ed20678aebe486",
+      "expectedSha": "bb2f25a0110c62509d93650e39ed20678aebe486",
+      "lines": 479,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-006_DECISION_INTELLIGENCE_STANDARD.md",
+      "sha": "008d30eb449261e7c2e15ea14524a19dcf68140c",
+      "expectedSha": "008d30eb449261e7c2e15ea14524a19dcf68140c",
+      "lines": 484,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-007_MEMORY_AND_CONTEXT_ENGINE_STANDARD.md",
+      "sha": "287488c8ab3689966ac527bca6b1d7a19143c75a",
+      "expectedSha": "287488c8ab3689966ac527bca6b1d7a19143c75a",
+      "lines": 418,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-008_EVIDENCE_AND_PROVENANCE_ENGINE_STANDARD.md",
+      "sha": "c728d7daa4393f29d60cc310bbc371ac9e7afbe2",
+      "expectedSha": "c728d7daa4393f29d60cc310bbc371ac9e7afbe2",
+      "lines": 447,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-009_KNOWLEDGE_SURVEILLANCE_STANDARD.md",
+      "sha": "1af9a23e899b2b9664004633a4cd05acaf2f4eae",
+      "expectedSha": "1af9a23e899b2b9664004633a4cd05acaf2f4eae",
+      "lines": 468,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/FDG-CORE-STD-010_INTELLIGENCE_ORCHESTRATION_STANDARD.md",
+      "sha": "c1d943bc4cc8ba351212f92e076a55cf0e3ededd",
+      "expectedSha": "c1d943bc4cc8ba351212f92e076a55cf0e3ededd",
+      "lines": 477,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1244,6 +1286,7 @@
     "NEX-STD-088/-090 prescribe a recommended older numbered repository layout with 04_Projects and NEX-STD-111 recommends Obsidian/local/cloud backup with Git described as future. Those text recommendations differ from the actual GitHub tree and the user's explicit GitHub-only Projects/Active policy; preserve as historical architectural reference, do not create local vaults or reorganize current repository from them. NEX-STD-047 Related Documents has stale IDs (e.g. Constitution as NEX-STD-003), so use verified file paths.",
     "Live document-ID collision: NEX-STD-093 labels both Executive Intelligence Reporting (v1.0, blank dates) and Six-Capability Development Scorecard (v1.0, effective 2026-10-15). NEX-STD-092 similarly appears as adaptive capability and legacy weekly-review references. Cite exact paths/titles until controlled resolution. NEX-STD-085 uses maturity levels 1-5 and NEX-STD-109 uses 0-5 with differing labels; no numeric equivalence should be assumed. Scorecard expressly forbids baselines from documentation alone and uses NOT_BASELINED.",
     "Pre-OS foundation, runtime access policy and execution ledger remain Proposed v0.1; listing an approver does not change their status. NEX-STD-048 contains a dated August 5 graph-linking inventory of 76 files, not current inventory. NEX-STD-060 requires reviewed approval before baseline promotion; read receipts remain evidence of reading, not governance adoption or operational validation.",
-    "All 12 FDG Platform Hub standards under root 09 are Draft v1.0 stubs ending at an architecture/model heading, with no substantive architecture after it beyond navigation. They define intent, not approved implementation or operational controls."
+    "All 12 FDG Platform Hub standards under root 09 are Draft v1.0 stubs ending at an architecture/model heading, with no substantive architecture after it beyond navigation. They define intent, not approved implementation or operational controls.",
+    "Approved CORE standards 001-010 specify deterministic explicit-unit calculations, hard constraints before optimization, Insufficient Evidence compliance status, human final authority, repository context over conversation memory, and surveillance recommendations without autonomous canonical change. CORE-STD-008 ranks validated FDG organizational evidence at Level C, unlike the user's operating instruction's Level A repository source; retain context-specific evidence ladders rather than silently merging them."
   ]
 }
