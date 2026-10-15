@@ -2188,6 +2188,71 @@
         "@/lib/config/host-types",
         "Bride & Groom"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/media-step.tsx",
+      "sha": "88fe06d15ddcc0baa3cb59c5063bfef4341d9053",
+      "expectedSha": "88fe06d15ddcc0baa3cb59c5063bfef4341d9053",
+      "lines": 354,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next/navigation",
+        "../../actions",
+        "../../media-actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/ui/card",
+        "@/components/ui/input",
+        "@/components/media/asset-grid",
+        "@/components/media/upload-dropzone",
+        "@/components/media/asset-card",
+        "@/lib/hooks/use-toast",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/personalize-step.tsx",
+      "sha": "062e39aaf025eee455cbb9e71aa4feb7c0c261f8",
+      "expectedSha": "062e39aaf025eee455cbb9e71aa4feb7c0c261f8",
+      "lines": 297,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "../../actions",
+        "../use-autosave",
+        "../save-indicator",
+        "@/components/ui/card",
+        "@/components/ui/switch",
+        "@/components/ui/label",
+        "@/lib/utils",
+        "@/lib/config/design-vocabulary"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/preview-step.tsx",
+      "sha": "833ddbbf362c6f2258a672129e883330f2bafbbb",
+      "expectedSha": "833ddbbf362c6f2258a672129e883330f2bafbbb",
+      "lines": 125,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next/link",
+        "react-dom",
+        "lucide-react",
+        "../../preview/invitation-preview",
+        "@/lib/invitation/preview-model",
+        "../../actions",
+        "@/lib/invitation/completeness",
+        "@/components/ui/button",
+        "@/components/ui/card",
+        "@/lib/config",
+        "@/lib/hooks/use-toast"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2210,6 +2275,6 @@
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/media-step.tsx; 138/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/steps/template-step.tsx; 141/422 complete"
   }
 }
