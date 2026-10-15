@@ -626,9 +626,179 @@
       "characters": 5499,
       "status": "FULL_TEXT_READ",
       "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0000 - Maintenance and Reliability Intelligence Architecture.md",
+      "sha": "f649ff96c55703977671ca9779188a0d2a249356",
+      "expectedSha": "f649ff96c55703977671ca9779188a0d2a249356",
+      "bytes": 16502,
+      "lines": 675,
+      "characters": 16186,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0001 - Maintenance Work Readiness Planning and Scheduling Standard.md",
+      "sha": "ceca95d7c73c301a3920901ee25e4a902977ee30",
+      "expectedSha": "ceca95d7c73c301a3920901ee25e4a902977ee30",
+      "bytes": 13854,
+      "lines": 633,
+      "characters": 13782,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard.md",
+      "sha": "3c9059f97057c69f60fb4f435165222faa5c99d0",
+      "expectedSha": "3c9059f97057c69f60fb4f435165222faa5c99d0",
+      "bytes": 11204,
+      "lines": 480,
+      "characters": 11164,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0003 - Maintenance Readiness Data Model KPI and Acceptance Tests.md",
+      "sha": "0e5dd8f2b6fef65cda29181f2db6474488db1e90",
+      "expectedSha": "0e5dd8f2b6fef65cda29181f2db6474488db1e90",
+      "bytes": 11792,
+      "lines": 577,
+      "characters": 11772,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0004 - Maintenance Program Readiness and Maturity Assessment Standard.md",
+      "sha": "cbd1a986267d88e65608bc5fb2ea3641ed6cce02",
+      "expectedSha": "cbd1a986267d88e65608bc5fb2ea3641ed6cce02",
+      "bytes": 11096,
+      "lines": 412,
+      "characters": 10946,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-RSCH-0001 - Maintenance Ready Benchmark and Evidence Register.md",
+      "sha": "d3e25115bbbf36b7df151754edaab422adca9e44",
+      "expectedSha": "d3e25115bbbf36b7df151754edaab422adca9e44",
+      "bytes": 9129,
+      "lines": 246,
+      "characters": 9065,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/00_QTO_and_Drawing_Measurement_Intelligence_Master_Index.md",
+      "sha": "9bc08009d0648d5f7b7d6e0d40cf0798c5dc4c6f",
+      "expectedSha": "9bc08009d0648d5f7b7d6e0d40cf0798c5dc4c6f",
+      "bytes": 5808,
+      "lines": 107,
+      "characters": 5776,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0000 - FDG Engineering QTO Architecture.md",
+      "sha": "cf8af73d6fccc57b473dd71f38e886a6fa512f51",
+      "expectedSha": "cf8af73d6fccc57b473dd71f38e886a6fa512f51",
+      "bytes": 4277,
+      "lines": 166,
+      "characters": 4143,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0001 - Measurement Calibration Geometry and Quantity Data Contract.md",
+      "sha": "3e1f3fcd707a9dec278622de81eeccdb8cb13f24",
+      "expectedSha": "3e1f3fcd707a9dec278622de81eeccdb8cb13f24",
+      "bytes": 3857,
+      "lines": 209,
+      "characters": 3817,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0002 - Provenance Evidence Review and Human Authority Standard.md",
+      "sha": "a11926b1298127e8f6dcad87e5d9791debbbb68b",
+      "expectedSha": "a11926b1298127e8f6dcad87e5d9791debbbb68b",
+      "bytes": 3207,
+      "lines": 143,
+      "characters": 3193,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0003 - Agent Neutral QTO Adapter and Local First Runtime.md",
+      "sha": "e643cb39966393457ea256ff88086c768c2b1366",
+      "expectedSha": "e643cb39966393457ea256ff88086c768c2b1366",
+      "bytes": 2916,
+      "lines": 123,
+      "characters": 2874,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0004 - Drawing Intelligence Sheet Graph Symbol and Schedule Extraction.md",
+      "sha": "e1dcf0370ba04391d77fd3cd94fcccd466f605ec",
+      "expectedSha": "e1dcf0370ba04391d77fd3cd94fcccd466f605ec",
+      "bytes": 2884,
+      "lines": 143,
+      "characters": 2836,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0005 - Multidiscipline QTO Semantics and Trade Capability Profiles.md",
+      "sha": "9c307bc2cfd7bffedc2bd3779031c941823bef98",
+      "expectedSha": "9c307bc2cfd7bffedc2bd3779031c941823bef98",
+      "bytes": 2932,
+      "lines": 159,
+      "characters": 2928,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract.md",
+      "sha": "d8c90ff90f6f716293e9d28dd34384cb461e3f86",
+      "expectedSha": "d8c90ff90f6f716293e9d28dd34384cb461e3f86",
+      "bytes": 3494,
+      "lines": 170,
+      "characters": 3440,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0007 - Benchmark Corpus Accuracy and Acceptance Standard.md",
+      "sha": "2104440a4bca1007f311af2818ed1ebeeca4e3ea",
+      "expectedSha": "2104440a4bca1007f311af2818ed1ebeeca4e3ea",
+      "bytes": 3696,
+      "lines": 167,
+      "characters": 3682,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0008 - L1 Exist First Implementation Blueprint.md",
+      "sha": "e4ba02872151e14e283afebd8f6178655152568e",
+      "expectedSha": "e4ba02872151e14e283afebd8f6178655152568e",
+      "bytes": 3405,
+      "lines": 163,
+      "characters": 3379,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0009 - QTO Workspace and Human Agent Review Experience.md",
+      "sha": "d975bbb5b48b144a31ff5e60eb37c3a287ae75a0",
+      "expectedSha": "d975bbb5b48b144a31ff5e60eb37c3a287ae75a0",
+      "bytes": 4037,
+      "lines": 131,
+      "characters": 3485,
+      "status": "FULL_TEXT_READ",
+      "readAtCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16"
     }
   ],
   "updatedOn": "2026-10-15",
-  "verifiedFullReadCount": 72,
+  "verifiedFullReadCount": 89,
   "pendingFile": null
 }
