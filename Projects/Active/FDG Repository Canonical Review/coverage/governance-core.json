@@ -79,6 +79,83 @@
       "expectedSha": "0c4f3c8e124999e8ec0a765173fe2253140525ca",
       "lines": 441,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "02_Identity/00_IDENTITY_MODEL.md",
+      "sha": "9e75e59f64277a6a6d4cfd42b1d7559c85092b3c",
+      "expectedSha": "9e75e59f64277a6a6d4cfd42b1d7559c85092b3c",
+      "lines": 261,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "02_Identity/02_Identity_Master_Index.md",
+      "sha": "f59a4240db1e47a010bb94a5f053043f9edd4f4c",
+      "expectedSha": "f59a4240db1e47a010bb94a5f053043f9edd4f4c",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "02_Identity/COLLABORATION_FRAMEWORK.md",
+      "sha": "0e1182cdc0cd17e1507ff2b53b6b1dbf534f6022",
+      "expectedSha": "0e1182cdc0cd17e1507ff2b53b6b1dbf534f6022",
+      "lines": 379,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "02_Identity/IDENTITY.md",
+      "sha": "fd476ce5203c31789c7e8a138e228b9c85662f4d",
+      "expectedSha": "fd476ce5203c31789c7e8a138e228b9c85662f4d",
+      "lines": 269,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "02_Identity/SOUL.md",
+      "sha": "315fb3de90a17001ed37c37183bac7b17e6c4006",
+      "expectedSha": "315fb3de90a17001ed37c37183bac7b17e6c4006",
+      "lines": 282,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "02_Identity/USER.md",
+      "sha": "73a822c9b9ec6dbebe37f4bf3daebe0b74e2b3c5",
+      "expectedSha": "73a822c9b9ec6dbebe37f4bf3daebe0b74e2b3c5",
+      "lines": 205,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/00_AGENTIC_MODEL.md",
+      "sha": "453558132c2e036747ff9b854b36d429ae367fb3",
+      "expectedSha": "453558132c2e036747ff9b854b36d429ae367fb3",
+      "lines": 220,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/03_Agentic Framework_Master_Index.md",
+      "sha": "f04b70e5d4c5890e45e52eb8598b7dd146ddb471",
+      "expectedSha": "f04b70e5d4c5890e45e52eb8598b7dd146ddb471",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/AGENTIC_FRAMEWORK.md",
+      "sha": "c4f2dca2388bba903c818ed307ac83e4c938d5be",
+      "expectedSha": "c4f2dca2388bba903c818ed307ac83e4c938d5be",
+      "lines": 328,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/AGENT_LIFECYCLE.md",
+      "sha": "f76ed662905fe167a6abda42f9b09d8078fd5211",
+      "expectedSha": "f76ed662905fe167a6abda42f9b09d8078fd5211",
+      "lines": 351,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "03_Agentic Framework/AGENT_READINESS_5R.md",
+      "sha": "d48b63b85463988e2f3fda5d4595112c347ff798",
+      "expectedSha": "d48b63b85463988e2f3fda5d4595112c347ff798",
+      "lines": 253,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -86,6 +163,7 @@
     "All content is read through connected GitHub tools at the pinned source checkpoint; no local repository source is used.",
     "This scope contains 202 tracked text files, all Markdown, across numbered roots 00-10 excluding FEIS root 08. Earlier unledgered reading is not counted.",
     "The top-level historical master index includes dated counts and observations that must not be treated as live inventory; its 2026-09-30 addendum labels new proposals as additions, not approved replacements.",
-    "NEX-STD-006 Knowledge Governance Framework explicitly has Draft status despite constitutional framing; Approved documents and historical index prose reference it. Presence is not approval. Approved NEX-STD-002/-003/-004/-005 have blank effective and review dates."
+    "NEX-STD-006 Knowledge Governance Framework explicitly has Draft status despite constitutional framing; Approved documents and historical index prose reference it. Presence is not approval. Approved NEX-STD-002/-003/-004/-005 have blank effective and review dates.",
+    "Identity Model is currently NEX-STD-123 v1.0.1, with explicit 2026-08-29 reassignment; old collision warnings preserved elsewhere are historical. USER.md asserts Professional Mechanical Engineer (PME), which must be reconciled with verified credentials before external professional use."
   ]
 }
