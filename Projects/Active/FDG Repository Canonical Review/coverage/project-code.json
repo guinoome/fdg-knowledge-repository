@@ -2298,6 +2298,31 @@
         "@/components/ui/textarea",
         "@/components/ui/empty-state"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/use-autosave.ts",
+      "sha": "d687cabc2e62eb8ab786ebd2a0885594bf950231",
+      "expectedSha": "d687cabc2e62eb8ab786ebd2a0885594bf950231",
+      "lines": 159,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/media-actions.ts",
+      "sha": "356ee18d8f701bd1f56d9e57cf2afd1bfd51d8e5",
+      "expectedSha": "356ee18d8f701bd1f56d9e57cf2afd1bfd51d8e5",
+      "lines": 51,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/cache",
+        "@/lib/auth/session",
+        "@/services/media",
+        "@/lib/config"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2317,9 +2342,10 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness.",
     "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made.",
     "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers.",
-    "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
+    "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness.",
+    "Builder source tracing observations: authorize() checks ownership but save actions do not enforce draft/completed state or optimistic version; autosave run returns while inFlight, does not reschedule if debounce expires during a long request, and unmount directly calls saveRef without sequencing. Potential unsaved/stale-write race requires controlled tests. ContentStep defines PersonList inside the parent render; React component identity/focus stability should be examined. These are static observations only."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/components/use-autosave.ts; 143/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/preview/invitation-preview.tsx; 145/422 complete"
   }
 }
