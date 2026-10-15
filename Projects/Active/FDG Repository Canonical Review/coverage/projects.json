@@ -446,13 +446,54 @@
       "characters": 9532,
       "lines": 870,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-07A.md",
+      "sha": "36826f07e0e790affc98cb67ca80c7b90313c3e9",
+      "expectedSha": "36826f07e0e790affc98cb67ca80c7b90313c3e9",
+      "characters": 9786,
+      "lines": 819,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-08A.md",
+      "sha": "4533a060c9ffd913f15423db4d0dc119b67b3704",
+      "expectedSha": "4533a060c9ffd913f15423db4d0dc119b67b3704",
+      "characters": 6514,
+      "lines": 678,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-08B.md",
+      "sha": "a043c0364765a90c75b6437a010a3a773f5a02b5",
+      "expectedSha": "a043c0364765a90c75b6437a010a3a773f5a02b5",
+      "characters": 8569,
+      "lines": 633,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-09A.md",
+      "sha": "28ef9bc1a097ca71d565fd0ebfabd489abfc0ba3",
+      "expectedSha": "28ef9bc1a097ca71d565fd0ebfabd489abfc0ba3",
+      "characters": 8994,
+      "lines": 721,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-10A.md",
+      "sha": "ce6c25dd092f66aa3dfebc701719518b8af21458",
+      "expectedSha": "ce6c25dd092f66aa3dfebc701719518b8af21458",
+      "characters": 9981,
+      "lines": 756,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
   "notes": [
     "Only content fully exposed to the reading agent is marked FULL_TEXT_READ; this is source reading, not runtime validation.",
     "Projects/Projects_Master_Index.md was fully read by the parent agent and is not duplicated in this receipt.",
-    "EIP HTML completely exposed in contiguous character ranges [0,22000), [22000,44000), [44000,66000), [66000,88000), [88000,89739); read as source only, not executed."
+    "EIP HTML completely exposed in contiguous character ranges [0,22000), [22000,44000), [44000,66000), [66000,88000), [88000,89739); read as source only, not executed.",
+    "Scope transfer: all 422 source-pin paths under Projects/Active/ML Projects/ ending .ts, .tsx, .prisma or .sql are now assigned to coverage/project-code.json; no matching path had been fully read in this receipt at transfer time. All other apparent Projects text remains in this receipt scope, 405 apparent paths including parent-owned Projects_Master_Index.md."
   ],
   "partial": [
     {
