@@ -1028,6 +1028,62 @@
       "expectedSha": "811e69a25997b9975577afbf0144785a917170f4",
       "lines": 399,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_REVIEW_AND_APPROVAL_GATE_STANDARD.md",
+      "sha": "751442fdfe67ec4446561deaef92ac4e2f107cbc",
+      "expectedSha": "751442fdfe67ec4446561deaef92ac4e2f107cbc",
+      "lines": 406,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_RUNTIME_EXECUTION_LEDGER_STANDARD.md",
+      "sha": "cf9bf368ed4372daea01b7a11f9f4e6cda5d5187",
+      "expectedSha": "cf9bf368ed4372daea01b7a11f9f4e6cda5d5187",
+      "lines": 109,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_RUNTIME_REPOSITORY_ACCESS_POLICY.md",
+      "sha": "ea6eb314b43cb60c11e67d8e02a2e8b716d78daf",
+      "expectedSha": "ea6eb314b43cb60c11e67d8e02a2e8b716d78daf",
+      "lines": 132,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SECURITY_AND_TRUST_STANDARD.md",
+      "sha": "070b031c1e3b8899a520bfda16149174739b754b",
+      "expectedSha": "070b031c1e3b8899a520bfda16149174739b754b",
+      "lines": 414,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SECURITY_PRIVACY_AND_TRUST_OPERATING_MODEL_STANDARD.md",
+      "sha": "78442be833ddb22e7fcc8e47cd550524ea042bef",
+      "expectedSha": "78442be833ddb22e7fcc8e47cd550524ea042bef",
+      "lines": 453,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SOUL_STANDARD.md",
+      "sha": "2d73592ec714bc46604eceb6ecc9ab453e1f9a62",
+      "expectedSha": "2d73592ec714bc46604eceb6ecc9ab453e1f9a62",
+      "lines": 332,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_SYSTEM_ARCHITECTURE_AND_INTEGRATION_STANDARD.md",
+      "sha": "ff4e2a2d12d300521eb012c9384fedf6597c7b7f",
+      "expectedSha": "ff4e2a2d12d300521eb012c9384fedf6597c7b7f",
+      "lines": 462,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_TEMPLATE_AND_ARTIFACT_STANDARD.md",
+      "sha": "cc1fd512ec7de5d7af60d0a98865de1d69466945",
+      "expectedSha": "cc1fd512ec7de5d7af60d0a98865de1d69466945",
+      "lines": 477,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -1046,6 +1102,7 @@
     "NEX-STD-096 uses Reference-to-Autonomous Optimization levels 0-4, another distinct authority taxonomy; its wording is not directly interchangeable with NEX-STD-013 or NEX-STD-052/056. NEX-STD-091 daily rhythm has an Oct 15 capability practice addendum requiring meaningful evidence rather than routine capability-log noise.",
     "NEX-STD-116 has an Oct 9 work-management extension: planning defects, waiting materials, failed tests, reopened orders and tool/access constraints are reliability signals, expressly not substitutes for physical failure evidence. NEX-STD-097/-119 distinguish operational data ownership and future integration; approved architecture does not prove live platform integration. NEX-STD-087/-099 define activation/release gates; document existence alone is insufficient.",
     "NEX-STD-088/-090 prescribe a recommended older numbered repository layout with 04_Projects and NEX-STD-111 recommends Obsidian/local/cloud backup with Git described as future. Those text recommendations differ from the actual GitHub tree and the user's explicit GitHub-only Projects/Active policy; preserve as historical architectural reference, do not create local vaults or reorganize current repository from them. NEX-STD-047 Related Documents has stale IDs (e.g. Constitution as NEX-STD-003), so use verified file paths.",
-    "Live document-ID collision: NEX-STD-093 labels both Executive Intelligence Reporting (v1.0, blank dates) and Six-Capability Development Scorecard (v1.0, effective 2026-10-15). NEX-STD-092 similarly appears as adaptive capability and legacy weekly-review references. Cite exact paths/titles until controlled resolution. NEX-STD-085 uses maturity levels 1-5 and NEX-STD-109 uses 0-5 with differing labels; no numeric equivalence should be assumed. Scorecard expressly forbids baselines from documentation alone and uses NOT_BASELINED."
+    "Live document-ID collision: NEX-STD-093 labels both Executive Intelligence Reporting (v1.0, blank dates) and Six-Capability Development Scorecard (v1.0, effective 2026-10-15). NEX-STD-092 similarly appears as adaptive capability and legacy weekly-review references. Cite exact paths/titles until controlled resolution. NEX-STD-085 uses maturity levels 1-5 and NEX-STD-109 uses 0-5 with differing labels; no numeric equivalence should be assumed. Scorecard expressly forbids baselines from documentation alone and uses NOT_BASELINED.",
+    "Pre-OS foundation, runtime access policy and execution ledger remain Proposed v0.1; listing an approver does not change their status. NEX-STD-048 contains a dated August 5 graph-linking inventory of 76 files, not current inventory. NEX-STD-060 requires reviewed approval before baseline promotion; read receipts remain evidence of reading, not governance adoption or operational validation."
   ]
 }
