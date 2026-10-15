@@ -260,6 +260,154 @@
         "@/features/admin-templates/components/new-template-form",
         "@/features/admin-templates/catalogue-repository"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/builder/[id]/[step]/page.tsx",
+      "sha": "dbee6baadaf352f832c6937a0a589b2192e9bde4",
+      "expectedSha": "dbee6baadaf352f832c6937a0a589b2192e9bde4",
+      "lines": 360,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "next/navigation",
+        "@/lib/auth/session",
+        "@/lib/db",
+        "@/lib/config",
+        "@/features/invitation-builder/repository",
+        "@/features/invitation-builder/steps",
+        "@/lib/invitation/completeness",
+        "@/features/invitation-builder/actions",
+        "@/features/invitation-builder/components/step-frame",
+        "@/features/invitation-builder/components/steps/template-step",
+        "@/features/invitation-builder/components/steps/event-step",
+        "@/features/invitation-builder/components/steps/hosts-step",
+        "@/features/invitation-builder/components/steps/venue-step",
+        "@/features/invitation-builder/components/steps/content-step",
+        "@/features/invitation-builder/components/steps/media-step",
+        "@/features/invitation-builder/components/steps/personalize-step",
+        "@/features/invitation-builder/components/steps/preview-step",
+        "@/lib/invitation/preview-model",
+        "@/services/media",
+        "@/lib/config/design-vocabulary",
+        "@/features/invitation-builder/recommendations"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/builder/[id]/layout.tsx",
+      "sha": "d01effbcf491e483b38d811fdff7f0e7736ec4bf",
+      "expectedSha": "d01effbcf491e483b38d811fdff7f0e7736ec4bf",
+      "lines": 108,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "next/link",
+        "lucide-react",
+        "@/lib/auth/session",
+        "@/components/configuration-required",
+        "@/lib/config",
+        "@/features/invitation-builder/repository",
+        "@/lib/invitation/completeness",
+        "@/features/invitation-builder/components/step-nav",
+        "@/features/invitation-builder/components/draft-title"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/builder/[id]/page.tsx",
+      "sha": "e31715c3660dd883b7c1f4bc508660c29de4ad90",
+      "expectedSha": "e31715c3660dd883b7c1f4bc508660c29de4ad90",
+      "lines": 30,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "@/lib/auth/session",
+        "@/features/invitation-builder/repository",
+        "@/features/invitation-builder/steps",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/builder/new/page.tsx",
+      "sha": "656e109822440b0b4d230cca0d4ccd338a570b86",
+      "expectedSha": "656e109822440b0b4d230cca0d4ccd338a570b86",
+      "lines": 104,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "@/lib/auth/session",
+        "@/components/configuration-required",
+        "@/lib/db",
+        "@/lib/logger",
+        "@/lib/config",
+        "@/lib/config/design-vocabulary",
+        "@/features/invitation-builder/steps"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/dashboard/account/page.tsx",
+      "sha": "55051be0f9ba74d0a47ecfe3b82fb7b82ce63af3",
+      "expectedSha": "55051be0f9ba74d0a47ecfe3b82fb7b82ce63af3",
+      "lines": 131,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "next/navigation",
+        "@/components/page-header",
+        "@/components/ui/card",
+        "@/features/account/components/profile-form",
+        "@/features/account/components/avatar-form",
+        "@/features/auth/components/password-form",
+        "@/features/account/components/preferences-form",
+        "@/lib/auth/session",
+        "@/lib/db",
+        "@/lib/config",
+        "@/lib/logger",
+        "@/lib/theme"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/dashboard/events/[id]/delivery/page.tsx",
+      "sha": "6fcff4cae43aca3241df41ba036594965a6afb0a",
+      "expectedSha": "6fcff4cae43aca3241df41ba036594965a6afb0a",
+      "lines": 197,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "next/link",
+        "next/navigation",
+        "lucide-react",
+        "@/components/page-header",
+        "@/components/ui/button",
+        "@/components/ui/card",
+        "@/lib/auth/session",
+        "@/lib/config",
+        "@/lib/env",
+        "@/lib/utils",
+        "@/features/delivery/repository",
+        "@/features/delivery/readiness",
+        "@/features/delivery/components/delivery-checklist"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/dashboard/events/[id]/memories/page.tsx",
+      "sha": "eebdbcac1ee5aedc48644adf254689600f2fd1f9",
+      "expectedSha": "eebdbcac1ee5aedc48644adf254689600f2fd1f9",
+      "lines": 200,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/navigation",
+        "@/components/page-header",
+        "@/lib/auth/session",
+        "@/lib/config",
+        "@/services/memories",
+        "@/features/event-memories/actions"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -268,9 +416,10 @@
     "GitHub is the authoritative source; connected GitHub tools only. No local files, checkouts, downloads or code execution.",
     "This code reading scope is distinct from projects.json; exact identical blobs may reuse a full-text receipt with explicit source path and SHA. Historical/source-copy paths retain separate path receipts and placement labels.",
     "Static reading observations are not confirmed runtime findings or test results.",
-    "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction."
+    "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction.",
+    "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Continue at app/(dashboard)/builder/[id]/[step]/page.tsx; 16/422 complete"
+    "nextAction": "Continue uncovered code scope after app/(dashboard)/dashboard/events/[id]/memories/page.tsx;23/422 complete."
   }
 }
