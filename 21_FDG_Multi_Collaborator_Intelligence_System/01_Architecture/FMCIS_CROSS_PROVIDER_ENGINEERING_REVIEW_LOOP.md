@@ -129,7 +129,7 @@ External implementation: `chaseai-yt/claudex-loop`. Upstream publishes four skil
 Current FDG package:
 
 - [[tools/claudex-loop/README|Install and runtime guide]]
-- [[tools/claudex-loop/UPSTREAM|Upstream manifest]] (JSON manifest; GitHub link in README where wikilink resolution is unavailable)
+- [Pinned upstream manifest](../../tools/claudex-loop/UPSTREAM.json) (JSON; repository-root relative path from this file)
 - `tools/claudex-loop/install.ps1` (Windows PowerShell)
 - `tools/claudex-loop/install.sh` (macOS/Linux)
 - `AGENTS.md` — Codex repository startup instructions
@@ -140,6 +140,8 @@ Upstream currently specifies **both authenticated CLIs, Git and Python 3.10+** f
 The installer requires network access to retrieve the reviewed commit on first installation. Previously installed skills can be used offline where the CLIs/models and required local context are available; do **not** claim the cloud-provider two-way loop itself is offline capable.
 
 Runtime safety: reviewers should be read-only and isolated where supported; inspect any requested permissions, network access, repository secret handling and external model data exposure before running the tool. Never grant unrestricted repository writes or change credentials simply to complete a review.
+
+See [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claudex_Loop_Adapter_Assessment_2026-10-15|Claudex Loop Adapter Assessment]] for the adoption matrix (ADOPT / ADAPT / REJECT / ROADMAP), provider-dependency limits, risk assessment and proposed benchmark.
 
 ## 8. Current execution states and proofs
 
