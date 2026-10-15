@@ -106,3 +106,10 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 ## 2026-09-30 architecture review addendum
 
 [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Architecture-critical repository review]] records findings and open remediation. Supporting records: [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|engineering-critical findings]] and [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|proposed regression protocol]]. The review is not completion of the evidence-gated commercial mandate.
+
+
+## FMCIS Cross-Provider Review Evidence Interface — 2026-10-15
+
+[[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]] can generate reviewer findings, tested acceptance criteria, change fingerprints, dispositions and unresolved risks for FAIS inspection. FMCIS owns collaboration; **FAIS retains independent audit authority** and must not equate a model-pair approval with an audit pass. Reviewers and auditors must remain accountable to approved scope and evidence, and the remediation owner remains responsible for corrections.
+
+Related: [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004]] · [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005]].
