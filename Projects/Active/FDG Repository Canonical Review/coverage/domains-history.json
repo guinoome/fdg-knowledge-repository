@@ -2303,6 +2303,76 @@
       "expectedSha": "caf5c1cfa7470785e30cfb85f43d415c5bc4c39e",
       "lines": 23,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/FSvIS-PORT-0002 - Service Classification and Status Register.md",
+      "sha": "dbea0f967a568bbeeb73713863a6dd17b14c5253",
+      "expectedSha": "dbea0f967a568bbeeb73713863a6dd17b14c5253",
+      "lines": 33,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Future_Services/README.md",
+      "sha": "e44b970c1c0df2a8f54216a3a1d72cfd91da3d63",
+      "expectedSha": "e44b970c1c0df2a8f54216a3a1d72cfd91da3d63",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service.md",
+      "sha": "1749bca58ad25365ced0add76adb6cdca99c1c11",
+      "expectedSha": "1749bca58ad25365ced0add76adb6cdca99c1c11",
+      "lines": 218,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/README.md",
+      "sha": "f298851f7c43e117f8e0509dbbd8fdea79b68f28",
+      "expectedSha": "f298851f7c43e117f8e0509dbbd8fdea79b68f28",
+      "lines": 44,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/Deliverable_Definition/README.md",
+      "sha": "c934b0854431198fa56d5e3a5a515c20ac9ea857",
+      "expectedSha": "c934b0854431198fa56d5e3a5a515c20ac9ea857",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/FSvIS-DES-0001 - Service Definition Standard.md",
+      "sha": "4ea963082a111a057771ed7352849f7c859b5f86",
+      "expectedSha": "4ea963082a111a057771ed7352849f7c859b5f86",
+      "lines": 40,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/FSvIS-DES-0002 - Service Blueprint Method.md",
+      "sha": "c6dfc4d673d84821a35cc1cacdee940c1472e8c2",
+      "expectedSha": "c6dfc4d673d84821a35cc1cacdee940c1472e8c2",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/FSvIS-DES-0003 - Service Requirements and Traceability.md",
+      "sha": "ecf8df4b6d077bf74903a1f5af98c1c00d28f50d",
+      "expectedSha": "ecf8df4b6d077bf74903a1f5af98c1c00d28f50d",
+      "lines": 25,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/Scope_Definition/README.md",
+      "sha": "36d470374d534a643d93c03dd4ed8dcc0a2e98aa",
+      "expectedSha": "36d470374d534a643d93c03dd4ed8dcc0a2e98aa",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/03_Service_Definition_and_Design/Service_Blueprints/README.md",
+      "sha": "37ccb78074ed80c10ce6228c9cabe2f9933f2e0f",
+      "expectedSha": "37ccb78074ed80c10ce6228c9cabe2f9933f2e0f",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -2313,6 +2383,7 @@
     "Read current FBIS migration/package records: they describe prior local replacement operations and do not authorize new deletion/migration. OLD remains historical source context; financial independence metrics/stage gates/data schema remain proposed or experimental, separate from canonical implementation approval.",
     "FSIS governance states FDG owner retains ultimate authority over CORE/ecosystem security/exceptional access; whole-repository reading is explicitly owner-authorized here, with no third-party disclosure implied. FSIS standards are read as canonical repository material; this reading task does not enact source-embedded operational instructions.",
     "FSIS conflict preserved: integration master knowledge access matrix allows Public read of General standards; FSIS-1302 marks General standards Public '-'. Do not silently reconcile approval/security differences. Backlog unchecked entries are not implemented-control evidence.",
-    "FRCIM architecture extension approved source status differs from Philippine capability/catalog Verified Working Baseline. Reading repository legal/regulatory claims is not live revalidation of laws, source freshness, rule inputs, permit applicability or deployed compliance. Each production catalog item still requires source/requirement record; missing threshold facts must yield Insufficient Data."
+    "FRCIM architecture extension approved source status differs from Philippine capability/catalog Verified Working Baseline. Reading repository legal/regulatory claims is not live revalidation of laws, source freshness, rule inputs, permit applicability or deployed compliance. Each production catalog item still requires source/requirement record; missing threshold facts must yield Insufficient Data.",
+    "FSvIS-OM-0001 remains S1 Defined / Pilot Definition. Pricing PHP4999 / founding-five50% PHP2499.50 is experimental scope hypothesis; charter/readiness candidate additions explicitly do not certify a real paid client, market demand, accepted report or expanded service scope."
   ]
 }
