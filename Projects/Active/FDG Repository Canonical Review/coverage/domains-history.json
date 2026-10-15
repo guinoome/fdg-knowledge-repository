@@ -963,6 +963,76 @@
       "expectedSha": "891f9936d78dd11e29de8b614bf05cf9068d0f5d",
       "lines": 18,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/00_Architecture/FBIS_Reference_Architecture.md",
+      "sha": "781dca3e305878a7910e05ef42ebfe95f89915f2",
+      "expectedSha": "781dca3e305878a7910e05ef42ebfe95f89915f2",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/00_Architecture/FBIS_System_Architecture.md",
+      "sha": "1d413c6300f87b007067ead77b7a78b3b11b0767",
+      "expectedSha": "1d413c6300f87b007067ead77b7a78b3b11b0767",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/00_FBIS_Home/00_FBIS_Home_Master_Index.md",
+      "sha": "0e5168592e76ee1e2aff0ac356667cbd68b1968e",
+      "expectedSha": "0e5168592e76ee1e2aff0ac356667cbd68b1968e",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "sha": "ecd70eb1f06f67d831ff559d31849b9f20663f08",
+      "expectedSha": "ecd70eb1f06f67d831ff559d31849b9f20663f08",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/01_Business_Intelligence/Business_Intelligence_Data_Model.md",
+      "sha": "002abeb12b7fe2119238a4fd3c4363a5b061c3dd",
+      "expectedSha": "002abeb12b7fe2119238a4fd3c4363a5b061c3dd",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/01_Business_Intelligence/Business_Intelligence_Framework.md",
+      "sha": "805f235e8c5fc964b30e16b2b224e599502e9650",
+      "expectedSha": "805f235e8c5fc964b30e16b2b224e599502e9650",
+      "lines": 15,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "sha": "cb84739012e00de989c58974f34489b27b0b956d",
+      "expectedSha": "cb84739012e00de989c58974f34489b27b0b956d",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/02_Revenue_Intelligence/Revenue_Intelligence.md",
+      "sha": "bddecf0ed9df686ac71e4a27bb221c9cdafe904a",
+      "expectedSha": "bddecf0ed9df686ac71e4a27bb221c9cdafe904a",
+      "lines": 23,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/02_Revenue_Intelligence/Revenue_KPI_Framework.md",
+      "sha": "dbbbcfeacb7086696b31a6e1e2a72f8d4e5ac3c1",
+      "expectedSha": "dbbbcfeacb7086696b31a6e1e2a72f8d4e5ac3c1",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "sha": "20b37e7ce1a451f72c7541d12160880a9e786d6a",
+      "expectedSha": "20b37e7ce1a451f72c7541d12160880a9e786d6a",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
