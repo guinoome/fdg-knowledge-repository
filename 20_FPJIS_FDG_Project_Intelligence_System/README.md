@@ -194,3 +194,9 @@ Use existing approved blueprints and extend their gaps. Complete the applicable 
 This clarification supersedes the Astra-specific provider selection above. **A top-tier OpenAI or Anthropic agent prepares complete detailed Markdown blueprints and audits the submitted implementation.** Packages specify architecture, files, contracts, ordered build steps, expected results, tests and recovery. Haiku, Sonnet, Sol or other capable agents implement against the same acceptance criteria.
 
 [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|The current compiler–builder–auditor contract]] defines audit evidence, correction/retest loops, revision-bound results and organizational learning. [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|The execution template]] records role identities, audit verdict and repository return. Work is accepted from verified evidence; required audits pending or blocking findings remain visible.
+
+## Linked Requirements Views — 2026-10-15
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] extends the existing FPJIS requirement blueprint, traceability standard and evidence manifest: business WHY, product/functional WHAT, system/software required behavior, architecture HOW, and objective verification/acceptance stay **linked to a canonical requirement ID** rather than duplicating documents.
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Fire Pump Pilot]] is an illustrative fire-pump offline evidence / conflict / provenance / approval-boundary pilot; NOT VERIFIED and NOT BUILD AUTHORIZED. No additional module, software, deployment or revision of the four canonical percentage metrics is claimed.
