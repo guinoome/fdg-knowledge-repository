@@ -2849,6 +2849,41 @@
       "expectedSha": "a8d6f4e602c763e651e37c72a1ccb41489cc8d8c",
       "lines": 170,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/00_Architecture_Master_Index.md",
+      "sha": "a79f0939b837a9e4cea788a2bbff6113ff3eee7c",
+      "expectedSha": "a79f0939b837a9e4cea788a2bbff6113ff3eee7c",
+      "lines": 11,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0000 - FBPOIS Master Architecture.md",
+      "sha": "a327f99eef9465a4e3f1926b98525ce3bcb894bf",
+      "expectedSha": "a327f99eef9465a4e3f1926b98525ce3bcb894bf",
+      "lines": 293,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-ARCH-0001 - Vision & Scope.md",
+      "sha": "17da986a9c4dd4b2d6f817f23d8bcd379aa13a21",
+      "expectedSha": "17da986a9c4dd4b2d6f817f23d8bcd379aa13a21",
+      "lines": 331,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index.md",
+      "sha": "69d3173b100ebd3a733729c7ccf6f35799a4ba72",
+      "expectedSha": "69d3173b100ebd3a733729c7ccf6f35799a4ba72",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-ARCH-0000 - Facility Workspace Intelligence System.md",
+      "sha": "6769ab46c22c312b7753397cc0e12ec3ee62510f",
+      "expectedSha": "6769ab46c22c312b7753397cc0e12ec3ee62510f",
+      "lines": 463,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
