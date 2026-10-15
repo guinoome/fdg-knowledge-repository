@@ -1855,6 +1855,76 @@
       "expectedSha": "5e7bf267900918c4d80e1910b432870f7e426b89",
       "lines": 16,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/02_Laws_Regulations_and_Standards/Philippine_Laws/README.md",
+      "sha": "ca7420222eef5a316eb3e35be74f96ff09d9d641",
+      "expectedSha": "ca7420222eef5a316eb3e35be74f96ff09d9d641",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/02_Laws_Regulations_and_Standards/Regulatory_Agencies/README.md",
+      "sha": "36ce7bef62e8c341af4148b3ec11cd40e3e50bc4",
+      "expectedSha": "36ce7bef62e8c341af4148b3ec11cd40e3e50bc4",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/Client_Agreements/README.md",
+      "sha": "a7a6cc29ea63ab9e499abf3e25c4e7190df9278d",
+      "expectedSha": "a7a6cc29ea63ab9e499abf3e25c4e7190df9278d",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/Collaboration_Agreements/README.md",
+      "sha": "34b07ec48214089c6235264e12670ad066ec04d4",
+      "expectedSha": "34b07ec48214089c6235264e12670ad066ec04d4",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/Contract_Clause_Library/README.md",
+      "sha": "dbca84ef1aa3235bd00ad06f6afbf92691c374e5",
+      "expectedSha": "dbca84ef1aa3235bd00ad06f6afbf92691c374e5",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/Contract_Templates/README.md",
+      "sha": "ae9f43da65fd7d5195ffb7e0eaeeb2f81f2a0b13",
+      "expectedSha": "ae9f43da65fd7d5195ffb7e0eaeeb2f81f2a0b13",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/FLIS-0300 - Contracts and Agreements.md",
+      "sha": "d91252944fae698bb25147472529d7d0b52854b2",
+      "expectedSha": "d91252944fae698bb25147472529d7d0b52854b2",
+      "lines": 34,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/FLIS-TPL-0301 - Contract Review Template.md",
+      "sha": "4336a669194adc37f1438b23899eb327fdbc4f58",
+      "expectedSha": "4336a669194adc37f1438b23899eb327fdbc4f58",
+      "lines": 40,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/NDA_and_Confidentiality/README.md",
+      "sha": "019db59d536debbcb9ab56425c42a8074808ba14",
+      "expectedSha": "019db59d536debbcb9ab56425c42a8074808ba14",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/03_Contracts_and_Agreements/Supplier_Agreements/README.md",
+      "sha": "e1e87200dad09b65d5e768c10e8da9959b6ad84f",
+      "expectedSha": "e1e87200dad09b65d5e768c10e8da9959b6ad84f",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
