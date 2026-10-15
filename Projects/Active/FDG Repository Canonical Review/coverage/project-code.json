@@ -7,15 +7,138 @@
     "expectedDocuments": 422,
     "expectedBytes": 1561309
   },
-  "documents": [],
+  "documents": [
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(auth)/auth/callback/route.ts",
+      "sha": "8f0b82717807c12a3143de366f29ca3f0a1abeac",
+      "expectedSha": "8f0b82717807c12a3143de366f29ca3f0a1abeac",
+      "lines": 65,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/lib/supabase/server",
+        "@/lib/env",
+        "@/lib/logger",
+        "@/lib/config",
+        "@/features/auth/redirect"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(auth)/forgot-password/page.tsx",
+      "sha": "2f3030e319923226cfc5340662994fc0be720b9c",
+      "expectedSha": "2f3030e319923226cfc5340662994fc0be720b9c",
+      "lines": 29,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/features/auth/components/forgot-password-form",
+        "@/components/setup-notice"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(auth)/layout.tsx",
+      "sha": "f8bec7e3172c119ec66b5ad64752b238a0f04363",
+      "expectedSha": "f8bec7e3172c119ec66b5ad64752b238a0f04363",
+      "lines": 46,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/link",
+        "next/navigation",
+        "@/lib/config",
+        "@/lib/auth/session"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(auth)/login/page.tsx",
+      "sha": "3a09d212e5e9a05044ab1b46153240a3bc20d516",
+      "expectedSha": "3a09d212e5e9a05044ab1b46153240a3bc20d516",
+      "lines": 32,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next",
+        "@/features/auth/components/login-form",
+        "@/components/setup-notice",
+        "@/components/ui/skeleton"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(auth)/register/page.tsx",
+      "sha": "d38840aa0bbc76b5376123c6947c7adf6878d482",
+      "expectedSha": "d38840aa0bbc76b5376123c6947c7adf6878d482",
+      "lines": 34,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "next/navigation",
+        "@/features/auth/components/register-form",
+        "@/components/setup-notice",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(auth)/reset-password/page.tsx",
+      "sha": "7ace12077a842a617ec098bc2d38159f9be3a579",
+      "expectedSha": "7ace12077a842a617ec098bc2d38159f9be3a579",
+      "lines": 34,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/features/auth/components/reset-password-form",
+        "@/components/setup-notice"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/bookings/page.tsx",
+      "sha": "9cdf87b39667c69adb8998e36c7cba3c7d0d866e",
+      "expectedSha": "9cdf87b39667c69adb8998e36c7cba3c7d0d866e",
+      "lines": 104,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "lucide-react",
+        "@/lib/auth/require-staff",
+        "@/services/orders",
+        "@/components/ui/empty-state",
+        "@/components/ui/breadcrumbs",
+        "@/lib/config",
+        "@/features/orders/components/order-search",
+        "@/features/orders/labels",
+        "@/features/payments/components/settlement-controls",
+        "@/lib/env"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/(dashboard)/admin/customers/page.tsx",
+      "sha": "e1d783325a3446eeef1048e08d901dbaa8fbb85c",
+      "expectedSha": "e1d783325a3446eeef1048e08d901dbaa8fbb85c",
+      "lines": 24,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "lucide-react",
+        "@/components/placeholder-module",
+        "@/lib/config"
+      ]
+    }
+  ],
   "partialDocuments": [],
   "failures": [],
   "notes": [
     "GitHub is the authoritative source; connected GitHub tools only. No local files, checkouts, downloads or code execution.",
     "This code reading scope is distinct from projects.json; exact identical blobs may reuse a full-text receipt with explicit source path and SHA. Historical/source-copy paths retain separate path receipts and placement labels.",
-    "Static reading observations are not confirmed runtime findings or test results."
+    "Static reading observations are not confirmed runtime findings or test results.",
+    "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction."
   ],
   "handover": {
-    "nextAction": "Read first uncovered source-pin path through connected GitHub tools; save complete and partial coverage after bounded batches."
+    "nextAction": "Continue codeTodo from app/(dashboard)/admin/layout.tsx; 8/422 complete"
   }
 }
