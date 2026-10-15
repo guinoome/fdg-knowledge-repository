@@ -11,6 +11,90 @@
       "expectedSha": "a47ab7ae463680cd85260fb5f1b2d4007148558c",
       "lines": 32,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/00_FBIS_Home/FBIS_Home.md",
+      "sha": "d43da4f113c5b72fcaa41b8df736a5b95c177f84",
+      "expectedSha": "d43da4f113c5b72fcaa41b8df736a5b95c177f84",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/01_Business_Governance/01_Business_Governance_Master_Index.md",
+      "sha": "688a21e20bf813fff19ce544df80befdc4cf3fdf",
+      "expectedSha": "688a21e20bf813fff19ce544df80befdc4cf3fdf",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Audit_Model.md",
+      "sha": "3077b74147426bb71b483adcd702fefaa313c5ec",
+      "expectedSha": "3077b74147426bb71b483adcd702fefaa313c5ec",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Decision_Log.md",
+      "sha": "ab5cb8e3b0a1c93f3035f4e0aa9e9d518bf21c27",
+      "expectedSha": "ab5cb8e3b0a1c93f3035f4e0aa9e9d518bf21c27",
+      "lines": 38,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Governance.md",
+      "sha": "b4348f24c29170d3e10b88c6e5979c06d18b3115",
+      "expectedSha": "b4348f24c29170d3e10b88c6e5979c06d18b3115",
+      "lines": 36,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/01_Business_Governance/FBIS_Security_and_Audit.md",
+      "sha": "77ec4eb5c3fefb9d097f72ffb7a1e4178752c76d",
+      "expectedSha": "77ec4eb5c3fefb9d097f72ffb7a1e4178752c76d",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/02_Business_Identity/02_Business_Identity_Master_Index.md",
+      "sha": "64aa9248d50fd8caf41ec665ec23a670f1f0b0b8",
+      "expectedSha": "64aa9248d50fd8caf41ec665ec23a670f1f0b0b8",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/02_Business_Identity/FBIS_Identity.md",
+      "sha": "f26194613789070737ef88565d2717d200a3dcde",
+      "expectedSha": "f26194613789070737ef88565d2717d200a3dcde",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/03_Business_Principles/03_Business_Principles_Master_Index.md",
+      "sha": "12c583c7f7a1537864c6372eec25c5270bed3019",
+      "expectedSha": "12c583c7f7a1537864c6372eec25c5270bed3019",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/03_Business_Principles/FBIS_Business_Principles.md",
+      "sha": "d2518072375145e0503ea856666d740f5dfb6305",
+      "expectedSha": "d2518072375145e0503ea856666d740f5dfb6305",
+      "lines": 33,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "sha": "3b481976e1ad851b07ec2ad54ae580a01cc30d8f",
+      "expectedSha": "3b481976e1ad851b07ec2ad54ae580a01cc30d8f",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/04_Business_Knowledge_Management/FBIS_Continuous_Learning.md",
+      "sha": "d6aad1e573ba6c88a3d078b59c87c01849e4f18d",
+      "expectedSha": "d6aad1e573ba6c88a3d078b59c87c01849e4f18d",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
