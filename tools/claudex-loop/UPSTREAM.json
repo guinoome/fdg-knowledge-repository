@@ -1,0 +1,24 @@
+{
+  "capability": "Claudex Loop",
+  "upstream_repository": "chaseai-yt/claudex-loop",
+  "upstream_url": "https://github.com/chaseai-yt/claudex-loop",
+  "pinned_commit": "53cddc42e39346fb8c6d5d612281a3b1add14e66",
+  "pinned_commit_date": "2026-10-14",
+  "reviewed_for_fdg_on": "2026-10-15",
+  "license": "MIT",
+  "full_loop_requires": [
+    "Claude Code CLI authenticated",
+    "Codex CLI authenticated",
+    "Python >= 3.10",
+    "Git"
+  ],
+  "installed_skill_directories": [
+    "claudex-loop",
+    "claudex-route",
+    "codex-build",
+    "codex-review"
+  ],
+  "codex_destination": "~/.agents/skills/",
+  "claude_destination": "~/.claude/skills/",
+  "update_policy": "Do not silently follow upstream main. Review upstream changes, validate, then deliberately change pinned_commit."
+}
