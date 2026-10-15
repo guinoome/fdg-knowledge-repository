@@ -1,0 +1,90 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "sourceCheckpoint": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "status": "IN_PROGRESS",
+  "expectedBinaryPaths": 98,
+  "documents": [
+    {
+      "path": "19_FWAIS — FDG Workflow Automation Intelligence System/Conversation_Compilations/19_FWAIS_Conversation_Compilation_Complete/19_FWAIS_Conversation_Compilation/99_Archive_References/FDG_FWAIS_Integration_Intelligence.zip",
+      "sha": "5a3a520f6909710d5fa9041317f8a238be4e6df1",
+      "expectedSha": "5a3a520f6909710d5fa9041317f8a238be4e6df1",
+      "status": "ARCHIVE_TEXT_READ_COMPLETE",
+      "method": "Connected GitHub base64, JSZip CRC validation and Git blob hashing in RAM, no extraction to disk",
+      "entries": [
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/FWAIS_Architecture.md",
+          "bytes": 1188,
+          "sha": "98e887a6bcbf11a4e7e208bcf7b2eb193faba6ed",
+          "validUtf8": true,
+          "characters": 1184,
+          "status": "FULL_TEXT_READ"
+        },
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/FEXIS_FWAIS_Continuous_Learning.md",
+          "bytes": 2198,
+          "sha": "2961273e441e94572bf7bc7482ac202ac5101d1f",
+          "validUtf8": true,
+          "characters": 2174,
+          "status": "FULL_TEXT_READ"
+        },
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/Transcript_Analysis.md",
+          "bytes": 3258,
+          "sha": "dcff0d70f18f46d4d58a8181ad6bbfd905c300ab",
+          "validUtf8": true,
+          "characters": 3236,
+          "status": "FULL_TEXT_READ"
+        },
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/FDG_Capability_Over_Tool_Principle.md",
+          "bytes": 1282,
+          "sha": "e8dad8a1344d1896624c59b80b0dcb715bac7964",
+          "validUtf8": true,
+          "characters": 1254,
+          "status": "FULL_TEXT_READ"
+        },
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/README.md",
+          "bytes": 957,
+          "sha": "7bd3c9dce58051b560643ae21cb9ade3250014ba",
+          "validUtf8": true,
+          "characters": 937,
+          "status": "FULL_TEXT_READ"
+        },
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/FWAIS_Integration_Intelligence.md",
+          "bytes": 3849,
+          "sha": "cbe27bd991779496879b1024a2ec306fbd3e3a5a",
+          "validUtf8": true,
+          "characters": 3805,
+          "status": "FULL_TEXT_READ"
+        },
+        {
+          "name": "FDG_FWAIS_Integration_Intelligence/FWAIS_Capability_Factory.md",
+          "bytes": 1776,
+          "sha": "946582161e13f6ce7a1a82f44829d761918c5087",
+          "validUtf8": true,
+          "characters": 1754,
+          "status": "FULL_TEXT_READ"
+        }
+      ],
+      "notes": [
+        "All seven UTF-8 documents fully exposed and read. Archived reference does not approve implementations."
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/bdfdac41-05f7-422c-83fd-aba92f05306b/1-Photo-1.jpg",
+      "sha": "a441b7ebeb448026d8b2ca6665ea25fafd9b5352",
+      "expectedSha": "a441b7ebeb448026d8b2ca6665ea25fafd9b5352",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Mobile ML-DEP login screenshot at mlprinting.vercel.app: email/password inputs, forgotten-password link, sign-in/create-account controls. Screenshot evidence only, no live runtime verification."
+      ]
+    }
+  ],
+  "failures": [],
+  "notes": [
+    "Binary inspections are separate from text full-read counts. Audio/video/fonts and uninspected archives remain explicit pending gaps.",
+    "No local project files, downloads or archive extraction to disk."
+  ]
+}
