@@ -2,7 +2,7 @@
   "repository": "guinoome/fdg-knowledge-repository",
   "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f",
   "comparedFrom": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
-  "status": "IN_PROGRESS",
+  "status": "COMPLETE_AT_SOURCE_CHECKPOINT",
   "expectedChangedSourcePaths": 26,
   "documents": [
     {
@@ -108,10 +108,115 @@
       "status": "FULL_TEXT_READ",
       "characters": 4326,
       "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard.md",
+      "sha": "36722a4141bd1df399963089b573f3d42f0bd5fb",
+      "expectedSha": "36722a4141bd1df399963089b573f3d42f0bd5fb",
+      "status": "FULL_TEXT_READ",
+      "characters": 11566,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot.md",
+      "sha": "ddb4c9c3f545bd3588018b13a8567650a2762c65",
+      "expectedSha": "ddb4c9c3f545bd3588018b13a8567650a2762c65",
+      "status": "FULL_TEXT_READ",
+      "characters": 11289,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/README.md",
+      "sha": "b3cd3ec7e13a6739501f950210abf32cefa5830b",
+      "expectedSha": "b3cd3ec7e13a6739501f950210abf32cefa5830b",
+      "status": "FULL_TEXT_READ",
+      "characters": 15117,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index.md",
+      "sha": "4779400eedd658d69d9629c6ec421c8d7155f177",
+      "expectedSha": "4779400eedd658d69d9629c6ec421c8d7155f177",
+      "status": "FULL_TEXT_READ",
+      "characters": 14194,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol.md",
+      "sha": "200080bf28e9c25d72dfd7e49690c3015a620a2e",
+      "expectedSha": "200080bf28e9c25d72dfd7e49690c3015a620a2e",
+      "status": "FULL_TEXT_READ",
+      "characters": 2511,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria.md",
+      "sha": "738186612b7e507e2ccd7fdb5a97036ade5e07bc",
+      "expectedSha": "738186612b7e507e2ccd7fdb5a97036ade5e07bc",
+      "status": "FULL_TEXT_READ",
+      "characters": 3024,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claudex_Loop_Adapter_Assessment_2026-10-15.md",
+      "sha": "6aaf599855ff92411135ee2a408102e9d4434139",
+      "expectedSha": "6aaf599855ff92411135ee2a408102e9d4434139",
+      "status": "FULL_TEXT_READ",
+      "characters": 4561,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/README.md",
+      "sha": "0e9977e99c23f5f512a2da234e8e7e9ba0852715",
+      "expectedSha": "0e9977e99c23f5f512a2da234e8e7e9ba0852715",
+      "status": "FULL_TEXT_READ",
+      "characters": 723,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "21_FDG_Multi_Collaborator_Intelligence_System/README.md",
+      "sha": "2f6fa9b79bf217c5065dd59162c36df964738aec",
+      "expectedSha": "2f6fa9b79bf217c5065dd59162c36df964738aec",
+      "status": "FULL_TEXT_READ",
+      "characters": 3290,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System.md",
+      "sha": "0a198db67f584c3a255d31fd2f06bf1c83492204",
+      "expectedSha": "0a198db67f584c3a255d31fd2f06bf1c83492204",
+      "status": "FULL_TEXT_READ",
+      "characters": 8916,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "FDG Ecosystem.md",
+      "sha": "9359a33f219c176d75e1922966797c63cb6afaa9",
+      "expectedSha": "9359a33f219c176d75e1922966797c63cb6afaa9",
+      "status": "FULL_TEXT_READ",
+      "characters": 14225,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "README.md",
+      "sha": "aa0efe39dd23cd8f1ecdfeb6d45251cfaf93eafe",
+      "expectedSha": "aa0efe39dd23cd8f1ecdfeb6d45251cfaf93eafe",
+      "status": "FULL_TEXT_READ",
+      "characters": 10226,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
+    },
+    {
+      "path": "tools/claudex-loop/README.md",
+      "sha": "d5b5539ecc0ac0e93e4cab94634393c03c59a59a",
+      "expectedSha": "d5b5539ecc0ac0e93e4cab94634393c03c59a59a",
+      "status": "FULL_TEXT_READ",
+      "characters": 3812,
+      "sourceCheckpoint": "682c5c254a3be1d485d7092e352923c4b4b7693f"
     }
   ],
   "notes": [
     "All source obtained through connected GitHub. Baseline receipts remain pinned; these changed versions are tracked separately.",
-    "FMCIS now owns the cross-provider review standard; the old Agentic Framework file is only a historical pointer. Runtime execution validation remains pending. No installer or code executed."
+    "FMCIS now owns the cross-provider review standard; the old Agentic Framework file is only a historical pointer. Runtime execution validation remains pending. No installer or code executed.",
+    "All 26 non-review source changes fully exposed and read, with SHA matches. FPM-REQ-001 and AC001-008 remain illustrative/proposed, untested and not build/deployment authorized. Four FPJIS percentages and historical89.5% framework readiness are not raised by documentation."
   ]
 }
