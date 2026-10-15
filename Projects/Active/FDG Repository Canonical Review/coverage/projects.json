@@ -398,6 +398,54 @@
       "characters": 8684,
       "lines": 761,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-03A.md",
+      "sha": "9a219de408f4a0372029423c8444e8d0e8493f32",
+      "expectedSha": "9a219de408f4a0372029423c8444e8d0e8493f32",
+      "characters": 8507,
+      "lines": 854,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-03B.md",
+      "sha": "652ec77f47a6e13d511ff9cca6ee8129d3cec653",
+      "expectedSha": "652ec77f47a6e13d511ff9cca6ee8129d3cec653",
+      "characters": 8479,
+      "lines": 807,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-04A.md",
+      "sha": "f6f0c17f9a51abaf859e6d157966135b883fc892",
+      "expectedSha": "f6f0c17f9a51abaf859e6d157966135b883fc892",
+      "characters": 8533,
+      "lines": 822,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-04B.md",
+      "sha": "20fd4ff585723ae2dd5b31caa5d4762b7178bedb",
+      "expectedSha": "20fd4ff585723ae2dd5b31caa5d4762b7178bedb",
+      "characters": 7941,
+      "lines": 686,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-05A.md",
+      "sha": "a08bc20ad4a3c23e7d18d1187eb6d638ec6be591",
+      "expectedSha": "a08bc20ad4a3c23e7d18d1187eb6d638ec6be591",
+      "characters": 8181,
+      "lines": 847,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-T-CPS/FDG-T-CPS-06A.md",
+      "sha": "54bc127d6769d4f72d77f6dc3d0d5bcaa587cebd",
+      "expectedSha": "54bc127d6769d4f72d77f6dc3d0d5bcaa587cebd",
+      "characters": 9532,
+      "lines": 870,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
