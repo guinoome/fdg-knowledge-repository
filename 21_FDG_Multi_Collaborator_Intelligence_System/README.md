@@ -41,3 +41,13 @@ Baby Nex uses FMCIS for collaborator coordination while remaining architecturall
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|Baby Nex Provider-Neutral Runtime Architecture]]
 
 > **Runtime principle:** Claude may build Baby Nex; Baby Nex must never require Claude to survive.
+
+
+## Cross-provider engineering review
+
+FMCIS now consumes the provider-neutral review pattern defined by the Agentic Framework rather than duplicating it inside FMCIS:
+
+- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
+- [[tools/claudex-loop/README|FDG Claudex Loop Bootstrap]]
+
+Current executable pairing: Claude Code ↔ Codex. The implementation is replaceable; FMCIS owns collaborator coordination, not the external Claudex tool.
