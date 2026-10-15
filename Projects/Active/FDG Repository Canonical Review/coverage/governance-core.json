@@ -664,6 +664,62 @@
       "expectedSha": "a0865d3b77a7d0863f5ac41553495f538119e871",
       "lines": 486,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_ASSET_INTELLIGENCE_STANDARD.md",
+      "sha": "6b74d4f19f9cbf2b735e90372c673c00b9b30d91",
+      "expectedSha": "6b74d4f19f9cbf2b735e90372c673c00b9b30d91",
+      "lines": 494,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_CALCULATION_INTELLIGENCE_STANDARD.md",
+      "sha": "24b6ca0c442d24fee1c025c47e3d0c1030a15b87",
+      "expectedSha": "24b6ca0c442d24fee1c025c47e3d0c1030a15b87",
+      "lines": 561,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_DECISION_INTELLIGENCE_STANDARD.md",
+      "sha": "412b55a38a8e6be0d16c9b0ee96a64dedd7421b3",
+      "expectedSha": "412b55a38a8e6be0d16c9b0ee96a64dedd7421b3",
+      "lines": 399,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_DECISION_SUPPORT_SYSTEM_STANDARD.md",
+      "sha": "efa5b031fe8b5f0d0fe8d8ceddf8b5c53a3e8a1d",
+      "expectedSha": "efa5b031fe8b5f0d0fe8d8ceddf8b5c53a3e8a1d",
+      "lines": 477,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_EQUIPMENT_KNOWLEDGE_MODEL_STANDARD.md",
+      "sha": "a1ff49255ddc7399bec461a169f08792ab798597",
+      "expectedSha": "a1ff49255ddc7399bec461a169f08792ab798597",
+      "lines": 577,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_KNOWLEDGE_ACQUISITION_AND_LEARNING_STANDARD.md",
+      "sha": "8aeddd69ce56096a3343250840705ac22a7b33b0",
+      "expectedSha": "8aeddd69ce56096a3343250840705ac22a7b33b0",
+      "lines": 448,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_QUALITY_ASSURANCE_AND_VALIDATION_STANDARD.md",
+      "sha": "0314573709a1d507f4e024015c8d9af9ff6d2e9a",
+      "expectedSha": "0314573709a1d507f4e024015c8d9af9ff6d2e9a",
+      "lines": 432,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CORE_ENGINEERING_REPORT_GENERATION_STANDARD.md",
+      "sha": "cd360d71c60308ac73db58376ec6cf81daa67ccd",
+      "expectedSha": "cd360d71c60308ac73db58376ec6cf81daa67ccd",
+      "lines": 482,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
