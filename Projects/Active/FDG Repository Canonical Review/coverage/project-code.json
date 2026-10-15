@@ -1953,6 +1953,61 @@
       "status": "FULL_TEXT_READ",
       "placement": "Active project source at pinned GitHub path",
       "dependencies": []
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/delivery/repository.ts",
+      "sha": "ffa1896aaef996cc35ca757c3e89eb8858c46f2c",
+      "expectedSha": "ffa1896aaef996cc35ca757c3e89eb8858c46f2c",
+      "lines": 96,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "@/lib/db",
+        "@/lib/logger",
+        "./readiness"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/event-memories/actions.ts",
+      "sha": "54304f0a99ac279b2e7dcc4bcf0fa1f198485351",
+      "expectedSha": "54304f0a99ac279b2e7dcc4bcf0fa1f198485351",
+      "lines": 121,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/cache",
+        "next/headers",
+        "zod",
+        "@/lib/auth/session",
+        "@/lib/config",
+        "@/services/memories",
+        "@/services/lifecycle-notifications",
+        "@/services/security/rate-limit"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/event-memories/components/live-wall-refresh.tsx",
+      "sha": "c7d1ecb9f9329edded48d34a3574864c2fa8766a",
+      "expectedSha": "c7d1ecb9f9329edded48d34a3574864c2fa8766a",
+      "lines": 13,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next/navigation"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/event-memories/components/memory-upload-form.tsx",
+      "sha": "a6dc3f95e0db192dff5ed4f2f0b331ce0ae2bcef",
+      "expectedSha": "a6dc3f95e0db192dff5ed4f2f0b331ce0ae2bcef",
+      "lines": 71,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "../actions"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1975,6 +2030,6 @@
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/delivery/repository.ts; 124/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/actions.ts; 128/422 complete"
   }
 }
