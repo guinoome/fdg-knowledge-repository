@@ -454,6 +454,48 @@
       "expectedSha": "9c4453e0dc001595fb7ba5750de270c0e7cd03a7",
       "lines": 173,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-STD-126_CROSS_FUNCTIONAL_OWNERSHIP_AND_INTERFACE_MATRIX.md",
+      "sha": "effb56e06bc3880dea8897ae3e7de39a0df9da02",
+      "expectedSha": "effb56e06bc3880dea8897ae3e7de39a0df9da02",
+      "lines": 84,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-STD-127_ENTERPRISE_FUNCTION_MATURITY_STANDARD.md",
+      "sha": "339e62dd7236713e850734ebc93ab1b0e536cbcb",
+      "expectedSha": "339e62dd7236713e850734ebc93ab1b0e536cbcb",
+      "lines": 93,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-STD-128_ENTERPRISE_FUNCTION_CONTROL_RECORD_KPI_CATALOG.md",
+      "sha": "c6d9fe4e858a598053c6c0e40ef2503477459f14",
+      "expectedSha": "c6d9fe4e858a598053c6c0e40ef2503477459f14",
+      "lines": 257,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/RESPONSIBILITY_STANDARD.md",
+      "sha": "266d541aae0fbb93533b4af68b8679f8e5eebc32",
+      "expectedSha": "266d541aae0fbb93533b4af68b8679f8e5eebc32",
+      "lines": 276,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/SPECIALIZATION_STANDARD.md",
+      "sha": "5ad1812c8ddff8d47bc48dadce6c2559810a6c9f",
+      "expectedSha": "5ad1812c8ddff8d47bc48dadce6c2559810a6c9f",
+      "lines": 240,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/WORK_PACKAGE_STANDARD.md",
+      "sha": "55dbe8bec531cf307f12a07014fa6a11e1a7937c",
+      "expectedSha": "55dbe8bec531cf307f12a07014fa6a11e1a7937c",
+      "lines": 405,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -465,6 +507,7 @@
     "Identity Model is currently NEX-STD-123 v1.0.1, with explicit 2026-08-29 reassignment; old collision warnings preserved elsewhere are historical. USER.md asserts Professional Mechanical Engineer (PME), which must be reconciled with verified credentials before external professional use.",
     "Architecture Compiler Protocol is Active Operating Instruction effective 2026-10-06 with sequential 2026-10-11 clarifications. Current Compiler–Builder–Auditor Contract supersedes Astra-specific selection wording, requires actual identities and independent top-tier audit before accepted coding package. CFO/CMO/customer-service profiles are design-only Draft, uncommissioned.",
     "Knowledge Management standards preserve review vs approval separation, require approval before baseline adoption, and emphasize reusable conclusions rather than raw conversation. Several Related Documents labels misassign Document Control to NEX-STD-001 and Decision Evolution to NEX-STD-002; actual governance files are NEX-STD-002 and NEX-STD-003.",
-    "Canonical Truth Resolution Standard remains Proposed; enterprise architecture reconciliation remains Proposed; cross-system relationship map has working/pending global status plus specifically labeled approved and later scoped extensions. In root 05, KNOWLEDGE_PRESERVATION_STANDARD.md contains only a breadcrumb; root 04 holds the substantive Approved NEX-STD-023."
+    "Canonical Truth Resolution Standard remains Proposed; enterprise architecture reconciliation remains Proposed; cross-system relationship map has working/pending global status plus specifically labeled approved and later scoped extensions. In root 05, KNOWLEDGE_PRESERVATION_STANDARD.md contains only a breadcrumb; root 04 holds the substantive Approved NEX-STD-023.",
+    "NEX-STD-124 through 128 and Sep 27 evolution ADR are Approved, distinct 16 enterprise functions with single accountable outcome owners. Very Strong expressly concerns organizational knowledge architecture, not staffing, deployed software, legal registration or operating control effectiveness. Enterprise role, record owner, approver, executor and independent auditor remain distinct."
   ]
 }
