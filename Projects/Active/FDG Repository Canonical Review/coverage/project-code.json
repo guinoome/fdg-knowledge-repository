@@ -770,6 +770,82 @@
         "@/features/event-memories/components/live-wall-refresh",
         "@/services/memories"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/e/[slug]/page.tsx",
+      "sha": "537650c47beb16c14b1743c6269dfeb32ac38893",
+      "expectedSha": "537650c47beb16c14b1743c6269dfeb32ac38893",
+      "lines": 148,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next",
+        "next/navigation",
+        "@/features/website-generator/repository",
+        "@/features/website-generator/countdown-time",
+        "@/features/website-generator/components/event-site",
+        "@/lib/invitation/preview-model",
+        "@/services/media",
+        "@/lib/config",
+        "@/lib/env",
+        "@/lib/config"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/error.tsx",
+      "sha": "d306234bc93d596339e0b62ec23214e774d313ac",
+      "expectedSha": "d306234bc93d596339e0b62ec23214e774d313ac",
+      "lines": 60,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next/link",
+        "lucide-react",
+        "@/components/ui/button",
+        "@/lib/config",
+        "@/lib/logger"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/gallery/page.tsx",
+      "sha": "84bd8e170624de87181e1b3e309e26de45f413f9",
+      "expectedSha": "84bd8e170624de87181e1b3e309e26de45f413f9",
+      "lines": 51,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/components/nav/site-header",
+        "@/lib/config",
+        "@/features/template-gallery/components/gallery"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/global-error.tsx",
+      "sha": "c57473bcfa97dda5e494f4ea0881fc7e4d96cc48",
+      "expectedSha": "c57473bcfa97dda5e494f4ea0881fc7e4d96cc48",
+      "lines": 78,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@/lib/logger"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/go/templates/route.ts",
+      "sha": "6741b01bf867891802a6a5899bcf6fc61fe35686",
+      "expectedSha": "6741b01bf867891802a6a5899bcf6fc61fe35686",
+      "lines": 16,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/server",
+        "@/lib/config",
+        "@/services/acquisition"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -782,6 +858,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/e/[slug]/page.tsx; 45/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/invite-preview/page.tsx; 50/422 complete"
   }
 }
