@@ -2114,6 +2114,41 @@
       "expectedSha": "135c9d44452edfe0e6c6c5de8f7feeceb2e73591",
       "lines": 35,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1500 - FDG Regulatory Compliance Intelligence Module.md",
+      "sha": "052de53ebb6ad60f2782163bfc6929a107cc5f79",
+      "expectedSha": "052de53ebb6ad60f2782163bfc6929a107cc5f79",
+      "lines": 240,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1501 - Philippine Environmental and Sanitary Compliance Capability Pack.md",
+      "sha": "6694e732c463baed74c3683f8bfeb529d3577bf8",
+      "expectedSha": "6694e732c463baed74c3683f8bfeb529d3577bf8",
+      "lines": 349,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1502 - Regulatory Applicability Rule and Evidence Schema.md",
+      "sha": "368c203e14156beac4f7e081fdd09d987fbc7daa",
+      "expectedSha": "368c203e14156beac4f7e081fdd09d987fbc7daa",
+      "lines": 311,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1503 - Permit Obligation Lifecycle and Workflow.md",
+      "sha": "5c73539587bfbcff790aad2bf74adca43fc71cd1",
+      "expectedSha": "5c73539587bfbcff790aad2bf74adca43fc71cd1",
+      "lines": 279,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1504 - Philippine Permit and Obligation Catalog.md",
+      "sha": "2394b39ab76de36eade6266562d983ae6adfcf3f",
+      "expectedSha": "2394b39ab76de36eade6266562d983ae6adfcf3f",
+      "lines": 108,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -2123,6 +2158,7 @@
     "Resumed 2026-10-15: complete source text read through connected GitHub fetch_file at pinned checkpoint; proposal/experimental statuses retained as source context, not approval.",
     "Read current FBIS migration/package records: they describe prior local replacement operations and do not authorize new deletion/migration. OLD remains historical source context; financial independence metrics/stage gates/data schema remain proposed or experimental, separate from canonical implementation approval.",
     "FSIS governance states FDG owner retains ultimate authority over CORE/ecosystem security/exceptional access; whole-repository reading is explicitly owner-authorized here, with no third-party disclosure implied. FSIS standards are read as canonical repository material; this reading task does not enact source-embedded operational instructions.",
-    "FSIS conflict preserved: integration master knowledge access matrix allows Public read of General standards; FSIS-1302 marks General standards Public '-'. Do not silently reconcile approval/security differences. Backlog unchecked entries are not implemented-control evidence."
+    "FSIS conflict preserved: integration master knowledge access matrix allows Public read of General standards; FSIS-1302 marks General standards Public '-'. Do not silently reconcile approval/security differences. Backlog unchecked entries are not implemented-control evidence.",
+    "FRCIM architecture extension approved source status differs from Philippine capability/catalog Verified Working Baseline. Reading repository legal/regulatory claims is not live revalidation of laws, source freshness, rule inputs, permit applicability or deployed compliance. Each production catalog item still requires source/requirement record; missing threshold facts must yield Insufficient Data."
   ]
 }
