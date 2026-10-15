@@ -145,3 +145,25 @@ Software implementation of a future FPJIS checker/Project Blueprint Board remain
 **Next action:** Apply this contract to the next submitted coding package and record actual compiler, builder, auditor, revisions and verdict.
 
 **Guidance commits:** `dbc061b91746982a543c118f8ba9d4a15a5a3af2`, `62481f6d8826806b131e3917b008e1fe821d9c6c`, `83906ebe5edf1ff22021e903cf3b6530f94e54f3`.
+
+## 2026-10-15 — FPJIS-LINKED-REQUIREMENT-VIEWS-004
+
+**Decision:** ADOPT requirements-view separation, CORRECT PRD-vs-FRD and SRS-vs-design simplifications, and INTEGRATE into existing FPJIS records, evidence manifest and acceptance governance. No new intelligence system or parallel source of truth.
+
+**Origin:** User-supplied PM Learn transcript and proposed FPM-REQ-001 fire-pump field-evidence example.
+
+**New:** [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]]; [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Pilot]].
+
+**Updated:** Existing 03 Requirements Traceability, 10 Evidence Manifest, Requirement Blueprint, Core Master Index, FPJIS README, FEIS Maintenance Master Index, FDG CORE Master Index, FDG Ecosystem, FPJIS Core Backlog and this Update Log. Existing standards remain in force; prior content is preserved.
+
+**Requirements effect:** Distinguishes business WHY, product/functional WHAT, system/software required behavior and architecture HOW; adds explicit trace to test execution, evidence, approval, version and operational outcomes. Proposed illustrative fire-pump AC-001–008 cover required fields, offline durability, conflicting edits, identity, denied approval, replay, missing attachments and permission revocation.
+
+**Readiness impact:** historical generic 89.5% blueprint readiness unchanged; no implementation, validation, operational or economic improvements claimed.
+
+**Validation:** New standards and wikilinks committed; cross-system links use existing repository paths. This is a documentation update and not executed application testing. Remaining validation involves approved domain input, pilot baseline, tested work-package revision, evidence and human sign-off.
+
+**Open:** Engineering threshold/standards selection, technical authority, permission/privacy/offline controls, authorized pilot, executed test evidence, optional manifest schema migration and future checker implementation.
+
+**Next:** Select a real fire-pump work package, approve the bounded acceptance criteria and engineering rules, complete a working vertical slice under existing build authorization, independently verify and record learning.
+
+**No code, software tests or deployment were performed as part of this documentation package.**
