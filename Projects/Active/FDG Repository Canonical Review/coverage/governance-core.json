@@ -937,6 +937,55 @@
       "expectedSha": "8d08ee37f135193438566af3d06ce5445b1d6cf7",
       "lines": 423,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_REASONING_AND_ANALYSIS_STANDARD.md",
+      "sha": "4f8cad1f0368b5375e0cd93767bcab4558214e60",
+      "expectedSha": "4f8cad1f0368b5375e0cd93767bcab4558214e60",
+      "lines": 520,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_REVIEW_AND_DESIGN_ASSURANCE_STANDARD.md",
+      "sha": "ea9b4f3a6fde860344370896c5e6cf9feddd1bc6",
+      "expectedSha": "ea9b4f3a6fde860344370896c5e6cf9feddd1bc6",
+      "lines": 443,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_ENGINEERING_RISK_MANAGEMENT_STANDARD.md",
+      "sha": "b684a2c56b1d65f3948760d285de530841d0859b",
+      "expectedSha": "b684a2c56b1d65f3948760d285de530841d0859b",
+      "lines": 467,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_IDENTITY_STANDARD.md",
+      "sha": "cc34ddfb7623fde985db68ba3cfdb4f610d83b7b",
+      "expectedSha": "cc34ddfb7623fde985db68ba3cfdb4f610d83b7b",
+      "lines": 322,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_INFORMATION_ARCHITECTURE_AND_TAXONOMY_STANDARD.md",
+      "sha": "c5c6f98c5633c0bcb6af3d2e32992c740397fbee",
+      "expectedSha": "c5c6f98c5633c0bcb6af3d2e32992c740397fbee",
+      "lines": 530,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30.md",
+      "sha": "84dd75459ffbd3b7e07d0c914b0190f35f19aeea",
+      "expectedSha": "84dd75459ffbd3b7e07d0c914b0190f35f19aeea",
+      "lines": 67,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_KNOWLEDGE_CAPTURE_AND_LESSONS_LEARNED_STANDARD.md",
+      "sha": "d26408c0bc70a82607527c5f909b9d74c65d56ed",
+      "expectedSha": "d26408c0bc70a82607527c5f909b9d74c65d56ed",
+      "lines": 400,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
