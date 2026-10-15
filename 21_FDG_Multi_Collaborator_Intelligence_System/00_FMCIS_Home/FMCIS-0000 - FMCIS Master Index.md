@@ -92,6 +92,7 @@ FMCIS owns the collaboration intelligence and independent review loop; the gener
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004 Debate Protocol]] — interim cross-provider finding/disposition controls; broader design still planned.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005 Loop Termination]] — interim review-budget and completion controls; broader design still planned.
 - [[tools/claudex-loop/README|Claudex Loop Bootstrap]] — pinned executable adapter in the repository tools layer.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claudex_Loop_Adapter_Assessment_2026-10-15|Claudex Loop Adapter Assessment]] — evidence-backed feature extraction, adoption decisions and readiness limits.
 
 These links do not change the sequential readiness state of FMCIS-001 through FMCIS-008.
 
