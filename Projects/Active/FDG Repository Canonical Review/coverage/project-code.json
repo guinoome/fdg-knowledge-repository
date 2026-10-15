@@ -2365,6 +2365,33 @@
         "@/services/recommendations",
         "@/services/recommendations"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/repository.ts",
+      "sha": "de75ab4ee3dda85e52aaa028ac72500c9f42dcb2",
+      "expectedSha": "de75ab4ee3dda85e52aaa028ac72500c9f42dcb2",
+      "lines": 174,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "@prisma/client",
+        "@/lib/db",
+        "@/lib/logger",
+        "@/lib/invitation/completeness"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/schema.test.ts",
+      "sha": "a9728a502625255fd9baac3cb6a1e17522d7ce30",
+      "expectedSha": "a9728a502625255fd9baac3cb6a1e17522d7ce30",
+      "lines": 311,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./schema"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -2388,6 +2415,6 @@
     "Builder source tracing observations: authorize() checks ownership but save actions do not enforce draft/completed state or optimistic version; autosave run returns while inFlight, does not reschedule if debounce expires during a long request, and unmount directly calls saveRef without sequencing. Potential unsaved/stale-write race requires controlled tests. ContentStep defines PersonList inside the parent render; React component identity/focus stability should be examined. These are static observations only."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/repository.ts; 148/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/schema.ts; 150/422 complete"
   }
 }
