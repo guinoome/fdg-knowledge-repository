@@ -1084,6 +1084,55 @@
       "expectedSha": "cc1fd512ec7de5d7af60d0a98865de1d69466945",
       "lines": 477,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_WORK_PACKAGE_MANAGEMENT_STANDARD.md",
+      "sha": "a57ddd2b5e402a94d8540be86df7439ef0093666",
+      "expectedSha": "a57ddd2b5e402a94d8540be86df7439ef0093666",
+      "lines": 450,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/USER_CONTEXT_STANDARD.md",
+      "sha": "805a6f39add7cca1a40ae3371cea5c055cdf0041",
+      "expectedSha": "805a6f39add7cca1a40ae3371cea5c055cdf0041",
+      "lines": 340,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/09_FDG_Ecosystem_Integration_Hub_Master_Index.md",
+      "sha": "0d64b33e41cc72c8d267d8b925f9dd872aa0acc6",
+      "expectedSha": "0d64b33e41cc72c8d267d8b925f9dd872aa0acc6",
+      "lines": 33,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-001_PLATFORM_HUB_ARCHITECTURE_STANDARD.md",
+      "sha": "a594cb7e93fa1c75b0ff3ea165d801b68317451e",
+      "expectedSha": "a594cb7e93fa1c75b0ff3ea165d801b68317451e",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-002_IDENTITY_AND_ACCESS_MANAGEMENT_STANDARD.md",
+      "sha": "e9cb35d16d44a1babb508073e83b1f9d76a2afdf",
+      "expectedSha": "e9cb35d16d44a1babb508073e83b1f9d76a2afdf",
+      "lines": 57,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-003_APPLICATION_ORCHESTRATION_LAYER_STANDARD.md",
+      "sha": "55c1f85712b15a064ef29f3be88d10c5d286840d",
+      "expectedSha": "55c1f85712b15a064ef29f3be88d10c5d286840d",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "09_FDG_Ecosystem_Integration_Hub/FDG-PH-STD-004_DATA_EXCHANGE_ARCHITECTURE_STANDARD.md",
+      "sha": "691e39eade276d0e568a98890f8f31f623f2d510",
+      "expectedSha": "691e39eade276d0e568a98890f8f31f623f2d510",
+      "lines": 50,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
