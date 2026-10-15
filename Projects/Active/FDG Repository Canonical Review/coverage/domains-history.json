@@ -1033,6 +1033,76 @@
       "expectedSha": "20b37e7ce1a451f72c7541d12160880a9e786d6a",
       "lines": 56,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Payment_Intelligence/Payment_Data_Model.md",
+      "sha": "b721f300fab4c3ef12f694779a630b7440edeaeb",
+      "expectedSha": "b721f300fab4c3ef12f694779a630b7440edeaeb",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Payment_Intelligence/Payment_Intelligence.md",
+      "sha": "0e06e86a31c5996acef25a49be8c1a59070b3812",
+      "expectedSha": "0e06e86a31c5996acef25a49be8c1a59070b3812",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Payment_Intelligence/Payment_Lifecycle.md",
+      "sha": "23c01ebf2def7666e793d287a6a9dd31d1f0bc4b",
+      "expectedSha": "23c01ebf2def7666e793d287a6a9dd31d1f0bc4b",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Payment_Intelligence/Payment_Operations.md",
+      "sha": "f43d5d69ad891cb278ec6d96f06bfa5e0d95a25e",
+      "expectedSha": "f43d5d69ad891cb278ec6d96f06bfa5e0d95a25e",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Payment_Intelligence/Payment_Provider_Abstraction.md",
+      "sha": "65a5dfb6fadd059beac488988a7e71edc66cd835",
+      "expectedSha": "65a5dfb6fadd059beac488988a7e71edc66cd835",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/03_Payment_Intelligence/Payment_Validation_Rules.md",
+      "sha": "830d2c0e850c73ebcf2c21c75e6f5a2d15e4a7af",
+      "expectedSha": "830d2c0e850c73ebcf2c21c75e6f5a2d15e4a7af",
+      "lines": 22,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/04_Business_Knowledge_Management/04_Business_Knowledge_Management_Master_Index.md",
+      "sha": "810a5d7b1a6d0a37069366813d43dd4289cd54a8",
+      "expectedSha": "810a5d7b1a6d0a37069366813d43dd4289cd54a8",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/04_Pricing_Intelligence/Pricing_Intelligence.md",
+      "sha": "841e7092536f819e1246c173d3fa0c43bdaeec47",
+      "expectedSha": "841e7092536f819e1246c173d3fa0c43bdaeec47",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/04_Pricing_Intelligence/Pricing_Rules.md",
+      "sha": "d83c951d3e2fbdfb311099a0e2d8da842af05146",
+      "expectedSha": "d83c951d3e2fbdfb311099a0e2d8da842af05146",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/05_Business_Knowledge_Architecture/05_Business_Knowledge_Architecture_Master_Index.md",
+      "sha": "048e878dc7a95138fd3dc2840701817981f38c74",
+      "expectedSha": "048e878dc7a95138fd3dc2840701817981f38c74",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
