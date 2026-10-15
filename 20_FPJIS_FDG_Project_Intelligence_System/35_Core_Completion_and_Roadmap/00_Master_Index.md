@@ -99,3 +99,10 @@ Every project should classify capability as L0 Architecture Only, L1 First-Payou
 ## Exist First, Enhance Later — 2026-10-12
 
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/16_Exist_First_Enhance_by_Traceable_Patches_Standard|Exist First, Enhance by Traceable Patches Standard]] requires the smallest useful capability to become a working named baseline first. Later improvements are individually numbered, tested and logged so agents can rework a specific patch without reopening the whole project.
+
+## Linked Requirements Views and Fire Pump Pilot — 2026-10-15
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] — requirements-views terminology, one canonical record, agent acceptance, scope/authority, evidence and change control.
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Pilot]] — proposed fire pump evidence completeness example with testable AC IDs, offline/conflict/replay/authorization negatives and explicit unverified status.
+
+These extend existing standards 03 and 10, rather than replacing them. No readiness percentage or software completion claim changes.
