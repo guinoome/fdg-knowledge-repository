@@ -1301,6 +1301,41 @@
       "expectedSha": "71d2998ffbb06039f901c0b3a8dab71f9202b611",
       "lines": 64,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/00_README.md",
+      "sha": "96376a07f1449019b4c5a737e4f5738d030786a2",
+      "expectedSha": "96376a07f1449019b4c5a737e4f5738d030786a2",
+      "lines": 45,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0000 - CORE Engineering Data and Document Engine.md",
+      "sha": "c1c1398d878af2da810eca9091e3498991b46a85",
+      "expectedSha": "c1c1398d878af2da810eca9091e3498991b46a85",
+      "lines": 79,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0001 - Architectural Principles and Boundaries.md",
+      "sha": "0b8e82d129beb5d68d579e24ca96de8bf4c54128",
+      "expectedSha": "0b8e82d129beb5d68d579e24ca96de8bf4c54128",
+      "lines": 52,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0002 - Canonical Engineering Data Model.md",
+      "sha": "c7f86fdc2ec974cf5e60910eba269596ccea195d",
+      "expectedSha": "c7f86fdc2ec974cf5e60910eba269596ccea195d",
+      "lines": 101,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0003 - Evidence Provenance and Engineering State.md",
+      "sha": "6a55dc10702612384acb5634296396a742952b21",
+      "expectedSha": "6a55dc10702612384acb5634296396a742952b21",
+      "lines": 74,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
