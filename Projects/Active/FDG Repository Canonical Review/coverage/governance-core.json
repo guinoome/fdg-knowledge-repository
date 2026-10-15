@@ -384,6 +384,76 @@
       "expectedSha": "5a791f8417f6caf8dd47e1a5a989ebb13549d32f",
       "lines": 47,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/COLLABORATION_STANDARD.md",
+      "sha": "ba9045469b04ed8e7213f43f64ae61fd695ce286",
+      "expectedSha": "ba9045469b04ed8e7213f43f64ae61fd695ce286",
+      "lines": 295,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/CONTINUOUS_IMPROVEMENT_STANDARD.md",
+      "sha": "ac2e6021d7b0af954a1d10f9198d88be45f2b14a",
+      "expectedSha": "ac2e6021d7b0af954a1d10f9198d88be45f2b14a",
+      "lines": 379,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/DECISION_AUTHORITY_STANDARD.md",
+      "sha": "30794d3607b6d50e81bdf13dce39f71b2c3fb3ff",
+      "expectedSha": "30794d3607b6d50e81bdf13dce39f71b2c3fb3ff",
+      "lines": 292,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/DELEGATION_STANDARD.md",
+      "sha": "1e4e1ec480ef25c2f6c9ae6973ba7983e2a680ac",
+      "expectedSha": "1e4e1ec480ef25c2f6c9ae6973ba7983e2a680ac",
+      "lines": 297,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/ENGINEERING_CAPABILITY_STANDARD.md",
+      "sha": "19de3dda7d5a54941e4b8a6c9313a014a7e75302",
+      "expectedSha": "19de3dda7d5a54941e4b8a6c9313a014a7e75302",
+      "lines": 248,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/ENGINEERING_ROLE_STANDARD.md",
+      "sha": "be67e289689f4f4216ad48a08ed97c933a95f85a",
+      "expectedSha": "be67e289689f4f4216ad48a08ed97c933a95f85a",
+      "lines": 275,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/INTERFACE_STANDARD.md",
+      "sha": "e68dc5255b7ad0bd1e288dec53e35d75d2adc2cd",
+      "expectedSha": "e68dc5255b7ad0bd1e288dec53e35d75d2adc2cd",
+      "lines": 294,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-ADR-2026-09-27_ENTERPRISE_FUNCTION_EVOLUTION.md",
+      "sha": "c4a036a29450ca2b042b110b6c32f3560f693f4e",
+      "expectedSha": "c4a036a29450ca2b042b110b6c32f3560f693f4e",
+      "lines": 76,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-STD-124_ENTERPRISE_OPERATING_MODEL.md",
+      "sha": "98f8903c71a0b4535e3d04ddccc72358ab41ecb5",
+      "expectedSha": "98f8903c71a0b4535e3d04ddccc72358ab41ecb5",
+      "lines": 170,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/NEX-STD-125_ENTERPRISE_FUNCTION_AND_DEPARTMENT_STANDARD.md",
+      "sha": "9c4453e0dc001595fb7ba5750de270c0e7cd03a7",
+      "expectedSha": "9c4453e0dc001595fb7ba5750de270c0e7cd03a7",
+      "lines": 173,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
