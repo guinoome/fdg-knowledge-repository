@@ -1662,6 +1662,84 @@
         "@/services/template-assets/types",
         "../actions"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/catalogue-row.tsx",
+      "sha": "15f93f92067c6b70f41c3d09acad3dd00bf2ebd9",
+      "expectedSha": "15f93f92067c6b70f41c3d09acad3dd00bf2ebd9",
+      "lines": 153,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "next/image",
+        "react-dom",
+        "lucide-react",
+        "@/components/ui/button",
+        "@/components/form/submit-button",
+        "@/lib/forms/action-state",
+        "../catalogue-repository",
+        "../actions"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/delete-asset-button.tsx",
+      "sha": "965749e8009f11dee47c351fa62142cec9971277",
+      "expectedSha": "965749e8009f11dee47c351fa62142cec9971277",
+      "lines": 97,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "lucide-react",
+        "@/components/ui/button",
+        "@/components/form/submit-button",
+        "@/lib/forms/action-state",
+        "../actions"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/new-template-form.tsx",
+      "sha": "7446dd88be22f1eee5b29dc2d8cdf26b86edcb26",
+      "expectedSha": "7446dd88be22f1eee5b29dc2d8cdf26b86edcb26",
+      "lines": 184,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "lucide-react",
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/textarea",
+        "@/components/form/form-status",
+        "@/components/form/submit-button",
+        "@/lib/forms/action-state",
+        "../actions"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/upload-form.tsx",
+      "sha": "48404bf67a4e80998139c2831a32bc76b836f4c4",
+      "expectedSha": "48404bf67a4e80998139c2831a32bc76b836f4c4",
+      "lines": 111,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "lucide-react",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/form/form-status",
+        "@/components/form/submit-button",
+        "@/lib/forms/action-state",
+        "@/lib/utils",
+        "../actions",
+        "@/services/template-assets/constraints"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1672,9 +1750,10 @@
     "Static reading observations are not confirmed runtime findings or test results.",
     "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction.",
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness.",
-    "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made."
+    "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made.",
+    "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/components/catalogue-row.tsx; 105/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/auth/actions.ts; 109/422 complete"
   }
 }
