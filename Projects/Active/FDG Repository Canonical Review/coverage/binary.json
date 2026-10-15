@@ -80,11 +80,195 @@
       "notes": [
         "Mobile ML-DEP login screenshot at mlprinting.vercel.app: email/password inputs, forgotten-password link, sign-in/create-account controls. Screenshot evidence only, no live runtime verification."
       ]
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/sources/1000008374.jpg",
+      "sha": "2c8486865a0954f9fe0e54eda5f8342b4d54f8e4",
+      "expectedSha": "2c8486865a0954f9fe0e54eda5f8342b4d54f8e4",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Financial-independence advertisement screenshot: Tagalog pitch, countdown/order CTA and books. Marketing claims unverified.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008259.jpg",
+      "sha": "11e362f540c08b9ccccfd9820300d40898638072",
+      "expectedSha": "11e362f540c08b9ccccfd9820300d40898638072",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Anti engineering website design reference: industrial worker hero, services, case studies/process/testimonials. Small raster body text low resolution.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008260.jpg",
+      "sha": "1248143879a8e0c0c5eaf43e2945a217919f67d8",
+      "expectedSha": "1248143879a8e0c0c5eaf43e2945a217919f67d8",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fashion onboarding reference: three-phone cream/purple discovery, outfits and Get Started/Skip screens.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008261.jpg",
+      "sha": "c17ec81e4dc2c6ad4d381a7cc563839b9a2a8956",
+      "expectedSha": "c17ec81e4dc2c6ad4d381a7cc563839b9a2a8956",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fashion home, Oversized Blazer product and cart reference; product variants, quantities and checkout.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008262.jpg",
+      "sha": "0fa9ce1b02a192ee18b23d95fea1b6455978d8f4",
+      "expectedSha": "0fa9ce1b02a192ee18b23d95fea1b6455978d8f4",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fashion wishlist, account and browsing reference; orders/wishlist/vouchers and categories.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008318.png",
+      "sha": "cae92574faa1797fe1943d89354b1fef936c7d52",
+      "expectedSha": "cae92574faa1797fe1943d89354b1fef936c7d52",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fuel Operations Smarter concept: station scene, pumps/tanks/store/deliveries, sales/fuel mix, tank levels and shift closeout across devices. Figures illustrative.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008319.png",
+      "sha": "a10f36e7caa0546892ce0799830c7cea5bb1a125",
+      "expectedSha": "a10f36e7caa0546892ce0799830c7cea5bb1a125",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Tire shop/auto service concept: bay scene, work orders, technician tasks, booking, inventory, alignment and payments. Figures illustrative.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008320.png",
+      "sha": "87fdc3367a0c567b49780972866d1eb43af44639",
+      "expectedSha": "87fdc3367a0c567b49780972866d1eb43af44639",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Restaurant Operations Simplified concept: floor plan, reservations, live orders, kitchen KDS, menu engineering and delivery workflows.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/01_User_Sample_Images/1000008321.png",
+      "sha": "9a37facfdd9428dee00251e7a478b8a7162596e5",
+      "expectedSha": "9a37facfdd9428dee00251e7a478b8a7162596e5",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Sari-Sari Store Operations concept: POS, inventory, Suki/customer balances, supplier deliveries and illustrative operational KPIs.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/design/concepts/retail-sell-mobile-v1.png",
+      "sha": "0c22e09a56f3e4942c14db9921d228bfe68b3695",
+      "expectedSha": "0c22e09a56f3e4942c14db9921d228bfe68b3695",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Retail mobile Sell concept: Suki Corner Cebu demo shift, search/scan, LuckyMe15x2 plus Coke82 equals112; Cash/GCash/Maya/Card and Complete sale.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/docs/evidence/unified-hub-mobile.png",
+      "sha": "a21f048ff75d1abcfd7f97c212e36a2d39a15824",
+      "expectedSha": "a21f048ff75d1abcfd7f97c212e36a2d39a15824",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "My Platforms mobile screenshot: local prototype account/no production authentication or billing, active Fuel Operations Habay; visible horizontal clipping.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/design/reference/fpis-fuel-operations-sample.png",
+      "sha": "9d0fb41c62c184e6335712f4c151717d494c151d",
+      "expectedSha": "9d0fb41c62c184e6335712f4c151717d494c151d",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fuel multi-device reference: station scene, sales/fuel mix/tank levels, transactions and closeout. Similar sample composition but distinct blob, inspected separately.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/docs/evidence/auto-closeout-mobile.png",
+      "sha": "0e4332c8df2760b7c8e7548a89e944cb41af2eb1",
+      "expectedSha": "0e4332c8df2760b7c8e7548a89e944cb41af2eb1",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Daily closeout mobile screenshot: manager approval required; Workbook verified April2025 row35 opening source; locked regular opening totalizer68202.44 and final reading input.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/docs/evidence/product-sales-desktop.png",
+      "sha": "afa4eb598c68de1efbebf6f113093ed48e31787c",
+      "expectedSha": "afa4eb598c68de1efbebf6f113093ed48e31787c",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fuel Reports desktop screenshot: daily product movement timeline,4 trusted rows,0 demo closeouts,3 excluded issues; no local closeout yet; explicit local demo/not production disclaimer.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/FDG Business Platform/fuel-station/docs/evidence/product-sales-mobile.png",
+      "sha": "51bbabe00202e3b8abf6a1fe1da9f407f2c860ed",
+      "expectedSha": "51bbabe00202e3b8abf6a1fe1da9f407f2c860ed",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "Fuel Reports mobile screenshot: export CSV, hourly-to-annual selector, daily regular/premium/diesel bars and four workbook-verified dates.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/2209de01-9ffe-48b6-ba45-1d31021ce49f/1-Photo-1.jpg",
+      "sha": "da5b4867576c0d72ae53ca8d43643614f3c1a748",
+      "expectedSha": "da5b4867576c0d72ae53ca8d43643614f3c1a748",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "ML-DEP mobile wedding invitation screenshot: Maria and Jose, Thursday January7 at3PM, monogramMJ, backlit couple hero, pause control.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/.codex-remote-attachments/01a04ba5-9d72-7310-8fd5-4a9ad28f5d75/2209de01-9ffe-48b6-ba45-1d31021ce49f/2-Photo-2.jpg",
+      "sha": "cc1979667bde1278b1491ae45c103afef4371920",
+      "expectedSha": "cc1979667bde1278b1491ae45c103afef4371920",
+      "status": "VISUAL_INSPECTION",
+      "notes": [
+        "ML-DEP mobile neon debut invitation screenshot: Isabella Cruz, One night eighteen years in the making, Enter the Night CTA; subject partly cropped right.",
+        "Inspected in preceding uninterrupted review history; source matched pinned GitHub blob. Visual inspection is not a complete transcription of small raster text or runtime verification."
+      ]
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/02_Generated_Images/a_clean_high_fidelity_promotional_ui_ux_concept_i.png",
+      "error": "fetch_file empty base64; github_fetch nonUTF8 rejection; fetch_blob UnicodeDecodeError"
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/02_Generated_Images/a_wide_high_resolution_modern_ui_ux_concept_pres.png",
+      "error": "fetch_file returned empty base64"
+    },
+    {
+      "path": "17_FDG_Platform_Intelligence_System/09_Platform_Knowledge_History/Conversation_Compilations/FPIS_FEIS_FBPOIS_Full_Conversation_Compilation_2026-09-08/07_Assets/02_Generated_Images/before_and_after_sari_sari_store_growth.png",
+      "error": "fetch_file returned empty base64"
+    }
+  ],
   "notes": [
     "Binary inspections are separate from text full-read counts. Audio/video/fonts and uninspected archives remain explicit pending gaps.",
-    "No local project files, downloads or archive extraction to disk."
+    "No local project files, downloads or archive extraction to disk.",
+    "Confirmed connector gap: fetch_file base64 returns empty content for three PNGs greater than1MiB; fetch and fetch_blob reject non-UTF8 PNG bytes. Larger binary paths remain uninspected; no direct-network or local-download workaround."
   ]
 }
