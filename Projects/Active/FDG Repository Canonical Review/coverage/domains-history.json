@@ -2149,6 +2149,55 @@
       "expectedSha": "2394b39ab76de36eade6266562d983ae6adfcf3f",
       "lines": 108,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1505 - Cross-System Integration Contract.md",
+      "sha": "57bbdca83bc7f0dcbd0b118393ee1368690da1b7",
+      "expectedSha": "57bbdca83bc7f0dcbd0b118393ee1368690da1b7",
+      "lines": 199,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1506 - Compliance Calendar Alerts and Regulatory Change Standard.md",
+      "sha": "8ff34d9cbcacfe20dc19ae2d2e0c6155ec34ad33",
+      "expectedSha": "8ff34d9cbcacfe20dc19ae2d2e0c6155ec34ad33",
+      "lines": 160,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1507 - Acceptance Tests and Minimum Implementation Dataset.md",
+      "sha": "723c104b6f4798879c22be0a48cc22ab3eafce04",
+      "expectedSha": "723c104b6f4798879c22be0a48cc22ab3eafce04",
+      "lines": 214,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1508 - Philippine Regulatory Source Register.md",
+      "sha": "03a7d5e81e90aaf53b7af2b2f0d256581a23c3a7",
+      "expectedSha": "03a7d5e81e90aaf53b7af2b2f0d256581a23c3a7",
+      "lines": 213,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1509 - Security Privacy and Trust Profile.md",
+      "sha": "b8a27b480bf623d4d32027acf8ffb14e0345f296",
+      "expectedSha": "b8a27b480bf623d4d32027acf8ffb14e0345f296",
+      "lines": 178,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/15_Regulatory_Compliance_Intelligence_Module/FLIS-RCIM-1510 - Implementation Roadmap and Agent Handover.md",
+      "sha": "eeb8a99b36fa5378a7a48f7b6b4948398eddef0f",
+      "expectedSha": "eeb8a99b36fa5378a7a48f7b6b4948398eddef0f",
+      "lines": 211,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/99_ARCHIVE/FLIS-9900 - Archive Governance.md",
+      "sha": "d18f15a9513c9f2458c4489104abaf464b61117d",
+      "expectedSha": "d18f15a9513c9f2458c4489104abaf464b61117d",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
