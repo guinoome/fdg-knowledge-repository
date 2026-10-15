@@ -1925,6 +1925,76 @@
       "expectedSha": "e1e87200dad09b65d5e768c10e8da9959b6ad84f",
       "lines": 16,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/Copyright/README.md",
+      "sha": "4f5ddfd80bd4b74abeef8904e4c2b20752938de2",
+      "expectedSha": "4f5ddfd80bd4b74abeef8904e4c2b20752938de2",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/FDG_IP_Register/FLIS-TPL-0401 - IP Asset Record Template.md",
+      "sha": "8f553aaf0bad7d2af3fb433abde5b09d23f38ed6",
+      "expectedSha": "8f553aaf0bad7d2af3fb433abde5b09d23f38ed6",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/FDG_IP_Register/README.md",
+      "sha": "47020a077a88f1d02b80b8ca234f613ab902053c",
+      "expectedSha": "47020a077a88f1d02b80b8ca234f613ab902053c",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/FLIS-0400 - Intellectual Property.md",
+      "sha": "0a84bb887274cdc81b2a03708d45f82b7e7a9669",
+      "expectedSha": "0a84bb887274cdc81b2a03708d45f82b7e7a9669",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/Licensing/README.md",
+      "sha": "a949289e9becd32ca94a69aafc2e3fd5cab7b094",
+      "expectedSha": "a949289e9becd32ca94a69aafc2e3fd5cab7b094",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/Proprietary_Methodologies/README.md",
+      "sha": "e8f245a900a7a8fd78a2eec5c2850698ab3b00c2",
+      "expectedSha": "e8f245a900a7a8fd78a2eec5c2850698ab3b00c2",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/Software_and_Source_Code/README.md",
+      "sha": "795b54e6dc33b02a555d7398fd15b8dec1c4c8be",
+      "expectedSha": "795b54e6dc33b02a555d7398fd15b8dec1c4c8be",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/04_Intellectual_Property/Trademarks/README.md",
+      "sha": "4b7a25c1d8e355c54d7f8e07b9ecdf91331adaeb",
+      "expectedSha": "4b7a25c1d8e355c54d7f8e07b9ecdf91331adaeb",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/05_Data_Privacy_and_Legal_Data_Governance/FLIS-0500 - Data Privacy and Legal Data Governance.md",
+      "sha": "fe594c2366c3eb9b8e5c35e39f45b87bbd0a4a41",
+      "expectedSha": "fe594c2366c3eb9b8e5c35e39f45b87bbd0a4a41",
+      "lines": 36,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/05_Data_Privacy_and_Legal_Data_Governance/FLIS-TPL-0501 - Privacy Requirement Record.md",
+      "sha": "87c26c83ca904f42d424f87905437b1712e9d5e8",
+      "expectedSha": "87c26c83ca904f42d424f87905437b1712e9d5e8",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
