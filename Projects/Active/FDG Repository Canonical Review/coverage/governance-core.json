@@ -321,6 +321,69 @@
       "expectedSha": "356dac4ed16e0cb5cda29a38b8d45ed936b55370",
       "lines": 3,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/LINKING_STANDARD.md",
+      "sha": "39e32ea6cd94256d7f0c0bc4583e444d638f8201",
+      "expectedSha": "39e32ea6cd94256d7f0c0bc4583e444d638f8201",
+      "lines": 280,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/MAP_OF_CONTENT_STANDARD.md",
+      "sha": "32c94a8b1011d01f84f526a59beddc099e9fa510",
+      "expectedSha": "32c94a8b1011d01f84f526a59beddc099e9fa510",
+      "lines": 266,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/METADATA_STANDARD.md",
+      "sha": "450860a00d4d227f85b9e64be588a10adbd03375",
+      "expectedSha": "450860a00d4d227f85b9e64be588a10adbd03375",
+      "lines": 271,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/NAMING_STANDARD.md",
+      "sha": "09688e63d3dfe199439f2d1adf6a937287a73321",
+      "expectedSha": "09688e63d3dfe199439f2d1adf6a937287a73321",
+      "lines": 317,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/REPOSITORY_ORGANIZATION_STANDARD.md",
+      "sha": "9124148e275cc090f91b329194a73f250290796b",
+      "expectedSha": "9124148e275cc090f91b329194a73f250290796b",
+      "lines": 280,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/REPOSITORY_STRUCTURE_STANDARD.md",
+      "sha": "734e55060ec533a8cebbdc9ca2feedc8e86c5040",
+      "expectedSha": "734e55060ec533a8cebbdc9ca2feedc8e86c5040",
+      "lines": 230,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "05_Knowledge_Architecture/TAGGING_STANDARD.md",
+      "sha": "ae3240da93e43f2398b2e2287b771bdb15cfa098",
+      "expectedSha": "ae3240da93e43f2398b2e2287b771bdb15cfa098",
+      "lines": 223,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/00_ORGANIZATIONAL_ARCHITECTURE_MODEL.md",
+      "sha": "ea8868ee98bfa9ca117719a556ab7ab84e705f70",
+      "expectedSha": "ea8868ee98bfa9ca117719a556ab7ab84e705f70",
+      "lines": 282,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "06_Organizational_Architecture/06_Organizational_Architecture_Master_Index.md",
+      "sha": "5a791f8417f6caf8dd47e1a5a989ebb13549d32f",
+      "expectedSha": "5a791f8417f6caf8dd47e1a5a989ebb13549d32f",
+      "lines": 47,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
