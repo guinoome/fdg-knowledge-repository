@@ -627,6 +627,118 @@
       "expectedSha": "ed671fad25e2e23455b728c6bb2f4780f67e4d21",
       "lines": 84,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS_PayMongo_Phase_1_Case.md",
+      "sha": "973b6643d11bb48f3bf1f9b8129a2b379b77302e",
+      "expectedSha": "973b6643d11bb48f3bf1f9b8129a2b379b77302e",
+      "lines": 28,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/14_Templates_&_Tools_Master_Index.md",
+      "sha": "87a63e4360671a65c5df6b21b19ee32b64688427",
+      "expectedSha": "87a63e4360671a65c5df6b21b19ee32b64688427",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Transaction_Record_Template.md",
+      "sha": "430a22259817a516489db398dae1445a897e7500",
+      "expectedSha": "430a22259817a516489db398dae1445a897e7500",
+      "lines": 45,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/14_Templates_&_Tools/FBIS_Voucher_Record_Template.md",
+      "sha": "e9814649cbaac38983ed214250fd99bc1f9f753d",
+      "expectedSha": "e9814649cbaac38983ed214250fd99bc1f9f753d",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/15_Business_Library_Master_Index.md",
+      "sha": "ebe167cd329a25fc7668f5de0f8c57d82ebfdcf8",
+      "expectedSha": "ebe167cd329a25fc7668f5de0f8c57d82ebfdcf8",
+      "lines": 37,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Architecture_Quick_Reference.md",
+      "sha": "6f2a65b5b1830fed7953f8d84c785664a374fece",
+      "expectedSha": "6f2a65b5b1830fed7953f8d84c785664a374fece",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/FBIS_Terminology.md",
+      "sha": "52f79ca053adaa7ddd7192d608e27a7b7c73066d",
+      "expectedSha": "52f79ca053adaa7ddd7192d608e27a7b7c73066d",
+      "lines": 40,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/00_README.md",
+      "sha": "0981f69f3ec839731e8f8fdd94fe4168ec94f47c",
+      "expectedSha": "0981f69f3ec839731e8f8fdd94fe4168ec94f47c",
+      "lines": 69,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/01_FDG_Financial_Independence_Opportunity_Intelligence_MOC.md",
+      "sha": "991ba192031bcd6b03ba8f4a80dfbeea6dd7caf5",
+      "expectedSha": "991ba192031bcd6b03ba8f4a80dfbeea6dd7caf5",
+      "lines": 80,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/02_Canonical_Principle_Owner_Independent_Value_Creation.md",
+      "sha": "3bf8a6cfd77b45011c3c8aa62428c8f614d2026b",
+      "expectedSha": "3bf8a6cfd77b45011c3c8aa62428c8f614d2026b",
+      "lines": 66,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/03_Reference_Financial_Independence_Before_35.md",
+      "sha": "1e35cf22e42cad9ab7557c4e7ab47efb6af2bbf3",
+      "expectedSha": "1e35cf22e42cad9ab7557c4e7ab47efb6af2bbf3",
+      "lines": 85,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/04_Financial_Independence_Engineering_Capability.md",
+      "sha": "45e2ae6bf72349f1db991ad4963c27fd93d812c6",
+      "expectedSha": "45e2ae6bf72349f1db991ad4963c27fd93d812c6",
+      "lines": 99,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/05_FDG_Opportunity_Intelligence_Model.md",
+      "sha": "2e9388ec8b67b757e3529dd5cb17f28b686a665b",
+      "expectedSha": "2e9388ec8b67b757e3529dd5cb17f28b686a665b",
+      "lines": 106,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/06_Founder_Dependency_and_Owner_Independent_Revenue.md",
+      "sha": "d4674674e5d3971ba213300a32c8696f73b887f2",
+      "expectedSha": "d4674674e5d3971ba213300a32c8696f73b887f2",
+      "lines": 81,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/07_Productive_Assets_IP_and_Organizational_Knowledge.md",
+      "sha": "064371e6004a878f601ca3dd3666511c86b1d34e",
+      "expectedSha": "064371e6004a878f601ca3dd3666511c86b1d34e",
+      "lines": 95,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/08_Recurring_Revenue_and_Platform_Economics.md",
+      "sha": "2fbc6463b875f01d559fe1df0a24a7af763eb059",
+      "expectedSha": "2fbc6463b875f01d559fe1df0a24a7af763eb059",
+      "lines": 83,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
