@@ -496,6 +496,76 @@
       "expectedSha": "55dbe8bec531cf307f12a07014fa6a11e1a7937c",
       "lines": 405,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index.md",
+      "sha": "1884935ca94e5340666223389e5b30a2b8a48602",
+      "expectedSha": "1884935ca94e5340666223389e5b30a2b8a48602",
+      "lines": 199,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/AGENTIC_FRAMEWORK_EVOLUTION_STANDARD.md",
+      "sha": "8d93b22d758db87b44a918a16e3587db32c7c0a8",
+      "expectedSha": "8d93b22d758db87b44a918a16e3587db32c7c0a8",
+      "lines": 480,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/AGENT_CONTEXT_ARCHITECTURE_STANDARD.md",
+      "sha": "48c9e7dbb279ccbb787a015710a22bdf619f235e",
+      "expectedSha": "48c9e7dbb279ccbb787a015710a22bdf619f235e",
+      "lines": 444,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/AGENT_LIFECYCLE_AND_GOVERNANCE_STANDARD.md",
+      "sha": "b01abab35f3e293102921ce60ddfe7aceac28bb1",
+      "expectedSha": "b01abab35f3e293102921ce60ddfe7aceac28bb1",
+      "lines": 459,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/DECISION_INTELLIGENCE_STANDARD.md",
+      "sha": "4121d7f88a61ee167a3143e44e26c9ae7f189d13",
+      "expectedSha": "4121d7f88a61ee167a3143e44e26c9ae7f189d13",
+      "lines": 483,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/KNOWLEDGE_RETRIEVAL_AND_MEMORY_STANDARD.md",
+      "sha": "6670a582daf36a4d9b6f15aca5c563cc6dc63f52",
+      "expectedSha": "6670a582daf36a4d9b6f15aca5c563cc6dc63f52",
+      "lines": 453,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_AGENT_READINESS_ASSESSMENT_STANDARD.md",
+      "sha": "8dbd7932c192e473d0f957d92d384a6bb8099601",
+      "expectedSha": "8dbd7932c192e473d0f957d92d384a6bb8099601",
+      "lines": 407,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CAPABILITY_DEVELOPMENT_LOG.md",
+      "sha": "14ddfae6b1bebbe37f9bd03304a6115f02f3d6d4",
+      "expectedSha": "14ddfae6b1bebbe37f9bd03304a6115f02f3d6d4",
+      "lines": 120,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_CHANGE_MANAGEMENT_AND_EVOLUTION_CONTROL_STANDARD.md",
+      "sha": "5eb8ceb7a5b5d46d8bc07cd8ca910f7ed70e20c7",
+      "expectedSha": "5eb8ceb7a5b5d46d8bc07cd8ca910f7ed70e20c7",
+      "lines": 402,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "07_Nex_Core_Intelligence/NEX_COLLABORATOR_CAPABILITY_REGISTRY_STANDARD.md",
+      "sha": "d2ac3eade894778a9e68d62d009afbb051784784",
+      "expectedSha": "d2ac3eade894778a9e68d62d009afbb051784784",
+      "lines": 130,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -508,6 +578,7 @@
     "Architecture Compiler Protocol is Active Operating Instruction effective 2026-10-06 with sequential 2026-10-11 clarifications. Current Compiler–Builder–Auditor Contract supersedes Astra-specific selection wording, requires actual identities and independent top-tier audit before accepted coding package. CFO/CMO/customer-service profiles are design-only Draft, uncommissioned.",
     "Knowledge Management standards preserve review vs approval separation, require approval before baseline adoption, and emphasize reusable conclusions rather than raw conversation. Several Related Documents labels misassign Document Control to NEX-STD-001 and Decision Evolution to NEX-STD-002; actual governance files are NEX-STD-002 and NEX-STD-003.",
     "Canonical Truth Resolution Standard remains Proposed; enterprise architecture reconciliation remains Proposed; cross-system relationship map has working/pending global status plus specifically labeled approved and later scoped extensions. In root 05, KNOWLEDGE_PRESERVATION_STANDARD.md contains only a breadcrumb; root 04 holds the substantive Approved NEX-STD-023.",
-    "NEX-STD-124 through 128 and Sep 27 evolution ADR are Approved, distinct 16 enterprise functions with single accountable outcome owners. Very Strong expressly concerns organizational knowledge architecture, not staffing, deployed software, legal registration or operating control effectiveness. Enterprise role, record owner, approver, executor and independent auditor remain distinct."
+    "NEX-STD-124 through 128 and Sep 27 evolution ADR are Approved, distinct 16 enterprise functions with single accountable outcome owners. Very Strong expressly concerns organizational knowledge architecture, not staffing, deployed software, legal registration or operating control effectiveness. Enterprise role, record owner, approver, executor and independent auditor remain distinct.",
+    "NEX-STD-052 and 056 use an Advisory-to-Optimization 0-4 agent-level taxonomy differing from foundational NEX-STD-013 Observe-to-Autonomous 0-5. Do not equate numeric levels across documents. Capability registry NEX-PREOS-004 is Proposed; registration is not execution authorization."
   ]
 }
