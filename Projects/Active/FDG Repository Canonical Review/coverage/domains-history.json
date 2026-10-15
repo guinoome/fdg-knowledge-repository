@@ -739,11 +739,89 @@
       "expectedSha": "2fbc6463b875f01d559fe1df0a24a7af763eb059",
       "lines": 83,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/09_Risk_Capital_Allocation_and_Portfolio_Governance.md",
+      "sha": "f560016adb3b9d4a3e92b78125520a5200fab8b7",
+      "expectedSha": "f560016adb3b9d4a3e92b78125520a5200fab8b7",
+      "lines": 96,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/10_Philippines_Localization_and_Guardrails.md",
+      "sha": "5d089a115d71f2776e6719658933543ab00838ef",
+      "expectedSha": "5d089a115d71f2776e6719658933543ab00838ef",
+      "lines": 49,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/11_FDG_Repository_Integration_Map.md",
+      "sha": "e93b466266b3f7fa5cd8d335dac2dfd154ac7f34",
+      "expectedSha": "e93b466266b3f7fa5cd8d335dac2dfd154ac7f34",
+      "lines": 89,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/12_Source_Register.md",
+      "sha": "795aee1dd474b71c29023847359319e34536fd4b",
+      "expectedSha": "795aee1dd474b71c29023847359319e34536fd4b",
+      "lines": 58,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/13_Conversation_Compilation.md",
+      "sha": "485e3775466e60047906c48561d9cc9224dccbde",
+      "expectedSha": "485e3775466e60047906c48561d9cc9224dccbde",
+      "lines": 151,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/14_Implementation_Backlog.md",
+      "sha": "40d91f59743169dc27e94dffa595d5444327d26d",
+      "expectedSha": "40d91f59743169dc27e94dffa595d5444327d26d",
+      "lines": 68,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/15_Decision_Rules_and_Stage_Gates.md",
+      "sha": "0ff0576dfecb8596a0f9b11e368e1cb1d5a731f4",
+      "expectedSha": "0ff0576dfecb8596a0f9b11e368e1cb1d5a731f4",
+      "lines": 82,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/16_Institutional_Continuity_Index.md",
+      "sha": "6b7256959077d41d8982590356e50557017724ea",
+      "expectedSha": "6b7256959077d41d8982590356e50557017724ea",
+      "lines": 72,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/17_Recurring_Revenue_Quality_Model.md",
+      "sha": "355f035c75cf9856d29aa91b7392387bae3d92ed",
+      "expectedSha": "355f035c75cf9856d29aa91b7392387bae3d92ed",
+      "lines": 57,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/18_Key_Person_Risk_Register.md",
+      "sha": "c92e68af012afd08bceed38ed65a494a48d317fd",
+      "expectedSha": "c92e68af012afd08bceed38ed65a494a48d317fd",
+      "lines": 50,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/15_Business_Library/Research_Packs/FDG_FBIS_Financial_Independence_Opportunity_Intelligence_Research_Pack_2026-09-07/19_Wikilink_Audit.md",
+      "sha": "1d387a5a5d0453b1f48afa3f6739f233930496f9",
+      "expectedSha": "1d387a5a5d0453b1f48afa3f6739f233930496f9",
+      "lines": 57,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
   "notes": [
     "Scope: all tracked text under numbered root directories 11 through 22, including OLD and imported/history material. No local files written.",
-    "Binary files inventoried but delegated to parent; no binary reading claim."
+    "Binary files inventoried but delegated to parent; no binary reading claim.",
+    "Resumed 2026-10-15: complete source text read through connected GitHub fetch_file at pinned checkpoint; proposal/experimental statuses retained as source context, not approval."
   ]
 }
