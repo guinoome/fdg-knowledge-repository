@@ -39,6 +39,8 @@ A few high-traffic destinations, each opened and read directly, not assumed from
 - [[05_Knowledge_Architecture/00_ARCHITECTURE_MODEL|Knowledge Architecture]] — how the repository is structured
 - [[07_Nex_Core_Intelligence/NEX_OPERATING_CONSTITUTION|Nex Core Intelligence]] — Nex's own 76-standard operating intelligence layer
 
+**Cross-provider execution (2026-10-15):** [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]] is owned by FMCIS; Claudex Loop is an optional replaceable implementation, and the Codex/Claude Code bootstrap stays under `tools/claudex-loop/`. Runtime readiness is not asserted by this index.
+
 **Document-control correction (2026-08-29):** the Identity Model was reassigned from duplicate `NEX-STD-006` to the next unused registry value, `NEX-STD-123`. The Knowledge Governance Framework retains identifier `NEX-STD-006`; its document header remains Draft.
 
 ## Where specs become code
