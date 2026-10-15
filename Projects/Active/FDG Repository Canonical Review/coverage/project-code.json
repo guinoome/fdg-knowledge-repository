@@ -1056,6 +1056,91 @@
         "@/components/ui/label",
         "@/lib/utils"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/form/form-status.tsx",
+      "sha": "1637246921bee694ecc51fc022151e1f36ba8d54",
+      "expectedSha": "1637246921bee694ecc51fc022151e1f36ba8d54",
+      "lines": 47,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "@/lib/forms/action-state"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/form/submit-button.tsx",
+      "sha": "f055c5e9be61d63a67be1c1b3bbd2227f7f70bce",
+      "expectedSha": "f055c5e9be61d63a67be1c1b3bbd2227f7f70bce",
+      "lines": 34,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "lucide-react",
+        "@/components/ui/button"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/media/asset-card.tsx",
+      "sha": "0f4ba9d299d145140bc95daa3e2303ef1012a7b8",
+      "expectedSha": "0f4ba9d299d145140bc95daa3e2303ef1012a7b8",
+      "lines": 71,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/media/asset-detail-sheet.tsx",
+      "sha": "4922d627f15492dfbc1ac1fc765841dda0c63c9c",
+      "expectedSha": "4922d627f15492dfbc1ac1fc765841dda0c63c9c",
+      "lines": 188,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "lucide-react",
+        "@/components/ui/sheet",
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/lib/hooks/use-toast",
+        "@/lib/utils",
+        "./upload-dropzone",
+        "./asset-card"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/media/asset-grid.tsx",
+      "sha": "8cd0398996765e89f6fc63eedc0af44c047133b6",
+      "expectedSha": "8cd0398996765e89f6fc63eedc0af44c047133b6",
+      "lines": 46,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "lucide-react",
+        "@/components/ui/empty-state",
+        "./asset-card"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/media/upload-dropzone.tsx",
+      "sha": "1a367a08f927db73347091a78700276cce3c5689",
+      "expectedSha": "1a367a08f927db73347091a78700276cce3c5689",
+      "lines": 191,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "lucide-react",
+        "@/lib/utils",
+        "@/services/upload",
+        "@/lib/hooks/use-upload-queue"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1068,6 +1153,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/form/form-status.tsx; 62/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/components/messenger-button.tsx; 68/422 complete"
   }
 }
