@@ -2392,6 +2392,39 @@
         "vitest",
         "./schema"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/schema.ts",
+      "sha": "31d1cf4789f12f8a8e36205ef60f89f0f681df19",
+      "expectedSha": "31d1cf4789f12f8a8e36205ef60f89f0f681df19",
+      "lines": 264,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "zod",
+        "@/lib/config/design-vocabulary"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/steps.test.ts",
+      "sha": "9f29dc4f3822c3465facb2623f04d4635d49f758",
+      "expectedSha": "9f29dc4f3822c3465facb2623f04d4635d49f758",
+      "lines": 129,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "vitest",
+        "./steps"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/steps.ts",
+      "sha": "ec937dcce4f3f66560e698943891e9ed22c9cf3e",
+      "expectedSha": "ec937dcce4f3f66560e698943891e9ed22c9cf3e",
+      "lines": 140,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": []
     }
   ],
   "partialDocuments": [],
@@ -2412,9 +2445,10 @@
     "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made.",
     "Catalogue deletion source rechecks invitation count then deletes in separate database operations. catalogue.ts states Invitation.templateId onDelete:SetNull, so concurrent draft creation may defeat preservation intent; schema and concurrency tests needed, no reproduced runtime finding. Account and admin actions derive identities from session/requireStaff, while service/repository methods rely on guarded callers.",
     "Dashboard overview derives attendingCount by counting attending response rows, not summing guestCount; source-level potential mismatch with Attending guest metric, to trace with RSVP intelligence. daysUntil uses server-local day boundaries despite viewer-boundary comment; event-zone behavior requires runtime/source investigation. Delivery readiness marks any existing order done regardless of order.status and always requires website+print; compare commerce entitlement rules before judging readiness correctness.",
-    "Builder source tracing observations: authorize() checks ownership but save actions do not enforce draft/completed state or optimistic version; autosave run returns while inFlight, does not reschedule if debounce expires during a long request, and unmount directly calls saveRef without sequencing. Potential unsaved/stale-write race requires controlled tests. ContentStep defines PersonList inside the parent render; React component identity/focus stability should be examined. These are static observations only."
+    "Builder source tracing observations: authorize() checks ownership but save actions do not enforce draft/completed state or optimistic version; autosave run returns while inFlight, does not reschedule if debounce expires during a long request, and unmount directly calls saveRef without sequencing. Potential unsaved/stale-write race requires controlled tests. ContentStep defines PersonList inside the parent render; React component identity/focus stability should be examined. These are static observations only.",
+    "Direct source/test contradiction: invitation-builder/schema.ts timeSchema and dateSchema apply nonempty regex before optional/transform; explicit empty strings sent by EventStep/saveEventStep therefore appear rejected, while schema.test.ts expects timeSchema.safeParse('').data undefined and comments promise blank autosave. Static conclusion only; tests not executed. hostSchema permits photoAssetId UUID and saveHostsStep persists it without an asset-owner check (unlike saveMediaStep); trace host-photo consumers before confirming exposure."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/invitation-builder/schema.ts; 150/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/marketing/components/experience-proof-showcase.tsx; 153/422 complete"
   }
 }
