@@ -84,6 +84,17 @@ Founder / Final Authority
 7. [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-007_Founder_Approval_Gate|FMCIS-007 — Founder Approval Gate]]
 8. [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-008_Future_Dashboard_Architecture|FMCIS-008 — Future FMCIS Dashboard Architecture]]
 
+## Cross-Provider Engineering Review — Canonical Ownership (2026-10-15)
+
+FMCIS owns the collaboration intelligence and independent review loop; the general Agentic Framework is an upstream operating model, not a competing owner. Claudex Loop is the first supported, replaceable adapter. Nex orchestrates; the Founder retains final authority; FDG retains the evidence and knowledge.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]] — canonical architecture and evidence/adapter contract.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004 Debate Protocol]] — interim cross-provider finding/disposition controls; broader design still planned.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005 Loop Termination]] — interim review-budget and completion controls; broader design still planned.
+- [[tools/claudex-loop/README|Claudex Loop Bootstrap]] — pinned executable adapter in the repository tools layer.
+
+These links do not change the sequential readiness state of FMCIS-001 through FMCIS-008.
+
 ## Supporting Components
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/README|Capability Registry workspace]]
@@ -119,7 +130,7 @@ Founder / Final Authority
 - [[03_Agentic Framework/AUTHORITY_LEVELS|Authority Levels]]
 - [[03_Agentic Framework/CONTEXT_REQUIREMENTS|Context Requirements]]
 - [[03_Agentic Framework/ENGINEERING_OBJECTIVE|Engineering Objective]]
-- [[03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FDG Cross-Provider Engineering Review Loop]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP|FMCIS Cross-Provider Engineering Review Loop]]
 
 ### Knowledge
 
