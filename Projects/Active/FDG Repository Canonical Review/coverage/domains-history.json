@@ -3146,6 +3146,49 @@
           25391
         ]
       ]
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/README.md",
+      "sha": "59daf653db0886d75f4ba2453c4bdf31ccc1e5da",
+      "expectedSha": "59daf653db0886d75f4ba2453c4bdf31ccc1e5da",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/README.md",
+      "sha": "5774dfe4595061054482a56e69d3115845aa50ba",
+      "expectedSha": "5774dfe4595061054482a56e69d3115845aa50ba",
+      "lines": 41,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/app.py",
+      "sha": "340955bf235500bf0b21224277fa55d2c7f01971",
+      "expectedSha": "340955bf235500bf0b21224277fa55d2c7f01971",
+      "lines": 693,
+      "status": "FULL_TEXT_READ",
+      "readCharacterRanges": [
+        [
+          0,
+          18000
+        ],
+        [
+          18000,
+          36000
+        ],
+        [
+          36000,
+          36885
+        ]
+      ]
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/fmis/__init__.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "expectedSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "lines": 0,
+      "status": "FULL_TEXT_READ",
+      "note": "Empty tracked text blob; no content to read."
     }
   ],
   "failures": [],
