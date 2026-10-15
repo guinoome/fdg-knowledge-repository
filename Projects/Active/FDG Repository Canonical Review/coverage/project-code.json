@@ -846,6 +846,39 @@
         "@/lib/config",
         "@/services/acquisition"
       ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/invite-preview/page.tsx",
+      "sha": "d64a2b726b05d95514e97da7a34df5ef8a06c4e0",
+      "expectedSha": "d64a2b726b05d95514e97da7a34df5ef8a06c4e0",
+      "lines": 499,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/lib/invitation/preview-model",
+        "@/features/website-generator/components/event-site",
+        "@/features/template-marketplace/repository",
+        "@/lib/db",
+        "@/lib/qr",
+        "@/lib/env",
+        "@/features/website-generator/experience/proofs"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/layout.tsx",
+      "sha": "71f65dec169b9d4be802eaac6c8b6f6f30893c4e",
+      "expectedSha": "71f65dec169b9d4be802eaac6c8b6f6f30893c4e",
+      "lines": 41,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next",
+        "@/components/ui/toaster",
+        "@/lib/theme",
+        "@/lib/config",
+        "@/lib/env"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -858,6 +891,6 @@
     "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/invite-preview/page.tsx; 50/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/app/not-found.tsx; 52/422 complete"
   }
 }
