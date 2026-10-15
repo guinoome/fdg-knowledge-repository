@@ -1628,6 +1628,72 @@
       "expectedSha": "a82b8eab2cb16a7ce5a54967519417e6fb430cd7",
       "lines": 17,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0802 - Secure Development Baseline.md",
+      "sha": "aed4f926157caab9037ed822e874049accc7c80e",
+      "expectedSha": "aed4f926157caab9037ed822e874049accc7c80e",
+      "lines": 19,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/09_Audit_Traceability/FSIS-0900 - Audit and Traceability Master Index.md",
+      "sha": "0f0d8df4562d260b075b4abedd59f301174e6ce1",
+      "expectedSha": "0f0d8df4562d260b075b4abedd59f301174e6ce1",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/09_Audit_Traceability/FSIS-0901 - Security Audit Standard.md",
+      "sha": "193b480bf8e4d7c70f456d722e60e238e8d43eb9",
+      "expectedSha": "193b480bf8e4d7c70f456d722e60e238e8d43eb9",
+      "lines": 16,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/10_Security_Intelligence/FSIS-1000 - Security Intelligence Master Index.md",
+      "sha": "4a3cde0abcef85437236aecf6af5e5b29f8c8080",
+      "expectedSha": "4a3cde0abcef85437236aecf6af5e5b29f8c8080",
+      "lines": 29,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/10_Security_Intelligence/FSIS-1001 - Security Risk Intelligence.md",
+      "sha": "3c4f849c37cb9c87a55a65637266b31d1486855a",
+      "expectedSha": "3c4f849c37cb9c87a55a65637266b31d1486855a",
+      "lines": 27,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1100 - Incident Response Master Index.md",
+      "sha": "f417657c42399d243d4b0d20efd909bfd80d77b1",
+      "expectedSha": "f417657c42399d243d4b0d20efd909bfd80d77b1",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1101 - Security Incident Record.md",
+      "sha": "03b389a6ae62d43957efee23ddda37668267d976",
+      "expectedSha": "03b389a6ae62d43957efee23ddda37668267d976",
+      "lines": 30,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "12_FDG_Security_Intelligence_System/12_FDG_Security_Intelligence_System_FSIS_Integration_Master.md",
+      "sha": "ef80d0d6212b02ccc9e1338aeaf98f014c38e78e",
+      "expectedSha": "ef80d0d6212b02ccc9e1338aeaf98f014c38e78e",
+      "lines": 1236,
+      "status": "FULL_TEXT_READ",
+      "readCharacterRanges": [
+        [
+          0,
+          18000
+        ],
+        [
+          18000,
+          28186
+        ]
+      ]
     }
   ],
   "failures": [],
