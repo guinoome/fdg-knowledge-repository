@@ -375,6 +375,111 @@
       "expectedSha": "29495a40fd7c8c82432df0dac8bd338d0794411d",
       "lines": 570,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/FDG_Receipt_Expense_Intelligence.md",
+      "sha": "523c069ebc5fb6373c0e9e78bb89fb9dac857a86",
+      "expectedSha": "523c069ebc5fb6373c0e9e78bb89fb9dac857a86",
+      "lines": 120,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Order_Transaction_Intelligence.md",
+      "sha": "2b6d7687b3f15470b1aca11ef0567078018b8756",
+      "expectedSha": "2b6d7687b3f15470b1aca11ef0567078018b8756",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Lifecycle.md",
+      "sha": "3ce5e704aba5fd94b28d7454c25c7fc8996f5c2f",
+      "expectedSha": "3ce5e704aba5fd94b28d7454c25c7fc8996f5c2f",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Payment_Operations.md",
+      "sha": "bbe30b0df42f06cc4e11aaf4650c20825f4c890c",
+      "expectedSha": "bbe30b0df42f06cc4e11aaf4650c20825f4c890c",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_OCR_and_Verification_Workflow.md",
+      "sha": "49161b17dec3cfa9f51c58462f0e7528bcd5ef59",
+      "expectedSha": "49161b17dec3cfa9f51c58462f0e7528bcd5ef59",
+      "lines": 74,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Receipt_Storage_and_Synchronization_Architecture.md",
+      "sha": "9a40bcfffee0525164e786a649e1b4ce89ad92ec",
+      "expectedSha": "9a40bcfffee0525164e786a649e1b4ce89ad92ec",
+      "lines": 92,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Intelligence.md",
+      "sha": "56e15bc8c0bf2eb071c10d4dfac6ab665c395704",
+      "expectedSha": "56e15bc8c0bf2eb071c10d4dfac6ab665c395704",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Refund_Rules.md",
+      "sha": "d6c638dc6b626bc39c7bd253d76d2fe9b7690724",
+      "expectedSha": "d6c638dc6b626bc39c7bd253d76d2fe9b7690724",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/08_Business_Operating_System/Transaction_State_Model.md",
+      "sha": "fd11fdff6484000e34b741831345dfd4cd69b082",
+      "expectedSha": "fd11fdff6484000e34b741831345dfd4cd69b082",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "sha": "5c8204566ecbc9a87263ec183b3ccf913c9d01eb",
+      "expectedSha": "5c8204566ecbc9a87263ec183b3ccf913c9d01eb",
+      "lines": 54,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Commercial_Reporting_Framework.md",
+      "sha": "1b93dc832d6c3de64af0a169729500677654c7da",
+      "expectedSha": "1b93dc832d6c3de64af0a169729500677654c7da",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/Daily_Commercial_Report.md",
+      "sha": "261c7fc7622e441e4f988090543e726770539478",
+      "expectedSha": "261c7fc7622e441e4f988090543e726770539478",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS-UX-PAYROLL-001 - FDG Payroll Role Dashboard Experience.md",
+      "sha": "9dc15b32df9f91c5885efe9247ffb0f1f09809bd",
+      "expectedSha": "9dc15b32df9f91c5885efe9247ffb0f1f09809bd",
+      "lines": 313,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_Executive_Dashboard.md",
+      "sha": "6af86790f5a8c69a31f2c9458a9f55e2cca23768",
+      "expectedSha": "6af86790f5a8c69a31f2c9458a9f55e2cca23768",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/09_Business_Analytics_&_Decision_Support/FBIS_KPI_Definitions.md",
+      "sha": "f98ecc03f166713b17627ece667465d285db3d9d",
+      "expectedSha": "f98ecc03f166713b17627ece667465d285db3d9d",
+      "lines": 32,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
