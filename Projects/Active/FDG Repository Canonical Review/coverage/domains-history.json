@@ -557,6 +557,76 @@
       "expectedSha": "148a3c1154b40c1ae59dc06bed83a5a5a946359d",
       "lines": 175,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS_Commercial_Intelligence_Framework.md",
+      "sha": "ff3cadbadfb2ecf92bf6fbec144acb4e88cb8feb",
+      "expectedSha": "ff3cadbadfb2ecf92bf6fbec144acb4e88cb8feb",
+      "lines": 114,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index.md",
+      "sha": "ec3d7d93b4209a9dd339e01b957c7bfe0f10869e",
+      "expectedSha": "ec3d7d93b4209a9dd339e01b957c7bfe0f10869e",
+      "lines": 74,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index.md",
+      "sha": "a7073447aee6bdc877333b53628db62b20b8c8d9",
+      "expectedSha": "a7073447aee6bdc877333b53628db62b20b8c8d9",
+      "lines": 35,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-001_Inquiry_to_Proposal_Engineering_Loop.md",
+      "sha": "81da291e422d407db45e2df5ee283d10b57dda5b",
+      "expectedSha": "81da291e422d407db45e2df5ee283d10b57dda5b",
+      "lines": 31,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/12_Business_Playbooks/Payment_Exception_Playbook.md",
+      "sha": "fe4934a975b9665088dc62a6fd974b3c33626b9b",
+      "expectedSha": "fe4934a975b9665088dc62a6fd974b3c33626b9b",
+      "lines": 24,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/13_Case_Studies/13_Case_Studies_Master_Index.md",
+      "sha": "1af02ddd54bee9a834b15d54f0defb1bbec772a1",
+      "expectedSha": "1af02ddd54bee9a834b15d54f0defb1bbec772a1",
+      "lines": 48,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DAILYS-001 - Dailys Outcome-to-Learning Business Reference.md",
+      "sha": "1f71a435c1115fdf83e33e4000d9e78e29efc5ef",
+      "expectedSha": "1f71a435c1115fdf83e33e4000d9e78e29efc5ef",
+      "lines": 100,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DIZLOG-001 - DizLog Business Platform Reference.md",
+      "sha": "51c647564811274c512369dbe2828072ae1828b8",
+      "expectedSha": "51c647564811274c512369dbe2828072ae1828b8",
+      "lines": 93,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-EXCEED-HMS-001 - Exceed Hotel Software Reference.md",
+      "sha": "a01fb5a5892693b70a575cc5167bd5741a110216",
+      "expectedSha": "a01fb5a5892693b70a575cc5167bd5741a110216",
+      "lines": 129,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-ODOO-OGIS-001 - Odoo OGIS Hospitality Reference.md",
+      "sha": "ed671fad25e2e23455b728c6bb2f4780f67e4d21",
+      "expectedSha": "ed671fad25e2e23455b728c6bb2f4780f67e4d21",
+      "lines": 84,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
