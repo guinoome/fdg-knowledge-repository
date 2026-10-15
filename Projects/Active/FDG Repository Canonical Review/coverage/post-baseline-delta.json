@@ -1,0 +1,37 @@
+{
+  "repository": "guinoome/fdg-knowledge-repository",
+  "baseline": "ba2ed38a32ea824b7ee7e68b48c77f2c968c1f16",
+  "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+  "status": "IN_PROGRESS",
+  "expectedChangedSourcePaths": 11,
+  "documents": [
+    {
+      "path": "03_Agentic Framework/FDG_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md",
+      "sha": "836580168fa591fbeb998636b827ee746ca092ec",
+      "expectedSha": "836580168fa591fbeb998636b827ee746ca092ec",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 150
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "ba4c97af9a2e730f5ed2d8494ff1bb2b02cb87f6",
+      "expectedSha": "ba4c97af9a2e730f5ed2d8494ff1bb2b02cb87f6",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 27
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha": "1afeb5181da1d00d4ce84926517d3b6d003c3292",
+      "expectedSha": "1afeb5181da1d00d4ce84926517d3b6d003c3292",
+      "status": "FULL_TEXT_READ",
+      "sourceCheckpoint": "dc3ba0ef8aec37d4ccfc41424fb7cee0b2a3038f",
+      "lines": 27
+    }
+  ],
+  "notes": [
+    "Tracks non-review source changes after the pinned full-repository baseline.",
+    "New AGENTS/CLAUDE cross-provider loop applies to substantial implementation/migration/security/architecture work; current full-text reading and progress record maintenance does not require installing tools. No local installation or code execution performed."
+  ]
+}
