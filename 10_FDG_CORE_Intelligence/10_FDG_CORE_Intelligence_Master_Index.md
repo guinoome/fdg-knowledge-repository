@@ -56,3 +56,7 @@ This is an application profile, not a duplicate CORE engine. Regulatory authorit
 - [[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG-CORE-STD-013 Machine Learning & Predictive Intelligence Standard]]
 
 This capability activates the Predictive Engineering Intelligence direction already identified in the CORE roadmap. It is a shared CORE capability, not a new top-level Intelligence System. Domain systems retain record and decision authority; FPIS governs the predictive command-center experience.
+
+## FPJIS Requirements-to-Evidence Profile — 2026-10-15
+
+[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|Linked Requirements Views Standard]] reuses [[10_FDG_CORE_Intelligence/FDG-CORE-STD-008_EVIDENCE_AND_PROVENANCE_ENGINE_STANDARD|CORE Evidence & Provenance]] for evidence integrity, review and source traceability, without assigning requirements governance to CORE. The [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Fire Pump Pilot]] is a proposed, not executed, consumer of the shared evidence contract.
