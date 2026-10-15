@@ -270,6 +270,54 @@
       "characters": 8987,
       "lines": 868,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG Solar Visayas AI Marketing HQ/FDG_Solar_Day1_Sample_Campaign.md",
+      "sha": "7701901a1d04819c4ab2dc6a8b362ea3a0b893ce",
+      "expectedSha": "7701901a1d04819c4ab2dc6a8b362ea3a0b893ce",
+      "characters": 8176,
+      "lines": 177,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG Solar Visayas AI Marketing HQ/FG Solar Cinematic Marketing Poster Pipeline.md",
+      "sha": "28f1b8deac15a70b677beb52c1c8e20fe4295378",
+      "expectedSha": "28f1b8deac15a70b677beb52c1c8e20fe4295378",
+      "characters": 5738,
+      "lines": 596,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG Solar Visayas AI Marketing HQ/solar-digital-v1.md",
+      "sha": "e196f9a9f8c10da83364d1bc0eb09f5da7117e3e",
+      "expectedSha": "e196f9a9f8c10da83364d1bc0eb09f5da7117e3e",
+      "characters": 10161,
+      "lines": 669,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Future_Upgrade_Handover.md",
+      "sha": "fbfdd7e22662dc0fa7057c13d6f30144970c6aa0",
+      "expectedSha": "fbfdd7e22662dc0fa7057c13d6f30144970c6aa0",
+      "characters": 11958,
+      "lines": 368,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index.md",
+      "sha": "651aa8c56a91325e333567cb0f7364bf193d7094",
+      "expectedSha": "651aa8c56a91325e333567cb0f7364bf193d7094",
+      "characters": 5028,
+      "lines": 65,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "Projects/Active/AI/FDG-ERP/restaurant-management-system/Raw/Restaurant ERP Enhancement Workflow 1.md",
+      "sha": "959354b8460530bd3983914c7f19d67e64327ace",
+      "expectedSha": "959354b8460530bd3983914c7f19d67e64327ace",
+      "characters": 5855,
+      "lines": 601,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -287,7 +335,7 @@
       "readCharacterRanges": [
         [
           0,
-          22000
+          88000
         ]
       ],
       "status": "PARTIAL_TEXT_READ"
