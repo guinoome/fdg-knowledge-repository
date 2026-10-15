@@ -3263,6 +3263,41 @@
       "expectedSha": "9699ac34886d80574e1765081250ce1cb0e4230b",
       "lines": 421,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0004 - Data Governance Standards.md",
+      "sha": "d3856555c8a321c388798ca7d63421d94c483d45",
+      "expectedSha": "d3856555c8a321c388798ca7d63421d94c483d45",
+      "lines": 457,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0005 - Synchronization Architecture.md",
+      "sha": "6db3a6954eb272d9d22b5000031716ba15883d67",
+      "expectedSha": "6db3a6954eb272d9d22b5000031716ba15883d67",
+      "lines": 393,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0006 - Integration Architecture.md",
+      "sha": "52dfc9ebcd06f6add77e640ab3fea0dd61676b3a",
+      "expectedSha": "52dfc9ebcd06f6add77e640ab3fea0dd61676b3a",
+      "lines": 315,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/03_Sharing_Data_Platform/FBPOIS-SDP-0007 - Data Lifecycle Management.md",
+      "sha": "60628217f4e4927ff096219f1f9108eceabfda31",
+      "expectedSha": "60628217f4e4927ff096219f1f9108eceabfda31",
+      "lines": 442,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04A_Workflow_Engine/04A_Workflow_Engine_Master_Index.md",
+      "sha": "939a0431aaa065a89518a8d679eb0a40a821d554",
+      "expectedSha": "939a0431aaa065a89518a8d679eb0a40a821d554",
+      "lines": 10,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
@@ -3279,6 +3314,7 @@
     "FWIS-SPEC0001 retains 2026-08-05 'missing parents/specs' commentary contradicted by pinned tree and full-read receipts for FBPOIS/FWIS architecture andSPEC0002/0003. Historical absence notes are not current repository inventory. Most specifications Draft, architecture Approved; preserve distinctions.",
     "FMIS evidence register explicitly corrects completion to NOT MET: exports/backup had no operatorcaller,restore accepts unrelateddatabase destructivepath; thirteen auditgaps and no before/after schema. Claims are dated2026-08-10; next code reads assess pinned source without running. Approved exceptions retain Tkinter+SQLite prototype canonical; PostgreSQL target/futureintegrations notimplemented.",
     "Pinned FMIS code vs evidence-register drift: app.py still caller-driven audit actor 'user'; services.py no session auth enforcement in write methods, no _audit helper,authenticate no audit/session actor;can_perform is separate query;passwords rawSHA256/defaultdemo. Tree lacks exporters/backup modules referenced in register; tracked UI/core tests await full reading. Historical56test claims cannot be applied to pinned code. Noexecution performed; identified by full-source read.",
-    "Full pinned tests read: core10 test methods +UI6 testmethods; UI role test only checks can_perform return and tabstate,not prohibited service write invocation. Thus comments claimserviceenforcement proof without exercising denial. No testsrun. Earlier receipt note incorrectly said UItests absent; corrected immediately after inventory exposed trackedtest_fmis_ui.py; fullread here confirms it exists."
+    "Full pinned tests read: core10 test methods +UI6 testmethods; UI role test only checks can_perform return and tabstate,not prohibited service write invocation. Thus comments claimserviceenforcement proof without exercising denial. No testsrun. Earlier receipt note incorrectly said UItests absent; corrected immediately after inventory exposed trackedtest_fmis_ui.py; fullread here confirms it exists.",
+    "SharedPlatform SDP0004 Draft uses Critical classification; FSIS baseline uses FDG CORE as highestclassification,recordmappingneeded. Draft SDP0004 lists Plants FWIS owner versus later FMIS maintenance/plantstatus; need distinguish operationalcondition vs canonicalplantmaster ratherthan silentlychoose. SDP0001 Sep30addendum preserves oldabsenceclaims and explicitly says reconciliation Proposed,no migration/approvalchange."
   ]
 }
