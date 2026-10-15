@@ -1173,6 +1173,76 @@
       "expectedSha": "1875d5256c81375568a55242950ebaefdc11af9d",
       "lines": 16,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/08_Business_Operating_System/08_Business_Operating_System_Master_Index.md",
+      "sha": "898f9892bddeb29f42896fd80b1e20dfd6b65af5",
+      "expectedSha": "898f9892bddeb29f42896fd80b1e20dfd6b65af5",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/08_Orders_Transactions/Order_Transaction_Intelligence.md",
+      "sha": "441fc23e8201008cd9e0b01b41479066bfe5a9ef",
+      "expectedSha": "441fc23e8201008cd9e0b01b41479066bfe5a9ef",
+      "lines": 20,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/08_Orders_Transactions/Transaction_State_Model.md",
+      "sha": "f4eb000d985f3b26aee5672e3f4a4183a0e73f44",
+      "expectedSha": "f4eb000d985f3b26aee5672e3f4a4183a0e73f44",
+      "lines": 15,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/09_Business_Analytics_&_Decision_Support/09_Business_Analytics_&_Decision_Support_Master_Index.md",
+      "sha": "71cfc612b434fa64d40b87aaf5b1ab7e24295c64",
+      "expectedSha": "71cfc612b434fa64d40b87aaf5b1ab7e24295c64",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/09_Refunds_Cancellations/Refund_Intelligence.md",
+      "sha": "065d575ba54c4b7edd8afd2fd8415b01baedcd56",
+      "expectedSha": "065d575ba54c4b7edd8afd2fd8415b01baedcd56",
+      "lines": 18,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/09_Refunds_Cancellations/Refund_Rules.md",
+      "sha": "9c25a19dac2588f41d9960ce28afe35d9256d9b7",
+      "expectedSha": "9c25a19dac2588f41d9960ce28afe35d9256d9b7",
+      "lines": 15,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/10_Commercial_Dashboards/FBIS_Executive_Dashboard.md",
+      "sha": "fe059c9d7c4ae3d6bbf158021556fd7cfb8ec3b1",
+      "expectedSha": "fe059c9d7c4ae3d6bbf158021556fd7cfb8ec3b1",
+      "lines": 26,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/10_Commercial_Dashboards/FBIS_KPI_Definitions.md",
+      "sha": "a83c24f25c31d72343c0249d95b2d7dbc5bb070f",
+      "expectedSha": "a83c24f25c31d72343c0249d95b2d7dbc5bb070f",
+      "lines": 25,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/10_Commercial_Dashboards/FBIS_Payment_Dashboard.md",
+      "sha": "f3f4289d20715cb58d627d18b2f87ffe94bf7faf",
+      "expectedSha": "f3f4289d20715cb58d627d18b2f87ffe94bf7faf",
+      "lines": 17,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System_OLD/10_Commercial_Dashboards/FBIS_Reconciliation_Dashboard.md",
+      "sha": "dd3f78296364c27e6ab30b470ec3b0fd12be0105",
+      "expectedSha": "dd3f78296364c27e6ab30b470ec3b0fd12be0105",
+      "lines": 21,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
