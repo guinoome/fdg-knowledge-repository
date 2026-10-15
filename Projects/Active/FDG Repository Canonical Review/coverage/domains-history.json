@@ -3080,6 +3080,41 @@
       "expectedSha": "c980ccfdd8401d4aa3b226f7ebec158d548ee1e1",
       "lines": 60,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/10_FMIS_Dashboard_and_KPI_Model.md",
+      "sha": "755e23d5a31b7d33e68d0fe546d3408317fa5da3",
+      "expectedSha": "755e23d5a31b7d33e68d0fe546d3408317fa5da3",
+      "lines": 96,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/11_FMIS_User_Roles_and_Access.md",
+      "sha": "c14bed45e18f87cba7dd79fba704186d8b15a111",
+      "expectedSha": "c14bed45e18f87cba7dd79fba704186d8b15a111",
+      "lines": 48,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/12_FMIS_FBPOIS_Architecture_Position.md",
+      "sha": "4ca32dad06bffc0001b92cca75bf9fa021c87020",
+      "expectedSha": "4ca32dad06bffc0001b92cca75bf9fa021c87020",
+      "lines": 51,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/13_FMIS_Platform_and_Integration_Architecture.md",
+      "sha": "81ac9bd21e2d7ad01786ce633312e33581ad63c4",
+      "expectedSha": "81ac9bd21e2d7ad01786ce633312e33581ad63c4",
+      "lines": 44,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/14_FMIS_Configuration_and_Extensibility.md",
+      "sha": "3712a3c5946ea4bd4e84e5b6844d850bb75681d4",
+      "expectedSha": "3712a3c5946ea4bd4e84e5b6844d850bb75681d4",
+      "lines": 59,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
