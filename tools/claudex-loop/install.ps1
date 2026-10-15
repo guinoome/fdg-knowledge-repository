@@ -59,6 +59,8 @@ try {
         foreach ($skill in $RequiredSkills) {
             $srcSkill = Join-Path $source $skill
             if (-not (Test-Path $srcSkill)) { throw "Missing upstream skill: $skill" }
+            $destSkill = Join-Path $dest $skill
+            if (Test-Path $destSkill) { Remove-Item -Recurse -Force $destSkill }
             Copy-Item -Recurse -Force $srcSkill $dest
         }
         Write-Host "Installed skills into $dest"
