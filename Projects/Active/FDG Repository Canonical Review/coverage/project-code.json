@@ -1490,6 +1490,91 @@
       "status": "FULL_TEXT_READ",
       "placement": "Active project source at pinned GitHub path",
       "dependencies": []
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/actions.ts",
+      "sha": "77ac71c08107352810f13723db29be38c4217ac0",
+      "expectedSha": "77ac71c08107352810f13723db29be38c4217ac0",
+      "lines": 142,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "next/cache",
+        "@/lib/db",
+        "@/lib/auth/session",
+        "@/lib/logger",
+        "@/lib/config",
+        "@/services/upload/storage",
+        "@/services/upload",
+        "@/lib/forms/action-state",
+        "./schema"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/components/avatar-form.tsx",
+      "sha": "a8b15f3bcf77e2970c51ce906e8422dfe16fac6c",
+      "expectedSha": "a8b15f3bcf77e2970c51ce906e8422dfe16fac6c",
+      "lines": 52,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "../actions",
+        "@/lib/forms/action-state",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/components/ui/file-drop",
+        "@/components/ui/avatar",
+        "@/lib/utils"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/components/preferences-form.tsx",
+      "sha": "c9a3ad561327411d1b44bdfd8e82d16d450b503c",
+      "expectedSha": "c9a3ad561327411d1b44bdfd8e82d16d450b503c",
+      "lines": 108,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "../actions",
+        "@/lib/forms/action-state",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/components/ui/label",
+        "@/components/ui/switch",
+        "@/lib/theme"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/components/profile-form.tsx",
+      "sha": "38c2ffb4cb65e2344f2b855c3e6c8bcfb56950fb",
+      "expectedSha": "38c2ffb4cb65e2344f2b855c3e6c8bcfb56950fb",
+      "lines": 49,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "react-dom",
+        "../actions",
+        "@/lib/forms/action-state",
+        "@/components/form/form-field",
+        "@/components/form/submit-button",
+        "@/components/form/form-status",
+        "@/components/ui/input",
+        "@/components/ui/label"
+      ]
+    },
+    {
+      "path": "Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/schema.ts",
+      "sha": "ccf593aab95d4d9427eaad18e5803844142b0995",
+      "expectedSha": "ccf593aab95d4d9427eaad18e5803844142b0995",
+      "lines": 30,
+      "status": "FULL_TEXT_READ",
+      "placement": "Active project source at pinned GitHub path",
+      "dependencies": [
+        "zod"
+      ]
     }
   ],
   "partialDocuments": [],
@@ -1499,9 +1584,10 @@
     "This code reading scope is distinct from projects.json; exact identical blobs may reuse a full-text receipt with explicit source path and SHA. Historical/source-copy paths retain separate path receipts and placement labels.",
     "Static reading observations are not confirmed runtime findings or test results.",
     "Potential source-level auth-flow conflict to trace: (auth)/layout.tsx redirects any getUser() result to dashboard, while reset-password/page.tsx says it is reached after auth/callback exchanges recovery code for a session. Need inspect getUser(), callback/session helpers and reset action before judging; no runtime reproduction.",
-    "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness."
+    "Builder/new is a GET that creates/reuses drafts. Its selected-template predicate checks publishedAt non-null but not lte now; template step uses lte new Date(). Potential future-publication consistency and duplicate draft race concerns require service/schema/route tracing. Event memories datetime-local fields use toISOString UTC slice; timezone interpretation must be checked in saveMemorySettings before judging user-facing time correctness.",
+    "Static copy/default discrepancy to trace: dashboard/account/page.tsx DEFAULT_PREFERENCES sets marketingEmails true, while preferences-form.tsx tells customers 'Off unless you ask.' Need schema and notification delivery policy before any behavioral/legal conclusion. No changes made."
   ],
   "handover": {
-    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/account/actions.ts; 94/422 complete"
+    "nextAction": "Read Projects/Active/ML Projects/ML Digital Event Platform (ML-DEP)/features/admin-templates/actions.ts; 99/422 complete"
   }
 }
