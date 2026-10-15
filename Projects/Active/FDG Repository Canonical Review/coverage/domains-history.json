@@ -2198,6 +2198,41 @@
       "expectedSha": "d18f15a9513c9f2458c4489104abaf464b61117d",
       "lines": 30,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "13_FDG_Legal_Intelligence_System/README.md",
+      "sha": "b9d65d4ccd9621cdcb2d397d7a61317f7d50a259",
+      "expectedSha": "b9d65d4ccd9621cdcb2d397d7a61317f7d50a259",
+      "lines": 116,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/00_FSvIS_CORE/FSvIS-0000 - FDG Service Intelligence System.md",
+      "sha": "1b5169f07997584969bb64666a3be6ad5f7a3750",
+      "expectedSha": "1b5169f07997584969bb64666a3be6ad5f7a3750",
+      "lines": 102,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/00_FSvIS_CORE/FSvIS-0001 - Charter and Scope.md",
+      "sha": "7732cd365f2330b988bb39488488da162fd1da92",
+      "expectedSha": "7732cd365f2330b988bb39488488da162fd1da92",
+      "lines": 56,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/00_FSvIS_CORE/FSvIS-0002 - Service Intelligence Architecture.md",
+      "sha": "91aa6659b0ede1966cf102d50838c1899e6f5b40",
+      "expectedSha": "91aa6659b0ede1966cf102d50838c1899e6f5b40",
+      "lines": 105,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "14_FDG_Service_Intelligence_System/00_FSvIS_CORE/FSvIS-ROADMAP.md",
+      "sha": "f7f5d29d451a89d14645fd3f7a7557c0ac027cd8",
+      "expectedSha": "f7f5d29d451a89d14645fd3f7a7557c0ac027cd8",
+      "lines": 99,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
