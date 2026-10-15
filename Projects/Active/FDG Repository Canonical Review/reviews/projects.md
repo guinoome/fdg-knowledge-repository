@@ -14,7 +14,7 @@ This review reads source text through the connected GitHub tools. It does not ex
 - The transferred scope comprises 422 paths under Projects/Active/ML Projects/ ending in .ts, .tsx, .prisma, or .sql, owned by coverage/project-code.json.
 - This receipt owns the remaining 405 apparent text paths, including Projects/Projects_Master_Index.md already read by the parent agent and referenced through the parent receipt.
 - coverage/projects.json currently contains 65 complete source-path receipts, including 20 inherited receipts. Newly added receipts verify the returned blob SHA against the pinned source tree.
-- The HVAC calculator remains PARTIAL_TEXT_READ at character range [0,88000) of 581954. Character ranges are zero-based and end-exclusive JavaScript string offsets. No unexposed suffix is counted as read.
+- The HVAC calculator remains PARTIAL_TEXT_READ at character range [0,352000) of 581954. Character ranges are zero-based and end-exclusive JavaScript string offsets. No unexposed suffix is counted as read.
 - Unknown .index encoding remains unresolved. Extension-based text classification is provisional.
 
 ## Material findings from complete reads
@@ -29,4 +29,4 @@ This review reads source text through the connected GitHub tools. It does not ex
 
 ## Continuation
 
-Continue the HVAC HTML at character 88000 with contiguous bounded outputs and preserve read ranges after each large chunk. Its unexposed suffix contains a substantial vendored minified jsPDF bundle and must not be counted merely because fetched. Then read missing owned paths from the source tree and existing receipt, including restaurant app.js, HydroCal HTML, FEIP documents, later project documentation and remaining non-transferred application sources. Preserve source/implementation/research/history authority distinctions. Only review and coverage artifacts may be written in this task.
+Continue the HVAC HTML at character 352000 with contiguous bounded outputs and preserve read ranges after each large chunk. Its unexposed suffix contains a substantial vendored minified jsPDF bundle and must not be counted merely because fetched. Then read missing owned paths from the source tree and existing receipt, including restaurant app.js, HydroCal HTML, FEIP documents, later project documentation and remaining non-transferred application sources. Preserve source/implementation/research/history authority distinctions. Only review and coverage artifacts may be written in this task.
