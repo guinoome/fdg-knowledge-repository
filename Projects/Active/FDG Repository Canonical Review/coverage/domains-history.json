@@ -2926,6 +2926,41 @@
       "expectedSha": "49a4d076d7e6e753671a0f9adb94ad001b4fd912",
       "lines": 562,
       "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0004 - Operations Logbook.md",
+      "sha": "48891d4cc4080b40696675fc9dc2f246c9096ddf",
+      "expectedSha": "48891d4cc4080b40696675fc9dc2f246c9096ddf",
+      "lines": 476,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0005 - Group Communications.md",
+      "sha": "8c4f34f501f649ada37e36ec1f757fbd772d48d0",
+      "expectedSha": "8c4f34f501f649ada37e36ec1f757fbd772d48d0",
+      "lines": 456,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0006 - Engineering Notes.md",
+      "sha": "d771125109eb5d18e255b24c6cbc90906bc5b5a9",
+      "expectedSha": "d771125109eb5d18e255b24c6cbc90906bc5b5a9",
+      "lines": 465,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0007 - Concerns Tracker.md",
+      "sha": "e4695dbfe0e82935be85f8aae1bc45310c42cfd7",
+      "expectedSha": "e4695dbfe0e82935be85f8aae1bc45310c42cfd7",
+      "lines": 480,
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0008 - OOO & OOS Management.md",
+      "sha": "1f0763c4cafffe18e4df3ca52532d72e00b9ead6",
+      "expectedSha": "1f0763c4cafffe18e4df3ca52532d72e00b9ead6",
+      "lines": 480,
+      "status": "FULL_TEXT_READ"
     }
   ],
   "failures": [],
