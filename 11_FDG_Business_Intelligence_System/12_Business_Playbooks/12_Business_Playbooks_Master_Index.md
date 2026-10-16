@@ -32,3 +32,8 @@ The original references above remain as historical text. The following observed 
 - `12_Business_Playbooks/12_Business_Playbooks_Master_Index` → [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/12_Business_Playbooks_Master_Index|12_Business_Playbooks_Master_Index]]
 
 Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|architecture-critical review]].
+
+## Build, Demonstrate, Sell & Transfer — 2026-10-16
+
+- [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-002_Build_Demonstrate_Sell_and_Decision_Transfer_Playbook|FDG Build–Demonstrate–Sell–Transfer Playbook]] — candidate capability-to-first-buyer sales pipeline, maintenance reporting service offer, construction toolkit demonstration, founder-time baseline, governed SOP/decision transfer, conditional 90-day execution and audit/acceptance checks. **Prepared draft only:** no outreach, deployment, payment or new system approved.
+- Source case and cautions: [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-GROWTH-001 - Founder Leverage and Capability Scaling Transcript Review|Founder Leverage Source Review]]. Commercial authority remains [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio|FBIS-BP-003]]; FPJIS gates remain controlling.
