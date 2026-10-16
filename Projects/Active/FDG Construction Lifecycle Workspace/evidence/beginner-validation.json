@@ -1,0 +1,509 @@
+{
+  "baseline_commit": "d103c8ea3c4da2ad9b0d0cd33f53798f0453df40",
+  "status": "passed for beginner offline revision",
+  "test_results": {
+    "guided": [
+      {
+        "name": "project ID generated outside the form and stored once",
+        "pass": true
+      },
+      {
+        "name": "daily report dates initialized",
+        "pass": true
+      },
+      {
+        "name": "no reviewer invented",
+        "pass": true
+      },
+      {
+        "name": "empty project name rejected",
+        "pass": true
+      },
+      {
+        "name": "invalid setup date rejected",
+        "pass": true
+      },
+      {
+        "name": "one work entry creates shared WBS",
+        "pass": true
+      },
+      {
+        "name": "unit remembered",
+        "pass": true
+      },
+      {
+        "name": "optional target date creates linked draft milestone",
+        "pass": true
+      },
+      {
+        "name": "approval weight not fabricated",
+        "pass": true
+      },
+      {
+        "name": "approved plan not fabricated",
+        "pass": true
+      },
+      {
+        "name": "no progress before any update",
+        "pass": true
+      },
+      {
+        "name": "zero working target rejected",
+        "pass": true
+      },
+      {
+        "name": "unit missing rejected",
+        "pass": true
+      },
+      {
+        "name": "daily identity reused",
+        "pass": true
+      },
+      {
+        "name": "daily unit reused",
+        "pass": true
+      },
+      {
+        "name": "entered quantity remains reported",
+        "pass": true
+      },
+      {
+        "name": "no automatic acceptance",
+        "pass": true
+      },
+      {
+        "name": "no invented physical verification",
+        "pass": true
+      },
+      {
+        "name": "draft status maintained",
+        "pass": true
+      },
+      {
+        "name": "remaining work derived",
+        "pass": true
+      },
+      {
+        "name": "reported completion derived",
+        "pass": true
+      },
+      {
+        "name": "review pending count",
+        "pass": true
+      },
+      {
+        "name": "approved progress stays unknown",
+        "pass": true
+      },
+      {
+        "name": "incremental updates accumulate once",
+        "pass": true
+      },
+      {
+        "name": "new report date carried forward",
+        "pass": true
+      },
+      {
+        "name": "today period uses new date",
+        "pass": true
+      },
+      {
+        "name": "earlier entry not overwritten",
+        "pass": true
+      },
+      {
+        "name": "unknown item prevents global invented zero",
+        "pass": true
+      },
+      {
+        "name": "explicit zero is known data",
+        "pass": true
+      },
+      {
+        "name": "mixed units use ratios not quantity sums",
+        "pass": true
+      },
+      {
+        "name": "over-target quantity retained",
+        "pass": true
+      },
+      {
+        "name": "remaining does not become negative",
+        "pass": true
+      },
+      {
+        "name": "negative daily input rejected",
+        "pass": true
+      },
+      {
+        "name": "blank daily input rejected",
+        "pass": true
+      },
+      {
+        "name": "unknown work item rejected",
+        "pass": true
+      },
+      {
+        "name": "JSON continuity preserves quick quantities",
+        "pass": true
+      },
+      {
+        "name": "frozen baseline cannot be bypassed",
+        "pass": true
+      },
+      {
+        "name": "archived event excluded",
+        "pass": true
+      },
+      {
+        "name": "duplicate source events excluded",
+        "pass": true
+      },
+      {
+        "name": "future events excluded by report cutoff",
+        "pass": true
+      },
+      {
+        "name": "projection leaves prior baselines untouched",
+        "pass": true
+      }
+    ],
+    "lifecycle": [
+      {
+        "name": "56 register templates",
+        "actual": 56,
+        "expected": 56,
+        "pass": true
+      },
+      {
+        "name": "all17 lifecycle stages",
+        "actual": 17,
+        "expected": 17,
+        "pass": true
+      },
+      {
+        "name": "source accepted progress",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "approved plan snapshot",
+        "actual": 0.4,
+        "expected": 0.4,
+        "pass": true
+      },
+      {
+        "name": "cost engine integration",
+        "actual": 165000,
+        "expected": 165000,
+        "pass": true
+      },
+      {
+        "name": "estimate integration",
+        "actual": 70091.75249999999,
+        "expected": 70091.7525,
+        "pass": true
+      },
+      {
+        "name": "source edit changes overall progress",
+        "actual": 0.29000000000000004,
+        "expected": 0.29,
+        "pass": true
+      },
+      {
+        "name": "source edit changes period report",
+        "actual": 35,
+        "expected": 35,
+        "pass": true
+      },
+      {
+        "name": "source edit propagates to schedule completion",
+        "actual": 0.35,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "missing physical verification excludes QA amount",
+        "actual": 25,
+        "expected": 25,
+        "pass": true
+      },
+      {
+        "name": "accepted cannot exceed verified",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "future physical verification excluded",
+        "actual": 25,
+        "expected": 25,
+        "pass": true
+      },
+      {
+        "name": "mismatched unit excluded",
+        "actual": 25,
+        "expected": 25,
+        "pass": true
+      },
+      {
+        "name": "duplicate events excluded",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "archive propagates to cost engine",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "archive propagates to estimating engine",
+        "actual": 34020,
+        "expected": 34020,
+        "pass": true
+      },
+      {
+        "name": "baseline freezes",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "baseline budget edit blocked",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "forecast leaves baseline snapshot unchanged",
+        "actual": "2026-10-16",
+        "expected": "2026-10-16",
+        "pass": true
+      },
+      {
+        "name": "forecast not falsely flagged as baseline edit",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "issued report snapshot immutable under live edit",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "live report recalculates separately",
+        "actual": 0.23,
+        "expected": 0.23,
+        "pass": true
+      },
+      {
+        "name": "document current conflict requires explicit supersession",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "supersession allows new sourced revision",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "historical revision identity not overwritten",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "conflicting current revisions visible",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "QTO revision flags BOQ impact without overwrite",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "BOQ quantity retained",
+        "actual": 12,
+        "expected": 12,
+        "pass": true
+      },
+      {
+        "name": "billing states cannot collapse upward",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "closing NCR without evidence rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "issued metric projection is frozen independently",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "frozen metric survives JSON normalize",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "full JSON round trip",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "import collision does not overwrite",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "live state unchanged before import commit",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "legacy original retained as source snapshot",
+        "actual": 1,
+        "expected": 1,
+        "pass": true
+      },
+      {
+        "name": "malformed backup rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "unsafe image type rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "invalid QTO WBS link rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "quantity snapshot requires explicit unit",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "cross-project backup records rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "curve axis follows calendar time",
+        "actual": 387.2727272727273,
+        "expected": 387.2727272727273,
+        "pass": true
+      },
+      {
+        "name": "settlement reference required for paid quantity",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "warranty dates cannot be reversed",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "blank-start WBS does not require computed inputs",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "source dataset has no fabricated photos",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      }
+    ]
+  },
+  "counts": {
+    "guided": 41,
+    "lifecycle": 46,
+    "total": 87
+  },
+  "browser": {
+    "availability": "Browser plugin not available; existing Playwright/installed Google Chrome",
+    "first_screen_visible_inputs": 2,
+    "work_form_visible_inputs": 3,
+    "daily_core_controls": 3,
+    "daily_typing": "One new quantity when using the preselected work item and prefilled date",
+    "cases": [
+      "Blank start -> work100m -> daily20m -> remaining80m",
+      "Next date10m -> cumulative30m/remaining70m",
+      "Weekly report adds both dates once",
+      "Adding untouched work item leaves reported completion unknown",
+      "Negative quantity blocked without source write",
+      "Enter submits explicit zero and preserves cumulative total",
+      "Invalid report range rejected without changing dates",
+      "Existing synthetic project renders in Simple and Advanced views",
+      "All 56 Advanced register forms open and cancel",
+      "Save HTML Blob -> memory reopen preserves project/records and defaults Simple",
+      "JSON export -> blank -> preview unchanged -> commit restores project",
+      "PDF output in memory with navigation hidden and report visible"
+    ],
+    "viewports": [
+      1440,
+      1080,
+      768,
+      390
+    ],
+    "phone_views": [
+      "HOME",
+      "QuickPlan",
+      "QuickDaily",
+      "QuickReports",
+      "QuickMore"
+    ],
+    "horizontal_document_overflow": false,
+    "observed_page_errors": 0,
+    "observed_console_warnings_or_errors": 0,
+    "observed_http_requests": 0,
+    "screenshots": [
+      "evidence/beginner-desktop.png",
+      "evidence/beginner-mobile.png"
+    ],
+    "method": "All HTML, screenshots, downloads and PDFs in memory; no local project artifacts",
+    "limitations": [
+      "Native save-dialog behavior not tested",
+      "No real beginner acceptance session",
+      "No independent provider inspection",
+      "No multi-browser or capacity test"
+    ]
+  },
+  "artifact": {
+    "bytes": 210178,
+    "sha256": "8ab792aeb7acb987242ab879afaa23db0ad0d2e960d0ede7fc373ebc5e4b4e8a",
+    "git_blob_sha": "be6a5dfc72519b612c10b225f278c92a1dbf5435"
+  }
+}

@@ -1,31 +1,33 @@
-# Current handover — offline milestone complete
+# Current handover — beginner workflow delivered
 
-## Canonical location and completed work
+## Canonical state
 
-GitHub `guinoome/fdg-knowledge-repository`, branch `main`, this project directory is canonical. Do not resume from a local FDG vault. No local checkout or deliverable files were written. Primary artifact: [distribution/FDG-Construction-Lifecycle.html](distribution/FDG-Construction-Lifecycle.html).
+GitHub `guinoome/fdg-knowledge-repository`, branch `main`, project `Projects/Active/FDG Construction Lifecycle Workspace`. Read current GitHub source; do not use a stale local vault. No local project checkout or deliverable files were created.
 
-Premium theme applied to the three standalone tools at `ee4daf2d786a00d14067ff8de5758c7515415998`. Integrated source checkpoints: `4792b5e2fb8c467e1c89ce1fc2204e4fbe7e1e77` and `0d2ef58be4929ce9c4fff2539b8dd23858d4ee21`. Final release commit is the commit containing this handover; inspect GitHub history rather than assuming a local HEAD.
+[Primary HTML](distribution/FDG-Construction-Lifecycle.html) · [Beginner guide](docs/BEGINNER_WORKFLOW.md) · [Validation](evidence/beginner-validation.json). The commit containing this handover is the current release; parent baseline was `d103c8ea3c4da2ad9b0d0cd33f53798f0453df40`.
 
-## Result / validation
+## Latest user direction / result
 
-56 registers,17 stages, shared identity/WBS/evidence, QTO snapshots, progress/reporting, calendar timeline/curve, cost forecasts, controlled baselines/revisions, issued snapshots, photos and portable continuity. 46 engine checks passed; browser CRUD/source propagation, all 56forms, conflict/supersession, save/reopen/JSON and PDF flows verified. Last blank-start test:100 m WBS,30 reported / 20 verified / 10 accepted → 10% report; no errors / network requests.
+User: “it's not beginner friendly, too complicated. less input more output is better.”
 
-Important fixes preserved: missing WBS computed fields no longer block new entries; sample QTO uses valid shared WBS IDs; archived rows excluded from child engines; forecast edits do not alter baseline identity; issued metric projection frozen; S-curve uses calendar spacing; mobile utility access and1080px brand clipping fixed.
+Implemented default Simple view: Overview, Work plan, Daily update, Reports, More tools. Setup shows two fields; work entry three; daily update reuses the item/unit and defaults its date. Remaining work and daily/weekly/monthly reports reuse source entries. Optional inputs are collapsed. All 56 existing forms remain in Advanced tools.
 
-## Reproduction and evidence
+Five core navigation buttons remain visible on 390 px phones in a compact grid; long full-tool navigation is hidden in Simple view. Premium navy/red/gold styling retained.
 
-Use source in `html/`, [build/README.md](build/README.md), [evidence/validation.json](evidence/validation.json), [source-review.json](evidence/source-review.json), and [artifact-integrity.json](evidence/artifact-integrity.json). The final HTML is183569 UTF-8 bytes, SHA256 `b80bb8518cf0a73b6fa4bcfc5a17f48e4ae25f40324e5551726fc26431b19494`, Gitblob `37f1006b3afe9da6ac835094cc81ad0a232bd5fa`.
+## Integrity
 
-Source reads used a pinned GitHub baseline `bab8a20d385c660aa9a57ef0b8c7fc789414c6f8`; no claim is made that all repository files were reread this turn. Current source scope/evidence is explicit.
+Original field/cost/estimate/lifecycle engines, register schemas and JSON format unchanged. New guided-engine.mjs and ui-guided.js write existing WBS/Daily/Milestones records. IDs are generated; real reviewers/approvals are not. Reported equal-item completion is labeled unreviewed; missing input remains unknown; formal accepted progress remains separate. Frozen baseline cannot be bypassed.
 
-## Remaining boundary / risks
+## Validation
 
-Offline workflow milestone complete; no authenticated roles, backend, sync, deployment or commercial/real-project acceptance. No CPM/resource leveling. Save manually; real project data/photos must remain private. Typed reviewer details do not grant authority. Native OS save dialogs were intercepted during tests; actual filesystem download behavior not exercised. No local git working tree existed for this GitHub-only change.
+87 deterministic checks passed: 41 guided + 46 lifecycle. Browser: blank project →100m pipe target →20m daily entry →80m remaining; another10m →30m cumulative/70m remaining; weekly report30m; untouched item keeps global completion unknown. All 56 Advanced forms opened. Negative input blocked; Enter submits valid quantity; invalid report range keeps prior dates. HTML save/reopen and JSON preview/commit restore passed. PDF produced in RAM.1440/1080/768 and390px layouts checked; no observed application errors/warnings/HTTP requests.
 
-## Exact next action
+Native save dialogs were intercepted; actual filesystem save behavior was not tested. No claim of maximum-capacity, multi-browser, independent-provider or real-user acceptance.
 
-Have the owner/planner/QS perform one controlled real-project acceptance run using a private blank copy: approved WBS+units+weights, one reviewed drawing/QTO snapshot, one verified/accepted daily event and one cost forecast, then reconcile DPR and saved/reopened JSON with the source documents. Record reviewer, discrepancies and acceptance decision under this project. Do not rebuild engines or begin accounts/deployment until that review and a new explicit scope.
+Artifact: 210178 UTF-8 bytes; SHA256 `8ab792aeb7acb987242ab879afaa23db0ad0d2e960d0ede7fc373ebc5e4b4e8a`; Git blob `be6a5dfc72519b612c10b225f278c92a1dbf5435`. Source and distribution were rebuilt/compared in RAM.
 
-## Continuity rule
+## Remaining / exact next action
 
-Read this handover, coverage and latest GitHub commit before acting. Resume the acceptance action above; preserve original evidence/legacy source, review import previews, never silently overwrite live project data.
+Have a beginner use a private blank copy to name one project, add two real work items and log one day's quantities, then open the report without coaching. Record time, confusing labels and unnecessary inputs under this project. Preserve current data before replacing a working file. Do not rebuild the engines or add accounts/cloud services for this usability milestone.
+
+Broader accounts/RBAC/cloud sync/deployment/commercial gates remain outside the authorized offline scope. Previous milestone handover retained at docs/handovers/2026-10-16-offline-milestone.md.

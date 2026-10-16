@@ -16,3 +16,7 @@ User reference: FDG Solar Visayas investment-summary image supplied in chat; vie
 The reference is a quotation poster; this product is a construction workflow. Forms, tables, evidence controls, lifecycle navigation and status explanations are deliberate functional adaptations. Native system typography and CSS preserve offline independence. No external font, image service, CDN or network request is required.
 
 Visual evidence contains synthetic example data only. Screenshots and PDFs were generated in RAM and uploaded directly to GitHub; no local project artifacts were saved.
+
+## Beginner revision —2026-10-16
+
+The user found the register-first screen too complicated. The new default has five plain-language choices, two visible setup fields, short work/daily forms and generated outputs. Optional details are collapsed; full lifecycle navigation requires Advanced tools. Phone navigation uses a compact grid so all five choices remain visible. Premium palette is retained. Screenshots: evidence/beginner-desktop.png and evidence/beginner-mobile.png. All images remain synthetic data only.

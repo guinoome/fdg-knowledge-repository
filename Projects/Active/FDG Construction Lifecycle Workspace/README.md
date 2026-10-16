@@ -1,31 +1,39 @@
 # FDG Construction Lifecycle Workspace — Philippines Edition
 
-[**Working single-file HTML**](distribution/FDG-Construction-Lifecycle.html) · [Coverage](CAPABILITY_COVERAGE.md) · [Handover](CURRENT_HANDOVER.md) · [Validation](evidence/validation.json)
+[**Open the working HTML file**](distribution/FDG-Construction-Lifecycle.html) · [Beginner guide](docs/BEGINNER_WORKFLOW.md) · [Handover](CURRENT_HANDOVER.md)
 
-A connected offline workspace for the **FDG Construction Management Professional Toolkit — Philippines Edition**, spanning bidding to warranty. Premium navy, warm red and gold styling follows the user's FDG Solar reference. Reference client details, quote figures and sales claims were not reused.
+**Simple by default. Details when needed.** The same offline construction workspace now starts with five plain-language views: Overview, Work plan, Daily update, Reports and More tools. The premium navy, warm red and gold theme is retained.
 
-## Use
+## Start in three steps
 
-1. Open the raw HTML as an HTML file in a current desktop browser. GitHub's file view displays source; it is not an application host. On a storage-constrained computer, use another authorized device or in-memory preview. No public hosting was enabled.
-2. Begin with Project profile. Use **Load example** only for synthetic training data; **New blank project** removes the current in-memory project after confirmation.
-3. Enter controlled drawings, WBS quantities/units/weights and QTO source references. Record approved time-phased plan points and schedule/cost basis. Freeze a reviewed baseline.
-4. Enter field events once. Reported, physically verified and QA accepted quantities remain separate. WBS progress, schedule completion, period reports and S-curve reuse eligible accepted quantities.
-5. Use QTO → draft BOQ / procurement snapshots; review the snapshots before authorization. Record actual costs, current remaining commitments and ETC. ETC includes commitments once.
-6. Review DPR/WPR/MPR, attention items, testing/turnover and continuation brief. Preserve issued snapshots with actual reviewer and reference.
-7. **Save working HTML or Export JSON before closing.** There is no autosave or cloud sync. Keep real project copies and photos private. Import JSON previews before committing; legacy collisions are refused.
+1. **Name the project.** The report date is prefilled. Location and your name are optional.
+2. **Add the work once.** Enter the item, total quantity and unit. Add a target finish date if useful.
+3. **Log the quantity added today.** The app remembers the work item and unit. Totals, remaining quantities and the report update together.
 
-## Delivered
+Example: add “Install water pipe —100m”. Enter20m today →80m remaining. Enter10m tomorrow →30m reported total and70m remaining. Choose Today, This week or This month to generate the corresponding report. Do not re-enter cumulative totals.
 
-56 editable/searchable registers across 17 lifecycle stages; five work areas; linked QTO/BOQ/procurement; source-derived progress; calendar-based baseline/forecast timeline and S-curve; actual/commitment/ETC cost control; printable records and reports; revision/baseline/issued snapshots; photo evidence; JSON continuity; archive/restore and undo.
+[Desktop preview](evidence/beginner-desktop.png) · [Phone preview](evidence/beginner-mobile.png)
 
-[Desktop preview](evidence/desktop.png) · [Phone preview](evidence/mobile.png)
+## Outputs from the same entries
 
-## Validation and boundaries
+Daily/weekly/monthly working reports, reported quantities, remaining work, per-item target dates, pending-review counts and a site-reported completion summary. A project with untouched work items shows “Not enough data” for overall completion. Different units are never summed.
 
-46 deterministic engine checks passed. Browser flows covered all 56 forms, source-to-report updates, blank-project entry, baseline protection, revision supersession, QTO impact, import conflict, photo/save/reopen, JSON restore and PDF generation. Desktop1440 / 1080 and phone 390 px inspected; zero observed application errors or HTTP(S) requests in tested flows. See evidence for precise coverage.
+The reported summary uses equal item weights and is explicitly unreviewed. It does not establish an approved baseline, QA acceptance, billing or payment. Formal reviewed calculations remain available separately.
 
-This completes the offline HTML milestone. It does not complete the broader Construction OS: no authenticated role enforcement, server audit authority, cloud collaboration, graphical drawing calibration, CPM/resource leveling, deployment, real-project acceptance or commercial release. Typed reviews are declarations, not authenticated signatures. Contract/code compliance must be established for the actual project.
+## Advanced tools
 
-## Maintenance
+All 56 registers across 17 stages remain accessible: tender/contract work, QTO/BOQ, procurement, schedule/cost control, quality, document revisions, testing, turnover, warranty and continuity. **Advanced tools** opens the full existing workspace; **← Simple view** returns to the beginner view. Both views use the same project records. Existing JSON/HTML project data remains compatible.
 
-GitHub is canonical. No local project checkout or output files were created for this milestone. Source is split into engines and five UI files, compiled into one distributable without runtime dependencies. See [build instructions](build/README.md). Replace a working copy only after exporting its current data; older standalone tools remain available.
+## Save and restore
+
+Click **Save project** before closing. This prepares a working HTML copy with your data. More tools contains JSON backup/restore, a synthetic example and New blank project. There is no autosave, browser storage or cloud sync. Keep actual project copies and photos private.
+
+GitHub's HTML file view displays source; it is not an application host. Open the HTML as a file in a current browser on a device where you can keep your working copy. This revision was built/tested entirely in RAM and saved through connected GitHub tools; no local project files or checkout were created.
+
+## Verified scope
+
+87 deterministic checks passed: 41 beginner workflow checks and46 existing lifecycle checks. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
+
+This is a single-user offline tool. Accounts, server authority, cloud collaboration and deployment are outside this milestone. Real-project acceptance and independent provider review remain pending.
+
+GitHub is canonical. Maintain source in html/ and compile using [build instructions](build/README.md). Do not rebuild the existing engines or overwrite original source records to simplify the interface.

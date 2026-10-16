@@ -4,13 +4,13 @@
 - schema / controlSchema from html/schema.json and html/control-schema.json
 - phases from html/phases.json
 - initial from html/blank.json; sample from html/sample.json
-- engines in order: field-engine.mjs, cost-engine.mjs, estimate-engine.mjs, core.mjs
-- uiSources map: ui-shell.js, ui-projections.js, ui-records.js, ui-continuity.js, ui-actions.js
+- engines in order: field-engine.mjs, cost-engine.mjs, estimate-engine.mjs, core.mjs, guided-engine.mjs
+- uiSources map: ui-shell.js, ui-projections.js, ui-records.js, ui-continuity.js, ui-guided.js, ui-actions.js
 - css from html/styles.css; shell from html/shell.html
 
 Call the builder and retain the returned HTML string. No npm package, CDN or installation is needed by the delivered HTML. Do not edit distribution separately from source. The previous theme.css is an additional standalone theme reference; styles.css already includes the lifecycle overrides.
 
-`runLifecycleTests(createLifecycle,schema,controlSchema,sample)` in tests/lifecycle.test.mjs returns named results or throws at a failure. Engines intentionally share a single-script lexical scope after assembly. In a trusted Node validation harness, concatenate those four source strings, replace `export function` with `function`, then evaluate that trusted repository source to retrieve createLifecycle; pass fixtures to runLifecycleTests. Never evaluate user imports as code.
+`runLifecycleTests(createLifecycle,schema,controlSchema,sample)` in tests/lifecycle.test.mjs returns named results or throws at a failure. Engines intentionally share a single-script lexical scope after assembly. In a trusted Node validation harness, concatenate those five source strings, replace `export function` with `function`, then evaluate that trusted repository source to retrieve createLifecycle; pass fixtures to runLifecycleTests. Never evaluate user imports as code.
 
 Example trusted in-memory harness:
 
@@ -23,3 +23,8 @@ const html = buildLifecycleHtml({schema, controlSchema, phases, initial, sample,
 ```
 
 Browser regression: load returned HTML using setContent, open every template, exercise blank entry, shared progress and snapshots, review conflicts/import previews, capture save blobs in memory, reopen saved HTML/JSON and print to an in-memory PDF. Use real 390 px viewport and1440 / 1080 desktop widths. No local project artifact output is required.
+
+
+## Beginner workflow tests
+
+After trusted source assembly, retrieve both createLifecycle and createGuided. Instantiate L=createLifecycle(schema,controlSchema) and G=createGuided(L), then call runGuidedTests(L,G,sample) from tests/guided.test.mjs. The existing 46 lifecycle checks and 41 beginner checks both pass. This repository's HTML builder accepts the five engines in the order above. Simple view is the default and both views use the same state.

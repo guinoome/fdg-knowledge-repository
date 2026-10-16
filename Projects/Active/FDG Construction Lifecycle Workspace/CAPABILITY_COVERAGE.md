@@ -47,3 +47,7 @@ Calendar days, FS dependency checks/overlap/cycle warnings only. No critical-pat
 Authentication, RBAC/authority checks, database/RLS, multi-tenant isolation, cloud/offline conflict synchronization, server audit/signatures, attachment delivery controls, calibrated graphical takeoff, provider deployment and commercial acceptance remain separate milestones. A selectable work focus changes navigation only. No external release or subscription/payment system is implied.
 
 The read canonical FEIS-CM-0902 blueprint, Console, QTO integration and continuity contracts govern this distinction. This milestone is a reviewable field tool, not a declaration that every software/platform gate in the full blueprint has passed.
+
+## Beginner workflow revision —2026-10-16
+
+Simple view now exposes only five everyday views. Two-field setup, three-field work items and quantity-focused daily updates reuse the same registers. Automatic working reports, totals and remaining quantities are available before formal baseline approval. Reported completion is an explicitly unreviewed equal-item average; unknown source data remains unknown. Formal acceptance, billing and authority boundaries above still apply. All 56 registers remain available through Advanced tools. See docs/BEGINNER_WORKFLOW.md and evidence/beginner-validation.json.

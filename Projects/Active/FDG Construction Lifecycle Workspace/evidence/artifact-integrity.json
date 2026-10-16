@@ -1,8 +1,8 @@
 {
   "path": "distribution/FDG-Construction-Lifecycle.html",
-  "sha256": "b80bb8518cf0a73b6fa4bcfc5a17f48e4ae25f40324e5551726fc26431b19494",
-  "gitsha": "37f1006b3afe9da6ac835094cc81ad0a232bd5fa",
-  "bytes": 183569,
-  "initial_state": "blank; sample only loaded explicitly",
+  "bytes": 210178,
+  "sha256": "8ab792aeb7acb987242ab879afaa23db0ad0d2e960d0ede7fc373ebc5e4b4e8a",
+  "git_blob_sha": "be6a5dfc72519b612c10b225f278c92a1dbf5435",
+  "initial_state": "blank with Simple view; example loaded only explicitly",
   "source_builder": "build/build-html.mjs"
 }

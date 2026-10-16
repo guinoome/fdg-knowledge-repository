@@ -13,6 +13,7 @@ function bindView(){
 }
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.guidedTool){advancedMode=true;navigation(b.dataset.guidedTool);return;}
  if(b.dataset.go){navigation(b.dataset.go);return;}
  if(b.dataset.area){navigation(b.dataset.area);return;}
  if(b.dataset.open){openRecord(b.dataset.record,b.dataset.open);return;}
@@ -35,6 +36,7 @@ $('#load-example').onclick=()=>{if(!confirm('Replace current work with the synth
 $('#new-project').onclick=()=>{if(!confirm('Start a blank project? Save the current workspace first.'))return;mutate('Start blank project',()=>state=L.blank(),true);navigation('Setup');};
 $('#undo').onclick=()=>{if(!undo.length)return;state=L.normalize(JSON.parse(undo.pop()));state.audit.push({at:new Date().toISOString(),action:'Undo last session record change',register:view,id:'',detail:'Prior session state restored'});dirty=true;render();notice('Last session change restored.');};
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+$('#mode-toggle').onclick=()=>setMode(!advancedMode);
 render();
 
 function summaryMetrics(m){return metric('QA/QC accepted progress',pct(m.field.actual),'Derived from reviewed source quantities')+metric('Approved plan snapshot',pct(m.field.plan),'Explicit WBS basis at as-of')+metric('Forecast at completion',money(m.controls.eac),'Actual + ETC; commitments included once')+metric('Attention items',m.attention.length,'Overdue / quality / closeout actions');}
