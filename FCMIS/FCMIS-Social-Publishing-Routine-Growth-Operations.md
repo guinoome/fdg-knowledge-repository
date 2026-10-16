@@ -1,5 +1,5 @@
 # FCMIS — Canonical Social Publishing Routine and Growth Operations
-Status: APPROVED DESIGN PROPOSAL / NOT DEPLOYED
+Status: USER-REQUESTED CADENCE / NOT DEPLOYED
 Date: 2026-10-16
 Owner: FDG Creative & Marketing Intelligence System
 Related: [[FCMIS/FCMIS-Viral-Hook-Visual-Signature-Publishing-Intelligence]]
@@ -15,8 +15,8 @@ Thursday: spot-the-defect inspection challenge.
 Friday: failure mechanism / root-cause animation.
 Saturday: 60-second practical MEP lesson.
 Sunday: highlights, polls, audience question response.
-Target one master video per day, then repurpose for eligible Facebook Reels, Instagram Reels, TikTok, YouTube Shorts, LinkedIn and FDG websites. Long-form and client-specific videos only when justified by evidence and capacity.
-07:00 topic radar; 09:00 scripts and storyboards; 12:00 technical/creative QA; 18:00 tentative posting slot; 21:00 performance and lead review. These are proposed operating slots, not currently scheduled tasks. Test platform-specific posting times empirically.
+Target five distinct master content packages per day, then repurpose for eligible Facebook Reels, Instagram Reels, TikTok, YouTube Shorts, LinkedIn and FDG websites. Long-form and client-specific videos only when justified by evidence and capacity.
+Publishing target per active eligible platform: at least five posts daily, initial test slots 07:00, 10:00, 13:00, 16:00, 20:00 Asia/Manila. For six active platforms, this is 30 daily publications and 900 in 30 days, based on five master content packages per day with platform-specific variants. These are capacity targets, not evidence of publication. Platform policies, format suitability and analytics may require adaptive scheduling rather than blindly forcing five videos daily. Production runs as a rolling queue: 07:00 trend scan, 09:00 script/storyboard batch, 12:00 engineering and creative QA, 21:00 performance review. Maintain a 3–7 day preapproved content buffer; scheduling and production are decoupled. Times are proposals, not currently scheduled tasks. Test platform-specific posting times empirically.
 
 ## Video formats
 10 seconds: visual hook and payoff.
@@ -44,10 +44,10 @@ Secondary: retention, completion, saves, shares, followers, clicks and productio
 
 ## Roadmap
 Slice 1: one reviewed 30-second challenge and two hook variants; export ready, manually posted.
-Slice 2: content ledger, seven-day batch workflow and approval queue.
+Slice 2: content ledger, seven-day batch workflow, approval queue and 3–7 day inventory buffer.
 Slice 3: first authorized platform adapter, scheduled publishing, failure recovery and receipts.
 Slice 4: analytics, controlled hook tests and lead attribution.
-Slice 5: additional platforms, client isolation, white-label packages, monetization.
+Slice 5: ramp to five daily eligible publications per platform after proving API access, review throughput, quality, account safety and economics; add client isolation, white-label packages, monetization.
 Maintain local-first/offline-capable archives where practical, agent-neutral contracts, replaceable providers and documented handover.
 ## Repository integration
 This document consolidates publishing cadence and operational governance with the viral-hook and visual-signature architecture. Cross-link from the future FCMIS master index once its canonical location and surrounding taxonomy are audited. Do not move or overwrite other authors' files without review.
