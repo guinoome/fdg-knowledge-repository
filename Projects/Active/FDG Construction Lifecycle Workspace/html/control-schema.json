@@ -1,0 +1,166 @@
+{
+  "tasks": {
+    "title": "Activities & baseline",
+    "fields": [
+      "id",
+      "wbs",
+      "name",
+      "owner",
+      "baselineStart",
+      "baselineFinish",
+      "forecastStart",
+      "forecastFinish",
+      "actualStart",
+      "actualFinish",
+      "predecessors",
+      "budget",
+      "etc",
+      "forecastDate",
+      "forecastSource",
+      "source",
+      "revision"
+    ],
+    "numeric": [
+      "budget",
+      "etc",
+      "revision"
+    ],
+    "dates": [
+      "baselineStart",
+      "baselineFinish",
+      "forecastStart",
+      "forecastFinish",
+      "actualStart",
+      "actualFinish",
+      "forecastDate"
+    ],
+    "shown": [
+      "id",
+      "name",
+      "owner",
+      "baselineFinish",
+      "forecastFinish",
+      "budget",
+      "etc"
+    ]
+  },
+  "updates": {
+    "title": "Progress reviews",
+    "fields": [
+      "id",
+      "task",
+      "date",
+      "reportedPct",
+      "reviewedPct",
+      "state",
+      "status",
+      "blocker",
+      "reviewer",
+      "reviewDate",
+      "source",
+      "revision"
+    ],
+    "numeric": [
+      "reportedPct",
+      "reviewedPct",
+      "revision"
+    ],
+    "dates": [
+      "date",
+      "reviewDate"
+    ],
+    "shown": [
+      "id",
+      "task",
+      "date",
+      "reportedPct",
+      "reviewedPct",
+      "state",
+      "status"
+    ]
+  },
+  "costs": {
+    "title": "Actual cost ledger",
+    "fields": [
+      "id",
+      "task",
+      "date",
+      "type",
+      "amount",
+      "owner",
+      "source",
+      "revision"
+    ],
+    "numeric": [
+      "amount",
+      "revision"
+    ],
+    "dates": [
+      "date"
+    ],
+    "shown": [
+      "id",
+      "task",
+      "date",
+      "type",
+      "amount",
+      "source"
+    ]
+  },
+  "commitments": {
+    "title": "Remaining commitments",
+    "fields": [
+      "id",
+      "task",
+      "contract",
+      "date",
+      "remaining",
+      "owner",
+      "source",
+      "revision"
+    ],
+    "numeric": [
+      "remaining",
+      "revision"
+    ],
+    "dates": [
+      "date"
+    ],
+    "shown": [
+      "id",
+      "task",
+      "contract",
+      "date",
+      "remaining",
+      "source"
+    ]
+  },
+  "constraints": {
+    "title": "Constraints & actions",
+    "fields": [
+      "id",
+      "task",
+      "due",
+      "status",
+      "description",
+      "action",
+      "owner",
+      "source",
+      "revision"
+    ],
+    "numeric": [
+      "revision"
+    ],
+    "dates": [
+      "due"
+    ],
+    "shown": [
+      "id",
+      "task",
+      "due",
+      "status",
+      "description",
+      "owner"
+    ]
+  }
+}

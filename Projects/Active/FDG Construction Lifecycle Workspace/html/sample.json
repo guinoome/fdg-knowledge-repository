@@ -563,6 +563,13 @@
         "boq": "CONC-01",
         "wbs": "Q-001",
         "description": "Concrete slab",
+        "drawing_id": null,
+        "drawing_revision": null,
+        "calibration_ref": null,
+        "measurement_ref": null,
+        "spec_ref": null,
+        "discipline": null,
+        "system": null,
         "method": "volume",
         "unit": "m3",
         "length": 10,
@@ -593,6 +600,13 @@
         "boq": "PIPE-01",
         "wbs": "Q-002",
         "description": "Pipe supply and installation",
+        "drawing_id": null,
+        "drawing_revision": null,
+        "calibration_ref": null,
+        "measurement_ref": null,
+        "spec_ref": null,
+        "discipline": null,
+        "system": null,
         "method": "manual",
         "unit": "m",
         "length": null,
@@ -907,7 +921,9 @@
         "review_date": "2026-10-12",
         "evidence_ref": "DEMO-CURVE-APPROVAL",
         "revision": 1,
-        "source_ref": "DEMO-CURVE-BASIS"
+        "source_ref": "DEMO-CURVE-BASIS",
+        "import_ref": null,
+        "_archived": false
       },
       {
         "id": "CURVE-WBS-001-1",
@@ -922,7 +938,9 @@
         "review_date": "2026-10-12",
         "evidence_ref": "DEMO-CURVE-APPROVAL",
         "revision": 1,
-        "source_ref": "DEMO-CURVE-BASIS"
+        "source_ref": "DEMO-CURVE-BASIS",
+        "import_ref": null,
+        "_archived": false
       },
       {
         "id": "CURVE-WBS-001-2",
@@ -937,7 +955,9 @@
         "review_date": "2026-10-12",
         "evidence_ref": "DEMO-CURVE-APPROVAL",
         "revision": 1,
-        "source_ref": "DEMO-CURVE-BASIS"
+        "source_ref": "DEMO-CURVE-BASIS",
+        "import_ref": null,
+        "_archived": false
       },
       {
         "id": "CURVE-WBS-002-0",
@@ -952,7 +972,9 @@
         "review_date": "2026-10-12",
         "evidence_ref": "DEMO-CURVE-APPROVAL",
         "revision": 1,
-        "source_ref": "DEMO-CURVE-BASIS"
+        "source_ref": "DEMO-CURVE-BASIS",
+        "import_ref": null,
+        "_archived": false
       },
       {
         "id": "CURVE-WBS-002-1",
@@ -967,7 +989,9 @@
         "review_date": "2026-10-12",
         "evidence_ref": "DEMO-CURVE-APPROVAL",
         "revision": 1,
-        "source_ref": "DEMO-CURVE-BASIS"
+        "source_ref": "DEMO-CURVE-BASIS",
+        "import_ref": null,
+        "_archived": false
       },
       {
         "id": "CURVE-WBS-002-2",
@@ -982,7 +1006,9 @@
         "review_date": "2026-10-12",
         "evidence_ref": "DEMO-CURVE-APPROVAL",
         "revision": 1,
-        "source_ref": "DEMO-CURVE-BASIS"
+        "source_ref": "DEMO-CURVE-BASIS",
+        "import_ref": null,
+        "_archived": false
       }
     ],
     "Schedule": [
@@ -1129,5 +1155,6 @@
   "locked": false,
   "baselines": [],
   "reports": [],
+  "imports": [],
   "media": []
 }
