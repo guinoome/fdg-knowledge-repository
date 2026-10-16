@@ -41,3 +41,7 @@ GitHub is canonical. Maintain source in html/ and compile using [build instructi
 ## Related focused construction tool
 
 [FDG Construction Procurement and Materials Control](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Procurement%20and%20Materials%20Control/README.md) provides an offline order/delivery/issue/return ledger and generated stock/shortage reports. Import this workspace's JSON to preview draft Procurement demand with retained source IDs. It does not live-sync, copy orders/receipts automatically or infer installed/accepted progress.
+
+## Client-first adoption and commercial testing — 2026-10-16
+
+To transfer the founder's **less input → more output → useful report → easy save/reopen → verified client value** requirement to coding agents, use the [client-first activation and agent handover](docs/CLIENT_FIRST_ACTIVATION_AND_AGENT_HANDOVER_2026-10-16.md) and [GitHub issue #5](https://github.com/guinoome/fdg-knowledge-repository/issues/5). This is the **next field-acceptance and commercial-readiness work item**, not a request to rebuild the current working HTML or to add unapproved payments/cloud services. Native real-user adoption, sale, and remote deployment remain separately gated.
