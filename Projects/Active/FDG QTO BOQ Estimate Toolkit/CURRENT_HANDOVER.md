@@ -13,3 +13,8 @@ Sources fully read: FEIS-CM-0100 construction catalog and FBIS-BP-003 portfolio,
 Next exact milestone: have a qualified estimator check one real, private measurement/rate scenario and review printed output and source basis. Patch only demonstrated defects. Independent cross-provider review unverified. User asked to continue other construction projects; next candidate is scheduling/cost controls, pending direction. The separate Construction OS staging scope remains unchanged. No deployment/sales/outreach/payments.
 
 Rebuild: build/build-html.mjs exports buildEstimateHtml with explicit {initial,sample,core,app,css,shell}. No dependencies/network/filesystem writes in the builder. GitHub remains authoritative. Preserve related working construction template at Projects/Active/FDG Construction Management Professional Toolkit/distribution/FDG-Construction-Working-Template.html.
+
+
+## Premium theme — 2026-10-16
+
+Founder-supplied navy/red/gold reference applied to CSS and working HTML. Existing JavaScript, schemas and records preserved. Chrome sample calculations unchanged;390px no document overflow. Theme uses no external assets/fonts and excludes quote client details. Lifecycle integration is a separate ongoing work package; do not confuse file toolkit coverage with the full platform’s permission/sync/deployment gates.

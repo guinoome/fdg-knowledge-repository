@@ -52,3 +52,8 @@ Francis next requested other construction projects. An optional question is pend
 ## Next construction project delivered — 2026-10-16
 
 QTO/BOQ estimating was selected as the next bounded project under Francis's request to continue other construction projects. It is delivered at Projects/Active/FDG QTO BOQ Estimate Toolkit/distribution/FDG-QTO-BOQ-Working-Template.html, with independent project source/tests/evidence/handover.18 estimating tests and browser edit/restore/save/reopen/mobile/PDF checks pass. The original construction working HTML also received a clean-load console check with no errors or warnings. Continue from each project's current handover. Next candidate: scheduling/cost controls, pending direction; no full Construction OS build implied.
+
+
+## Premium theme — 2026-10-16
+
+Founder-supplied navy/red/gold reference applied to CSS and working HTML. Existing JavaScript, schemas and records preserved. Chrome sample calculations unchanged;390px no document overflow. Theme uses no external assets/fonts and excludes quote client details. Lifecycle integration is a separate ongoing work package; do not confuse file toolkit coverage with the full platform’s permission/sync/deployment gates.

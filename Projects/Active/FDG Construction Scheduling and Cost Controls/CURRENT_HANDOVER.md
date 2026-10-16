@@ -23,3 +23,8 @@ build/build-html.mjs takes explicit {initial,sample,schema,core,app,css,shell}; 
 
 ## Organizational learning
 Cost-to-complete includes remaining commitments: explicitly test non-double-counting, snapshot precedence and unmapped-cost rejection. Baseline freezes/revisions should be protected from generic undo. Preserve these executable checks and source receipts for successor tools. The file remains editable/manual, not authenticated/tamper-proof.
+
+
+## Premium theme — 2026-10-16
+
+Founder-supplied navy/red/gold reference applied to CSS and working HTML. Existing JavaScript, schemas and records preserved. Chrome sample calculations unchanged;390px no document overflow. Theme uses no external assets/fonts and excludes quote client details. Lifecycle integration is a separate ongoing work package; do not confuse file toolkit coverage with the full platform’s permission/sync/deployment gates.
