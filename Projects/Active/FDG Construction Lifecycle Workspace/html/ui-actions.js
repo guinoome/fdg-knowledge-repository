@@ -13,6 +13,7 @@ function bindView(){
 }
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.reportSource){recordSelection={table:'Daily',id:b.dataset.reportSource};navigation('Record');return;}
  if(b.dataset.guidedTool){advancedMode=true;navigation(b.dataset.guidedTool);return;}
  if(b.dataset.go){navigation(b.dataset.go);return;}
  if(b.dataset.area){navigation(b.dataset.area);return;}

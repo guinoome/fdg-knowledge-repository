@@ -1,9 +1,9 @@
 {
-  "path": "distribution/FDG-Construction-Lifecycle.html",
-  "bytes": 225732,
-  "sha256": "f0fa441682c04080f9aab48e369b34e5514065aa3e2b831ab0af7f8398fad162",
-  "git_blob_sha": "7d970b461fe5975dc70d07b0c5803358e1b4043e",
-  "initial": "blank, Simple view",
-  "workPackage": "WP01",
-  "builder": "build/build-html.mjs"
+  "bytes": 237750,
+  "sha256": "c8ea99b680862a22b061e828162364d54e8a1ff7a62c7ce2e67b505ca8d7b4fa",
+  "demoBytes": 239191,
+  "demoSha256": "0fcfbedd924271bcf88ee53f07602dc9c705665214212cb29d5f6fbcab17c1bb",
+  "gitBlob": "426a04acf16f62119e52ee883f4529a354641d47",
+  "demoGitBlob": "3c4e9fd3e6e2b7b868c03d3af3f636f9dbf8cef8",
+  "baseline": "0a764d8e69c1c573da6b545c8e778cffe5497523"
 }

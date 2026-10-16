@@ -1,0 +1,35 @@
+{
+  "baseline": "0a764d8e69c1c573da6b545c8e778cffe5497523",
+  "changedSource": [
+    "html/core.mjs",
+    "html/guided-engine.mjs",
+    "html/styles.css",
+    "html/ui-actions.js",
+    "html/ui-guided.js",
+    "html/ui-projections.js",
+    "tests/report.test.mjs"
+  ],
+  "unchanged": [
+    "html/field-engine.mjs",
+    "html/cost-engine.mjs",
+    "html/estimate-engine.mjs",
+    "html/schema.json",
+    "html/control-schema.json",
+    "build/build-html.mjs"
+  ],
+  "canonicalSources": [
+    "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0000 - Construction Management Master Index.md",
+    "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0002 - Capture Once Reporting and Progress Architecture.md",
+    "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map.md"
+  ],
+  "selfReview": [
+    "all user record text escaped",
+    "read-only report projections",
+    "existing preserved projections retain values",
+    "no schema/JSON version change",
+    "source period vs cutoff explicit",
+    "no added runtime dependencies/network",
+    "scoped report and long-name fixes"
+  ],
+  "independentProvider": "NOT RUN; Claudex skill absent; no installation per task constraints"
+}

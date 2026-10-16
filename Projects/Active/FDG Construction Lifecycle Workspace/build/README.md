@@ -32,3 +32,7 @@ After trusted source assembly, retrieve both createLifecycle and createGuided. I
 ## WP01 Overview checks
 
 Same five engines/six UI sources. tests/overview.test.mjs exports runOverviewTests(projectOverview,L,G,sample). Extract trusted ui-guided.js helper between `// Overview is a read-only` and `function renderQuickHome()`, evaluate that helper with L/G arguments and return overviewProjection. No DOM calls execute for this pure helper test. Original46/41 plus34 Overview checks =121 pass. Never evaluate user JSON as code. Source recovery was verified by exact rebuilt HTML equality; see evidence/wp01/.
+
+## WP02 reports
+
+Same builder and five engines. tests/report.test.mjs exports runReportTests(L,G,sample). Run alongside lifecycle/guided/Overview:178 checks total. In a trusted RAM harness strip only leading module declarations with /^export function/gm; replacing every matching string would also alter the builder's own engine-assembly literal. Never evaluate user JSON as code.

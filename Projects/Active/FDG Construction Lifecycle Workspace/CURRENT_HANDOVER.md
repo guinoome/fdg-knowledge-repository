@@ -1,33 +1,29 @@
-# Current handover — WP01 completed; pending real-user acceptance
+# Current handover — WP02 reports completed; WP03 next
 
-Date:2026-10-16. GitHub `guinoome/fdg-knowledge-repository`, main. Tested baseline `2a2aca2bf19e9a47d8ef3829b48e59bffce0ee1e`; integration parent `332f7642916fccc5f76aeb93f3b5b02adf97f966`. The commit containing this handover is the WP01 release.
+Date: 2026-10-16. Canonical GitHub `guinoome/fdg-knowledge-repository`, main. Code baseline `0a764d8e69c1c573da6b545c8e778cffe5497523`; publication parent `78e4915d3bd39e4737629ebc58b11c63dcf790a3`. The commit containing this handover is the WP02 milestone. No local project checkout/output.
 
-[Working HTML](distribution/FDG-Construction-Lifecycle.html) · [Actual-app synthetic demo](evidence/wp01/working-demo.html) · [Screens/test evidence/PDF](evidence/wp01/) · [Package result](docs/work-packages/WP01_PREMIUM_PROJECT_OVERVIEW.md).
+[Working HTML](distribution/FDG-Construction-Lifecycle.html) · [Synthetic actual-app demo](evidence/wp02/working-demo.html) · [Screens, PDF and tests](evidence/wp02/) · [WP02 result](docs/work-packages/WP02_REPORTS_AND_PRINT.md).
 
-## Result / changed scope
+## Completed
 
-One bounded WP01: existing Overview now has translucent live metrics, cutoff/latest eligible work date, review queue, source detail and original-record drill-through, recorded target/actions and explicit unknown cost/QA. Mixed-item quantities stay separate; over-target quantities retained; archived/duplicate/future/unit-invalid sources excluded with reasons.
+Reused WP01 and existing five-view UI/56 registers. Simple report now has explicit project/period/cutoff/revision, per-item quantities with units, original source IDs/dates/author/review/verification/evidence, excluded-record reasons and original-record drill-through. Quality/safety notes appear only from dated original records. Source trail is shared by detailed and preserved reports; preserved issues have no live editing links.
 
-One tested guided-engine predicate fixed: Accepted declaration without physical verification stays in pending count. No other engine/schema/JSON format, simple forms, report calculations, freeze/revision controls or other modules replaced.
+Period absence is Not reported; explicit zero remains 0 with unit. Detailed/new issued report projections retain null for absent reported/physical/accepted quantities. Verification before event date is excluded. New report issues reject periods beyond cutoff. Existing issued projections remain preserved. Long project names now wrap on phone. Other calculation engines/schema/JSON version unchanged.
 
-## Verification
+## Verified
 
-121 checks pass (46 lifecycle +41 beginner +34 Overview). Actual browser100m,+20/+10 ->30m/70m; live+5 ->35m/65m then undo; source IDs/dates/units; keyboard; missing/mixed/archived/duplicate/future/over-target states; negative/non-numeric rejected;56 expert forms; Save HTML/reopen and JSON preview/restore; day10/week30/month30; light A4 PDF72085bytes. Desktop1440/1080/768 and390px phone, source/original record/long names: no body overflow; final offline runs0 relevant errors/warnings/HTTP requests.
+178 executable checks pass:46 lifecycle +41 beginner +34 Overview +57 report.33 actual Chrome browser assertions: fresh100m/+20/+10 →30m/70m; day10/week30/month30; Monday/Sunday and cross-month ranges; source drill and keyboard; missing vs explicit0; issued report unchanged after+5; HTML save/reopen and JSON preview/commit; escaped source text;390/768/1080/1440 layouts; white A4 PDF78508bytes with hidden controls/source IDs. Final runs0 relevant errors/warnings/network requests. Individual results: evidence/wp02/validation.json.
 
-Tool session reset during final save. Exact already-uploaded artifacts were recovered; source rebuilt byte-identically and121 tests rerun. Temporary RAM preview ended with that runtime; durable working demo is on GitHub. No local project output/checkouts.
+## Artifact
 
-## Integrity
+Primary 237750 UTF-8 bytes; SHA256 `c8ea99b680862a22b061e828162364d54e8a1ff7a62c7ce2e67b505ca8d7b4fa`; Git blob `426a04acf16f62119e52ee883f4529a354641d47`. Synthetic demo 239191 bytes; SHA256 `0fcfbedd924271bcf88ee53f07602dc9c705665214212cb29d5f6fbcab17c1bb`. Saved directly through connected GitHub tools. Screens are actual application renders.
 
-Primary HTML225732bytes; SHA256 `f0fa441682c04080f9aab48e369b34e5514065aa3e2b831ab0af7f8398fad162`; Git blob `7d970b461fe5975dc70d07b0c5803358e1b4043e`. Demo227582bytes; SHA256 `34aa9c536b1dff7754909c66b317585538acbfbba966763847ee0910ec4523d3`. See manifest/evidence for all source paths.
+## Current state / limits
 
-## Client-first coordination retained
+Real novice/qualified project acceptance PENDING; independent provider/Claudex NOT RUN (skill absent; no installation under no-local-output constraint). Native OS save dialog and native print preview NOT RUN; actual UI save Blobs/reopen and Chromium PDF tested. One installed Chrome; capacity/multi-editor/diverse browsers not tested. No auth/RBAC/cloud sync/payments/hosting/commercial release. GitHub HTML view displays source. Any localhost preview is RAM-only and expires with runtime. Client-first capsule and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) preserved/open; no actual client/payment acceptance claimed.
 
-Concurrent [client-first capsule](docs/CLIENT_FIRST_ACTIVATION_AND_AGENT_HANDOVER_2026-10-16.md) and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) remain preserved/open. Real-client acceptance PENDING; customer payment NOT EVIDENCED; sale/release authorization NOT PROVIDED. Automated tests are not client acceptance. Previous complete handover retained at docs/handovers/2026-10-16-beginner-workflow-pre-WP01.md.
+## Continuity
 
-## Limits / review
+Previous complete WP01 handover: [archive](docs/handovers/2026-10-16-WP01-pre-WP02.md). Concurrent FCMIS-only commits through publication parent preserved. No unrelated edits.
 
-Self review/executable tests only; independent provider/Claudex NOT RUN. No real novice/qualified project acceptance, native OS save-dialog, capacity or multi-browser test. No tools installed, new local project artifacts, auth/RBAC/cloud sync/payments/public hosting or commercial promotion. OS ledger changes only scoped offline evidence.
-
-## Exact next action
-
-Next bounded code proposal: **WP02 reports/source presentation and print acceptance**—inspect compact event ID/date/unit/review index, add only if missing, test period boundaries and immutable issued reports. Do not auto-start QA/cloud packages. Collect real participant evidence under issue#5 when available before any client/commercial acceptance claim.
+Exact next action: Inspect WP03 inspection → corrective action using existing QAQC/NCR/Evidence records. Reproduce one linked finding/repair/verification workflow; implement only the demonstrated gap. No cloud identity or automatic acceptance.

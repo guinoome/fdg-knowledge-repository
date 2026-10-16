@@ -12,7 +12,7 @@
 
 Example: add “Install water pipe —100m”. Enter20m today →80m remaining. Enter10m tomorrow →30m reported total and70m remaining. Choose Today, This week or This month to generate the corresponding report. Do not re-enter cumulative totals.
 
-[Current desktop](evidence/wp01/after-desktop.png) · [Current phone](evidence/wp01/after-mobile.png) · [Before/after evidence](evidence/wp01/)
+[Current report desktop](evidence/wp02/after-desktop.png) · [Current report phone](evidence/wp02/after-mobile.png) · [Before/after evidence](evidence/wp01/)
 
 ## Outputs from the same entries
 
@@ -32,7 +32,7 @@ GitHub's HTML file view displays source; it is not an application host. Open the
 
 ## Verified scope
 
-121 checks passed:46 lifecycle +41 beginner +34 Overview. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
+178 checks passed:46 lifecycle +41 beginner +34 Overview +57 report. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [WP02 validation](evidence/wp02/validation.json), [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
 
 This is a single-user offline tool. Accounts, server authority, cloud collaboration and deployment are outside this milestone. Real-project acceptance and independent provider review remain pending.
 
@@ -49,3 +49,7 @@ To transfer the founder's **less input → more output → useful report → eas
 ## WP01 — live Overview
 
 Translucent live quantities, cutoff/latest source date, pending reviews, recorded targets/actions and original-record drill-through now appear in the existing Overview. Unknown QA/cost stays unknown; mixed-item units stay separate. [Try a populated synthetic working HTML](evidence/wp01/working-demo.html), which is the same real application initialized with test records. [Result, evidence and handover](docs/work-packages/WP01_PREMIUM_PROJECT_OVERVIEW.md). Scope is tested offline UI; no client/deployment/commercial acceptance asserted.
+
+## WP02 — source-linked reports
+
+Reports now show project/period/cutoff, quantities with units, source ID/date/author/review/evidence and original-record navigation. No-entry period is Not reported; entered zero remains0. Detailed/new issued projections retain unknown verification/acceptance. [Synthetic working demo](evidence/wp02/working-demo.html) · [Result/evidence](docs/work-packages/WP02_REPORTS_AND_PRINT.md). Native OS save/print dialogs and real-user acceptance remain pending.

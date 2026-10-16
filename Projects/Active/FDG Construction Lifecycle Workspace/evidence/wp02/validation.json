@@ -1,0 +1,1014 @@
+{
+  "date": "2026-10-16",
+  "workPackage": "WP02",
+  "baseline": "0a764d8e69c1c573da6b545c8e778cffe5497523",
+  "publicationParent": "78e4915d3bd39e4737629ebc58b11c63dcf790a3",
+  "tests": {
+    "lifecycle": [
+      {
+        "name": "56 register templates",
+        "actual": 56,
+        "expected": 56,
+        "pass": true
+      },
+      {
+        "name": "all17 lifecycle stages",
+        "actual": 17,
+        "expected": 17,
+        "pass": true
+      },
+      {
+        "name": "source accepted progress",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "approved plan snapshot",
+        "actual": 0.4,
+        "expected": 0.4,
+        "pass": true
+      },
+      {
+        "name": "cost engine integration",
+        "actual": 165000,
+        "expected": 165000,
+        "pass": true
+      },
+      {
+        "name": "estimate integration",
+        "actual": 70091.75249999999,
+        "expected": 70091.7525,
+        "pass": true
+      },
+      {
+        "name": "source edit changes overall progress",
+        "actual": 0.29000000000000004,
+        "expected": 0.29,
+        "pass": true
+      },
+      {
+        "name": "source edit changes period report",
+        "actual": 35,
+        "expected": 35,
+        "pass": true
+      },
+      {
+        "name": "source edit propagates to schedule completion",
+        "actual": 0.35,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "missing physical verification excludes QA amount",
+        "actual": 25,
+        "expected": 25,
+        "pass": true
+      },
+      {
+        "name": "accepted cannot exceed verified",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "future physical verification excluded",
+        "actual": 25,
+        "expected": 25,
+        "pass": true
+      },
+      {
+        "name": "mismatched unit excluded",
+        "actual": 25,
+        "expected": 25,
+        "pass": true
+      },
+      {
+        "name": "duplicate events excluded",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "archive propagates to cost engine",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "archive propagates to estimating engine",
+        "actual": 34020,
+        "expected": 34020,
+        "pass": true
+      },
+      {
+        "name": "baseline freezes",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "baseline budget edit blocked",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "forecast leaves baseline snapshot unchanged",
+        "actual": "2026-10-16",
+        "expected": "2026-10-16",
+        "pass": true
+      },
+      {
+        "name": "forecast not falsely flagged as baseline edit",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "issued report snapshot immutable under live edit",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "live report recalculates separately",
+        "actual": 0.23,
+        "expected": 0.23,
+        "pass": true
+      },
+      {
+        "name": "document current conflict requires explicit supersession",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "supersession allows new sourced revision",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "historical revision identity not overwritten",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "conflicting current revisions visible",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "QTO revision flags BOQ impact without overwrite",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "BOQ quantity retained",
+        "actual": 12,
+        "expected": 12,
+        "pass": true
+      },
+      {
+        "name": "billing states cannot collapse upward",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "closing NCR without evidence rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "issued metric projection is frozen independently",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "frozen metric survives JSON normalize",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "full JSON round trip",
+        "actual": 0.35000000000000003,
+        "expected": 0.35,
+        "pass": true
+      },
+      {
+        "name": "import collision does not overwrite",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "live state unchanged before import commit",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "legacy original retained as source snapshot",
+        "actual": 1,
+        "expected": 1,
+        "pass": true
+      },
+      {
+        "name": "malformed backup rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "unsafe image type rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "invalid QTO WBS link rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "quantity snapshot requires explicit unit",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "cross-project backup records rejected",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "curve axis follows calendar time",
+        "actual": 387.2727272727273,
+        "expected": 387.2727272727273,
+        "pass": true
+      },
+      {
+        "name": "settlement reference required for paid quantity",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "warranty dates cannot be reversed",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "blank-start WBS does not require computed inputs",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "source dataset has no fabricated photos",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      }
+    ],
+    "guided": [
+      {
+        "name": "project ID generated outside the form and stored once",
+        "pass": true
+      },
+      {
+        "name": "daily report dates initialized",
+        "pass": true
+      },
+      {
+        "name": "no reviewer invented",
+        "pass": true
+      },
+      {
+        "name": "empty project name rejected",
+        "pass": true
+      },
+      {
+        "name": "invalid setup date rejected",
+        "pass": true
+      },
+      {
+        "name": "one work entry creates shared WBS",
+        "pass": true
+      },
+      {
+        "name": "unit remembered",
+        "pass": true
+      },
+      {
+        "name": "optional target date creates linked draft milestone",
+        "pass": true
+      },
+      {
+        "name": "approval weight not fabricated",
+        "pass": true
+      },
+      {
+        "name": "approved plan not fabricated",
+        "pass": true
+      },
+      {
+        "name": "no progress before any update",
+        "pass": true
+      },
+      {
+        "name": "zero working target rejected",
+        "pass": true
+      },
+      {
+        "name": "unit missing rejected",
+        "pass": true
+      },
+      {
+        "name": "daily identity reused",
+        "pass": true
+      },
+      {
+        "name": "daily unit reused",
+        "pass": true
+      },
+      {
+        "name": "entered quantity remains reported",
+        "pass": true
+      },
+      {
+        "name": "no automatic acceptance",
+        "pass": true
+      },
+      {
+        "name": "no invented physical verification",
+        "pass": true
+      },
+      {
+        "name": "draft status maintained",
+        "pass": true
+      },
+      {
+        "name": "remaining work derived",
+        "pass": true
+      },
+      {
+        "name": "reported completion derived",
+        "pass": true
+      },
+      {
+        "name": "review pending count",
+        "pass": true
+      },
+      {
+        "name": "approved progress stays unknown",
+        "pass": true
+      },
+      {
+        "name": "incremental updates accumulate once",
+        "pass": true
+      },
+      {
+        "name": "new report date carried forward",
+        "pass": true
+      },
+      {
+        "name": "today period uses new date",
+        "pass": true
+      },
+      {
+        "name": "earlier entry not overwritten",
+        "pass": true
+      },
+      {
+        "name": "unknown item prevents global invented zero",
+        "pass": true
+      },
+      {
+        "name": "explicit zero is known data",
+        "pass": true
+      },
+      {
+        "name": "mixed units use ratios not quantity sums",
+        "pass": true
+      },
+      {
+        "name": "over-target quantity retained",
+        "pass": true
+      },
+      {
+        "name": "remaining does not become negative",
+        "pass": true
+      },
+      {
+        "name": "negative daily input rejected",
+        "pass": true
+      },
+      {
+        "name": "blank daily input rejected",
+        "pass": true
+      },
+      {
+        "name": "unknown work item rejected",
+        "pass": true
+      },
+      {
+        "name": "JSON continuity preserves quick quantities",
+        "pass": true
+      },
+      {
+        "name": "frozen baseline cannot be bypassed",
+        "pass": true
+      },
+      {
+        "name": "archived event excluded",
+        "pass": true
+      },
+      {
+        "name": "duplicate source events excluded",
+        "pass": true
+      },
+      {
+        "name": "future events excluded by report cutoff",
+        "pass": true
+      },
+      {
+        "name": "projection leaves prior baselines untouched",
+        "pass": true
+      }
+    ],
+    "report": [
+      {
+        "name": "No update has unknown period quantity",
+        "pass": true
+      },
+      {
+        "name": "Weekly increments total30",
+        "pass": true
+      },
+      {
+        "name": "Cumulative30",
+        "pass": true
+      },
+      {
+        "name": "Remaining70",
+        "pass": true
+      },
+      {
+        "name": "Two original sources",
+        "pass": true
+      },
+      {
+        "name": "First source identity retained",
+        "pass": true
+      },
+      {
+        "name": "Second date retained",
+        "pass": true
+      },
+      {
+        "name": "Unit retained",
+        "pass": true
+      },
+      {
+        "name": "No physical verification invented",
+        "pass": true
+      },
+      {
+        "name": "No QA acceptance invented",
+        "pass": true
+      },
+      {
+        "name": "Projection leaves full source unchanged",
+        "pass": true
+      },
+      {
+        "name": "Daily uses second increment10",
+        "pass": true
+      },
+      {
+        "name": "Earlier source retained for cumulative trace",
+        "pass": true
+      },
+      {
+        "name": "Daily count only in-period source",
+        "pass": true
+      },
+      {
+        "name": "No event period stays unknown",
+        "pass": true
+      },
+      {
+        "name": "Historical report keeps cutoff cumulative distinct",
+        "pass": true
+      },
+      {
+        "name": "Explicit zero period known",
+        "pass": true
+      },
+      {
+        "name": "Explicit zero source retained",
+        "pass": true
+      },
+      {
+        "name": "Period beyond cutoff invalid",
+        "pass": true
+      },
+      {
+        "name": "Invalid period does not invent zero",
+        "pass": true
+      },
+      {
+        "name": "Reversed interval rejected as projection",
+        "pass": true
+      },
+      {
+        "name": "Cutoff excludes later event",
+        "pass": true
+      },
+      {
+        "name": "Future source reason visible",
+        "pass": true
+      },
+      {
+        "name": "Archived event not counted",
+        "pass": true
+      },
+      {
+        "name": "Archive exclusion visible",
+        "pass": true
+      },
+      {
+        "name": "Duplicate event not counted twice",
+        "pass": true
+      },
+      {
+        "name": "Both duplicate records disclosed",
+        "pass": true
+      },
+      {
+        "name": "Duplicate reason visible",
+        "pass": true
+      },
+      {
+        "name": "Foreign unit excluded",
+        "pass": true
+      },
+      {
+        "name": "Unit reason disclosed",
+        "pass": true
+      },
+      {
+        "name": "Meters remain30",
+        "pass": true
+      },
+      {
+        "name": "Pieces remain2",
+        "pass": true
+      },
+      {
+        "name": "Units retained separately",
+        "pass": true
+      },
+      {
+        "name": "Physical verified retains18",
+        "pass": true
+      },
+      {
+        "name": "QA retains17 separately",
+        "pass": true
+      },
+      {
+        "name": "Verification before event invalid",
+        "pass": true
+      },
+      {
+        "name": "Invalid verification excludes acceptance",
+        "pass": true
+      },
+      {
+        "name": "Future verification unknown",
+        "pass": true
+      },
+      {
+        "name": "JSON report projection roundtrip",
+        "pass": true
+      },
+      {
+        "name": "Monday to Sunday weekly bounds cross month",
+        "pass": true
+      },
+      {
+        "name": "Next Monday excluded by cutoff",
+        "pass": true
+      },
+      {
+        "name": "Month starts inclusively",
+        "pass": true
+      },
+      {
+        "name": "Sunday daily inclusive",
+        "pass": true
+      },
+      {
+        "name": "Overrun retained120",
+        "pass": true
+      },
+      {
+        "name": "Remaining clamps0",
+        "pass": true
+      },
+      {
+        "name": "Overrun20 exposed",
+        "pass": true
+      },
+      {
+        "name": "Issued data/projection unchanged after live edit",
+        "pass": true
+      },
+      {
+        "name": "Issued projection survives recovery",
+        "pass": true
+      },
+      {
+        "name": "Detailed missing verification stays unknown",
+        "pass": true
+      },
+      {
+        "name": "Detailed missing acceptance stays unknown",
+        "pass": true
+      },
+      {
+        "name": "Detailed missing period stays unknown",
+        "pass": true
+      },
+      {
+        "name": "Detailed explicit verified zero remains known",
+        "pass": true
+      },
+      {
+        "name": "Detailed rejects verification before source date",
+        "pass": true
+      },
+      {
+        "name": "New issue freezes unknown verification",
+        "pass": true
+      },
+      {
+        "name": "Recovered issue retains unknown verification",
+        "pass": true
+      },
+      {
+        "name": "Detailed invalid interval has no fabricated period",
+        "pass": true
+      },
+      {
+        "name": "Future/reversed issue period cannot be preserved",
+        "pass": true
+      }
+    ],
+    "overview": [
+      {
+        "name": "hero reported reuses guided quantity",
+        "pass": true
+      },
+      {
+        "name": "hero remaining reuses guided quantity",
+        "pass": true
+      },
+      {
+        "name": "hero target retains unit",
+        "pass": true
+      },
+      {
+        "name": "freshness uses eligible work date",
+        "pass": true
+      },
+      {
+        "name": "latest source identity retained",
+        "pass": true
+      },
+      {
+        "name": "missing cost remains unknown",
+        "pass": true
+      },
+      {
+        "name": "missing acceptance remains unknown",
+        "pass": true
+      },
+      {
+        "name": "reported draft updates await review",
+        "pass": true
+      },
+      {
+        "name": "overview projection does not mutate source",
+        "pass": true
+      },
+      {
+        "name": "missing physical verification stays in pending count",
+        "pass": true
+      },
+      {
+        "name": "missing physical verification does not become accepted",
+        "pass": true
+      },
+      {
+        "name": "explicit zero remains known",
+        "pass": true
+      },
+      {
+        "name": "explicit zero has full remainder",
+        "pass": true
+      },
+      {
+        "name": "archived event excluded from live reported total",
+        "pass": true
+      },
+      {
+        "name": "freshness excludes archived events",
+        "pass": true
+      },
+      {
+        "name": "duplicate events not double counted",
+        "pass": true
+      },
+      {
+        "name": "duplicates surfaced in source details",
+        "pass": true
+      },
+      {
+        "name": "duplicate reason retained",
+        "pass": true
+      },
+      {
+        "name": "future event excluded from reported total",
+        "pass": true
+      },
+      {
+        "name": "future event not latest eligible source",
+        "pass": true
+      },
+      {
+        "name": "future exclusion visible",
+        "pass": true
+      },
+      {
+        "name": "wrong unit excluded from total",
+        "pass": true
+      },
+      {
+        "name": "unit mismatch visible",
+        "pass": true
+      },
+      {
+        "name": "over-target source quantity retained",
+        "pass": true
+      },
+      {
+        "name": "over-target warning value retained",
+        "pass": true
+      },
+      {
+        "name": "mixed-unit hero has no summed quantity",
+        "pass": true
+      },
+      {
+        "name": "untouched work item leaves overall ratio unknown",
+        "pass": true
+      },
+      {
+        "name": "blank no latest event",
+        "pass": true
+      },
+      {
+        "name": "blank no quantity primary",
+        "pass": true
+      },
+      {
+        "name": "blank cost unknown",
+        "pass": true
+      },
+      {
+        "name": "next recorded target date shown",
+        "pass": true
+      },
+      {
+        "name": "target remains Draft",
+        "pass": true
+      },
+      {
+        "name": "known cost is original engine projection",
+        "pass": true
+      },
+      {
+        "name": "projection leaves baseline snapshots unchanged",
+        "pass": true
+      }
+    ]
+  },
+  "count": 178,
+  "allPassed": true,
+  "browserChecks": [
+    {
+      "name": "Daily10 / cumulative30 / remaining70",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Week range Monday12 through Friday16",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Weekly30m",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Monthly30m",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Report opens original Daily identity/date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual Save HTML reopens source IDs and30/70",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON preview leaves blank data unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON commit restores source-linked report",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Detailed report carries same source IDs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Issued trace has IDs and no live source buttons",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Issued report markup unchanged after live+5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI Monday/Sunday cross-month includes14m",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI month boundary includes9m",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI explains future-source exclusion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Missing period says Not reported",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390px report no body overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Five phone navigation actions visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard source drill-through",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Print hides navigation and controls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Print is light paper",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Print preserves source IDs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A4 PDF generated",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1080px report no body overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768px report no body overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Final detailed report missing physical/QA stays n.a.",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Final issued projection retains null",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Final issued report unchanged after source+5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Final HTML save/reopen30/70",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Final JSON preview nonmutating",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Final JSON restores report",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Long units/names/references no body overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Untrusted source text escaped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Explicit zero visible with unit",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "browser": {
+    "method": "Existing Playwright 1.62.1 / installed Chrome; actual app in RAM",
+    "viewports": [
+      1440,
+      1080,
+      768,
+      390
+    ],
+    "relevantErrors": [],
+    "networkRequests": [],
+    "pdfBytes": 78508,
+    "nativeOSSave": "NOT RUN; actual UI Blob intercepted and reopened",
+    "nativePrintPreview": "NOT RUN; print media and actual A4 PDF tested",
+    "realUserAcceptance": "PENDING",
+    "independentProvider": "NOT RUN"
+  },
+  "artifact": {
+    "bytes": 237750,
+    "sha256": "c8ea99b680862a22b061e828162364d54e8a1ff7a62c7ce2e67b505ca8d7b4fa",
+    "demoBytes": 239191,
+    "demoSha256": "0fcfbedd924271bcf88ee53f07602dc9c705665214212cb29d5f6fbcab17c1bb",
+    "gitBlob": "426a04acf16f62119e52ee883f4529a354641d47",
+    "demoGitBlob": "3c4e9fd3e6e2b7b868c03d3af3f636f9dbf8cef8",
+    "baseline": "0a764d8e69c1c573da6b545c8e778cffe5497523"
+  }
+}
