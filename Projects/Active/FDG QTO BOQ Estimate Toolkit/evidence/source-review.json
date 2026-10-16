@@ -1,0 +1,16 @@
+{
+  "source_commit": "638f4e9edb9a54e47676ca4c18a2fe1dbf0754e2",
+  "read_method": "Connected GitHub fetch_file, full text",
+  "sources": [
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md",
+      "blob": "290a78b9d593714bc0daffa65412eed08d0b2e2f",
+      "role": "Estimating/QTO catalog, structured fields, lifecycle and evidence rules"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio.md",
+      "blob": "34fa6f6e5cb42ea619c155b12f4601792b7505e6",
+      "role": "QTO/BOQ support/estimator pack candidate; original professional-specific workflow, scope and commercial boundaries"
+    }
+  ]
+}

@@ -156,3 +156,9 @@ This direction does not claim existing external application repositories have al
 
 - [[Projects/Active/FDG Construction Management Professional Toolkit/README|FDG Construction Management Professional Toolkit — Philippines Edition]] — first FPJIS digital product; v1.0.0-rc.1 built with blank/sample workbooks, printable forms, CSVs, guide and validation. Native application/user acceptance and commercial launch pending.
 - [[Projects/Active/FDG Construction Management Professional Toolkit/CURRENT_HANDOVER|Toolkit current handover]] — precise acceptance milestone; reuse committed source and artifacts.
+
+
+## Working construction HTML templates — 2026-10-16
+
+- [[Projects/Active/FDG Construction Management Professional Toolkit/README|Construction Management Working HTML]] —13 editable registers, live progress, reporting and portable project saves.
+- [[Projects/Active/FDG QTO BOQ Estimate Toolkit/README|QTO / BOQ Estimate Working HTML]] — measurement, allowances, rate build-up, BOQ mapping and pre-tax estimate summary; source/tests/evidence/handover saved with the project.

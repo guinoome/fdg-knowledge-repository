@@ -47,3 +47,8 @@ Source is in html/; reuse engine.mjs, app.js, styles.css, shell.html and sample-
 HTML is single-editor manual workflow, not full Construction OS. No authenticated approval, statutory tax computation, permission enforcement or cloud sync. Blank remains unknown; weights and review evidence are explicit. Save working HTML/JSON before closing. Browser download content and reopen tested in memory; OS file-save dialogs, other browsers and real-user acceptance remain unverified.
 
 Francis next requested other construction projects. An optional question is pending: QTO/BOQ/estimating, scheduling/cost control, or Construction OS. Continue the chosen project; preserve this completed working template. Do not redo spreadsheet/compilation discovery.
+
+
+## Next construction project delivered — 2026-10-16
+
+QTO/BOQ estimating was selected as the next bounded project under Francis's request to continue other construction projects. It is delivered at Projects/Active/FDG QTO BOQ Estimate Toolkit/distribution/FDG-QTO-BOQ-Working-Template.html, with independent project source/tests/evidence/handover.18 estimating tests and browser edit/restore/save/reopen/mobile/PDF checks pass. The original construction working HTML also received a clean-load console check with no errors or warnings. Continue from each project's current handover. Next candidate: scheduling/cost controls, pending direction; no full Construction OS build implied.

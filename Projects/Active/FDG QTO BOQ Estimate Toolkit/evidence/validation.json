@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-16",
+  "artifact": "distribution/FDG-QTO-BOQ-Working-Template.html",
+  "status": "Working HTML review candidate",
+  "source_commit": "638f4e9edb9a54e47676ca4c18a2fe1dbf0754e2",
+  "engine_tests": [
+    {
+      "name": "volume net quantity",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "allowance applied once",
+      "actual": 12.6,
+      "expected": 12.6,
+      "pass": true
+    },
+    {
+      "name": "four-component unit rate",
+      "actual": 2700,
+      "expected": 2700,
+      "pass": true
+    },
+    {
+      "name": "direct cost",
+      "actual": 47770,
+      "expected": 47770,
+      "pass": true
+    },
+    {
+      "name": "contingency basis",
+      "actual": 2638.5,
+      "expected": 2638.5,
+      "pass": true
+    },
+    {
+      "name": "overhead after contingency",
+      "actual": 5540.85,
+      "expected": 5540.85,
+      "pass": true
+    },
+    {
+      "name": "markup tender total",
+      "actual": 70091.75249999999,
+      "expected": 70091.7525,
+      "pass": true
+    },
+    {
+      "name": "target margin formula",
+      "actual": 71705.11764705883,
+      "expected": 71705.11764705883,
+      "pass": true
+    },
+    {
+      "name": "100pct margin unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "geometry unit mismatch unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "unknown rate remains unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "explicit zero rate supported",
+      "actual": 700,
+      "expected": 700,
+      "pass": true
+    },
+    {
+      "name": "net cost basis excludes allowance",
+      "actual": 32400,
+      "expected": 32400,
+      "pass": true
+    },
+    {
+      "name": "mixed BOQ units block total",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "duplicate item ID blocks total",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "archive excludes item cost",
+      "actual": 34020,
+      "expected": 34020,
+      "pass": true
+    },
+    {
+      "name": "blank total unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "JSON round trip stable",
+      "actual": 70091.75249999999,
+      "expected": 70091.7525,
+      "pass": true
+    }
+  ],
+  "browser": {
+    "engine": "Installed Chrome via existing Playwright; no Browser plugin/skill available; bundled browser absent, no installs",
+    "entry": "RAM-only setContent",
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ],
+    "page_errors": [],
+    "console_errors_warnings": [],
+    "meaningful_render": true,
+    "mobile_document_overflow": false
+  },
+  "flows": [
+    {
+      "name": "Sample direct / pre-tax tender",
+      "result": "PHP47770.00 /70091.75"
+    },
+    {
+      "name": "Edit pipe measurement50→60",
+      "result": "direct PHP50520.00"
+    },
+    {
+      "name": "Archive pipe",
+      "result": "direct PHP34020.00"
+    },
+    {
+      "name": "Restore",
+      "result": "restored to direct50520.00"
+    },
+    {
+      "name": "Duplicate ID",
+      "result": "rejected with form error"
+    },
+    {
+      "name": "BOQ mapping",
+      "result": "updated net60.00m"
+    },
+    {
+      "name": "HTML working-copy reopen",
+      "result": "direct50520.00 preserved"
+    },
+    {
+      "name": "JSON export/reimport",
+      "result": "direct50520.00 preserved"
+    },
+    {
+      "name": "Print",
+      "result": "print action invoked;32582byte PDF generated in memory"
+    }
+  ],
+  "limitations": [
+    "No other browser engines or OS save-dialog testing.",
+    "Qualified real-project/domain acceptance and independent provider review pending.",
+    "No taxes, current market rates, statutory compliance, design sufficiency, billing or payments inferred."
+  ]
+}
