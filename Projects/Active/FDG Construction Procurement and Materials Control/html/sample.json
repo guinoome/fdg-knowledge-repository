@@ -1,0 +1,163 @@
+{
+  "format": "FDG-MATERIALS-HTML",
+  "version": 1,
+  "project": {
+    "id": "DEMO-MAT-001",
+    "name": "Cebu fit-out — Materials demonstration",
+    "asOf": "2026-10-16",
+    "location": "Cebu, Philippines",
+    "preparedBy": "Demo Storekeeper"
+  },
+  "materials": [
+    {
+      "id": "MAT-000001",
+      "name": "25mm PVC pipe",
+      "unit": "m",
+      "required": 100,
+      "neededBy": "2026-10-20",
+      "source": null,
+      "revision": 1
+    },
+    {
+      "id": "MAT-000002",
+      "name": "PVC elbows",
+      "unit": "pcs",
+      "required": 30,
+      "neededBy": "2026-10-15",
+      "source": null,
+      "revision": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORDER-000001",
+      "item": "MAT-000001",
+      "supplier": "Demo Plumbing Supply",
+      "quantity": 80,
+      "unit": "m",
+      "rate": 45,
+      "date": "2026-10-12",
+      "expected": "2026-10-15",
+      "reference": "DEMO-PO-001",
+      "note": "",
+      "voided": false,
+      "voidReason": null
+    }
+  ],
+  "movements": [
+    {
+      "id": "MOVE-000001",
+      "item": "MAT-000001",
+      "type": "Opening count",
+      "quantity": 0,
+      "unit": "m",
+      "date": "2026-10-12",
+      "order": null,
+      "reference": "",
+      "location": "",
+      "note": "",
+      "voided": false,
+      "voidReason": null
+    },
+    {
+      "id": "MOVE-000002",
+      "item": "MAT-000001",
+      "type": "Received",
+      "quantity": 50,
+      "unit": "m",
+      "date": "2026-10-14",
+      "order": "ORDER-000001",
+      "reference": "DEMO-DR-001",
+      "location": "",
+      "note": "",
+      "voided": false,
+      "voidReason": null
+    },
+    {
+      "id": "MOVE-000003",
+      "item": "MAT-000001",
+      "type": "Issued to site",
+      "quantity": 20,
+      "unit": "m",
+      "date": "2026-10-15",
+      "order": null,
+      "reference": "DEMO-ISSUE-001",
+      "location": "East wing",
+      "note": "",
+      "voided": false,
+      "voidReason": null
+    },
+    {
+      "id": "MOVE-000004",
+      "item": "MAT-000001",
+      "type": "Returned from site",
+      "quantity": 5,
+      "unit": "m",
+      "date": "2026-10-16",
+      "order": null,
+      "reference": "DEMO-RETURN-001",
+      "location": "",
+      "note": "",
+      "voided": false,
+      "voidReason": null
+    }
+  ],
+  "audit": [
+    {
+      "at": "2026-10-16T09:08:02.544Z",
+      "action": "Update project profile",
+      "record": "DEMO-MAT-001",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.547Z",
+      "action": "Add material",
+      "record": "MAT-000001",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.547Z",
+      "action": "Add material",
+      "record": "MAT-000002",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.547Z",
+      "action": "Record reported order",
+      "record": "ORDER-000001",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.548Z",
+      "action": "Record Opening count",
+      "record": "MOVE-000001",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.553Z",
+      "action": "Record Received",
+      "record": "MOVE-000002",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.553Z",
+      "action": "Record Issued to site",
+      "record": "MOVE-000003",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    },
+    {
+      "at": "2026-10-16T09:08:02.554Z",
+      "action": "Record Returned from site",
+      "record": "MOVE-000004",
+      "actor": "Demo Storekeeper",
+      "previous": null
+    }
+  ]
+}

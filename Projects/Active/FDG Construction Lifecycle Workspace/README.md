@@ -37,3 +37,7 @@ GitHub's HTML file view displays source; it is not an application host. Open the
 This is a single-user offline tool. Accounts, server authority, cloud collaboration and deployment are outside this milestone. Real-project acceptance and independent provider review remain pending.
 
 GitHub is canonical. Maintain source in html/ and compile using [build instructions](build/README.md). Do not rebuild the existing engines or overwrite original source records to simplify the interface.
+
+## Related focused construction tool
+
+[FDG Construction Procurement and Materials Control](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Procurement%20and%20Materials%20Control/README.md) provides an offline order/delivery/issue/return ledger and generated stock/shortage reports. Import this workspace's JSON to preview draft Procurement demand with retained source IDs. It does not live-sync, copy orders/receipts automatically or infer installed/accepted progress.

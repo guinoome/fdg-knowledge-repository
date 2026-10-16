@@ -168,3 +168,7 @@ This direction does not claim existing external application repositories have al
 ## Connected construction lifecycle workspace
 
 - [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) — premium single-file offline workflow,56 registers across 17 stages; integrates field management, QTO and scheduling/cost controls. See its coverage and handover for tested behavior and remaining platform gates.
+
+## Construction procurement and materials control
+
+- [FDG Construction Procurement and Materials Control](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Procurement%20and%20Materials%20Control/README.md) — beginner-friendly single-file offline materials/order/receipt/issue/return ledger, automatic shortage/stock reports, and lifecycle demand snapshot import. See its handover and validation evidence.

@@ -1,0 +1,57 @@
+{
+  "source_of_truth": "Connected GitHub tools only; no local project mirror",
+  "baseline_commit": "33bf06a823b10b282313e2c40f91db21fcddcb5c",
+  "sources": [
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/CURRENT_HANDOVER.md",
+      "sha": "3ec5d9b252b6d8e146584a2e0dc5894f3628e59b"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/EXECUTION_PACKAGE.md",
+      "sha": "9f0a48f929e474ffbabc5f1ddf332ccb41f41ef0"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/02_Portfolio_and_Offer_Blueprint.md",
+      "sha": "16e309133466667ddc7b81da94a065e71fd45932"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md",
+      "sha": "290a78b9d593714bc0daffa65412eed08d0b2e2f"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract.md",
+      "sha": "d8c90ff90f6f716293e9d28dd34384cb461e3f86"
+    },
+    {
+      "path": "11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio.md",
+      "sha": "34fa6f6e5cb42ea619c155b12f4601792b7505e6"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/schema.json",
+      "sha": "531b322790f5ccfdbac123c095f2e7eb0d28126f"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/core.mjs",
+      "sha": "fc7ed27a6087b421f0cdbec3563bcce110c813cb"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/shell.html",
+      "sha": "8b2adca33cd7f8e8cf032ae39ea84c54062a29fa"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/styles.css",
+      "sha": "69fa76a4abaa58212d50d67eb91b66e3d81dba12"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/build/build-html.mjs",
+      "sha": "e0817cd0625faddbe7b71a3d26eca7354c6263fc"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/sample.json",
+      "sha": "db96b681b990abc24629a0c0b0a758326aa34f85"
+    }
+  ],
+  "design": "Reused premium beginner FDG Construction Lifecycle Workspace CSS and native save/print patterns",
+  "authority": "FEIS-CM and FEIS-QTO remain canonical; this is a focused execution project",
+  "scope": "No claim of full repository reread this turn"
+}

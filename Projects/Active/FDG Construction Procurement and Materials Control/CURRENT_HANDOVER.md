@@ -1,0 +1,29 @@
+# Current handover — first working procurement/materials tool
+
+Canonical: GitHub `guinoome/fdg-knowledge-repository`, branch main, `Projects/Active/FDG Construction Procurement and Materials Control`. Primary artifact: [distribution/FDG-Procurement-Materials.html](distribution/FDG-Procurement-Materials.html). Read GitHub current state, not a local vault.
+
+## Completed
+
+Beginner-friendly standalone offline HTML with Overview, Materials, Orders, Site movements, Report; two-field project start; material name/unit captured once; order/receipt/issue/return records; shortage, delivery and stock projections; reasoned correction history; CSV/PDF; portable save/restore and lifecycle demand preview.
+
+67 deterministic checks pass. Browser example:100 m requirement →80 m order →50 m receipt →20 m issue →5 m site return =35 m stock/30 m open order/20 m buy-list shortage. Negative-stock and dependent-void attempts blocked. Source IDs retained on lifecycle demand import with zero invented orders/receipts. Save/reopen and JSON restore retained35 m stock. Final fresh-page desktop1440/1080/768 and phone390px views had no page overflow/errors/warnings/HTTP requests. PDF 64834 bytes in RAM.
+
+## Source / integrity
+
+Parent baseline `33bf06a823b10b282313e2c40f91db21fcddcb5c`; this handover's containing commit is the module's release commit. Sources and receipt SHAs: evidence/source-review.json. Build source in html/ and build/build-html.mjs; pure checks tests/materials.test.mjs. No local git tree/checkouts/artifacts existed; all work was in memory through connected GitHub tools.
+
+HTML 68492 UTF-8 bytes; SHA256 `f3f3bb0a1acdf81e4743e3d8e1236663d95719fd95b744407d94a3629760ee66`; Git blob `04a47a2c4ab3847aaefa8fb4123d494b062b2ccd`.
+
+## Important semantics
+
+Issued is not installed or accepted. Recorded stock is ledger-only and requires physical reconciliation. Orders are reported records, not issued/signed authority. Missing requirement/rate/input remains unknown. All quantities preserve explicit units. Corrections retain original events and cannot break dependent historical stock. Demand import is draft snapshot only; no live sync. Existing lifecycle app remains unchanged except an additive related-tool link.
+
+## Remaining boundary
+
+No supplier messages, PO transmission/approval, tax/payment/accounting, quality release, barcode/scanner, account/auth, server/cloud sync or deployment. No real storekeeper/planner or independent-provider acceptance. Native OS save dialogs intercepted; real filesystem save not exercised. No maximum-capacity/multi-browser test.
+
+## Exact next action
+
+Use a private blank copy with one real material: reconcile an opening count, one real order, partial receipt, site issue and return against actual source slips. Verify stock/open-order/buy-list quantities and a saved/reopened backup, and record reviewer/discrepancies under this project. Preserve source evidence; do not rebuild the engine.
+
+Other construction candidates remain QA/QC/punch, then testing/commissioning/turnover. Optional area-choice answer, if later received, should steer the next work package.

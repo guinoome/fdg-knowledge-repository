@@ -1,0 +1,326 @@
+{
+  "status": "passed for first offline toolkit milestone",
+  "engine_checks": [
+    {
+      "name": "setup retains stable project ID",
+      "pass": true
+    },
+    {
+      "name": "invalid report date rejected",
+      "pass": true
+    },
+    {
+      "name": "missing requirement remains unknown",
+      "pass": true
+    },
+    {
+      "name": "no movements means unknown stock",
+      "pass": true
+    },
+    {
+      "name": "full requirement initially still to order",
+      "pass": true
+    },
+    {
+      "name": "negative requirement rejected",
+      "pass": true
+    },
+    {
+      "name": "order unit inherited",
+      "pass": true
+    },
+    {
+      "name": "recorded order value",
+      "pass": true
+    },
+    {
+      "name": "open order reduces buy-list once",
+      "pass": true
+    },
+    {
+      "name": "late open order visible",
+      "pass": true
+    },
+    {
+      "name": "explicit zero opening is known",
+      "pass": true
+    },
+    {
+      "name": "receipt increases stock",
+      "pass": true
+    },
+    {
+      "name": "partial delivery leaves order balance",
+      "pass": true
+    },
+    {
+      "name": "receipt not double counted in buy-list",
+      "pass": true
+    },
+    {
+      "name": "still to receive excludes orders not delivered",
+      "pass": true
+    },
+    {
+      "name": "issue reduces stock",
+      "pass": true
+    },
+    {
+      "name": "issue does not increase overall project demand",
+      "pass": true
+    },
+    {
+      "name": "net issued separate from delivered",
+      "pass": true
+    },
+    {
+      "name": "site return increases stock once",
+      "pass": true
+    },
+    {
+      "name": "site return reduces net issues",
+      "pass": true
+    },
+    {
+      "name": "supplier return reduces stock",
+      "pass": true
+    },
+    {
+      "name": "supplier return reopens replacement balance",
+      "pass": true
+    },
+    {
+      "name": "supplier return preserves buy-list coverage",
+      "pass": true
+    },
+    {
+      "name": "excessive site return rejected",
+      "pass": true
+    },
+    {
+      "name": "negative stock rejected",
+      "pass": true
+    },
+    {
+      "name": "backdated historical negative stock rejected",
+      "pass": true
+    },
+    {
+      "name": "future movement rejected",
+      "pass": true
+    },
+    {
+      "name": "late opening count rejected",
+      "pass": true
+    },
+    {
+      "name": "wrong item order link rejected",
+      "pass": true
+    },
+    {
+      "name": "order before linked receipt rejected",
+      "pass": true
+    },
+    {
+      "name": "void of receipt with dependent issue blocked",
+      "pass": true
+    },
+    {
+      "name": "void order with receipts blocked",
+      "pass": true
+    },
+    {
+      "name": "void requires reason",
+      "pass": true
+    },
+    {
+      "name": "void preserves original record",
+      "pass": true
+    },
+    {
+      "name": "voided supplier return excluded",
+      "pass": true
+    },
+    {
+      "name": "void retains correction reason",
+      "pass": true
+    },
+    {
+      "name": "source object not changed by action",
+      "pass": true
+    },
+    {
+      "name": "unit edit after transactions rejected",
+      "pass": true
+    },
+    {
+      "name": "requirement revision preserved",
+      "pass": true
+    },
+    {
+      "name": "previous requirement in history",
+      "pass": true
+    },
+    {
+      "name": "JSON roundtrip stock",
+      "pass": true
+    },
+    {
+      "name": "JSON roundtrip order balance",
+      "pass": true
+    },
+    {
+      "name": "duplicate movement rejected on import",
+      "pass": true
+    },
+    {
+      "name": "import unit mismatch rejected",
+      "pass": true
+    },
+    {
+      "name": "import dangling item rejected",
+      "pass": true
+    },
+    {
+      "name": "nonfinite number rejected",
+      "pass": true
+    },
+    {
+      "name": "padded ID rejected",
+      "pass": true
+    },
+    {
+      "name": "cutoff excludes later site issues",
+      "pass": true
+    },
+    {
+      "name": "unlinked receipt changes stock",
+      "pass": true
+    },
+    {
+      "name": "unlinked receipt does not close order",
+      "pass": true
+    },
+    {
+      "name": "missing rate makes total unknown",
+      "pass": true
+    },
+    {
+      "name": "known subtotal labeled separately",
+      "pass": true
+    },
+    {
+      "name": "import preview leaves existing state untouched",
+      "pass": true
+    },
+    {
+      "name": "lifecycle demand qty retained",
+      "pass": true
+    },
+    {
+      "name": "source ID retained",
+      "pass": true
+    },
+    {
+      "name": "source revision retained",
+      "pass": true
+    },
+    {
+      "name": "source original row preserved",
+      "pass": true
+    },
+    {
+      "name": "no source delivery invented in ledger",
+      "pass": true
+    },
+    {
+      "name": "no source orders invented",
+      "pass": true
+    },
+    {
+      "name": "cross-project source demand rejected",
+      "pass": true
+    },
+    {
+      "name": "spreadsheet formula injection escaped",
+      "pass": true
+    },
+    {
+      "name": "unknown movement type rejected",
+      "pass": true
+    },
+    {
+      "name": "aggregate stock overflow rejected",
+      "pass": true
+    },
+    {
+      "name": "aggregate order overflow rejected",
+      "pass": true
+    },
+    {
+      "name": "linked supplier return cannot predate receipts even with opening stock",
+      "pass": true
+    },
+    {
+      "name": "overdelivery retained and flagged",
+      "pass": true
+    },
+    {
+      "name": "overdelivery does not overwrite original order quantity",
+      "pass": true
+    }
+  ],
+  "count": 67,
+  "browser": {
+    "engine": "Existing Playwright with installed Chrome; Browser plugin unavailable",
+    "flows": [
+      "Two-field setup -> material name/unit -> optional100 m requirement",
+      "Order80 m -> linked partial receipt50 m ->30 m on order/20 m still to order",
+      "Issue20 m ->30 m stock; excessive31 m issue rejected unchanged",
+      "Return5 m ->35 m stock/15 m net issued",
+      "Void receipt with dependent issues blocked",
+      "Void return retains original and reason; undo restores35 m stock",
+      "HTML save Blob/reopen retains35 m; own JSON preview keeps blank until commit and restores35 m",
+      "GitHub lifecycle sample demand preview retains source ID/revision/full row and imports no orders or movements",
+      "Final fresh-page candidate imports prior backup and reports35 m/30 m/20 m correctly",
+      "CSV report fields verified",
+      "Printable order record explicitly not signed/issued PO",
+      "PDF 64834 bytes in RAM; nav hidden/report visible"
+    ],
+    "viewports": [
+      1440,
+      1080,
+      768,
+      390
+    ],
+    "phone_views": [
+      "Home",
+      "Materials",
+      "Orders",
+      "Stock",
+      "Report"
+    ],
+    "page_overflow": false,
+    "observed_final_page_errors": 0,
+    "observed_final_console_errors_or_warnings": 0,
+    "observed_final_http_requests": 0,
+    "synthetic_screenshots": [
+      "evidence/desktop.png",
+      "evidence/mobile.png"
+    ],
+    "harness_issue": "Same-page script redeclaration when replacing generated builds; rerun in fresh page. Not an application-source change.",
+    "download_method": "Blob interception and RAM reopen; native OS save not tested"
+  },
+  "limits": [
+    "Real-project acceptance pending",
+    "Independent-provider inspection not performed",
+    "No capacity or other-browser test",
+    "No authenticated procurement/quality authority",
+    "No hosting/cloud sync"
+  ],
+  "artifact": {
+    "bytes": 68492,
+    "sha256": "f3f3bb0a1acdf81e4743e3d8e1236663d95719fd95b744407d94a3629760ee66",
+    "git_blob_sha": "04a47a2c4ab3847aaefa8fb4123d494b062b2ccd"
+  }
+}
