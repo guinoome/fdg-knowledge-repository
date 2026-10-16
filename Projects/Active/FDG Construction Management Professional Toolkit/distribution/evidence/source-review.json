@@ -1,0 +1,127 @@
+{
+  "sourceCheckpoint": "91c6fc7346ace8dbf2f7ec86880c6e4b24c2289b",
+  "status": "FULL_TEXT_REVIEW_COMPLETE",
+  "documents": [
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0000 - Digital Construction Knowledge Library Architecture.md",
+      "sha": "d2a44ce19acfb1fb17a6fb9eaee53c9f8d3dd5dc",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/00_Master_Index.md",
+      "sha": "8ca11a2c7d246347e5b2e9f4bc630f055d34fbad",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/01_Project_Blueprint.md",
+      "sha": "9a9f5affab5a52771bb28439784bb3ebecc5ca94",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/02_Portfolio_and_Offer_Blueprint.md",
+      "sha": "16e309133466667ddc7b81da94a065e71fd45932",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/03_User_Role_and_Experience_Blueprint.md",
+      "sha": "3e5006ca6934a3bdabd9c483d411d88b7be212d0",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/04_Workflow_and_State_Machine_Blueprint.md",
+      "sha": "a0825e02c3dfde24dcb2eb7e374025f95251a79b",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/05_Data_and_Record_Blueprint.md",
+      "sha": "5f709ee538b6abc0b070caefe9e89adfaa08ffa9",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/06_Pricing_Promotion_and_Payment_Blueprint.md",
+      "sha": "e30ec4dec7487d3afba45863f33ad391c14d9557",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/07_Offline_First_Runtime_and_GitHub_Blueprint.md",
+      "sha": "4cdbb820c5b4eba673836f359ef44a50ed480beb",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/08_Local_Validation_Release_and_Deployment_Gates.md",
+      "sha": "9a9386f37d4ddb2e61abcc1a97763f5a09a3d4b5",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/09_Market_Intelligence_Monitoring_Blueprint.md",
+      "sha": "8275de1aa4876754eb041d978947211cffbdf8d2",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/10_Test_and_Acceptance_Blueprint.md",
+      "sha": "78fdcf1069881b94197df5ec2badc6d49d4e8d14",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/11_FMCIS_Work_Package_and_Agent_Execution_Blueprint.md",
+      "sha": "aca1e73a852f140c32bc53a719399ea0c5e0c0bc",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/12_Security_Privacy_Legal_and_Professional_Boundaries.md",
+      "sha": "dddde9c0a35a8e9346fc84f3528941fbfd406267",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/13_KPI_Evidence_and_Learning_Blueprint.md",
+      "sha": "3d169f2eddfa842f1a1e680def15ab23b0cef6d0",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/14_Agent_Golden_Path_and_Handover.md",
+      "sha": "ebfe367c91df3539c356c32fc1ecd5a8d172bb07",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/15_Current_Market_Signal_Register_2026-10-07.md",
+      "sha": "103630063388ae5679dfdb7d61847f36af62a052",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/16_Visual_Blueprint_Index.md",
+      "sha": "ee047dc0a0828586436334a4d882d63a18b13f2c",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/17_Blueprint_Package_Verification_and_Readiness_Report.md",
+      "sha": "096e7589e89b8a4774b154aa6f4aeb732234221a",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/18_Prepared_Build_Start_Execution_Package.md",
+      "sha": "1445357e28bcb8cd2359cdfcc3590b69db6a6f28",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/19_Pilot_001_Maintenance_Reporting_Commercial_Execution_Charter.md",
+      "sha": "ba129ba33c6c1c0fa326abef0175eba8fb75d659",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria.md",
+      "sha": "baa6eb964bb5c0a43b559a836c306f4a163c87c6",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md",
+      "sha": "290a78b9d593714bc0daffa65412eed08d0b2e2f",
+      "status": "FULL_TEXT_READ"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/03_Digital_Construction_Knowledge_Library/FEIS-DCKL-0001 - Construction Toolkit to Full Platform Commercial Upgrade Path.md",
+      "sha": "433f9967446a724aadd746b59824d88c185cf1f1",
+      "status": "FULL_TEXT_READ"
+    }
+  ],
+  "scopeNote": "FPJIS package governs commercialization workspace; toolkit is bounded Level1 distribution, not implementation of every workspace feature."
+}

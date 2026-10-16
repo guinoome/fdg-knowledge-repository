@@ -1,0 +1,151 @@
+{
+  "ready": true,
+  "cases": [
+    {
+      "name": "sample accepted weighted progress",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "sample planned weighted progress",
+      "actual": 0.4,
+      "expected": 0.4,
+      "pass": true
+    },
+    {
+      "name": "sample variance",
+      "actual": -0.04999999999999999,
+      "expected": -0.05,
+      "pass": true
+    },
+    {
+      "name": "future event excluded from accepted quantity",
+      "actual": 45,
+      "expected": 45,
+      "pass": true
+    },
+    {
+      "name": "period reported concrete quantity",
+      "actual": 50,
+      "expected": 50,
+      "pass": true
+    },
+    {
+      "name": "period accepted concrete quantity",
+      "actual": 45,
+      "expected": 45,
+      "pass": true
+    },
+    {
+      "name": "unreviewed pipe quantity excluded",
+      "actual": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "overdue RFI",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "blank progress unavailable",
+      "actual": "n.a.",
+      "expected": "n.a.",
+      "pass": true
+    },
+    {
+      "name": "zero baseline no false progress",
+      "actual": "n.a.",
+      "expected": "n.a.",
+      "pass": true
+    },
+    {
+      "name": "incomplete weights no false progress",
+      "actual": "n.a.",
+      "expected": "n.a.",
+      "pass": true
+    },
+    {
+      "name": "true zero accepted quantity preserved",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "duplicate events excluded",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    },
+    {
+      "name": "duplicate reported events excluded",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "missing event date excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "missing evidence excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "wrong unit excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "wrong unit reported excluded",
+      "actual": 30,
+      "expected": 30,
+      "pass": true
+    },
+    {
+      "name": "future approval excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "last prepared row included",
+      "actual": 50,
+      "expected": 50,
+      "pass": true
+    },
+    {
+      "name": "reversed report interval unavailable",
+      "actual": "",
+      "expected": "",
+      "pass": true
+    }
+  ],
+  "sheets": [
+    "Start",
+    "Dashboard",
+    "Report",
+    "Setup",
+    "WBS",
+    "Daily",
+    "Kickoff",
+    "RFI",
+    "Submittals",
+    "Issues",
+    "QAQC",
+    "Changes",
+    "Billing",
+    "Punch",
+    "Turnover",
+    "Evidence",
+    "History"
+  ],
+  "capacity": 200
+}

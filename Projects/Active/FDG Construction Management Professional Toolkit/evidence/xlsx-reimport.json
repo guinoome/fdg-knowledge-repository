@@ -1,0 +1,130 @@
+[
+  {
+    "mode": "blank",
+    "bytes": 186928,
+    "sha256": "19e80a10068f388ad421e7d9a818bdddab73c60e4b5d3e01f21b4f6745bf6ee9",
+    "reimportValue": "n.a.",
+    "dashboard": {
+      "kind": "table",
+      "sheet": "Dashboard",
+      "address": "A4:B15",
+      "rows": 12,
+      "cols": 2,
+      "values": [
+        [
+          "Project",
+          "No project selected"
+        ],
+        [
+          "As-of date",
+          ""
+        ],
+        [
+          "Accepted weighted progress",
+          "n.a."
+        ],
+        [
+          "Planned weighted progress",
+          "n.a."
+        ],
+        [
+          "Variance (percentage points)",
+          "n.a."
+        ],
+        [
+          "RFI overdue (not accepted/rejected)",
+          "n.a."
+        ],
+        [
+          "Open issues",
+          0
+        ],
+        [
+          "Open punch items",
+          0
+        ],
+        [
+          "Turnover pending acceptance",
+          0
+        ],
+        [
+          "WBS weight total",
+          "n.a."
+        ],
+        [
+          "Progress basis",
+          "Missing project, date or complete 100% weights"
+        ],
+        [
+          "Evidence / quantity warnings",
+          0
+        ]
+      ]
+    },
+    "noMacros": true
+  },
+  {
+    "mode": "sample",
+    "bytes": 190084,
+    "sha256": "6fd53a71b342a4517792da29fc74c21ac525f781fb3130e073c41215af38bdf0",
+    "reimportValue": 0.35000000000000003,
+    "dashboard": {
+      "kind": "table",
+      "sheet": "Dashboard",
+      "address": "A4:B15",
+      "rows": 12,
+      "cols": 2,
+      "values": [
+        [
+          "Project",
+          "DEMO-PH-001"
+        ],
+        [
+          "As-of date",
+          46311
+        ],
+        [
+          "Accepted weighted progress",
+          0.35000000000000003
+        ],
+        [
+          "Planned weighted progress",
+          0.4
+        ],
+        [
+          "Variance (percentage points)",
+          -0.04999999999999999
+        ],
+        [
+          "RFI overdue (not accepted/rejected)",
+          1
+        ],
+        [
+          "Open issues",
+          1
+        ],
+        [
+          "Open punch items",
+          1
+        ],
+        [
+          "Turnover pending acceptance",
+          1
+        ],
+        [
+          "WBS weight total",
+          1
+        ],
+        [
+          "Progress basis",
+          "Review data and approvals"
+        ],
+        [
+          "Evidence / quantity warnings",
+          0
+        ]
+      ]
+    },
+    "noMacros": true
+  }
+]

@@ -1,0 +1,198 @@
+{
+  "product": "FDG Construction Management Professional Toolkit — Philippines Edition",
+  "version": "1.0.0-rc.1",
+  "source_baseline": "91c6fc7346ace8dbf2f7ec86880c6e4b24c2289b",
+  "status": "Review candidate; native application and user acceptance pending",
+  "files": [
+    {
+      "path": "csv/blank/Billing.csv",
+      "bytes": 206,
+      "sha256": "fe92a44b8a80ce4952eea6cffffbcbe30d98ed6ad23f3f1d658eb202cd40c420"
+    },
+    {
+      "path": "csv/blank/Changes.csv",
+      "bytes": 177,
+      "sha256": "9fcec64d44bbc579aa6aae1abe7bcf4ccb16b4763e3398edf6cc1fe215b65ef2"
+    },
+    {
+      "path": "csv/blank/Daily.csv",
+      "bytes": 161,
+      "sha256": "b685e30e23a4b42e7a6a3872b91df87896f51fd6b95bd4fd34ad36431c574733"
+    },
+    {
+      "path": "csv/blank/Evidence.csv",
+      "bytes": 139,
+      "sha256": "8094989d128c42e2096626e26a88d8bbafad610893710966bad0786217cbf7c9"
+    },
+    {
+      "path": "csv/blank/History.csv",
+      "bytes": 128,
+      "sha256": "1b0137e5296569054bf470e57e53c69bb582950c3d33c841d57dfd7c93820faf"
+    },
+    {
+      "path": "csv/blank/Issues.csv",
+      "bytes": 164,
+      "sha256": "23d436be54d4e79814b5ca90b84e630d73b8f69dba5a758135fea8664e41c17f"
+    },
+    {
+      "path": "csv/blank/Kickoff.csv",
+      "bytes": 101,
+      "sha256": "fd12c51c0018ab8aa48047e6aee41938b706f20449da8f1a3b8c729add6a115b"
+    },
+    {
+      "path": "csv/blank/Punch.csv",
+      "bytes": 160,
+      "sha256": "a6c439d4caf7298ae1eae25bc2f46ea1ca964e956d6465931af24843501c1f32"
+    },
+    {
+      "path": "csv/blank/QAQC.csv",
+      "bytes": 197,
+      "sha256": "da5d8ddc440be38fc74d3eef5e23e25d9e52a7aa77e260648be79bfe0b7f6a3a"
+    },
+    {
+      "path": "csv/blank/RFI.csv",
+      "bytes": 147,
+      "sha256": "75bd9f0dd2d6c7a90cab18158ffa9a455d57ea117aed7931c0d1f2c2d3f0389a"
+    },
+    {
+      "path": "csv/blank/Submittals.csv",
+      "bytes": 169,
+      "sha256": "9583956110b1d74d2441c4cb14782b4312402254bbe6eecf80a4ff9dc677883d"
+    },
+    {
+      "path": "csv/blank/Turnover.csv",
+      "bytes": 179,
+      "sha256": "6dc89379e6b7071293ecf5210477912628d6f017a19e7b07da1b8a8dfc74dcba"
+    },
+    {
+      "path": "csv/blank/WBS.csv",
+      "bytes": 96,
+      "sha256": "f71a6261caf41a9d01c6a93f02d786443b4267caa7de9dfdf221f3354783ae96"
+    },
+    {
+      "path": "csv/sample/Billing.csv",
+      "bytes": 315,
+      "sha256": "871e4bd8d253586feeec73890bbb90adb471b661f3aea5cc20717dc4fe0f9888"
+    },
+    {
+      "path": "csv/sample/Changes.csv",
+      "bytes": 299,
+      "sha256": "1115a31a9fd4de77759efa7af4db94af2811d9d0787fe11c3a2715e8d8425735"
+    },
+    {
+      "path": "csv/sample/Daily.csv",
+      "bytes": 876,
+      "sha256": "826505cca10a662a3d0828ee5511a10d6bf5d3c6f1c5b78ed487218b172b0a25"
+    },
+    {
+      "path": "csv/sample/Evidence.csv",
+      "bytes": 1499,
+      "sha256": "de131e895ba00e80593b65f8f913c077c486fbff0bab25344225e86f952d1ae8"
+    },
+    {
+      "path": "csv/sample/History.csv",
+      "bytes": 231,
+      "sha256": "26cc88ed3f1608369e31768a1b28a274b77dfc89b6ee4d45b5b6b495c8614bfc"
+    },
+    {
+      "path": "csv/sample/Issues.csv",
+      "bytes": 360,
+      "sha256": "7bb2786551e1d9be322c6c1b2fa69de3de155906aedf6476114e44c8a67f5882"
+    },
+    {
+      "path": "csv/sample/Kickoff.csv",
+      "bytes": 232,
+      "sha256": "53d460b8a892060a1f140c1b4a14383386d333d4c9400ca0a31870bb9e4a98a5"
+    },
+    {
+      "path": "csv/sample/Punch.csv",
+      "bytes": 286,
+      "sha256": "0b3ef02ff6991593882559868019f03bb3eac27c2847d94b15c41e426f67656b"
+    },
+    {
+      "path": "csv/sample/QAQC.csv",
+      "bytes": 407,
+      "sha256": "4c680e0ae3e13eeea0afab7a5e358fa959e341976d837cb03fa4bad9bcf40e1d"
+    },
+    {
+      "path": "csv/sample/RFI.csv",
+      "bytes": 295,
+      "sha256": "6098f09cb00e355c41bfb9cae5433ae3a3ff1ae7e9f06a4f464cf57ae0381b34"
+    },
+    {
+      "path": "csv/sample/Submittals.csv",
+      "bytes": 298,
+      "sha256": "5ba7cabbbe7c9caf63fa10b224efe2be5ae020307f1bb42d026b7cac35236e5d"
+    },
+    {
+      "path": "csv/sample/Turnover.csv",
+      "bytes": 332,
+      "sha256": "be76fb74ded82bdbf89f5a0677eb2928128a458a5f363410099e46ec10443830"
+    },
+    {
+      "path": "csv/sample/WBS.csv",
+      "bytes": 272,
+      "sha256": "85cbfadfac8e58941e493761beccbd56c8e2b9e7ad35ba56d76b0ccccf22c44b"
+    },
+    {
+      "path": "DATA_DICTIONARY.md",
+      "bytes": 17531,
+      "sha256": "3541dab10ceca35e6f7ffa3dea4be89df0a00704d880077335b3e6b386e9911e"
+    },
+    {
+      "path": "evidence/calculation-tests.json",
+      "bytes": 2917,
+      "sha256": "ae184c7450a5281226ecf93e0f6a5961e8ee97305e673c84ea0ee524c3b6a400"
+    },
+    {
+      "path": "evidence/source-review.json",
+      "bytes": 6424,
+      "sha256": "ebf48f638760e88d2fb1bc30f4fcb8cb49fec9e4cc76db7d22698aa07e1d1d3a"
+    },
+    {
+      "path": "evidence/VALIDATION.md",
+      "bytes": 5197,
+      "sha256": "e85cc5568158b67325eeeba8a69c99a2f58856d1874e22d1e08fe7b7e6b9079f"
+    },
+    {
+      "path": "evidence/xlsx-reimport.json",
+      "bytes": 2499,
+      "sha256": "299b49d1a6d10dc977e6187df4120f9f8a931040ac7e872a18b7fabc191daaa6"
+    },
+    {
+      "path": "FDG-CMT-PH-Blank.xlsx",
+      "bytes": 186928,
+      "sha256": "19e80a10068f388ad421e7d9a818bdddab73c60e4b5d3e01f21b4f6745bf6ee9"
+    },
+    {
+      "path": "FDG-CMT-PH-Worked-Example.xlsx",
+      "bytes": 190084,
+      "sha256": "6fd53a71b342a4517792da29fc74c21ac525f781fb3130e073c41215af38bdf0"
+    },
+    {
+      "path": "forms.html",
+      "bytes": 36305,
+      "sha256": "766b7c12fb7040438c9bb72481ca2b1d21d5a3bcc7ee10125de1a3290a109ee3"
+    },
+    {
+      "path": "IMPLEMENTATION_GUIDE.md",
+      "bytes": 10856,
+      "sha256": "ce73d162309677addc46a9830d9418397a5473895a7745d578a5cdc309ab9f18"
+    },
+    {
+      "path": "README.md",
+      "bytes": 846,
+      "sha256": "80df827cca557d12276fc91a4d9272de70caf413dd6747f62a93ed1a98fe86d7"
+    },
+    {
+      "path": "sample-project.json",
+      "bytes": 8373,
+      "sha256": "72057ed48a6fd0bf8dabc870c07d51723c732fceaad49945c4765188a46d067c"
+    },
+    {
+      "path": "schema/toolkit-schema.json",
+      "bytes": 6339,
+      "sha256": "1d971fbdd1ae272699596c4830cde334673b7784273919dc8c8c14b7fe517d23"
+    }
+  ]
+}

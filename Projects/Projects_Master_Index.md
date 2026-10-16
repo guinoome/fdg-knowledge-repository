@@ -150,3 +150,9 @@ For current and future project work in this engagement, GitHub `guinoome/fdg-kno
 This direction does not claim existing external application repositories have already migrated. Identify any build/runtime requirement for local storage before writing locally.
 
 - [[Projects/Active/FDG Repository Canonical Review/README|FDG Repository Canonical Review]] — full tracked-file reading and coverage at a pinned GitHub checkpoint; currently in progress.
+
+
+## FDG Construction Management Professional Toolkit — Philippines Edition
+
+- [[Projects/Active/FDG Construction Management Professional Toolkit/README|FDG Construction Management Professional Toolkit — Philippines Edition]] — first FPJIS digital product; v1.0.0-rc.1 built with blank/sample workbooks, printable forms, CSVs, guide and validation. Native application/user acceptance and commercial launch pending.
+- [[Projects/Active/FDG Construction Management Professional Toolkit/CURRENT_HANDOVER|Toolkit current handover]] — precise acceptance milestone; reuse committed source and artifacts.
