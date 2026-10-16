@@ -1,6 +1,7 @@
 import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
 import readline from 'node:readline';
+import net from 'node:net';
 const require=createRequire((process.env.FDG_NODE_MODULES||process.cwd()+'/node_modules')+'/fdg-toolkit-run.cjs');
 const {Workbook,SpreadsheetFile}=await import(pathToFileURL(require.resolve('@oai/artifact-tool')).href);
 const crypto=await import('node:crypto');
@@ -169,10 +170,18 @@ sample.wb.recalculate();test('last prepared row included',cell(sample,'WBS','I7'
 set(sample.sheets.Setup,'B8',new Date('2026-10-11T00:00:00Z'));sample.wb.recalculate();test('reversed report interval unavailable',cell(sample,'Report','D7'),'');set(sample.sheets.Setup,'B8',new Date('2026-10-16T00:00:00Z'));
 sample.wb.recalculate();blank.wb.recalculate();
 console.log(JSON.stringify({ready:true,cases,sheets:['Start','Dashboard','Report','Setup',...records.map(x=>x.sheet)],capacity:N}));
+// FileBlob exposes save(); use an OS named pipe to collect bytes in RAM without a disk artifact.
+async function memoryBytes(file){
+ const pipe='\\\\.\\pipe\\fdg-toolkit-'+process.pid+'-'+crypto.randomUUID();
+ return await new Promise((resolve,reject)=>{
+  const chunks=[];const server=net.createServer(c=>{c.on('data',x=>chunks.push(x));c.on('end',()=>server.close(()=>resolve(Buffer.concat(chunks))));c.on('error',reject);});
+  server.on('error',reject);server.listen(pipe,()=>file.save(pipe).catch(e=>{server.close();reject(e);}));
+ });
+}
 const rl=readline.createInterface({input:process.stdin,crlfDelay:Infinity});
 for await(const line of rl){try{const cmd=JSON.parse(line);const b=cmd.mode==='blank'?blank:sample;
- if(cmd.op==='export'){const file=await SpreadsheetFile.exportXlsx(b.wb);const bytes=Buffer.from(await file.arrayBuffer());const imported=await SpreadsheetFile.importXlsx(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength));imported.recalculate();const zip=await JSZip.loadAsync(bytes);const xml=await zip.file('xl/workbook.xml').async('string');console.log(JSON.stringify({op:'export',mode:cmd.mode,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),reimport:await imported.inspect({kind:'table',range:'Dashboard!A4:B15',include:'values,formulas',tableMaxRows:12,tableMaxCols:2,maxChars:5000}),noMacros:!Object.keys(zip.files).some(x=>/vbaProject|externalLink/.test(x)),workbookXml:xml.slice(0,400),base64:bytes.toString('base64')}));}
+ if(cmd.op==='export'){const file=await SpreadsheetFile.exportXlsx(b.wb);const bytes=await memoryBytes(file);const imported=await SpreadsheetFile.importXlsx(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength));imported.recalculate();const zip=await JSZip.loadAsync(bytes);const xml=await zip.file('xl/workbook.xml').async('string');console.log(JSON.stringify({op:'export',mode:cmd.mode,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),reimport:await imported.inspect({kind:'table',range:'Dashboard!A4:B15',include:'values,formulas',tableMaxRows:12,tableMaxCols:2,maxChars:5000}),noMacros:!Object.keys(zip.files).some(x=>/vbaProject|externalLink/.test(x)),workbookXml:xml.slice(0,400),base64:bytes.toString('base64')}));}
  else if(cmd.op==='render'){const image=await b.wb.render({sheetName:cmd.sheet,range:cmd.range||'A1:H12',scale:1,format:'png'});console.log(JSON.stringify({op:'render',sheet:cmd.sheet,base64:Buffer.from(await image.arrayBuffer()).toString('base64')}));}
  else if(cmd.op==='inspect'){console.log(JSON.stringify({op:'inspect',result:await b.wb.inspect(cmd.options)}));}
  else if(cmd.op==='exit'){rl.close();break;}
- }catch(e){console.log(JSON.stringify({error:String(e),stack:e.stack?.split('\n').slice(0,4)}));}}
+ }catch(e){console.log(JSON.stringify({error:String(e),stack:e.stack?.split('\n').filter(x=>!x.includes('data:text/javascript')).slice(0,4)}));}}
