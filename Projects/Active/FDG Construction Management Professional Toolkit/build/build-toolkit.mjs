@@ -140,7 +140,7 @@ function makeWorkbook(sample){
  report.getRange('A6:H6').format={fill:'#173F35',font:{bold:true,color:'#FFFFFF'},wrapText:true,rowHeight:42,verticalAlignment:'center',horizontalAlignment:'center'};
  for(let r=first;r<=last;r++){
   for(const [c,f]of Object.entries({A:'=IF(WBS!A'+r+'="","",WBS!A'+r+')',B:'=IF(A'+r+'="","",WBS!C'+r+')',C:'=IF(A'+r+'="","",WBS!D'+r+')',
-   D:'=IF(OR(A'+r+'="",Setup!$B$7="",Setup!$B$8="",Setup!$B$8<Setup!$B$7),"",SUMIFS(Daily!$G$7:$G$206,Daily!$C$7:$C$206,A'+r+',Daily!$B$7:$B$206,Setup!$B$4,Daily!$D$7:$D$206,">="&Setup!$B$7,Daily!$D$7:$D$206,"<="&Setup!$B$8))',
+   D:'=IF(OR(A'+r+'="",Setup!$B$7="",Setup!$B$8="",Setup!$B$8<Setup!$B$7),"",SUMIFS(Daily!$G$7:$G$206,Daily!$Q$7:$Q$206,"Matched",Daily!$P$7:$P$206,"<>Duplicate event ID",Daily!$G$7:$G$206,">=0",Daily!$C$7:$C$206,A'+r+',Daily!$B$7:$B$206,Setup!$B$4,Daily!$D$7:$D$206,">="&Setup!$B$7,Daily!$D$7:$D$206,"<="&Setup!$B$8))',
    E:'=IF(OR(A'+r+'="",Setup!$B$7="",Setup!$B$8="",Setup!$B$8<Setup!$B$7),"",SUMIFS(Daily!$H$7:$H$206,Daily!$C$7:$C$206,A'+r+',Daily!$B$7:$B$206,Setup!$B$4,Daily!$I$7:$I$206,"Accepted",Daily!$P$7:$P$206,"Recorded - verify authority",Daily!$Q$7:$Q$206,"Matched",Daily!$R$7:$R$206,"Recorded",Daily!$M$7:$M$206,">0",Daily!$M$7:$M$206,"<="&Setup!$B$6,Daily!$D$7:$D$206,">="&Setup!$B$7,Daily!$D$7:$D$206,"<="&Setup!$B$8))',
    F:'=IF(A'+r+'="","",WBS!I'+r+')',G:'=IF(A'+r+'="","",WBS!E'+r+')',H:'=IF(A'+r+'="","",WBS!J'+r+')'}))formula(report,c+r,f);
  }
@@ -164,10 +164,10 @@ set(sample.sheets.WBS,'E7',0);sample.wb.recalculate();test('zero baseline no fal
 set(sample.sheets.WBS,'F8',.3);sample.wb.recalculate();test('incomplete weights no false progress',cell(sample,'Dashboard','B6'),'n.a.');set(sample.sheets.WBS,'F8',.4);
 set(sample.sheets.Daily,'H7',0);sample.wb.recalculate();test('true zero accepted quantity preserved',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'H7',20);
 
-set(sample.sheets.Daily,'A8','D-001');sample.wb.recalculate();test('duplicate events excluded',cell(sample,'WBS','I7'),'');set(sample.sheets.Daily,'A8','D-002');
+set(sample.sheets.Daily,'A8','D-001');sample.wb.recalculate();test('duplicate events excluded',cell(sample,'WBS','I7'),'');test('duplicate reported events excluded',cell(sample,'Report','D7'),0);set(sample.sheets.Daily,'A8','D-002');
 set(sample.sheets.Daily,'D7',null);sample.wb.recalculate();test('missing event date excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'D7',new Date('2026-10-12T00:00:00Z'));
 set(sample.sheets.Daily,'J7',null);sample.wb.recalculate();test('missing evidence excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'J7','E-001');
-set(sample.sheets.Daily,'F7','kg');sample.wb.recalculate();test('wrong unit excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'F7','m3');
+set(sample.sheets.Daily,'F7','kg');sample.wb.recalculate();test('wrong unit excluded',cell(sample,'WBS','I7'),25);test('wrong unit reported excluded',cell(sample,'Report','D7'),30);set(sample.sheets.Daily,'F7','m3');
 set(sample.sheets.Daily,'M7',new Date('2026-10-18T00:00:00Z'));sample.wb.recalculate();test('future approval excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'M7',new Date('2026-10-13T00:00:00Z'));
 sample.sheets.Daily.getRange('A206:O206').values=[['D-END','DEMO-PH-001','WBS-001',new Date('2026-10-16T00:00:00Z'),'Last capacity row','m3',5,5,'Accepted','E-001','Demo Engineer','Demo Reviewer',new Date('2026-10-16T00:00:00Z'),1,'DEMO-END']];
 sample.wb.recalculate();test('last prepared row included',cell(sample,'WBS','I7'),50);sample.sheets.Daily.getRange('A206:O206').clear({applyTo:'contents'});
