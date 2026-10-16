@@ -196,3 +196,10 @@ Additional validation pack:
 - [[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_CAPABILITY_ACCEPTANCE_CASES|Nex Adaptive Capability Acceptance Cases]]
 
 This pack converts the six capability areas into repeatable pass/fail cases so development can be validated rather than merely described.
+
+
+## Proposed Nex Skill Forge & Lifecycle — 2026-10-16
+
+- [[07_Nex_Core_Intelligence/NEX_SKILL_FORGE_AND_LIFECYCLE_CONTRACT|Nex Skill Forge & Lifecycle Contract]] — **PROPOSED, NOT ACTIVE**. Nex may identify an ability gap, prepare a scoped skill candidate, arrange tests and evidence, and request authorization; it cannot self-grant privileges or activate unapproved code.
+- Reuses [[03_Agentic Framework/AGENT_LIFECYCLE|Agent Lifecycle]], [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Capability_Factory|FWAIS Capability Factory]], [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]], [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS]] and [[12_FDG_Security_Intelligence_System/06_AI_Security/FSIS-0601 - AI Collaborator Security Standard|FSIS]], avoiding a duplicate capability factory.
+- **Not a First Heartbeat blocker.** Skill generation, permission expansion and autonomous activation remain deferred until an approved runtime vertical slice passes safety and acceptance tests.
