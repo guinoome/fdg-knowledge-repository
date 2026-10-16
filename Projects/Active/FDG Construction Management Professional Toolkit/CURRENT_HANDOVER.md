@@ -1,11 +1,23 @@
 # Toolkit Build Handover
 
-Date: 2026-10-16. State: DISCOVERY / BUILD AUTHORIZED, NOT COMPLETE.
+Updated: 2026-10-16. State: IMPLEMENTATION / VALIDATION IN PROGRESS. Build authorized by Francis's current request. No deployment/sale/outreach/payment authorization.
 
-Read README.md first. Source baseline `91c6fc7346ace8dbf2f7ec86880c6e4b24c2289b`. Project files only on GitHub under this folder. Do not use stale local vault or create local artifacts.
+Repository: guinoome/fdg-knowledge-repository, main. Owned folder: Projects/Active/FDG Construction Management Professional Toolkit. GitHub only; no local project files. Start README.md, EXECUTION_PACKAGE.md and evidence/source-review.json. Do not redo the repository-wide review.
 
-Completed: inspected full GitHub tree; no existing toolkit implementation found. Read FEIS-CM-0100 and DCKL-0000/0001 fully. Retrieved 21 FPJIS package documents; complete-text review still in progress, not all yet read. No toolkit generated or tested yet.
+Completed:
+- Full text read of all 21 FPJIS package documents and all three FEIS catalog/DCKL documents, pinned 91c6fc7346ace8dbf2f7ec86880c6e4b24c2289b.
+- Canonical distribution schema: 13 registers; source generator creates17-sheet blank and synthetic sample workbooks.
+- 17 executed in-memory formula/negative tests PASS. Cases saved evidence/build-checkpoint.json.
+- XLSX export through RAM-only named pipe works; no macros/external links. Both workbooks exported in RAM; no final distribution artifacts uploaded yet.
+- Native Excel/LibreOffice application testing not performed. Independent cross-provider review unverified; do not claim either.
+- Latest generator fixes evidence/unit/reviewer/date eligibility, weight completeness, zero baseline and final capacity row.
 
-Exact next action: finish full text review of FPJIS 33_First_Payout_Commercial_Validation_Blueprints (00–20), then record scoped v1 requirements and acceptance before authoring. Build toolkit distribution files, not Construction OS or commercial-validation software.
+Current exact next action:
+Run committed build/build-toolkit.mjs using existing bundled @oai/artifact-tool, JSZip and Node with FDG_NODE_MODULES pointing at bundled node_modules. No installation/local writes. Feed newline JSON commands via stdin: {"op":"render","sheet":"Dashboard"}, {"op":"export","mode":"blank"}, {"op":"export","mode":"sample"}. Generator returns bytes as base64; save them with connected GitHub blob/tree tools, not a local file.
+Finish full-sheet visual review (currently underway), reimport numeric checks, CSV templates, printable forms, sample fixture, implementation guide, package ZIP, manifest and final evidence. Keep main branch lease and preserve unrelated changes.
 
-No install, app execution, deployment, sale, outreach or payment action. Build authority comes from current user request; do not ask again. Save source-read receipts, artifact manifest, test outcomes and exact pending step here as work advances. Preserve completed artifacts; resume pending work rather than rebuild.
+Decisions:
+Level1 toolkit distribution only, not Construction OS or commercial-validation app. One workbook profile, source Daily events and WBS baseline feed period reports/dashboard. Reported/accepted/billable/billed/paid separate. Workbook statuses are manual recordkeeping, not authorization. 200 records/register rows7–206. Blank unknowns never imply approval. Real client copies private, not public GitHub.
+
+Pending:
+Customer-facing deliverables and packaging; complete visual checks; export/reimport final modified generator; final acceptance/evidence/index update. Preserve committed schema/generator rather than redesign. Latest committed handover always overrides stale chat counts.
