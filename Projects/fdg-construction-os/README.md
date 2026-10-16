@@ -201,3 +201,7 @@ The detailed migration procedure is in:
 > **Knowledge Repository governs the OS. The OS repository implements the knowledge.**
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this project workspace
+
+## Connected lifecycle workspace
+
+The [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) now combines field management, QTO and scheduling/cost controls in one premium offline HTML file, with56 registers across 17 stages. This standalone tool remains available. The connected offline milestone does not implement the broader authenticated/cloud Construction OS. See the workspace coverage and handover.

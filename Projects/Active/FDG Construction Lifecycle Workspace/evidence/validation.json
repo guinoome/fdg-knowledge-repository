@@ -1,0 +1,343 @@
+{
+  "status": "passed for offline milestone",
+  "engine_checks": [
+    {
+      "name": "56 register templates",
+      "actual": 56,
+      "expected": 56,
+      "pass": true
+    },
+    {
+      "name": "all17 lifecycle stages",
+      "actual": 17,
+      "expected": 17,
+      "pass": true
+    },
+    {
+      "name": "source accepted progress",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "approved plan snapshot",
+      "actual": 0.4,
+      "expected": 0.4,
+      "pass": true
+    },
+    {
+      "name": "cost engine integration",
+      "actual": 165000,
+      "expected": 165000,
+      "pass": true
+    },
+    {
+      "name": "estimate integration",
+      "actual": 70091.75249999999,
+      "expected": 70091.7525,
+      "pass": true
+    },
+    {
+      "name": "source edit changes overall progress",
+      "actual": 0.29000000000000004,
+      "expected": 0.29,
+      "pass": true
+    },
+    {
+      "name": "source edit changes period report",
+      "actual": 35,
+      "expected": 35,
+      "pass": true
+    },
+    {
+      "name": "source edit propagates to schedule completion",
+      "actual": 0.35,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "missing physical verification excludes QA amount",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "accepted cannot exceed verified",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "future physical verification excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "mismatched unit excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "duplicate events excluded",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "archive propagates to cost engine",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "archive propagates to estimating engine",
+      "actual": 34020,
+      "expected": 34020,
+      "pass": true
+    },
+    {
+      "name": "baseline freezes",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "baseline budget edit blocked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "forecast leaves baseline snapshot unchanged",
+      "actual": "2026-10-16",
+      "expected": "2026-10-16",
+      "pass": true
+    },
+    {
+      "name": "forecast not falsely flagged as baseline edit",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "name": "issued report snapshot immutable under live edit",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "live report recalculates separately",
+      "actual": 0.23,
+      "expected": 0.23,
+      "pass": true
+    },
+    {
+      "name": "document current conflict requires explicit supersession",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "supersession allows new sourced revision",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "historical revision identity not overwritten",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "conflicting current revisions visible",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "QTO revision flags BOQ impact without overwrite",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "BOQ quantity retained",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "billing states cannot collapse upward",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "closing NCR without evidence rejected",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "issued metric projection is frozen independently",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "frozen metric survives JSON normalize",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "full JSON round trip",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "import collision does not overwrite",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "live state unchanged before import commit",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "legacy original retained as source snapshot",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "malformed backup rejected",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "unsafe image type rejected",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "invalid QTO WBS link rejected",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "quantity snapshot requires explicit unit",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "cross-project backup records rejected",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "curve axis follows calendar time",
+      "actual": 387.2727272727273,
+      "expected": 387.2727272727273,
+      "pass": true
+    },
+    {
+      "name": "settlement reference required for paid quantity",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "warranty dates cannot be reversed",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "blank-start WBS does not require computed inputs",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "source dataset has no fabricated photos",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    }
+  ],
+  "browser": {
+    "engine": "Installed Google Chrome via existing Playwright",
+    "form_templates_opened": 56,
+    "flows": [
+      "Shared Daily edit recalculates WBS/schedule/DPR/WPR",
+      "Issued report retains frozen32% while live becomes29%",
+      "Baseline freeze blocks budget editing and preserves forecast independence",
+      "Current document revision requires explicit supersession; earlier record retained",
+      "QTO snapshot12net/12.6allowance demand; later measurement revision flags without overwrite",
+      "Photo synthetic PNG retained Unverified",
+      "Legacy import collision preview blocks commit; current state unchanged",
+      "Save HTML blob reopened retains35%/photo/issued metrics",
+      "Export JSON → new blank → preview → restore retains project/photo/report",
+      "Print issues in-memory PDF90811bytes with navigation hidden",
+      "Blank project actual UI: WBS100m,30reported/20physicallyverified/10QAaccepted →10%"
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 1080,
+        "height": 1080
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "mobile_views_no_document_overflow": [
+      "HOME",
+      "Lifecycle",
+      "Progress",
+      "Timeline",
+      "Reports",
+      "Handover",
+      "Coverage",
+      "Daily form"
+    ],
+    "observed_application_errors": 0,
+    "observed_http_requests": 0,
+    "download_testing": "Blob interception and memory reopen; native OS save dialog not tested",
+    "screenshots": "evidence/desktop.png and mobile.png; synthetic data; CSS unchanged by final validation guard fix"
+  },
+  "not_tested": [
+    "Actual project acceptance",
+    "Server/auth/sync (not implemented)",
+    "Other browser versions",
+    "Capacity/performance at maximum data",
+    "Native OS save flow",
+    "Independent professional review"
+  ],
+  "fixes": [
+    "Blank WBS computed inputs optional",
+    "Shared sample WBS IDs",
+    "Archived engine adapters",
+    "Baseline forecast comparison",
+    "Frozen metric projections",
+    "Calendar-day curve axis",
+    "Responsive utility access/brand clipping"
+  ]
+}

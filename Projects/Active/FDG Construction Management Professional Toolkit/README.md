@@ -20,3 +20,7 @@ Two17-sheet workbooks;13 registers;26 input CSVs;11 printable forms; worked proj
 Authorized by Francis's2026-10-16 build request. Source baseline91c6fc7346ace8dbf2f7ec86880c6e4b24c2289b: all21 FPJIS blueprint-package documents plus FEIS-CM-0100 and FEIS-DCKL-0000/0001 read in full; [source receipts](evidence/source-review.json). [Execution scope](EXECUTION_PACKAGE.md) and [manifest](distribution/MANIFEST.json) preserve traceability.
 
 Level1 original downloadable toolkit only; [Construction OS staging](../../fdg-construction-os/README.md) is separate. No sales, outreach, payment, deployment or professional certification is implied. Keep real client copies private. Reuse committed [workbook generator](build/build-toolkit.mjs) and [packager](build/package-toolkit.mjs), rather than rebuilding from a chat.
+
+## Connected lifecycle workspace
+
+The [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) now combines field management, QTO and scheduling/cost controls in one premium offline HTML file, with56 registers across 17 stages. This standalone tool remains available. The connected offline milestone does not implement the broader authenticated/cloud Construction OS. See the workspace coverage and handover.

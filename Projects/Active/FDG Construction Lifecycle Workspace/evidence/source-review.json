@@ -1,0 +1,84 @@
+{
+  "source_of_truth": "GitHub connected tools; local repositories not used",
+  "baseline_commit": "bab8a20d385c660aa9a57ef0b8c7fc789414c6f8",
+  "reviewed": [
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint.md",
+      "blob_sha": "236986e9b8277f6593b877f18c43787a53b0fc5f",
+      "role": "full canonical blueprint reviewed"
+    },
+    {
+      "path": "Projects/fdg-construction-os/README.md",
+      "blob_sha": "b3dc7a31b4b824115adebae1aa2498d4e62e8088",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Projects_Master_Index.md",
+      "blob_sha": "f3793a1534896fb0436b1e38c4cf007289169d61",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map.md",
+      "blob_sha": "81f6464711c1e4b0e178dd2049bd9fba3afa1080",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract.md",
+      "blob_sha": "d8c90ff90f6f716293e9d28dd34384cb461e3f86",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0003 - Project Continuity and Personnel Handover Standard.md",
+      "blob_sha": "77af993973389928de572a27694cd3c9673e342a",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/html/engine.mjs",
+      "blob_sha": "7b05500386985e3b2b57d4aafab1fabb8a600423",
+      "role": "reused engine"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/html/app.js",
+      "blob_sha": "0d6e14a98cbb322365cce297262821c66dd6bce2",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/html/styles.css",
+      "blob_sha": "4d741019c7112841db23ef44fc02924bc6f4b539",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/html/shell.html",
+      "blob_sha": "48c838633fb2964de4c5547c82ea244fde64e266",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/html/sample-workspace.json",
+      "blob_sha": "4446ce1619af6da3372474bbba19759b429e8758",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/schema/toolkit-schema.json",
+      "blob_sha": "636d3dd6d558f879628243dbee8fe0908466c987",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Management Professional Toolkit/CURRENT_HANDOVER.md",
+      "blob_sha": "da09e2bd073164bc0426ec24f0f1060886ec1a73",
+      "role": "reviewed governing/current implementation reference"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/html/engine.mjs",
+      "blob_sha": "a3731446a120e5a1adb2a91ac0ba114a9a0e773e",
+      "role": "reused engine"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/engine.mjs",
+      "blob_sha": "18013615a7bbc417183787acbb4ba3940d91ad51",
+      "role": "reused engine"
+    }
+  ],
+  "design_reference": "User supplied PNG: visual style only; no customer/quote content reused",
+  "reading_scope": "Full project blueprint and listed contracts/current modules read; not a claim that the entire repository was reread",
+  "artifact_runtime": "Single HTML; native JS/CSS; no network dependencies"
+}

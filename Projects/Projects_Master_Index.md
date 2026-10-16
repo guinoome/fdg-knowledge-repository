@@ -164,3 +164,7 @@ This direction does not claim existing external application repositories have al
 - [[Projects/Active/FDG QTO BOQ Estimate Toolkit/README|QTO / BOQ Estimate Working HTML]] — measurement, allowances, rate build-up, BOQ mapping and pre-tax estimate summary; source/tests/evidence/handover saved with the project.
 
 - [[Projects/Active/FDG Construction Scheduling and Cost Controls/README|Construction Scheduling and Cost Controls — Working HTML]] — baseline/forecast Gantt, look-ahead, reviewed updates, cost ledger, remaining commitments and forecast-at-completion; tested source/evidence/handover.
+
+## Connected construction lifecycle workspace
+
+- [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) — premium single-file offline workflow,56 registers across 17 stages; integrates field management, QTO and scheduling/cost controls. See its coverage and handover for tested behavior and remaining platform gates.

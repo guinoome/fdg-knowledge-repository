@@ -9,3 +9,7 @@ Enter length/area/volume/count/manual measurements, repetitions, allowance%, cos
 18 engine checks pass. Installed Chrome browser checks verified editing, cost recalculation, archive/restore, duplicate rejection, JSON restore, HTML reopen,390px mobile layout without page overflow and PDF generation in RAM. No page/console errors observed. See [validation](evidence/validation.json) and [handover](CURRENT_HANDOVER.md).
 
 Canonical basis: FEIS-CM-0100 section03 Estimating and Quantity Takeoff; FBIS-BP-003 QTO/BOQ/Estimate Support candidate and original professional-pack semantics. Source commit638f4e9edb9a54e47676ca4c18a2fe1dbf0754e2. See evidence/source-review.json. All sample quantities/rates are fictional. No external market rate, statutory tax or design criterion is supplied. This is an estimating aid; actual measurements, rates, contracts and review require real project evidence.
+
+## Connected lifecycle workspace
+
+The [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) now combines field management, QTO and scheduling/cost controls in one premium offline HTML file, with56 registers across 17 stages. This standalone tool remains available. The connected offline milestone does not implement the broader authenticated/cloud Construction OS. See the workspace coverage and handover.

@@ -17,3 +17,7 @@ Sample budget150000PHP; actual40000; remaining forecast125000 including50000 ope
 This is manual scheduling/cost control, not a CPM/resource-leveling solver, accounting/payment system or professional approval. No taxes or statutory compliance conclusions. Keep real copies private and save HTML/JSON before closing; no automatic browser storage or cloud sync.
 
 GitHub is authoritative. No project files were written locally. Rebuild from html/ and build/build-html.mjs. Domain acceptance and independent review remain pending. This project preserves the neighboring Construction Management and QTO/BOQ toolkits.
+
+## Connected lifecycle workspace
+
+The [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) now combines field management, QTO and scheduling/cost controls in one premium offline HTML file, with56 registers across 17 stages. This standalone tool remains available. The connected offline milestone does not implement the broader authenticated/cloud Construction OS. See the workspace coverage and handover.
