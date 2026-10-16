@@ -3,6 +3,7 @@
 **v1.0.0-rc.1 built — review candidate.** First planned digital product under FPJIS. All13 minimum toolkit components delivered. Native application/user acceptance and commercial launch remain pending.
 
 ## Start here
+- [Everything in one HTML file](distribution/FDG-Construction-Toolkit-All-in-One.html) — offline guide, editable forms and all embedded downloads.
 - [Download complete toolkit ZIP](distribution/FDG-CMT-PH-1.0.0-rc.1.zip)
 - [Blank workbook](distribution/FDG-CMT-PH-Blank.xlsx)
 - [Worked-example workbook](distribution/FDG-CMT-PH-Worked-Example.xlsx)

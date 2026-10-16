@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-16",
+  "source_commit": "56cb31c3810b70bd257229b86420e8c82d2a93f0",
+  "artifact": "distribution/FDG-Construction-Toolkit-All-in-One.html",
+  "git_blob_sha": "7c767a797a69b5af30223c160edb8e046e6332e5",
+  "checks": [
+    {
+      "name": "46 original embedded files",
+      "pass": true
+    },
+    {
+      "name": "all embedded contents exactly preserved",
+      "pass": true
+    },
+    {
+      "name": "guide visible",
+      "pass": true
+    },
+    {
+      "name": "13 sample register tables",
+      "pass": true
+    },
+    {
+      "name": "evidence visible",
+      "pass": true
+    },
+    {
+      "name": "no external script or stylesheet dependencies",
+      "pass": true
+    },
+    {
+      "name": "embedded HTML safely escaped in JSON",
+      "pass": true
+    },
+    {
+      "name": "all download targets exist",
+      "pass": true
+    },
+    {
+      "name": "inline JavaScript syntax",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Actual browser rendering, download/save interaction and printing not exercised.",
+    "Native spreadsheet and construction-user acceptance remain pending."
+  ],
+  "storage": "GitHub only; compilation performed in memory."
+}

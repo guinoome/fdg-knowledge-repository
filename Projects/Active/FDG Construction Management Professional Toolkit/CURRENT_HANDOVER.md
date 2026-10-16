@@ -29,3 +29,10 @@ Existing bundled Node24.19.0, @oai/artifact-tool and JSZip only. Set FDG_NODE_MO
 
 ## Knowledge improvement
 Keep source-review receipts, schema, executable checks, manifests and this milestone handover together. They prevent repeated discovery and make future platform migration auditable. The remaining work is explicit acceptance, not another broad build.
+
+
+## Single-file HTML compilation — 2026-10-16
+
+[Open/download the complete single-file HTML](distribution/FDG-Construction-Toolkit-All-in-One.html). It embeds46 original files (workbooks, CSVs, ZIP, forms, guide, schema, data, evidence and build-source snapshots). It works offline after saving; GitHub displays source until downloaded/opened in a browser. The guide, sample registers and evidence can be read directly; forms can be edited/printed; the save-copy control preserves current form edits. Underlying spreadsheet formulas run in the embedded XLSX downloads. No external libraries/network requests are required.
+
+Compilation content/structure and inline JavaScript syntax checked. Actual browser save/download/print interaction remains unverified in this GitHub-only workflow. Embedded project documents are snapshots of commit 56cb31c3810b70bd257229b86420e8c82d2a93f0; this live handover supersedes them. Reuse build/compile-single-html.mjs for compilation rather than rebuilding the toolkit.
