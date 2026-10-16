@@ -36,3 +36,14 @@ Keep source-review receipts, schema, executable checks, manifests and this miles
 [Open/download the complete single-file HTML](distribution/FDG-Construction-Toolkit-All-in-One.html). It embeds46 original files (workbooks, CSVs, ZIP, forms, guide, schema, data, evidence and build-source snapshots). It works offline after saving; GitHub displays source until downloaded/opened in a browser. The guide, sample registers and evidence can be read directly; forms can be edited/printed; the save-copy control preserves current form edits. Underlying spreadsheet formulas run in the embedded XLSX downloads. No external libraries/network requests are required.
 
 Compilation content/structure and inline JavaScript syntax checked. Actual browser save/download/print interaction remains unverified in this GitHub-only workflow. Embedded project documents are snapshots of commit 56cb31c3810b70bd257229b86420e8c82d2a93f0; this live handover supersedes them. Reuse build/compile-single-html.mjs for compilation rather than rebuilding the toolkit.
+
+
+## Working construction HTML — supersedes the compilation as the primary product, 2026-10-16
+
+Francis clarified that he wanted an operational HTML construction template, not an embedded-download compilation. **distribution/FDG-Construction-Working-Template.html** is now the primary working interface. It starts blank and has project setup, thirteen editable registers, live accepted/planned progress, reporting, search, reversible archive/restore, session undo, CSV export, JSON backup/import, saved working HTML and printable report narratives. No network, account, external dependencies, automatic browser storage or local project files were used during creation.
+
+Source is in html/; reuse engine.mjs, app.js, styles.css, shell.html and sample-workspace.json with build/build-working-html.mjs. Core validation:22 tests pass. Installed Chrome headless browser tests verified sample loading, Daily addition35→38%, archive35%, restore, duplicate rejection, all13 register views, period switching, JSON reimport, working-HTML reopen preserving records,390px layout with no page overflow, report print action and PDF generation in RAM. No page errors observed. Evidence: evidence/working-html-validation.json.
+
+HTML is single-editor manual workflow, not full Construction OS. No authenticated approval, statutory tax computation, permission enforcement or cloud sync. Blank remains unknown; weights and review evidence are explicit. Save working HTML/JSON before closing. Browser download content and reopen tested in memory; OS file-save dialogs, other browsers and real-user acceptance remain unverified.
+
+Francis next requested other construction projects. An optional question is pending: QTO/BOQ/estimating, scheduling/cost control, or Construction OS. Continue the chosen project; preserve this completed working template. Do not redo spreadsheet/compilation discovery.

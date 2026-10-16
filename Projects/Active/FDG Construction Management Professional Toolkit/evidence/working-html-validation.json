@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-16",
+  "source_commit": "3757b7a6e21d34dc1c703a9f1c545ead74e58f6b",
+  "artifact": "distribution/FDG-Construction-Working-Template.html",
+  "browser": {
+    "path": "Regular Playwright; Browser plugin/skill absent. Bundled Chromium unavailable; installed Chrome executable used, no installs.",
+    "entry": "about:blank setContent — RAM only",
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ],
+    "identity": "FDG Construction — Working Project Template",
+    "meaningful_render": true,
+    "page_errors": [],
+    "mobile_document_overflow": false
+  },
+  "logic_tests": [
+    {
+      "name": "synthetic accepted progress",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "planned progress",
+      "actual": 0.4,
+      "expected": 0.4,
+      "pass": true
+    },
+    {
+      "name": "variance",
+      "actual": -0.04999999999999999,
+      "expected": -0.05,
+      "pass": true
+    },
+    {
+      "name": "period concrete reported",
+      "actual": 50,
+      "expected": 50,
+      "pass": true
+    },
+    {
+      "name": "period concrete accepted",
+      "actual": 45,
+      "expected": 45,
+      "pass": true
+    },
+    {
+      "name": "future accepted event excluded",
+      "actual": 45,
+      "expected": 45,
+      "pass": true
+    },
+    {
+      "name": "unreviewed pipe excluded",
+      "actual": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "blank project unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "zero baseline unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "incomplete weights unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "reviewed zero preserved",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "missing evidence excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "wrong unit excluded from accepted",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "wrong unit excluded from reported",
+      "actual": 30,
+      "expected": 30,
+      "pass": true
+    },
+    {
+      "name": "duplicate source events excluded",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "archived event excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "future review excluded",
+      "actual": 25,
+      "expected": 25,
+      "pass": true
+    },
+    {
+      "name": "reversed period unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "CSV injection neutralized",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "JSON normalization round trip",
+      "actual": 0.35000000000000003,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "name": "invalid backup rejected",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "nonexistent calendar date rejected",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    }
+  ],
+  "interaction_checks": [
+    {
+      "name": "Synthetic fixture dashboard",
+      "result": "35% accepted /40% planned /-5pp"
+    },
+    {
+      "name": "Add accepted Daily5m3",
+      "result": "38% accepted"
+    },
+    {
+      "name": "Archive event",
+      "result": "35% accepted"
+    },
+    {
+      "name": "Restore event",
+      "result": "record restored"
+    },
+    {
+      "name": "Duplicate event ID",
+      "result": "rejected with visible form error"
+    },
+    {
+      "name": "JSON backup/reimport",
+      "result": "38% and records restored"
+    },
+    {
+      "name": "Save working HTML/reopen",
+      "result": "38% and D-006 preserved"
+    },
+    {
+      "name": "All13 register views",
+      "result": "tables render"
+    },
+    {
+      "name": "Month reporting",
+      "result": "October1–16 with cumulative/period figures"
+    },
+    {
+      "name": "Report print",
+      "result": "print invoked, narrative present, sidebar hidden,51180byte PDF generated in RAM"
+    }
+  ],
+  "limitations": [
+    "OS download/file-save dialogs not exercised; download Blob content was captured and reopened in memory.",
+    "Other browser engines, actual construction-user acceptance and independent provider review not performed.",
+    "Archive/audit are editable manual controls, not tamper-proof authorization."
+  ],
+  "storage": "GitHub authoritative. No local project artifacts; no installs or downloads."
+}

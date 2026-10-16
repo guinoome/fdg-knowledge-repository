@@ -3,6 +3,7 @@
 **v1.0.0-rc.1 built — review candidate.** First planned digital product under FPJIS. All13 minimum toolkit components delivered. Native application/user acceptance and commercial launch remain pending.
 
 ## Start here
+- [Working construction template — HTML](distribution/FDG-Construction-Working-Template.html) — enter records, calculate progress, manage registers, print reports and save your working project. This is the primary operational HTML interface.
 - [Everything in one HTML file](distribution/FDG-Construction-Toolkit-All-in-One.html) — offline guide, editable forms and all embedded downloads.
 - [Download complete toolkit ZIP](distribution/FDG-CMT-PH-1.0.0-rc.1.zip)
 - [Blank workbook](distribution/FDG-CMT-PH-Blank.xlsx)
