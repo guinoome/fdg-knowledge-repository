@@ -79,3 +79,12 @@ aside .brand b{font-size:20px}@media(max-width:1200px){aside .brand b{font-size:
 .rp-source-head b,.rp-source-head span,.rp-source-head strong,.rp-work-heading span{overflow-wrap:anywhere;max-width:100%;white-space:normal}.rp-source-head>div{min-width:0}.rp-trace h3{overflow-wrap:anywhere}
 
 .workspace header>div{min-width:0;max-width:100%}#project-name{overflow-wrap:anywhere}
+
+/* WP03 keeps quality workflow beside the existing everyday capture screens. */
+.iq-intro .title-row{align-items:flex-start}.iq-intro p{margin:7px 0}.iq-label{font-size:11px;color:#645223}.iq-report{color:#172337;background:white}.iq-report h2,.iq-report h3{color:#172337;overflow-wrap:anywhere}.iq-finding{border-top:2px solid #c49b43;padding:22px 0;break-inside:avoid}.iq-finding p,.iq-history p{font-size:12px;overflow-wrap:anywhere}.iq-finding .title-row{margin-bottom:12px}.iq-finding .title-row>div{min-width:0}.iq-correction{border-left:3px solid #aebed2;padding:14px 16px;margin:12px 0;background:#f5f7fa}.iq-history{border-top:1px solid #d5dce6;margin-top:10px;padding:12px 0}.iq-report .small,.iq-history summary{color:#526074}.iq-report button{background:#192d48;color:white;border-color:#192d48;min-height:44px;font-size:12px}.iq-report details{color:#24344d}.iq-report summary{cursor:pointer;font-size:12px}.iq-report summary:focus-visible{outline:2px solid #b78c25}.iq-report h3{font-size:17px;margin:6px 0}.iq-report .rp-flag{color:#5b4310}.simple-mode #iq-error{color:#ffb8a6}.iq-report>p{overflow-wrap:anywhere}.iq-report .title-row{display:flex}
+@media(max-width:700px){.iq-report{padding:18px 14px}.iq-correction{padding:12px}.iq-finding .title-row{flex-direction:column;align-items:flex-start}.iq-finding{padding:18px 0}.iq-intro .primary{width:100%}}
+@media print{.iq-intro,#iq-editor{display:none!important}.iq-report,.iq-report *{color:#111!important;background:white!important}.iq-report .title-row{display:block!important}.iq-report details{display:block}.iq-report details>summary{display:none}.iq-report details>*{display:block!important}.iq-finding{break-inside:auto}.iq-history{break-inside:avoid}}
+
+.iq-report .report-brand{color:#755211}.iq-report summary{color:#47546a}
+
+.iq-history b,.iq-correction>b,.iq-label{overflow-wrap:anywhere}

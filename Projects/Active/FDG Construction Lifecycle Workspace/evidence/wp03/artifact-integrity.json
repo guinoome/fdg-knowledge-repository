@@ -1,0 +1,9 @@
+{
+  "bytes": 262657,
+  "sha256": "5f80787532fbf50d120b9bef57bec31da85b6d89359a37889cc05f83d57abe0d",
+  "demoBytes": 269450,
+  "demoSha256": "e95c8e2fe9bb0ad4be16b8728f56339d7e8584919ebaa0e8cc0f87b4297d8bd0",
+  "gitBlob": "79f55bf78a804fd1a6e970c88edc228975f44ee9",
+  "demoGitBlob": "d0b3c3e0ddaf3cf7e1b17b52edca59c514c094c1",
+  "baseline": "a6955916ab33220298a1eadd25c78f39c99d63de"
+}

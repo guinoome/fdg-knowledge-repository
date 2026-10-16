@@ -32,7 +32,7 @@ GitHub's HTML file view displays source; it is not an application host. Open the
 
 ## Verified scope
 
-178 checks passed:46 lifecycle +41 beginner +34 Overview +57 report. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [WP02 validation](evidence/wp02/validation.json), [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
+231 checks passed:46 lifecycle +41 beginner +34 Overview +57 report +53 inspection. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [WP03 validation](evidence/wp03/validation.json), [WP02 validation](evidence/wp02/validation.json), [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
 
 This is a single-user offline tool. Accounts, server authority, cloud collaboration and deployment are outside this milestone. Real-project acceptance and independent provider review remain pending.
 
@@ -53,3 +53,9 @@ Translucent live quantities, cutoff/latest source date, pending reviews, recorde
 ## WP02 — source-linked reports
 
 Reports now show project/period/cutoff, quantities with units, source ID/date/author/review/evidence and original-record navigation. No-entry period is Not reported; entered zero remains0. Detailed/new issued projections retain unknown verification/acceptance. [Synthetic working demo](evidence/wp02/working-demo.html) · [Result/evidence](docs/work-packages/WP02_REPORTS_AND_PRINT.md). Native OS save/print dialogs and real-user acceptance remain pending.
+
+## WP03 — Quality checks and fixes
+
+Open **More tools → Quality checks and fixes**. Record the finding once, assign the repair, submit corrective evidence and record a separate reinspection. Failed results remain open; each repair/reinspection is retained. Managed closeout requires source criteria/evidence, a separate declared verifier and authority reference. Typed names are not authenticated identity or certification. Daily progress acceptance remains separate.
+
+[Working synthetic full-loop demo](evidence/wp03/working-demo.html) · [Desktop](evidence/wp03/after-desktop.png) · [Phone](evidence/wp03/after-mobile.png) · [Quality PDF](evidence/wp03/quality-summary.pdf) · [WP03 result](docs/work-packages/WP03_INSPECTION_TO_CORRECTIVE_ACTION.md). All56 Advanced forms remain available. Real-user/qualified acceptance is pending.

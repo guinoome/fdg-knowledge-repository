@@ -19,6 +19,7 @@ function render(){
  else if(view==='QuickDaily')renderQuickDaily();
  else if(view==='QuickReports')renderQuickReports();
  else if(view==='QuickMore')renderQuickMore();
+ else if(view==='QuickQuality')renderQuality();
  else if(d)renderRegister();
  else if(view==='HOME')renderHome(m);
  else if(['PLAN','ESTIMATE','EXECUTE','TRACK','DOCUMENT'].includes(view))renderArea(view,m);

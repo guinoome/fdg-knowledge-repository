@@ -1,29 +1,31 @@
-# Current handover — WP02 reports completed; WP03 next
+# Current handover — WP02 and WP03 offline milestones completed
 
-Date: 2026-10-16. Canonical GitHub `guinoome/fdg-knowledge-repository`, main. Code baseline `0a764d8e69c1c573da6b545c8e778cffe5497523`; publication parent `78e4915d3bd39e4737629ebc58b11c63dcf790a3`. The commit containing this handover is the WP02 milestone. No local project checkout/output.
+2026-10-16 · Canonical GitHub `guinoome/fdg-knowledge-repository`, main. WP02 commit `a6955916ab33220298a1eadd25c78f39c99d63de`. WP03 code baseline `a6955916ab33220298a1eadd25c78f39c99d63de`; publication parent `b21ccf502e896382a3827f589e95770135e8bf1a`; the commit containing this handover is WP03. No local project checkout/output.
 
-[Working HTML](distribution/FDG-Construction-Lifecycle.html) · [Synthetic actual-app demo](evidence/wp02/working-demo.html) · [Screens, PDF and tests](evidence/wp02/) · [WP02 result](docs/work-packages/WP02_REPORTS_AND_PRINT.md).
+[Working HTML](distribution/FDG-Construction-Lifecycle.html) · [Synthetic complete demo](evidence/wp03/working-demo.html) · [WP03 screens/tests/PDF](evidence/wp03/) · [WP02 reports evidence](evidence/wp02/) · [WP03 result](docs/work-packages/WP03_INSPECTION_TO_CORRECTIVE_ACTION.md).
 
-## Completed
+## Completed now
 
-Reused WP01 and existing five-view UI/56 registers. Simple report now has explicit project/period/cutoff/revision, per-item quantities with units, original source IDs/dates/author/review/verification/evidence, excluded-record reasons and original-record drill-through. Quality/safety notes appear only from dated original records. Source trail is shared by detailed and preserved reports; preserved issues have no live editing links.
+WP02 reports/source trail/unknown-vs-zero/date/print fixes retained. WP03 adds More tools → Quality checks and fixes over existing QAQC/NCR/Issues records. Finding → assign fix with optional classification/priority rationale → submit repair evidence → separate recorded reinspection. Failed result keeps correction open; later repair/reinspection retains earlier attempts. Passed declaration can close the managed NCR and its linked Issue only with actual method/criterion/observed result/evidence/date/authority reference and a verifier name different from repair owner/performer. Names are manual declarations, not authenticated identity or qualifications. Daily quantities/acceptance are never promoted by this workflow.
 
-Period absence is Not reported; explicit zero remains 0 with unit. Detailed/new issued report projections retain null for absent reported/physical/accepted quantities. Verification before event date is excluded. New report issues reject periods beyond cutoff. Existing issued projections remain preserved. Long project names now wrap on phone. Other calculation engines/schema/JSON version unchanged.
+Original source navigation has Back to quality. Print includes method/criterion/evidence/authority/history and restores collapsed state afterwards. Managed closeout checks also apply to Advanced saves; removing a managed link is rejected. Invalid imported/archived/duplicate closeout sources are flagged and remain review items. Untagged legacy QA/NCR records are preserved without automatic migration or new claims.
 
-## Verified
+## Exact source/build
 
-178 executable checks pass:46 lifecycle +41 beginner +34 Overview +57 report.33 actual Chrome browser assertions: fresh100m/+20/+10 →30m/70m; day10/week30/month30; Monday/Sunday and cross-month ranges; source drill and keyboard; missing vs explicit0; issued report unchanged after+5; HTML save/reopen and JSON preview/commit; escaped source text;390/768/1080/1440 layouts; white A4 PDF78508bytes with hidden controls/source IDs. Final runs0 relevant errors/warnings/network requests. Individual results: evidence/wp02/validation.json.
+Added html/inspection-engine.mjs, html/ui-quality.js and tests/inspection.test.mjs. Targeted changes: build/build-html.mjs, html/core.mjs, html/ui-guided.js, html/ui-shell.js, html/ui-records.js, html/styles.css. Current assembly order: field, cost, estimate, core, guided, inspection engines; UI shell, projections, records, continuity, guided, quality, actions. Six engines/seven UI files. Existing56-register schema, version1 JSON and original field/cost/estimate engines unchanged. [Data contract](docs/INSPECTION_WORKFLOW_CONTRACT.md) documents reserved FDG-QA-1 references.
 
-## Artifact
+## Verification
 
-Primary 237750 UTF-8 bytes; SHA256 `c8ea99b680862a22b061e828162364d54e8a1ff7a62c7ce2e67b505ca8d7b4fa`; Git blob `426a04acf16f62119e52ee883f4529a354641d47`. Synthetic demo 239191 bytes; SHA256 `0fcfbedd924271bcf88ee53f07602dc9c705665214212cb29d5f6fbcab17c1bb`. Saved directly through connected GitHub tools. Screens are actual application renders.
+231 executable checks pass:46 lifecycle +41 beginner +34 Overview +57 report +53 inspection.36 WP03 browser assertions: actual finding/assignment/failed reinspection/second repair/passed declaration; same-name verifier blocked; complete source history; Advanced link bypass blocked; HTML save/reopen; JSON preview/restore; source/return navigation; all56 Advanced forms; no-work state; long/escaped text;390/768/1080/1440 layouts; final30m/70m with QA still Unknown; actual A4 quality PDF 65775bytes with beforeprint/afterprint history handling. Final app contexts observed0 relevant errors/warnings or network requests. Individual results in evidence/wp03/validation.json. WP02's33 report-browser assertions are retained separately.
 
-## Current state / limits
+Primary 262657 UTF-8 bytes, SHA256 `5f80787532fbf50d120b9bef57bec31da85b6d89359a37889cc05f83d57abe0d`, Git blob `79f55bf78a804fd1a6e970c88edc228975f44ee9`. Populated demo 269450 bytes, SHA256 `e95c8e2fe9bb0ad4be16b8728f56339d7e8584919ebaa0e8cc0f87b4297d8bd0`. Screens are actual application renders. Artifacts uploaded directly through connected GitHub tools.
 
-Real novice/qualified project acceptance PENDING; independent provider/Claudex NOT RUN (skill absent; no installation under no-local-output constraint). Native OS save dialog and native print preview NOT RUN; actual UI save Blobs/reopen and Chromium PDF tested. One installed Chrome; capacity/multi-editor/diverse browsers not tested. No auth/RBAC/cloud sync/payments/hosting/commercial release. GitHub HTML view displays source. Any localhost preview is RAM-only and expires with runtime. Client-first capsule and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) preserved/open; no actual client/payment acceptance claimed.
+## Limits / acceptance
 
-## Continuity
+No actual site/client evidence used. Synthetic engineering criteria, people and file references are illustrative; no genuine inspection approval/certification claimed. Qualified/novice acceptance PENDING; independent provider/Claudex NOT RUN (skill absent; no installation under task constraints). Native OS save/print dialogs NOT RUN; actual UI Blob/reopen and Chromium PDF tested. One installed Chrome; large-capacity/diverse-browser/multi-editor tests not run. No auth/RBAC/cloud sync/payment/hosting/commercial release. GitHub HTML view is source; localhost preview is RAM-only and expires with runtime.
 
-Previous complete WP01 handover: [archive](docs/handovers/2026-10-16-WP01-pre-WP02.md). Concurrent FCMIS-only commits through publication parent preserved. No unrelated edits.
+Client-first capsule and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) preserved/open. Previous WP02 handover [archived](docs/handovers/2026-10-16-WP02-pre-WP03.md). Prior WP01 archive/evidence retained. Concurrent FCMIS-only commits through publication parent preserved. No unrelated project/canonical changes.
 
-Exact next action: Inspect WP03 inspection → corrective action using existing QAQC/NCR/Evidence records. Reproduce one linked finding/repair/verification workflow; implement only the demonstrated gap. No cloud identity or automatic acceptance.
+## Next permitted action
+
+Run and record actual beginner/qualified acceptance of the existing complete offline capture/report/quality/save workflow under issue#5. Do not rebuild completed WP01–03. WP04 full-platform integration remains DEFERRED under the execution pack; shared identity/permissions/sync/deployment and real authority need their separate contracts/evidence before implementation or release claims.

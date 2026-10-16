@@ -1,0 +1,39 @@
+{
+  "baseline": "a6955916ab33220298a1eadd25c78f39c99d63de",
+  "changed": [
+    "build/build-html.mjs",
+    "html/core.mjs",
+    "html/styles.css",
+    "html/ui-guided.js",
+    "html/ui-records.js",
+    "html/ui-shell.js",
+    "html/inspection-engine.mjs",
+    "html/ui-quality.js",
+    "tests/inspection.test.mjs"
+  ],
+  "unchanged": [
+    "html/schema.json",
+    "html/control-schema.json",
+    "html/field-engine.mjs",
+    "html/cost-engine.mjs",
+    "html/estimate-engine.mjs",
+    "html/guided-engine.mjs",
+    "tests/lifecycle.test.mjs",
+    "tests/guided.test.mjs",
+    "tests/overview.test.mjs",
+    "tests/report.test.mjs"
+  ],
+  "review": [
+    "versioned reserved source links",
+    "original registers reused, no new schema",
+    "Advance guard cannot unlink managed NCR",
+    "bad imported closeout visible without source rewriting",
+    "repair/reinspection retained separately",
+    "actual Daily quantities/acceptance unchanged",
+    "untrusted text escaped",
+    "history expands only for print then restores",
+    "source bounds checked before normalize truncation",
+    "no new runtime dependencies/network"
+  ],
+  "independentReview": "NOT RUN; Claudex skill absent, no install under task constraints"
+}

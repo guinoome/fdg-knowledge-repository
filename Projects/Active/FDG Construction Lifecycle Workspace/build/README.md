@@ -4,13 +4,13 @@
 - schema / controlSchema from html/schema.json and html/control-schema.json
 - phases from html/phases.json
 - initial from html/blank.json; sample from html/sample.json
-- engines in order: field-engine.mjs, cost-engine.mjs, estimate-engine.mjs, core.mjs, guided-engine.mjs
-- uiSources map: ui-shell.js, ui-projections.js, ui-records.js, ui-continuity.js, ui-guided.js, ui-actions.js
+- engines in order: field-engine.mjs, cost-engine.mjs, estimate-engine.mjs, core.mjs, guided-engine.mjs, inspection-engine.mjs
+- uiSources map: ui-shell.js, ui-projections.js, ui-records.js, ui-continuity.js, ui-guided.js, ui-quality.js, ui-actions.js
 - css from html/styles.css; shell from html/shell.html
 
 Call the builder and retain the returned HTML string. No npm package, CDN or installation is needed by the delivered HTML. Do not edit distribution separately from source. The previous theme.css is an additional standalone theme reference; styles.css already includes the lifecycle overrides.
 
-`runLifecycleTests(createLifecycle,schema,controlSchema,sample)` in tests/lifecycle.test.mjs returns named results or throws at a failure. Engines intentionally share a single-script lexical scope after assembly. In a trusted Node validation harness, concatenate those five source strings, replace `export function` with `function`, then evaluate that trusted repository source to retrieve createLifecycle; pass fixtures to runLifecycleTests. Never evaluate user imports as code.
+`runLifecycleTests(createLifecycle,schema,controlSchema,sample)` in tests/lifecycle.test.mjs returns named results or throws at a failure. Engines intentionally share a single-script lexical scope after assembly. In a trusted Node validation harness, concatenate those six source strings, replace `export function` with `function`, then evaluate that trusted repository source to retrieve createLifecycle; pass fixtures to runLifecycleTests. Never evaluate user imports as code.
 
 Example trusted in-memory harness:
 
@@ -36,3 +36,7 @@ Same five engines/six UI sources. tests/overview.test.mjs exports runOverviewTes
 ## WP02 reports
 
 Same builder and five engines. tests/report.test.mjs exports runReportTests(L,G,sample). Run alongside lifecycle/guided/Overview:178 checks total. In a trusted RAM harness strip only leading module declarations with /^export function/gm; replacing every matching string would also alter the builder's own engine-assembly literal. Never evaluate user JSON as code.
+
+## WP03 current assembly
+
+The current builder requires six ordered engines (field, cost, estimate, core, guided, inspection) and seven UI parts (shell, projections, records, continuity, guided, quality, actions). Earlier WP01/WP02 five-engine notes above describe historical builds. Current code preserves the same56-register/version1 data format. Instantiate IQ=createInspectionWorkflow(L,G); tests/inspection.test.mjs exports runInspectionTests(L,G,IQ,sample). Full run:46 lifecycle +41 guided +34 Overview +57 report +53 inspection =231 pass. No npm/CDN/runtime dependency added.
