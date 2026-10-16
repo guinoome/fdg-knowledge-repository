@@ -310,3 +310,25 @@ Commercial sequence:
 The prior combined Engineering Operations + Hotel Room Readiness L1 decision is superseded but preserved in repository history.
 
 Formal first-payment friction scoring for L1A and L1B should be performed separately before campaign launch.
+
+## 16. Demand-first validation and vibe-coding restraint — 2026-10-16
+
+**Commercial architecture decision:** Keep the existing first-payout portfolio and opportunity scores as hypotheses. The 2026-10-16 “Vibe Coding Reality Check” source reinforces the need to demonstrate a real buyer/payer, recurring loss, current workaround, credible switching threshold and genuine payment **before interpreting cheap code as commercial justification**. This is a discipline added to the current commercial operating loop, not a competing micro-SaaS strategy.
+
+Execution and audit templates are owned by FPJIS, while FBIS retains customer, offer/pricing, transaction and conversion authority:
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/21_Vibe_Coding_Demand_First_Validation_Protocol|Demand-First Validation Protocol (FPCV-2100)]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/22_Demand_Validation_Operator_Card|Demand Validation Operator Card (FPCV-2200)]]
+
+**Apply to current portfolio in this order:**
+
+1. **P0 assisted maintenance reporting:** start with the already prepared Pilot 001 and actual facility/engineering buyer problem discovery; prepare an approved single-result quote, deliver manually with engineering review, verify any payment, then measure acceptance, direct cost, founder hours and repeat potential. Do not treat blueprint completeness as paid traction.
+2. **P0 construction professional toolkit:** test a sample linked daily-progress/evidence-to-report or billing outcome with specific project-manager/site-engineer/contractor buyers before expanding the pack or coding a Construction OS.
+3. **Existing FBPOIS Concern-to-Clearance L1A:** preserve authorized narrow local implementation and approved incremental patches, use real workflow demonstrations to discover a switching case; never treat working L1A or internal enthusiasm as proof of outside demand.
+4. **Other business and engineering modules:** keep the full architecture, but score payer/problem/recurrence/switching need separately and promote only the next validated narrow capability.
+
+**Guardrails:** Maintain 20 qualified prospects, five meaningful conversations, two formal offers and one verified paid pilot as the existing **30-day program targets**, not actual results. Log test thresholds before the test. View waitlists, verbal commitments, orders, verified collections, engineering-reviewed delivery, client acceptance and paid renewals as different states. The speaker's “4/5 micro filter,” “3+ signal types,” “5–10 interviews” and “three payments in 14 days” are illustrative test heuristics, not new mandatory FDG-wide standards. An existing competitor proves category activity but not FDG buyer conversion.
+
+Existing offer price hypotheses (including ₱4,999 and conditional Founding Five campaign pricing), human sign-off, legal/payment approvals, work ownership, the no-major-new-build experimental constraint, and all FPJIS G6–G10 release gates remain unchanged. This update authorized **documentation of a validation test only**: no campaign sent, buyer interviewed, funds received or new software commissioned.
+
+**Revision trace:** 2026-10-16 — added source-inspired buyer/switching/paid-promise test integration and links to FPJIS operator controls; no actual market-result claim and no change to prior pricing/roadmap approvals.
