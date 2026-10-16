@@ -1,0 +1,155 @@
+{
+  "format": "FDG-SCHEDULE-COST",
+  "version": 1,
+  "project": {
+    "id": "DEMO-PC-001",
+    "name": "Cebu MEP — Schedule & Cost Demonstration",
+    "location": "Cebu, Philippines",
+    "asOf": "2026-10-16",
+    "horizon": 14,
+    "preparedBy": "Demo Planner / QS",
+    "reviewedBy": "Demo Reviewer",
+    "notes": "Synthetic records only. ETC includes remaining commitments. Dates use calendar days; uniform baseline distribution is a planning assumption."
+  },
+  "tasks": [
+    {
+      "id": "A-001",
+      "wbs": "WBS-001",
+      "name": "Concrete slab",
+      "owner": "Demo Site Engineer",
+      "baselineStart": "2026-10-12",
+      "baselineFinish": "2026-10-16",
+      "forecastStart": "2026-10-12",
+      "forecastFinish": "2026-10-18",
+      "actualStart": "2026-10-12",
+      "actualFinish": null,
+      "predecessors": "",
+      "budget": 100000,
+      "etc": 70000,
+      "forecastDate": "2026-10-16",
+      "forecastSource": "DEMO-ETC-001",
+      "source": "DEMO-BASELINE-A",
+      "revision": 1
+    },
+    {
+      "id": "A-002",
+      "wbs": "WBS-002",
+      "name": "Pipe installation",
+      "owner": "Demo Mechanical Engineer",
+      "baselineStart": "2026-10-17",
+      "baselineFinish": "2026-10-21",
+      "forecastStart": "2026-10-19",
+      "forecastFinish": "2026-10-23",
+      "actualStart": null,
+      "actualFinish": null,
+      "predecessors": "A-001",
+      "budget": 50000,
+      "etc": 55000,
+      "forecastDate": "2026-10-16",
+      "forecastSource": "DEMO-ETC-002",
+      "source": "DEMO-BASELINE-B",
+      "revision": 1
+    }
+  ],
+  "updates": [
+    {
+      "id": "P-001",
+      "task": "A-001",
+      "date": "2026-10-16",
+      "reportedPct": 90,
+      "reviewedPct": 80,
+      "state": "Reviewed",
+      "status": "In Progress",
+      "blocker": "Inspection pending",
+      "reviewer": "Demo Reviewer",
+      "reviewDate": "2026-10-16",
+      "source": "DEMO-PROGRESS-001",
+      "revision": 1
+    },
+    {
+      "id": "P-002",
+      "task": "A-002",
+      "date": "2026-10-16",
+      "reportedPct": 0,
+      "reviewedPct": 0,
+      "state": "Reviewed",
+      "status": "Not Started",
+      "blocker": "Material approval",
+      "reviewer": "Demo Reviewer",
+      "reviewDate": "2026-10-16",
+      "source": "DEMO-ZERO-WORK-002",
+      "revision": 1
+    }
+  ],
+  "costs": [
+    {
+      "id": "AC-001",
+      "task": "A-001",
+      "date": "2026-10-16",
+      "type": "Cost",
+      "amount": 40000,
+      "owner": "Demo QS",
+      "source": "DEMO-COST-001",
+      "revision": 1
+    },
+    {
+      "id": "AC-002",
+      "task": "A-002",
+      "date": "2026-10-16",
+      "type": "Cost",
+      "amount": 0,
+      "owner": "Demo QS",
+      "source": "DEMO-NO-COST-ASOF",
+      "revision": 1
+    }
+  ],
+  "commitments": [
+    {
+      "id": "CM-001",
+      "task": "A-001",
+      "contract": "SC-001",
+      "date": "2026-10-16",
+      "remaining": 30000,
+      "owner": "Demo QS",
+      "source": "DEMO-OPEN-COMMIT-001",
+      "revision": 1
+    },
+    {
+      "id": "CM-002",
+      "task": "A-002",
+      "contract": "PO-002",
+      "date": "2026-10-16",
+      "remaining": 20000,
+      "owner": "Demo QS",
+      "source": "DEMO-OPEN-COMMIT-002",
+      "revision": 1
+    }
+  ],
+  "constraints": [
+    {
+      "id": "C-001",
+      "task": "A-001",
+      "due": "2026-10-15",
+      "status": "Open",
+      "description": "Complete pre-cover inspection",
+      "action": "Book inspection and retain response",
+      "owner": "Demo QA Engineer",
+      "source": "DEMO-ITP-001",
+      "revision": 1
+    },
+    {
+      "id": "C-002",
+      "task": "A-002",
+      "due": "2026-10-17",
+      "status": "Open",
+      "description": "Material submittal approval",
+      "action": "Obtain authorized response",
+      "owner": "Demo Coordinator",
+      "source": "DEMO-SUB-002",
+      "revision": 1
+    }
+  ],
+  "locked": false,
+  "baselines": [],
+  "history": []
+}
