@@ -3,6 +3,7 @@ export function createControls(schema){
  function blank(){return{format:'FDG-SCHEDULE-COST',version:1,project:{id:'',name:'',location:'',asOf:'',horizon:14,preparedBy:'',reviewedBy:'',notes:''},tasks:[],updates:[],costs:[],commitments:[],constraints:[],locked:false,baselines:[],history:[]};}
  function calculate(s){
   const t=active(s,'tasks'),u=active(s,'updates'),c=active(s,'costs'),com=active(s,'commitments'),constraints=active(s,'constraints'),p=s.project,warnings=[];
+  if(s.locked){const b=s.baselines.at(-1);if(!b||t.length!==b.items.length||t.some(r=>!b.items.some(x=>x.id===r.id&&x.baselineStart===r.baselineStart&&x.baselineFinish===r.baselineFinish&&x.budget===r.budget)))warnings.push('Frozen baseline differs from its retained snapshot — review required');}
   const ids=new Set();for(const[k]of Object.entries(schema)){const set=new Set();for(const r of active(s,k)){if(!r.id||set.has(r.id))warnings.push(k+': duplicate/missing ID '+r.id);set.add(r.id);if(k!=='tasks'&&!t.some(x=>x.id===r.task))warnings.push(k+' '+r.id+': activity missing');}}
   const deps=id=>String(t.find(x=>x.id===id)?.predecessors||'').split(',').map(x=>x.trim()).filter(Boolean),visiting=new Set(),visited=new Set();
   function visit(id){if(visiting.has(id)){warnings.push('Dependency cycle at '+id);return;}if(visited.has(id))return;visiting.add(id);for(const dep of deps(id)){if(!t.some(x=>x.id===dep))warnings.push(id+': missing predecessor '+dep);else visit(dep);}visiting.delete(id);visited.add(id);}t.forEach(r=>visit(r.id));
@@ -29,7 +30,7 @@ export function createControls(schema){
    own.forEach(x=>warnings.push(r.id+': '+x));
    return{record:r,progress,planned,slip,actual,open,commitCount:contracts.length,etc,eac,vac,blockers,lookahead,forecastValid:forecast,baselineValid:baseline};
   });
-  const duplicateTasks=t.some(r=>t.filter(x=>x.id===r.id).length!==1),budget=rows.length&&!duplicateTasks&&rows.every(x=>nn(x.record.budget))?rows.reduce((a,x)=>a+x.record.budget,0):null,weighted=field=>budget>0&&rows.every(x=>x[field]!==null)?rows.reduce((a,x)=>a+x[field]*x.record.budget,0)/budget:null,sum=field=>rows.length&&!duplicateTasks&&rows.every(x=>x[field]!==null)?rows.reduce((a,x)=>a+x[field],0):null;
+  const duplicateTasks=t.some(r=>t.filter(x=>x.id===r.id).length!==1),budget=rows.length&&!duplicateTasks&&rows.every(x=>nn(x.record.budget))?rows.reduce((a,x)=>a+x.record.budget,0):null,weighted=field=>budget>0&&rows.every(x=>x[field]!==null)?rows.reduce((a,x)=>a+x[field]*x.record.budget,0)/budget:null,sum=field=>rows.length&&!duplicateTasks&&!((['actual','eac'].includes(field)&&warnings.some(w=>/^costs[: ]/.test(w)&&(/activity missing|duplicate\/missing ID/.test(w))))||(['open','eac'].includes(field)&&warnings.some(w=>/^commitments[: ]/.test(w)&&(/activity missing|duplicate\/missing ID/.test(w)))))&&rows.every(x=>x[field]!==null)?rows.reduce((a,x)=>a+x[field],0):null;
   return{rows,budget,actual:sum('actual'),etc:sum('etc'),open:sum('open'),eac:sum('eac'),vac:budget!==null&&sum('eac')!==null?budget-sum('eac'):null,progress:weighted('progress'),planned:weighted('planned'),overdue:rows.filter(x=>x.progress!==1&&date(x.record.forecastFinish)&&date(p.asOf)&&x.record.forecastFinish<p.asOf).length,warnings:[...new Set(warnings)],knownActual:rows.reduce((a,x)=>a+(x.actual??0),0)};
  }
  function validate(s,k,r,oldId){

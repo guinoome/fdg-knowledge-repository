@@ -1,0 +1,272 @@
+{
+  "date": "2026-10-16",
+  "status": "IMPLEMENTED; scoped engine and Chrome browser tests passed; domain acceptance pending",
+  "artifact": "distribution/FDG-Scheduling-Cost-Controls.html",
+  "integrity": {
+    "reportHasReviewFlags": true,
+    "pdfBytes": 35650,
+    "errors": [],
+    "artifactBytes": 49997,
+    "sha256": "11760db3d09241fd1d6a0c9010d1310647bbbf8d8c5901c03d18cad4f49629a4",
+    "gitBlob": "0bc5bde32ed6c32332fdfdbb4364bc7b8566d8fe"
+  },
+  "logic_tests": [
+    {
+      "name": "sample budget",
+      "actual": 150000,
+      "expected": 150000,
+      "pass": true
+    },
+    {
+      "name": "sample actual",
+      "actual": 40000,
+      "expected": 40000,
+      "pass": true
+    },
+    {
+      "name": "remaining forecast",
+      "actual": 125000,
+      "expected": 125000,
+      "pass": true
+    },
+    {
+      "name": "open commitments separate",
+      "actual": 50000,
+      "expected": 50000,
+      "pass": true
+    },
+    {
+      "name": "EAC avoids double counting",
+      "actual": 165000,
+      "expected": 165000,
+      "pass": true
+    },
+    {
+      "name": "negative headroom indicates overrun",
+      "actual": -15000,
+      "expected": -15000,
+      "pass": true
+    },
+    {
+      "name": "budget weighted reviewed progress",
+      "actual": 0.5333333333333333,
+      "expected": 0.5333333333333333,
+      "pass": true
+    },
+    {
+      "name": "uniform calendar-day plan",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "pass": true
+    },
+    {
+      "name": "forecast finish variance days",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "known reviewed zero retained",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "explicit zero actual retained",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "blank forecast unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "missing actual stays unknown",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "future cost excluded",
+      "actual": 40000,
+      "expected": 40000,
+      "pass": true
+    },
+    {
+      "name": "credit reduces actual",
+      "actual": 35000,
+      "expected": 35000,
+      "pass": true
+    },
+    {
+      "name": "duplicate actual invalidates total",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "ETC below commitment blocks forecast",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "unknown ETC blocks forecast",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "future forecast excluded",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "successive commitment snapshots not summed",
+      "actual": 50000,
+      "expected": 50000,
+      "pass": true
+    },
+    {
+      "name": "same-date snapshot conflict blocks forecast",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "conflicting same-date reviews unavailable",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "review evidence missing excluded",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "future review excluded",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "FS overlap warning",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "cycle warning",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "missing dependency warning",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "overdue forecast identified",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "frozen baseline budget edit blocked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "JSON normalization round trip",
+      "actual": 165000,
+      "expected": 165000,
+      "pass": true
+    },
+    {
+      "name": "missing frozen snapshot flagged",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "unmapped actual cost blocks project forecast",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "name": "calendar date validation",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    }
+  ],
+  "browser": {
+    "path": "Existing Playwright with installed Chrome, headless. Browser plugin/skill unavailable; no installation.",
+    "entry": "RAM setContent",
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ],
+    "page_console_errors": [],
+    "mobile_document_overflow": false
+  },
+  "flows": [
+    {
+      "name": "Blank project startup",
+      "result": "Setup and first activity saved; unknown actual retained as n.a."
+    },
+    {
+      "name": "Synthetic schedule/cost",
+      "result": "53.333% reviewed;66.667% uniform time plan;budget150000;actual40000;ETC125000;EAC165000;VAC−15000PHP"
+    },
+    {
+      "name": "Gantt/lookahead",
+      "result": "baseline/forecast bars, as-of line,2-day slip, constraints/owners/actions rendered"
+    },
+    {
+      "name": "Baseline freeze",
+      "result": "BL-001 retained; budget/date inputs readonly; forecasts editable"
+    },
+    {
+      "name": "Baseline revision",
+      "result": "BL-001 budget100000 retained, BL-002 budget110000 retained; undo reset at baseline boundary"
+    },
+    {
+      "name": "Forecast update",
+      "result": "ETC+10000 changed EAC165000→175000 and FS overlap flagged"
+    },
+    {
+      "name": "Cost/commitment control",
+      "result": "cost5000 raised EAC165000→170000; increasing open commitment did not add it again;ETC below open commitment invalidated forecast"
+    },
+    {
+      "name": "HTML save/reopen and JSON restore",
+      "result": "EAC170000 and both baseline snapshots preserved"
+    },
+    {
+      "name": "Printing",
+      "result": "print action invoked, navigation hidden, final35650byte PDF generated in RAM; report contains review flags"
+    },
+    {
+      "name": "Source reconstruction",
+      "result": "explicit-input builder reproduces the artifact"
+    }
+  ],
+  "limitations": [
+    "Calendar days and manual forecasts; no critical path, float, resource leveling or work/holiday calendars.",
+    "Uniform time-based plan and budget-weighted reviewed progress are disclosed assumptions; not physical-quantity acceptance, earned-value certification, billability or payment.",
+    "Real-project/domain acceptance, independent-provider review and other browser engines pending.",
+    "OS download/file-save dialogs not exercised; generated Blob content captured/reopened in memory.",
+    "Editable single-user files do not enforce authority or tamper-proof audit/security; no cloud sync/autosave."
+  ]
+}

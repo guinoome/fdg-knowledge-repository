@@ -1,0 +1,23 @@
+{
+  "source_commit": "7d4de5c57c3031b2aaac21571848c61371e78f92",
+  "method": "Full text via connected GitHub tools; current GitHub source authority",
+  "documents": [
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0002 - Capture Once Reporting and Progress Architecture.md",
+      "blob": "03cb86eebd7e6880d64074f65c32764f96e3d400"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md",
+      "blob": "290a78b9d593714bc0daffa65412eed08d0b2e2f"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0901 - Construction Manager Workbench Upgrade Blueprint.md",
+      "blob": "6eb67ab51a24f7e8e206f73de43cc66e9a34bbbd"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0900 - Multi-Collaborator Build Handover.md",
+      "blob": "9fdcecfb2c4ee15fa2d3289e220512266704f0e0"
+    }
+  ],
+  "scope": "Bounded manual scheduling/cost-control file toolkit. Does not implement or claim complete Construction Manager Workbench/Construction OS."
+}
