@@ -116,3 +116,12 @@ The following **additive** pilot-specific records extend—not replace—the exi
 Service scope and price remain owned by [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|FSvIS-OM-0001]]. The commercial operating-loop proposal remains [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]]. The three specialist profiles remain [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|Draft business agent profiles]].
 
 **Status:** blueprint/operational preparation only. This update creates no customer, verified payment, active agent, code build, public outreach, campaign authorization or deployment, and does not modify existing manual-vs-software release gates.
+
+## Demand-First / Vibe-Coding Commercial Validation Addendum — 2026-10-16
+
+The user-supplied “Vibe Coding Reality Check” podcast transcript was reviewed in full and mapped to the existing first-payout experiment. This is **additive commercial validation**, not a new application, rewritten source-of-truth or release authorization.
+
+21. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/21_Vibe_Coding_Demand_First_Validation_Protocol|Demand-First Validation Protocol]] — source-derived five-step buyer/demand methodology, evidence-classification limits, independent commercial/technical gates, controlled integration with FBIS, Pilot 001, toolkit, Concern-to-Clearance L1A, audit and decision rules.
+22. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/22_Demand_Validation_Operator_Card|Demand Validation Operator Card]] — reusable blank micro-problem filter, competitor/review checklist, real-buyer interview form, smallest paid promise, predeclared 30-day experiment targets, actual-versus-target scorecard and agent handover.
+
+**Read-order rule:** start from this index, current FBIS-BP-003 and the relevant active opportunity/Pilot 001; use 21–22 only for the new demand test and avoid re-auditing unchanged architecture. The original 30-day program targets, Pilot 001 P001-AC-01..12, local release gates, Build Narrow/Exist First standards and the **Not Build Authorized** status all remain in force. **No actual prospects, interviews, payments, software deployments, or field evidence were created by this documentation update.**
