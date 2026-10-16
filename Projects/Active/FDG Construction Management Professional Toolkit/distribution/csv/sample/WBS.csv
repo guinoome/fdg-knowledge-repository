@@ -1,0 +1,3 @@
+wbs_id,project_id,activity,unit,baseline_qty,weight,planned_fraction,owner,revision,source_ref
+WBS-001,DEMO-PH-001,Concrete slab,m3,100,0.6,0.5,Demo Site Engineer,1,DEMO-BASIS-001
+WBS-002,DEMO-PH-001,Pipe installation,m,200,0.4,0.25,Demo Site Engineer,1,DEMO-BASIS-002

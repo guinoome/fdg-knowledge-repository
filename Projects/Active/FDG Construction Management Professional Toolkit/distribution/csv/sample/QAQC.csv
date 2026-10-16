@@ -1,0 +1,2 @@
+inspection_id,project_id,wbs_id,record_type,description,method_standard_ref,acceptance_criterion,observed_result,inspection_date,owner,status,evidence_ref,reviewer,review_date,revision,source_ref
+QC-001,DEMO-PH-001,WBS-001,WIR,Slab placement observation,DEMO-ITP-001,Project-specific criterion pending qualified review,Example observation only,2026-10-16,Demo QA Engineer,In Review,E-002,,,1,DEMO-WIR-001

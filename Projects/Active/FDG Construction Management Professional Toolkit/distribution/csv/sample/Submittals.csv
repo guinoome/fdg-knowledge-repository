@@ -1,0 +1,2 @@
+submittal_id,project_id,wbs_id,document_title,document_revision,submitted_date,due_date,owner,status,response_ref,evidence_ref,reviewer,review_date,revision,source_ref
+SUB-001,DEMO-PH-001,WBS-002,Pipe material datasheet,A,2026-10-12,2026-10-20,Demo Coordinator,In Review,,E-008,,,1,DEMO-SPEC-001

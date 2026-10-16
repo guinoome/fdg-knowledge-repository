@@ -1,0 +1,6 @@
+event_id,project_id,wbs_id,event_date,description,unit,reported_qty,accepted_qty,review_state,evidence_ref,prepared_by,reviewer,review_date,revision,source_ref
+D-001,DEMO-PH-001,WBS-001,2026-10-12,Concrete placement,m3,20,20,Accepted,E-001,Demo Engineer,Demo Reviewer,2026-10-13,1,DEMO-FIELD-001
+D-002,DEMO-PH-001,WBS-001,2026-10-16,Concrete placement; quantity adjustment pending,m3,30,25,Accepted,E-002,Demo Engineer,Demo Reviewer,2026-10-16,1,DEMO-FIELD-002
+D-003,DEMO-PH-001,WBS-001,2026-10-17,Future-dated event excluded from cutoff,m3,50,50,Accepted,E-003,Demo Engineer,Demo Reviewer,2026-10-17,1,DEMO-FIELD-003
+D-004,DEMO-PH-001,WBS-002,2026-10-15,Pipe installation,m,50,40,Accepted,E-004,Demo Engineer,Demo Reviewer,2026-10-16,1,DEMO-FIELD-004
+D-005,DEMO-PH-001,WBS-002,2026-10-16,Unreviewed field quantity,m,10,,Submitted,E-005,Demo Engineer,,,1,DEMO-FIELD-005

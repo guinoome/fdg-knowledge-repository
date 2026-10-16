@@ -1,0 +1,302 @@
+{
+  "id": "FDG-CMT-PH",
+  "version": "1.0.0-rc.1",
+  "capacity": 200,
+  "dates": "ISO8601 displayed yyyy-mm-dd",
+  "currency": "PHP",
+  "jurisdiction": "Philippines; contract-specific forms and technical criteria remain user-approved",
+  "commonStatuses": [
+    "Draft",
+    "Submitted",
+    "In Review",
+    "Accepted",
+    "Rejected",
+    "Superseded",
+    "Conflict - Review Required"
+  ],
+  "registers": [
+    {
+      "sheet": "WBS",
+      "title": "Work breakdown and progress basis",
+      "fields": [
+        "wbs_id",
+        "project_id",
+        "activity",
+        "unit",
+        "baseline_qty",
+        "weight",
+        "planned_fraction",
+        "accepted_events",
+        "accepted_qty",
+        "accepted_fraction",
+        "weighted_actual",
+        "weighted_plan",
+        "owner",
+        "revision",
+        "source_ref",
+        "basis_check"
+      ],
+      "computed": [
+        "accepted_events",
+        "accepted_qty",
+        "accepted_fraction",
+        "weighted_actual",
+        "weighted_plan",
+        "basis_check"
+      ]
+    },
+    {
+      "sheet": "Daily",
+      "title": "Daily site progress",
+      "fields": [
+        "event_id",
+        "project_id",
+        "wbs_id",
+        "event_date",
+        "description",
+        "unit",
+        "reported_qty",
+        "accepted_qty",
+        "review_state",
+        "evidence_ref",
+        "prepared_by",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "evidence_check",
+        "unit_check",
+        "quantity_check"
+      ],
+      "computed": [
+        "evidence_check",
+        "unit_check",
+        "quantity_check"
+      ]
+    },
+    {
+      "sheet": "Kickoff",
+      "title": "Project startup and kickoff",
+      "fields": [
+        "item_id",
+        "project_id",
+        "item",
+        "owner",
+        "due_date",
+        "status",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "RFI",
+      "title": "Request for information register",
+      "fields": [
+        "rfi_id",
+        "project_id",
+        "wbs_id",
+        "subject",
+        "raised_date",
+        "due_date",
+        "owner",
+        "status",
+        "response_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "next_action"
+      ]
+    },
+    {
+      "sheet": "Submittals",
+      "title": "Submittal register",
+      "fields": [
+        "submittal_id",
+        "project_id",
+        "wbs_id",
+        "document_title",
+        "document_revision",
+        "submitted_date",
+        "due_date",
+        "owner",
+        "status",
+        "response_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "Issues",
+      "title": "Issues, constraints and delays",
+      "fields": [
+        "issue_id",
+        "project_id",
+        "wbs_id",
+        "category",
+        "description",
+        "observed_date",
+        "impact_basis",
+        "owner",
+        "due_date",
+        "status",
+        "next_action",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "QAQC",
+      "title": "QA/QC status register",
+      "fields": [
+        "inspection_id",
+        "project_id",
+        "wbs_id",
+        "record_type",
+        "description",
+        "method_standard_ref",
+        "acceptance_criterion",
+        "observed_result",
+        "inspection_date",
+        "owner",
+        "status",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "Changes",
+      "title": "Variation and change register",
+      "fields": [
+        "change_id",
+        "project_id",
+        "wbs_id",
+        "description",
+        "cause",
+        "notice_date",
+        "cost_impact_php",
+        "time_impact_days",
+        "owner",
+        "status",
+        "authorization_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "Billing",
+      "title": "Progress billing evidence index",
+      "fields": [
+        "billing_id",
+        "project_id",
+        "wbs_id",
+        "description",
+        "unit",
+        "reported_qty",
+        "accepted_qty",
+        "billable_qty",
+        "billed_qty",
+        "paid_qty",
+        "unit_rate_php",
+        "billable_authority_ref",
+        "billing_ref",
+        "payment_ref",
+        "evidence_ref",
+        "owner",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "Punch",
+      "title": "Punch list",
+      "fields": [
+        "punch_id",
+        "project_id",
+        "wbs_id",
+        "location",
+        "description",
+        "responsible_trade",
+        "owner",
+        "due_date",
+        "status",
+        "closure_evidence_ref",
+        "verified_by",
+        "verification_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "Turnover",
+      "title": "Turnover and closeout tracker",
+      "fields": [
+        "turnover_id",
+        "project_id",
+        "wbs_id",
+        "deliverable_type",
+        "description",
+        "responsibility_receiver",
+        "owner",
+        "due_date",
+        "status",
+        "blocking_issue_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "Evidence",
+      "title": "Evidence index",
+      "fields": [
+        "evidence_id",
+        "project_id",
+        "record_type",
+        "origin",
+        "locator",
+        "captured_date",
+        "captured_by",
+        "checksum",
+        "access_class",
+        "verification_status",
+        "revision",
+        "source_ref"
+      ]
+    },
+    {
+      "sheet": "History",
+      "title": "Revision and decision log",
+      "fields": [
+        "history_id",
+        "project_id",
+        "target_record_id",
+        "prior_revision",
+        "new_revision",
+        "change_reason",
+        "actor",
+        "occurred_date",
+        "decision_ref",
+        "evidence_ref"
+      ]
+    }
+  ]
+}

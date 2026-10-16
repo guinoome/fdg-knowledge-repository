@@ -1,0 +1,9 @@
+evidence_id,project_id,record_type,origin,locator,captured_date,captured_by,checksum,access_class,verification_status,revision,source_ref
+E-001,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-002,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-003,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-004,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-005,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-006,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-007,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE
+E-008,DEMO-PH-001,Synthetic fixture,FDG worked example,DEMO-ONLY/no-real-file,2026-10-16,Demo Author,,Public synthetic,Illustrative - not real evidence,1,FDG-CMT-SAMPLE

@@ -1,0 +1,2 @@
+punch_id,project_id,wbs_id,location,description,responsible_trade,owner,due_date,status,closure_evidence_ref,verified_by,verification_date,revision,source_ref
+P-001,DEMO-PH-001,WBS-002,Zone A,Complete identification tags,Mechanical,Demo Supervisor,2026-10-22,Open,,,,1,DEMO-PUNCH-001

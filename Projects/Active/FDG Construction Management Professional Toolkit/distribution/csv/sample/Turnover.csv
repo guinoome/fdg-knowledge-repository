@@ -1,0 +1,2 @@
+turnover_id,project_id,wbs_id,deliverable_type,description,responsibility_receiver,owner,due_date,status,blocking_issue_ref,evidence_ref,reviewer,review_date,revision,source_ref
+T-001,DEMO-PH-001,WBS-002,O&M manual,Submit approved O&M record,Demo Facility Manager,Demo Doc Controller,2026-10-25,Pending,ISS-001,,,,1,DEMO-TURN-001

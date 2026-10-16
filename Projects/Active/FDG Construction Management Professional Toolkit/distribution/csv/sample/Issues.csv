@@ -1,0 +1,2 @@
+issue_id,project_id,wbs_id,category,description,observed_date,impact_basis,owner,due_date,status,next_action,evidence_ref,reviewer,review_date,revision,source_ref
+ISS-001,DEMO-PH-001,WBS-002,Constraint,Route clearance not confirmed,2026-10-12,Linked RFI-001; schedule impact not yet evaluated,Demo PM,2026-10-14,Open,Resolve RFI-001,E-007,,,1,DEMO-ISSUE-001

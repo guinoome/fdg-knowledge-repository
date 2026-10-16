@@ -51,7 +51,9 @@ function table(wb,d,sample){
  s.getRange('A6:'+col(m)+'6').values=[d.fields.map(label)];
  s.getRange('A6:'+col(m)+'6').format={fill:'#173F35',font:{name:'Arial',size:10,bold:true,color:'#FFFFFF'},wrapText:true,rowHeight:42,verticalAlignment:'center',horizontalAlignment:'center'};
  s.getRange('A7:'+col(m)+last).format.font={name:'Arial',size:10,color:'#172A2A'};
- s.getRange('A7:'+col(m)+last).format.rowHeight=22;
+ s.getRange('A7:'+col(m)+last).format.rowHeight=60;
+ s.getRange('A7:'+col(m)+last).format.wrapText=true;
+ s.getRange('A7:'+col(m)+last).format.verticalAlignment='top';
  s.getRange('A7:'+col(m)+last).format.fill='#FFFBEB';
  s.tables.add('A6:'+col(m)+last,true,'TK_'+d.sheet);
  s.freezePanes.freezeRows(6);s.freezePanes.freezeColumns(2);
@@ -112,7 +114,7 @@ function makeWorkbook(sample){
  rowFormula(w,'J',r=>'=IF(A'+r+'="","",IF(OR(NOT(ISNUMBER(E'+r+')),E'+r+'<=0,I'+r+'=""),"",I'+r+'/E'+r+'))');
  rowFormula(w,'K',r=>'=IF(A'+r+'="","",IF(OR(J'+r+'="",NOT(ISNUMBER(F'+r+'))),"",J'+r+'*F'+r+'))');
  rowFormula(w,'L',r=>'=IF(A'+r+'="","",IF(OR(NOT(ISNUMBER(F'+r+')),NOT(ISNUMBER(G'+r+'))),"",F'+r+'*G'+r+'))');
- rowFormula(d,'P',r=>'=IF(A'+r+'="","",IF(I'+r+'<>"Accepted","Review pending",IF(OR(J'+r+'="",L'+r+'="",M'+r+'=""),"Missing approval evidence","Recorded - verify authority")))');
+ rowFormula(d,'P',r=>'=IF(A'+r+'="","",IF(COUNTIFS($A$7:$A$206,A'+r+',$B$7:$B$206,B'+r+')<>1,"Duplicate event ID",IF(I'+r+'<>"Accepted","Review pending",IF(OR(J'+r+'="",L'+r+'="",NOT(ISNUMBER(M'+r+')),M'+r+'<=0,NOT(ISNUMBER(D'+r+')),D'+r+'<=0),"Missing approval evidence","Recorded - verify authority"))))');
  rowFormula(d,'Q',r=>'=IF(A'+r+'="","",IF(COUNTIFS(WBS!$A$7:$A$206,C'+r+',WBS!$B$7:$B$206,B'+r+',WBS!$D$7:$D$206,F'+r+')=1,"Matched","Check WBS / unit"))');
  rowFormula(d,'R',r=>'=IF(A'+r+'="","",IF(OR(NOT(ISNUMBER(G'+r+')),G'+r+'<0),"Check reported quantity",IF(I'+r+'="Accepted",IF(OR(NOT(ISNUMBER(H'+r+')),H'+r+'<0,H'+r+'>G'+r+'),"Check accepted quantity","Recorded"),"Not accepted")))');
  dash.getRange('A4:A15').values=[['Project'],['As-of date'],['Accepted weighted progress'],['Planned weighted progress'],['Variance (percentage points)'],['RFI overdue (not accepted/rejected)'],['Open issues'],['Open punch items'],['Turnover pending acceptance'],['WBS weight total'],['Progress basis'],['Evidence / quantity warnings']];
@@ -129,13 +131,13 @@ function makeWorkbook(sample){
  formula(dash,'B12','=COUNTIFS(Turnover!$A$7:$A$206,"<>",Turnover!$I$7:$I$206,"<>Accepted")');
  formula(dash,'B13','=IF(COUNTA(WBS!A7:A206)=0,"n.a.",SUM(WBS!F7:F206))');dash.getRange('B13').setNumberFormat('0.0%');
  formula(dash,'B14','=IF('+valid+',"Review data and approvals","Missing project, date or complete 100% weights")');
- formula(dash,'B15','=COUNTIFS(Daily!$A$7:$A$206,"<>",Daily!$P$7:$P$206,"Missing approval evidence")+COUNTIFS(Daily!$A$7:$A$206,"<>",Daily!$Q$7:$Q$206,"Check WBS / unit")+COUNTIFS(Daily!$A$7:$A$206,"<>",Daily!$R$7:$R$206,"Check*")');
+ formula(dash,'B15','=COUNTIFS(Daily!$P$7:$P$206,"Duplicate event ID")+COUNTIFS(Daily!$A$7:$A$206,"<>",Daily!$P$7:$P$206,"Missing approval evidence")+COUNTIFS(Daily!$A$7:$A$206,"<>",Daily!$Q$7:$Q$206,"Check WBS / unit")+COUNTIFS(Daily!$A$7:$A$206,"<>",Daily!$R$7:$R$206,"Check*")');
  dash.getRange('A:A').format.columnWidth=42;dash.getRange('B:B').format.columnWidth=60;dash.getRange('A4:B15').format.rowHeight=26;
  set(dash,'A18','Progress is evidence-based recorded quantity, not certification, billability or payment.');
  dash.getRange('A18').format.font={italic:true,size:10,color:'#526660'};
- report.getRange('A4:F4').values=[['Project',null,'Start',null,'End',null]];formula(report,'B4','=IF(Setup!B4="","",Setup!B4)');formula(report,'D4','=IF(Setup!B7="","",Setup!B7)');formula(report,'F4','=IF(Setup!B8="","",Setup!B8)');report.getRange('D4:F4').setNumberFormat('yyyy-mm-dd');
+ report.getRange('A4:F4').values=[['Project',null,'Start',null,'End',null]];formula(report,'B4','=IF(Setup!B4="","",Setup!B4)');formula(report,'D4','=IF(Setup!B7="","",Setup!B7)');formula(report,'F4','=IF(Setup!B8="","",Setup!B8)');report.getRange('D4:F4').setNumberFormat('yyyy-mm-dd');report.getRange('D4:F4').format.horizontalAlignment='left';
  report.getRange('A6:H6').values=[['WBS ID','Activity','Unit','Reported in period','Accepted in period','Accepted to cutoff','Baseline quantity','Accepted fraction']];
- report.getRange('A6:H6').format={fill:'#173F35',font:{bold:true,color:'#FFFFFF'},wrapText:true,rowHeight:42};
+ report.getRange('A6:H6').format={fill:'#173F35',font:{bold:true,color:'#FFFFFF'},wrapText:true,rowHeight:42,verticalAlignment:'center',horizontalAlignment:'center'};
  for(let r=first;r<=last;r++){
   for(const [c,f]of Object.entries({A:'=IF(WBS!A'+r+'="","",WBS!A'+r+')',B:'=IF(A'+r+'="","",WBS!C'+r+')',C:'=IF(A'+r+'="","",WBS!D'+r+')',
    D:'=IF(OR(A'+r+'="",Setup!$B$7="",Setup!$B$8="",Setup!$B$8<Setup!$B$7),"",SUMIFS(Daily!$G$7:$G$206,Daily!$C$7:$C$206,A'+r+',Daily!$B$7:$B$206,Setup!$B$4,Daily!$D$7:$D$206,">="&Setup!$B$7,Daily!$D$7:$D$206,"<="&Setup!$B$8))',
@@ -162,6 +164,8 @@ set(sample.sheets.WBS,'E7',0);sample.wb.recalculate();test('zero baseline no fal
 set(sample.sheets.WBS,'F8',.3);sample.wb.recalculate();test('incomplete weights no false progress',cell(sample,'Dashboard','B6'),'n.a.');set(sample.sheets.WBS,'F8',.4);
 set(sample.sheets.Daily,'H7',0);sample.wb.recalculate();test('true zero accepted quantity preserved',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'H7',20);
 
+set(sample.sheets.Daily,'A8','D-001');sample.wb.recalculate();test('duplicate events excluded',cell(sample,'WBS','I7'),'');set(sample.sheets.Daily,'A8','D-002');
+set(sample.sheets.Daily,'D7',null);sample.wb.recalculate();test('missing event date excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'D7',new Date('2026-10-12T00:00:00Z'));
 set(sample.sheets.Daily,'J7',null);sample.wb.recalculate();test('missing evidence excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'J7','E-001');
 set(sample.sheets.Daily,'F7','kg');sample.wb.recalculate();test('wrong unit excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'F7','m3');
 set(sample.sheets.Daily,'M7',new Date('2026-10-18T00:00:00Z'));sample.wb.recalculate();test('future approval excluded',cell(sample,'WBS','I7'),25);set(sample.sheets.Daily,'M7',new Date('2026-10-13T00:00:00Z'));
