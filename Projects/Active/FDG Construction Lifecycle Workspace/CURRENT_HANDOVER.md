@@ -31,3 +31,11 @@ Artifact: 210178 UTF-8 bytes; SHA256 `8ab792aeb7acb987242ab879afaa23db0ad0d2e960
 Have a beginner use a private blank copy to name one project, add two real work items and log one day's quantities, then open the report without coaching. Record time, confusing labels and unnecessary inputs under this project. Preserve current data before replacing a working file. Do not rebuild the engines or add accounts/cloud services for this usability milestone.
 
 Broader accounts/RBAC/cloud sync/deployment/commercial gates remain outside the authorized offline scope. Previous milestone handover retained at docs/handovers/2026-10-16-offline-milestone.md.
+
+## Founder direction / client-first agent work item — 2026-10-16
+
+The founder reinforced the requirement that every useful FDG discussion reach an implementation agent as a concrete, client-simple deliverable and, after independent validation, a commercially testable product. **No additional source code was changed by this coordination update.** Existing beginner workflow implementation, reported 87 test passes, source layout, and all prior limitations remain as recorded above.
+
+**Next task is recorded, not auto-executed:** [GitHub issue #5 — Client-first activation](https://github.com/guinoome/fdg-knowledge-repository/issues/5). Read `docs/CLIENT_FIRST_ACTIVATION_AND_AGENT_HANDOVER_2026-10-16.md` for exact source paths, normal case (100 m planned → 20+10 m reported → 70 m remaining), privacy/recovery and mobile acceptance criteria. Agents must **reproduce the current product**, obtain real beginner acceptance when participants/authority are available, fix only evidenced authorized friction, and prepare a truthful draft offer. No rebuilt engines, artificial testimonials, immediate commercialization or automatic release.
+
+**Separately tracked statuses:** working software = prior technical evidence; real client acceptance = PENDING; actual customer payment = NOT EVIDENCED; sale/release authorization = NOT PROVIDED by this issue. The project remains a local offline single-editor artifact with manual Save project, not an authenticated hosted SaaS platform.
