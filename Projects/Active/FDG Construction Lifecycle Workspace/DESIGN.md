@@ -20,3 +20,7 @@ Visual evidence contains synthetic example data only. Screenshots and PDFs were 
 ## Beginner revision —2026-10-16
 
 The user found the register-first screen too complicated. The new default has five plain-language choices, two visible setup fields, short work/daily forms and generated outputs. Optional details are collapsed; full lifecycle navigation requires Advanced tools. Phone navigation uses a compact grid so all five choices remain visible. Premium palette is retained. Screenshots: evidence/beginner-desktop.png and evidence/beginner-mobile.png. All images remain synthetic data only.
+
+## WP01 —2026-10-16
+
+Existing Overview now has a near-full-width navy/red/gold hero and translucent live metric buttons, source work-date freshness and traceable original-record detail. No external assets/vendor artwork. Five beginner navigation choices unchanged; unknowns and units retained; light reports unchanged. Actual before/after desktop/390px screens and working synthetic initialization are in evidence/wp01/. Real novice acceptance remains pending.

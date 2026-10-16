@@ -23,6 +23,10 @@ COMMERCIALLY_VALIDATED
 
 Never promote a capability without evidence.
 
+## Scope clarification —2026-10-16
+
+The full-platform baseline below concerns the future authenticated/cloud OS. Existing offline Lifecycle Workspace WP01 has scoped TESTED evidence; that is not full-platform deployment, client acceptance or commercialization. See the dated entry below.
+
 ## Current Overall State
 
 ~~~text
@@ -96,3 +100,13 @@ WP0 Architecture Lock
 ~~~
 
 No re-architecture is required before starting WP0 unless the canonical knowledge has materially changed.
+
+## Scoped offline evidence — WP01 / 2026-10-16
+
+| Profile / capability | State | Evidence | Remaining gate |
+|---|---|---|---|
+| Existing Lifecycle Workspace premium Overview, single-project offline | TESTED | [WP01 result](../Active/FDG%20Construction%20Lifecycle%20Workspace/docs/work-packages/WP01_PREMIUM_PROJECT_OVERVIEW.md); [121 checks/browser evidence](../Active/FDG%20Construction%20Lifecycle%20Workspace/evidence/wp01/validation.json) | Real novice/qualified project acceptance |
+| Live quantities / freshness / source drill-through | TESTED |100m,+20/+10 ->30m/70m; original IDs/dates/units; saved HTML/JSON; [working synthetic demo](../Active/FDG%20Construction%20Lifecycle%20Workspace/evidence/wp01/working-demo.html) | Independent review |
+| Full authenticated/cloud Construction OS | BUILD_READY, no promotion | No auth/RLS/sync/deployment work in WP01 | Original platform gates |
+
+Session:2026-10-16, WP01 only. Code baseline 2a2aca2bf19e9a47d8ef3829b48e59bffce0ee1e, integration parent 332f7642916fccc5f76aeb93f3b5b02adf97f966. Existing87 checks preserved +34 new =121 pass;56 Advanced forms, desktop/390px, source/recovery/white PDF proved. One reviewed-count predicate defect fixed; other engines/schema preserved. Independent provider/real-client acceptance NOT RUN; issue#5 remains pending. Deployment/commercial status NO CHANGE. No canonical FEIS-CM changes. Proposed next code package WP02 only; not started.

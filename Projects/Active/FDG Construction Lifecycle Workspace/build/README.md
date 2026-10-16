@@ -28,3 +28,7 @@ Browser regression: load returned HTML using setContent, open every template, ex
 ## Beginner workflow tests
 
 After trusted source assembly, retrieve both createLifecycle and createGuided. Instantiate L=createLifecycle(schema,controlSchema) and G=createGuided(L), then call runGuidedTests(L,G,sample) from tests/guided.test.mjs. The existing 46 lifecycle checks and 41 beginner checks both pass. This repository's HTML builder accepts the five engines in the order above. Simple view is the default and both views use the same state.
+
+## WP01 Overview checks
+
+Same five engines/six UI sources. tests/overview.test.mjs exports runOverviewTests(projectOverview,L,G,sample). Extract trusted ui-guided.js helper between `// Overview is a read-only` and `function renderQuickHome()`, evaluate that helper with L/G arguments and return overviewProjection. No DOM calls execute for this pure helper test. Original46/41 plus34 Overview checks =121 pass. Never evaluate user JSON as code. Source recovery was verified by exact rebuilt HTML equality; see evidence/wp01/.

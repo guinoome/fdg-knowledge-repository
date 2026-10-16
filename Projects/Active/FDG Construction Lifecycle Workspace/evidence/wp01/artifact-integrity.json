@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "path": "distribution/FDG-Construction-Lifecycle.html",
+    "bytes": 225732,
+    "sha256": "f0fa441682c04080f9aab48e369b34e5514065aa3e2b831ab0af7f8398fad162",
+    "git_blob_sha": "7d970b461fe5975dc70d07b0c5803358e1b4043e"
+  },
+  "demo": {
+    "path": "evidence/wp01/working-demo.html",
+    "bytes": 227582,
+    "sha256": "34aa9c536b1dff7754909c66b317585538acbfbba966763847ee0910ec4523d3",
+    "git_blob_sha": "f9471f95849159e3a9066f7e5e77d8a4ca042af4"
+  },
+  "initialStates": {
+    "primary": "blank",
+    "demo": "Explicitly synthetic100m,+20m,+10m,Draft"
+  }
+}

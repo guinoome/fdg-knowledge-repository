@@ -1,0 +1,131 @@
+{
+  "canonicalRepository": "guinoome/fdg-knowledge-repository",
+  "branch": "main",
+  "codeBaseline": "2a2aca2bf19e9a47d8ef3829b48e59bffce0ee1e",
+  "publicationParent": "332f7642916fccc5f76aeb93f3b5b02adf97f966",
+  "sourceReceipts": [
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/field-engine.mjs",
+      "sha": "7b05500386985e3b2b57d4aafab1fabb8a600423"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/cost-engine.mjs",
+      "sha": "18013615a7bbc417183787acbb4ba3940d91ad51"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/estimate-engine.mjs",
+      "sha": "a3731446a120e5a1adb2a91ac0ba114a9a0e773e"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/core.mjs",
+      "sha": "fc7ed27a6087b421f0cdbec3563bcce110c813cb"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/guided-engine.mjs",
+      "sha": "9f13db020dba61e423c29f551ddf1bd1da6a9bf4"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/ui-shell.js",
+      "sha": "9afce9ce74e35f211df6418e5b578cce134c1bcc"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/ui-projections.js",
+      "sha": "853ae59d4c18d2cdb0e44d648104116fba1ec74d"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/ui-records.js",
+      "sha": "2fb24d27a17222efa2a675c158c4e9d76fca79f6"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/ui-continuity.js",
+      "sha": "19b33862dea065389058953c4e7359f7737cfbc7"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/ui-guided.js",
+      "sha": "9e497c625e4efaf892a0f41437919ecb624ee462"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/ui-actions.js",
+      "sha": "c6af3515be9ec981d5af9e2ec0ad5d55219526a0"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/build/build-html.mjs",
+      "sha": "e0817cd0625faddbe7b71a3d26eca7354c6263fc"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/tests/lifecycle.test.mjs",
+      "sha": "aa90691ffb71c473d3d42299c9dc2c1d384bb8fb"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/tests/guided.test.mjs",
+      "sha": "704cc6c082b1791ef74de31d48f59c7737ba87be"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/schema.json",
+      "sha": "531b322790f5ccfdbac123c095f2e7eb0d28126f"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/control-schema.json",
+      "sha": "1b0d7c9089b6a89e101f735cc0ecf4c813d6a332"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/phases.json",
+      "sha": "f3ea2c24d120128325ea9a7ac0b483d9ff45f496"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/blank.json",
+      "sha": "ba9eae1a90e23f051823bd96e673f3fb5f266ae1"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/sample.json",
+      "sha": "db96b681b990abc24629a0c0b0a758326aa34f85"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/shell.html",
+      "sha": "8b2adca33cd7f8e8cf032ae39ea84c54062a29fa"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/CURRENT_HANDOVER.md",
+      "sha": "cde99bb42b7090ca1fe4be4a0a22bbc0f4e81ff3"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/README.md",
+      "sha": "71ab9eeccb3944f6b41d07e768a0a6c53a99961c"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/DESIGN.md",
+      "sha": "25166eab5c44f62b807965b6935caf8bdc1f2966"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/build/README.md",
+      "sha": "7c1b98218b544d4a1d5b5d40172c4f5fd307af51"
+    }
+  ],
+  "currentDocs": [
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/README.md",
+      "sha": "71ab9eeccb3944f6b41d07e768a0a6c53a99961c"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/CURRENT_HANDOVER.md",
+      "sha": "cde99bb42b7090ca1fe4be4a0a22bbc0f4e81ff3"
+    },
+    {
+      "path": "Projects/fdg-construction-os/FDG_CONSTRUCTION_OS_IMPLEMENTATION_STATUS.md",
+      "sha": "a33ad2250f3f5b77ecf81f5e741915c30e2dbe7c"
+    }
+  ],
+  "canonicalContracts": [
+    "FEIS-CM-0002 Capture Once Reporting and Progress Architecture",
+    "FEIS-CM-0008 Project Control Console Experience Map"
+  ],
+  "pack": {
+    "edition": "2026-10-16",
+    "canonical": false,
+    "manifestVerified": 31,
+    "instructionSHA256": "b85887c3f03de3290c6bd0df39ae6ea6ed304fef4aee443fa0aefb1496fa3f3d",
+    "WP01SHA256": "fee4d810fab5b33c3a30445f2d7a479f78134659d5de15b5759f23006ef115c7"
+  },
+  "design": "Concept desktop/mobile viewed; original vendor artwork/branding not copied",
+  "storage": "No local project files/checkouts; supplied pack read/verified; artifacts directly on GitHub"
+}

@@ -12,7 +12,7 @@
 
 Example: add “Install water pipe —100m”. Enter20m today →80m remaining. Enter10m tomorrow →30m reported total and70m remaining. Choose Today, This week or This month to generate the corresponding report. Do not re-enter cumulative totals.
 
-[Desktop preview](evidence/beginner-desktop.png) · [Phone preview](evidence/beginner-mobile.png)
+[Current desktop](evidence/wp01/after-desktop.png) · [Current phone](evidence/wp01/after-mobile.png) · [Before/after evidence](evidence/wp01/)
 
 ## Outputs from the same entries
 
@@ -32,7 +32,7 @@ GitHub's HTML file view displays source; it is not an application host. Open the
 
 ## Verified scope
 
-87 deterministic checks passed: 41 beginner workflow checks and46 existing lifecycle checks. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
+121 checks passed:46 lifecycle +41 beginner +34 Overview. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
 
 This is a single-user offline tool. Accounts, server authority, cloud collaboration and deployment are outside this milestone. Real-project acceptance and independent provider review remain pending.
 
@@ -45,3 +45,7 @@ GitHub is canonical. Maintain source in html/ and compile using [build instructi
 ## Client-first adoption and commercial testing — 2026-10-16
 
 To transfer the founder's **less input → more output → useful report → easy save/reopen → verified client value** requirement to coding agents, use the [client-first activation and agent handover](docs/CLIENT_FIRST_ACTIVATION_AND_AGENT_HANDOVER_2026-10-16.md) and [GitHub issue #5](https://github.com/guinoome/fdg-knowledge-repository/issues/5). This is the **next field-acceptance and commercial-readiness work item**, not a request to rebuild the current working HTML or to add unapproved payments/cloud services. Native real-user adoption, sale, and remote deployment remain separately gated.
+
+## WP01 — live Overview
+
+Translucent live quantities, cutoff/latest source date, pending reviews, recorded targets/actions and original-record drill-through now appear in the existing Overview. Unknown QA/cost stays unknown; mixed-item units stay separate. [Try a populated synthetic working HTML](evidence/wp01/working-demo.html), which is the same real application initialized with test records. [Result, evidence and handover](docs/work-packages/WP01_PREMIUM_PROJECT_OVERVIEW.md). Scope is tested offline UI; no client/deployment/commercial acceptance asserted.

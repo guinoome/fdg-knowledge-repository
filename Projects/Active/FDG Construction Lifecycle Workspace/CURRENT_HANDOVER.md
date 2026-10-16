@@ -1,41 +1,33 @@
-# Current handover — beginner workflow delivered
+# Current handover — WP01 completed; pending real-user acceptance
 
-## Canonical state
+Date:2026-10-16. GitHub `guinoome/fdg-knowledge-repository`, main. Tested baseline `2a2aca2bf19e9a47d8ef3829b48e59bffce0ee1e`; integration parent `332f7642916fccc5f76aeb93f3b5b02adf97f966`. The commit containing this handover is the WP01 release.
 
-GitHub `guinoome/fdg-knowledge-repository`, branch `main`, project `Projects/Active/FDG Construction Lifecycle Workspace`. Read current GitHub source; do not use a stale local vault. No local project checkout or deliverable files were created.
+[Working HTML](distribution/FDG-Construction-Lifecycle.html) · [Actual-app synthetic demo](evidence/wp01/working-demo.html) · [Screens/test evidence/PDF](evidence/wp01/) · [Package result](docs/work-packages/WP01_PREMIUM_PROJECT_OVERVIEW.md).
 
-[Primary HTML](distribution/FDG-Construction-Lifecycle.html) · [Beginner guide](docs/BEGINNER_WORKFLOW.md) · [Validation](evidence/beginner-validation.json). The commit containing this handover is the current release; parent baseline was `d103c8ea3c4da2ad9b0d0cd33f53798f0453df40`.
+## Result / changed scope
 
-## Latest user direction / result
+One bounded WP01: existing Overview now has translucent live metrics, cutoff/latest eligible work date, review queue, source detail and original-record drill-through, recorded target/actions and explicit unknown cost/QA. Mixed-item quantities stay separate; over-target quantities retained; archived/duplicate/future/unit-invalid sources excluded with reasons.
 
-User: “it's not beginner friendly, too complicated. less input more output is better.”
+One tested guided-engine predicate fixed: Accepted declaration without physical verification stays in pending count. No other engine/schema/JSON format, simple forms, report calculations, freeze/revision controls or other modules replaced.
 
-Implemented default Simple view: Overview, Work plan, Daily update, Reports, More tools. Setup shows two fields; work entry three; daily update reuses the item/unit and defaults its date. Remaining work and daily/weekly/monthly reports reuse source entries. Optional inputs are collapsed. All 56 existing forms remain in Advanced tools.
+## Verification
 
-Five core navigation buttons remain visible on 390 px phones in a compact grid; long full-tool navigation is hidden in Simple view. Premium navy/red/gold styling retained.
+121 checks pass (46 lifecycle +41 beginner +34 Overview). Actual browser100m,+20/+10 ->30m/70m; live+5 ->35m/65m then undo; source IDs/dates/units; keyboard; missing/mixed/archived/duplicate/future/over-target states; negative/non-numeric rejected;56 expert forms; Save HTML/reopen and JSON preview/restore; day10/week30/month30; light A4 PDF72085bytes. Desktop1440/1080/768 and390px phone, source/original record/long names: no body overflow; final offline runs0 relevant errors/warnings/HTTP requests.
+
+Tool session reset during final save. Exact already-uploaded artifacts were recovered; source rebuilt byte-identically and121 tests rerun. Temporary RAM preview ended with that runtime; durable working demo is on GitHub. No local project output/checkouts.
 
 ## Integrity
 
-Original field/cost/estimate/lifecycle engines, register schemas and JSON format unchanged. New guided-engine.mjs and ui-guided.js write existing WBS/Daily/Milestones records. IDs are generated; real reviewers/approvals are not. Reported equal-item completion is labeled unreviewed; missing input remains unknown; formal accepted progress remains separate. Frozen baseline cannot be bypassed.
+Primary HTML225732bytes; SHA256 `f0fa441682c04080f9aab48e369b34e5514065aa3e2b831ab0af7f8398fad162`; Git blob `7d970b461fe5975dc70d07b0c5803358e1b4043e`. Demo227582bytes; SHA256 `34aa9c536b1dff7754909c66b317585538acbfbba966763847ee0910ec4523d3`. See manifest/evidence for all source paths.
 
-## Validation
+## Client-first coordination retained
 
-87 deterministic checks passed: 41 guided + 46 lifecycle. Browser: blank project →100m pipe target →20m daily entry →80m remaining; another10m →30m cumulative/70m remaining; weekly report30m; untouched item keeps global completion unknown. All 56 Advanced forms opened. Negative input blocked; Enter submits valid quantity; invalid report range keeps prior dates. HTML save/reopen and JSON preview/commit restore passed. PDF produced in RAM.1440/1080/768 and390px layouts checked; no observed application errors/warnings/HTTP requests.
+Concurrent [client-first capsule](docs/CLIENT_FIRST_ACTIVATION_AND_AGENT_HANDOVER_2026-10-16.md) and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) remain preserved/open. Real-client acceptance PENDING; customer payment NOT EVIDENCED; sale/release authorization NOT PROVIDED. Automated tests are not client acceptance. Previous complete handover retained at docs/handovers/2026-10-16-beginner-workflow-pre-WP01.md.
 
-Native save dialogs were intercepted; actual filesystem save behavior was not tested. No claim of maximum-capacity, multi-browser, independent-provider or real-user acceptance.
+## Limits / review
 
-Artifact: 210178 UTF-8 bytes; SHA256 `8ab792aeb7acb987242ab879afaa23db0ad0d2e960d0ede7fc373ebc5e4b4e8a`; Git blob `be6a5dfc72519b612c10b225f278c92a1dbf5435`. Source and distribution were rebuilt/compared in RAM.
+Self review/executable tests only; independent provider/Claudex NOT RUN. No real novice/qualified project acceptance, native OS save-dialog, capacity or multi-browser test. No tools installed, new local project artifacts, auth/RBAC/cloud sync/payments/public hosting or commercial promotion. OS ledger changes only scoped offline evidence.
 
-## Remaining / exact next action
+## Exact next action
 
-Have a beginner use a private blank copy to name one project, add two real work items and log one day's quantities, then open the report without coaching. Record time, confusing labels and unnecessary inputs under this project. Preserve current data before replacing a working file. Do not rebuild the engines or add accounts/cloud services for this usability milestone.
-
-Broader accounts/RBAC/cloud sync/deployment/commercial gates remain outside the authorized offline scope. Previous milestone handover retained at docs/handovers/2026-10-16-offline-milestone.md.
-
-## Founder direction / client-first agent work item — 2026-10-16
-
-The founder reinforced the requirement that every useful FDG discussion reach an implementation agent as a concrete, client-simple deliverable and, after independent validation, a commercially testable product. **No additional source code was changed by this coordination update.** Existing beginner workflow implementation, reported 87 test passes, source layout, and all prior limitations remain as recorded above.
-
-**Next task is recorded, not auto-executed:** [GitHub issue #5 — Client-first activation](https://github.com/guinoome/fdg-knowledge-repository/issues/5). Read `docs/CLIENT_FIRST_ACTIVATION_AND_AGENT_HANDOVER_2026-10-16.md` for exact source paths, normal case (100 m planned → 20+10 m reported → 70 m remaining), privacy/recovery and mobile acceptance criteria. Agents must **reproduce the current product**, obtain real beginner acceptance when participants/authority are available, fix only evidenced authorized friction, and prepare a truthful draft offer. No rebuilt engines, artificial testimonials, immediate commercialization or automatic release.
-
-**Separately tracked statuses:** working software = prior technical evidence; real client acceptance = PENDING; actual customer payment = NOT EVIDENCED; sale/release authorization = NOT PROVIDED by this issue. The project remains a local offline single-editor artifact with manual Save project, not an authenticated hosted SaaS platform.
+Next bounded code proposal: **WP02 reports/source presentation and print acceptance**—inspect compact event ID/date/unit/review index, add only if missing, test period boundaries and immutable issued reports. Do not auto-start QA/cloud packages. Collect real participant evidence under issue#5 when available before any client/commercial acceptance claim.
