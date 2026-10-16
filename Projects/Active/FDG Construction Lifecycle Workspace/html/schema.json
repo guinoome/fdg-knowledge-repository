@@ -1,0 +1,2361 @@
+{
+  "id": "FDG-CONSTRUCTION-LIFECYCLE",
+  "version": "1.0.0-rc.1",
+  "capacity": 200,
+  "dates": "ISO8601 displayed yyyy-mm-dd",
+  "currency": "PHP",
+  "jurisdiction": "Philippines; contract-specific forms and technical criteria remain user-approved",
+  "commonStatuses": [
+    "Draft",
+    "Submitted",
+    "In Review",
+    "Accepted",
+    "Rejected",
+    "Superseded",
+    "Conflict - Review Required"
+  ],
+  "registers": [
+    {
+      "sheet": "WBS",
+      "title": "Work breakdown and progress basis",
+      "fields": [
+        "wbs_id",
+        "project_id",
+        "activity",
+        "unit",
+        "baseline_qty",
+        "weight",
+        "planned_fraction",
+        "accepted_events",
+        "accepted_qty",
+        "accepted_fraction",
+        "weighted_actual",
+        "weighted_plan",
+        "owner",
+        "revision",
+        "source_ref",
+        "basis_check",
+        "import_ref"
+      ],
+      "computed": [
+        "accepted_events",
+        "accepted_qty",
+        "accepted_fraction",
+        "weighted_actual",
+        "weighted_plan",
+        "basis_check"
+      ],
+      "numeric": [
+        "baseline_qty",
+        "weight",
+        "planned_fraction",
+        "accepted_qty",
+        "accepted_fraction",
+        "weighted_actual",
+        "weighted_plan",
+        "revision"
+      ],
+      "dates": [],
+      "statuses": [
+        "Draft",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Superseded",
+        "Conflict - Review Required"
+      ],
+      "phase": 7,
+      "area": "PLAN"
+    },
+    {
+      "sheet": "Daily",
+      "title": "Daily site progress",
+      "fields": [
+        "event_id",
+        "project_id",
+        "wbs_id",
+        "event_date",
+        "description",
+        "unit",
+        "reported_qty",
+        "accepted_qty",
+        "verified_qty",
+        "verified_by",
+        "verified_date",
+        "verification_ref",
+        "review_state",
+        "evidence_ref",
+        "prepared_by",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "evidence_check",
+        "unit_check",
+        "quantity_check",
+        "import_ref"
+      ],
+      "computed": [
+        "evidence_check",
+        "unit_check",
+        "quantity_check"
+      ],
+      "numeric": [
+        "reported_qty",
+        "accepted_qty",
+        "revision",
+        "verified_qty"
+      ],
+      "dates": [
+        "event_date",
+        "review_date",
+        "verified_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Superseded",
+        "Conflict - Review Required"
+      ],
+      "phase": 8,
+      "area": "EXECUTE"
+    },
+    {
+      "sheet": "Kickoff",
+      "title": "Project startup and kickoff",
+      "fields": [
+        "item_id",
+        "project_id",
+        "item",
+        "owner",
+        "due_date",
+        "status",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Superseded",
+        "Conflict - Review Required"
+      ],
+      "phase": 5,
+      "area": "PLAN"
+    },
+    {
+      "sheet": "RFI",
+      "title": "Request for information register",
+      "fields": [
+        "rfi_id",
+        "project_id",
+        "wbs_id",
+        "subject",
+        "raised_date",
+        "due_date",
+        "owner",
+        "status",
+        "response_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "next_action",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "raised_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Internal Review",
+        "Issued",
+        "Acknowledged",
+        "Response Received",
+        "Response Under Review",
+        "Closed"
+      ],
+      "phase": 11,
+      "area": "DOCUMENT"
+    },
+    {
+      "sheet": "Submittals",
+      "title": "Submittal register",
+      "fields": [
+        "submittal_id",
+        "project_id",
+        "wbs_id",
+        "document_title",
+        "document_revision",
+        "submitted_date",
+        "due_date",
+        "owner",
+        "status",
+        "response_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "submitted_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Internal Review",
+        "Submitted",
+        "Under Review",
+        "Approved",
+        "Approved with Comments",
+        "Revise / Resubmit",
+        "Rejected",
+        "Closed"
+      ],
+      "phase": 11,
+      "area": "DOCUMENT"
+    },
+    {
+      "sheet": "Issues",
+      "title": "Issues, constraints and delays",
+      "fields": [
+        "issue_id",
+        "project_id",
+        "wbs_id",
+        "category",
+        "description",
+        "observed_date",
+        "impact_basis",
+        "owner",
+        "due_date",
+        "status",
+        "next_action",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "observed_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Open",
+        "In Progress",
+        "Ready for Verification",
+        "Closed",
+        "Conflict - Review Required"
+      ],
+      "phase": 8,
+      "area": "EXECUTE"
+    },
+    {
+      "sheet": "QAQC",
+      "title": "QA/QC status register",
+      "fields": [
+        "inspection_id",
+        "project_id",
+        "wbs_id",
+        "record_type",
+        "description",
+        "method_standard_ref",
+        "acceptance_criterion",
+        "observed_result",
+        "inspection_date",
+        "owner",
+        "status",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "inspection_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Requested",
+        "Scheduled",
+        "Inspected",
+        "Passed",
+        "Passed with Comments",
+        "Failed",
+        "Rectification",
+        "Reinspection",
+        "Closed"
+      ],
+      "phase": 9,
+      "area": "EXECUTE"
+    },
+    {
+      "sheet": "Changes",
+      "title": "Variation and change register",
+      "fields": [
+        "change_id",
+        "project_id",
+        "wbs_id",
+        "description",
+        "cause",
+        "notice_date",
+        "cost_impact_php",
+        "time_impact_days",
+        "owner",
+        "status",
+        "authorization_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "cost_impact_php",
+        "time_impact_days",
+        "revision"
+      ],
+      "dates": [
+        "notice_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Superseded",
+        "Conflict - Review Required"
+      ],
+      "phase": 13,
+      "area": "DOCUMENT"
+    },
+    {
+      "sheet": "Billing",
+      "title": "Progress billing evidence index",
+      "fields": [
+        "billing_id",
+        "project_id",
+        "wbs_id",
+        "description",
+        "unit",
+        "reported_qty",
+        "accepted_qty",
+        "billable_qty",
+        "billed_qty",
+        "paid_qty",
+        "unit_rate_php",
+        "billable_authority_ref",
+        "billing_ref",
+        "payment_ref",
+        "evidence_ref",
+        "owner",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "reported_qty",
+        "accepted_qty",
+        "billable_qty",
+        "billed_qty",
+        "paid_qty",
+        "unit_rate_php",
+        "revision"
+      ],
+      "dates": [],
+      "statuses": [
+        "Draft",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Superseded",
+        "Conflict - Review Required"
+      ],
+      "phase": 13,
+      "area": "TRACK"
+    },
+    {
+      "sheet": "Punch",
+      "title": "Punch list",
+      "fields": [
+        "punch_id",
+        "project_id",
+        "wbs_id",
+        "location",
+        "description",
+        "responsible_trade",
+        "owner",
+        "due_date",
+        "status",
+        "closure_evidence_ref",
+        "verified_by",
+        "verification_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "verification_date"
+      ],
+      "statuses": [
+        "Open",
+        "In Progress",
+        "Ready for Verification",
+        "Closed",
+        "Conflict - Review Required"
+      ],
+      "phase": 15,
+      "area": "EXECUTE"
+    },
+    {
+      "sheet": "Turnover",
+      "title": "Turnover and closeout tracker",
+      "fields": [
+        "turnover_id",
+        "project_id",
+        "wbs_id",
+        "deliverable_type",
+        "description",
+        "responsibility_receiver",
+        "owner",
+        "due_date",
+        "status",
+        "blocking_issue_ref",
+        "evidence_ref",
+        "reviewer",
+        "review_date",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Pending",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Conflict - Review Required"
+      ],
+      "phase": 16,
+      "area": "DOCUMENT"
+    },
+    {
+      "sheet": "Evidence",
+      "title": "Evidence index",
+      "fields": [
+        "evidence_id",
+        "project_id",
+        "record_type",
+        "origin",
+        "locator",
+        "captured_date",
+        "captured_by",
+        "checksum",
+        "access_class",
+        "verification_status",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "captured_date"
+      ],
+      "statuses": [
+        "Unverified",
+        "Verified",
+        "Missing",
+        "Conflict - Review Required",
+        "Illustrative - not real evidence"
+      ],
+      "phase": 11,
+      "area": "DOCUMENT"
+    },
+    {
+      "sheet": "History",
+      "title": "Revision and decision log",
+      "fields": [
+        "history_id",
+        "project_id",
+        "target_record_id",
+        "prior_revision",
+        "new_revision",
+        "change_reason",
+        "actor",
+        "occurred_date",
+        "decision_ref",
+        "evidence_ref",
+        "import_ref"
+      ],
+      "numeric": [],
+      "dates": [
+        "occurred_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Submitted",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Superseded",
+        "Conflict - Review Required"
+      ],
+      "phase": 17,
+      "area": "DOCUMENT"
+    },
+    {
+      "sheet": "Tender",
+      "title": "Tender opportunities",
+      "area": "PLAN",
+      "phase": 1,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "client",
+        "deadline",
+        "scope",
+        "decision",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "deadline",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "BidDecision",
+      "title": "Bid / no-bid review",
+      "area": "PLAN",
+      "phase": 1,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "risk_basis",
+        "decision",
+        "reason",
+        "deadline",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "deadline",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "TenderCompliance",
+      "title": "Tender compliance matrix",
+      "area": "PLAN",
+      "phase": 2,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "requirement",
+        "document_ref",
+        "clause",
+        "response",
+        "gap",
+        "due_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Drawings",
+      "title": "Controlled drawings / document revisions",
+      "area": "DOCUMENT",
+      "phase": 2,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "document_id",
+        "title",
+        "document_type",
+        "document_revision",
+        "current",
+        "supersedes",
+        "issue_date",
+        "due_date",
+        "originator",
+        "recipient",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "issue_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Issued",
+        "In Review",
+        "Approved",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Addenda",
+      "title": "Tender addendum impacts",
+      "area": "PLAN",
+      "phase": 2,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "drawing_ref",
+        "received_date",
+        "impact",
+        "action",
+        "due_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "received_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Interfaces",
+      "title": "Scope / responsibility interfaces",
+      "area": "PLAN",
+      "phase": 2,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "included_scope",
+        "excluded_scope",
+        "responsible_party",
+        "interface_party",
+        "decision_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Assumptions",
+      "title": "Estimate basis / assumptions",
+      "area": "ESTIMATE",
+      "phase": 3,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "basis",
+        "exclusion",
+        "risk",
+        "review_due",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "review_due",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "BOQ",
+      "title": "Controlled BOQ quantity snapshots",
+      "area": "ESTIMATE",
+      "phase": 3,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "item_code",
+        "description",
+        "unit",
+        "quantity",
+        "qto_id",
+        "qto_revision",
+        "drawing_revision",
+        "measurement_ref",
+        "allowance_qty",
+        "rate_basis",
+        "budget_php",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "quantity",
+        "allowance_qty",
+        "budget_php",
+        "revision"
+      ],
+      "dates": [
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "QTO",
+      "title": "QTO measurements & rate build-up",
+      "area": "ESTIMATE",
+      "phase": 3,
+      "fields": [
+        "id",
+        "project_id",
+        "boq",
+        "wbs",
+        "description",
+        "method",
+        "unit",
+        "length",
+        "width",
+        "depth",
+        "count",
+        "repetitions",
+        "manual",
+        "waste",
+        "costBasis",
+        "material",
+        "labor",
+        "equipment",
+        "subcontract",
+        "rateDate",
+        "source",
+        "owner",
+        "reviewer",
+        "status",
+        "revision",
+        "note",
+        "import_ref"
+      ],
+      "numeric": [
+        "length",
+        "width",
+        "depth",
+        "count",
+        "repetitions",
+        "manual",
+        "waste",
+        "material",
+        "labor",
+        "equipment",
+        "subcontract",
+        "revision"
+      ],
+      "dates": [
+        "rateDate"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Reviewed",
+        "Superseded"
+      ]
+    },
+    {
+      "sheet": "BOM",
+      "title": "Material / procurement demand",
+      "area": "ESTIMATE",
+      "phase": 3,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "item_code",
+        "description",
+        "unit",
+        "design_qty",
+        "required_qty",
+        "boq_ref",
+        "drawing_revision",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "design_qty",
+        "required_qty",
+        "revision"
+      ],
+      "dates": [
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Quotes",
+      "title": "Supplier / subcontractor comparison",
+      "area": "ESTIMATE",
+      "phase": 3,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "item_code",
+        "supplier",
+        "description",
+        "unit",
+        "quantity",
+        "rate_php",
+        "delivery_days",
+        "quote_ref",
+        "valid_until",
+        "terms",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "quantity",
+        "rate_php",
+        "delivery_days",
+        "revision"
+      ],
+      "dates": [
+        "valid_until",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "TenderSubmission",
+      "title": "Bid submission checklist",
+      "area": "DOCUMENT",
+      "phase": 4,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "requirement",
+        "document_ref",
+        "responsible_party",
+        "due_date",
+        "submitted_date",
+        "receipt_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "submitted_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Contract",
+      "title": "Contract obligations / notices",
+      "area": "PLAN",
+      "phase": 5,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "clause",
+        "obligation",
+        "trigger",
+        "due_date",
+        "decision_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Mobilization",
+      "title": "Mobilization / logistics readiness",
+      "area": "PLAN",
+      "phase": 6,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "requirement",
+        "location",
+        "responsible_party",
+        "due_date",
+        "action",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Milestones",
+      "title": "Milestones / key dates",
+      "area": "PLAN",
+      "phase": 7,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "baseline_date",
+        "forecast_date",
+        "actual_date",
+        "action",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "baseline_date",
+        "forecast_date",
+        "actual_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Procurement",
+      "title": "Procurement / delivery tracking",
+      "area": "PLAN",
+      "phase": 7,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "item_code",
+        "description",
+        "unit",
+        "required_qty",
+        "ordered_qty",
+        "delivered_qty",
+        "supplier",
+        "po_ref",
+        "required_date",
+        "forecast_date",
+        "actual_date",
+        "action",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "required_qty",
+        "ordered_qty",
+        "delivered_qty",
+        "revision"
+      ],
+      "dates": [
+        "required_date",
+        "forecast_date",
+        "actual_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Risks",
+      "title": "Risk register",
+      "area": "PLAN",
+      "phase": 7,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "cause",
+        "consequence",
+        "likelihood",
+        "impact",
+        "mitigation",
+        "due_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Actions",
+      "title": "Actions / recovery commitments",
+      "area": "PLAN",
+      "phase": 7,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "reason",
+        "next_action",
+        "due_date",
+        "closure_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Decisions",
+      "title": "Decision register",
+      "area": "PLAN",
+      "phase": 7,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "options",
+        "decision",
+        "rationale",
+        "decision_date",
+        "authority_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "decision_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Manpower",
+      "title": "Daily manpower",
+      "area": "EXECUTE",
+      "phase": 8,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "event_ref",
+        "date",
+        "trade",
+        "headcount",
+        "hours",
+        "activity",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "headcount",
+        "hours",
+        "revision"
+      ],
+      "dates": [
+        "date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Equipment",
+      "title": "Equipment utilization",
+      "area": "EXECUTE",
+      "phase": 8,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "event_ref",
+        "date",
+        "equipment",
+        "unit_id",
+        "available_hours",
+        "operating_hours",
+        "downtime_reason",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "available_hours",
+        "operating_hours",
+        "revision"
+      ],
+      "dates": [
+        "date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Materials",
+      "title": "Material receipts / use",
+      "area": "EXECUTE",
+      "phase": 8,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "event_ref",
+        "date",
+        "item_code",
+        "description",
+        "movement",
+        "unit",
+        "quantity",
+        "delivery_ref",
+        "location",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "quantity",
+        "revision"
+      ],
+      "dates": [
+        "date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "HSE",
+      "title": "Safety / permit interface",
+      "area": "EXECUTE",
+      "phase": 10,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "date",
+        "location",
+        "permit_ref",
+        "observation",
+        "risk",
+        "action",
+        "due_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Instructions",
+      "title": "Site instructions",
+      "area": "DOCUMENT",
+      "phase": 11,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "instruction",
+        "issuer",
+        "issue_date",
+        "due_date",
+        "drawing_ref",
+        "response",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "issue_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "NCR",
+      "title": "Nonconformance / corrective action",
+      "area": "EXECUTE",
+      "phase": 9,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "criterion_ref",
+        "observation",
+        "containment",
+        "cause_ref",
+        "corrective_action",
+        "due_date",
+        "verification_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Open",
+        "Containment",
+        "Root Cause Review",
+        "Corrective Action",
+        "Verification",
+        "Closed"
+      ]
+    },
+    {
+      "sheet": "Transmittals",
+      "title": "Document transmittals",
+      "area": "DOCUMENT",
+      "phase": 11,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "document_refs",
+        "sender",
+        "recipient",
+        "issue_date",
+        "due_date",
+        "receipt_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "issue_date",
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Meetings",
+      "title": "Meetings / minutes",
+      "area": "DOCUMENT",
+      "phase": 11,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "meeting_date",
+        "attendees",
+        "decisions",
+        "actions",
+        "next_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "meeting_date",
+        "next_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Correspondence",
+      "title": "Incoming / outgoing correspondence",
+      "area": "DOCUMENT",
+      "phase": 11,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "direction",
+        "sender",
+        "recipient",
+        "date",
+        "response_due",
+        "response_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "date",
+        "response_due",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Notices",
+      "title": "Contractual notice / claim support",
+      "area": "DOCUMENT",
+      "phase": 13,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "event_date",
+        "clause",
+        "notice_due",
+        "issued_date",
+        "impact_basis",
+        "action",
+        "authority_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "event_date",
+        "notice_due",
+        "issued_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "TestPacks",
+      "title": "Testing & commissioning readiness",
+      "area": "DOCUMENT",
+      "phase": 14,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "system",
+        "title",
+        "procedure_ref",
+        "prerequisite",
+        "hold_point",
+        "due_date",
+        "blocker",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Tests",
+      "title": "Test / retest evidence",
+      "area": "EXECUTE",
+      "phase": 14,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "test_pack_ref",
+        "system",
+        "test_date",
+        "method_ref",
+        "acceptance_criterion",
+        "observed_result",
+        "outcome",
+        "witness",
+        "retest_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "test_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "Scheduled",
+        "In Review",
+        "Passed",
+        "Failed",
+        "Retest Required",
+        "Accepted"
+      ]
+    },
+    {
+      "sheet": "AsBuilts",
+      "title": "As-built drawing closeout",
+      "area": "DOCUMENT",
+      "phase": 16,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "document_ref",
+        "title",
+        "drawing_revision",
+        "system",
+        "receiver",
+        "due_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Manuals",
+      "title": "O&M manuals",
+      "area": "DOCUMENT",
+      "phase": 16,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "asset_ref",
+        "title",
+        "document_revision",
+        "receiver",
+        "due_date",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Warranties",
+      "title": "Warranty / defects liability",
+      "area": "DOCUMENT",
+      "phase": 17,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "asset_ref",
+        "title",
+        "provider",
+        "start_date",
+        "end_date",
+        "obligation",
+        "claim_ref",
+        "action",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "start_date",
+        "end_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Training",
+      "title": "Training / responsibility acceptance",
+      "area": "DOCUMENT",
+      "phase": 16,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "system",
+        "training_date",
+        "trainer",
+        "attendees",
+        "acceptance_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "training_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Assets",
+      "title": "Asset / equipment handover",
+      "area": "DOCUMENT",
+      "phase": 16,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "asset_code",
+        "parent_asset",
+        "description",
+        "system",
+        "location",
+        "manufacturer",
+        "model",
+        "serial",
+        "manual_ref",
+        "warranty_ref",
+        "receiver",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Transfers",
+      "title": "Personnel / responsibility transfer",
+      "area": "DOCUMENT",
+      "phase": 17,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "previous_owner",
+        "successor",
+        "transfer_date",
+        "open_item_refs",
+        "excluded_items",
+        "risks",
+        "authorization_ref",
+        "acknowledgement_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "transfer_date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Lessons",
+      "title": "Lessons / performance review",
+      "area": "DOCUMENT",
+      "phase": 17,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "title",
+        "event_ref",
+        "finding",
+        "evidence",
+        "lesson",
+        "recommended_change",
+        "review_decision",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "CurvePlan",
+      "title": "Approved time-phased progress plan",
+      "area": "PLAN",
+      "phase": 12,
+      "fields": [
+        "id",
+        "project_id",
+        "wbs_id",
+        "date",
+        "planned_pct",
+        "baseline_ref",
+        "owner",
+        "status",
+        "reviewer",
+        "review_date",
+        "evidence_ref",
+        "revision",
+        "source_ref",
+        "import_ref"
+      ],
+      "numeric": [
+        "planned_pct",
+        "revision"
+      ],
+      "dates": [
+        "date",
+        "review_date"
+      ],
+      "statuses": [
+        "Draft",
+        "In Review",
+        "Accepted",
+        "Rejected",
+        "Closed",
+        "Superseded",
+        "Conflict - Review Required"
+      ]
+    },
+    {
+      "sheet": "Schedule",
+      "title": "Activities & baseline",
+      "area": "PLAN",
+      "phase": 7,
+      "fields": [
+        "id",
+        "wbs",
+        "name",
+        "owner",
+        "baselineStart",
+        "baselineFinish",
+        "forecastStart",
+        "forecastFinish",
+        "actualStart",
+        "actualFinish",
+        "predecessors",
+        "budget",
+        "etc",
+        "forecastDate",
+        "forecastSource",
+        "source",
+        "revision",
+        "project_id",
+        "import_ref"
+      ],
+      "numeric": [
+        "budget",
+        "etc",
+        "revision"
+      ],
+      "dates": [
+        "baselineStart",
+        "baselineFinish",
+        "forecastStart",
+        "forecastFinish",
+        "actualStart",
+        "actualFinish",
+        "forecastDate"
+      ]
+    },
+    {
+      "sheet": "ActualCosts",
+      "title": "Actual cost ledger",
+      "area": "TRACK",
+      "phase": 13,
+      "fields": [
+        "id",
+        "task",
+        "date",
+        "type",
+        "amount",
+        "owner",
+        "source",
+        "revision",
+        "project_id",
+        "import_ref"
+      ],
+      "numeric": [
+        "amount",
+        "revision"
+      ],
+      "dates": [
+        "date"
+      ]
+    },
+    {
+      "sheet": "Commitments",
+      "title": "Remaining commitments",
+      "area": "TRACK",
+      "phase": 13,
+      "fields": [
+        "id",
+        "task",
+        "contract",
+        "date",
+        "remaining",
+        "owner",
+        "source",
+        "revision",
+        "project_id",
+        "import_ref"
+      ],
+      "numeric": [
+        "remaining",
+        "revision"
+      ],
+      "dates": [
+        "date"
+      ]
+    },
+    {
+      "sheet": "Constraints",
+      "title": "Constraints & actions",
+      "area": "PLAN",
+      "phase": 13,
+      "fields": [
+        "id",
+        "task",
+        "due",
+        "status",
+        "description",
+        "action",
+        "owner",
+        "source",
+        "revision",
+        "project_id",
+        "import_ref"
+      ],
+      "numeric": [
+        "revision"
+      ],
+      "dates": [
+        "due"
+      ],
+      "statuses": [
+        "Open",
+        "In Progress",
+        "Resolved"
+      ]
+    }
+  ]
+}
