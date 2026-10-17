@@ -1,6 +1,6 @@
 # Nex local runtime — current handover
 
-Date: 2026-10-17 Asia/Taipei. Version: 0.2.0.
+Updated: 2026-10-18 Asia/Taipei. Version: 0.2.0.
 
 ## Objective and authority
 
@@ -27,7 +27,7 @@ Runtime project working directories are `Projects/Active/Baby Nex First Heartbea
 - `python3 -B install.py --repository /workspace/fdg-knowledge-repository --home /workspace/nex-installed`: success, `core_ready: true`; **1,427 Markdown documents indexed**, zero skipped files/directory errors. One metadata warning: `20_FPJIS_FDG_Project_Intelligence_System/01_Project_Blueprints/Nonfunctional_Requirements_Blueprint.md` has duplicate opening Owner fields; retained for discovery with unknown authority. Source was not edited.
 - Actual repository `/find` returns relevant FPJIS material. Strict `/fpjis` remains `NOT_FOUND` because the indexed master architecture lacks explicit approval metadata. This is uncertainty handling, not current-authority resolution.
 - Original BN-HB-001 receipt evidence is retained outside the checkout under `/workspace/baby-nex-state/`; no older evidence is silently promoted into new local-machine validation.
-- Portable Python entry points and extracted-package installer tested on Linux. **Windows CMD execution and actual installation/generation on the founder's computer remain unrun.**
+- Portable Python entry points and extracted-package installer tested on Linux. Windows operation is not directly observable from this cloud session; subsequent user-reported results are recorded below.
 
 ## Validation and security boundaries
 
@@ -35,11 +35,11 @@ Single-user local account boundary; no hostile same-user concurrent filesystem m
 
 ## Remaining acceptance
 
-**User-reported Windows progress:** the founder replied, “Installed; I can open Nex.” Installation and launch on the target computer are therefore reported successful by the user. `/doctor`, a source-backed model answer and a note surviving restart have now been requested. Their results are still pending; do not infer them from the launch report. The transferred executable source was committed as `09cd44b50f9e21c66bb8e13a6b43c7f8a76ce05c` on the remote `codex/nex-local-runtime` branch.
+**User-reported Windows progress:** the founder replied, “Installed; I can open Nex,” then confirmed, “It answers and cites FDG sources.” Installation, launch and source-backed answers on the target computer are therefore reported successful by the user. Raw `/doctor` output and the generated answer were not supplied; do not describe them as directly inspected. For the note/restart test, the user said, “I have not tried this yet.” The remaining question now asks for one confirmed note, exit/reopen, `/memory` and `/recall` returning the original sentence. Do not repeat installation or model-setup questions without a new failure. The transferred executable source was committed as `09cd44b50f9e21c66bb8e13a6b43c7f8a76ce05c` on the remote `codex/nex-local-runtime` branch.
 
 1. Windows installation and launch: user reported success; retain the actual vault/readiness details when supplied.
 2. Start Nex and verify a confirmed note survives exit/reopen using /memory and /recall.
-3. Start Ollama with a local model, select it through /models and /model, run /doctor and verify real generation, then ask a source-backed FDG question.
+3. Source-backed answers: user reported success. Obtain raw diagnostics only if a specific failure needs investigation.
 4. Inspect readiness/error output from that Windows machine and fix any remaining platform or installation problem.
 
-This is the precise external prerequisite: a local launch or an authorized connection to the actual computer. Cloud setup and package creation do not satisfy it. Do not mark the user's goal completed until that evidence exists.
+The remaining local prerequisite is the saved-note persistence result. Cloud setup, tests and package creation do not establish that result. Do not mark the full local acceptance complete until the user confirms recall after restart or the failure is diagnosed and fixed.
