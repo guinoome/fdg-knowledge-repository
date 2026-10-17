@@ -48,3 +48,9 @@ Provide only: **state verified**, **one immediate bounded work package**, **path
 ### Commercial delivery rule
 
 A working, tested and accepted product slice outranks documentation volume and the number of workers. Each workforce expansion must produce traceable reductions in defects/effort or demonstrable validated engineering/client/business outcomes. A proposal, draft PR, simulation or generated dashboard is not a paid result.
+
+## Continuous external learning extension — 2026-10-17
+
+Future Nex should gradually learn from **founder-approved YouTube channels and Facebook pages/channels**, including manually shared videos and posts. See [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_EXTERNAL_LEARNING_YOUTUBE_FACEBOOK_PROPOSAL|governed external-learning intake specification]]. This is **PROPOSED**, not a deployed scanner, access to the user's followed channels, an approved source list, or authorization to scrape/log in.
+
+**Continue in order:** complete First Heartbeat → establish one manual, sourced intake/receipt → independently verify high-value knowledge → submit candidate improvement to review → deliver one tested FDG product/workflow improvement → only then consider approved source registry and scheduled collection via FEXIS/FWAIS. All derived content is untrusted evidence until validated; protect canonical knowledge, privacy, platform terms and copyright. Prefer measured product, engineering and commercial value over passive accumulation of videos.
