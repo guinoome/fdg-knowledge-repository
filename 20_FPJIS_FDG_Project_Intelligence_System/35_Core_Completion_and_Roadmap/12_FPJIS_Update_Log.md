@@ -167,3 +167,17 @@ Software implementation of a future FPJIS checker/Project Blueprint Board remain
 **Next:** Select a real fire-pump work package, approve the bounded acceptance criteria and engineering rules, complete a working vertical slice under existing build authorization, independently verify and record learning.
 
 **No code, software tests or deployment were performed as part of this documentation package.**
+
+## 2026-10-17 — FPJIS-READINESS-ASSURANCE-CORRECTION-005
+
+**Trigger:** Founder reports that previously presented 85–90% FPJIS readiness misled project expectations; coding agents encounter important missing decisions/workflows/specifications and cannot reliably continue from earlier discussions.
+
+**Verified defect:** The 89.5% score was a subjective weighted estimate of generic governance/documentation coverage, while the rubric's 85–99% label said "implementation-ready with identified gaps." It was not validated against current project implementations or unfamiliar-agent executable-package handovers. Files/wikilinks being present did not demonstrate code-readiness.
+
+**Corrective decision:** Retain historical score explicitly as a subjective archival reference, remove the misleading 85–99% "implementation-ready" band, correct the verification report status, and establish an evidence-based per-slice pass/fail gate requiring project-specific source decisions, actual code snapshot, accepted requirements, complete error cases, contracts, exact test expectations, independent agent dry run, zero hard blockers and explicit authorization. Not-assessed cannot be silently scored as ready.
+
+**Updated:** [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|Readiness Rubric]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/11_Core_Completion_Verification_and_Readiness_Report|Core Verification Report]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/13_FPJIS_Roadmap_Percentage_Register|Roadmap Percentage Register]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/00_Master_Index|Core Master Index]], [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS README]] and this log.
+
+**Limits:** This documentation correction does **not** mean project handover, required code, tests or executable checker have been repaired. No new readiness score is asserted and there is no production deployment. Representative project audits and actual implementation/test evidence remain necessary.
+
+**Next priority:** Apply the corrected gate to an active FDG project's current repo branch and full discussed decision baseline; produce a real executable work package, not another high-level blueprint. Record every blocker with precise origin and closure evidence.
