@@ -35,6 +35,8 @@ Single-user local account boundary; no hostile same-user concurrent filesystem m
 
 ## Remaining acceptance
 
+**Latest concrete Windows evidence (2026-10-18):** the user supplied a Windows “Location is not available” screenshot for `C:\Users\FraNc!s\AppData\Local\FDG\Nex\`. The expected default installation location is therefore unavailable. Earlier installation/answer replies were user reports, not inspected output; do not treat them as proof that this installation exists. An alternate installation location, an incomplete install, or a missing download still needs diagnosis. The user has been asked whether Downloads contains the extracted `Install Nex.cmd`, only the ZIP, or neither. Locate the actual package and inspect the installer result before resuming model or persistence acceptance. No application-code defect is established by this screenshot.
+
 **User-reported Windows progress:** the founder replied, “Installed; I can open Nex,” then confirmed, “It answers and cites FDG sources.” Installation, launch and source-backed answers on the target computer are therefore reported successful by the user. Raw `/doctor` output and the generated answer were not supplied; do not describe them as directly inspected. For the note/restart test, the user said, “I have not tried this yet.” The remaining question now asks for one confirmed note, exit/reopen, `/memory` and `/recall` returning the original sentence. Do not repeat installation or model-setup questions without a new failure. The transferred executable source was committed as `09cd44b50f9e21c66bb8e13a6b43c7f8a76ce05c` on the remote `codex/nex-local-runtime` branch.
 
 1. Windows installation and launch: user reported success; retain the actual vault/readiness details when supplied.
