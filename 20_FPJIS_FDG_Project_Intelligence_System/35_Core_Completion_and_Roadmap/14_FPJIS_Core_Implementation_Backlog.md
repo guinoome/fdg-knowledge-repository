@@ -12,7 +12,7 @@ created: 2026-10-10
 
 Prioritize the remaining generic FPJIS work without reopening already-settled architecture.
 
-## P0 — Adopt New Core Standards
+## P0 — Record Core Documentation Standards (NOT Product Completion)
 
 - [x] implementation-readiness rubric
 - [x] module-finished-session standard
