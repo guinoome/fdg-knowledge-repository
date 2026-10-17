@@ -60,3 +60,7 @@ The validation scripts install no dependencies. Browser QA covers desktop and a 
 The project implements the repository relationship:
 
 `FPIS experience primitives → FDG Business ecosystem hub → module subscription → module instance → branch-scoped operational data`
+
+## FPJIS Functional Product Audit — 2026-10-17
+
+[[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|Scoped Functional Product Evidence Audit]] distinguishes actually implemented demo hub, local Fuel data, separate client auth and TEST billing code from **production secure paid operational capability**. Historical payment evidence and synthetic automated tests do not close blocked SMTP recovery, authoritative branch entitlements or real-money readiness. Preserve current working prototypes, complete approved end-to-end account/branch isolation acceptance under [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|FPJIS Functional Completion Gate]] and do not invite paying operational clients on unsupported claims.
