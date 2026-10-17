@@ -10,18 +10,23 @@ created: 2026-10-10
 
 ## Purpose
 
-Provide one live location for reviewing generic FPJIS implementation-readiness by module.
+Preserve historical qualitative generic-framework coverage estimates and track evidence-based reassessment. This is **not** a project or work-package coding-readiness register.
 
 This register measures the generic blueprint framework. It does not claim an FPJIS software application has been implemented.
 
 ## Current Baseline
 
 ~~~text
-Generic Blueprint Implementation Readiness: 89.5%
+Historical Generic Framework Documentation Estimate: 89.5% (subjective; NOT code/build readiness)
+Project / Module Executable Readiness: NOT ASSESSED globally; evaluate each bounded scope with evidence
 Generic FPJIS Software Implementation: not claimed
 Automated Manifest Checker: not implemented
 Project Blueprint Board Application: not implemented
 ~~~
+
+## Corrective Interpretation — 2026-10-17
+
+**These module numbers are historical, qualitative documentation assessments.** They have not been verified with an unfamiliar coding agent executing representative work packages from current specifications and code. Do not describe 85–99% as ready to implement. A module with missing rules, acceptance cases, source decisions or dependencies is NOT READY regardless of high documentation coverage. See [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|Corrected Per-Slice Build-Readiness Gate]].
 
 ## Module Register
 
@@ -45,7 +50,7 @@ Project Blueprint Board Application: not implemented
 
 ## Interpretation
 
-A module below 100% generic readiness is still useful.
+A generic-framework documentation module may be useful even when its historical estimate is unverified for build execution.
 
 The percentage means there are known opportunities to improve the generic reusable framework.
 
@@ -75,13 +80,13 @@ Any score change should cite:
 
 ## Target
 
-Generic FPJIS should remain useful before 100%.
+Generic FPJIS documentation can remain useful without being evidence of implementation readiness.
 
 A practical near-term target is:
 
 ~~~text
-Generic Blueprint Implementation Readiness: 90–95%
-with zero unknown critical implementation blockers
+Verified per-slice readiness gates: pass independently for each authorized build package
+Historical generic-framework percentages: archival only until calibrated with executed cases
 ~~~
 
 The remaining 5–10% should be earned through real project evidence, reusable-library population, and automation—not by writing more speculative documents.
