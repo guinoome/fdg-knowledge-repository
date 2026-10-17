@@ -47,3 +47,7 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 ## 2026-09-30 architecture review addendum
 
 [[docs/audits/2026-09-30-architecture-critical-review/FDG_ARCHITECTURE_CRITICAL_REVIEW|Repository-wide structural review]] includes a pinned inventory, unresolved/ambiguous link candidates and preservation checks. [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS_ARCHITECTURE_REGRESSION_PROTOCOL_2026-09-30|The proposed regression protocol]] distinguishes present gaps from demonstrated regressions across comparable snapshots.
+
+## Full-Repository Product Audit Agent Handover — 2026-10-17
+
+[[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Full Repository Audit Handover]] is the founder-directed **future audit execution handover**, not evidence that a full audit was completed. It covers pinned complete tracked-path inventory, system authority and historical decisions, current implementation reality, versioned test/acceptance evidence, triaged findings, controlled enhancements and understandable legacy-builder task cards. It reuses this FAIS authority and [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|FPJIS-LITE-001 One-Page Legacy Agent Build Card]] rather than creating a competing audit system.
