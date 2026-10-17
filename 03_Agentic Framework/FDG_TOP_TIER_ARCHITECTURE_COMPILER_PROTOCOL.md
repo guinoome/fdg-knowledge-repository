@@ -950,3 +950,9 @@ Keep proposed lessons distinct from reviewed standards. Preserve superseded deci
 Measure acceptance on first submission, escaped defects, correction cycles, clarification count, requirement coverage, effort/cost where observable and evidence reuse. “Same results” means the same validated behavior and acceptance thresholds, not identical code or guaranteed model capability. Improve blueprints when audits expose recurring ambiguity.
 
 **Implementation form:** [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|A–Q execution package]].
+
+## 2026-10-17 — Exhaustive Functional Audit + Simple Legacy Build Card
+
+The future repository-wide audit run is governed by [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|Full Repository Product Reality Audit Handover]] under **FAIS**, while the existing FPJIS/FMCIS architecture, audit and authority rules continue unchanged. It explicitly requires complete tracked-path coverage disposition and actual product/source/test/user-outcome evidence. New architecture/documentation alone does not count as functioning FDG products.
+
+For older/limited-context/cheaper builders, **render the authorized A–Q package into [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|Legacy Agent One-Page Build Card]]**: simple objective, existing code, exact files, three-to-seven ordered steps, fixture/test expected answers, limits/STOP conditions and proof return. The full A–Q remains top-tier backing evidence, not a large prompt that must be fed to every builder. Actual model identity must be recorded; labels Astra/Upos/Fable/Methos/future are not proofs of tool capability or identical provider identity.
