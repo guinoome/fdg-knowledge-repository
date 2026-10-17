@@ -106,3 +106,7 @@ Every project should classify capability as L0 Architecture Only, L1 First-Payou
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/18_FPM-REQ-001_Fire_Pump_Inspection_Evidence_Completeness_Pilot|FPM-REQ-001 Pilot]] — proposed fire pump evidence completeness example with testable AC IDs, offline/conflict/replay/authorization negatives and explicit unverified status.
 
 These extend existing standards 03 and 10, rather than replacing them. No readiness percentage or software completion claim changes.
+
+## Build-Readiness Correction — 2026-10-17
+
+**Historical 89.5% is a qualitative generic-documentation score, not proof that FDG projects can be coded from current specifications.** The old readiness-band language has been corrected after project handovers exposed missing details. All project/slice readiness claims now require an independent dry run, explicit evidence and blocker clearance according to [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|Revised Readiness Rubric]] and the [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/11_Core_Completion_Verification_and_Readiness_Report|Corrective Report]]. Existing framework percentages are historical only until calibrated with actual implementation evidence.
