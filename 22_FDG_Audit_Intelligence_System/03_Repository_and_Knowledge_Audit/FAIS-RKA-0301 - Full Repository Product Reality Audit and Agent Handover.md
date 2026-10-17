@@ -8,7 +8,7 @@ repository: guinoome/fdg-knowledge-repository
 baseline_ref: main at invocation; pin exact commit before audit
 review_type: proposed repository-wide assessment and controlled enhancement
 models_named_by_founder: [Astra, Upos, Fable, Methos, future_top_tier_models]
-implementation_authority: none granted by this handover
+implementation_authority: conditional low-risk scoped repairs per 2026-10-18 directive; no blanket production authority
 supersedes: none
 ---
 
@@ -131,7 +131,7 @@ Think like a senior engineer giving a qualified junior a precise field work orde
 - independent reviewer has inspected material areas or reviewer unavailability is logged;
 - no claim of qualified engineering/customer acceptance or production functionality without real evidence.
 
-**No automatic implementation permission:** this handover authorizes a *handover/documentation change*, not code mutation, environment secrets access, external deployment, schema migration, production payments or actual project acceptance. Respect active owner and FMCIS collaborator boundaries, and prefer reviewable small patches.
+**Implementation authority boundary (updated 2026-10-18):** this original handover alone did not authorize code changes. The later founder directive in §10 permits only bounded, owned, reversible low-risk repairs under its explicit conditions. It does **not** authorize external deployment, production environment changes, secrets access, risky schema migration, production payments, independent approval claims or actual project acceptance. Respect active owner and FMCIS collaborator boundaries, and prefer reviewable small patches.
 
 ## 8 — Immediate next agent response contract
 
@@ -152,3 +152,62 @@ Success is not "audit completed" on an attractive dashboard. Success is **one or
 **Status at publication:** Handover authored; **full repository audit pending**; four-project historical source-audit referenced, not promoted. No new working software or fresh tests are claimed by this document.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FAIS]] → [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0300 - Repository and Knowledge Audit|Repository and Knowledge Audit]] → this handover.
+
+## 10 — Founder audit-to-repair and safe-enhancement directive (2026-10-18)
+
+**Founder instruction:** Act as the most capable available engineering architect, skeptical auditor, pragmatic repair engineer and product-delivery lead. Do not stop at reporting a verified defect when a safe, owned, reversible, testable repair is within the assigned scope. Improve existing assets when there is a demonstrable net benefit and the previously accepted behavior can be preserved. **More working and commercially useful outcomes; less repeated analysis and documentation.** This directive *extends this handover* and does not create another audit authority, project, intelligence system or blanket production approval.
+
+### 10.1 Start from live truth, not an imagined redesign
+
+1. Read repository entry files and the **latest relevant approved decision, project handover, source code, test fixtures and known findings**. Pin repo, branch and commit. Reuse the last adequately evidenced audit for unchanged code; inspect deltas instead of repeating it.
+2. Write one sentence defining the useful client/engineer outcome; list which parts already work and must survive. Classify the opportunity as **REUSE / EXTEND / MERGE / REPAIR / REPLACE / NEW**. Require evidence before choosing REPLACE or NEW.
+3. Challenge the design: can a smaller change resolve the actual failure, remove duplicate input, preserve offline use, reduce maintenance, improve trust or create revenue sooner? Reject attractive complexity without measurable incremental value.
+4. Maintain FAIS independence: record the audit finding and test evidence; perform any authorized repair under the **affected project's/domain owner's implementation boundary**; use a different reviewer for material fixes when available. One person/model acting in two roles does not constitute independent review.
+
+### 10.2 Permission to repair is risk-tiered, never universal
+
+- **May fix within the currently assigned/authorized scope:** reproducible low-risk defects and missing links/metadata; small bounded, reversible improvements to nonproduction code and documentation, **provided** ownership is clear, approved behavior is unchanged except for the intended correction, tests exist or can be added, no external account/tenant/user impact occurs, and results are committed for review. Fixing a broken wikilink or a proven input-validation bug should not trigger a new architecture program.
+- **Make a reviewable proposal or isolated branch/PR; get the appropriate owner/reviewer disposition before integration:** unclear ownership, nonlocal interface or schema changes, security controls, significant refactors, destructive migrations, accepted formula/engineering-rule changes, data-conversion risk, or changes affecting another agent's assigned work. Do not overrule a failed review.
+- **Require separate explicit human authorization before acting:** production deployment/release, live payments or pricing activation, contacting real customers, changing live data/accounts/credentials, destructive deletion, bypassing security or privacy controls, professional engineering sign-off, legal/regulatory assertions, material cost commitment or external side effects. Stop **only the affected scope** with exact blocker evidence; continue independent safe work.
+
+This is the founder's standing **conditional** direction for bounded safe fixes, **not** an authorization to rewrite the portfolio, alter safety rules or act on production. The older handover's lack of blanket implementation authority remains valid for anything outside these conditions.
+
+### 10.3 Reproduce → smallest patch → prove non-regression
+
+For every proposed defect/enhancement, create or reference a single FAIS finding ID and linked FPJIS/project work package with:
+
+- **Before:** pinned SHA; precise file/function/line; approved expected behavior; reproducible failing case or clearly labeled suspected gap; actual user impact; risk/owner.
+- **Patch:** smallest changed-file set; which accepted behavior must remain identical; explicit scope exclusions; source/contract migration plan only if authorized; rollback or easy revert.
+- **After:** actual executed commands, environment, exit status and test artifacts. Cover the original failure, representative existing workflows, negative and edge inputs, role/access, persistence/restart, offline/conflict behavior, responsive/mobile usability and recoverability **as applicable**, not indiscriminately.
+- **Review:** inspect diff and regression results; independent challenge for consequential changes; do not silently suppress failing checks, hard-code a pass, fabricate fixtures, hide unrun tests or upgrade draft standards into approved decisions.
+- **Closure:** link finding → corrective commit/PR → test evidence → review disposition → qualified acceptance, if required. Use **FIXED—VERIFIED** only for the demonstrated scope; otherwise **PATCHED—NOT VERIFIED**, **BLOCKED**, **DEFERRED** or **PROPOSED**.
+
+If a regression is found, **revert/isolate the patch or keep it unmerged** and log the result. Do not endanger a previously working feature to satisfy an audit score.
+
+### 10.4 Keep GitHub and Obsidian knowledge synchronized
+
+For **every actual repository change**:
+1. Update the **existing canonical record**, not a duplicate authority; preserve superseded decisions/history and statuses.
+2. Add/update precise vault-relative Obsidian wikilinks such as \`[[folder/exact file stem|Readable name]]\`; verify target exists, resolves without basename ambiguity, and links back through the relevant mother index, project handover or navigation page. Also inspect removed/renamed references and Markdown links affected by the patch.
+3. Verify only the **changed paths and affected neighborhoods** unless a fresh full link scan is specifically needed. Distinguish pre-existing broken links from changes introduced today.
+4. Return exact changed paths, GitHub commit/PR URL or hash, link validation method/result, tests and one next executable action. Never say GitHub was updated if no write succeeded. Local Obsidian mirrors need a later pull/sync; a remote GitHub commit alone does not synchronize the user's device.
+
+Use FAIS for independent findings/coverage, FPJIS for work/acceptance, FMCIS for agent ownership and cross-provider review, and the existing domain system for substantive engineering/business rules.
+
+### 10.5 Product-and-revenue roadmap that can actually close
+
+**Wave 0 — Truth:** freeze the audit baseline, reuse prior evidence, classify accessible projects and unknowns; never claim a full-repo audit from sampled files.
+
+**Wave 1 — Preserve and repair:** address verified P0/P1 risks, broken core flows, data loss, permission issues and misleading completion claims in safe, authorized slices. Do not infer a fix from documentation alone.
+
+**Wave 2 — Finish the smallest useful products:** select work with real existing code, clear users, practical demand, low repair effort and strong reuse. A session must produce a runnable end-to-end user outcome and saved/reopened data where relevant, **or** an evidence-based BLOCKED result. Give older agents only a filled \`FPJIS-LITE-001\` card with exact files and test answers.
+
+**Wave 3 — Commercial reality:** obtain legitimate user acceptance, approved proposal/quotation, delivered service or licensed product, verified payment, effort/cost and repeatability metrics. Technical pass, trial interest, acceptance and cash receipt are separate evidence states. Feed accepted lessons into the existing canonical knowledge, improving later work without inflating this project's status.
+
+For ranking, prioritize **risk-adjusted customer value / implementation effort** using observed rather than invented metrics. Record dependencies, owner, acceptance gate and the **next single independently executable action**; avoid a giant roadmap that never delivers.
+
+### 10.6 Reusable invocation — paste to any top-tier audit agent
+
+> **Audit and improve FDG using FAIS-RKA-0301, including its 2026-10-18 repair directive.** Read current canonical context, pin the GitHub commit, reuse verified prior work, inventory your actual accessible scope, find broken/missing/conflicting parts and test product reality. Repair verified low-risk, owned, reversible issues within your assigned authority; propose and escalate high-impact changes. Enhance existing code only when it improves a useful user outcome without regression. Keep FAIS findings separate from FPJIS remediation and review; give older builders one exact FPJIS-LITE-001 card at a time. Commit authorized changes, validate affected Obsidian wikilinks/indexes, and return the commit, before/after evidence, tests, actual user outcome, unresolved blockers, and the next profitable/valuable slice. Never invent acceptance, deployment or revenue.
+
+**Status of this update:** Operating *instruction only*; a complete inventory, full repository audit, new runtime regression tests, implemented product repairs, customer acceptance and verified income are **not** claimed by publishing it.
