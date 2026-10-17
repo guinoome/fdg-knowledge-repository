@@ -35,7 +35,9 @@ Single-user local account boundary; no hostile same-user concurrent filesystem m
 
 ## Remaining acceptance
 
-1. Transfer/extract the Windows package, run Install Nex.cmd and point it at the actual vault.
+**User-reported Windows progress:** the founder replied, “Installed; I can open Nex.” Installation and launch on the target computer are therefore reported successful by the user. `/doctor`, a source-backed model answer and a note surviving restart have now been requested. Their results are still pending; do not infer them from the launch report. The transferred executable source was committed as `09cd44b50f9e21c66bb8e13a6b43c7f8a76ce05c` on the remote `codex/nex-local-runtime` branch.
+
+1. Windows installation and launch: user reported success; retain the actual vault/readiness details when supplied.
 2. Start Nex and verify a confirmed note survives exit/reopen using /memory and /recall.
 3. Start Ollama with a local model, select it through /models and /model, run /doctor and verify real generation, then ask a source-backed FDG question.
 4. Inspect readiness/error output from that Windows machine and fix any remaining platform or installation problem.
