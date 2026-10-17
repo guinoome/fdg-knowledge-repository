@@ -102,3 +102,7 @@ Every implementation package must identify:
 Agent rule:
 
 > The repository contains the full future architecture. Your work package does not. Implement only the explicitly authorized slice.
+
+## Simpler Legacy Agent Handover — 2026-10-17
+
+Use [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|FPJIS-LITE-001 One-Page Legacy Agent Build Card]] as a **short front-page rendering** of the existing approved work-package A–Q contract; the detailed template and acceptance obligations remain available to the top-tier architect/auditor. Old-model builders get a pinned commit, exact editable/read-only files, small numbered steps, test fixtures/answers and STOP criteria. Do not require a low-context model to resolve broad FDG architectural conflicts. Future repository-wide audit preparation is [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Full Repository Audit Handover]].
