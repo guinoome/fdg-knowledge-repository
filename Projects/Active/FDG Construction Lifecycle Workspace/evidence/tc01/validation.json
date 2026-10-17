@@ -1593,5 +1593,18 @@
     "Actual procedure, calibration/instrument details and original evidence remain under real project authority",
     "Names are unauthenticated manual declarations",
     "Readiness concerns source test dossier only, not operating clearance, complete commissioning or full project/maintenance acceptance"
-  ]
+  ],
+  "field_acceptance": {
+    "status": "PENDING_FIELD_VALIDATION",
+    "last_updated": "2026-10-17",
+    "reviewed_main": "6eef4aeb0b1cc6a99c69494c4c925e046b1afaad",
+    "script": "../../docs/FIELD_WALKTHROUGH.md",
+    "fresh_automated_preflight": "field-preflight/validation.json",
+    "actual_participant_count": 0,
+    "sessions": [],
+    "native_save_reopen": null,
+    "qualified_end_to_end_acceptance": null,
+    "acceptance_owner_verdict": null,
+    "scope": "Existing305/41/8 technical results retained as historic TC01 evidence. This continuation adds17 automated rehearsal checks on the unchanged artifacts; no human results fabricated."
+  }
 }

@@ -1,8 +1,18 @@
-# Current handover — TC01 offline testing/test-dossier workflow completed
+# Current handover — field walkthrough ready; real-user acceptance pending
 
-2026-10-17 · Canonical `guinoome/fdg-knowledge-repository`, main. Code baseline `dda8be1bedb0cd5265d56ef7989326b2eef4eebc` (completed WP03). The commit containing this handover publishes TC01. No local project checkout/output; all work in RAM and connected GitHub tools.
+2026-10-17 · Canonical `guinoome/fdg-knowledge-repository`, main. TC01 implementation `36eed06b53354cc901272c770c26343765d19477`, archive-link correction `ec2893a13afcf55da510c9d2f89b1e72b8b7b245`. Current continuation reviewed main `6eef4aeb0b1cc6a99c69494c4c925e046b1afaad`; TC01 application unchanged. No local project checkout/output; all work in RAM and connected GitHub tools.
 
 [Primary working HTML](distribution/FDG-Construction-Lifecycle.html) · [Synthetic complete demo](evidence/tc01/working-demo.html) · [Working screens/tests/PDF](evidence/tc01/) · [Result](docs/work-packages/TC01_TEST_DOSSIER_READINESS.md) · [Source contract](docs/TEST_DOSSIER_CONTRACT.md).
+
+## Latest continuation — actual field walkthrough prepared
+
+[Participant task sheet](docs/FIELD_WALKTHROUGH.md) · [Fresh automated rehearsal / screens / PDF](evidence/tc01/field-preflight/) · [Existing TC01 acceptance manifest](evidence/tc01/validation.json).
+
+17 fresh automated checks PASS on the exact unchanged GitHub artifact: blank start,100m plan,20m+10m capture,30m/70m weekly report with QA Unknown,390px layout, actual UI HTML Blob/fresh-page reopen, A4 report PDF78345bytes and original synthetic dossier source/return. Existing305 executable/41 browser/8 recovery results below are historical TC01 evidence, not rerun wholesale in this continuation. Source/build/distribution unchanged. Browser plugin unavailable; existing Playwright1.62.1/Chrome155.0.8059.79. RAM preview restored at /blank and /dossier under http://127.0.0.1:65457/; do not replace user tab contents automatically.
+
+Initial rehearsal had an exact-label selector timeout/kernel reset; corrected harness uses existing named selector and bounded timeouts. Initial preview had one resource404 (URL not captured); empty favicon response added only to RAM server, fresh health context clean. Evidence retains diagnostics; no application patch or false human pass claimed.
+
+**PENDING FIELD VALIDATION:**0 actual participant sessions received. Native OS save/open not run under no-local-output constraint. A participant needs a device/external location with available private storage. Do not substitute automated Blob reopen for native save or real-user acceptance. Qualified review of the populated synthetic dossier is not by itself complete T&C/engineering acceptance. Capture actual anonymized observations in existing manifest; private names/site data remain outside public GitHub. No deployment/commerce or deferred WP04 integration started.
 
 ## Completed — do not rebuild
 
@@ -18,7 +28,7 @@ New html/commissioning-engine.mjs, html/ui-commissioning.js, tests/commissioning
 
 Primary290815 UTF-8 bytes, SHA256 `ed207c02cbe20c1c4a6a5ef05d1312a0ffb42893d260b4803a15c35895cfddfc`, Git blob `68f189eaae1e79e46929b517927c296612c6d873`. Synthetic demo296705 bytes, SHA256 `1de4defed464fd89423a172410d360f5aa734145d9017ba337fb181016e222be`, blob `f865809c228521a8cffc751f73429c51c97bab3a`. PDF65158 bytes. [Integrity](evidence/tc01/artifact-integrity.json).
 
-## Verification and runtime recovery
+## Historical TC01 verification and runtime recovery
 
 305 executable checks PASS:46 lifecycle +41 beginner +34 Overview +57 report +53 inspection +74 commissioning.41 pre-restart browser assertions PASS: actual fail/retest/punch/receipt, all56 forms, blocked/empty/long/escaped states, source return, HTML save/fresh reopen, JSON preview/commit,390/768/1080/1440 layouts, keyboard and real A4 PDF/history restoration. Final app contexts observed0 relevant page/console errors/warnings or HTTP requests.
 

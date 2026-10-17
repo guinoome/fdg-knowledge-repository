@@ -1,0 +1,198 @@
+{
+  "work_package": "Field acceptance preparation — existing WP01–TC01",
+  "date": "2026-10-17",
+  "timezone": "Asia/Taipei",
+  "reviewed_repository": "guinoome/fdg-knowledge-repository",
+  "reviewed_main": "6eef4aeb0b1cc6a99c69494c4c925e046b1afaad",
+  "status": "PENDING_FIELD_VALIDATION",
+  "application_changed": false,
+  "source_and_distribution_reused": true,
+  "artifact": {
+    "primary_git_blob": "68f189eaae1e79e46929b517927c296612c6d873",
+    "utf8_bytes": 290815,
+    "sha256": "ed207c02cbe20c1c4a6a5ef05d1312a0ffb42893d260b4803a15c35895cfddfc",
+    "synthetic_demo_git_blob": "f865809c228521a8cffc751f73429c51c97bab3a"
+  },
+  "browser": {
+    "plugin_status": "Browser plugin not available; existing Playwright used",
+    "playwright": "1.62.1",
+    "chrome": "155.0.8059.79",
+    "route_blank": "http://127.0.0.1:65457/blank",
+    "route_dossier": "http://127.0.0.1:65457/dossier",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1100
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "checks": [
+      {
+        "name": "Canonical primary SHA256 unchanged",
+        "pass": true
+      },
+      {
+        "name": "Blank preview HTTP200 and exact page identity",
+        "pass": true
+      },
+      {
+        "name": "Meaningful first screen and no framework overlay",
+        "pass": true
+      },
+      {
+        "name": "Project setup changes visible screen",
+        "pass": true
+      },
+      {
+        "name": "Work appears once for reuse",
+        "pass": true
+      },
+      {
+        "name": "Work and unit reused in daily form",
+        "pass": true
+      },
+      {
+        "name": "First update gives20m cumulative and80m remaining",
+        "pass": true
+      },
+      {
+        "name": "Second incremental update gives30m and70m remaining",
+        "pass": true
+      },
+      {
+        "name": "Weekly report retains both original increments",
+        "pass": true
+      },
+      {
+        "name": "Report preserves unknown QA and working status",
+        "pass": true
+      },
+      {
+        "name": "390px report has no body overflow",
+        "pass": true
+      },
+      {
+        "name": "Actual HTML save Blob reopens with30m70m and both IDs",
+        "pass": true
+      },
+      {
+        "name": "Report generates actual A4 PDF in RAM",
+        "pass": true
+      },
+      {
+        "name": "Synthetic dossier has retained failed and passed chain",
+        "pass": true
+      },
+      {
+        "name": "Original pack drill-through returns to dossier",
+        "pass": true
+      },
+      {
+        "name": "Final preview fresh context has no page or console errors",
+        "pass": true
+      },
+      {
+        "name": "Application requests only RAM localhost documents",
+        "pass": true
+      }
+    ],
+    "pass": 17,
+    "fail": 0,
+    "page_errors": [],
+    "final_health_context": {
+      "page_errors": [],
+      "console_issues": []
+    },
+    "requests": [
+      "http://127.0.0.1:65457/blank",
+      "http://127.0.0.1:65457/dossier"
+    ]
+  },
+  "diagnostics": [
+    {
+      "observed": "First rehearsal locator for exact Unit label timed out and reset the Node runtime.",
+      "disposition": "Harness corrected to target existing quick-work named unit selector; default action timeout3s and navigation5s. Exact same canonical artifacts restored. No application defect or patch claimed."
+    },
+    {
+      "observed": "One preview-resource404 console message during initial rehearsal, no page errors.",
+      "disposition": "RAM preview added empty favicon response; fresh health context observed no page/console errors. Original404 URL was not captured, so favicon is a likely explanation, not a confirmed historical attribution.",
+      "raw_initial_console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ]
+    }
+  ],
+  "fresh_evidence": [
+    {
+      "path": "start-desktop.png",
+      "bytes": 335544,
+      "sha256": "34cfe39eb78513ad32c599c3907803a577697339cbbfffbbcf79bceeaf251006",
+      "git_blob": "3f1172e1b8cb7b7ee6000942ff04ae3695ec33bb"
+    },
+    {
+      "path": "report-desktop.png",
+      "bytes": 215428,
+      "sha256": "8976a1e1ff7f51d358db6483b4bbd73cba434dce916aaf3d784bd4278ce375b9",
+      "git_blob": "f486f91c758f009f67850e7302fa66ff1b74e1bf"
+    },
+    {
+      "path": "report-phone.png",
+      "bytes": 82325,
+      "sha256": "34ffe32387570efcb17e4753c0205439ff27636b9585d0bc3bd01fa7e92a1e5b",
+      "git_blob": "e6a66ff6f4ed4831976a52e2f075105db47ad0ad"
+    },
+    {
+      "path": "report.pdf",
+      "bytes": 78345,
+      "sha256": "c5804cf41a79d02fa8f3993900fc971bc90c8f304a7502ca33d81135d822798c",
+      "git_blob": "c27f5c4b2a263eb6351933230e89f0de0cd92aad"
+    }
+  ],
+  "persistence": {
+    "actual_ui_save_blob": true,
+    "fresh_page_reopen": true,
+    "values": "100m plan,20m+10m increments,30m reported/70m remaining,unknown QA,DAY-001/DAY-002 retained",
+    "native_os_save_dialog": "NOT RUN — no local project output under user constraint",
+    "actual_pdf_generated_bytes": 78345,
+    "storage": "RAM only; source/evidence returned through connected GitHub tools"
+  },
+  "historical_evidence": {
+    "prior_305_executable": "Recorded TC01 result retained; not freshly rerun in this continuation because application/source unchanged",
+    "prior_41_browser": "Recorded TC01 browser result retained; not all41 rerun here",
+    "prior_8_recovery": "Recorded TC01 recovery checks retained separately"
+  },
+  "human_acceptance": {
+    "status": "PENDING_FIELD_VALIDATION",
+    "actual_participant_count": 0,
+    "sessions": [],
+    "native_save_reopen": null,
+    "qualified_end_to_end_acceptance": null,
+    "acceptance_owner_verdict": null,
+    "reason": "Actual participant observations have not been received; synthetic automated rehearsal is not a human trial."
+  },
+  "not_run": [
+    "Human novice/qualified end-to-end acceptance",
+    "Native operating-system file save/open and print preview",
+    "Five-participant trial",
+    "Independent provider/Claudex review",
+    "Diverse browsers, maximum capacity and multi-editor operation",
+    "Cloud/authorization/deployment/commercial validation"
+  ],
+  "next_action": "Use docs/FIELD_WALKTHROUGH.md with a consented actual participant; record real anonymized observations and appropriate private evidence references in the existing TC01 manifest.",
+  "browser_api_sequence": [
+    "Load exact connected-GitHub distribution into RAM server; GET /blank in installed Chrome via Playwright",
+    "getByLabel('Project name',exact:true).fill; getByLabel('Report date',exact:true).fill('2026-10-17'); getByRole('button',name:'Start project →',exact:true).click",
+    "Work plan; #quick-work [name=activity]='Water pipe installation'; [name=quantity]=100; [name=unit].selectOption('m'); Add to work plan",
+    "Daily update; #quick-daily [name=date]='2026-10-16'; [name=quantity]=20; Save daily update; repeat2026-10-17/+10",
+    "Reports → This week; inspect30m/70m, two source IDs and QA Unknown; screenshot1440x1100 and390x844",
+    "Intercept actual URL.createObjectURL Blob and suppress native anchor download in this synthetic test page only; click Save project; saved Blob.text → fresh page.setContent; inspect same report/source IDs",
+    "freshPage.pdf({format:'A4',printBackground:true}) in RAM",
+    "GET /dossier → More tools → Open testing → View PACK-001 → Back to testing; assert retained history/receipt",
+    "Fresh health context checks console/page errors; action timeout3s, navigation5s; do not manipulate user's in-app tab"
+  ]
+}
