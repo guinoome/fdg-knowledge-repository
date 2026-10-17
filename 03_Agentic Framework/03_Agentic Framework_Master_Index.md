@@ -40,3 +40,11 @@ The Agentic Framework governs generic agent behavior and readiness. FMCIS is the
 ## Proposed business specialist capabilities — 2026-10-09
 
 - [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|FDG Business Specialist Agent Capability Profiles: CFO / CMO / Customer Service]] — Draft scoped roles under Nex orchestration. Existing NEX-STD-013 and NEX-STD-125/126 retain authority; no agents commissioned. See [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]] for business-loop integration.
+
+## Top-Tier Full Audit and Lightweight Builder Handover — 2026-10-17
+
+- [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Full Repository Audit Handover]] — founder-directed future full repo audit with complete inventory, current code/product reality, traceability and bounded implementation recommendations.
+- [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|FPJIS-LITE-001 One-Page Legacy Agent Build Card]] — no redesign duties for older models; plain-language, precise files/steps/test fixture/outcome/STOP criteria.
+- [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Existing compiler protocol]] remains authoritative; full A–Q analysis is for top-tier compilers/reviewers, not compulsory long context for a legacy builder.
+
+Actual agent/model identity and availability must be confirmed; never silently equate a user-named model with a model named differently in prior documents.
