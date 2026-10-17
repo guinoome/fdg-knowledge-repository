@@ -210,3 +210,7 @@ FPJIS owns project blueprints, implementation packages and acceptance criteria. 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004]] / [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005]] — debate disposition and termination controls.
 
 FPJIS completion metrics must not count an unexecuted review or unstaged external skills as verified project completion. The actual proof, inspected artifact and unresolved findings belong in the project evidence record.
+
+## Build-Readiness Correction — 2026-10-17
+
+**The historical 89.5% figure measures subjective generic-framework/documentation coverage. It must not be interpreted as project implementation readiness.** Project handovers exposed substantive gaps and the previous wording created false confidence. The governing correction is [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|the evidence-based per-slice gate]] and [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/11_Core_Completion_Verification_and_Readiness_Report|corrective finding]]. A specific module is NOT_ASSESSED/NEEDS_DEFINITION/BLOCKED until an independent coding-agent dry run validates its versioned, complete implementation package and all hard blockers/unknowns are closed. No percentage, wiki link or architecture description substitutes for verified build instructions and actual tests.
