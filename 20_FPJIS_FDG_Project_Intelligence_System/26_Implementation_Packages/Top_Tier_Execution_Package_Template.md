@@ -265,3 +265,7 @@ Use the current compiler–builder–auditor contract in [[03_Agentic Framework/
 | Repository manifest, status, lessons and handover updated | |
 
 A builder completion report is a submission for audit. Mark AUDIT PENDING until the required audit exists. CLOSED requires audit PASS and the applicable acceptance/knowledge-return obligations. Use risk-proportionate delta audits when existing evidence remains valid; record why it remains valid.
+
+## 2026-10-17 — Legacy Agent Compact Execution Rendering
+
+For an authorized deterministic older-model coding task, **do not paste this whole A–Q form into the implementation prompt**. The top-tier compiler retains this detailed contract for governance, then issues the concise [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|Legacy Agent One-Page Build Card]] referencing precise relevant existing source/fixtures. Missing material decisions block readiness; never make the low-context builder guess. Full-repo audit and source reality assessment instructions: [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|Full Repository Product Reality Audit Handover]].
