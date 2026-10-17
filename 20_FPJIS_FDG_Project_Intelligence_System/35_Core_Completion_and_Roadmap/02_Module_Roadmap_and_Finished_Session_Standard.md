@@ -220,3 +220,24 @@ Reopening must preserve previous acceptance history.
 - [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Top_Tier_Execution_Package_Template|Top-Tier Execution Package]]
 - [[06_Organizational_Architecture/WORK_PACKAGE_STANDARD|Work Package Standard]]
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-003_Work_Package_Allocation|FMCIS Work Package Allocation]]
+
+## Functional Product Completion Gate — 2026-10-17
+
+**Founder directive:** No FDG project, module or work package is COMPLETE merely because its blueprint, code scaffolding, interface, tests-as-text, architecture or demonstration mockup exists. The reason FDG builds software is useful, functioning engineering/business capability that is accepted and reusable.
+
+The existing Definition of Done is strengthened by these **mandatory truthful distinctions**:
+
+- **SPECIFIED:** behavior and acceptance defined; no implementation conclusion.
+- **IMPLEMENTED:** working code/artifact exists; tests and actual usability not assumed.
+- **TEST EVIDENCE RECORDED:** tests executed on exact identified build, with environment, observed results and preserved proof; historical evidence must remain labeled historic.
+- **FUNCTIONALLY ACCEPTED (bounded slice):** authorized acceptance owner or qualified user actually exercises the full agreed end-to-end workflow: input → record → transform/compute → output/report → persistence/reopen, plus applicable security, offline, error and negative cases. Material failures are corrected/retested or explicitly block acceptance. No agent self-certification.
+- **OPERATIONALLY VALIDATED:** appropriate real-site/client conditions, recovery/support and role/data integrity accepted.
+- **COMMERCIALLY VALIDATED:** verified actual payment/ROI/client use when commercially required.
+
+**CLOSED** is allowed only for the **explicitly scoped bounded slice** with verifiable FUNCTIONALLY ACCEPTED evidence; the whole larger project may remain incomplete. A project whose architecture is documented but no functioning user outcome is demonstrated is NOT COMPLETE regardless of readiness percentage.
+
+Retain previous accepted code; never rebuild solely to fit a new packaging convention. Reuse existing work and patch only source-evidenced defects. Existing build/deploy authorization, privacy/security and human engineering sign-off rules still apply.
+
+**Proof packet minimum:** exact runnable artifact + version/commit; input/output demonstration; test command/run date/environment/expected/actual; negative and recovery checks; evidence links; human/qualified acceptance owner and verdict; known exclusions and next patch. Compile references into the existing FPJIS manifest, **not another duplicative report**.
+
+**Historical or synthetic tests do not independently prove current build behavior or real engineering acceptance.** 'Not executed' remains visible. Current sampled audit: [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|2026-10-17 Functional Product Evidence Audit]].
