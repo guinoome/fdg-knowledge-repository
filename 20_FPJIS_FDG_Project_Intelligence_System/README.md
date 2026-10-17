@@ -135,11 +135,9 @@ The generic FPJIS framework is now hardened by:
 
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/00_Master_Index|FPJIS Core Completion & Roadmap]].
 
-Current weighted generic **Blueprint Implementation Readiness** baseline:
+Historical (2026-10-10) **subjective generic-framework documentation coverage estimate: 89.5%**.
 
-**89.5%**
-
-This is not an FPJIS-software completion percentage.
+**It is NOT a verified project blueprint readiness score, NOT functional software completion, and NOT sufficient to build or claim a usable product.** A real scoped product must pass independently verifiable functional acceptance per the 2026-10-17 gate below.
 
 Every FPJIS project should separately display:
 
