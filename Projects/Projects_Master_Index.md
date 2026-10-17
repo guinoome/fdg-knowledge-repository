@@ -172,3 +172,7 @@ This direction does not claim existing external application repositories have al
 ## Construction procurement and materials control
 
 - [FDG Construction Procurement and Materials Control](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Procurement%20and%20Materials%20Control/README.md) — beginner-friendly single-file offline materials/order/receipt/issue/return ledger, automatic shortage/stock reports, and lifecycle demand snapshot import. See its handover and validation evidence.
+
+## Functional Product Evidence Audit — 2026-10-17
+
+[[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|FAIS Functional Product Evidence Audit — 2026-10-17]] compares selected working projects with source implementations, prior test evidence and earlier decisions. Specific reviewed scope: [[Projects/Active/FDG QTO BOQ Estimate Toolkit/README|QTO/BOQ Toolkit]], [[Projects/Active/FDG Construction Lifecycle Workspace/README|Construction Lifecycle Workspace]], [[Projects/Active/FDG Business Platform/README|Business Platform/Fuel]] and [[Projects/Active/FBPOIS/README|FBPOIS spatial interface]]. **Source inspection is not current test execution**; no full project-completion claim is made. Governance: [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Functional Product Completion Gate]].
