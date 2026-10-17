@@ -13,3 +13,7 @@ Canonical basis: FEIS-CM-0100 section03 Estimating and Quantity Takeoff; FBIS-BP
 ## Connected lifecycle workspace
 
 The [FDG Construction Lifecycle Workspace — Philippines Edition](https://github.com/guinoome/fdg-knowledge-repository/blob/main/Projects/Active/FDG%20Construction%20Lifecycle%20Workspace/README.md) now combines field management, QTO and scheduling/cost controls in one premium offline HTML file, with56 registers across 17 stages. This standalone tool remains available. The connected offline milestone does not implement the broader authenticated/cloud Construction OS. See the workspace coverage and handover.
+
+## FPJIS Functional Product Audit — 2026-10-17
+
+[[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|Scoped Functional Product Evidence Audit]] confirms inspectable offline estimating source/distributed HTML and historical 18-check evidence, but **no fresh test execution or qualified estimator acceptance occurred during that audit**. Current claim remains *narrow functional product candidate*, not graphical takeoff/certified engineering or commercially accepted service. Preserve current working code. Next: qualified source/rate/BOQ/print/save/reopen acceptance on exact artifact under [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|FPJIS Functional Completion Gate]].
