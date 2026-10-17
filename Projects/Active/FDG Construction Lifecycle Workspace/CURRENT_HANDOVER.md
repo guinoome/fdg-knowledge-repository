@@ -30,7 +30,7 @@ One test/retest chain per pack. Names/evidence/authority are manual declarations
 
 Actual novice/qualified acceptance PENDING. Independent provider/Claudex NOT RUN (skill unavailable; no installation under no-local constraint). Native OS Save As/print dialogs NOT RUN; actual UI Blob/reopen and Chromium PDF tested. One installed Chrome; maximum capacity/diverse browsers/multi-editor not validated. No auth/RBAC/cloud sync/payment/hosting/commercial release. WP04 full-platform integration remains DEFERRED under pack gates.
 
-Client-first capsule and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) preserved/open. [Previous exact WP03 handover](docs/handovers/2026-10-17-WP03-pre-TC01.md); prior WP01/02 archives/evidence retained. No unrelated canonical/project changes.
+Client-first capsule and [issue#5](https://github.com/guinoome/fdg-knowledge-repository/issues/5) preserved/open. [Previous WP03 handover (archive links adjusted)](docs/handovers/2026-10-17-WP03-pre-TC01.md); prior WP01/02 archives/evidence retained. No unrelated canonical/project changes.
 
 ## One exact next action
 
