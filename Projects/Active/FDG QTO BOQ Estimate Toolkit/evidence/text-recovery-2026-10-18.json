@@ -1,0 +1,51 @@
+{
+  "runtime": "v24.19.0",
+  "passed": 26,
+  "checks": [
+    "volume net quantity",
+    "allowance applied once",
+    "four-component unit rate",
+    "direct cost",
+    "contingency basis",
+    "overhead after contingency",
+    "markup tender total",
+    "target margin formula",
+    "100pct margin unavailable",
+    "geometry unit mismatch unavailable",
+    "unknown rate remains unavailable",
+    "explicit zero rate supported",
+    "net cost basis excludes allowance",
+    "mixed BOQ units block total",
+    "duplicate item ID blocks total",
+    "archive excludes item cost",
+    "blank total unavailable",
+    "JSON round trip stable",
+    "project note JSON recovery at 5999 characters",
+    "project note JSON recovery at 6000 characters",
+    "project note JSON recovery at 6001 characters",
+    "project note JSON recovery at 12000 characters",
+    "item description, source and note survive undo/import normalization",
+    "saved HTML data and embedded engine preserve Unicode and literal closing-script text",
+    "backup format and maximum item guards remain enforced",
+    "distributed embedded engine passes original regressions and long-text recovery"
+  ],
+  "baseline": "ecd0d3cdfef73cd430fe878f86e8b7767eaa09b4",
+  "finding": "FAIS-QTO-20261018-01",
+  "before": {
+    "input_characters": 6010,
+    "recovered_characters": 6000,
+    "new_regression_exit": 1
+  },
+  "after_exit": 0,
+  "command": "node \"Projects/Active/FDG QTO BOQ Estimate Toolkit/tests/text-recovery.test.mjs\"",
+  "limitations": [
+    "Node data-layer and embedded engine execution; no browser or native file-dialog run",
+    "Independent review and qualified estimator acceptance pending",
+    "No production deployment or commercial validation"
+  ],
+  "artifact_sha256": {
+    "html/engine.mjs": "3ebaca1fe93c2c59005b3cb588f21143c1494c2d058c362ad68f3df4179b85b2",
+    "distribution/FDG-QTO-BOQ-Working-Template.html": "c53310ad3263c4e47645dc32662c40023269f11cb544d1d2bbb7135b490a8608",
+    "tests/text-recovery.test.mjs": "6ba1e9e991b7588b1327d0183d44b458d17a254ce8628d5a6a0fbb7cecf93bc7"
+  }
+}

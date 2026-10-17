@@ -18,3 +18,7 @@ Rebuild: build/build-html.mjs exports buildEstimateHtml with explicit {initial,s
 ## Premium theme — 2026-10-16
 
 Founder-supplied navy/red/gold reference applied to CSS and working HTML. Existing JavaScript, schemas and records preserved. Chrome sample calculations unchanged;390px no document overflow. Theme uses no external assets/fonts and excludes quote client details. Lifecycle integration is a separate ongoing work package; do not confuse file toolkit coverage with the full platform’s permission/sync/deployment gates.
+
+## Text recovery repair — 2026-10-18 directive session
+
+[[Projects/Active/FDG QTO BOQ Estimate Toolkit/TEXT_RECOVERY_REPAIR_2026-10-18|Executed repair and FPJIS-LITE-001 card]] records FAIS-QTO-20261018-01: text accepted by the UI was silently cut at 6000 characters on normalization. Two scalar-copy corrections and the identical embedded distribution correction preserve complete text. Node v24.19.0: 18 existing plus 8 recovery checks pass; distributed engine also passes the 18 existing assertions. Technical recovery verified; browser and independent/qualified review pending. No formula, UI, schema, deployment or commercial-status change. Earlier evidence remains historical. Next: browser HTML/JSON reopen and undo with >6000-character notes, then qualified estimator acceptance.
