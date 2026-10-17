@@ -181,3 +181,19 @@ Software implementation of a future FPJIS checker/Project Blueprint Board remain
 **Limits:** This documentation correction does **not** mean project handover, required code, tests or executable checker have been repaired. No new readiness score is asserted and there is no production deployment. Representative project audits and actual implementation/test evidence remain necessary.
 
 **Next priority:** Apply the corrected gate to an active FDG project's current repo branch and full discussed decision baseline; produce a real executable work package, not another high-level blueprint. Record every blocker with precise origin and closure evidence.
+
+## 2026-10-17 — FPJIS-FUNCTIONAL-DELIVERY-AUDIT-006
+
+**Trigger:** Founder rejects 'complete' claims based on extensive blueprints, percentage tables and narratives when practical functional products are missing.
+
+**Decision:** Existing FPJIS Finished Session/Definition of Done now **requires a demonstrably useful and functionally accepted bounded user workflow**, separate from concept, source, historic tests, operational use and commercial acceptance. No full-project completion unless the claimed full scope is accepted. A completed small tool remains valuable; do not mark it incomplete just because unrelated future enterprise modules remain unbuilt.
+
+**Real audit scope:** [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|FAIS Functional Product Evidence Audit]]; selected actual source and test definitions plus prior evidence/handovers for FDG QTO/BOQ Toolkit, Construction Lifecycle Workspace, Business Platform/Fuel, and FBPOIS spatial interface. Historical tests were inspected but **zero runtime tests were executed in this audit**. Findings explicitly distinguish narrow functional candidates from broader unaccepted architecture.
+
+**Added:** [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|FAIS-PRJ-0501 scoped functional audit]]. **Extended existing:** [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Functional Product Completion Gate]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|Readiness Rubric]], [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS Project Audit]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/14_FPJIS_Core_Implementation_Backlog|Backlog]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/00_Master_Index|FPJIS Core Index]], [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS Home]], [[22_FDG_Audit_Intelligence_System/README|FAIS Home]], [[Projects/Projects_Master_Index|Projects Index]], four project READMEs, [[FDG Ecosystem|Ecosystem Master]], and this update log.
+
+**Evidence result:** Source and artifact locations found; project claims scoped; older validation evidence explicitly identified. No full repository-wide audit, test rerun, real-client professional approval, provider deployment or live payment release. No new readiness percentage and no project claimed newly functionally accepted.
+
+**Next priority:** Rerun exact source/build tests; qualified estimator/site-user acceptance for already runnable QTO/Construction offline products; production-safe account/branch boundary proof before Business Platform commercialization; actual FWIS/FMIS-aware spatial pilot. Each action should produce tested runnable output and acceptance, not another architecture package.
+
+**Change rule:** Preserve existing agent work and code; patch only observed gaps. File and wikilink existence support navigation but not product completion.
