@@ -112,3 +112,7 @@ The decision requires the spatial interface be built for reuse, not hard-coded t
 Authentication, subscriptions and external integrations, per the decision.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[Projects/Projects_Master_Index|Projects Master Index]] → this document
+
+## FPJIS Functional Product Audit — 2026-10-17
+
+[[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|Scoped Functional Product Evidence Audit]] classifies only this **spatial operations interface** as CONCEPT_ONLY, consistent with its existing README. This verdict must not erase distinct existing FWIS/FMIS software. Before any claim of functional spatial interface, link real plant/concern data, source record drill-through, unknown-data treatment and authorization, then test the bounded outcome using [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|FPJIS Functional Completion Gate]]. Mock facility health/alarm/energy figures remain non-authoritative.
