@@ -24,3 +24,7 @@ Key rules:
 - Claudex is replaceable tooling; FDG governance and repository knowledge remain authoritative.
 
 See `21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP.md` (FMCIS canonical owner).
+
+## Top-tier audit and simple builder tasks — 2026-10-17
+
+Full-repository top-tier assessment: [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|Full Repository Product Reality Audit Handover]]. This is a **future audit instruction, not a completed audit**. For a normal older/lower-cost coding collaborator, issue only the filled [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|Legacy Agent One-Page Build Card]] plus exact affected files and tests: one user outcome, no architecture invention, do-not-touch boundaries, real test evidence and BLOCKED WITH EVIDENCE when information is missing. Never equate documentation with accepted working software. Preserve another agent's work and explicit release authorization.
