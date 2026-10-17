@@ -32,7 +32,7 @@ GitHub's HTML file view displays source; it is not an application host. Open the
 
 ## Verified scope
 
-231 checks passed:46 lifecycle +41 beginner +34 Overview +57 report +53 inspection. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [WP03 validation](evidence/wp03/validation.json), [WP02 validation](evidence/wp02/validation.json), [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
+305 executable checks passed:46 lifecycle +41 beginner +34 Overview +57 report +53 inspection +74 commissioning. TC01 adds41 browser assertions plus8 recovery smoke checks. Browser tests covered blank setup, work entry, incremental updates, period reports, invalid/keyboard input, all 56 Advanced forms, HTML reopen, JSON preview/restore and PDF output.1440/1080/768px and390px layouts checked. See [TC01 validation](evidence/tc01/validation.json), [WP03 validation](evidence/wp03/validation.json), [WP02 validation](evidence/wp02/validation.json), [WP01 validation](evidence/wp01/validation.json), [beginner validation](evidence/beginner-validation.json), [original validation](evidence/validation.json) and [coverage](CAPABILITY_COVERAGE.md).
 
 This is a single-user offline tool. Accounts, server authority, cloud collaboration and deployment are outside this milestone. Real-project acceptance and independent provider review remain pending.
 
@@ -59,3 +59,9 @@ Reports now show project/period/cutoff, quantities with units, source ID/date/au
 Open **More tools → Quality checks and fixes**. Record the finding once, assign the repair, submit corrective evidence and record a separate reinspection. Failed results remain open; each repair/reinspection is retained. Managed closeout requires source criteria/evidence, a separate declared verifier and authority reference. Typed names are not authenticated identity or certification. Daily progress acceptance remains separate.
 
 [Working synthetic full-loop demo](evidence/wp03/working-demo.html) · [Desktop](evidence/wp03/after-desktop.png) · [Phone](evidence/wp03/after-mobile.png) · [Quality PDF](evidence/wp03/quality-summary.pdf) · [WP03 result](docs/work-packages/WP03_INSPECTION_TO_CORRECTIVE_ACTION.md). All56 Advanced forms remain available. Real-user/qualified acceptance is pending.
+
+## TC01 — Testing and test dossiers
+
+Open **More tools → Testing and test dossiers**. Select existing work and name the package. Record actual readiness/test evidence; the retest reuses references and retains the failed attempt. Open punch/NCR blocks receipt. Close the punch with its actual verifier/date/evidence, prepare the dossier and record actual named receipt. The same original records generate blockers and the printable source summary. This is scoped dossier receipt, not operating clearance or complete project/maintenance acceptance.
+
+[Working synthetic demo](evidence/tc01/working-demo.html) · [Desktop](evidence/tc01/after-desktop.png) · [Phone](evidence/tc01/after-mobile.png) · [Dossier PDF](evidence/tc01/test-dossier.pdf) · [Result](docs/work-packages/TC01_TEST_DOSSIER_READINESS.md) · [Contract](docs/TEST_DOSSIER_CONTRACT.md). Native Punch closure defect fixed without changing schema. Real novice/qualified and independent provider acceptance remain pending.

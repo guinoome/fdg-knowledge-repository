@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-17",
+  "repository": "guinoome/fdg-knowledge-repository",
+  "ref": "dda8be1bedb0cd5265d56ef7989326b2eef4eebc",
+  "source_of_truth": "Connected GitHub tools. No local checkout used as canonical.",
+  "read_scope": "Relevant current construction handovers, existing implementation/tests and governing construction/T&C/continuity documents; not a new whole-repository reading claim.",
+  "canonical": [
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0001 - Construction Management Lifecycle Architecture.md",
+      "sha": "f9560b9a1d690187f431befde8cdcffd61723744"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0002 - Capture Once Reporting and Progress Architecture.md",
+      "sha": "03cb86eebd7e6880d64074f65c32764f96e3d400"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0003 - Project Continuity and Personnel Handover Standard.md",
+      "sha": "77af993973389928de572a27694cd3c9673e342a"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md",
+      "sha": "290a78b9d593714bc0daffa65412eed08d0b2e2f"
+    },
+    {
+      "path": "08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0002 - Asset Maintenance Readiness and Project Handover Standard.md",
+      "sha": "3c9059f97057c69f60fb4f435165222faa5c99d0"
+    },
+    {
+      "path": "10_FDG_CORE_Intelligence/Research_Packs/CORE_Engineering_Data_Document_Engine_Foundation/CORE_Engineering_Data_Document_Engine_Foundation/CORE-0005 - Testing and Commissioning Reference Implementation.md",
+      "sha": "348cb626dd3d52723d392e40c8a1cde9ec5b6cf0"
+    },
+    {
+      "path": "Projects/fdg-construction-os/FDG_CONSTRUCTION_OS_IMPLEMENTATION_STATUS.md",
+      "sha": "ff9ddd4c94314b7610de7fa91911d5295552a6b1"
+    }
+  ],
+  "root_governance": {
+    "path": "AGENTS.md",
+    "sha": "5889e077fe3eecee7b6a1a2f3dc014b3599c769e"
+  },
+  "maintenance_standard_status": "Proposed Engineering Standard; informs scope boundary without asserting maintenance-ready approval.",
+  "continuity": "WP01/WP02/WP03 completed milestones preserved. Existing client-first capsule and issue#5 remain pending real acceptance.",
+  "recovery": {
+    "runtime_restarted_before_final_commit": true,
+    "primary_recovered_from_git_blob": "68f189eaae1e79e46929b517927c296612c6d873",
+    "demo_recovered_from_git_blob": "f865809c228521a8cffc751f73429c51c97bab3a",
+    "source_recovered_from_exact_tested_assembled_html": true,
+    "rebuild_byte_identical": true,
+    "all_305_checks_rerun": true,
+    "commissioning_test_harness": "74 source checks reconstituted after restart; test names/results below are the actual rerun, not a claim of byte-identical recovery of the lost original test harness.",
+    "browser_provenance": "41 completed assertions retained in continuation record before restart, against these exact uploaded artifacts. Final8 recovery checks independently rerun after restart.",
+    "final_smoke": {
+      "smoke": [
+        {
+          "name": "Recovered demo has two original attempts",
+          "pass": true
+        },
+        {
+          "name": "Recovered demo retains actual receipt",
+          "pass": true
+        },
+        {
+          "name": "Original pack navigation returns to testing",
+          "pass": true
+        },
+        {
+          "name": "Recovered phone has no body overflow",
+          "pass": true
+        },
+        {
+          "name": "Recovered dossier generates actual PDF",
+          "pass": true
+        },
+        {
+          "name": "Recovered runtime has no page errors",
+          "pass": true
+        },
+        {
+          "name": "RAM preview returns HTTP200",
+          "pass": true
+        },
+        {
+          "name": "RAM preview opens real testing screen",
+          "pass": true
+        }
+      ],
+      "port": 65457,
+      "pdfSmokeBytes": 65000
+    },
+    "repeat_pdf_bytes": 65000
+  },
+  "architecture": "Extend existing registers and pure RAM builder; no new schema, dependencies, persistent browser store, services or authentication."
+}

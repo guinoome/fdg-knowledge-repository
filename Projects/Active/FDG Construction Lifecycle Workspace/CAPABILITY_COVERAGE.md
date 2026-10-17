@@ -51,3 +51,11 @@ The read canonical FEIS-CM-0902 blueprint, Console, QTO integration and continui
 ## Beginner workflow revision —2026-10-16
 
 Simple view now exposes only five everyday views. Two-field setup, three-field work items and quantity-focused daily updates reuse the same registers. Automatic working reports, totals and remaining quantities are available before formal baseline approval. Reported completion is an explicitly unreviewed equal-item average; unknown source data remains unknown. Formal acceptance, billing and authority boundaries above still apply. All 56 registers remain available through Advanced tools. See docs/BEGINNER_WORKFLOW.md and evidence/beginner-validation.json.
+
+## TC01 testing/test-dossier revision —2026-10-17
+
+TESTED offline guided workflow over original TestPacks/Tests/Punch/Turnover: two-input package, actual prerequisite/hold-point review, failed/passed retest chain, native punch closure, Pending dossier and actual named receipt. Original source links/history remain intact; changed current basis flags retained receipt rather than rewriting it. Advanced receipt guard/link protection and invalid-import attention included. Native Punch closure now uses existing verifier/date/evidence fields.
+
+305 executable checks +41 browser assertions +8 post-recovery smoke checks pass. Seven engines/eight UI sources; source rebuild byte-identical after runtime recovery. [TC01 evidence](evidence/tc01/validation.json) · [Source contract](docs/TEST_DOSSIER_CONTRACT.md).
+
+One test/retest chain per pack. Unallocated unresolved Punch/NCR conservatively blocks dossier readiness. Names remain manual declarations. No commissioning certificate, operating clearance, whole-project acceptance, complete asset/O&M/training/maintenance-ready gate or authenticated authority. Existing Daily/commercial quantity states unchanged. Native OS dialogs/real novice/qualified/independent acceptance remain pending; broader blueprint gates above not promoted.

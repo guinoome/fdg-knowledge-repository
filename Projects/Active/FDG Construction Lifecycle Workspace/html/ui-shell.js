@@ -20,6 +20,7 @@ function render(){
  else if(view==='QuickReports')renderQuickReports();
  else if(view==='QuickMore')renderQuickMore();
  else if(view==='QuickQuality')renderQuality();
+ else if(view==='QuickCommissioning')renderCommissioning();
  else if(d)renderRegister();
  else if(view==='HOME')renderHome(m);
  else if(['PLAN','ESTIMATE','EXECUTE','TRACK','DOCUMENT'].includes(view))renderArea(view,m);

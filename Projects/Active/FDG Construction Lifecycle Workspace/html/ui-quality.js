@@ -1,7 +1,7 @@
 const IQ=createInspectionWorkflow(L,G);let qualityTask=null;
 function iqInput(name,label,type='text',value='',required=true){return '<label>'+esc(label)+'<input name="'+name+'" type="'+type+'" value="'+esc(value)+'" '+(required?'required ':'')+'maxlength="6000"></label>';}
 function iqText(name,label){return '<label>'+esc(label)+'<textarea name="'+name+'" required rows="2" maxlength="6000"></textarea></label>';}
-function iqSource(k,id){return '<button type="button" data-ov-table="'+k+'" data-ov-record="'+esc(id)+'" data-record-return="QuickQuality">View '+esc(id)+'</button>';}
+function iqSource(k,id,returnTo='QuickQuality'){return '<button type="button" data-ov-table="'+k+'" data-ov-record="'+esc(id)+'" data-record-return="'+esc(returnTo)+'">View '+esc(id)+'</button>';}
 function renderQuality(){
  if(!state.project.id){renderStart();return;}heading('Quality checks and fixes');const groups=IQ.summary(state),work=L.active(state,'WBS'),task=qualityTask,day=state.project.asOf||localDay();
  if(!work.length){$('#content').innerHTML='<article class="panel empty"><h3>Add one work item first</h3><p>Findings reuse your work item so project and activity references stay connected.</p><button class="primary" data-go="QuickPlan">Add work item →</button><button data-go="QuickMore">Back to More tools</button></article>';return;}

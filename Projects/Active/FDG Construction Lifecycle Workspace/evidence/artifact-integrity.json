@@ -1,9 +1,23 @@
 {
-  "bytes": 262657,
-  "sha256": "5f80787532fbf50d120b9bef57bec31da85b6d89359a37889cc05f83d57abe0d",
-  "demoBytes": 269450,
-  "demoSha256": "e95c8e2fe9bb0ad4be16b8728f56339d7e8584919ebaa0e8cc0f87b4297d8bd0",
-  "gitBlob": "79f55bf78a804fd1a6e970c88edc228975f44ee9",
-  "demoGitBlob": "d0b3c3e0ddaf3cf7e1b17b52edca59c514c094c1",
-  "baseline": "a6955916ab33220298a1eadd25c78f39c99d63de"
+  "work_package": "TC01",
+  "date": "2026-10-17",
+  "primary": {
+    "path": "distribution/FDG-Construction-Lifecycle.html",
+    "git_blob": "68f189eaae1e79e46929b517927c296612c6d873",
+    "utf8_bytes": 290815,
+    "sha256": "ed207c02cbe20c1c4a6a5ef05d1312a0ffb42893d260b4803a15c35895cfddfc"
+  },
+  "synthetic_demo": {
+    "path": "evidence/tc01/working-demo.html",
+    "git_blob": "f865809c228521a8cffc751f73429c51c97bab3a",
+    "utf8_bytes": 296705,
+    "sha256": "1de4defed464fd89423a172410d360f5aa734145d9017ba337fb181016e222be"
+  },
+  "source_rebuild": "Byte-identical to primary after RAM recovery;7 engines/8 UI sources; source stays canonical",
+  "pdf": {
+    "path": "evidence/tc01/test-dossier.pdf",
+    "git_blob": "f0290f842a8752abe6783a8c1998643d1049b56c",
+    "bytes": 65158
+  },
+  "no_local_project_output": true
 }

@@ -88,3 +88,8 @@ aside .brand b{font-size:20px}@media(max-width:1200px){aside .brand b{font-size:
 .iq-report .report-brand{color:#755211}.iq-report summary{color:#47546a}
 
 .iq-history b,.iq-correction>b,.iq-label{overflow-wrap:anywhere}
+
+/* TC01 uses the existing light source-report and contextual form patterns. */
+.tc-readiness{border-left:3px solid #c59b40;background:#f5f7fb;padding:14px 16px;margin:16px 0}.tc-readiness>b{font-size:14px}.tc-readiness ul{padding-left:18px;margin:10px 0 0;font-size:12px}.tc-readiness li{margin:6px 0;overflow-wrap:anywhere}.tc-punch,.tc-receipt{border-top:1px solid #d4deea;padding:14px 0}.tc-report h4{color:#263a53;font-size:14px;margin:22px 0 12px}.tc-report .iq-history b,.tc-receipt b,.tc-punch b{overflow-wrap:anywhere}.tc-report details summary{min-height:44px;padding:10px 0}.tc-report .tc-readiness p{margin-bottom:0}.simple-mode #tc-error{color:#ffb8a6}.tc-report>p{overflow-wrap:anywhere}.tc-report .report-tools{margin-bottom:10px}
+@media(max-width:700px){.tc-readiness{padding:12px}.tc-report .report-tools button{max-width:100%;white-space:normal}.tc-report .title-row{gap:12px}}
+@media print{#tc-editor{display:none!important}.tc-readiness,.tc-punch,.tc-receipt{background:white!important;break-inside:avoid}.tc-report h4{color:#111!important;break-after:avoid}.tc-report .tc-history{display:block}.tc-report .tc-history summary{display:none}.tc-report .title-row{display:block!important}}

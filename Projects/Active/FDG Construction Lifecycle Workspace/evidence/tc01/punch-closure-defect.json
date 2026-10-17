@@ -1,0 +1,12 @@
+{
+  "baseline": "dda8be1bedb0cd5265d56ef7989326b2eef4eebc",
+  "baseline_core_blob": "dfab7d4933706f583acf4770b2ae9df8ebc1a3ae",
+  "observed_failure": "Final state requires actual reviewer, review date and evidence. A typed name is not authorization.",
+  "root_cause": "Generic final-state validation required reviewer/review_date/evidence_ref, which are absent from native Punch schema.",
+  "fix": "Punch Closed uses owner, verified_by, verification_date and closure_evidence_ref; separate declared verifier and at/before cutoff checks. Invalid imported closure is attention item.",
+  "evidence": [
+    "74 commissioning source checks",
+    "Browser native Advanced Punch Closed save and future-date rejection"
+  ],
+  "schema_change": false
+}
