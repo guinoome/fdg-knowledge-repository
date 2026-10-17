@@ -130,3 +130,17 @@ A backlog item is complete only when the corresponding standard/tool/evidence ex
 - [ ] Consider the optional schema/versioned checker/dashboard only after empirical validation.
 
 Do not revise generic FPJIS readiness (historically 89.5%) because additional documents or backlinks exist.
+
+## Product-First Audit and Acceptance Queue — 2026-10-17
+
+The highest-value missing work is **execution and qualified-user acceptance**, not additional generic blueprints. Scoped initial source audit: [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|2026-10-17 Functional Product Evidence Audit]].
+
+- [x] Locate inspectable code, defined tests, historic evidence and blocking capability boundaries for four selected projects.
+- [ ] QTO: rerun current package tests and conduct independent qualified estimator case on the existing offline HTML; patch proven defects and accept/reject.
+- [ ] Construction Lifecycle: rerun pinned source tests and observe actual novice/qualified user site-entry → report → TC01 dossier → reopen workflow; preserve WP01–TC01 code.
+- [ ] Business Platform: reconcile source with onboarding/operational entitlement/branch isolation/payment-state tests on approved environment; **no live payment without authorization**.
+- [ ] FBPOIS spatial: verify actual FWIS/FMIS source authority, then implement one data-linked non-fictitious concern/plant hotspot workflow using existing records.
+- [ ] Continue audit of other active FDG packages with source, past decisions, *executed* test evidence, current build/branch, and bounded acceptance.
+- [ ] Update per-project linkable work-package manifest and remediation tests; do not inflate maturity percentages for documentation.
+
+A project is not CLOSED until its defined **functional scope** is accepted. Distinguish useful accepted offline tool from unbuilt broad SaaS/enterprise architecture.
