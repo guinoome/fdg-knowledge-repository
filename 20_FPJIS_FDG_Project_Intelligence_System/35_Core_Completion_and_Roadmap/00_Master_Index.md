@@ -35,13 +35,13 @@ Every FPJIS project should track:
 
 Never collapse these into a single ambiguous project-complete percentage.
 
-## Current Generic FPJIS Baseline After This Package
+## Historical Generic Documentation Estimate (Not Product Readiness)
 
 Using the weighted rubric in [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/01_Implementation_Readiness_Rubric_and_Module_Scorecard|Implementation Readiness Rubric]], the generic FPJIS blueprint framework is assessed at:
 
-**89.5% Blueprint Implementation Readiness**
+**89.5% — historical qualitative documentation/framework estimate only.**
 
-This percentage measures the generic blueprint framework—not FPJIS software implementation.
+This was not validated by a new coding agent implementing a project, running real acceptance tests or an actual client using a product. **Do not call any FDG project 89.5% ready to build based on it.** Every product or bounded slice needs a concrete runtime evidence and acceptance audit.
 
 ## Package Documents
 
