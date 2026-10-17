@@ -197,3 +197,17 @@ Software implementation of a future FPJIS checker/Project Blueprint Board remain
 **Next priority:** Rerun exact source/build tests; qualified estimator/site-user acceptance for already runnable QTO/Construction offline products; production-safe account/branch boundary proof before Business Platform commercialization; actual FWIS/FMIS-aware spatial pilot. Each action should produce tested runnable output and acceptance, not another architecture package.
 
 **Change rule:** Preserve existing agent work and code; patch only observed gaps. File and wikilink existence support navigation but not product completion.
+
+## 2026-10-17 — FPJIS-TOP-TIER-FULL-REPO-AUDIT-HANDOVER-007
+
+**Founder direction:** Prepare a full-FDG-knowledge-repository audit handover for Astra, Upos, Fable, Methos and future top-tier agents. Advanced audit and enhancement work must be translated into **short, precise, deterministic task instructions usable by older/lower-cost coding agents**, because older models remain normal FDG builders.
+
+**Added:** [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|Full Repository Product Reality Audit Handover]] under existing FAIS Repository/Knowledge Audit; [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|Legacy Agent One-Page Build Card]] under existing FPJIS Implementation Packages. Neither is a new top-level system.
+
+**Integrated:** parent FAIS Repository Audit, FAIS README, Agentic Framework Master Index, FPJIS README, FPJIS Implementation Package Specification and Top-Tier A–Q Template, Top-Tier Compiler Protocol, FDG Ecosystem master map, root AGENTS.md and CLAUDE.md entry instructions; 2026-10-17 four-project FAIS initial audit backlink; this log.
+
+**Canonical decisions:** Full audit requires pinned snapshot and full tracked-path coverage disposition; current implementation/test/real-user/commercial proof separated; source/knowledge authority and cross-collaborator ownership preserved; no automatic code modification, security/production/payment changes or deployment; no unverified completion scores. Older builder reads just a filled simple card + exact affected sources and tests, does not redesign. Real useful products and human acceptance are the target.
+
+**Current status:** Handover and guidance documented/committed. **Full repository audit NOT EXECUTED by this handover; no new application implementation, runtime test or independent user acceptance claimed.** Later agents must report actual coverage and results truthfully.
+
+**Next:** Execute the pinned full audit in reviewed batches, produce a portfolio reality register and prioritized bounded remediation cards, and test/accept small finished software capabilities, returning actual evidence to existing manifests and project handovers.
