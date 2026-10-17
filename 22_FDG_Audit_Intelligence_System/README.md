@@ -45,3 +45,7 @@ This package is an initial organizational baseline and is intentionally technolo
 ## Direct Child Documents
 
 - [[22_FDG_Audit_Intelligence_System/FAIS-MANIFEST|FAIS-MANIFEST]]
+
+## Functional Product Source-and-Evidence Audit — 2026-10-17
+
+[[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|FAIS Functional Product Evidence Audit — 2026-10-17]] is FAIS's first scoped review of **four** FDG active-project areas against selected code, documented tests, historical decisions and known capability boundaries. It is **not** a comprehensive audit or executed test run. Use it with [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Functional Product Completion Gate]] to assess whether the claimed bounded function has actual runnable proof and authorized acceptance. FAIS findings remain independent; separate project/domain authorities must close them.
