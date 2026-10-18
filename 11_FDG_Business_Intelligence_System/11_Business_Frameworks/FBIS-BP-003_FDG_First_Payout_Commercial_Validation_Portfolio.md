@@ -376,3 +376,73 @@ Record actual quote acceptance, verified paid amount/date, direct cash costs, fo
 **Four-question professional challenge:** Before scaling, have an independent reviewer answer what was overlooked, which primary evidence was used, what tools/methods were applied, and what external proof shows the customer outcome and cash economics are correct; see [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS professional challenge]].
 
 **Knowledge-only state:** no new product, paying customer, transaction, revenue, running agent or completed field audit established by this addition. Existing first-payout scope, statuses and approvals remain in force.
+
+## 2026-10-19 — FEIS/FBPOIS sales acceleration with evidence and unit-economics gates
+
+**Founder instruction:** strengthen FDG Marketing and Sales specialist competence to win suitable paying customers quickly and sustainably; advertise only deliverable, independently supported facts. This extends the existing first-payout portfolio and [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004]]—**no new intelligence system, CRM, lead database, paid-agent purchase or broad software build**. Human commercial, engineering, service, finance and legal approval remain in place. The sales/marketing agent roles are *defined*, not deployed.
+
+### 1. Positioning and product-truth matrix (historical evidence baseline, not a current release certification)
+
+| Offer / real buyer / job | Truthful message that may be drafted for owner review | Prohibited or conditional message / release threshold |
+| --- | --- | --- |
+| **Maintenance Evidence & Monthly Engineering Reporting**: smaller properties, facility owner/operator, FM head, engineering manager overwhelmed by fragmented PM evidence | "Proposed assisted monthly maintenance evidence and management reporting pilot, scoped to one facility/asset group, engineering-reviewed deliverable." Illustrate format using **clearly labeled SAMPLE / SYNTHETIC** report. | Never claim active SaaS, automated live alarms, a paid clientele, signed-off statutory reports or guaranteed uptime/savings. Real customer offer requires approved scope, reviewer capacity, commercial terms, client-data controls and lawful professional authorization. |
+| **FEIS QTO / BOQ Estimate Toolkit**: estimator, builder, subcontractor, project manager with manually calculated takeoffs/rates | "Existing offline manual quantity/estimate working candidate; qualified estimator validation pending." Show only tested bounded length/area/volume/count, rates, save/reopen/print features whose exact current build is verified. | No "automatic drawing takeoff", AI symbol recognition, calibrated PDFs, certified quantities or billability unless separately implemented and accepted. Sale as an accepted digital product remains subject to qualified measurement/rate/print/reopen acceptance. |
+| **Construction Lifecycle offline workspace**: project site/quality/commissioning staff | "Demonstrable bounded offline project capture and reporting candidate"; label sample tests and mock data. | Do not promise authenticated multi-tenant Construction OS, automated billing approval, secure enterprise sync or professionally certified turnover before separate tests and authority. |
+| **FBPOIS / FWIS / FMIS**: Chief Engineer, Duty Engineer, Supervisor, hotel/mall/building facility operator | Sell a **discovery/requirements and narrowly scoped proof-of-work**, and any individually verified working feature with its exact owner, build and limitations. Premium dashboards can be shown as **concept/prototype** only. | No whole-platform production-availability, live plant health/alarm feed, secure multi-site system, 24/7 monitoring, automatic interventions or ROI claims based on design mocks. Main/branch blueprint status is not acceptance. |
+| **FDG Business Platform vertical modules**: operator/owner of fuel stations or other businesses | "Selected operations demo / trial design, depending on latest verified code"; distinguish actual authenticated account experience from demo-module data. | No claim that paid branch subscriptions, email delivery, production isolation, secure live payments or all business modules work until the exact end-to-end tenant/billing controls are independently tested and approved. |
+| **Solar Visayas engineering quotation**: property owner, facility operator, installer | Present a reviewable calculation/quotation **estimate** with engineering inputs and assumptions, optional permitting/processing clearly scoped, versioned BOM/pricing and site-survey dependency. | No guaranteed bill saving, actual generation, payback, net metering approval, subsidy, equipment specification, discount or sign/seal entitlement without real verified basis and professional review. |
+
+These are **time-stamped sales constraints based on** [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|the sampled 2026-10-17 product audit]], BP-003 and the specific service/product owner documents. Sales agent must re-check current exact build, acceptance, legal status and pricing before any external communication; do not freeze this matrix as permanently accurate.
+
+### 2. First-payout route, not indiscriminate marketing
+
+Select **one narrow customer segment / painful recurring task / verifiable offer / buyer persona** per test. The first test remains the maintenance evidence/reporting assisted pilot; QTO estimator acceptance and construction toolkit offer can proceed as separate bounded lanes when technically ready. Do not force prospects into a product that cannot currently solve their problem.
+
+1. **Identify a real recent pain trigger:** overdue/fragmented PM reports, missing audit evidence, manually recreated progress/billing reports, inconsistent estimate rate/quantity checks; collect authentic evidence and last-instance time/cost from buyer.
+2. **Name economic buyer and user separately:** building owner or FM head may approve budget; Chief Engineer/Supervisor/estimator tests day-to-day workflow; account for finance/procurement, engineer/reviewer, and data/security approvers. Actual roles/contacts remain UNKNOWN until identified.
+3. **Qualify by BANT-like evidence, not slogans:** problem frequency/severity, current alternative/workaround, current cost, who can authorize spend, data access/consent, willingness to run a bounded pilot, timelines and constraints. Disqualify if no fit, evidence or delivery capacity.
+4. **Lead with tangible proof:** 60–90 second genuine workflow demo or an openly labeled *synthetic sample*; show input → processing → report/save/reopen and explicit unavailable features. Use no deceptive prerecorded UI, invented live feeds, fabricated reviews, stock testimonial/customer logos or hidden demo-data tags.
+5. **Ask for a specific next step:** a consented 15–20-minute problem interview, source-data readiness check, narrowly scoped pilot quote, or hands-on estimator acceptance. No broad "buy our intelligence platform" pitch.
+6. **Send a controlled offer:** named scope, deliverables, exclusions, assumptions, exact revision, delivery dates only when capacity/approvals confirmed, service owner, reviewer, customer acceptance, data handling, support, complaint route, invoicing and refund/cancellation terms. Do not solicit payment for an undeliverable future feature disguised as live.
+7. **Earn repeat business with accepted outcome:** compare effort, errors, revisions and contribution after delivery. Only propose renewal or software upsell when client outcomes, safety/security and economics demonstrate fit.
+
+**Illustrative 30-day targets retained from the approved experiment:** 20 qualified prospects; 5 substantive buyer conversations; 2 formal offers; 1 verified paid, accepted-scope pilot. These are **targets, not actual traction or a success guarantee**; keep original denominators. A faster close without correct claims or delivery acceptance is a failure.
+
+### 3. Agent-ready first-call intelligence and objection handling
+
+| Common buyer objection | Evidence-led answer policy |
+| --- | --- |
+| "Show me proof this will save engineering time." | Show a **measured** side-by-side task on a clearly labeled pilot sample or request the client's baseline; absent measurements, describe potential workflow benefit without percentages or guarantees. |
+| "Do you have customers already?" | State actual verified customers and permissioned references only; if none, say this is an initial pilot. Never invent adoption counts, testimonials, endorsements or contract history. |
+| "Is this live at all my hotels?" | Show exact supported site/branch role permissions and source revision; if untested, explicitly offer discovery or scoped demonstration, not enterprise deployment. |
+| "Will this replace engineers or meet statutory compliance?" | No. Explain that qualified engineering review and jurisdictional obligations remain; any certificate/sign-and-seal/safety duty requires verified appropriately authorized professional scope. |
+| "Can I see its ROI?" | Present **buyer-specific scenario**, assumptions, counterfactual/baseline and sensitivity; label projected ROI as ESTIMATE. Verified realized savings require an observed before/after and credible attribution plus actual spend. |
+| "Why not use Excel/a different CMMS?" | Compare buyer's cost of the existing workflow versus FDG's actual, tested output; avoid unsupported competitor claims. If Excel already does the job well, do not pressure the buyer. |
+| "What if you cannot deliver?" | Provide clear bounded acceptance, support, remediation and refund/termination terms approved for the exact offer; do not promise a remedy beyond agreed authority. |
+
+### 4. Sustainable ROI: separate activity, revenue, margin and realized buyer value
+
+**Finance-authoritative definitions; period, currency, cohort and excluded expenses must be displayed.**
+
+- **Qualified-lead conversion** = commercially accepted leads / leads actually assessed for the same period; not likes, views or bot DMs.
+- **Quote-to-paid** = verified new paying customers / valid priced quotes issued in the defined cohort, tracked by collection date and accepted scope.
+- **CAC** = attributable acquisition campaign plus sales prospecting expense / **new verified paying customers** from the same attributable cohort. If zero payers: **UNDEFINED**, not zero CAC.
+- **Cash contribution before acquisition** = collected revenue excluding refundable/tax pass-through where applicable − direct delivery costs − payment/platform fees − expected support/rework cost actually supported by basis. Separately record unpaid founder/engineer/reviewer hours as economic opportunity cost, not zero-cost work.
+- **Contribution after acquisition** = above contribution − attributable sales/marketing expense for that cohort. Do not call this net accounting profit if overhead, tax or capital costs are excluded.
+- **Contribution margin** = contribution / consistent revenue denominator; state tax handling and what costs are excluded.
+- **Acquisition payback** = CAC / observed monthly *pre-acquisition* contribution per retained customer, only if monthly contribution positive and measured; otherwise UNDEFINED. For one-off packs use first-sale contribution and repurchase evidence instead of pretending SaaS payback.
+- **Marketing return on incremental contribution** = (incremental contribution before acquisition attributable to campaign − attributable acquisition spend) / acquisition spend. Attribution method and pre-campaign/control baseline mandatory; if unavailable report "attribution unknown" rather than a fabricated ROAS/ROI.
+- **Realized customer benefit** = verified baseline resource hours/cost/errors minus comparable observed current state minus incremental change costs; keep operational/engineering value, buyer monetary savings and FDG revenue **separate**. Never promise guaranteed savings, energy output, safety or payback.
+
+**Go/pause rules:** Pause paid spend when tracked lead quality deteriorates, the campaign spends outside approved budget, complaints/misunderstanding occur, evidence expires or contribution becomes negative; revise offer/segment before scaling. A high click-through rate with zero qualified paying customers is not sales success. If sample is small or source unclear, state uncertainty instead of converting it to proof.
+
+### 5. 7-day operator rhythm using existing FBIS/FWAIS/FSvIS
+
+- **Daily:** review actual inbound inquiries, qualification and lost reasons; answer only with approved claim bank and service scope; no unsolicited mass messages.
+- **Twice weekly:** draft at most one focused outreach/content experiment per active offer, obtain approvals, measure source→conversation→quote outcome. Expensive ads are not the default acquisition channel.
+- **Weekly:** review qualified conversations, offer objections, engineering capacity, collections, cost/hour, opt-outs, delivery exceptions and accepted customer outcomes. Reuse the [[11_FDG_Business_Intelligence_System/07_Business_Core_Intelligence/Sales_Funnel|existing funnel]], not a second CRM.
+- **After each cycle:** record one documented learning: KEEP / CHANGE ONE VARIABLE / STOP, with source and owner. Escalate missing implemented features to FPJIS work package only if buyer evidence justifies them. Do not automatically promote a marketing hypothesis to an engineering spec or a production feature.
+
+**Cross-domain links:** [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|CMO/Commercial agent roles]] · [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|campaign production]] · [[14_FDG_Service_Intelligence_System/08_Service_Economics/FSvIS-ECO-0002 - Cost Pricing and Margin Model|FSvIS service economics]] · [[13_FDG_Legal_Intelligence_System/09_Procurement_and_Commercial_Law/FLIS-0900 - Procurement and Commercial Law|FLIS customer claims/legal checks]].
+
+**Status:** reference-based **sales strategy and draft copy boundary only**. No sales leads contacted, revenue earned, live campaigns published, customer ROI proven or sales agent provisioned by this documentation update.
