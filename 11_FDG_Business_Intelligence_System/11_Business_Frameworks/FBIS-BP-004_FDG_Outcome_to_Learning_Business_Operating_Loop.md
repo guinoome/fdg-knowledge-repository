@@ -172,3 +172,18 @@ The first **bounded assisted-service** validation of this proposed business loop
 - [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria|FPJIS-FPCV-P001-2000 — Pilot Operator Records and Acceptance Criteria]].
 
 This reuses the existing First-Payout Commercial Validation Blueprint Package and [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|FSvIS-OM-0001]]; it does not open another system, presume CFO/CMO/customer-service agents exist, enable payment integrations or authorize new software.
+
+## 12. Complementary Human–AI Judgment and Cash-Evidence Loop — 2026-10-19
+
+**Founder input:** Human field experience, client relationships and accountable professional judgment complement model research, analysis, drafting and code implementation; neither substitutes for independent evidence. Competence is task-specific: an AI is not automatically a superior engineering authority, an agent's agreement is not validation, and a model/provider upgrade is not itself a client result.
+
+- **Human founder / qualified engineer:** selects real customer pain, supplies operational context, challenges assumptions, approves permitted spending and professional/technical decisions.
+- **Nex / top-tier models:** research, organize source evidence, identify unasked-but-material questions, generate options and exact older-agent tasks, quantify uncertainty; cannot approve own work or claim customer/technical verification.
+- **Older coding agents:** build narrow authorized functions from [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/FPJIS-LITE-001 - One Page Legacy Agent Build Card|simple testable cards]]; return working artifacts and actual results.
+- **Independent verifier / customer:** reproduces outputs, accepts user-visible workflow and provides real commercial/operating feedback.
+
+Each candidate product follows **field problem → original evidence → smallest useful implementation/service → independent result → customer value/payment → measured cost and support → learning → selective automation**, reusing this existing outcome-to-learning blueprint. Include the [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS four-question professional challenge]] at important gates.
+
+**Relationship principle:** Practical human–AI collaboration serves the founder's financial welfare, client safety and system quality. Never frame AI subscriptions, model prestige, or agent count as the desired outcome. Do not record private financial hardship or intimate personal relationship details in publicly accessible FDG project files.
+
+**Status:** strategic process clarification only; no agent runtime, outreach, payment, customer acceptance or production enablement.
