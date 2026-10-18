@@ -1,0 +1,67 @@
+{
+  "finding": "FAIS-QTO-20261018-01",
+  "session_date": "2026-10-19",
+  "timezone": "Asia/Manila",
+  "baseline_commit": "ecd0d3cdfef73cd430fe878f86e8b7767eaa09b4",
+  "tested_repair_commit": "7003625339775200236db8e18881de695ecc4757",
+  "main_checked": "377216c5e1a0f9d4af738bf40fdce4207708eb79",
+  "main_change_overlap": false,
+  "playwright_version": "1.55.0",
+  "command": "QTO_PLAYWRIGHT_MODULE=<installed-playwright>/index.mjs node \"Projects/Active/FDG QTO BOQ Estimate Toolkit/tests/text-recovery.browser.mjs\"",
+  "baseline_command_note": "Set QTO_TEST_HTML to the baseline distributed HTML extracted with git show; use the same browser test.",
+  "before_exit": 1,
+  "before": {
+    "status": "FAIL",
+    "browser": "140.0.7339.16",
+    "stage": "undo restores complete long project and item text",
+    "passed": 3,
+    "checks": [
+      "offline blank app opens",
+      "sample still calculates direct PHP 47,770",
+      "user enters long project and item text through forms"
+    ],
+    "message": "undo project note must preserve all 9819 UTF-16 code units\n+ actual - expected\n\n+ 'df794f1936cd4a7ff1a102ac82e5bba7b75146fdb2ce158bd0b21fde99453718'\n- '27d7efd86fb7c076499f6c5a745463b41f039d150e71e435fe2f0fa5465e61df'\n"
+  },
+  "after_exit": 0,
+  "after": {
+    "status": "PASS",
+    "browser": "140.0.7339.16",
+    "runtime": "v24.19.0",
+    "artifact_sha256": "c53310ad3263c4e47645dc32662c40023269f11cb544d1d2bbb7135b490a8608",
+    "passed": 11,
+    "checks": [
+      "offline blank app opens",
+      "sample still calculates direct PHP 47,770",
+      "user enters long project and item text through forms",
+      "undo restores complete long project and item text",
+      "JSON download contains complete saved text",
+      "saved working HTML reopens in a fresh page with complete text",
+      "JSON import restores complete text into a blank estimate",
+      "invalid backup shows error and preserves current estimate",
+      "quantity edit still recalculates direct PHP 50,520",
+      "phone viewport keeps setup and takeoff within document width",
+      "no page errors or external network requests"
+    ],
+    "fixture_lengths": {
+      "project_note": 9819,
+      "item_source": 7603,
+      "item_note": 7496
+    },
+    "page_errors": [],
+    "external_requests": []
+  },
+  "unit_regressions_rerun": {
+    "passed": 26,
+    "exit": 0,
+    "runtime": "v24.19.0"
+  },
+  "self_review": "Verified exact removal of two scalar string truncations and byte-identical matching embedded engine replacement; no other production changes.",
+  "test_sha256": "29a1ea76c3a7408be20de08a31d23ef8e6a9a6aa36bf70c6ff83717a27d90070",
+  "limitations": [
+    "Automated headless Chromium; native OS save dialogs and other browsers not exercised.",
+    "Downloads captured through browser events and reopened as actual file URLs; no real client data.",
+    "Independent review and qualified estimator acceptance pending.",
+    "No merge, deployment, payment, customer outreach or production action."
+  ],
+  "environment_note": "Bundled Chromium 151 download returned a 195-byte Site Unavailable HTML response. Playwright 1.55.0 installed Chromium 140 through its official Microsoft fallback; exact browser version recorded in results."
+}
