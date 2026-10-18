@@ -48,3 +48,7 @@ The Agentic Framework governs generic agent behavior and readiness. FMCIS is the
 - [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Existing compiler protocol]] remains authoritative; full A–Q analysis is for top-tier compilers/reviewers, not compulsory long context for a legacy builder.
 
 Actual agent/model identity and availability must be confirmed; never silently equate a user-named model with a model named differently in prior documents.
+
+## Delegation-First Agent Execution — 2026-10-19
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|FMCIS-DISP-001 Delegation-First Execution Rule]] — **canonical FMCIS** founder instruction for ALL lead agents: actual subagent dispatch before routine implementation; preferred qualified Sol/Upos execution; Astra/Fable/Methos reserved for material architecture and review. Do not claim unavailable dispatch; workers execute and return evidence.
