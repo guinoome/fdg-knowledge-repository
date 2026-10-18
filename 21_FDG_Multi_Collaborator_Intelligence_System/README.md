@@ -53,3 +53,7 @@ FMCIS is now the canonical owner of the provider-neutral cross-provider review c
 Current executable pairing: Claude Code ↔ Codex. The implementation is replaceable; FMCIS owns collaborator coordination, not the external Claudex tool.
 
 Related governance: [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-004_Debate_Protocol|FMCIS-004 Debate Protocol]] · [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005 Loop Termination]] (interim Claudex-derived controls; full designs remain planned).
+
+## Delegation-First Agent Execution — 2026-10-19
+
+All lead agents use [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|FMCIS-DISP-001 Delegation-First Execution Rule]] to choose and **actually dispatch** the lowest-cost qualified worker, with Sol/Upos preferred when available and suitable; Astra/Fable/Methos reserved for complex or high-consequence architecture and review. Keep outcome, assignment, source commit, worker result and validation evidence. Leaf workers carry out bounded implementation. When a subagent facility is unavailable, disclose DISPATCH BLOCKED and preserve an actionable handover. No silent direct self-execution by lead agents, no invented subagents and no unnecessary multi-agent parallelism.
