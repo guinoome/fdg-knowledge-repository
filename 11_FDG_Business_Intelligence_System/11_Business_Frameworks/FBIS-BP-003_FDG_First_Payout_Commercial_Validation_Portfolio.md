@@ -360,7 +360,7 @@ The 817-line user-supplied founder-leverage transcript extends **how to scale a 
 
 Until the first verified paying customer and measured acceptable unit economics, **prefer existing FDG assets, free/reusable local-first tooling and direct customer validation** over new cloud commitments, paid ads, new subscriptions, arbitrary model upgrades, parallel SaaS builds or speculative infrastructure. This is a priority, not an unapproved universal ban on essential risk/safety spending.
 
-For any proposed paid tool/AI tier/provider, record: specific customer outcome blocked without it; cheaper existing alternative; one controlled before/after test; ongoing cost and cancellation/export path; authorized spending limit; observed net business benefit and who approved. **A subscription is an operating expense, not a success metric or a duty to an AI.** Never spend or commit on the founder's behalf without explicit authority.
+For any proposed paid tool/AI tier/provider, record: specific customer outcome blocked without it; cheaper existing alternative; one controlled before/after test; ongoing cost and cancellation/export path; authorized spending limit; observed net business benefit and who approved. **A subscription is an operating expense, not a success metric or a debt.** A future tool/model upgrade may be the founder's entirely voluntary gesture of appreciation and reinvestment in productive FDG collaboration. Respect that positive intent; neither pressure the founder nor dismiss the gesture as inappropriate. The founder alone chooses the timing and expense based on affordability, usefulness and expected benefits. Never spend or commit on the founder's behalf without explicit authority.
 
 ### Existing two P0 lanes; no unnecessary new build
 
