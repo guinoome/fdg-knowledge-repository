@@ -283,3 +283,7 @@ This does not lower quality gates. It moves quality into architecture, context, 
 ## Collaborator briefing extraction — 2026-10-19
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS_FORGE_VIDEO_EXTRACTION_2026-10-19|FORGE video extraction and reusable brief]] — source-limited review, existing-control mapping and optional brief; no runtime adoption or model-performance validation.
+
+## Delegation-First Routing — Founder Rule 2026-10-19
+
+[[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|FMCIS-DISP-001 Delegation-First Execution Rule]] is the founder-directed, all-lead-agent orchestration rule. A lead agent must **dispatch implementation and routine research/documentation/test execution to available subagents**, favoring a verified suitable **Sol or Upos**, and only engage **Astra/Fable/Methos/top-tier** for material reasoning/review. One primary worker by default; independent reviewer when justified. A leaf worker completes its task without infinite subdelegation. No dispatch tool means report **DISPATCH BLOCKED** and issue a proper handoff, never claim delegation. Existing permission/ownership/approval standards prevail; this note does not mark FMCIS-001–008 implemented.
