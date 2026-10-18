@@ -221,3 +221,7 @@ At each important audit recommendation, use [[22_FDG_Audit_Intelligence_System/0
 **Human–AI complementarity:** Founder and competent domain experts provide accountable real-world judgment; agents provide analysis, code and challenges. Independent evidence and users, not an AI's confidence, establish correctness. Do not store private founder financial or personal relationship details in public repository files.
 
 All existing FAIS/FPJIS/FMCIS authority, low-risk patch boundaries, engineering approvals and security restrictions remain unchanged. This note is knowledge; it grants no production deployment or spending authorization.
+
+## Historical User-Supplied Source Coverage — 2026-10-19
+
+Use [[04_Knowledge_Management/FDG-HIST-0001 - Historical Conversation and Reference Reconciliation Handover 2026-10-19|Historical Conversation & Reference Coverage Handover]] as the initial **partial** conversation/reference-to-GitHub ledger. In a future complete source audit, trace the original founder request and external source against current main content, unmerged branches, actual project source and accepted tests. Full tracked-tree disposition alone is insufficient to certify all conversations captured; require explicit source denominator, time-window/attachment coverage and unknowns. Delegation is governed by [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|Delegation-First Rule]]; do not fabricate worker execution.
