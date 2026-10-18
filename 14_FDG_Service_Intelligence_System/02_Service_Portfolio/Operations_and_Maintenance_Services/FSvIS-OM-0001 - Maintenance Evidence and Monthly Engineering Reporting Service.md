@@ -215,3 +215,17 @@ The existing productization rule remains: validate repeated customer value befor
 - [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|Draft CFO, CMO and Customer Service Agent Profiles]] may be evaluated in a separately approved synthetic-data/shadow test only; agent design does not alter service delivery authority.
 
 A complete execution charter does not certify a real client, paid pilot or accepted engineering report.
+
+## Cash-Limited Pilot Evidence and Low-Touch Test — 2026-10-19
+
+**The first offer remains this approved-scope pilot definition (not an operating or paid service).** Prefer existing spreadsheet/report/evidence tooling and private client-controlled records for a single narrow service cycle. Do not buy a new SaaS tool or build a new platform solely to make the service appear automated.
+
+For the existing Pilot 001 record pack, measure from *actual* delivery:
+- **client:** confirmed scope/permission, real customer acceptance, whether the client wants the next cycle;
+- **product correctness:** 1 source → 1 record → 1 finding/action → 1 report, complete source references, independent engineering review, unknown gaps visible;
+- **economics:** verified collected fee and provider fees, transport/other cash costs, engineer/reviewer/founder minutes, revisions, net contribution, effective contribution per founder hour, and next month effort;
+- **repeatability:** steps that remain manual, reasons, cycle-two comparison, failures and whether automation has demonstrable net benefit.
+
+No safety, sign/seal, inspection or regulatory work beyond the original exclusions. Low-touch monthly income is a *candidate outcome* only after recurring payment and accepted repeat delivery. Capture measured workflow friction in existing [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/20_Pilot_001_Operator_Record_Pack_and_Acceptance_Criteria|private Pilot 001 record pack]]; this public knowledge file must not contain client information.
+
+Independent review must answer the four professional challenge questions from [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS Project Audit]]. No fee, customer, runtime or passive-income outcome is claimed in this update.
