@@ -134,3 +134,22 @@ Track requirement→AC coverage, requirement→accepted-implementation coverage,
 **Current state:** documentation/design extension only; pilot software NOT BUILT, NOT TESTED, NOT ACCEPTED, NOT DEPLOYMENT AUTHORIZED. No current FPJIS percentage changes.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/00_Master_Index|FPJIS Core Completion & Roadmap]] → this standard.
+
+## Founder source-to-build hard gate — 2026-10-19
+
+**Binding project rule:** **No build starts with a material unresolved source-to-requirement gap. No feature is declared complete without working evidence and appropriate acceptance.**
+
+Before setting BUILD_AUTHORIZED for any bounded work package, the FPJIS owner/independent reviewer shall verify against **current main and active project build**, not merely chat memory:
+
+| Question | Required truthful record |
+| --- | --- |
+| Did the founder discuss or approve something that affects this exact task? | Original source or traceable historical provenance; approval status and exact applicable requirement; missing history explicitly UNKNOWN |
+| Has the reference/decision actually reached canonical GitHub? | Current main commit, exact file/revision/owner. ON_BRANCH and private-chat/Library-only are **not** main |
+| Is the work package implementable without guesswork? | Defined user scenario, input/output, data/offline/permission/error rules, exact source paths, test fixtures with expected outcomes, owner and reviewer |
+| What is materially unresolved? | Source/decision gaps listed with impact and owner. Block affected work only; unaffected accepted source remains undisturbed |
+
+**Preflight disposition:** SOURCE_UNREVIEWED / BRANCH_ONLY / EXTRACTED_NOT_ADOPTED / ADOPTED_NOT_SPECIFIED / SPECIFIED_NOT_IMPLEMENTED / READY_FOR_AUTHORIZATION / BUILD_AUTHORIZED. The final two are separate; only explicit existing FPJIS owner/founder authorization transitions to BUILD_AUTHORIZED. Do not invent a readiness percentage.
+
+**Closeout disposition:** IMPLEMENTED / TESTED_ON_EXACT_BUILD / FUNCTIONALLY_ACCEPTED_BOUNDED / OPERATIONALLY_VALIDATED / COMMERCIALLY_VALIDATED; never infer later statuses from earlier ones. Store observed tests, exact artifact, negative/reopen/offline checks where relevant and legitimate user/engineer acceptance. Reuse [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Functional Product Completion Gate]].
+
+**Sync interface:** [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020 same-session GitHub knowledge return]]; [[04_Knowledge_Management/FDG-HIST-0001 - Historical Conversation and Reference Reconciliation Handover 2026-10-19|historical gaps]]; [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|delegation-first]]. Reconcile relevant parallel branches through reviewed, owner-authorized patches; no wholesale stale-branch merge. This is an acceptance/authorization check, **not** a claim that GitHub contains every prior chat.
