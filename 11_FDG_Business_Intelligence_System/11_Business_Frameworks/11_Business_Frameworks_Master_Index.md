@@ -45,3 +45,10 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 ## Integrated commercial operating loop — 2026-10-09
 
 - [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|FBIS-BP-004 Outcome-to-Learning Business Operating Loop]] — Draft cross-system reuse blueprint and controlled engineering-service pilot handover. Connects existing BP-001, BP-002, BP-003 and FSvIS-OM-0001; does not commission runtime. Related [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|business specialist agent capability profiles]] and [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-DAILYS-001 - Dailys Outcome-to-Learning Business Reference|Dailys research case]].
+
+## Cash Evidence and Independent Professional Proof — 2026-10-19
+
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio|First-Payout Portfolio]] §18: lean, cash-limited first-revenue experiments; paid/accepted/renewed/low-touch states remain distinct; subscription/tool spending requires business justification.
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|Outcome-to-Learning Loop]] §12: complementary human engineering judgment, agent analysis and independent external proof; no reliance on model prestige.
+- [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|Existing Maintenance Reporting Pilot]]: one narrow paid reporting cycle and verified source/effort/customer evidence before process automation.
+- [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS Independent Professional Challenge]]: four professional questions required in material audit/acceptance cases. These are extensions of draft/proposed knowledge; no revenue/launch claimed.
