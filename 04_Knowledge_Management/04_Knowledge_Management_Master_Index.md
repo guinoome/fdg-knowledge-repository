@@ -27,3 +27,10 @@
 - [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|Delegation-First Rule]] — lead agents delegate ongoing source-by-source reconciliation to real qualified Sol/Upos workers; no such dispatch was possible during this initial documentation session.
 
 No new knowledge system was created. Source-content approval and implementation still follow existing domain and FPJIS gates.
+
+## 2026-10-19 — Same-session knowledge return
+
+- [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020 § Same-session GitHub knowledge return]]: material FDG decisions/references must have a verifiable MAIN commit/read-back or an explicit blocked/not-published outcome. Chat/issue/branch are not interchangeable with verified-main knowledge.
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS source-to-build gate]]: affected implementation blocked on material unresolved source-to-requirement edges; no function marked complete without real tested user/human acceptance.
+- [GitHub PR source/acceptance checklist](https://github.com/guinoome/fdg-knowledge-repository/blob/main/.github/PULL_REQUEST_TEMPLATE.md): reviewer-facing control, **not** configured CI branch protection.
+- [GitHub issue #11](https://github.com/guinoome/fdg-knowledge-repository/issues/11): unresolved historic source recovery, branch decision reconciliation and any actual end-to-end automatic chat-event connector need separate authorized executor/tests.
