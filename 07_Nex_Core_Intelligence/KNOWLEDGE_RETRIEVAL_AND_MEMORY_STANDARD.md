@@ -450,3 +450,9 @@ The goal is to create the most useful intelligence.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+## Chat memory is not repository persistence — 2026-10-19
+
+The long-term organizational memory for FDG is **versioned canonical GitHub knowledge**, not an assistant's recall or a statement in chat that something was updated. Agents must use the [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020 same-session knowledge-return control]] to classify consequential FDG discussion, reconcile with existing ownership, apply authorized minimal amendments and **read back commit and file** before saying VERIFIED_MAIN. ChatGPT personalization memory and archived chat history do not by themselves satisfy GitHub source/requirement verification. On-branch and pending issue states do not count as fully synced to main. Private material remains outside the public repository unless an approved safe destination exists. Missing past content remains UNKNOWN until actually enumerated.
+
+Before handing a build to an agent, honor the [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS source-to-build hard gate]]. An automated ChatGPT-to-GitHub listener **does not exist solely because this standard was adopted**; separate connected/runtime execution evidence is required.
