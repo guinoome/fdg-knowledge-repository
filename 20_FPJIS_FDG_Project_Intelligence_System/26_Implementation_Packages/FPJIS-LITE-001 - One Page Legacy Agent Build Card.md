@@ -51,3 +51,7 @@ For high-stakes work, the top-tier auditor may retain deeper A–Q analysis priv
 **Full audit source:** [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301]].
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → [[20_FPJIS_FDG_Project_Intelligence_System/26_Implementation_Packages/Implementation_Package_Specification|Implementation Packages]] → this card.
+
+## 2026-10-19 — Subagent Dispatch Header
+
+This build card is the **actual subagent dispatch payload**, not a declaration that a worker has already executed. Before handoff, record **lead/orchestrator, receiving worker and actual model/provider, dispatch channel/task reference, authorization, source commit and reviewer** in the existing work-package record. Prefer competent low-cost Sol/Upos where available; top-tier agents should not directly implement the routine bounded task. The selected leaf agent follows the build steps and reports actual tests/commit. No dispatch facility → **DISPATCH BLOCKED**. See [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|FMCIS-DISP-001 Delegation-First Execution Rule]].
