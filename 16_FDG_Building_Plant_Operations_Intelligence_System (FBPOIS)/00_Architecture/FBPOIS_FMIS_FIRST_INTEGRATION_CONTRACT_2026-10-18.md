@@ -48,3 +48,20 @@ Local-first clients (Windows/Android/Web PWA or approved desktop adapters) → r
 Read canonical master index, FMIS contract, existing FMIS code and tests first. Do not implement FWIS extension as Release 1 ahead of FMIS. Then inspect FWIS source and its 2026-10-18 handovers; reconcile documented-vs-actual database authority, including unsafe dev membership helpers, before online launch. Make small PRs, record changed files, migrations, test logs and unresolved defects. Avoid redundant blueprints and new parallel services.
 ## Current status
 Documentation committed only. No FMIS tests, cross-module runtime integration, live database tests, staging uploads or qualified-user acceptance performed in this review. These are mandatory future gates, not claimed successes.
+
+
+## Delegated routine approval and management-by-exception (2026-10-18)
+**Operational rule:** authorize and close routine PMs, minor concerns and low-risk corrective work at the lowest competent, assigned and permitted level. Do not escalate solely because a Chief Engineer, Engineering Manager or Director exists. Higher-level dashboards prioritize reliability analysis, systemic risk, expenditure, capacity and exception trends rather than routine manual approvals.
+
+- Technician: perform assigned work, capture readings/checklists/photos and submit; no self-approval.
+- Supervisor: verify evidence and approve ordinary PM completion, minor corrective work and minor concerns within assigned facility, asset scope and explicit authority.
+- Duty Engineer / Engineering Service Manager: approve shift-level operational decisions, routine exceptions, concern resolution and operational clearance within authorized facility/shift scope; no automatic escalation of ordinary turnover.
+- Chief Engineer / Engineering Manager: receive only threshold breaches, significant plant availability/safety/compliance issues, major repairs/costs, unresolved disputes and required statutory/technical sign-offs; monitor aggregate PM compliance and recurring failures.
+- Director: strategic, portfolio and exceptional matters, not operational approval queues.
+- Finance/procurement/safety statutory approvals remain separate where applicable. Approval must obey explicit permission, facility scope, delegation validity, separation of duties, and applicable regulatory or manufacturer requirements; job titles alone never grant authority.
+
+**Escalation triggers:** safety-critical or life-safety findings; statutory or permit requirement; expense above delegated limit; prolonged OOO/OOS affecting operations; repeat failures; missing/failed evidence; unauthorized or conflicted approver; disputed disposition; missed SLA or unaccepted shift handover. Thresholds must be configurable and approved per facility; do not invent numerical limits.
+
+**Shared workflow contract:** PM submitted → supervisor evidence review → approved/returned for correction; minor concern → supervisor or Duty Engineer disposition → verified closure; only triggered exceptions route upward. FMIS owns maintenance approval and evidence; FWIS owns operational concern/availability clearance. FMIS completion does not automatically close FWIS OOO/OOS.
+
+**Acceptance tests / DoD:** (1) Supervisor approves compliant routine PM without Chief Engineer notification or approval; (2) Duty Engineer resolves an authorized minor concern without management approval; (3) out-of-scope facility, expired delegation and author-self-approval are rejected server-side; (4) safety-critical finding, statutory sign-off or over-limit cost escalates to the correct authority; (5) Chief Engineer sees aggregate compliance, exceptions and trends, not routine approval backlog; (6) offline decisions remain pending until authoritative sync/revalidation, and revoked permissions cannot silently finalize them; (7) qualified engineering users verify the scenarios, recorded evidence and usability. These tests are requirements, **not yet executed**.
