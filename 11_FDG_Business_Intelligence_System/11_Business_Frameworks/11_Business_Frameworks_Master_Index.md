@@ -52,3 +52,13 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 - [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-004_FDG_Outcome_to_Learning_Business_Operating_Loop|Outcome-to-Learning Loop]] §12: complementary human engineering judgment, agent analysis and independent external proof; no reliance on model prestige.
 - [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|Existing Maintenance Reporting Pilot]]: one narrow paid reporting cycle and verified source/effort/customer evidence before process automation.
 - [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS Independent Professional Challenge]]: four professional questions required in material audit/acceptance cases. These are extensions of draft/proposed knowledge; no revenue/launch claimed.
+
+## 2026-10-19 — Evidence-Led Sales and Truthful Marketing
+
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio|FBIS-BP-003]] — product-specific FEIS/FBPOIS offer-truth matrix, target buyers, first-payout sales route, qualification/objections and contribution-based ROI.
+- [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FBIS-BP-002]] — content claim ledger and version-specific pre-publication clearance: demo versus live, real savings, real customer endorsements, pricing/promotions and approvals.
+- [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|FDG CMO/Commercial/CFO/Customer Service specialist profiles]] — add Commercial/Sales specialist without a new agent intelligence system or unapproved runtime.
+- [[13_FDG_Legal_Intelligence_System/09_Procurement_and_Commercial_Law/FLIS-0900 - Procurement and Commercial Law|FLIS-0900]] — official PH advertising, online-offer, direct-marketing/privacy and engineering-professional source register with applicability/reviewer gate.
+- [[14_FDG_Service_Intelligence_System/08_Service_Economics/FSvIS-ECO-0002 - Cost Pricing and Margin Model|FSvIS-ECO-0002]] — first-pilot contribution and founder-hour economics. Marketing likes and modeling are not collected revenue or realized ROI.
+
+**These are internal draft/operational knowledge upgrades only**; no actual agent deployed, advertisement published, revenue/customer generated, code tests run or professional approvals granted.
