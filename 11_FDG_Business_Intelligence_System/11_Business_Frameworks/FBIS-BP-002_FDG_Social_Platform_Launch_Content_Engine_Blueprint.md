@@ -837,3 +837,33 @@ Compounding Launch Capability
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_03_Social_Content_Batch_Automation_and_Platform_Launch|Source Transcript Analysis]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS Master Index]] → [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/11_Business_Frameworks_Master_Index|Business Frameworks Master Index]] → this document
+
+## 2026-10-19 — Public marketing claim ledger and release guardrail
+
+A campaign must be **claim-safe before creative production and again immediately before publish**, not merely well-designed. Follow the existing FBIS launch-content architecture, with [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-003_FDG_First_Payout_Commercial_Validation_Portfolio|BP-003 per-offer evidence and first-payout priorities]], [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|dated functional evidence]], and [[13_FDG_Legal_Intelligence_System/09_Procurement_and_Commercial_Law/FLIS-0900 - Procurement and Commercial Law|FLIS review]].
+
+### Pre-publication claim object (extend existing content evidence pack; not new database)
+
+Record **campaign/content/version/channel/date; offer ID; exact claim text; target audience; claim type; exact product/release/branch version; evidence location/hash and date; claim owner; approving Engineering/Service/Commercial/Legal reviewer where relevant; constraints and exclusions prominently visible; expiry/review condition; final human approval; publication URI and correction log**.
+
+**Claim categories and release decisions:**
+
+| Claim | Minimum evidence and safe handling |
+| --- | --- |
+| "Available now" / "works offline" / "secure multi-user" / "supports N buildings" | Exact running build, reproducible workflow, security/role/offline tests and release authorization for the *same* offered version. Do not infer from architecture or mockup. |
+| "Saves 30% time" / "reduces energy by 20%" / "ROI in 3 months" | Traceable user-specific or representative baseline, comparison period, sample, calculations, uncertainty, method and independent challenge. No universal performance claims from scenarios. |
+| "AI-powered" / "automatically analyzes drawings" / "24/7 monitoring" | Demonstrated, production-authorized capability with error/unknown handling; project preference is **FDG-powered**, and no implied autonomous engineering approval. |
+| "Trusted by", customer logo, testimonial, "5 clients" | Real consented customer, scope and current verifiable permission, no synthetic testimonial or anonymous fake quotation. |
+| "50% off", "only 5 slots", limited-time offer | Current approved offer ID and legitimate reference price/price history, real availability/cap, clear terms, DTI promotion-permit review **where applicable**. Founding Five cap is a hypothesis; do not publish until independently verified and legally reviewed. |
+| "PME", professional engineering certification, statutory compliance, fire pump pass | Verified applicable current PRC registration/authority and valid engineering evidence; no examination result alone treated as license, no blanket statutory compliance claim. |
+| Demo video, polished dashboard, sample report, CGI/AI-generated visual | Persistent label **CONCEPT / SAMPLE SYNTHETIC DATA / PROTOTYPE / DEMO** in image/video and caption as appropriate; do not hide behind hover tooltip, music or fast transitions. Never show fake telemetry as actual live plant data. |
+
+**Hard stops:** no invented ROI, claimed paid customers, license, customer approval, current product capability, product price or comparative superiority; no before/after visuals that imply real data unless the client case is authentic and cleared; no bot-generated testimonials; no unapproved security promises; no model hallucination published as legal or engineering authority; no fabricated "first five" countdown.
+
+**Claim approval flow:** CMO drafts → owner verifies exact source/current build → Engineering validates technical figures → Commercial/Finance validate prices and offer capacity → FLIS/qualified reviewer assesses regulated claims, advertising, professional scope and privacy → authorized human publishes/dispatches → retain public URL/screenshot and correction path. Any missing evidence → **HOLD / REWRITE TO LIMITED FACTUAL CLAIM**; a marketing deadline does not override the release gate.
+
+**Compliance research references (2026-10-19; legal applicability still subject to FLIS review):** Philippine RA 7394, Article 110 (misleading ads and material omissions); RA 11967, Section 23 (digital goods/services as advertised) and DTI 2024 IRR; NPC DPA direct-marketing privacy notice and basis; RA 8495/PRC professional boundaries. See source URLs/interpretation and review triggers in [[13_FDG_Legal_Intelligence_System/09_Procurement_and_Commercial_Law/FLIS-0900 - Procurement and Commercial Law|FLIS commercial-law note]].
+
+**Performance:** optimize **verified qualified buyer conversations, accepted offers, collected-and-delivered contribution and useful referrals**, not views, volume, follower count or content impressions alone. A goal like millions of followers in 3 months is an aspiration, **not an evidenced forecast or justification for unverified claims**. At least 10 related hashtags may be a creative preference; check their accuracy and relevance, never use misleading/hijacked hashtags or treat tags as acquisition proof.
+
+**Publication automation remains uncommissioned until platform credentials, explicit channel permission, tested moderation, privacy/opt-out, rate rules, idempotency and rollback are validated.**
