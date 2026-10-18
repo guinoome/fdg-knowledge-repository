@@ -342,3 +342,37 @@ The 817-line user-supplied founder-leverage transcript extends **how to scale a 
 **Commercial measure added to the first-payout learning view:** actual founder minutes on each engagement, reviewer time, corrections/support, transfer effort, qualified operator acceptance, net founder time recovered, and founder decision interruptions. These complement—not replace—the existing cash collection, accepted delivery, full cost and renewal metrics. Record missing data as unknown.
 
 **Decision constraints:** Any speaker-described 0–100K/100–300K/300K–1M/1–3M+ amounts mix personal income and revenue without reliable units. The transcript's numerical AI benefits and claimed business outcomes are unverified anecdotes and must not become FDG pricing or forecasts. Actual third-party data access must be consented and enforced at retrieval, not by prompt-only “sanitization.” Reuse existing 20/5/2/1 30-day target; the playbook's additional 90-day transfer phase is a **conditional, not yet launched hypothesis**. No actual customer, paid pilot, implementation authorization or deployment is established by this documentation.
+
+## 18. Resource-Aware First Income Before Platform Expansion — 2026-10-19
+
+**Founder outcome:** Convert FDG's existing engineering competence and functioning software into **verified, sustainable personal/business cash generation**, using a deliberately small incremental cash budget and preserving financial security. Avoid storing private personal financial circumstances or family details in this public repository. No new product, SaaS, data pipeline, agent hierarchy, pricing promise or paid external action is authorized by this knowledge update.
+
+### Commercial truth: paid service → repeatable process → low-touch product
+
+- **First paid transaction:** cash actually settled into the authorized FDG business account, matched to accepted scope and legitimate customer; prospect interest, quote or demo ≠ revenue.
+- **Contribution margin:** collected revenue minus directly attributable variable costs, payment/transaction fees and delivery/rework/support cash costs. Account separately for founder/operator hours rather than describing service time as free. Unknown cost → margin UNKNOWN.
+- **Repeatability:** same bounded customer outcome delivered more than once with measured effort, defects and accepted quality; do not generalize from one payment.
+- **Recurring revenue:** repeated verified collection for renewed delivery; not yet passive if each cycle requires considerable engineering effort.
+- **Low-touch / passive-like revenue candidate:** only after repeated customer payment, lawful licensing/support model, tested automated delivery and recovery, clear ongoing maintenance burden, and measured declining founder effort. No guaranteed passive income claim.
+- **Scale:** only with real demand, data/privacy/security, qualified technical reviewer, permission, support capacity, and net-positive operating economics.
+
+### Incremental-cash spending gate
+
+Until the first verified paying customer and measured acceptable unit economics, **prefer existing FDG assets, free/reusable local-first tooling and direct customer validation** over new cloud commitments, paid ads, new subscriptions, arbitrary model upgrades, parallel SaaS builds or speculative infrastructure. This is a priority, not an unapproved universal ban on essential risk/safety spending.
+
+For any proposed paid tool/AI tier/provider, record: specific customer outcome blocked without it; cheaper existing alternative; one controlled before/after test; ongoing cost and cancellation/export path; authorized spending limit; observed net business benefit and who approved. **A subscription is an operating expense, not a success metric or a duty to an AI.** Never spend or commit on the founder's behalf without explicit authority.
+
+### Existing two P0 lanes; no unnecessary new build
+
+1. **Maintenance Evidence & Monthly Engineering Reporting**: one qualified prospect → approved narrow quote → one paid consented service cycle → accurate engineering-reviewed report → client acceptance → measure cash, full delivery burden and renewal desire. Owner: [[14_FDG_Service_Intelligence_System/02_Service_Portfolio/Operations_and_Maintenance_Services/FSvIS-OM-0001 - Maintenance Evidence and Monthly Engineering Reporting Service|FSvIS-OM-0001]]; operator charter [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/19_Pilot_001_Maintenance_Reporting_Commercial_Execution_Charter|Pilot 001]]. Scope and previously documented pricing **remain hypotheses**, not realized income.
+2. **Construction Management / QTO offline professional packs**: preserve existing tested candidates; qualified-user validation and honest demonstration → one approved paid license/order if lawful and ready → measured support/rework → repeatable digital distribution. No "fully automated passive income" claim until proven and no cross-over engineering certification by implication.
+
+**One decision per proposed enhancement:** Does it protect correctness/safety, eliminate a measured customer blocker, improve a verified paid outcome, or measurably reduce cost/time **without harming the user**? If not, defer and keep it as an uncommitted idea.
+
+### Minimum evidence on each pilot (reuse existing registers)
+
+Record actual quote acceptance, verified paid amount/date, direct cash costs, founder hours, reviewer hours, number of revisions, client-accepted deliverable, follow-up/support burden, next payment, and source-backed client value. Compare **net contribution per founder hour** over successive cycles; it is not a salary, profit tax computation or market forecast. If data is missing, mark UNKNOWN, not zero.
+
+**Four-question professional challenge:** Before scaling, have an independent reviewer answer what was overlooked, which primary evidence was used, what tools/methods were applied, and what external proof shows the customer outcome and cash economics are correct; see [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0500 - Project Audit|FAIS professional challenge]].
+
+**Knowledge-only state:** no new product, paying customer, transaction, revenue, running agent or completed field audit established by this addition. Existing first-payout scope, statuses and approvals remain in force.
