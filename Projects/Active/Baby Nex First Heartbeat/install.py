@@ -11,7 +11,8 @@ from local_nex import (KINDS, WORKSPACE, VERSION, NexError, Ollama, Runtime,
 from portable import exclusive_file, linked, mkdirs
 
 APP_FILES = ('nex.py', 'local_nex.py', 'portable.py', 'install.py', 'README.md',
-             'WINDOWS_QUICKSTART.md', 'Start Nex.cmd', 'Check Nex.cmd')
+             'WINDOWS_QUICKSTART.md', 'Start Nex.cmd', 'Check Nex.cmd',
+             'diagnose.py', 'Diagnose Nex.cmd')
 
 
 def prepare_workspace(root):
@@ -108,11 +109,23 @@ runpy.run_path(str(app / 'local_nex.py'), run_name='__main__')
     else:
         exclusive_file(bootstrap, bootstrap_content)
     launcher = home / 'Start Nex.cmd'
-    launcher_content = b'@echo off\r\nsetlocal DisableDelayedExpansion\r\nset PYTHONUTF8=1\r\npy -3 -B "%~dp0start_nex.py" %*\r\nif errorlevel 1 pause\r\n'
+    previous_launcher = b'@echo off\r\nsetlocal DisableDelayedExpansion\r\nset PYTHONUTF8=1\r\npy -3 -B "%~dp0start_nex.py" %*\r\nif errorlevel 1 pause\r\n'
+    launcher_content = (b'@echo off\r\nsetlocal DisableDelayedExpansion\r\n'
+                        b'if defined FDG_NEX_CONSOLE_READY goto nex_body\r\n'
+                        b'set "FDG_NEX_CONSOLE_READY=1"\r\n'
+                        b'"%ComSpec%" /d /v:off /k call "%~f0" %*\r\nexit /b\r\n'
+                        b':nex_body\r\nset PYTHONUTF8=1\r\n'
+                        b'py -3 -B "%~dp0start_nex.py" %*\r\nif errorlevel 1 pause\r\n')
     legacy_launcher = b'@echo off\r\npy -3 -B "%~dp0start_nex.py" %*\r\nif errorlevel 1 pause\r\n'
     if launcher.exists():
-        if launcher.read_bytes() not in (launcher_content, legacy_launcher) or linked(launcher):
+        if launcher.read_bytes() not in (launcher_content, previous_launcher, legacy_launcher) or linked(launcher):
             raise NexError('Existing Windows launcher differs; refusing to overwrite it')
+        if launcher.read_bytes() != launcher_content:
+            backups = mkdirs(home / 'launcher-backups')
+            exclusive_file(backups / (str(uuid.uuid4()) + '.cmd'), launcher.read_bytes())
+            replacement = home / ('launcher-' + str(uuid.uuid4()) + '.tmp')
+            exclusive_file(replacement, launcher_content)
+            os.replace(replacement, launcher)
     else:
         exclusive_file(launcher, launcher_content)
     runtime = Runtime(repository, home / 'state', config['model'], config['endpoint'])

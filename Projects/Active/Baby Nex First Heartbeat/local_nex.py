@@ -16,7 +16,7 @@ import uuid
 import nex
 from portable import checked, exclusive_file, linked, mkdirs, read_bytes
 
-VERSION = '0.2.0'
+VERSION = '0.2.1'
 WORKSPACE = 'Projects/Active/Baby Nex First Heartbeat/workspace'
 KINDS = {'artifact': 'artifacts', 'capture': 'captures', 'decision': 'decisions'}
 IGNORED = {'.git', 'node_modules', '.obsidian', '.agents', '.claude', '.codex',

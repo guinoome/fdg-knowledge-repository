@@ -275,6 +275,30 @@ class LocalNexTests(unittest.TestCase):
         self.assertIn('FPJIS', process.stdout)
         self.assertIn('saved work', process.stdout.casefold())
 
+    def test_known_old_launcher_is_backed_up_on_upgrade(self):
+        home = self.base / 'older-installation'
+        with patch.object(app.Ollama, 'models', return_value=[]):
+            install.install(self.root, home)
+            launcher = home / 'Start Nex.cmd'
+            legacy = b'@echo off\r\npy -3 -B "%~dp0start_nex.py" %*\r\nif errorlevel 1 pause\r\n'
+            launcher.write_bytes(legacy)
+            install.install(self.root, home)
+        backups = list((home / 'launcher-backups').glob('*.cmd'))
+        self.assertEqual(len(backups), 1)
+        self.assertEqual(backups[0].read_bytes(), legacy)
+        self.assertNotEqual(launcher.read_bytes(), legacy)
+
+    def test_unknown_custom_launcher_is_preserved(self):
+        home = self.base / 'custom-installation'
+        with patch.object(app.Ollama, 'models', return_value=[]):
+            install.install(self.root, home)
+            launcher = home / 'Start Nex.cmd'
+            content = b'@echo user-owned custom launcher\r\n'
+            launcher.write_bytes(content)
+            with self.assertRaisesRegex(app.NexError, 'differs'):
+                install.install(self.root, home)
+        self.assertEqual(launcher.read_bytes(), content)
+
     def test_portable_reader_rejects_traversal_and_junction_attribute(self):
         with self.assertRaises(ValueError):
             portable.read_bytes(self.root, r'..\private.md')

@@ -1,6 +1,6 @@
 # Nex local runtime — current handover
 
-Updated: 2026-10-18 Asia/Taipei. Version: 0.2.0.
+Updated: 2026-10-18 Asia/Taipei. Version: 0.2.1.
 
 ## Objective and authority
 
@@ -35,11 +35,17 @@ Single-user local account boundary; no hostile same-user concurrent filesystem m
 
 ## Remaining acceptance
 
+**Current blocker:** the user subsequently confirmed they had only the ZIP and then reported “all auto close” while trying to launch the extracted files. Installation is not verified. The outstanding diagnostic question asks for the exact output of `call "Install Nex.cmd"` from an already-open Command Prompt in the extracted Nex directory. No error text has been supplied yet.
+
+**v0.2.1 troubleshooting change:** all distributed Windows launchers and the installed launcher now open a persistent `cmd /d /v:off /k` console, so the shell remains available after a startup failure. `Diagnose Nex.cmd` runs a standard-library diagnostic that reports Python version, missing package files, expected installation file presence and sanitized configuration-path checks; it reads no vault content and makes no model request. A diagnostic JSON copy is saved to the user's temporary directory. Known former generated launchers are backed up before replacement; custom launcher edits are preserved. This improves error visibility, not proof that the underlying Windows failure is fixed. Native Windows execution is unavailable in the cloud and still needs the user's result.
+
+**v0.2.1 validation:** 39 Python tests passed, zero skips, including the original runtime tests plus diagnosis of missing/malformed installation metadata, filtering of unrelated private configuration fields, preservation of customized launchers and backup of known old generated launchers during upgrade. The actual transfer ZIP was extracted and its diagnostic entry point correctly reported a deliberately missing installation, intact package checksums and a saved report. Installing from that extracted ZIP and opening/exiting the Python runtime also passed in Linux. These are not native Windows CMD results. The current download is `/workspace/Nex-Windows-0.2.1.zip`; the user has been directed to extract it and run `Diagnose Nex.cmd`.
+
 **Latest concrete Windows evidence (2026-10-18):** the user supplied a Windows “Location is not available” screenshot for `C:\Users\FraNc!s\AppData\Local\FDG\Nex\`. The expected default installation location is therefore unavailable. Earlier installation/answer replies were user reports, not inspected output; do not treat them as proof that this installation exists. An alternate installation location, an incomplete install, or a missing download still needs diagnosis. The user has been asked whether Downloads contains the extracted `Install Nex.cmd`, only the ZIP, or neither. Locate the actual package and inspect the installer result before resuming model or persistence acceptance. No application-code defect is established by this screenshot.
 
 **User-reported Windows progress:** the founder replied, “Installed; I can open Nex,” then confirmed, “It answers and cites FDG sources.” Installation, launch and source-backed answers on the target computer are therefore reported successful by the user. Raw `/doctor` output and the generated answer were not supplied; do not describe them as directly inspected. For the note/restart test, the user said, “I have not tried this yet.” The remaining question now asks for one confirmed note, exit/reopen, `/memory` and `/recall` returning the original sentence. Do not repeat installation or model-setup questions without a new failure. The transferred executable source was committed as `09cd44b50f9e21c66bb8e13a6b43c7f8a76ce05c` on the remote `codex/nex-local-runtime` branch.
 
-1. Windows installation and launch: user reported success; retain the actual vault/readiness details when supplied.
+1. Locate the extracted package and obtain a visible installer/diagnostic result; the concrete missing-path and closing-window evidence takes precedence over earlier success selections.
 2. Start Nex and verify a confirmed note survives exit/reopen using /memory and /recall.
 3. Source-backed answers: user reported success. Obtain raw diagnostics only if a specific failure needs investigation.
 4. Inspect readiness/error output from that Windows machine and fix any remaining platform or installation problem.

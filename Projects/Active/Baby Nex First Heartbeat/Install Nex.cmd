@@ -1,5 +1,10 @@
 @echo off
 setlocal DisableDelayedExpansion
+if defined FDG_NEX_CONSOLE_READY goto nex_body
+set "FDG_NEX_CONSOLE_READY=1"
+"%ComSpec%" /d /v:off /k call "%~f0" %*
+exit /b
+:nex_body
 set PYTHONUTF8=1
 py -3 -c "import sys; assert sys.version_info.major == 3 and sys.version_info.minor in range(10,100)" >nul 2>&1
 if errorlevel 1 (

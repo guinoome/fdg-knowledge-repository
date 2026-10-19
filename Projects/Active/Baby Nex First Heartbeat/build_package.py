@@ -10,7 +10,7 @@ from local_nex import VERSION
 
 FILES = (*APP_FILES, 'Install Nex.cmd', 'Set Up Local AI.cmd', 'build_package.py',
          'BUILD_CARD.md', 'LOCAL_BUILD_CARD.md', 'CURRENT_HANDOVER.md',
-         'tests/test_nex.py', 'tests/test_local_nex.py')
+         'tests/test_nex.py', 'tests/test_local_nex.py', 'tests/test_diagnose.py')
 
 
 def build(output, source=None):

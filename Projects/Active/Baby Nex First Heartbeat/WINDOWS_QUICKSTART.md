@@ -29,6 +29,8 @@ Back up both your vault and `%LOCALAPPDATA%\FDG\Nex\state`. Chat history and cap
 
 ## Check or troubleshoot
 
+For disappearing windows, use the v0.2.1 package: its launchers open a persistent Command Prompt with AutoRun disabled and delayed expansion off. If Python fails, or a batch command reports an error, the console stays open. Type `exit` when finished. **Diagnose Nex.cmd** checks the Python launcher, extracted package files and expected installation/configuration. It makes no model request and reads no vault content; it saves a small diagnostic JSON report in your temporary directory. Share the displayed result or a screenshot, rather than private state databases.
+
 - `/doctor` reports the actual vault, saved-work directories and local model status.
 - `/refresh` updates discovery after vault edits. Edited stale indexed sources are withheld until refreshed.
 - `Check Nex.cmd` performs a fresh readiness check. `NOT_FOUND` for `/fpjis` means no eligible approved architecture was found; it is not a missing-program error. Nex does not fabricate approval metadata.

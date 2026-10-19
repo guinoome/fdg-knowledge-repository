@@ -1,5 +1,10 @@
 @echo off
 setlocal DisableDelayedExpansion
+if defined FDG_NEX_CONSOLE_READY goto nex_body
+set "FDG_NEX_CONSOLE_READY=1"
+"%ComSpec%" /d /v:off /k call "%~f0" %*
+exit /b
+:nex_body
 set PYTHONUTF8=1
 where ollama >nul 2>&1
 if errorlevel 1 (
