@@ -11,3 +11,7 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 ## Future tool references — 2026-10-21
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS_FUTURE_AGENT_TOOL_REFERENCES_2026-10-21|Seven agent-tool references from founder video]] — potential FDG uses, source limits and evaluation gates; retained for future consideration, not adopted or tested.
+
+## Coding collaborator skill candidates — 2026-10-21
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS_CODING_SKILL_CANDIDATES_2026-10-21|Five requested coding capabilities]] — session memory, context compression, setup recommendations, model routing and reviewed skill learning; candidates, not installed or integration-tested.
