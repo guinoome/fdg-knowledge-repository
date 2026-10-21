@@ -71,3 +71,7 @@ Experiment framework: compare countdown vs non-countdown hooks, 10/30/60-second 
 - Existing owner/source: [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|FBIS launch-content blueprint]]. FWAIS owns orchestration; FDG Creative Studio/FCMIS provides creative production; engineering/domain owners validate claims; FBIS measures commercial outcomes. No separate system or replacement blueprint is warranted.
 - Next useful bounded outcome remains the existing Slice 1: one source-backed reviewed engineering short and two hook variants, with export and acceptance evidence. Use only the necessary generation adapter rather than calling every provider for every item. Publishing stays subject to the recorded authority/approval gate; verify public receipt before marking published.
 - No template was downloaded, service installed, provider invoked, workflow deployed or social account contacted by this review. This addition preserves source context and does not authorize implementation or publishing.
+
+## Source review — content-team-agents, 2026-10-21
+
+- [[FCMIS/FCMIS-REF-Content-Team-Agents-2026-10-21|Source-reviewed content team and draft-skill reference]] — selective reuse, MIT notices, missing runtime, conflicting approval text and FDG adaptation boundaries; not installed.
