@@ -1,6 +1,6 @@
 ---
 document_id: FMCIS-REF-SKILLS-20261021
-status: Founder-requested capabilities; preliminary candidate assessment; not installed or integration-tested
+status: Two portable skills saved to ChatGPT Work Skills; native CLI installation and automatic activation pending
 owner: FMCIS
 created: 2026-10-21
 supersedes: none
@@ -50,3 +50,22 @@ Before any implementation, verify exact upstream commit, relevant license/depend
 - [[04_Knowledge_Management/FDG-HIST-0001 - Historical Conversation and Reference Reconciliation Handover 2026-10-19|Source reconciliation]] — wider historical recovery remains partial.
 
 **Handover:** delegated documentation worker preserved this candidate assessment; exact-scope documentation checks cover added wikilinks, inbound navigation and main readback. No application/integration tests or qualified acceptance are claimed. Next action: select one capability for a named work package and verify a bounded implementation in its actual host.
+
+## Compatible skill installation — founder authorization 2026-10-21
+
+The founder requested adding these skills to Codex and Claude where compatible. A delegated worker saved **Task Observer** and **Claude Automation Recommender** to the user's Git-backed ChatGPT Work Skills workspace, not merely to scratch. The latter advises Claude Code configuration even when invoked by Codex; it does not make Claude hooks run on Codex.
+
+| Saved skill | Pinned upstream | Installed boundary |
+| --- | --- | --- |
+| `task-observer` | rebelytics/one-skill-to-rule-them-all at `3463c7c9cd2a2c2745af09c742100ad0b1465a68`, version 3.7.0 | Complete procedure, references and helper scripts retained; frontmatter normalized, host/provenance note and explicit-invocation metadata added. CC BY 4.0 attribution retained. |
+| `claude-automation-recommender` | anthropics/claude-plugins-official at `d1adba47161a271799de7b548225d929310046bd` | Official read-only procedure/references retained; Claude-only frontmatter tool restriction removed, host/provenance note and explicit-invocation metadata added. Apache-2.0 LICENSE bundled. |
+
+Saved via separate successful pushes; final backend-materialized snapshot `38519a9e5a971ae6ecf9cc9c963c7df263f4c0ee`. Stored identities: `skill-6ad81e0ed7608191a1aaad8fd54a7f06` (advisor) and `skill-6ad81e7838148191ae5592b32f2d8fa2` (observer). Readback matched both procedure bodies and all 20 supporting reference/script files; explicit invocation remained disabled by default for implicit selection. Both Codex-format validators passed; upstream observer helper selftests passed 104/104. This does not prove a new session loads them automatically, persistent observation logging or improved project outcomes.
+
+**Use:** invoke `$task-observer` or `$claude-automation-recommender` in a new session after skill discovery refresh. No automatic capture, observation workspace, scheduler, provider, telemetry proxy or routing service was enabled.
+
+**Native host boundary:** this execution environment has neither a `codex` nor a `claude` executable and no connected personal Claude skills directory. Installation on the founder's own Codex CLI/Claude Code machine remains pending; do not describe cloud Skills saving as a personal-computer installation.
+
+**Claude Code install route on the actual machine:** use `/plugin install claude-code-setup@claude-plugins-official` for the official advisor. For a pinned file install, clone the upstream repositories, checkout the exact commits above, then copy Task Observer's `SKILL.md`, `references/` and `scripts/` together into `~/.claude/skills/task-observer/`; copy the official plugin's `plugins/claude-code-setup/skills/claude-automation-recommender/` into `~/.claude/skills/claude-automation-recommender/`. Preserve license/source notices; compare and back up any existing destination before writing. Configure a stable observation workspace and activation only on that real host, then verify in a fresh session. The portable saved versions deliberately remain manually invoked.
+
+**Not installed:** claude-mem (memory service/hooks), Headroom (context proxy/MCP/runtime) and OmniRoute (provider gateway). These are not standalone procedural skills; native runtime, capture/privacy, telemetry and provider configuration must be verified in the actual target host. No credentials or paid model routes were changed. This installation update supersedes the earlier assessment's no-installed-skill statement only for the two saved portable skills.
