@@ -49,3 +49,7 @@ FPIS analyzes these measures to understand and improve the platform. Financial t
 - Where should engineering resources be invested?
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/04_Platform_Performance_Value_Intelligence/00_Index|00 Index]] → this document
+
+## Source-backed performance optimization contract — 2026-10-22
+
+See [[17_FDG_Platform_Intelligence_System/04_Platform_Performance_Value_Intelligence/02_FDG_Evidence_Led_Application_Performance_Optimization|FPIS-PERF-0001 — Evidence-Led Application Performance Optimization]]. Use measured user task, p50/p95 and comparable baseline/after evidence before choosing caches, indexes, lazy loading, code splitting, CDN, pooling or load balancing. No "automatic best practices" that compromise tenant privacy, engineering records, offline sync, accessibility or reliability. This does not change FPIS's existing metrics ownership.
