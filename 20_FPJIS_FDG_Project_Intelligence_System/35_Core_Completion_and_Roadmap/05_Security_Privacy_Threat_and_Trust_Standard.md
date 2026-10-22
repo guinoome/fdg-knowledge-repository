@@ -178,3 +178,7 @@ Automation/model use must define:
 - [[12_FDG_Security_Intelligence_System/README|FSIS]]
 - [[12_FDG_Security_Intelligence_System/09_Audit_Traceability/FSIS-0900 - Audit and Traceability Master Index|FSIS Audit & Traceability]]
 - [[22_FDG_Audit_Intelligence_System/15_Evidence_and_Traceability/FAIS-EVT-1500 - Evidence and Traceability Framework|FAIS Evidence & Traceability]]
+
+## Customer-data release proof — 2026-10-23
+
+In addition to existing approved FPJIS security requirements, affected customer/private-data applications must include CDB-01–10 from [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Data Breach Prevention and Recovery Release Gate|FSIS-0804 Client Data Security Gate]] in their project-specific acceptance package, with actual authorization/DB/storage tests, owner/classification, recovery proof and independent security review. Missing material tests block affected customer-facing release; documents do not authorize live Supabase policy fixes or incident actions. Security owner FSIS; project release owner FPJIS.

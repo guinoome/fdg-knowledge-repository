@@ -39,3 +39,14 @@ Canonical sources: [Knowledge Capture](../blob/main/04_Knowledge_Management/KNOW
 - **Secrets, logs, attachments, webhook/payment handling and dependency changes reviewed (or N/A):**
 - **Independent reviewer, residual/blocking risk and exact release decision:**
 - **Source reference:** [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0803 - Agent Generated App Security Verification and Acceptance Pack|FSIS-0803]]. This is a **review aid only**; not automated GitHub CI/branch enforcement. A no-findings automated scan is not proof of security.
+
+## Client data prevention and recovery verification — 2026-10-23
+
+- **FSIS-0804 CDB-01–10 applicable / N/A / blocked with evidence:**
+- **Anonymous, wrong tenant, branch, role, revoked-session and API/storage tests actually run:**
+- **If Supabase: GRANTs, RLS, views/RPC/storage access tests, environment and results:**
+- **Secrets/redacted logs, signed payments, backup and isolated restore evidence:**
+- **Independent reviewer, residual risk, human release decision and rollback:**
+- **Gate:** SECURITY_RELEASE_BLOCKED / TESTED_CANDIDATE / OWNER_APPROVED_WITH_EVIDENCE.
+
+See [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Data Breach Prevention and Recovery Release Gate|FSIS-0804 Client Data Security Gate]]. PR template is not automated branch protection or a running test.
