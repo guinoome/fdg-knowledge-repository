@@ -91,3 +91,7 @@ GitHub commit and rollback:
 6. No automatic publishing, new subscription spend, CI privilege expansion or production deployments from this documentation.
 
 **Status at creation:** Source and installation paths inspected and recorded; GitHub directive prepared. Neither workstation installation nor UI test execution was performed in this authoring session.
+
+## Automatic installation handover — founder extension 2026-10-22
+
+Founder refinement: Claude Code, Codex and other suitable agents must **proactively attempt the reviewed project-local installation** upon beginning a UI/full-stack task, not only instruct the founder how to do so. The execution contract is [`tools/ui-ux-pro-max/AUTO_INSTALL_HANDOVER.md`](../../../tools/ui-ux-pro-max/AUTO_INSTALL_HANDOVER.md), with audited-pattern idempotent Python runner `tools/ui-ux-pro-max/bootstrap.py`, version pin `ui-ux-pro-max-cli@2.15.0`, per-agent platform selection, and machine-readable UX_P0_VERIFIED/BLOCKED result. Project-local installation is user-requested; host permissions and supply-chain boundaries still apply, and no background execution is possible through GitHub text. Supplied ui-ux-pro-max-skill.com website explicitly identifies itself as an unofficial translation; continue to prefer the canonical Next Level Builder repository and published npm package. This extension does not override the FPIS premium/engineering truth acceptance contract.
