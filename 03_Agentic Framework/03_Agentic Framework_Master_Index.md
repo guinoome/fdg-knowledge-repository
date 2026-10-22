@@ -62,3 +62,8 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## 2026-10-19 — Direct specialist onboarding
 
 - [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09#2026-10-19 — Direct onboarding of reusable specialist roles|Direct onboarding requirements for CFO, CMO, Customer Service and Sales]] — founder-directed reuse of role packages, approved knowledge, scoped tools, historical tests, sign-off, monitoring and measured accepted outputs. Includes the sampled-video evidence boundary. Requirements recorded; no workers commissioned or schedules activated.
+
+
+## External Claude/Codex skill candidates — 2026-10-22
+
+- [[03_Agentic Framework/FDG_EXTERNAL_SKILLS_CLAUDE_CODEX_CANDIDATES_2026-10-22|Alireza Rezvani claude-skills — selective skill intake and future installation gate]] — sourced from the user's Oct 22 video, upstream repository and manifest; source reviewed, not installed, no bulk import. Related first video names remain unverified intake only.
