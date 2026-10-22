@@ -20,3 +20,7 @@
 - [[Projects/Active/FDG Business Platform/docs/UNIFIED_PLATFORM_VISUAL_FIDELITY_LEDGER|FDG Business Platform Unified Hub Visual Fidelity Ledger]] *(Validated Prototype 2026-09-10 — concept-to-browser comparison and quality-gate evidence)*
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|00 FPI Home]] → this document
+
+## UI UX Pro Max mandatory skill prerequisite — 2026-10-22
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/07_UI_UX_Pro_Max_Mandatory_Skill_Adoption_and_Experience_Gate|FPIS-UX-0007 — UI UX Pro Max Mandatory Skill Gate]] — founder-directed mandatory skill installation/verification for Claude Code, Codex and suitable FDG UI collaborators before new frontend/full-stack work. MIT-licensed source `nextlevelbuilder/ui-ux-pro-max-skill` evaluated; workstation install and UI regression tests still pending. **FPIS-MANDATE-0001 remains authoritative**, not the upstream style library.

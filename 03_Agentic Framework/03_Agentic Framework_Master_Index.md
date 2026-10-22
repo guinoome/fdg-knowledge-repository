@@ -80,3 +80,7 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 
 - [[.agents/FDG_CODEX_PREBUILD_INSTALL_HANDOVER_2026-10-22|Codex Mandatory Skills and Provider Verification P0 Handover]] — founder-directed counterpart to Claude Code P0, with Codex-native skill and executable tests; Free Claude Code gateway optional on compatible, separately approved configurations, no installed runtime implied.
 - [[.agents/skills/fdg-codex-prebuild-check/SKILL|fdg-codex-prebuild-check]] — Codex project-scope instruction-only acceptance checklist, not a vendor installer.
+
+## Mandatory UI UX Pro Max design skill — 2026-10-22
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/07_UI_UX_Pro_Max_Mandatory_Skill_Adoption_and_Experience_Gate|FPIS-UX-0007 — UI UX Pro Max Mandatory Skill Gate]] — cross-collaborator founder-mandated pre-build skill for new FDG interfaces; Claude Code and Codex P0 handovers updated. Verified official external source and install contract only; workstation installation/acceptance outstanding.

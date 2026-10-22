@@ -202,3 +202,7 @@ Finish: run functional checks → review mobile and desktop → capture and comp
 Before every major decision ask whether it advances premium experience, functionality, credibility, attraction/conversion/retention/expansion, protected truth, and reuse. If not, reconsider it.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS Home]] → [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|Platform Experience & Design Intelligence]] → this mandate
+
+## UI UX Pro Max tooling prerequisite — 2026-10-22
+
+The founder requires `ui-ux-pro-max` as a mandatory pre-build, verified local skill for Claude Code, Codex and compatible collaborators doing FDG new UI/full-stack interface work. The canonical selective-install and acceptance handover is [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/07_UI_UX_Pro_Max_Mandatory_Skill_Adoption_and_Experience_Gate|FPIS-UX-0007 — UI UX Pro Max Mandatory Skill Gate]]. **This augments, but does not replace, FPIS-MANDATE-0001**: intentional domain-native premium UI, role-specific dashboards, verified engineering/business truth, responsive/mobile/offline, hero/glass directions where already approved, and functional testing outrank any external style recommendation. Installation without working proof is not acceptance; no external tooling can authorize code rewrites/deployment by itself.
