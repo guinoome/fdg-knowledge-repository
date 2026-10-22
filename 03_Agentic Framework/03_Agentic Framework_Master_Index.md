@@ -75,3 +75,8 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## Claude Code pre-build installation handover — 2026-10-22
 
 - [[.claude/FDG_CLAUDE_CODE_PREBUILD_INSTALL_HANDOVER_2026-10-22|Claude Code Mandatory Skills and Provider Gateway P0 Handover]] — Founder-directed: prepare and verify approved core skills, relevant third-party skills and optional-proxy installation on the user's workstation **before new coding work**; blocked installs are reported, never faked. No runtime or production authorizations.
+
+## Codex pre-build installation handover — 2026-10-22
+
+- [[.agents/FDG_CODEX_PREBUILD_INSTALL_HANDOVER_2026-10-22|Codex Mandatory Skills and Provider Verification P0 Handover]] — founder-directed counterpart to Claude Code P0, with Codex-native skill and executable tests; Free Claude Code gateway optional on compatible, separately approved configurations, no installed runtime implied.
+- [[.agents/skills/fdg-codex-prebuild-check/SKILL|fdg-codex-prebuild-check]] — Codex project-scope instruction-only acceptance checklist, not a vendor installer.

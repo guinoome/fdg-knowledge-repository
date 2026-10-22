@@ -1,5 +1,9 @@
 # FDG Codex Repository Entry Protocol
 
+## P0 mandatory Codex workstation setup before FDG coding — 2026-10-22
+
+**FOUNDER DIRECTIVE — START HERE WHEN CODEX OPENS THIS REPOSITORY.** Before starting a **new FDG implementation work package**, follow [`.agents/FDG_CODEX_PREBUILD_INSTALL_HANDOVER_2026-10-22.md`](.agents/FDG_CODEX_PREBUILD_INSTALL_HANDOVER_2026-10-22.md): inspect existing native Codex environment and provider → restore missing previously approved Claudex skills → install and test only task-relevant reviewed third-party skills → assess the optional Free Claude Code gateway **only if compatible and expressly approved** → run a real coding smoke test on synthetic data → record verified P0 evidence. The repository-scoped review skill is `.agents/skills/fdg-codex-prebuild-check/SKILL.md` (invoke `$fdg-codex-prebuild-check` where available). **Do not begin new FDG feature coding until Codex P0 is VERIFIED or the founder explicitly approves a bounded alternative.** If required skills/approval are missing, report **P0 BLOCKED WITH EVIDENCE**; do not imply installation. Existing authenticated Codex models are valid if tested; **Free Claude Code is optional** and must not silently replace or downgrade the provider. Documentation, read-only research, incident response and resolution of the P0 block are allowed even before the gate. This is not authorization for unattended installers, credential changes, global config overrides, customer-data transfers, production/FPJIS build or deployment.
+
 This repository is governed organizational knowledge. Before substantial work, read `README.md`, `FDG Ecosystem.md`, `00_Nex/00_Master Index.md`, and the relevant system/project Master Index. Reuse or extend approved architecture before creating competing structures.
 
 ## Claudex cross-provider review
