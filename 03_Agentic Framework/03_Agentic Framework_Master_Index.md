@@ -67,3 +67,7 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## External Claude/Codex skill candidates — 2026-10-22
 
 - [[03_Agentic Framework/FDG_EXTERNAL_SKILLS_CLAUDE_CODEX_CANDIDATES_2026-10-22|Alireza Rezvani claude-skills — selective skill intake and future installation gate]] — sourced from the user's Oct 22 video, upstream repository and manifest; source reviewed, not installed, no bulk import. Related first video names remain unverified intake only.
+
+## Multi-provider coding gateway candidate — 2026-10-22
+
+- [[03_Agentic Framework/FDG_CLAUDE_CODE_PROVIDER_ROUTER_CANDIDATE_2026-10-22|Free Claude Code — Optional Claude/Codex Model-Routing Gateway Review]] — video-sourced external provider proxy at verified upstream SHA, AGPL-3.0-only; prepared Claude Code `/fdg-provider-gateway-review` project skill, **NOT installed or runtime-authorized**. Distinct from general skills marketplace intake.
