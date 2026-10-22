@@ -45,3 +45,7 @@ The installer checks out the **exact reviewed Git SHA** from an official upstrea
 The installer returns structured SOURCE_SETUP_VERIFIED / SOURCE_SETUP_BLOCKED evidence, **not** a runtime pass. Restart agent if skill discovery requires it. Check actual Node/Chrome dependencies for Taste, GSAP library when needed, local browser QA, keyboard and reduced-motion behavior, mobile + desktop layout, offline/error/loading states and FPIS acceptance. Report unrun tests accurately. If a required skill or browser capability fails, return VISUAL_TOOL_BLOCKED_WITH_EVIDENCE and do not fabricate success or begin unapproved new UI work.
 
 **No tool has access to the founder's workstation in this documentation session. Local installation is pending.**
+
+### Local offline tests before installation
+
+The bootstrap includes a source-level unittest file. Run: python -m unittest discover -s tools/visual-craft -p 'test_*.py'. These tests exercise fixed pin format, provenance tampering, check-only mode and no-overwrite behavior without making external network calls. Tests are provided for future local verification; this GitHub-only handover cannot attest that they ran on the founder's workstation.

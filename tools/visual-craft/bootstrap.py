@@ -104,8 +104,8 @@ def main(argv=None):
                                 raise RuntimeError("Source SKILL.md identity missing")
                             safe_tree(src)
                             dst.parent.mkdir(parents=True, exist_ok=True)
-                            shutil.copytree(src, dst)
                             created = True
+                            shutil.copytree(src, dst)
                             upstream_license = fetched[pack] / "LICENSE"
                             if upstream_license.is_file():
                                 shutil.copy2(upstream_license, dst / "FDG_UPSTREAM_LICENSE.txt")
