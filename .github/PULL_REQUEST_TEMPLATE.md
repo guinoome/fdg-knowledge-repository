@@ -30,3 +30,12 @@
 **Reviewer gate:** If a materially relevant source-to-requirement edge is unresolved, do **not** approve the *affected* build. Preserve unaffected accepted code. If functional acceptance is pending, report its true stage—not COMPLETE.
 
 Canonical sources: [Knowledge Capture](../blob/main/04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD.md) · [Requirements Views](../blob/main/20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard.md) · [Historic Coverage](../blob/main/04_Knowledge_Management/FDG-HIST-0001%20-%20Historical%20Conversation%20and%20Reference%20Reconciliation%20Handover%202026-10-19.md).
+
+## Security impact and reproducible negative tests
+
+- **Security scope:** `NONE (reason) / FSIS-0803 controls S01–S17 applicable: <IDs>`.
+- **Trust boundaries/roles affected (anon, customer, branch, admin, offline, service role):**
+- **Before/after allow-deny tests executed (command, environment, result); not-run and negative cases:**
+- **Secrets, logs, attachments, webhook/payment handling and dependency changes reviewed (or N/A):**
+- **Independent reviewer, residual/blocking risk and exact release decision:**
+- **Source reference:** [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0803 - Agent Generated App Security Verification and Acceptance Pack|FSIS-0803]]. This is a **review aid only**; not automated GitHub CI/branch enforcement. A no-findings automated scan is not proof of security.
