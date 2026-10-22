@@ -24,3 +24,7 @@
 ## UI UX Pro Max mandatory skill prerequisite — 2026-10-22
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/07_UI_UX_Pro_Max_Mandatory_Skill_Adoption_and_Experience_Gate|FPIS-UX-0007 — UI UX Pro Max Mandatory Skill Gate]] — founder-directed mandatory skill installation/verification for Claude Code, Codex and suitable FDG UI collaborators before new frontend/full-stack work. MIT-licensed source `nextlevelbuilder/ui-ux-pro-max-skill` evaluated; workstation install and UI regression tests still pending. **FPIS-MANDATE-0001 remains authoritative**, not the upstream style library.
+
+## FDG Visual Craft Tooling — 2026-10-23
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/08_Visual_Craft_Collaborator_Skills_and_Tooling_2026-10-23|FPIS-UX-0008 Visual Craft Skills]] — review of user video 1000011715.mp4; official pinned sources for Taste Skill, GSAP Skills, free Transitions.dev, Playwright CLI, Impeccable, Design Extract and React Bits. Task-triggered source installer and Claude/Codex agent skill wrappers are in tools/visual-craft/. No local workstation installation implied.
