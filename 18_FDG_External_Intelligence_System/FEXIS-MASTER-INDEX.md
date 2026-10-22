@@ -71,3 +71,8 @@ FEXIS may continuously learn, but it shall not continuously redefine truth.
 The current tracked folder is `18_FDG_External_Intelligence_System`; the earlier “17” system label remains preserved as historical text. This is a navigation correction, not a renumbering or charter approval.
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Architecture reconciliation]] records the unresolved numbering/governance distinction; [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|intelligence expansion]] connects external source freshness to controlled learning.
+
+## FDG Website Technical SEO and Conversion Pilot — 2026-10-22
+
+- [[18_FDG_External_Intelligence_System/04_Search_Intelligence/FEXIS-SEO-0001 - FDG Website SEO Conversion Readiness Blueprint|FEXIS-SEO-0001 — SEO & Conversion Readiness]] — Video-discovered 18-point SEO checklist reconciled with Google Search Central; project-level draft for technical indexing, truthful structured metadata, private-route protection, mobile field metrics and real lead conversion. Existing [[18_FDG_External_Intelligence_System/04_Search_Intelligence/FEXIS-SEO-0000 - Search Intelligence|FEXIS-SEO-0000]] retains system ownership.
+- [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-003_Search_to_Qualified_Inquiry_and_Quotation_Playbook|FBIS-PLB-003 — Search-to-Qualified-Inquiry]] — FBIS buyer-to-quotation operational handoff; no live release or customer data implied.
