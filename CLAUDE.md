@@ -1,5 +1,9 @@
 # FDG Claude Code Repository Entry Protocol
 
+## P0 mandatory Claude Code workstation setup before FDG coding — 2026-10-22
+
+**FOUNDER DIRECTIVE — START HERE ON THE NEXT LOCAL CLAUDE CODE SESSION.** Before undertaking any new FDG implementation work, execute [`.claude/FDG_CLAUDE_CODE_PREBUILD_INSTALL_HANDOVER_2026-10-22.md`](.claude/FDG_CLAUDE_CODE_PREBUILD_INSTALL_HANDOVER_2026-10-22.md): inventory and verify current tools → install/restore missing *approved* Claudex skills → evaluate, install and test only task-relevant external coding skills → review, install and test Free Claude Code's **third-party provider proxy** on the specific authorized workstation/provider → prove real runnable code and negative tests on synthetic data → issue a P0 acceptance receipt. **Do not start new FDG coding until P0 is VERIFIED or the founder explicitly authorizes an alternative route.** If required installation or permissions are blocked, report **P0 BLOCKED WITH EVIDENCE**, not false readiness or an unannounced provider fallback. This instruction authorizes prioritizing and preparing the installation work, **not blindly executing upstream scripts, collecting credentials, changing global providers, granting network/customer-data access or starting production**. The Free Claude Code proxy is **not itself a skill**; the already committed `/fdg-provider-gateway-review` is the scoped assessment skill. Preserve the existing approved FDG skill bootstrap, security approval and release gates.
+
 This repository is governed organizational knowledge. Before substantial work, read `README.md`, `FDG Ecosystem.md`, `00_Nex/00_Master Index.md`, and the relevant system/project Master Index. Reuse or extend approved architecture before creating competing structures.
 
 ## Claudex cross-provider review

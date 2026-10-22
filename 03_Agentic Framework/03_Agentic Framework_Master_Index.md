@@ -71,3 +71,7 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## Multi-provider coding gateway candidate — 2026-10-22
 
 - [[03_Agentic Framework/FDG_CLAUDE_CODE_PROVIDER_ROUTER_CANDIDATE_2026-10-22|Free Claude Code — Optional Claude/Codex Model-Routing Gateway Review]] — video-sourced external provider proxy at verified upstream SHA, AGPL-3.0-only; prepared Claude Code `/fdg-provider-gateway-review` project skill, **NOT installed or runtime-authorized**. Distinct from general skills marketplace intake.
+
+## Claude Code pre-build installation handover — 2026-10-22
+
+- [[.claude/FDG_CLAUDE_CODE_PREBUILD_INSTALL_HANDOVER_2026-10-22|Claude Code Mandatory Skills and Provider Gateway P0 Handover]] — Founder-directed: prepare and verify approved core skills, relevant third-party skills and optional-proxy installation on the user's workstation **before new coding work**; blocked installs are reported, never faked. No runtime or production authorizations.
