@@ -1,0 +1,12 @@
+{
+  "url": "https://youtu.be/abcdefghijk",
+  "title": "Example tutorial — replace with real reviewed source",
+  "source_name": "Example creator",
+  "source_origin": "user_notes",
+  "source_text": "A tutorial described a method. Treat as unverified.",
+  "source_claims": [
+    "Illustrative claim, not validated"
+  ],
+  "relevance": "Potentially useful for Nex",
+  "proposed_application": "Reproduce with an independent FDG test before any adoption."
+}
