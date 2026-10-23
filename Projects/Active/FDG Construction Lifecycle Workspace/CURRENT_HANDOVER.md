@@ -47,3 +47,20 @@ Client-first capsule and [issue#5](https://github.com/guinoome/fdg-knowledge-rep
 Run and record a real private novice/qualified walkthrough of the existing capture → fail/retest → punch closure → scoped dossier receipt → Save project/fresh reopen task under issue#5. Obtain actual participant evidence; do not impersonate acceptance. Resume this acceptance milestone only; do not rebuild WP01–03/TC01 or begin deferred cloud/platform work.
 
 RAM-only preview from this session: http://127.0.0.1:65457/ → More tools → Testing and test dossiers. It expires with runtime. GitHub HTML view displays source, not a hosted application.
+
+
+## C24 continuation — 2026-10-24, pre-repair evidence
+
+Canonical read-only baseline: `99db9f36cd4fee28553360db94a3161e2ccd228d`. This dated continuation governs the immediate next action; historical source, artifact hashes and acceptance evidence above are preserved, not freshly rerun unless stated below. Product source/build/distribution unchanged. No repairs, browser run or native OS save/open test occurred in C24.
+
+Fresh worker results across the three related product engines: **118 existing checks passed** (67 procurement +18 QTO +33 scheduling/cost); **53 focused assertions:33 pass /20 fail** (procurement13/17, QTO6/12, scheduling/cost14/24). Focused failures are unresolved candidate defects; baseline passes do not negate them. The separate P0 synthetic coding smoke passed11 checks and is not included in those product counts.
+
+Lifecycle `html/estimate-engine.mjs` and `html/cost-engine.mjs` mirror the tested standalone engines (blobs `a3731446a120e5a1adb2a91ac0ba114a9a0e773e` and `18013615a7bbc417183787acbb4ba3940d91ad51`). Their shared finite-arithmetic/identity/evidence/horizon risks require the same bounded repair scope; the full Lifecycle305 executable /41 browser /8 recovery checks and17 field-rehearsal checks remain **historical, not rerun in C24**. Original real novice/qualified acceptance is still pending; do not substitute synthetic checks or this documentation for it.
+
+Repair cards: [Procurement](<../FDG Construction Procurement and Materials Control/evidence/c24/repair-cards.json>), [QTO](<../FDG QTO BOQ Estimate Toolkit/evidence/c24/REPAIR_CARD.md>), [Scheduling/cost](<../FDG Construction Scheduling and Cost Controls/evidence/c24/REPAIR_CARD.md>). No prior WP01–03/TC01 workflow is rebuilt or declared newly accepted.
+
+**Gate:** CODEX-P0 BLOCKED; UX_P0_BLOCKED_WITH_EVIDENCE for new UI work. The installed UI UX Pro Max2.15.0 marketplace script is functionally verified, but project-local skill delivery, Taste and four Claudex skills are missing. The user's GitHub-canonical/no-local-project-files/checkouts/downloads/installs instruction remains binding; no installer or provider/config change was executed. The optional gateway is not required. Exact inherited model identity was not independently observable.
+
+**Exact next action:** Obtain the founder's explicit bounded P0 alternative for only the named existing, RAM-only, reversible validation/data-integrity repairs using installed tools; then execute the exact project repair card and before/after regressions. No exception has been approved. No new feature, UI redesign, installation, provider/config change or deployment is included. Read-only verification/documentation may continue; do not begin repairs or mark the full construction suite done.
+
+[Coordinator record](docs/work-packages/C24_PRE_REPAIR_CONTINUATION.md) · [P0 evidence](evidence/c24-p0/README.md). Preserve issue#5 and the original private field/qualified acceptance task after bounded defects are resolved.

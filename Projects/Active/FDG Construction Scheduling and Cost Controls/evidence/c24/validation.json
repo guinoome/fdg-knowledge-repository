@@ -1,0 +1,431 @@
+{
+  "work_package": "C24-CONTROLS",
+  "project": "Projects/Active/FDG Construction Scheduling and Cost Controls",
+  "source_ref": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "verified_on": "2026-10-24",
+  "timezone": "Asia/Taipei",
+  "status": "REPRODUCED_UNFIXED",
+  "source_files": [
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/app.js",
+      "sha": "a039afe39e0161fb3e19a0701c077ab8af2d12ae"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/engine.mjs",
+      "sha": "18013615a7bbc417183787acbb4ba3940d91ad51"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/sample.json",
+      "sha": "f7bb51a6aaebad553e038259225f46d9b64552c2"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/schema.json",
+      "sha": "1b0d7c9089b6a89e101f735cc0ecf4c813d6a332"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/tests.mjs",
+      "sha": "61fa3d06a22e2006b18b6f52acee5a382d3aec7c"
+    }
+  ],
+  "identical_lifecycle_engine": {
+    "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/cost-engine.mjs",
+    "sha": "18013615a7bbc417183787acbb4ba3940d91ad51"
+  },
+  "runtime": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "method": "Fetched immutable GitHub source via connected tools; stripped only leading export declarations and piped exact engine/tests/fixture plus edge function to installed Node via PowerShell stdin. No project files/checkouts/downloads/installs. Execution return code0; assertion outcomes recorded rather than aborting on first negative. Nonfinite result serialized as literal string Infinity to preserve evidence."
+  },
+  "existing_suite": {
+    "suite": "controls",
+    "count": 33,
+    "passed": 33,
+    "results": [
+      {
+        "name": "sample budget",
+        "actual": 150000,
+        "expected": 150000,
+        "pass": true
+      },
+      {
+        "name": "sample actual",
+        "actual": 40000,
+        "expected": 40000,
+        "pass": true
+      },
+      {
+        "name": "remaining forecast",
+        "actual": 125000,
+        "expected": 125000,
+        "pass": true
+      },
+      {
+        "name": "open commitments separate",
+        "actual": 50000,
+        "expected": 50000,
+        "pass": true
+      },
+      {
+        "name": "EAC avoids double counting",
+        "actual": 165000,
+        "expected": 165000,
+        "pass": true
+      },
+      {
+        "name": "negative headroom indicates overrun",
+        "actual": -15000,
+        "expected": -15000,
+        "pass": true
+      },
+      {
+        "name": "budget weighted reviewed progress",
+        "actual": 0.5333333333333333,
+        "expected": 0.5333333333333333,
+        "pass": true
+      },
+      {
+        "name": "uniform calendar-day plan",
+        "actual": 0.6666666666666666,
+        "expected": 0.6666666666666666,
+        "pass": true
+      },
+      {
+        "name": "forecast finish variance days",
+        "actual": 2,
+        "expected": 2,
+        "pass": true
+      },
+      {
+        "name": "known reviewed zero retained",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      },
+      {
+        "name": "explicit zero actual retained",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      },
+      {
+        "name": "blank forecast unavailable",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "missing actual stays unknown",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "future cost excluded",
+        "actual": 40000,
+        "expected": 40000,
+        "pass": true
+      },
+      {
+        "name": "credit reduces actual",
+        "actual": 35000,
+        "expected": 35000,
+        "pass": true
+      },
+      {
+        "name": "duplicate actual invalidates total",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "ETC below commitment blocks forecast",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "unknown ETC blocks forecast",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "future forecast excluded",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "successive commitment snapshots not summed",
+        "actual": 50000,
+        "expected": 50000,
+        "pass": true
+      },
+      {
+        "name": "same-date snapshot conflict blocks forecast",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "conflicting same-date reviews unavailable",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "review evidence missing excluded",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "future review excluded",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "FS overlap warning",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "cycle warning",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "missing dependency warning",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "overdue forecast identified",
+        "actual": 1,
+        "expected": 1,
+        "pass": true
+      },
+      {
+        "name": "frozen baseline budget edit blocked",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "JSON normalization round trip",
+        "actual": 165000,
+        "expected": 165000,
+        "pass": true
+      },
+      {
+        "name": "missing frozen snapshot flagged",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "unmapped actual cost blocks project forecast",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "calendar date validation",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      }
+    ]
+  },
+  "focused_edges": {
+    "count": 24,
+    "passed": 14,
+    "failed": 10,
+    "results": [
+      {
+        "id": "C01_numeric_string_unknown",
+        "category": "numeric",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C02_explicit_zero_actual",
+        "category": "zero_unknown",
+        "expected": 0,
+        "actual": 0,
+        "pass": true
+      },
+      {
+        "id": "C03_missing_actual_unknown",
+        "category": "zero_unknown",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C04_ledger_sum_overflow",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "C05_budget_sum_overflow",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "C06_EAC_overflow",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "C07_commitment_sum_overflow",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "C08_no_double_count",
+        "category": "commitment",
+        "expected": 165000,
+        "actual": 165000,
+        "pass": true
+      },
+      {
+        "id": "C09_latest_snapshot_only",
+        "category": "commitment",
+        "expected": 50000,
+        "actual": 50000,
+        "pass": true
+      },
+      {
+        "id": "C10_future_snapshot_excluded",
+        "category": "cutoff",
+        "expected": 50000,
+        "actual": 50000,
+        "pass": true
+      },
+      {
+        "id": "C11_latest_explicit_zero_releases",
+        "category": "commitment",
+        "expected": 20000,
+        "actual": 20000,
+        "pass": true
+      },
+      {
+        "id": "C12_same_date_conflict_blocks",
+        "category": "identity",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C13_orphan_commitment_blocks",
+        "category": "orphan",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C14_archived_task_with_cost_blocks",
+        "category": "orphan",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C15_invalid_calendar_date",
+        "category": "dates",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C16_review_after_cutoff_unknown",
+        "category": "cutoff",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C17_ETC_below_commitment",
+        "category": "commitment",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "C18_missing_task_ID_project_totals_block",
+        "category": "identity",
+        "expected": null,
+        "actual": 150000,
+        "pass": false
+      },
+      {
+        "id": "C19_archived_duplicate_import_or_total_block",
+        "category": "identity",
+        "expected": true,
+        "actual": false,
+        "pass": false
+      },
+      {
+        "id": "C20_whitespace_cost_source",
+        "category": "evidence",
+        "expected": null,
+        "actual": 40000,
+        "pass": false
+      },
+      {
+        "id": "C21_numeric_cost_source",
+        "category": "evidence",
+        "expected": null,
+        "actual": 40000,
+        "pass": false
+      },
+      {
+        "id": "C22_whitespace_reviewer",
+        "category": "evidence",
+        "expected": null,
+        "actual": 0.5333333333333333,
+        "pass": false
+      },
+      {
+        "id": "C23_overflow_horizon_no_throw",
+        "category": "bounds",
+        "expected": true,
+        "actual": {
+          "error": "Invalid time value"
+        },
+        "pass": false
+      },
+      {
+        "id": "C24_invalid_asof_unknown",
+        "category": "dates",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      }
+    ]
+  },
+  "not_run": [
+    "application repairs",
+    "builder execution",
+    "browser/UI tests pending lead gate",
+    "qualified real-project acceptance",
+    "independent provider acceptance",
+    "OS save/print dialogs"
+  ],
+  "scope": "READ/VALIDATE only. C20 worker completion not assumed. No branch/ref changes, no application code edits."
+}

@@ -1,0 +1,43 @@
+{
+  "runs": [
+    {
+      "args": [
+        "construction field workspace",
+        "--design-system",
+        "--json",
+        "-p",
+        "SYNTHETIC FDG P0"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"design_system\": {\n    \"project_name\": \"SYNTHETIC FDG P0\",\n    \"category\": \"Construction/Architecture\",\n    \"pattern\": {\n      \"name\": \"Hero-Centric Design\",\n      \"sections\": \"Full-bleed Hero (headline + visual) > Single value prop strip > Key benefit or proof > Primary CTA\",\n      \"cta_placement\": \"Hero dominant (center/bottom) + Sticky nav CTA\",\n      \"color_strategy\": \"Hero: High-impact visual. Minimal text. Verify CTA label text against the button fill at 4.5:1 minimum; use 7:1 only for an explicit AAA normal-text target.\",\n      \"conversion\": \"One primary CTA. Let the hero dominate the initial viewport without hiding the next content cue. Use a static hero and non-pulsing CTA when reduced motion is requested; provide video controls. Pause hero media offscreen/hidden and keep the final hero message and CTA static under reduced motion.\"\n    },\n    \"style\": {\n      \"id\": \"minimalism-and-swiss-style\",\n      \"name\": \"Minimalism & Swiss Style\",\n      \"type\": \"General\",\n      \"effects\": \"Subtle hover (200-250ms), smooth transitions, sharp shadows if any, clear type hierarchy, fast loading\",\n      \"keywords\": \"Clean, simple, spacious, functional, white space, high contrast, geometric, sans-serif, grid-based, essential\",\n      \"best_for\": \"Enterprise apps, dashboards, documentation sites, SaaS platforms, professional tools\",\n      \"performance\": \"cost:low|drivers:none\",\n      \"accessibility\": \"risk:low|requires:contrast-text-4.5,keyboard,visible-focus,reduced-motion\",\n      \"light_mode\": \"supported\",\n      \"dark_mode\": \"supported\"\n    },\n    \"colors\": {\n      \"primary\": \"#64748B\",\n      \"on_primary\": \"#FFFFFF\",\n      \"secondary\": \"#94A3B8\",\n      \"on_secondary\": \"#0F172A\",\n      \"accent\": \"#EA580C\",\n      \"on_accent\": \"#000000\",\n      \"background\": \"#F8FAFC\",\n      \"foreground\": \"#334155\",\n      \"card\": \"#FFFFFF\",\n      \"card_foreground\": \"#334155\",\n      \"muted\": \"#EBF0F5\",\n      \"muted_foreground\": \"#475569\",\n      \"border\": \"#E2E8F0\",\n      \"destructive\": \"#DC2626\",\n      \"on_destructive\": \"#FFFFFF\",\n      \"ring\": \"#64748B\",\n      \"notes\": \"Industrial grey + safety orange [Accent adjusted from #F97316]\",\n      \"cta\": \"#EA580C\",\n      \"text\": \"#334155\",\n      \"on_cta\": \"#000000\"\n    },\n    \"typography\": {\n      \"heading\": \"Inter\",\n      \"body\": \"Playfair Display\",\n      \"mood\": \"bold typography, editorial, poster, near-black, vermillion, luxury, type-as-hero, manifesto, high-contrast\",\n      \"best_for\": \"Creative brand flagships, reading platforms, event apps, flash pages, luxury mobile experiences\",\n      \"google_fonts_url\": \"https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital@1\",\n      \"css_import\": \"@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital@1&display=swap');\"\n    },\n    \"key_effects\": \"Subtle hover (200-250ms), smooth transitions, sharp shadows if any, clear type hierarchy, fast loading\",\n    \"anti_patterns\": \"2D-only layouts + Poor image quality + AI purple/pink gradients\",\n    \"decision_rules\": {\n      \"must_have\": [\n        \"constraint:project-portfolio\"\n      ],\n      \"if_team_collaboration\": [\n        \"constraint:add-real-time-updates\"\n      ]\n    },\n    \"activated_rules\": [\n      {\n        \"condition\": \"must_have\",\n        \"actions\": [\n          \"constraint:project-portfolio\"\n        ]\n      }\n    ],\n    \"constraints\": [\n      \"project-portfolio\"\n    ],\n    \"reasoning_default\": false,\n    \"source_identities\": {\n      \"product\": \"Construction/Architecture\",\n      \"reasoning\": \"Construction/Architecture\",\n      \"style\": \"minimalism-and-swiss-style\",\n      \"color\": \"Construction/Architecture\",\n      \"typography\": \"Bold Typography Mobile (Inter Poster)\",\n      \"landing\": \"Hero-Centric Design\"\n    },\n    \"source_derivations\": {\n      \"color_mode\": null\n    },\n    \"severity\": \"HIGH\",\n    \"dials\": {\n      \"variance\": null,\n      \"variance_label\": null,\n      \"motion\": null,\n      \"motion_label\": null,\n      \"density\": null,\n      \"density_label\": null\n    },\n    \"motion_snippet\": {},\n    \"spacing_scale\": null\n  },\n  \"persistence\": null\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "error summary validation",
+        "--domain",
+        "ux",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"domain\": \"ux\",\n  \"query\": \"error summary validation\",\n  \"file\": \"ux-guidelines.csv\",\n  \"count\": 3,\n  \"results\": [\n    {\n      \"Category\": \"Forms / Accessibility\",\n      \"Issue\": \"Focusable Error Summary\",\n      \"Platform\": \"Web\",\n      \"Description\": \"An error summary for failed validation complements inline field errors and must be easy to find by keyboard and screen reader users\",\n      \"Do\": \"Place it at the top of the form; move focus to its heading or container after failed submit; link each item to its invalid field; retain inline errors\",\n      \"Don't\": \"Replace inline errors with a visual-only summary or move focus on every blur\",\n      \"Code Example Good\": \"<div role=\\\"alert\\\" tabindex=\\\"-1\\\" aria-labelledby=\\\"error-title\\\"><h2 id=\\\"error-title\\\">There is a problem</h2><a href=\\\"#email\\\">Enter an email address</a></div>\",\n      \"Code Example Bad\": \"Toast only with no field links or focus target\",\n      \"Severity\": \"High\"\n    },\n    {\n      \"Category\": \"Accessibility\",\n      \"Issue\": \"Error Messages\",\n      \"Platform\": \"All\",\n      \"Description\": \"Error messages must be announced\",\n      \"Do\": \"Use aria-live or role=alert for errors\",\n      \"Don't\": \"Visual-only error indication\",\n      \"Code Example Good\": \"role='alert'\",\n      \"Code Example Bad\": \"Red border only\",\n      \"Severity\": \"High\"\n    },\n    {\n      \"Category\": \"Forms\",\n      \"Issue\": \"Error Placement\",\n      \"Platform\": \"All\",\n      \"Description\": \"Each invalid field needs an inline error connected to that field\",\n      \"Do\": \"Show a specific error below the input and reference it with aria-describedby\",\n      \"Don't\": \"Show only a top-level error without identifying each invalid field\",\n      \"Code Example Good\": \"<input aria-describedby=\\\"email-error\\\"><p id=\\\"email-error\\\">Enter an email address</p>\",\n      \"Code Example Bad\": \"Red border or summary only\",\n      \"Severity\": \"High\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "synthetic",
+        "--domain",
+        "not-a-domain"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: search.py [-h]\n                 [--domain {style,color,chart,landing,product,ux,typography,icons,gsap,react,web,google-fonts}]\n                 [--stack {react,nextjs,vue,svelte,astro,swiftui,react-native,flutter,nuxtjs,nuxt-ui,html-tailwind,shadcn,jetpack-compose,threejs,angular,laravel,javafx,wpf,winui,avalonia,uno,uwp}]\n                 [--max-results 1-20] [--json] [--full] [--design-system]\n                 [--project-name PROJECT_NAME] [--format {ascii,markdown}]\n                 [--persist] [--page PAGE] [--output-dir OUTPUT_DIR] [--force]\n                 [--variance 1-10] [--motion 1-10] [--density 1-10]\n                 query\nsearch.py: error: argument --domain/-d: invalid choice: 'not-a-domain' (choose from 'style', 'color', 'chart', 'landing', 'product', 'ux', 'typography', 'icons', 'gsap', 'react', 'web', 'google-fonts')\n"
+    }
+  ],
+  "skill_files": 73,
+  "skill_manifest_unchanged": true,
+  "manifest_before_sha256": "16ba6c7dd5fa8473e29443a44403fd7f26efa6a22d6f670516c8dfa24502acfa",
+  "manifest_after_sha256": "16ba6c7dd5fa8473e29443a44403fd7f26efa6a22d6f670516c8dfa24502acfa",
+  "no_persist_flag": true,
+  "bytecode_disabled": true
+}

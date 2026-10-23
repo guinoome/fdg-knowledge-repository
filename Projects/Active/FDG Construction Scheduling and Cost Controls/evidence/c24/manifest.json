@@ -1,0 +1,76 @@
+{
+  "work_package": "C24-CONTROLS",
+  "source_commit": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "status": "REPRODUCED_UNFIXED_NO_APP_CHANGES",
+  "counts": {
+    "existing_estimate": {
+      "pass": 18,
+      "total": 18
+    },
+    "existing_controls": {
+      "pass": 33,
+      "total": 33
+    },
+    "additional_estimate": {
+      "pass": 6,
+      "fail": 6,
+      "total": 12
+    },
+    "additional_controls": {
+      "pass": 14,
+      "fail": 10,
+      "total": 24
+    }
+  },
+  "artifacts": [
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/evidence/c24/validation.json",
+      "sha": "a823406950ed4caab20ed95b8ac854dddfbc0861"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/evidence/c24/reproduce.mjs",
+      "sha": "9eab89ddb1dcf71127db6830de4bc4c56b15c6e9"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/evidence/c24/REPAIR_CARD.md",
+      "sha": "88d8ba60d6c033d0abf1ba7e4b6b95671eedad68"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/evidence/c24/validation.json",
+      "sha": "482fb39b4ce6e950a9b35eacbc4b241f2bef0b7f"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/evidence/c24/reproduce.mjs",
+      "sha": "016c27eb8fe7615cd5a842d1371bf241ec45de4a"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/evidence/c24/REPAIR_CARD.md",
+      "sha": "783caf3324038de551d43d066e203f3272996143"
+    }
+  ],
+  "retained_builders": [
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/build/build-html.mjs",
+      "sha": "386938881f2a56a106ce007d753cfb53da8522d6"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/build/build-html.mjs",
+      "sha": "b1f0977e717355464765da7780c5eba557496d11"
+    }
+  ],
+  "retained_engines": [
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/html/engine.mjs",
+      "mirror": "Projects/Active/FDG Construction Lifecycle Workspace/html/estimate-engine.mjs",
+      "sha": "a3731446a120e5a1adb2a91ac0ba114a9a0e773e"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/html/engine.mjs",
+      "mirror": "Projects/Active/FDG Construction Lifecycle Workspace/html/cost-engine.mjs",
+      "sha": "18013615a7bbc417183787acbb4ba3940d91ad51"
+    }
+  ],
+  "historical_worker": "No C20 worker completion inferred. Pinned handovers read anew; no reimplementation.",
+  "gate": "Lead verification gate pending. No app code or artifact changes, browser, local project writes, installs, commits or ref updates.",
+  "acceptance": "Real qualified estimator/planner/QS acceptance and independent provider review pending."
+}

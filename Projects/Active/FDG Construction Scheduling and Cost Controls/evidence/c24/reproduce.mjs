@@ -1,0 +1,37 @@
+import {createControls} from '../../html/engine.mjs';
+import {runControlTests} from '../../html/tests.mjs';
+import {readFile} from 'node:fs/promises';
+const fixture=JSON.parse(await readFile(new URL('../../html/sample.json',import.meta.url),'utf8'));
+const schema=JSON.parse(await readFile(new URL('../../html/schema.json',import.meta.url),'utf8'));
+export function runC24ControlEdges(createControls,schema,fixture){
+ const C=createControls(schema),out=[],copy=()=>JSON.parse(JSON.stringify(fixture)),run=(id,mutate,select,expected,category)=>{let actual,error;try{const s=copy();mutate(s);actual=select(s);}catch(e){error=e.message;actual={error};}out.push({id,category,expected,actual,pass:!error&&Object.is(actual,expected)});};
+ run('C01_numeric_string_unknown',s=>s.costs[0].amount='40000',s=>C.calculate(C.normalize(s)).actual,null,'numeric');
+ run('C02_explicit_zero_actual',s=>s.costs[0].amount=0,s=>C.calculate(s).actual,0,'zero_unknown');
+ run('C03_missing_actual_unknown',s=>s.costs=[],s=>C.calculate(s).actual,null,'zero_unknown');
+ run('C04_ledger_sum_overflow',s=>{s.costs[0].amount=1e308;s.costs.push({...s.costs[0],id:'AC-003'});},s=>C.calculate(s).actual,null,'overflow');
+ run('C05_budget_sum_overflow',s=>s.tasks.forEach(r=>r.budget=1e308),s=>C.calculate(s).budget,null,'overflow');
+ run('C06_EAC_overflow',s=>{s.tasks[0].etc=1e308;s.costs[0].amount=1e308;},s=>C.calculate(s).eac,null,'overflow');
+ run('C07_commitment_sum_overflow',s=>{s.commitments[0].remaining=1e308;s.commitments.push({...s.commitments[0],id:'CM-003',contract:'OTHER'});},s=>C.calculate(s).open,null,'overflow');
+ run('C08_no_double_count',s=>s.commitments[0].remaining=50000,s=>C.calculate(s).eac,165000,'commitment');
+ run('C09_latest_snapshot_only',s=>s.commitments.push({...s.commitments[0],id:'CM-003',date:'2026-10-15',remaining:60000}),s=>C.calculate(s).open,50000,'commitment');
+ run('C10_future_snapshot_excluded',s=>s.commitments.push({...s.commitments[0],id:'CM-003',date:'2026-10-17',remaining:999999}),s=>C.calculate(s).open,50000,'cutoff');
+ run('C11_latest_explicit_zero_releases',s=>{s.commitments[0].date='2026-10-15';s.commitments.push({...s.commitments[0],id:'CM-003',date:'2026-10-16',remaining:0});},s=>C.calculate(s).open,20000,'commitment');
+ run('C12_same_date_conflict_blocks',s=>s.commitments.push({...s.commitments[0],id:'CM-003'}),s=>C.calculate(s).eac,null,'identity');
+ run('C13_orphan_commitment_blocks',s=>s.commitments.push({...s.commitments[0],id:'CM-003',task:'NO-TASK'}),s=>C.calculate(s).eac,null,'orphan');
+ run('C14_archived_task_with_cost_blocks',s=>s.tasks[0].archived=true,s=>C.calculate(s).actual,null,'orphan');
+ run('C15_invalid_calendar_date',s=>s.costs[0].date='2026-02-31',s=>C.calculate(s).actual,null,'dates');
+ run('C16_review_after_cutoff_unknown',s=>s.updates[0].reviewDate='2026-10-17',s=>C.calculate(s).progress,null,'cutoff');
+ run('C17_ETC_below_commitment',s=>s.tasks[0].etc=10000,s=>C.calculate(s).eac,null,'commitment');
+ run('C18_missing_task_ID_project_totals_block',s=>s.tasks[0].id='',s=>C.calculate(s).budget,null,'identity');
+ run('C19_archived_duplicate_import_or_total_block',s=>s.tasks.push({...s.tasks[0],archived:true}),s=>{try{const n=C.normalize(s);return C.calculate(n).budget===null;}catch{return true;}},true,'identity');
+ run('C20_whitespace_cost_source',s=>s.costs[0].source='   ',s=>C.calculate(C.normalize(s)).actual,null,'evidence');
+ run('C21_numeric_cost_source',s=>s.costs[0].source=17,s=>C.calculate(C.normalize(s)).actual,null,'evidence');
+ run('C22_whitespace_reviewer',s=>s.updates[0].reviewer='   ',s=>C.calculate(C.normalize(s)).progress,null,'evidence');
+ run('C23_overflow_horizon_no_throw',s=>s.project.horizon=1e308,s=>{C.calculate(C.normalize(s));return true;},true,'bounds');
+ run('C24_invalid_asof_unknown',s=>s.project.asOf='2026-02-31',s=>C.calculate(s).eac,null,'dates');
+ return out;
+}
+const baseline=runControlTests(createControls,schema,fixture);
+const focused=runC24ControlEdges(createControls,schema,fixture);
+console.log(JSON.stringify({baseline,focused},(k,v)=>typeof v==='number'&&!Number.isFinite(v)?String(v):v,2));
+process.exitCode=focused.some(x=>!x.pass)?1:0;

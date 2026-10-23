@@ -1,0 +1,44 @@
+{
+  "format": "FDG-C24-PROC-EVIDENCE-MANIFEST",
+  "date": "2026-10-24",
+  "repository": "guinoome/fdg-knowledge-repository",
+  "canonical_ref": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "owned_root": "Projects/Active/FDG Construction Procurement and Materials Control",
+  "status": "READ_ONLY_VERIFICATION_FINISHED_NO_REPAIRS",
+  "checks": {
+    "existing": 67,
+    "existing_passed": 67,
+    "adversarial": 17,
+    "adversarial_passed": 13,
+    "adversarial_failed": 4,
+    "root_defects": 3
+  },
+  "source_artifact_integrity": {
+    "bytes": 68492,
+    "sha256": "f3f3bb0a1acdf81e4743e3d8e1236663d95719fd95b744407d94a3629760ee66",
+    "git_blob_sha": "04a47a2c4ab3847aaefa8fb4123d494b062b2ccd"
+  },
+  "files": [
+    {
+      "path": "Projects/Active/FDG Construction Procurement and Materials Control/evidence/c24/verification-pre-repair.json",
+      "sha": "6cf3e8025a2029ec2369dfc56004ac841a63158b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Procurement and Materials Control/evidence/c24/reproduction-harness.json",
+      "sha": "551c36069b6805aef3d5b7908f00500cff4eeed7",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Procurement and Materials Control/evidence/c24/repair-cards.json",
+      "sha": "71cb5326878c787200abacbe885cc95d1de7f703",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "verification": "Blob contents fetched back from connected GitHub after creation. No tree, commit or ref mutation performed.",
+  "execution": "Node v24.16.0 RAM stdin tests; RAM-only builder verification in unique C24_PROC Node globals; no kernel reset; browser NOT RUN.",
+  "next_action": "After lead clears P0, apply smallest repairs listed in repair-cards.json, add regression cases, rebuild and validate. Publish baseline failing evidence truthfully without promoting completion."
+}

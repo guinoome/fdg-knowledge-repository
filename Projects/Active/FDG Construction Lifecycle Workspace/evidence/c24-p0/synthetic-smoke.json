@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "compile": "PASS in memory",
+  "checks": [
+    {
+      "name": "100m less30m",
+      "status": "PASS",
+      "result": {
+        "unit": "m",
+        "reported": 30,
+        "remaining": 70,
+        "qa_accepted": null
+      }
+    },
+    {
+      "name": "zero",
+      "status": "PASS",
+      "result": {
+        "unit": "m",
+        "reported": 0,
+        "remaining": 0,
+        "qa_accepted": null
+      }
+    },
+    {
+      "name": "complete",
+      "status": "PASS",
+      "result": {
+        "unit": "m",
+        "reported": 100,
+        "remaining": 0,
+        "qa_accepted": null
+      }
+    },
+    {
+      "name": "fraction",
+      "status": "PASS",
+      "result": {
+        "unit": "m",
+        "reported": 1.25,
+        "remaining": 1.25,
+        "qa_accepted": null
+      }
+    },
+    {
+      "name": "negative planned",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Require 0 <= reported <= planned"
+    },
+    {
+      "name": "negative reported",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Require 0 <= reported <= planned"
+    },
+    {
+      "name": "overreported",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Require 0 <= reported <= planned"
+    },
+    {
+      "name": "text planned",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Use finite numeric quantities in the same unit"
+    },
+    {
+      "name": "boolean",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Use finite numeric quantities in the same unit"
+    },
+    {
+      "name": "nan",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Use finite numeric quantities in the same unit"
+    },
+    {
+      "name": "infinity",
+      "status": "PASS",
+      "actual": "ValueError",
+      "message": "Use finite numeric quantities in the same unit"
+    }
+  ],
+  "passed": 11,
+  "filesystem_or_network_events_attempted": [],
+  "bytecode_disabled": true,
+  "provider": "Native Codex session",
+  "model": "Inherited; exact model identity not independently observable",
+  "no_installs": true,
+  "no_files_created": true
+}

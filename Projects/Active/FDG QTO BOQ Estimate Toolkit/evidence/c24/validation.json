@@ -1,0 +1,251 @@
+{
+  "work_package": "C24-CONTROLS",
+  "project": "Projects/Active/FDG QTO BOQ Estimate Toolkit",
+  "source_ref": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "verified_on": "2026-10-24",
+  "timezone": "Asia/Taipei",
+  "status": "REPRODUCED_UNFIXED",
+  "source_files": [
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/html/app.js",
+      "sha": "5be3a1d94d5c082213473dc4953c2b5e5828237f"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/html/engine.mjs",
+      "sha": "a3731446a120e5a1adb2a91ac0ba114a9a0e773e"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/html/sample.json",
+      "sha": "2b9d44c02530cdee55669e1f849eb7e108901696"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/html/tests.mjs",
+      "sha": "2a2d62f8e7ba0bfc94ade9d4962963f5da3f932c"
+    }
+  ],
+  "identical_lifecycle_engine": {
+    "path": "Projects/Active/FDG Construction Lifecycle Workspace/html/estimate-engine.mjs",
+    "sha": "a3731446a120e5a1adb2a91ac0ba114a9a0e773e"
+  },
+  "runtime": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "method": "Fetched immutable GitHub source via connected tools; stripped only leading export declarations and piped exact engine/tests/fixture plus edge function to installed Node via PowerShell stdin. No project files/checkouts/downloads/installs. Execution return code0; assertion outcomes recorded rather than aborting on first negative. Nonfinite result serialized as literal string Infinity to preserve evidence."
+  },
+  "existing_suite": {
+    "suite": "estimate",
+    "count": 18,
+    "passed": 18,
+    "results": [
+      {
+        "name": "volume net quantity",
+        "actual": 12,
+        "expected": 12,
+        "pass": true
+      },
+      {
+        "name": "allowance applied once",
+        "actual": 12.6,
+        "expected": 12.6,
+        "pass": true
+      },
+      {
+        "name": "four-component unit rate",
+        "actual": 2700,
+        "expected": 2700,
+        "pass": true
+      },
+      {
+        "name": "direct cost",
+        "actual": 47770,
+        "expected": 47770,
+        "pass": true
+      },
+      {
+        "name": "contingency basis",
+        "actual": 2638.5,
+        "expected": 2638.5,
+        "pass": true
+      },
+      {
+        "name": "overhead after contingency",
+        "actual": 5540.85,
+        "expected": 5540.85,
+        "pass": true
+      },
+      {
+        "name": "markup tender total",
+        "actual": 70091.75249999999,
+        "expected": 70091.7525,
+        "pass": true
+      },
+      {
+        "name": "target margin formula",
+        "actual": 71705.11764705883,
+        "expected": 71705.11764705883,
+        "pass": true
+      },
+      {
+        "name": "100pct margin unavailable",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "geometry unit mismatch unavailable",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "unknown rate remains unavailable",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "explicit zero rate supported",
+        "actual": 700,
+        "expected": 700,
+        "pass": true
+      },
+      {
+        "name": "net cost basis excludes allowance",
+        "actual": 32400,
+        "expected": 32400,
+        "pass": true
+      },
+      {
+        "name": "mixed BOQ units block total",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "duplicate item ID blocks total",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "archive excludes item cost",
+        "actual": 34020,
+        "expected": 34020,
+        "pass": true
+      },
+      {
+        "name": "blank total unavailable",
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      {
+        "name": "JSON round trip stable",
+        "actual": 70091.75249999999,
+        "expected": 70091.7525,
+        "pass": true
+      }
+    ]
+  },
+  "focused_edges": {
+    "count": 12,
+    "passed": 6,
+    "failed": 6,
+    "results": [
+      {
+        "id": "Q01_numeric_string_unknown",
+        "category": "numeric",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "Q02_explicit_zero_quantity",
+        "category": "zero_unknown",
+        "expected": 0,
+        "actual": 0,
+        "pass": true
+      },
+      {
+        "id": "Q03_negative_quantity",
+        "category": "numeric",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "Q04_finite_operands_overflow_line",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "Q05_finite_lines_overflow_sum",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "Q06_pricing_overflow",
+        "category": "overflow",
+        "expected": null,
+        "actual": "Infinity",
+        "pass": false
+      },
+      {
+        "id": "Q07_missing_ID",
+        "category": "identity",
+        "expected": null,
+        "actual": 47770,
+        "pass": false
+      },
+      {
+        "id": "Q08_whitespace_ID",
+        "category": "identity",
+        "expected": null,
+        "actual": 47770,
+        "pass": false
+      },
+      {
+        "id": "Q09_active_duplicate_blocks",
+        "category": "identity",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      },
+      {
+        "id": "Q10_archived_duplicate_import_or_total_block",
+        "category": "identity",
+        "expected": true,
+        "actual": false,
+        "pass": false
+      },
+      {
+        "id": "Q11_archived_excluded",
+        "category": "archive",
+        "expected": 34020,
+        "actual": 34020,
+        "pass": true
+      },
+      {
+        "id": "Q12_all_archived_unknown",
+        "category": "archive",
+        "expected": null,
+        "actual": null,
+        "pass": true
+      }
+    ]
+  },
+  "not_run": [
+    "application repairs",
+    "builder execution",
+    "browser/UI tests pending lead gate",
+    "qualified real-project acceptance",
+    "independent provider acceptance",
+    "OS save/print dialogs"
+  ],
+  "scope": "READ/VALIDATE only. C20 worker completion not assumed. No branch/ref changes, no application code edits."
+}

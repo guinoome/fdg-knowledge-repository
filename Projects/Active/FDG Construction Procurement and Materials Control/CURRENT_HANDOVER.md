@@ -27,3 +27,19 @@ No supplier messages, PO transmission/approval, tax/payment/accounting, quality 
 Use a private blank copy with one real material: reconcile an opening count, one real order, partial receipt, site issue and return against actual source slips. Verify stock/open-order/buy-list quantities and a saved/reopened backup, and record reviewer/discrepancies under this project. Preserve source evidence; do not rebuild the engine.
 
 Other construction candidates remain QA/QC/punch, then testing/commissioning/turnover. Optional area-choice answer, if later received, should steer the next work package.
+
+
+## C24 continuation — 2026-10-24, pre-repair evidence
+
+Canonical read-only baseline: `99db9f36cd4fee28553360db94a3161e2ccd228d`. This dated continuation governs the immediate next action; historical source, artifact hashes and acceptance evidence above are preserved, not freshly rerun unless stated below. Product source/build/distribution unchanged. No repairs, browser run or native OS save/open test occurred in C24.
+
+Fresh execution by `/root/proc_verify_oct24`: **67/67 existing checks pass;17 focused assertions:13 pass /4 fail**, exposing three root defects: voided transaction history permits a unit change that breaks backup reload; import admits order-linked site issues/opening counts rejected by live entry; aggregate order overflow imports and subsequently breaks summary/render. All remain unresolved. Exact source rebuild matched the historical68,492-byte artifact and its recorded SHA256; no application edits were made.
+
+[Exact repair cards](evidence/c24/repair-cards.json) · [Named results](evidence/c24/verification-pre-repair.json) · [Executable harness](evidence/c24/reproduction-harness.json). Historical browser/portable-save evidence above was not rerun. No real storekeeper/planner acceptance received.
+
+
+**Gate:** CODEX-P0 BLOCKED; UX_P0_BLOCKED_WITH_EVIDENCE for new UI work. The installed UI UX Pro Max2.15.0 marketplace script is functionally verified, but project-local skill delivery, Taste and four Claudex skills are missing. The user's GitHub-canonical/no-local-project-files/checkouts/downloads/installs instruction remains binding; no installer or provider/config change was executed. The optional gateway is not required. Exact inherited model identity was not independently observable.
+
+**Exact next action:** Obtain the founder's explicit bounded P0 alternative for only the named existing, RAM-only, reversible validation/data-integrity repairs using installed tools; then execute the exact project repair card and before/after regressions. No exception has been approved. No new feature, UI redesign, installation, provider/config change or deployment is included. Read-only verification/documentation may continue; do not begin repairs or mark the full construction suite done.
+
+[Coordinator record](<../FDG Construction Lifecycle Workspace/docs/work-packages/C24_PRE_REPAIR_CONTINUATION.md>) · [P0 evidence](<../FDG Construction Lifecycle Workspace/evidence/c24-p0/README.md>). Qualified real-user/domain acceptance and independent-provider review remain pending.

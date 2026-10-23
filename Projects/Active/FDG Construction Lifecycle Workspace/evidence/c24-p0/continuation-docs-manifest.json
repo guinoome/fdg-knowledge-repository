@@ -1,0 +1,32 @@
+{
+  "task": "C24-DOC",
+  "source_ref": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "status": "BLOBS_ONLY_PENDING_LEAD_PUBLICATION",
+  "files": [
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/CURRENT_HANDOVER.md",
+      "sha": "4d39a1bc8c85b73dd1f5156232f5f3a7aa759f1c",
+      "originalsha": "56e589a9f5283fb041febf2005a724ba5da33c2f"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Procurement and Materials Control/CURRENT_HANDOVER.md",
+      "sha": "89ed69c654641ff51f553d655221440eb9ea3ea7",
+      "originalsha": "3888a3c1123b4ddb37a40b64c0b21a3209f80b5d"
+    },
+    {
+      "path": "Projects/Active/FDG QTO BOQ Estimate Toolkit/CURRENT_HANDOVER.md",
+      "sha": "55854dac01d6cc8905fdf3970f9a59b851bc48de",
+      "originalsha": "7201f87f47c71f2c0b495ecbc831293506cbfcdb"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Scheduling and Cost Controls/CURRENT_HANDOVER.md",
+      "sha": "fd058d1a13db0dced1b2176564f33365dd234c52",
+      "originalsha": "1ee9e0a283968d1b0e9af438d5827b87f73edc56"
+    },
+    {
+      "path": "Projects/Active/FDG Construction Lifecycle Workspace/docs/work-packages/C24_PRE_REPAIR_CONTINUATION.md",
+      "sha": "23c2df66d860cea7aadf4c6c6abd1adaeb7e8377",
+      "originalsha": null
+    }
+  ]
+}

@@ -18,3 +18,19 @@ Rebuild: build/build-html.mjs exports buildEstimateHtml with explicit {initial,s
 ## Premium theme — 2026-10-16
 
 Founder-supplied navy/red/gold reference applied to CSS and working HTML. Existing JavaScript, schemas and records preserved. Chrome sample calculations unchanged;390px no document overflow. Theme uses no external assets/fonts and excludes quote client details. Lifecycle integration is a separate ongoing work package; do not confuse file toolkit coverage with the full platform’s permission/sync/deployment gates.
+
+
+## C24 continuation — 2026-10-24, pre-repair evidence
+
+Canonical read-only baseline: `99db9f36cd4fee28553360db94a3161e2ccd228d`. This dated continuation governs the immediate next action; historical source, artifact hashes and acceptance evidence above are preserved, not freshly rerun unless stated below. Product source/build/distribution unchanged. No repairs, browser run or native OS save/open test occurred in C24.
+
+Fresh execution by `/root/controls_verify_oct24`: **18/18 existing checks pass;12 focused assertions:6 pass /6 fail**. Unresolved candidates: finite operands overflow line/total/pricing results to Infinity; missing/whitespace stable IDs still permit totals; an active/archived duplicate ID imports and makes first-match editor/archive identity ambiguous. `html/estimate-engine.mjs` in the Lifecycle workspace is byte-identical to this tested engine (blob `a3731446a120e5a1adb2a91ac0ba114a9a0e773e`). Any authorized fix must cover both owners and their generated distributions, preserving existing data/history.
+
+[Exact repair card](evidence/c24/REPAIR_CARD.md) · [Named results](evidence/c24/validation.json) · [Executable harness](evidence/c24/reproduce.mjs). Builder inspected, not executed in this worker's C24 run. Historical browser/pricing/save evidence above was not rerun. Qualified estimator acceptance remains pending.
+
+
+**Gate:** CODEX-P0 BLOCKED; UX_P0_BLOCKED_WITH_EVIDENCE for new UI work. The installed UI UX Pro Max2.15.0 marketplace script is functionally verified, but project-local skill delivery, Taste and four Claudex skills are missing. The user's GitHub-canonical/no-local-project-files/checkouts/downloads/installs instruction remains binding; no installer or provider/config change was executed. The optional gateway is not required. Exact inherited model identity was not independently observable.
+
+**Exact next action:** Obtain the founder's explicit bounded P0 alternative for only the named existing, RAM-only, reversible validation/data-integrity repairs using installed tools; then execute the exact project repair card and before/after regressions. No exception has been approved. No new feature, UI redesign, installation, provider/config change or deployment is included. Read-only verification/documentation may continue; do not begin repairs or mark the full construction suite done.
+
+[Coordinator record](<../FDG Construction Lifecycle Workspace/docs/work-packages/C24_PRE_REPAIR_CONTINUATION.md>) · [P0 evidence](<../FDG Construction Lifecycle Workspace/evidence/c24-p0/README.md>). Qualified real-user/domain acceptance and independent-provider review remain pending.

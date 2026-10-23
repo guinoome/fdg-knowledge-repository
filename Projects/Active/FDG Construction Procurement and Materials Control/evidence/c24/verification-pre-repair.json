@@ -1,0 +1,565 @@
+{
+  "format": "FDG-C24-PROC-VERIFICATION",
+  "date": "2026-10-24",
+  "repository": "guinoome/fdg-knowledge-repository",
+  "ref": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "scope": "Projects/Active/FDG Construction Procurement and Materials Control",
+  "status": "EXISTING_ENGINE_VERIFIED_DEFECTS_REPRODUCED_NO_REPAIR",
+  "runtime": {
+    "node": "v24.16.0",
+    "execution": "Native installed Node via PowerShell stdin; code and output held in RAM; no project files, checkout, installs or downloads."
+  },
+  "counts": {
+    "baseline": {
+      "passed": 67,
+      "total": 67
+    },
+    "adversarial": {
+      "passed": 13,
+      "failed": 4,
+      "total": 17
+    },
+    "root_defects": 3
+  },
+  "artifact_rebuild": {
+    "bytes": 68492,
+    "sha256": "f3f3bb0a1acdf81e4743e3d8e1236663d95719fd95b744407d94a3629760ee66",
+    "git_blob_sha": "04a47a2c4ab3847aaefa8fb4123d494b062b2ccd",
+    "matched_recorded_integrity": true
+  },
+  "source_receipts": {
+    "html/engine.mjs": {
+      "sha": "c7bd8295beee46dd5efb7df0985a792bc3c21117"
+    },
+    "tests/materials.test.mjs": {
+      "sha": "8b65ae61d91cf265f6c5426362a0702afe45b00a"
+    },
+    "build/build-html.mjs": {
+      "sha": "09d31a038139160942d0e1e19f508158989b3bbb"
+    },
+    "html/blank.json": {
+      "sha": "be834dc0d644ae5558c3e900ebd1d4a7f8ebe631"
+    },
+    "html/sample.json": {
+      "sha": "94c0bd508317a7dad9d99c4bd4791fa865444993"
+    },
+    "html/app.js": {
+      "sha": "482643d5382630860bf14f01826f656e9731ac2f"
+    },
+    "html/styles.css": {
+      "sha": "58169a65d3fd4231c718e93e2af579556aa07763"
+    },
+    "html/shell.html": {
+      "sha": "07a4f1ff0969664fbce8f683f01088a8681c19c1"
+    },
+    "distribution/FDG-Procurement-Materials.html": {
+      "sha": "04a47a2c4ab3847aaefa8fb4123d494b062b2ccd"
+    },
+    "evidence/artifact-integrity.json": {
+      "sha": "3da1a34f2208a59f82338c43cc3a4879ba184e37"
+    },
+    "evidence/source-review.json": {
+      "sha": "c325aaef9444415dfc65c4ffb486a9e8286898e0"
+    }
+  },
+  "results": {
+    "runtime": "v24.16.0",
+    "baseline": [
+      {
+        "name": "setup retains stable project ID",
+        "pass": true
+      },
+      {
+        "name": "invalid report date rejected",
+        "pass": true
+      },
+      {
+        "name": "missing requirement remains unknown",
+        "pass": true
+      },
+      {
+        "name": "no movements means unknown stock",
+        "pass": true
+      },
+      {
+        "name": "full requirement initially still to order",
+        "pass": true
+      },
+      {
+        "name": "negative requirement rejected",
+        "pass": true
+      },
+      {
+        "name": "order unit inherited",
+        "pass": true
+      },
+      {
+        "name": "recorded order value",
+        "pass": true
+      },
+      {
+        "name": "open order reduces buy-list once",
+        "pass": true
+      },
+      {
+        "name": "late open order visible",
+        "pass": true
+      },
+      {
+        "name": "explicit zero opening is known",
+        "pass": true
+      },
+      {
+        "name": "receipt increases stock",
+        "pass": true
+      },
+      {
+        "name": "partial delivery leaves order balance",
+        "pass": true
+      },
+      {
+        "name": "receipt not double counted in buy-list",
+        "pass": true
+      },
+      {
+        "name": "still to receive excludes orders not delivered",
+        "pass": true
+      },
+      {
+        "name": "issue reduces stock",
+        "pass": true
+      },
+      {
+        "name": "issue does not increase overall project demand",
+        "pass": true
+      },
+      {
+        "name": "net issued separate from delivered",
+        "pass": true
+      },
+      {
+        "name": "site return increases stock once",
+        "pass": true
+      },
+      {
+        "name": "site return reduces net issues",
+        "pass": true
+      },
+      {
+        "name": "supplier return reduces stock",
+        "pass": true
+      },
+      {
+        "name": "supplier return reopens replacement balance",
+        "pass": true
+      },
+      {
+        "name": "supplier return preserves buy-list coverage",
+        "pass": true
+      },
+      {
+        "name": "excessive site return rejected",
+        "pass": true
+      },
+      {
+        "name": "negative stock rejected",
+        "pass": true
+      },
+      {
+        "name": "backdated historical negative stock rejected",
+        "pass": true
+      },
+      {
+        "name": "future movement rejected",
+        "pass": true
+      },
+      {
+        "name": "late opening count rejected",
+        "pass": true
+      },
+      {
+        "name": "wrong item order link rejected",
+        "pass": true
+      },
+      {
+        "name": "order before linked receipt rejected",
+        "pass": true
+      },
+      {
+        "name": "void of receipt with dependent issue blocked",
+        "pass": true
+      },
+      {
+        "name": "void order with receipts blocked",
+        "pass": true
+      },
+      {
+        "name": "void requires reason",
+        "pass": true
+      },
+      {
+        "name": "void preserves original record",
+        "pass": true
+      },
+      {
+        "name": "voided supplier return excluded",
+        "pass": true
+      },
+      {
+        "name": "void retains correction reason",
+        "pass": true
+      },
+      {
+        "name": "source object not changed by action",
+        "pass": true
+      },
+      {
+        "name": "unit edit after transactions rejected",
+        "pass": true
+      },
+      {
+        "name": "requirement revision preserved",
+        "pass": true
+      },
+      {
+        "name": "previous requirement in history",
+        "pass": true
+      },
+      {
+        "name": "JSON roundtrip stock",
+        "pass": true
+      },
+      {
+        "name": "JSON roundtrip order balance",
+        "pass": true
+      },
+      {
+        "name": "duplicate movement rejected on import",
+        "pass": true
+      },
+      {
+        "name": "import unit mismatch rejected",
+        "pass": true
+      },
+      {
+        "name": "import dangling item rejected",
+        "pass": true
+      },
+      {
+        "name": "nonfinite number rejected",
+        "pass": true
+      },
+      {
+        "name": "padded ID rejected",
+        "pass": true
+      },
+      {
+        "name": "cutoff excludes later site issues",
+        "pass": true
+      },
+      {
+        "name": "unlinked receipt changes stock",
+        "pass": true
+      },
+      {
+        "name": "unlinked receipt does not close order",
+        "pass": true
+      },
+      {
+        "name": "missing rate makes total unknown",
+        "pass": true
+      },
+      {
+        "name": "known subtotal labeled separately",
+        "pass": true
+      },
+      {
+        "name": "import preview leaves existing state untouched",
+        "pass": true
+      },
+      {
+        "name": "lifecycle demand qty retained",
+        "pass": true
+      },
+      {
+        "name": "source ID retained",
+        "pass": true
+      },
+      {
+        "name": "source revision retained",
+        "pass": true
+      },
+      {
+        "name": "source original row preserved",
+        "pass": true
+      },
+      {
+        "name": "no source delivery invented in ledger",
+        "pass": true
+      },
+      {
+        "name": "no source orders invented",
+        "pass": true
+      },
+      {
+        "name": "cross-project source demand rejected",
+        "pass": true
+      },
+      {
+        "name": "spreadsheet formula injection escaped",
+        "pass": true
+      },
+      {
+        "name": "unknown movement type rejected",
+        "pass": true
+      },
+      {
+        "name": "aggregate stock overflow rejected",
+        "pass": true
+      },
+      {
+        "name": "aggregate order overflow rejected",
+        "pass": true
+      },
+      {
+        "name": "linked supplier return cannot predate receipts even with opening stock",
+        "pass": true
+      },
+      {
+        "name": "overdelivery retained and flagged",
+        "pass": true
+      },
+      {
+        "name": "overdelivery does not overwrite original order quantity",
+        "pass": true
+      }
+    ],
+    "adversarial": [
+      {
+        "id": "PROC-C24-01",
+        "title": "Voided-only material history survives unit edit and JSON reload",
+        "expected": "reload succeeds",
+        "actual": {
+          "observed": "reload fails",
+          "message": "Transaction material/unit mismatch.",
+          "materialUnit": "pcs",
+          "retainedMovement": {
+            "id": "MOVE-000001",
+            "item": "MAT-000001",
+            "type": "Received",
+            "quantity": 10,
+            "unit": "m",
+            "date": "2026-10-20",
+            "order": null,
+            "reference": "",
+            "location": "",
+            "note": "",
+            "voided": true,
+            "voidReason": "Synthetic duplicate receipt correction"
+          }
+        },
+        "pass": false
+      },
+      {
+        "id": "PROC-C24-02",
+        "title": "Import rejects order link on site issue as live move does",
+        "expected": "rejected",
+        "actual": {
+          "observed": "accepted",
+          "movement": {
+            "id": "MOVE-000002",
+            "item": "MAT-000001",
+            "unit": "m",
+            "quantity": 10,
+            "date": "2026-10-21",
+            "reference": "",
+            "note": "",
+            "voided": false,
+            "voidReason": null,
+            "type": "Issued to site",
+            "order": "ORDER-000001",
+            "location": ""
+          },
+          "stock": 90
+        },
+        "pass": false
+      },
+      {
+        "id": "PROC-C24-03",
+        "title": "Linked return cannot precede receipt despite sufficient opening stock",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Supplier return predates its linked receipts."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-04",
+        "title": "Dependent historical receipt correction rejected",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "This change creates negative stock on 2026-10-21. Record the earlier receipt/count or correct related movements first."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-05",
+        "title": "Imported orphan material transaction rejected",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Transaction material/unit mismatch."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-06",
+        "title": "Imported duplicate order ID rejected",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "orders: missing/duplicate ID."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-07",
+        "title": "Unknown stock differs from explicit zero opening",
+        "expected": "distinct",
+        "actual": {
+          "observed": "distinct",
+          "before": null,
+          "after": 0
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-08",
+        "title": "Earlier report cutoff excludes later movement but retains source",
+        "expected": "correct",
+        "actual": {
+          "observed": "correct",
+          "stock": 50,
+          "retained": 2
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-09",
+        "title": "Import unit mismatch rejected",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Transaction material/unit mismatch."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-10",
+        "title": "Draft lifecycle source identity retained without fabricated transactions",
+        "expected": "correct",
+        "actual": {
+          "observed": "correct",
+          "source": {
+            "format": "FDG-CONSTRUCTION-LIFECYCLE",
+            "projectId": "LIFE",
+            "register": "Procurement",
+            "sourceId": "D-1",
+            "revision": 3,
+            "wbs": "W-1",
+            "row": {
+              "id": "D-1",
+              "project_id": "LIFE",
+              "description": "Pipe",
+              "unit": "m",
+              "required_qty": 100,
+              "required_date": "2026-10-25",
+              "revision": 3,
+              "wbs_id": "W-1"
+            },
+            "importFile": "synthetic.json"
+          }
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-11",
+        "title": "Import rejects order link on opening count",
+        "expected": "rejected",
+        "actual": {
+          "observed": "accepted"
+        },
+        "pass": false
+      },
+      {
+        "id": "PROC-C24-12",
+        "title": "Import rejects aggregate order overflow before confirmation/render",
+        "expected": "rejected",
+        "actual": {
+          "observed": "accepted",
+          "renderProjection": "throws",
+          "message": "Order totals exceed the supported number range."
+        },
+        "pass": false
+      },
+      {
+        "id": "PROC-C24-13",
+        "title": "Import orphan order link rejected",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Invalid order link."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-14",
+        "title": "Import duplicate material identity rejected",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "materials: missing/duplicate ID."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-15",
+        "title": "Cross-material linked receipt rejected on import",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Invalid order link."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-16",
+        "title": "Issue correction cannot strand dependent site return",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Site returns exceed recorded issues on 2026-10-22."
+        },
+        "pass": true
+      },
+      {
+        "id": "PROC-C24-17",
+        "title": "Live unit change rejected while transactions active",
+        "expected": "threw",
+        "actual": {
+          "observed": "threw",
+          "message": "Unit cannot change after transactions. Create a separate material for a different unit."
+        },
+        "pass": true
+      }
+    ]
+  },
+  "limitations": [
+    "Browser not run pending lead P0/UI gate.",
+    "No code/source/branch/ref changed.",
+    "No repair implemented or claimed.",
+    "Synthetic-only engineering reproduction; no real-project or independent-provider acceptance."
+  ]
+}

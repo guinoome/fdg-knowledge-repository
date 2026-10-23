@@ -1,0 +1,120 @@
+{
+  "format": "FDG-C24-PROC-REPAIR-CARDS",
+  "date": "2026-10-24",
+  "canonical_ref": "99db9f36cd4fee28553360db94a3161e2ccd228d",
+  "status": "READY_FOR_P0_CLEARANCE_NOT_IMPLEMENTED",
+  "scope": "Projects/Active/FDG Construction Procurement and Materials Control",
+  "findings": [
+    {
+      "id": "PROC-C24-F1",
+      "priority": "P1",
+      "title": "Voided transaction history allows a material unit change that breaks portable reload",
+      "evidence_tests": [
+        "PROC-C24-01"
+      ],
+      "source": {
+        "path": "html/engine.mjs",
+        "line": 8,
+        "companion_line": 21
+      },
+      "reproduction": [
+        "Create project C24-SYNTHETIC at2026-10-24; add Pipe/m requirement100.",
+        "Receive10m on2026-10-20; void MOVE-000001 with actual synthetic correction reason.",
+        "Edit MAT-000001 unit to pcs: material() accepts it.",
+        "JSON.stringify ->JSON.parse ->normalize: throws Transaction material/unit mismatch."
+      ],
+      "root_cause": "material() protects unit only when an active order/movement exists, while normalize() validates unit against all retained transaction history including voided records.",
+      "smallest_repair": "Keep material identity/unit immutable after ANY retained order or movement for that material. Replace the active(s,'orders') and active(s,'movements') predicates in the existing material unit guard with all historical s.orders/s.movements. Preserve every voided row and reason; do not rewrite historical units.",
+      "owned_files": [
+        "html/engine.mjs",
+        "tests/materials.test.mjs",
+        "distribution/FDG-Procurement-Materials.html"
+      ],
+      "required_checks": [
+        "Unit change rejected after sole receipt was voided; original state byte-equivalent unchanged.",
+        "Unit change rejected after sole order was voided.",
+        "Same-unit target/name update remains allowed with voided history.",
+        "Unit change remains allowed before any transaction.",
+        "Current valid JSON and working HTML reload retain original units/history."
+      ]
+    },
+    {
+      "id": "PROC-C24-F2",
+      "priority": "P2",
+      "title": "Backup import accepts invalid order links on site issues/opening counts",
+      "evidence_tests": [
+        "PROC-C24-02",
+        "PROC-C24-11"
+      ],
+      "source": {
+        "path": "html/engine.mjs",
+        "line": 24,
+        "companion_line": 14
+      },
+      "reproduction": [
+        "Create material Pipe/m; opening100m, active order80m and issue10m.",
+        "Set issue.order='ORDER-000001' in synthetic backup.",
+        "normalize accepts invalid order-linked issue even though move rejects it.",
+        "Same invalid link is accepted on Opening count."
+      ],
+      "root_cause": "normalize validates linked order identity/material/date but omits the permitted movement-type condition already enforced by move().",
+      "smallest_repair": "When x.order exists, reject any movement whose type is not Received or Returned to supplier before accepting the existing link validation. Apply consistently to active and retained voided records; preserve existing valid histories without migration.",
+      "owned_files": [
+        "html/engine.mjs",
+        "tests/materials.test.mjs",
+        "distribution/FDG-Procurement-Materials.html"
+      ],
+      "required_checks": [
+        "Reject linked Issued to site, Returned from site, and Opening count in backup preview.",
+        "Valid linked Received and Returned to supplier still round-trip.",
+        "Reject orphan/cross-material/voided-active-order links and pre-order dates as before.",
+        "Valid unlinked site issues and opening counts retained."
+      ]
+    },
+    {
+      "id": "PROC-C24-F3",
+      "priority": "P1",
+      "title": "Imported aggregate order overflow passes normalize then crashes rendering after state assignment",
+      "evidence_tests": [
+        "PROC-C24-12"
+      ],
+      "source": {
+        "path": "html/engine.mjs",
+        "line": 25,
+        "companion_lines": [
+          9,
+          18,
+          19
+        ],
+        "ui_path": "html/app.js",
+        "ui_context": "commit-import calls normalize then change; change assigns state then render calls summary"
+      },
+      "reproduction": [
+        "Create Pipe/m with one order quantity1e308, unknown rate; live engine allows it.",
+        "Append otherwise identical second order with distinct ORDER-000002 ID and quantity1e308 to synthetic JSON.",
+        "normalize returns accepted state.",
+        "summary throws Order totals exceed the supported number range. Live order() blocks equivalent aggregate creation."
+      ],
+      "root_cause": "normalize runs per-item stock/linked-return validation but never the aggregate order summary validation enforced by live order().",
+      "smallest_repair": "Validate current-report aggregate projection before normalize returns a candidate, so preview rejects it without changing the live workspace. Also validate a proposed report cutoff in setup before returning the changed profile, since a previously safe imported timeline can become overflowing at another cutoff. Reuse existing summary guard; do not clamp totals or convert overflow into a zero/unknown value.",
+      "owned_files": [
+        "html/engine.mjs",
+        "tests/materials.test.mjs",
+        "distribution/FDG-Procurement-Materials.html"
+      ],
+      "required_checks": [
+        "Backup preview rejects2x1e308 outstanding order quantities; source and current workspace untouched.",
+        "Aggregate known-value overflow rejected on import with finite individual values.",
+        "Safe current cutoff with later orders does not become a live non-renderable state when cutoff changes.",
+        "Ordinary unknown prices, zero prices and finite large quantities preserve existing semantics.",
+        "All baseline67 checks and adversarial/recovery checks pass after repair."
+      ]
+    }
+  ],
+  "release_requirements": [
+    "P0 lead clearance before edits.",
+    "Rebuild exact single HTML from canonical sources; refresh integrity/evidence and handover.",
+    "Run targeted UI preview reject/current-state preservation and native unit-edit protection after current browser gate clears.",
+    "Never promote procurement authority, QA, installation, accounting, cloud or human acceptance."
+  ]
+}
