@@ -28,3 +28,7 @@
 ## FDG Visual Craft Tooling — 2026-10-23
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/08_Visual_Craft_Collaborator_Skills_and_Tooling_2026-10-23|FPIS-UX-0008 Visual Craft Skills]] — review of user video 1000011715.mp4; official pinned sources for Taste Skill, GSAP Skills, free Transitions.dev, Playwright CLI, Impeccable, Design Extract and React Bits. Task-triggered source installer and Claude/Codex agent skill wrappers are in tools/visual-craft/. No local workstation installation implied.
+
+## Creative Studio huashu-motion film adapter — 2026-10-23
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/09_Huashu_Motion_Cinematic_Product_Film_Adapter_2026-10-23|FPIS-CREATIVE-0009 Huashu Motion Adapter]] — verified source from founder video 1000011800.mp4; optional film-production skill, pinned local installer, limited runtime support and rights/engineering QA. Not installed or video-tested on any FDG workstation.

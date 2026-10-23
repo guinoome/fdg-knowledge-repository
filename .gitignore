@@ -62,3 +62,8 @@ Projects/Active/AI/Installer/codex-plugin-cc/
 Thumbs.db
 desktop.ini
 $RECYCLE.BIN/
+
+# Local-only creative runtime; preserve FDG collaborator skills and avoid mirroring third-party source
+.fdg-tools/
+.claude/skills/huashu-motion
+.agents/skills/huashu-motion

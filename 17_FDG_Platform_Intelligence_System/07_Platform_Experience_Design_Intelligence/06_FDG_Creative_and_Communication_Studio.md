@@ -557,3 +557,7 @@ The Studio does not own campaign strategy, lead qualification, sales closure or 
 Source analysis:
 
 [[19_FWAIS — FDG Workflow Automation Intelligence System/99_Research_Source_Analysis/Transcript_03_Social_Content_Batch_Automation_and_Platform_Launch|Transcript 03 — Social Content Batch Automation and Platform Launch]]
+
+## huashu-motion cinematic product film adapter — 2026-10-23
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/09_Huashu_Motion_Cinematic_Product_Film_Adapter_2026-10-23|FPIS-CREATIVE-0009 Huashu Motion Adapter]] — optional code-driven, locally rendered FDG Creative Studio film workflow for approved product and engineering explainers. Native pinned Claude/Codex project-local installer and handover at tools/creative-studio/HUASHU_MOTION_HANDOVER.md; not a new intelligence system, real facility simulation, publishing authorization or already installed runtime. FBIS/FWAIS maintain campaign ownership.
