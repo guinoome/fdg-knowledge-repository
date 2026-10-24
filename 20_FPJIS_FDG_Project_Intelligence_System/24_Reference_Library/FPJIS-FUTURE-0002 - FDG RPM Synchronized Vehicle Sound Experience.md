@@ -21,7 +21,7 @@ automated_agent_task: false
 
 Founder wants a **convincing sports/supercar internal-combustion roar** from a diesel car or electric car, played through speakers, with the pitch/timbre, throttle blips and shift moments following the user's actual driving. Desired perception: richly layered V8, straight-six turbo, V10 and V12 engine character, responsive idle-to-redline and load/acceleration changes; sound intensity and personality customizable. The purpose is **recreational audiovisual personalization**, not actual powertrain modification or external exhaust compliance circumvention.
 
-**In scope:** dashboard/phone-based **original procedural sound synthesis** with only individually verified CC0/public-domain optional samples; engine-audio playback that can coexist with FM/AM radio, music streaming, podcasts, or permitted parked/passenger movie audio; direct user enable/disable and a dedicated engine volume independent of entertainment; read-only vehicle operating telemetry where legitimately supported, user-controlled cabin route, low-latency sound control, safe mute and source quality. Potential future combination with project FUTURE-0001's *visual* cockpit dashboard simulator.
+**In scope:** dashboard/phone-based **original procedural sound synthesis** with only individually verified CC0/public-domain optional samples; engine-audio playback that can coexist with FM/AM radio, music streaming, podcasts, or permitted parked/passenger movie audio; manual ROAR ON/OFF, ROAR VOLUME and client-defined MAX ROAR LEVEL, with **no FDG auto-mute due to radio, movies, music or calls**, plus an OEM-baseline restore workflow; read-only vehicle operating telemetry where legitimately supported, user-controlled cabin route, low-latency sound control, safe mute and source quality. Potential future combination with project FUTURE-0001's *visual* cockpit dashboard simulator.
 
 **Out of scope:** altering ECU/TCU/VMCU, rpm limits, throttle mapping, vehicle speed, combustion/exhaust, fuel injection, BMS, regenerative braking, charging, AVAS/pedestrian alert, reverse sensor beeps, turn-signal/chimes or any required vehicle warnings; no firmware flash, CAN injection, diagnostic writes, OEM signature bypass, rooting, unauthorized privileged apps or removing OEM safety sound infrastructure.
 
@@ -52,15 +52,16 @@ EV (requires exact vehicle/OEM approved capabilities)
       FDG original procedural sound synthesis / vetted CC0 layers / DSP
       (idle, harmonic/order layers, intake/exhaust, turbo spool, shift transient)
                 ↓
-      User engine-audio ON/OFF + profile + independent volume mixer
+      Owner engine ROAR ON/OFF + profile + ROAR VOLUME + MAX ROAR CAP
                 ↓
-      Audio focus/ducking of ENGINE track for media/calls/navigation
-      Peak limiter + fail-safe engine mute; preserve mandatory vehicle alerts
+      Media and engine coexist (NO automatic FDG duck/mute for calls/media)
+      Respect OEM/OS audio-focus and preserve all mandatory safety alerts
+      Hard sound peak limit + fault-safe mute; restore to saved pre-FDG state
                 ↓
       APPROVED CABIN output (phone/AUX/USB/vehicle speakers if routed safely)
 ~~~
 
-**Required states:** AUDIO_OFF, BENCH_SIMULATION, TELEMETRY_CONNECTING, LIVE_DIESEL_RPM, LIVE_EV_MOTOR_RPM_AUTHORIZED, EV_VIRTUAL_RPM, DATA_STALE_MUTED, ERROR_MUTED. Display one active state in the future UX; make input type transparent. No raw CAN traffic recording or telemetry upload by default.
+**Required states:** AUDIO_OFF, BENCH_SIMULATION, TELEMETRY_CONNECTING, LIVE_DIESEL_RPM, LIVE_EV_MOTOR_RPM_AUTHORIZED, EV_VIRTUAL_RPM, DATA_STALE_MUTED, ERROR_MUTED, RESTORE_PREVIEW, RESTORE_IN_PROGRESS, ORIGINAL_EXPERIENCE_VERIFIED, RESTORE_BLOCKED_WITH_EVIDENCE. Display one active state in the future UX; make input type transparent. No raw CAN traffic recording or telemetry upload by default.
 
 ### Audio realism requirements (candidate, measurable later)
 
@@ -68,31 +69,57 @@ EV (requires exact vehicle/OEM approved capabilities)
 - Prefer fully original code-generated waveforms and DSP for idle, acceleration, cruise and deceleration; supplement only with per-asset verified CC0/public-domain sounds if needed. Mix using load/throttle-dependent filtering and crossfades, rather than naively pitching a short recording loop across the entire range.
 - Blend optional intake growl, turbo whine/spool, transmission upshift/downshift sonic impression, engine-braking/deceleration rumble, exhaust overrun—presets only, never turn noises into functional exhaust or engine changes.
 - Perceptual presets under candidate working names: INLINE_6_TURBO_DIESEL, V8_MUSCLE, V10_HIGH_REV, V12_GT, QUIET_CRUISE. No third-party branded Ferrari/Lamborghini engine clips without appropriate permissions and licensing.
-- Require a one-action engine ON/OFF switch, separate engine-audio volume and a clear media coexistence preference; user can watch an approved parked/passenger movie, use radio/music, or enter Quiet mode without losing infotainment playback. Limit sound by default, preserve turn indicators, call/navigation prompts, required chimes and driver situational awareness. Headphone output for a driving operator is not the intended method.
+- Require a manual one-action ROAR ON/OFF, current ROAR VOLUME and persistent user-set MAX ROAR LEVEL; the engine continues while media or calls begin unless **the user chooses** OFF/Quiet, an actual device fault occurs or binding OEM/OS audio-focus/safety rules intervene. Limit sound by default, preserve turn indicators, navigation prompts, required chimes and driver situational awareness. Headphone output for a driving operator is not the intended method.
 - Bench-test multiple output paths (wired AUX/USB vs Bluetooth/infotainment) and **measure** cumulative telemetry+decode+audio-buffer+wireless delay (not a fabricated "zero latency"). Provisional UX design objective: **under 100 ms perceived response for the selected approved wired path if practically attainable**, not a guarantee; user tests and hardware constraints determine acceptance. Wireless buffering may add unacceptable delay.
-- Detect frozen/out-of-range RPM, no sensor, stale data, suspended app, head-unit audio focus interruptions and disconnected adapter: fade to silent; do not keep an engine roaring at last known RPM.
+- Detect frozen/out-of-range RPM, no sensor, stale data, suspended app, genuine head-unit audio focus restrictions and disconnected adapter: fade to silent; do not keep an engine roaring at last known RPM.
 
 ## Founder addendum 2026-10-24 — Premium cabin sound, coexistence and asset ownership
 
-### SA-01 — Sound is an optional **secondary** audio source, not a replacement player
+### SA-01 — Optional engine sound controlled by the owner, **not automatically muted for media**
 
-The engine sound is a separate, locally generated track over/alongside the existing radio, music, podcast, audiobook or parked/passenger-authorized movie sound. Do **not** require the user to stop existing infotainment or select "engine sound only." The user keeps the entertainment application and vehicle audio system in control; the FDG effect is removable and must not hold exclusive focus or override OEM routing/safety audio. **Actual mixing and background playback capability depend on Android/AAOS/OEM head-unit integration and must be bench tested**; if unsupported, disclose the limitation rather than using system/root hacks.
+The FDG engine is a separate locally generated effect played concurrently with AM/FM radio, music, podcasts, audiobooks or permitted parked/passenger movie audio, if the hardware/OS permits simultaneous mixing. Users may leave **both** on indefinitely. **The FDG application must NOT automatically lower, mute, fade or stop the engine sound merely because a radio program, movie, song, podcast, navigation session or phone call starts or ends.** Engine effect and entertainment are separate streams; FDG never commandeers the other app's controls or audio session. True supported mixer behavior depends on device and operating system; test it rather than silently bypassing audio focus.
 
-| User control | Desired behavior |
+| User/client control | Required effect |
 | --- | --- |
-| **ENGINE OFF / ON** | Immediate simple toggle; OFF truly silent, no engine buffering/hum. Default OFF at initial setup; retain opt-in setting only where OS and safety requirements permit |
-| **ENGINE VOLUME** | Dedicated 0–100% *control input*, mapped to calibrated safe acoustic gain and peak limit, **not** unrestricted raw SPL or manufacturer volume bypass |
-| **MIX WITH MEDIA** | Radio/music may remain audible with user-selected subtle engine background; FDG does **not** automatically duck entertainment when its synthesized engine becomes louder |
-| **QUIET / MEDIA FIRST** | Automatically lower or mute the engine layer when entertainment, spoken word or calls are active, depending on feasible published audio APIs |
-| **SPORT SOUND ONLY** | Optional engine simulation without other entertainment when user chooses; does not commandeer OEM focus or silence required alerts |
-| **CABIN PROFILE** | User presets for sound timbre and engine gain, with a separate OFF master control in every screen |
-| **AUTO SAFETY PRIORITY** | Calls, navigation instructions and OEM safety warning/chimes take precedence. If the system cannot distinguish/observe required alerts safely, use a conservative engine-level limit or mute |
+| **ROAR ON / OFF** | Primary instantly accessible manual control. OFF truly silences only FDG roar; normal radio, movie and call audio continues. Initial setup defaults OFF |
+| **ROAR VOLUME** | Current roar loudness independently adjustable from media volume |
+| **MAX ROAR LEVEL** | Persistent user-adjustable cap (0–100% *of a calibrated safe internal range*) on the roaring track, independent from media level. ROAR VOLUME cannot exceed this cap; an absolute technical safety ceiling remains non-overridable |
+| **MIX WITH MEDIA — default while enabled** | Engine keeps roaring at user-selected cap even when radio/music/movie/call starts. No event-triggered FDG auto-ducking or pausing of either stream |
+| **QUIET / MEDIA FIRST** | Available as a *manual* user-selected preset only, not switched on by detecting radio, movie or phone calls |
+| **SPORT SOUND ONLY** | Available when user independently pauses/stops entertainment; FDG does not pause the radio/media app |
+| **RESTORE ORIGINAL VEHICLE EXPERIENCE** | Separate confirmed rollback of FDG's optional effects and permitted settings; this is not the everyday engine OFF switch |
+| **OEM/OS safety precedence** | Required warnings, emergency sounds and legally mandated audio must be audible. Respect OEM/OS-controlled audio focus/call policies; do not override them. If persistent roar would mask required audio, cap/attenuate safely or treat the hardware as unsupported |
 
-**Source evidence:** Android [Manage audio focus](https://developer.android.com/media/optimize/audio-focus) explains that multiple apps can play simultaneously on some devices, that Android audio-focus negotiation may pause/fade or duck competing streams, and that behavior differs by Android release and speech classification. Android's [AudioFocusRequest API](https://developer.android.com/reference/android/media/AudioFocusRequest.html) also notes focus-request restrictions on newer versions. No assumption of native media mixing, audio-stream capture or system ducking control on every EV or head unit. Never defeat audio focus, privileged audio routing, media DRM or OEM driver-distraction rules to add the effect.
+**Founder correction:** Do not advertise a product behavior like “automatically mute the roar for radio, movies or phone calls.” **User choice**, not entertainment detection, controls the synthesized engine. Calls/navigation are not an excuse for FDG to *unilaterally* override user volume; however, the car/OS may enforce audio focus, which FDG must obey. On platforms where a call forces its own pause/duck, explain the limitation explicitly. Music/movie mixing, call coexistence, and safety alert audibility must be bench-verified on each supported sound route, not promised generically.
 
-**Playback precedence:** `OFF` > `SAFETY_WARNING / CALL / NAV_PROMPT` (engine off or safely ducked as allowed) > `MEDIA_FIRST / QUIET` (low or muted) > `MEDIA_BLEND` (normal music + configurable engine layer) > `SPORT_SOUND_ONLY`. Mode names represent **desired app behavior**, not a right to intercept OEM safety messages.
+**Source:** Android [Manage audio focus](https://developer.android.com/media/optimize/audio-focus) and [AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest.html) detail platform rules, including possible enforced focus effects. Never bypass the OEM mixer, privileged audio routing, media DRM, or distraction policies to get continuous roar. Never replace the vehicle's mandatory AVAS/pedestrian warning or cabin chime streams.
 
-**Fault safety:** Engine effect auto-fades to silent on stale RPM, stale user permission, navigation/audio-focus uncertainty, device disconnect, speaker route loss, overheating/resource underrun or screen/app shutdown. No spontaneous restart at full volume after reconnect. Separate manual off is always immediately accessible.
+**Priority:** `RESTORE ORIGINAL` and user `ROAR OFF` > mandatory OEM/OS/safety constraints > proven loss of telemetry/device/audio route > owner's chosen engine ON with ROAR VOLUME ≤ MAX ROAR LEVEL. Ordinary call, music, movie or radio start events are **not** conditions for app-level auto-muted roar. Hardware/OS focus and safety behavior are separate.
+
+**Fault safety:** Stale/invalid RPM, revoked permissions, device or audio-route disconnection, app exit, thermal or resource failure fade the FDG roar to silent; starting radio/music/movie/call is **not** a fault and must not trigger that fade.
+
+### SA-01B — Restore Original Vehicle Experience — owner/client rollback requirement
+
+Provide a clearly labeled and persistent **Restore Original Vehicle Experience** button in FDG settings for an authorized owner/client. It must restore their **pre-FDG vehicle presentation and sound experience** by removing optional FDG effects and reverting only FDG-managed, reversible settings. Distinguish these three controls:
+
+- `ROAR OFF`: immediately mute synthetic engine sound; retain app, settings, custom sound profiles and ability to toggle back ON.
+- `RESTORE ORIGINAL VEHICLE EXPERIENCE`: guided rollback of *every FDG optional change made to authorized system sound routing and, if combined with [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0001 - CleanYourTV and Connected Device Display Exploration|FPJIS-FUTURE-0001]], permitted non-safety display preferences.* Stop audio, release the FDG overlay/focus, restore changed settings to **the values recorded before FDG installation/activation** using only supported APIs, remove app-specific background/autostart hooks, and validate the original user experience.
+- `REMOVE FDG INTEGRATION`: a separate confirmed option after rollback verification, to remove optional FDG services/app, pairings and stored settings as permitted. Deleting client data needs its own consent.
+
+**OEM restoration boundary:** Prefer non-invasive separate app installation so there are *zero OEM parameters to restore*. Never modify factory speedometer calibration, alerts, ECU, BMS, AVAS, HVAC/back-up camera functionality, manufacturer firmware, proprietary UI or vehicle security. **Do not use a whole-car factory reset or pretend that an app can reinstall OEM firmware.** The label means “revert **our** changes to the verified original pre-FDG state,” not a full manufacturer factory reset. If an OEM or existing user setting cannot be read before writing, or cannot be restored using an authorized public/OEM API, **FDG must not change it**; offer an isolated app-only integration instead.
+
+**Restore-ready contract, before first live deployment:**
+
+1. Record a locally protected immutable **pre-FDG baseline manifest** for every permitted setting our integration will actually change, including device/model/firmware/profile, original value, source/read method, supported restore API, original audio route and non-safety theme state as applicable. Do **not** claim access to settings the OS denies.
+2. Test round-trip **read → permitted change → exact restore → read-back** for the selected integration/device class before granting the installation path. Keep baseline local-first/offline, encrypted when sensitive, backed up and separate from future user customization; distinguish pre-FDG personalized owner settings from manufacturer-wide default values.
+3. Restore UX: owner/client taps `Restore Original Vehicle Experience` → **preview** specifically which FDG settings and services are reversible, unchanged or unsupported, and identify the correct authorized profile → confirm → immediately mute FDG effects → restore permitted items transactionally/idempotently → restart/verify originals, independent of FDG cloud billing.
+4. Mark **ORIGINAL_EXPERIENCE_VERIFIED** only if all FDG-changed reversible settings match the recorded original state and no FDG effect returns after device restart. Itemize the changes and keep an approval/audit receipt.
+5. If permission/device/OTA/access fails, mark **RESTORE_BLOCKED_WITH_EVIDENCE**, keep roar disabled, preserve the baseline and show exact unmatched items and manual/OEM-supported recovery route. **Never show a success banner if OEM baseline restoration is incomplete**; do not forcibly disable safety controls.
+6. Per-client restoration cannot affect other profiles/tenants. Users can restore original audio/visual experience offline without paid FDG subscription; never lock in effects.
+
+**User-facing example labels:** `Engine Roar: ON / OFF`; `Roar Volume`; `Maximum Roar Volume`; `Restore Original Vehicle Experience`; and confirmation explaining “Turns off FDG enhancements and reverts only verified FDG changes; this does not reset or reflash the car.”
+
+**Future test requirement:** test current media playing + roar enabled + call/media starts (no FDG auto mute), cap persists across reboots, restore when installation is app-only and with allowed mock settings, restore with lost internet, interrupted restore, device firmware update, profile switching, and optional app removal. Real OEM baseline restoration requires manufacturer-supported access and live independent evidence; no product-wide guarantee of factory state.
 
 ### SA-02 — Create a rights-clean sound library, not a collection of "free" downloads
 
@@ -125,16 +152,16 @@ reviewer_and_date:
 
 ### SA-03 — Mandatory future quality gates before any commercial pilot
 
-- Demonstrate true independent OFF and volume while a benign radio/music/movie test stream is active; verify ENGINE OFF leaves the other stream playing.
-- Verify user can choose normal media priority, background engine blend and sport-only behavior without muting alerts or unexpectedly taking exclusive playback focus.
-- Test audio focus loss/gain, call and navigation prompts, Bluetooth/USB/AUX rerouting, device reboot, standby/reconnect, low-power and thermal stress. Collect actual OS/head-unit compatibility matrix and end-to-end timing.
+- Demonstrate ROAR ON/OFF, independent ROAR VOLUME and MAX ROAR LEVEL while radio/music/movie test stream is active; user ROAR OFF leaves the other audio playing; media or a call starting never invokes FDG auto-muting.
+- Verify persistent MIX WITH MEDIA when owner leaves roar ON, owner-selected Quiet and Sport-only modes (not auto-switching on media/calls), legally required safety prompt audibility, independent maximum roar cap and user-initiated Restore Original Vehicle Experience.
+- Test OS-enforced audio focus gain/loss and distinguish it from FDG automatic behavior; simulate radio/music/movie/call start/stop, required warnings, Bluetooth/USB/AUX rerouting, restore before/after reboot, interrupted restore, standby/reconnect and low-power/thermal stress. Collect actual OS/head-unit compatibility matrix and end-to-end timing.
 - Verify engine sound remains pleasant at idle, overrun and ramping RPM *at low default gain*, without clipping/popping, fatigue or overpowering driver attention.
 - Independently confirm every sound asset's creator, source and rights, clean-room synthesis code and package/dependency licenses. Reject unverified/free-but-restricted sounds from commercial bundles.
 - Do not mark physical vehicle, Android Automotive, simultaneous speaker mixing or legally risk-free ownership as IMPLEMENTED until a real, authorized device test and source/license evidence exists.
 
 ## Bounded prototype path (future authorization required)
 
-**V0 — Standalone offline bench simulator (no real vehicle or OEM screen):** Fully original/procedural sound engine, manual throttle slider and RPM/gear visual dashboard, engine ON/OFF button, independent volume and a dummy radio/movie/music track to test sound mixing; profile selectors, rev blip button, CPU and latency logging, locally rendered demonstration with no automotive interfaces. Demonstrate realistic idle-to-redline, smooth deceleration, simultaneous media and priority/mute behavior.
+**V0 — Standalone offline bench simulator (no real vehicle or OEM screen):** Fully original/procedural sound engine, manual throttle slider and RPM/gear visual dashboard, engine ON/OFF, separate roar volume and max-roar cap, dummy radio/movie/music/call track to verify **no automatic FDG ducking**, and Restore Original Experience preview/confirm/test; profile selectors, rev blip button, CPU and latency logging, locally rendered demonstration with no automotive interfaces. Demonstrate realistic idle-to-redline, smooth deceleration, simultaneous media, user-controlled mute and OEM-safe simulated priority behavior, plus before/after restore verification.
 
 **V1 — ICE/diesel read-only pilot, stationary on privately controlled test vehicle:** Discover allowed SAE J1979 PIDs with a reputable genuine OBD adapter that permits read-only access; verify source freshness and set auto mute on disconnect, compare RPM to independent tachometer if available; output through isolated approved cabin audio system; never test by revving dangerously or driving until owner/safety approval. Secure adapter and disable pairing when not in use.
 
@@ -156,8 +183,12 @@ reviewer_and_date:
 | 15-minute stationary bench operation | CPU, heat, battery, glitch/underrun and sample usage tracked; audio never silences mandatory chimes |
 | Bluetooth/USB/cabin speakers | Document actual device delay, route fallback, cabin volume cap and safety-prompt priority |
 | Radio/music/movie active while engine sound on/off | Media continues normally as supported, engine track volume independent, one-action OFF makes engine silent without pausing other media; parked/passenger video policy respected |
-| Incoming call, navigation, mandatory warning/chime | Engine track auto ducks/mutes in a deterministic priority order, does not mask required prompts, and resumes only when permitted and user toggle remains ON |
-| App loses focus, audio output route, restarts | No engine-sound takeover, unexpectedly loud resume, stuck virtual exhaust or unapproved auto-restart |
+| Radio/music/movie/phone call starts while roar ON | FDG does not auto-mute or change engine gain; both continue if OEM mixer/audio-focus allows; device/platform enforced interruptions are documented, not bypassed |
+| Navigation or mandatory warning/chime | Verify warning audibility and compliant OS focus/priority; enforce conservative independent maximum without altering OEM controls |
+| Owner sets MAX ROAR LEVEL then toggles ROAR OFF | Roar cannot exceed cap; OFF silences FDG only and leaves media/calls unaffected |
+| Restore Original Vehicle Experience | Correct owner/profile, consented preview, original baseline manifest, no unwanted OEM changes, itemized verified rollback without OEM firmware reset, engine stays disabled after restart |
+| Restore interrupted/blocked | Status accurately BLOCKED, FDG effect OFF, original manifest preserved, no unsupported success or write to vehicle safety systems |
+| App loses focus, audio output route, restarts | No engine-sound takeover, unexpectedly loud resume, stuck virtual exhaust or unapproved auto-restart; user max-roar cap persists under approved local settings |
 | Sound library ownership audit | Every distributed waveform and dependency traceable to original FDG synthesis or verified CC0/public-domain scope; no ambiguous "free download," noncommercial, trademark or unapproved recorded sample; attribution/provenance record retained |
 | Vehicle security and recovery | No firmware, ECU/CAN write, system audio service replacement, AVAS changes or persistent background ADB access |
 | Commercial/legal source check | Original/licensed waveforms and project logo; model support and AVAS/noise obligations reviewed |
