@@ -75,6 +75,46 @@ Present borrower-only **illustrative** amortization, loan cap and eligibility; n
 - PDF print and download contain no capture/upload UI.
 - Offline draft persists safely and sync has explicit conflict handling.
 
+## 9. Mandatory Three-Record Reconciliation (2026-10-25)
+
+**Decision:** FDG Solar Visayas shall maintain a linked, immutable/audit-trailed chain of (R1) GSIS-submitted supplier proposal, (R2) customer-and-installer-approved implementation revision, and (R3) verified as-built installation for every GSEL-supported project.
+
+### R1 — GSIS-Submitted Proposal
+Immutable snapshot of the exact document uploaded to GSIS Touch (do not claim to have captured GSIS evidence unless supplied): project and borrower reference, installer legal identity, date and quotation revision, total price and cost components, DC module nameplate array size **kWp**, inverter AC rating **kW**, battery **kWh** (if included), model/quantity/price/BOM revision, excluded items, warranties, quote signature/approval and submitted file hash. Preserve original even when superseded.
+
+### R2 — Approved Implementation Revision
+After on-site engineering survey, record revised BOM, scope, cost, technical justification, affected requirements/permits, partner engineer signoff and **customer's informed written approval**. Link both the predecessor quote and every proposed revision. In particular, an 8 kWp array reduced to a 6 kWp array is a **25% reduction in DC PV nameplate capacity**; 8 kWp DC paired with a 6 kW AC inverter is *not* the same thing. Reconcile capacity, pricing, expected generation, GSIS loan amount, warranties and deliverables rather than editing the R1 snapshot.
+
+Before acting on a **material** change, such as array power, inverter rating, battery capacity, model equivalence, contract value, essential performance or warranty, flag `CHANGE HOLD — FINANCING RECONCILIATION REQUIRED`. If loan has already been submitted/approved/disbursed, ask GSIS in writing via borrower/contractor's appropriate channel for the correct amendment, refund, partial prepayment, or repayment treatment. **Do not infer an automatic decrease in loan debt or permission to retain any difference; do not collect funds on false/inflated scope.** Keep written response and affected GSIS case reference with minimized personal data. If unanswered, escalate and preserve the hold; do not issue a misleading conformity certificate.
+
+### R3 — Verified As-Built Installation
+Partner technician + required qualified electrical professional verify actual model/quantity/nameplate capacities, electrical layout, approved variations, safety tests/commissioning, photographs (identifiable location and date), invoice/receipt, customer acceptance and warranties. Any difference between R2 and R3 creates another discrepancy, not a silent adjustment. An as-built certificate may truthfully describe a changed installation but **may not certify conformity to an 8 kWp proposal when only 6 kWp was delivered**.
+
+### Gate matrix
+| Gate | Release rule | Evidence owner |
+| --- | --- | --- |
+| R1 -> R2 | Actual approved quotation preserved; site-survey change assessed against original GSIS submission | Contracting installer / FDG record custodian |
+| R2 change after GSIS submission | Material change on HOLD until customer approval, partner approval and written GSIS treatment recorded or resolved through verified applicable procedure | Contracting installer with borrower |
+| R2 -> work execution | Issued revised scope and commercial terms, permits/professional approvals as applicable; no unauthorized work | Contracting installer |
+| R2 -> R3 | Count, rating, equipment, price, tests, warranty reconciled; deviations remediated or approved | Installation QA / engineering sign-off |
+| R3 -> GSIS completion notice | Truthful provider certification, supporting proof, borrower submission within **six months from actual loan release**; retain submission proof | Borrower with installer support |
+
+Do not treat review status as GSIS regulatory approval. The engineering change-hold is FDG's internal quality gate, not a purported GSIS rule.
+
+### External regulatory fact and unresolved determination
+**GSIS MC 075 (2026):** Sections B–D accept detailed installer quote/contract or qualifying receipt, and loan must not exceed the actual cost in supporting papers; Section H requires provider certification, photos and supporting document with notice within 6 months of loan release; Section J prescribes loan consequences where H documentation is not submitted. The circular does **not specify a formal reduction-after-disbursement adjustment procedure**. Source: GSIS MC 075 attached to NIA circular: https://omcrs.nia.gov.ph/?q=system/files/mc/2026_047.pdf (pages 2–5 of the GSIS attachment).
+
+**Open GSIS questions:** (1) procedure to change submitted quotation before approval; (2) revised system size/cost after approval, before release; (3) downgrade after release, especially excess loan/partial repayment and insurance; (4) who must submit amended documents and deadlines; (5) standards for authorized provider certification and evidence. Written response is required before relaxing this project hold.
+
+### Implementation/acceptance
+- Maintain `R1.source_quote_id`, `R2.parent_revision_id`, `R3.actual_installation_id`; hash/version and timestamp documents, retain approver identity and correct legal contracting party.
+- Test 8 kWp/Php400k quote -> 6 kWp/Php300k actual: highlight 25% kWp / Php100k difference, prevent automatic loan revision and prevent "matched as-built" status.
+- Test 8 kWp DC/6 kW inverter: do not report as a 25% PV array downgrade.
+- Test quantity difference, price-only revision, manufacturer substitution, safety waiver, late documentary evidence and missing customer consent.
+- Make print/export consistent and ensure no draft document purports to be GSIS-approved.
+- Record distinct states `DRAFT`, `PARTNER_APPROVED`, `GSIS_SUBMITTED`, `CHANGE_HOLD`, `CUSTOMER_APPROVED`, `PARTNER_REVIEWED`, `GSIS_GUIDANCE_RECORDED`, `INSTALLED_VERIFIED`, `COMPLETION_DOCUMENTED`; states represent actual evidence, not a UI promise.
+- Current user reports existing partners have complete permits; **permit and license copies, license scope, expiry and contracting entity identity not yet independently inspected**. Do not imply verification completed.
+
 ## 8. Review / next action
 Find and verify one potential licensed partner in Cebu/Visayas **without claiming they are selected or contracted**. Obtain their actual proposal/contract/document set. Then implement the smallest partner-identity + official quotation generation slice in `guinoome/fdgsolar-visayas`, run regression tests for existing sizing/yield/BOM/quotation logic and complete one end-to-end **real borrower** acceptance trial.
 
