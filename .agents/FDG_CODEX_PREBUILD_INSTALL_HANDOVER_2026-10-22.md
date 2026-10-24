@@ -124,3 +124,8 @@ After mandatory UI UX Pro Max setup, follow [[17_FDG_Platform_Intelligence_Syste
 ## Android ARTEMIS MCP P0 capability check — 2026-10-24
 
 For new Android/PWA/mobile acceptance tasks, read [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]] and tools/android-testing/ARTEMIS_INSTALL_HANDOVER.md. Execute source check and task-scoped staging via python tools/android-testing/artemis_bootstrap.py --check then --apply if missing. Never auto-install all MCPs or authorize physical device, system package or provider account. After separate approval, prepare isolated uv runtime and named Codex MCP config, run real synthetic Android QA and record evidence. Do not block NO_ANDROID_SCOPE assignments.
+
+## Video candidates and Codex portability — 2026-10-25
+
+- [[03_Agentic Framework/FDG_CLAUDE_PLUGIN_VIDEO_REVIEW_2026-10-25|Video-derived five Claude plugin/tool candidates]]: Superpowers upstream documents Codex use; Claude-specific Setup/Security plugin commands are not assumed portable. Review Codex-native alternatives under existing P0 rules, no automatic plugins, permissions or provider proxies.
+- [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0805 - JWT Session Revocation and Account Deletion Gate|FSIS-0805 JWT Revocation and Account Deletion Gate]]: include JWT/session deletion negative tests where relevant to an approved Codex coding assignment.

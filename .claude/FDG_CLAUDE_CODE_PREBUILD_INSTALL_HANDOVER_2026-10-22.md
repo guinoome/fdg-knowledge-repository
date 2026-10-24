@@ -119,3 +119,8 @@ Once UI UX Pro Max P0 passes on a new UI task, follow [[17_FDG_Platform_Intellig
 ## Android ARTEMIS MCP P0 capability check — 2026-10-24
 
 For an assigned Android app/mobile test task, follow [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]] and tools/android-testing/ARTEMIS_INSTALL_HANDOVER.md. Automatically stage reviewed source with python tools/android-testing/artemis_bootstrap.py --check / --apply, honoring host permissions. Runtime dependency installation, global MCP rule/config modifications and phone/emulator access require separate explicit authorization. No fake mobile QA from staged source. Not a default for pure backend/desktop tasks.
+
+## New video candidates — 2026-10-25
+
+- [[03_Agentic Framework/FDG_CLAUDE_PLUGIN_VIDEO_REVIEW_2026-10-25|Video-derived five Claude plugin/tool candidates]] is a supplemental read-only candidate review. Compare official Claude Code Setup, Superpowers and Claude Security with installed workstation baselines under this existing P0 handover. **No bulk install or vendor swap without security and scope approval**. Caveman and OmniRoute are benchmark-only; do not pass client code/secrets to unverified gateways.
+- [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0805 - JWT Session Revocation and Account Deletion Gate|FSIS-0805 JWT Revocation and Account Deletion Gate]] provides auth negative tests for assigned authentication/backend scope, extending FSIS-0803/0804. Nothing here approves production database changes.

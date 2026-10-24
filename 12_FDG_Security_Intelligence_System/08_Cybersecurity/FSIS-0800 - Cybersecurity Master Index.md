@@ -41,3 +41,7 @@ Technical controls should be selected after the governance requirements are vali
 ## Emergency security patch and safe service isolation — 2026-10-24
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] — availability/security intersection: inventory actual affected runtime (PHP2Shell example), promptly patch critical CVEs, authorize controlled isolation if needed, then verify security and recovery with evidence. This operational extension consumes FSIS-0804 and FPJIS-CORE-3508; **never require unsafe unpatched exposure to avoid downtime**.
+
+## FSIS-0805 Video Security Acceptance — 2026-10-25
+
+- [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0805 - JWT Session Revocation and Account Deletion Gate|FSIS-0805 JWT Revocation and Account Deletion Gate]] — video 1000011984.mp4 explains valid signed JWT persisting after deleted user or revoked session; official Supabase Auth docs corroborate. Adds 14 runnable future negative tests for deleted users, session revocation, stale branch roles and RLS. Not a finding or fix against a real FDG deployment.

@@ -84,3 +84,8 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## Mandatory UI UX Pro Max design skill — 2026-10-22
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/07_UI_UX_Pro_Max_Mandatory_Skill_Adoption_and_Experience_Gate|FPIS-UX-0007 — UI UX Pro Max Mandatory Skill Gate]] — cross-collaborator founder-mandated pre-build skill for new FDG interfaces; Claude Code and Codex P0 handovers updated. Verified official external source and install contract only; workstation installation/acceptance outstanding.
+
+## FDG Five Claude Plugin/Tool Candidates — 2026-10-25
+
+- [[03_Agentic Framework/FDG_CLAUDE_PLUGIN_VIDEO_REVIEW_2026-10-25|Video-derived five Claude plugin/tool candidates]] — user clip 1000011983.mp4. Read-only **Claude Code Setup**, controlled **Superpowers** workflow and **Claude Security** review considered useful; **Caveman** and **OmniRoute** are unverified cost/proxy trials with licensing/privacy risk. Research only, no installed tools.
+- [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0805 - JWT Session Revocation and Account Deletion Gate|FSIS-0805 JWT Revocation and Account Deletion Gate]] — separate clip 1000011984.mp4; companion security testing for revoked sessions and JWTs.
