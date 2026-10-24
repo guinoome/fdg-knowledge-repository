@@ -75,6 +75,9 @@ Present borrower-only **illustrative** amortization, loan cap and eligibility; n
 - PDF print and download contain no capture/upload UI.
 - Offline draft persists safely and sync has explicit conflict handling.
 
+## 8. Review / next action
+User reports existing installation partners hold complete permits. Obtain and inspect the partners' actual business registrations, PCAB license/classification and validity, professional credentials, proposal/contract/document set; do not assume their scope is verified until reviewed. Capture the contracting partner's details and approve commercial terms before the pilot. Then implement the smallest partner-identity + official quotation generation slice in `guinoome/fdgsolar-visayas`, run regression tests for existing sizing/yield/BOM/quotation logic and complete one end-to-end **real borrower** acceptance trial.
+
 ## 9. Mandatory Three-Record Reconciliation (2026-10-25)
 
 **Decision:** FDG Solar Visayas shall maintain a linked, immutable/audit-trailed chain of (R1) GSIS-submitted supplier proposal, (R2) customer-and-installer-approved implementation revision, and (R3) verified as-built installation for every GSEL-supported project.
@@ -115,8 +118,6 @@ Do not treat review status as GSIS regulatory approval. The engineering change-h
 - Record distinct states `DRAFT`, `PARTNER_APPROVED`, `GSIS_SUBMITTED`, `CHANGE_HOLD`, `CUSTOMER_APPROVED`, `PARTNER_REVIEWED`, `GSIS_GUIDANCE_RECORDED`, `INSTALLED_VERIFIED`, `COMPLETION_DOCUMENTED`; states represent actual evidence, not a UI promise.
 - Current user reports existing partners have complete permits; **permit and license copies, license scope, expiry and contracting entity identity not yet independently inspected**. Do not imply verification completed.
 
-## 8. Review / next action
-Find and verify one potential licensed partner in Cebu/Visayas **without claiming they are selected or contracted**. Obtain their actual proposal/contract/document set. Then implement the smallest partner-identity + official quotation generation slice in `guinoome/fdgsolar-visayas`, run regression tests for existing sizing/yield/BOM/quotation logic and complete one end-to-end **real borrower** acceptance trial.
 
 Cross-links:
 - [[FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint]]
