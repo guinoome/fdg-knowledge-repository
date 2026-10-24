@@ -62,3 +62,7 @@ A display may visually combine entertainment and safety-critical controls. **Nev
 7. This reference cannot be promoted to a requirement, installed tool or commercial offering merely because it exists in GitHub. **Status remains DEFERRED.**
 
 **FDG disposition:** Future **EV dashboard visual customization** idea retained, with separate CleanYourTV personal trial reference. No app, prototype, collaborator installation, vehicle modification, ADB session, device activation or commercial commitment.
+
+## Related separate future project — vehicle sound (2026-10-24)
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0002 - FDG RPM Synchronized Vehicle Sound Experience|FPJIS-FUTURE-0002 — FDG RPM-Synchronized Vehicle Sound]] — distinct audio personalization concept (sports-car-like interior engine sound synchronized to approved read-only diesel/EV telemetry or accurately labeled virtual RPM). Does **not** expand vehicle controls or modify the display safety boundary. Future reference only; no installation, test connection or build authorized.
