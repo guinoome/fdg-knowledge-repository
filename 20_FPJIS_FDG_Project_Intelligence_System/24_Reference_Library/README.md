@@ -64,6 +64,10 @@ This reference package does not allocate a new numbered system or authorize a so
 
 Public marketing is retained as reference evidence; original FDG adaptations remain proposed.
 
+## Shared videos — developer tools and license-security research
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-REF-2026-10-24 - OmniRoute and JWT Video Reference|FPJIS Video Reference — OmniRoute and JWT Access Security]] — inspected promotional OmniRoute/agent-routing video and JWT session-revocation explainer. Potentially useful for FDG coding workflow and future subscription checks; **neither shows a Toyota head-unit unlock**. Not approved to install or launch.
+
 ## Future Projects — Connected Device Experiences (2026-10-24)
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0001 - CleanYourTV and Connected Device Display Exploration|FPJIS-FUTURE-0001 — CleanYourTV Personal Trial + EV Dashboard Display Personalization]] — **clarified EV scope:** center dashboard/infotainment themes **and digital instrument-cluster graphical styling**, via supported OEM paths or a simulator, with actual readings, warnings and safety-related controls unchanged. CleanYourTV is a separate deferred personal trial. **Future reference only; no build or agent installation.**

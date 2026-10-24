@@ -61,6 +61,10 @@ Owner can provide a photo (redact identifiable information) of:
 
 The exact display software cannot be deduced from the year/trim alone. The manufacturer/supplier name in a **different** Toyota unit or an overseas parts catalog is not confirmation for the owner's Hilux.
 
+## Shared developer videos vs Toyota modification feasibility
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-REF-2026-10-24 - OmniRoute and JWT Video Reference|FPJIS Video Reference — OmniRoute and JWT Access Security]] supplies possible AI coding-agent routing ideas and future JWT/quarterly subscription-security guidance. **Neither confirms an OEM Toyota firmware or native launcher modification method or external CarPlay-box compatibility.** The physical Hilux head-unit identification and read-only vehicle integration remain independently required. No developer gateway or authentication video authorizes installation.
+
 ## Proposed FDG UI functional scope — conditional, non-safety
 
 - **FDG HOME**: compact premium Adaptive Hybrid dashboard with user-selected layouts and brand-neutral presentation.

@@ -119,6 +119,10 @@ A stable `pack_id` is never repurposed. New sound/gauge variants use immutable p
 5. Renewal adds entitlement; cancellation stops future renewal according to plan terms while pass remains valid through paid-through date. On expiry, remove only access to time-limited pack benefits at a non-driving-safe transition and select CORE or **owned** profile, keeping locally saved preference so a renewed entitlement can restore it. Restore Original Vehicle Experience and safety alerts remain fully functional.
 6. Refund/chargeback and account/device transfers require verification, state-specific appeals/support and deterministic offline conflict resolution; do not remotely disable driving-critical audio/display functionality.
 
+## Video-derived session-revocation security research
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-REF-2026-10-24 - OmniRoute and JWT Video Reference|FPJIS Video Reference — OmniRoute and JWT Access Security]] reinforces the separation of **JWT authentication** from current user/pack subscription entitlements. Refresh-token revocation **alone** does not invalidate existing access JWTs. Future premium API/server must recheck authoritative license/payment status or use reliable revocation, with bounded offline-signed grants. Never disable CORE or owned one-time packs on quarterly expiry; offline devices cannot receive instant revocation. This reference is design-only, not a live security fix.
+
 ## Customer and business protection gates
 
 - **No forced subscription for safety, restore, compatibility or essential core controls.** No remote immobilization, engine intervention, forced audio outage in motion or OEM dashboard data overlay gating.
