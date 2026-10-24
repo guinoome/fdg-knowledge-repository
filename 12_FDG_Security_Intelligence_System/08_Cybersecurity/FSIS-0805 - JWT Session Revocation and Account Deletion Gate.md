@@ -63,3 +63,7 @@ The 85-second clip titled “SESSIONS VS JWT” depicts a **fictional account �
 FSIS governs identity and security; FBPOIS/FWIS/FMIS, FDG Business Platform, payroll and FDG automotive paid-account modules consume current-state authorization independently. Implement provider-specific adapter if Supabase is deployed; do not impose Supabase schemas on a different backend. Never create SECURITY DEFINER functions, expose service-role credentials or edit production RLS without an approved architecture/security plan. No user deletion, session revocation, secrets access, webhook changes, or production patch is authorized by this document.
 
 **Disposition:** Draft verified research and future test contract; no existing FDG project asserted vulnerable, corrected or accepted.
+
+## Project-start trigger (2026-10-25)
+
+Per [[03_Agentic Framework/FDG_PROJECT_START_SKILLS_SECURITY_GATE_2026-10-25|FDG-P0-SKILLS — Mandatory Project-Start Skills and Security Preflight]], all projects touching Auth, account deletion, login, permissions, paid plans, user sessions, roles or tenancy must map AUTH-REV-01..14 during scope/security intake and execute applicable negative tests against approved real runtime before production authorization. This does not assert current FSIS implementations are complete.

@@ -51,3 +51,7 @@ Before a named workstation agent installs anything, confirm **upstream pinned SH
 - https://github.com/sumanthbolle/omniroute
 
 **Disposition:** Video inspected; five upstream products identified. **No desktop plugin, provider gateway, token account, Claude/Codex runtime, security scan or code integration has been installed or verified by this review.**
+
+## Founder adoption rule / project-start promotion (2026-10-25)
+
+[[03_Agentic Framework/FDG_PROJECT_START_SKILLS_SECURITY_GATE_2026-10-25|FDG-P0-SKILLS — Mandatory Project-Start Skills and Security Preflight]] is the canonical mandatory kickoff entrypoint. **Tool identities remain candidates until actual workstation verification**: Setup, Superpowers, Claude Security are mandatory applicable workflows with approved native equivalents; Caveman and OmniRoute require documented assessment but never unsafe blanket enablement. The original video conclusions and licensing warnings are not superseded.

@@ -41,6 +41,10 @@ The implementation agent should implement the blueprint, not redesign the projec
 
 ---
 
+## FDG-P0-SKILLS-2026-10-25 — mandatory project-start skill and security preflight
+
+**FOUNDER STANDING RULE (2026-10-25):** Before any new FDG software implementation, follow [[03_Agentic Framework/FDG_PROJECT_START_SKILLS_SECURITY_GATE_2026-10-25|FDG-P0-SKILLS — Mandatory Project-Start Skills and Security Preflight]]. Inventory and check all five video-identified tools (**Claude Code Setup, Superpowers, Claude Security, Caveman, OmniRoute**); **use the first three's approved applicable capabilities** (or a verified compatible equivalent in Codex) in project setup, plan/test and security review. Caveman/OmniRoute require review but **no automatic install or routing of customer source/credentials**. Authentication, accounts, permissions or subscriptions require [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0805 - JWT Session Revocation and Account Deletion Gate|FSIS-0805 JWT and Session Revocation Gate]] mapped tests before release. Report a per-project P0 evidence receipt with actual installed skill and test status; missing mandatory tested capability is `P0_SKILLS_BLOCKED_WITH_EVIDENCE` unless the founder approves a bounded alternative. **This rule does not authorize a build, deployment, global plugin install or provider-key access.**
+
 ## Compiled Execution Package Rule — 2026-10-06
 
 Where a [[03_Agentic Framework/FDG_TOP_TIER_ARCHITECTURE_COMPILER_PROTOCOL|Top-Tier Execution Package]] exists, the implementation collaborator shall treat it as the bounded execution contract.
