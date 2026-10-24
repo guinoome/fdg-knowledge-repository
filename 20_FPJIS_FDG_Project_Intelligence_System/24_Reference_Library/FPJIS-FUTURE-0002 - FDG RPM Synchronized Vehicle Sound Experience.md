@@ -25,6 +25,36 @@ Founder wants a **convincing sports/supercar internal-combustion roar** from a d
 
 **Out of scope:** altering ECU/TCU/VMCU, rpm limits, throttle mapping, vehicle speed, combustion/exhaust, fuel injection, BMS, regenerative braking, charging, AVAS/pedestrian alert, reverse sensor beeps, turn-signal/chimes or any required vehicle warnings; no firmware flash, CAN injection, diagnostic writes, OEM signature bypass, rooting, unauthorized privileged apps or removing OEM safety sound infrastructure.
 
+**Founder's strict read-only interface constraint:** Any accelerator/pedal data or necessary vehicle/safety-component state is for observation only via approved APIs, never control; unnecessary safety signals are not queried. See SA-00.
+
+## SA-00 — Vehicle telemetry strictly READ-ONLY (founder mandate, 2026-10-24)
+
+**Binding rule:** Every vehicle-origin signal used by FDG for engine sound or optional non-safety dashboard display—including **accelerator pedal/driver demand, engine RPM, EV motor RPM, speed, gear, battery state**, and any genuinely needed safety-related status—is **READ-ONLY**, sourced only from manufacturer-authorized, documented telemetry. FDG must **never send an actuator/control/write, calibration, diagnostic-clear/reset, programming, firmware, torque, charging, safety-override, or security-bypass command** to any ECU, motor controller, BMS, braking, steering, ABS, airbag, ADAS, inverter or vehicle gateway. The synthesized rev/throttle slider controls *audio only*, never the car.
+
+| Source | Permitted narrow access | Never permitted |
+| --- | --- | --- |
+| Accelerator position / driver demand | Optional authorized read for synthesizer responsiveness | Set pedal/torque/throttle values, change maps, spoof pedal events |
+| Diesel/ICE engine RPM and load | Approved read of live data, e.g. supported J1979 Mode 01 PID 0x0C | ECU coding, injection/limiter adjustments, fault erase, reset, active-test commands |
+| EV motor RPM | Published read-only OEM API if genuinely exposed; else clearly labeled virtual RPM | Motor/inverter or regenerative-braking commands |
+| Speed, gear/park, vehicle state | Only minimally needed read-only signals with authorization and freshness validation | Set or spoof gear/speed/park state or override OEM displays |
+| Battery SOC/charging state | Only justified approved status reads for optional visual widgets; do not collect by default for engine sound | BMS writes, charge-limit changes, thermal/voltage or high-voltage controller manipulation |
+| ABS, braking, steering, airbags, ADAS and other safety components | **Not collected by default.** Only separately justified, minimally scoped OEM-exposed read-only status if it is necessary for an approved benign feature | Actuation, raw safety CAN inspection, spoofed messages, alarm suppression or privileged diagnostics |
+
+**One-way data boundary:** `authorized telemetry → whitelisted read-only adapter → timestamp/freshness/permission validation → FDG sound engine or non-safety visuals`. The FDG ON/OFF, volume, sound profile and owner-PIN restore control *only FDG-owned app settings* and independently authorized reversible cosmetic/audio integrations. **Vehicle controller writes are not a restoration method.**
+
+**Protocol precision:** A read-only OBD-II data acquisition may transmit a *parameter read request* (for example service/mode 01 PID 0x0C). This is allowed when authorized; it is not a vehicle set/control command. Restrict transmitted requests to a model-verified **live-data-read allowlist** and rate limits. Deny all unsupported services/commands, especially OBD-II Mode 04 diagnostic erase, output/actuation tests, ECU coding/adaptation, UDS WriteDataByIdentifier, RoutineControl, security-access escalation, reprogramming and arbitrary raw CAN TX. If software/hardware cannot technically enforce a read-only boundary, **do not attach to the car**; use a trusted OEM read-only API or offline simulator.
+
+**Implementation gates for a future approved build:**
+
+1. Inventory exact vehicle make, model, firmware, exposed APIs and owner permissions; collect no unrelated safety-controller data.
+2. Implement a narrow `readLatest()/subscribe()` interface without any accessible `set()/sendCommand()/clearDTC()/flash()` methods. Verify dependencies cannot secretly bypass the read-only layer; use a hardware-limited read-only path where feasible.
+3. Whitelist permitted properties/PIDs, input format, timestamp, acceptable frequency and valid ranges. Filter stale/suspicious signals; never auto-initiate a diagnostic session, permission escalation, broad bus scan or “repair command.”
+4. Fail closed to labeled simulation or mute on missing/revoked/unreliable telemetry. Simulated ICE RPM and accelerator-inspired sound never indicate actual traction motor RPM or modify propulsion.
+5. Before a real-vehicle trial, test denied writes/actuator/erase/reset commands using a **synthetic ECU or protocol fixture**, independently inspect any potential transmit path, verify zero controller changes and record read-only transport authorization. A source-code comment alone is not proof.
+6. Remain compatible with OEM chimes, alerts, ADAS/AVAS and safe driving awareness. Do not claim this record authorizes hardware access, vehicle modifications or a production installation.
+
+**Status: FUTURE ONLY.** Nothing in this section authorizes actual driving tests, an OBD dongle, an accelerator tap, or reading live safety modules.
+
 ## Feasibility and evidence, reviewed October 24, 2026
 
 - **Similar commercial architecture exists:** [KUFATEC Sound Booster Pro](https://www.kufatec.de/en/own-products/sound-booster-pro.html) markets synthesized V6/V8 exhaust for diesel/gasoline/EV using vehicle bus integration. [THOR Electronic Exhaust](https://thor-tuning.com/us/faq/) describes read-only vehicle RPM/throttle and multi-layered real-time sound. The products establish conceptual feasibility, **not** an endorsement of their safety, API availability, latency, licensing, or FDG compatibility.
@@ -214,6 +244,8 @@ reviewer_and_date:
 | Restore interrupted/blocked | Status accurately BLOCKED, FDG effect OFF, original manifest preserved, no unsupported success or write to vehicle safety systems |
 | App loses focus, audio output route, restarts | No engine-sound takeover, unexpectedly loud resume, stuck virtual exhaust or unapproved auto-restart; user max-roar cap persists under approved local settings |
 | Sound library ownership audit | Every distributed waveform and dependency traceable to original FDG synthesis or verified CC0/public-domain scope; no ambiguous "free download," noncommercial, trademark or unapproved recorded sample; attribution/provenance record retained |
+| Vehicle telemetry one-way safety tests | Whitelisted supported live-data requests pass; attempted write/reset/diagnostic erase/actuator/routine/flash commands fail in isolated test fixture, with independently verified absence of safety-controller changes |
+| Accelerator and sensitive signal policy | Read-only accelerator demand if approved; safety components not polled by default; no throttle/torque write capability, no broad proprietary bus scraping |
 | Vehicle security and recovery | No firmware, ECU/CAN write, system audio service replacement, AVAS changes or persistent background ADB access |
 | Commercial/legal source check | Original/licensed waveforms and project logo; model support and AVAS/noise obligations reviewed |
 | Software acceptance | Scoped source commit, runnable synthetic demo, independent sound/design review, FSIS safety review, FPJIS signoff |
