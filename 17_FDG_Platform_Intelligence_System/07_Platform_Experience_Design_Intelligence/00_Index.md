@@ -32,3 +32,9 @@
 ## Creative Studio huashu-motion film adapter — 2026-10-23
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/09_Huashu_Motion_Cinematic_Product_Film_Adapter_2026-10-23|FPIS-CREATIVE-0009 Huashu Motion Adapter]] — verified source from founder video 1000011800.mp4; optional film-production skill, pinned local installer, limited runtime support and rights/engineering QA. Not installed or video-tested on any FDG workstation.
+
+## Founder video memory: legal launch gate and evidence-linked one-page visuals (2026-10-25)
+
+- **Commercial/privacy/paid-client project:** consult [[13_FDG_Legal_Intelligence_System/06_Corporate_and_Business_Compliance/FLIS-0602 - Digital Product Legal and Consumer Trust Release Gate|FLIS-0602 Digital Product Legal and Consumer Trust Gate]]; collect accurate business identity, privacy/consent, terms, refunds, supported claims, SDK/data minimization, accessibility/IP and actual legal/technical evidence. Missing critical evidence means `FLIS_COMMERCIAL_RELEASE_BLOCKED` for public commercial release; developer-generated policies alone do not count. Conditional scope must be assessed, not blind legal pages.
+- **Complex explanation/chart/UI presentation project:** consult [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/10_FDG_ELI5_Evidence_Linked_Visual_Explanation_Skill|FPIS-UX-0010 FDG ELI5 Evidence-Linked Visual Explanations]]; use the original `fdg-eli5-evidence-visual` routing skill for one-page sourced visual summaries when appropriate, preserving complete data, accurate math, original assets, alternative accessible descriptions and domain review. Do not assume the social-video `/eli5` is an installed official plugin.
+- Both video-derived ideas are in **durable FDG repository knowledge**, not a claim about account-level ChatGPT Memory or actual workstation deployment; align with FPJIS, FLIS, FPIS, FSIS and relevant project gates.
