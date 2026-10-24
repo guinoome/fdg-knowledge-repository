@@ -150,3 +150,7 @@ The generic [[20_FPJIS_FDG_Project_Intelligence_System/05_Screen_Blueprints/Scre
 ## Performance measurement implementation reference — 2026-10-22
 
 The existing approved NFR requirement to define operation, environment, dataset, target, failure and measurement method may be executed with [[17_FDG_Platform_Intelligence_System/04_Platform_Performance_Value_Intelligence/02_FDG_Evidence_Led_Application_Performance_Optimization|FPIS-PERF-0001 — Evidence-Led Application Performance Optimization]]. It provides P01–P16 candidate optimizations, benchmark/negative-test examples and traceable rollback for Claude Code, Codex and other collaborators. **This link does not elevate the candidate into an approved standard or authorize unscoped code changes.** Use per-project target/acceptance authority as before.
+
+## Physical Android mobile usability and visual QA — 2026-10-24
+
+Use [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]] when Android-owned mobile acceptance requires screenshots, focus/navigation, back handling, camera/QR, accessibility and device performance on authorized emulator/phone. ARTEMIS is supplemental, not a replacement for accessibility testing or product-specific mobile NFR targets; maintain approved device/data trust restrictions.

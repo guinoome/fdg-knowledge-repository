@@ -164,3 +164,7 @@ A module requiring offline capability cannot close until at least one end-to-end
 ## Critical patch / outage mode extension — 2026-10-24
 
 Add [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] to project-level failure tests: application crash during save, API outage, revoked offline role, retry after patch, double-spend/duplicate payout risk, secure backup restoration and user-visible pending states. Cached local drafts should survive loss of internet **only** within authorized expiry/permission/data-class policy; an offline successful save is not a cloud ACK, payment settlement, engineering approval or final compliance evidence. This links to existing FPJIS-CORE-3506, not a competing offline data contract.
+
+## Android real-device regression evidence — 2026-10-24
+
+For Android/mobile offline capability, use [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]] for optional real-device MCP verification of crash/restart, offline save/photo/QR, delayed sync, duplicate replay, revoked user and actual interaction. This adds acceptance evidence to existing FPJIS-CORE-3506; no USB/phone access authorized by this note. A browser screenshot or AndroidWorld benchmark is not an FDG runtime acceptance test.

@@ -118,3 +118,7 @@ These extend existing standards 03 and 10, rather than replacing them. No readin
 ## Critical PHP vulnerability lesson: emergency patching without avoidable shutdown — 2026-10-24
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] — implementation candidate from user video 1000011841.mp4 plus Oct 21–23 PHP2Shell advisories. Adds a bounded, security-first outage/patch continuity test contract under approved FPJIS Release Operations and Offline Sync rules. No PHP runtime confirmed in FDG, no uptime or test evidence claimed.
+
+## Android real-device ARTEMIS MCP acceptance — 2026-10-24
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]] — project-specific source-verified Android automation integration and privacy-governed installation handover for Claude Code, Codex, and compatible collaborators. Stage pinned code on local Android task; separate review of Python runtime, IDE MCP rules, and owner-authorized test phone/emulator. Source staging is NOT live mobile QA or an installed MCP.

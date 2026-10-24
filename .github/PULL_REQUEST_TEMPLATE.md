@@ -63,3 +63,13 @@ For runtime/dependency, hosting, API, offline queue, migration, payment, authent
 - **FPJIS/FSIS independent review, authorization and decision:**
 
 See [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]]. A checked box is NOT a running CI, an uptime guarantee or production readiness evidence.
+
+## Android device and mobile MCP testing — 2026-10-24
+
+- Android task scope / FPJIS-MOBILE-3520 / N/A rationale:
+- ARTEMIS source, isolated runtime and named MCP status (NOT_TESTED vs actually configured):
+- Test emulator/authorized device and privacy/USB/Accessibility permissions:
+- Actual positive/negative Android flows (offline/crash, QR/camera, role/branch, sync), exact redacted evidence:
+- Source SHA/build, cleanup/revoke debugging, independent reviewer and release approval:
+
+Reference: [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]]. GitHub text is not a live device/MCP integration or passing QA.

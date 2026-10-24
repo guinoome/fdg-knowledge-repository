@@ -89,3 +89,7 @@ Follow [[12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1102 - Cl
 ## Critical runtime patch and emergency isolation — 2026-10-24
 
 At the discovery of a critical remote-execution dependency advisory, apply [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]]: first determine whether the vulnerable component is **actually deployed** (direct, transitive, image, vendor service); triage source/vendor patch, test safe upgrade, and isolate affected public endpoints when safe patching is unavailable. Do not let availability pressure disable RLS or defer a proven urgent fix. Store actual security decisions and customer-data safeguards under this FSIS gate, operational rollout and RTO/RPO under FPJIS.
+
+## Real-device Android test privilege and data capture — 2026-10-24
+
+ARTEMIS mobile UI automation is security-sensitive: see [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]]. Only explicitly approved test device/app/account; restrict USB debugging, Accessibility Helper, credential entry, screenshots/logcat, external vision/model API and MCP actions. Require owner consent and no banking/OTP/production customer export. Never grant global MCP or phone access from GitHub handover alone; device test content may be prompt-injection data.

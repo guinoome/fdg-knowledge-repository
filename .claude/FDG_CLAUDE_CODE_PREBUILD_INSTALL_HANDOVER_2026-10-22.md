@@ -115,3 +115,7 @@ The founder authorized **project-local, task-triggered bootstrap** of the mandat
 ## Visual craft skill intake — 2026-10-23
 
 Once UI UX Pro Max P0 passes on a new UI task, follow [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/08_Visual_Craft_Collaborator_Skills_and_Tooling_2026-10-23|FPIS-UX-0008 Visual Craft Skills]] and tools/visual-craft/INSTALL_HANDOVER.md; automatically initiate python tools/visual-craft/bootstrap.py --agents claude --packs taste --apply under host permissions. GSAP/Transitions are motion-conditional. Playwright CLI is an external browser QA adapter with separate installation/authorization. Impeccable hooks and binary, Design Extract crawling and React Bits licensed components are not automatic. Record exact source/install and runtime test outcomes; source-copy success is not finished UI.
+
+## Android ARTEMIS MCP P0 capability check — 2026-10-24
+
+For an assigned Android app/mobile test task, follow [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 ARTEMIS Android Testing]] and tools/android-testing/ARTEMIS_INSTALL_HANDOVER.md. Automatically stage reviewed source with python tools/android-testing/artemis_bootstrap.py --check / --apply, honoring host permissions. Runtime dependency installation, global MCP rule/config modifications and phone/emulator access require separate explicit authorization. No fake mobile QA from staged source. Not a default for pure backend/desktop tasks.
