@@ -114,3 +114,7 @@ These extend existing standards 03 and 10, rather than replacing them. No readin
 ## Functional Product Proof and Scoped Audit — 2026-10-17
 
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Functional Product Completion Gate]] now requires demonstrated, tested, **functionally accepted user outcomes** before any bounded software scope is CLOSED. Architecture/documentation coverage is not equivalent to usable product completion. [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|FAIS Functional Product Evidence Audit — 2026-10-17]] inspects actual source/test definitions/earlier evidence for selected QTO, Construction Lifecycle, Business Platform and FBPOIS spatial scopes, and records unresolved runtime/domain acceptance and commercial limits. **Not** a repository-wide or freshly executed test audit.
+
+## Critical PHP vulnerability lesson: emergency patching without avoidable shutdown — 2026-10-24
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] — implementation candidate from user video 1000011841.mp4 plus Oct 21–23 PHP2Shell advisories. Adds a bounded, security-first outage/patch continuity test contract under approved FPJIS Release Operations and Offline Sync rules. No PHP runtime confirmed in FDG, no uptime or test evidence claimed.

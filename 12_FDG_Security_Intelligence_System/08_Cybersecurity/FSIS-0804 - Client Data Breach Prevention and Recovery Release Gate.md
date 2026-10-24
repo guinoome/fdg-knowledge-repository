@@ -85,3 +85,7 @@ A customer-data / paid-branch / private engineering data release **is not ready*
 Follow [[12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1102 - Client Data Exposure Containment and Restoration Playbook|FSIS-1102]], not an uncontrolled AI coding/refactor loop. Immediately protect evidence, scope the affected client systems, contain harmful access via authorized responders and assess notification obligations through FLIS.
 
 **Authored knowledge only:** No live database, website, project source, deployment, credential or client's data was accessed, tested or changed to create this document.
+
+## Critical runtime patch and emergency isolation — 2026-10-24
+
+At the discovery of a critical remote-execution dependency advisory, apply [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]]: first determine whether the vulnerable component is **actually deployed** (direct, transitive, image, vendor service); triage source/vendor patch, test safe upgrade, and isolate affected public endpoints when safe patching is unavailable. Do not let availability pressure disable RLS or defer a proven urgent fix. Store actual security decisions and customer-data safeguards under this FSIS gate, operational rollout and RTO/RPO under FPJIS.

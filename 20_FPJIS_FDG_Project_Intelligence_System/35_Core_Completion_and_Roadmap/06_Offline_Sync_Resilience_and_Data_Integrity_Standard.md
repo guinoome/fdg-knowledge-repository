@@ -160,3 +160,7 @@ Use:
 ## Module Acceptance
 
 A module requiring offline capability cannot close until at least one end-to-end offline → sync → conflict/retry path has been tested with evidence.
+
+## Critical patch / outage mode extension — 2026-10-24
+
+Add [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] to project-level failure tests: application crash during save, API outage, revoked offline role, retry after patch, double-spend/duplicate payout risk, secure backup restoration and user-visible pending states. Cached local drafts should survive loss of internet **only** within authorized expiry/permission/data-class policy; an offline successful save is not a cloud ACK, payment settlement, engineering approval or final compliance evidence. This links to existing FPJIS-CORE-3506, not a competing offline data contract.

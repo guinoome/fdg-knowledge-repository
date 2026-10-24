@@ -37,3 +37,7 @@ Technical controls should be selected after the governance requirements are vali
 
 - [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Data Breach Prevention and Recovery Release Gate|FSIS-0804 Client Data Security Gate]] — new evidence-based CDB-01–10 customer-data and paid-release gate, extending FSIS-0803 with real cross-tenant tests and isolated restore evidence. Video source 1000011718.mp4 is unverified social incident, not proof of FDG vulnerability.
 - [[12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1102 - Client Data Exposure Containment and Restoration Playbook|FSIS-1102 Incident Response]] — actual incident detection, containment, evidence custody, revocation, recovery and legal notification review.
+
+## Emergency security patch and safe service isolation — 2026-10-24
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] — availability/security intersection: inventory actual affected runtime (PHP2Shell example), promptly patch critical CVEs, authorize controlled isolation if needed, then verify security and recovery with evidence. This operational extension consumes FSIS-0804 and FPJIS-CORE-3508; **never require unsafe unpatched exposure to avoid downtime**.

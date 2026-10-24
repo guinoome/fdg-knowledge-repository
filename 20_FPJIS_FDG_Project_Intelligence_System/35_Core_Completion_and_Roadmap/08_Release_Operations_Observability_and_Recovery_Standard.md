@@ -147,3 +147,8 @@ Record:
 
 Extends:
 [[20_FPJIS_FDG_Project_Intelligence_System/19_Deployment_Blueprints/Local_Release_Online_Blueprint|Local → Release → Optional Online Deployment Blueprint]].
+
+## Emergency vulnerability and service-continuity extension — 2026-10-24
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]] — founder-directed addendum to this **approved** standard: runtime/SBOM inventory, critical vulnerability patch triage, vulnerability-vs-availability tradeoff, per-module isolation, safe staged patching, tested degraded/offline/restore behavior, truthful outage status, RTO/RPO and independent release evidence. **No claim that FDG runs PHP or that these tests were executed.**
+- A vulnerable runtime must never be retained in public traffic simply to meet uptime. When safe patching is unavailable, authorize the minimum effective SECURITY_ISOLATION and preserve offline permitted drafts/manual fallback where safe.

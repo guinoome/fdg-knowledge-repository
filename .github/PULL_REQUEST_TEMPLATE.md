@@ -50,3 +50,16 @@ Canonical sources: [Knowledge Capture](../blob/main/04_Knowledge_Management/KNOW
 - **Gate:** SECURITY_RELEASE_BLOCKED / TESTED_CANDIDATE / OWNER_APPROVED_WITH_EVIDENCE.
 
 See [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Data Breach Prevention and Recovery Release Gate|FSIS-0804 Client Data Security Gate]]. PR template is not automated branch protection or a running test.
+
+## Outage and emergency patch continuity impact — 2026-10-24
+
+For runtime/dependency, hosting, API, offline queue, migration, payment, authentication or continuity-impacting changes:
+- **Runtime/dependency inventory, CVE applicability, vendor fixed version, exact artifacts:**
+- **Failure/blast radius and modes ONLINE/DEGRADED/OFFLINE_LOCAL/SECURITY_ISOLATION/RECOVERING:**
+- **Synthetic crash/network/API/auth/DB/payload and process restart fault tests and observed outputs:**
+- **Safe local draft, pending/synced UX, idempotency/duplicate transaction, revoked-branch role tests:**
+- **Health/readiness, safe patch/canary, rollback-or-forward-fix, recoverability and status notices:**
+- **RTO/RPO and backup isolated restore actual evidence; failed/not-run cases:**
+- **FPJIS/FSIS independent review, authorization and decision:**
+
+See [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 — Critical Patch & Continuity Gate]]. A checked box is NOT a running CI, an uptime guarantee or production readiness evidence.
