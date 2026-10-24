@@ -63,3 +63,7 @@ This reference package does not allocate a new numbered system or authorize a so
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FREIS/URCOURSEZ_MEP_FDG_Applicability_and_Validation_2026-10-13|FDG reuse decisions, capability backlog and AHU validation proposal]].
 
 Public marketing is retained as reference evidence; original FDG adaptations remain proposed.
+
+## Future Projects — Connected Device Experiences (2026-10-24)
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0001 - CleanYourTV and Connected Device Display Exploration|FPJIS-FUTURE-0001 — CleanYourTV and Connected Device Display Exploration]] — deferred personal Android TV trial and speculative supported car/EV infotainment customization research. **Reference only; not an active FDG project or collaborator installation task.** Safety-critical vehicle and proprietary control systems excluded.
