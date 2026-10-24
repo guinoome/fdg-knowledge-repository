@@ -53,6 +53,10 @@ A display may visually combine entertainment and safety-critical controls. **Nev
 - UNECE vehicle cyber security and software updates: https://unece.org/transport/road-transport/reference-documents — UN Regulations 155/156, when applicable, address vehicle cyber-risk and governed software updates; check exact manufacturer/jurisdiction before a future deployment.
 - FDG governance: [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Data Breach Prevention and Recovery Release Gate|FSIS-0804 client-data protection]], [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/19_Critical_Runtime_Patching_and_Graceful_Continuity_Handover_2026-10-24|FPJIS-CONT-3519 continuity]], and [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/20_ARTEMIS_Real_Android_Device_Testing_and_Agent_Handover_2026-10-24|FPJIS-MOBILE-3520 Android testing]] for separate future, authorized research only.
 
+## Related commercialization roadmap — deferred
+
+- [[ 20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0003 - FDG Automotive Experience Marketplace and Quarterly Subscription|FPJIS-FUTURE-0003 Automotive Experience Marketplace & Quarterly Subscription]] proposes original included non-safety dashboard/RPM visuals first, followed by optional individually purchased premium visual themes, sound packs or a quarterly pass. **Never replace mandated dashboard data or require subscription to restore original factory/user experience.** This is a commercial option only; no billing enabled or OEM integration authorized.
+
 ## Revisit requirements — before ANY active work
 
 1. User identifies the exact EV brand/model/year/trim/firmware/OS and specifies the intended dashboard *visual* theme, cluster area, center screen and supported features; until then, design only on a simulator.

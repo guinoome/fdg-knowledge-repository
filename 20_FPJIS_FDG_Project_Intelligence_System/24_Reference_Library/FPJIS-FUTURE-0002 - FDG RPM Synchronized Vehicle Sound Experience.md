@@ -208,6 +208,10 @@ reviewer_and_date:
 - Independently confirm every sound asset's creator, source and rights, clean-room synthesis code and package/dependency licenses. Reject unverified/free-but-restricted sounds from commercial bundles.
 - Do not mark physical vehicle, Android Automotive, simultaneous speaker mixing or legally risk-free ownership as IMPLEMENTED until a real, authorized device test and source/license evidence exists.
 
+## Commercial roadmap link — product first, optional quarterly upgrade later (2026-10-24)
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0003 - FDG Automotive Experience Marketplace and Quarterly Subscription|FPJIS-FUTURE-0003 — Automotive Experience Marketplace & Quarterly Subscription]] covers the optional premium theme/RPM gauge/sound packs, durable a-la-carte purchases, and an optional quarterly Premium Pass **after** a useful CORE MVP exists. Build a provider-neutral catalog/entitlement boundary in the first future prototype; **billing, checkout, premium restrictions and auto-renew are disabled until a separate approved launch**. Keep original sound, ROAR OFF, user-set caps, PIN-protected FDG-only restore and safety controls available without any subscription. One-time owned packs must not disappear on pass expiry.
+
 ## Bounded prototype path (future authorization required)
 
 **V0 — Standalone offline bench simulator (no real vehicle/OEM screen):** Original/procedural sound engine, selected V8/V10/V12 or turbo diesel profiles, throttle slider, RPM/gear gauge, independent roar ON/OFF/volume/cap, dummy music/movie and call streams. **Movies/music do not change roar; incoming simulated call follows owner-selected REDUCE/MUTE/FOLLOW OEM; after call restore level within cap.** Simulated ignition cycle remembers last profile/ON status when owner permits auto-resume and starts with low-gain virtual ICE idle. A bench-only Rev Sound button, simulated EV motor 0 RPM vs VIRTUAL ICE RPM labels, PIN-enrolled restoration of mock FDG-only settings and read-back prove acceptance. No vehicle interfaces, ECU access or real audio-policy bypass.
