@@ -57,6 +57,10 @@ A display may visually combine entertainment and safety-critical controls. **Nev
 
 - [[ 20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0003 - FDG Automotive Experience Marketplace and Quarterly Subscription|FPJIS-FUTURE-0003 Automotive Experience Marketplace & Quarterly Subscription]] proposes original included non-safety dashboard/RPM visuals first, followed by optional individually purchased premium visual themes, sound packs or a quarterly pass. **Never replace mandated dashboard data or require subscription to restore original factory/user experience.** This is a commercial option only; no billing enabled or OEM integration authorized.
 
+## Theme distribution / infotainment performance reference
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0004 - FDG Automotive Thin Client and WiFi Content Delivery|FPJIS-FUTURE-0004 — Lightweight Runtime and Wi-Fi Content Packs]] proposes a minimal permitted FDG visual runtime plus selected **on-demand Wi-Fi downloaded, signed, data-only** RPM/dash themes. Do not push all candidate themes to the OEM infotainment. Actual vehicle cluster compatibility requires supported OEM APIs; locked cars remain phone/desktop simulation-only. After download, display locally, not via constant network streaming, and do not alter safety-critical indicators or vehicle controllers. Downloads and detailed settings belong to parked/phone flows.
+
 ## Revisit requirements — before ANY active work
 
 1. User identifies the exact EV brand/model/year/trim/firmware/OS and specifies the intended dashboard *visual* theme, cluster area, center screen and supported features; until then, design only on a simulator.

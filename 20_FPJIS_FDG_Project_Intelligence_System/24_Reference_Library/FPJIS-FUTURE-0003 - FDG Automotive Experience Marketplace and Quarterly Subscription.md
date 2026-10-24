@@ -74,6 +74,10 @@ This is a **product/commercial roadmap**, not a mandate to activate subscription
 - Add new original packs, combo packs and optional visual/sound synchronized themes based on purchases, usage with consent, support cost and compatibility evidence.
 - Track revenue per supported model, subscription renewal/cancellation, support/refund cost, approval/rejection by stores/OEMs, pack conversion and sound quality/retention. Avoid unsupported growth projections or invented margins.
 
+## Content delivery / infotainment performance companion — deferred
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0004 - FDG Automotive Thin Client and WiFi Content Delivery|FPJIS-FUTURE-0004 — Lightweight Runtime and Wi-Fi Content Packs]] defines the **small runtime + selected Wi-Fi downloadable asset packs** approach. No full premium catalog preloaded onto a client's infotainment. Sound/RPM visuals run **locally from cached validated assets** after download; no real-time Wi-Fi streaming for acceleration audio. The content manager can live on an authorized phone or approved AAOS app; compatibility is OEM dependent. Storage savings do not alone solve rendering/audio latency, so release requires device-specific benchmarks. CORE and owner restore work offline and billing remains disabled until a separately approved commercial release.
+
 ## Reusable architecture and data contract
 
 ~~~text
