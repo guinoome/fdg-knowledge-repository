@@ -61,6 +61,10 @@ A display may visually combine entertainment and safety-critical controls. **Nev
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0004 - FDG Automotive Thin Client and WiFi Content Delivery|FPJIS-FUTURE-0004 — Lightweight Runtime and Wi-Fi Content Packs]] proposes a minimal permitted FDG visual runtime plus selected **on-demand Wi-Fi downloaded, signed, data-only** RPM/dash themes. Do not push all candidate themes to the OEM infotainment. Actual vehicle cluster compatibility requires supported OEM APIs; locked cars remain phone/desktop simulation-only. After download, display locally, not via constant network streaming, and do not alter safety-critical indicators or vehicle controllers. Downloads and detailed settings belong to parked/phone flows.
 
+## Hilux-specific requirement — modify actual factory infotainment display and functionality
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0005 - 2023 Hilux Conquest Factory Infotainment Modification Feasibility|FPJIS-FUTURE-0005 — 2023 Hilux Conquest Factory Infotainment Feasibility]] captures the founder's precise target: **2023 Philippine Hilux Conquest, factory Toyota head unit**, user wants to modify the infotainment display experience **and functions**, not simply stream sound via Bluetooth. Do not falsely present Android Auto or a CarPlay app as a replacement for Toyota's native launcher. A compatible external display/interface is a candidate for FDG-branded UI on the original physical screen, whereas editing OEM Home remains unverified and requires manufacturer-approved capabilities; exact model/software ID and current OEM settings must be inspected first. Revert to original appearance and controls with the protected pre-FDG baseline. Read-only vehicle signals and full camera/safety-chime priority remain mandatory. Still **deferred/no firmware hacking**.
+
 ## Revisit requirements — before ANY active work
 
 1. User identifies the exact EV brand/model/year/trim/firmware/OS and specifies the intended dashboard *visual* theme, cluster area, center screen and supported features; until then, design only on a simulator.

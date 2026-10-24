@@ -23,6 +23,10 @@ automated_agent_task: false
 
 **Important performance distinction:** Downloading fewer assets reduces package size, app data and storage consumption, and may shorten installation and asset indexing. It does **not by itself** solve frame drops, UI jank, CPU overload, insufficient RAM, thermal throttling, expensive audio processing, telemetry polling, or wireless playback latency. Set actual measured performance budgets per supported device family; no blanket claim of “zero lag,” universal OEM support or run-from-Wi-Fi engine audio.
 
+## Original Toyota screen as a requested display target — 2023 Hilux Conquest
+
+- [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0005 - 2023 Hilux Conquest Factory Infotainment Modification Feasibility|FPJIS-FUTURE-0005 — 2023 Hilux Conquest Factory Infotainment Feasibility]] extends thin-client distribution to a specifically identified **future factory Toyota Hilux screen experience**. The founder desires new **display and function** features, not only phone sound output. A separately hosted content runtime may use a certified external CarPlay display environment *if supported* and load user-selected packs over Wi-Fi, while never installing content into OEM firmware or claiming native menu replacement. Original Toyota Home/native functions remain accessible; video overlays and apps must respect original camera, steering control and safety warning precedence. Direct OEM launcher/API modification is unverified; model/firmware/CarPlay capability evidence required before a build.
+
 ## Supported delivery architectures — future candidates
 
 | Target device environment | Installation/asset delivery | What is NOT assumed |
