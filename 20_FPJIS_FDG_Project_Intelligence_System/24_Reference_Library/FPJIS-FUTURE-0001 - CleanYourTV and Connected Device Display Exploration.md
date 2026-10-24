@@ -1,6 +1,6 @@
 ---
 document_id: FPJIS-FUTURE-0001
-title: CleanYourTV and Connected Device Display Exploration
+title: CleanYourTV Personal Trial and EV Dashboard Display Personalization
 created: 2026-10-24
 status: FUTURE_PROJECT_REFERENCE / DEFERRED / NOT_APPROVED_FOR_BUILD
 category: Future Projects
@@ -13,9 +13,9 @@ device_access_approved: false
 automated_agent_task: false
 ---
 
-# FPJIS-FUTURE-0001 — CleanYourTV / Connected Display Experience
+# FPJIS-FUTURE-0001 — CleanYourTV Personal Trial / EV Dashboard Visual Personalization
 
-**Founder request:** Save CleanYourTV as a possible **personal future trial**, and retain the broader idea of applying comparable user-controlled, reversible *non-safety* customization to other connected display devices (car multimedia, aftermarket Android head units, selected EV infotainment). **Do not start a project, install skills, modify a TV or vehicle, or add it to coding agent automatic prebuild tasks.**
+**Founder scope (clarified 2026-10-24):** Retain CleanYourTV as a separate **personal future trial**. The automotive direction is **specifically EV digital dashboard DISPLAY PERSONALIZATION**, including center infotainment and digital instrument-cluster visual presentation—not generalized remote device control or other car electronics. Focus on graphical themes, layouts, dashboards and approved non-safety widgets. **No vehicle functions, calibration, safety-related information manipulation, installation, ADB access, new coding work or automatic collaborator tasks are authorized.**
 
 > [[FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] → [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/README|Project Reference Library]] → this future reference.
 
@@ -31,13 +31,17 @@ automated_agent_task: false
 | Candidate | Direction | Feasibility gate |
 | --- | --- | --- |
 | Personal CleanYourTV trial | Reduce TV home recommendations, use a cleaner launcher on owned compatible Android TV | Exact TV make/model/build and OS, user approval, read-only package inventory, critical package exclusion, model-specific failure reports, recovery without ADB if feasible |
-| Aftermarket Android car head-unit personalization | Car media/home themes, dock controls, media and navigation shortcuts, owner-approved app arrangements | Android version, OEM permissions, firmware restore, system settings integrity, driving-distraction review; test a spare/bench head unit |
-| Android Auto application idea | A safe app in the **supported Google car app categories**; phone-projected experience, not replacing car OS | Android for Cars API/app category and template restrictions; park/test emulator and release review |
-| Android Automotive OS infotainment idea | Approved car application or OEM-supported customization, perhaps parked/passenger experiences | Manufacturer support, AAOS vs phone-based Android Auto, signed deployment and OTA compatibility; emulator first |
-| Proprietary EV center display | Official settings, manufacturer-authorized app/SDK or companion application where possible | No assumption of shell/ADB/root access from Wi-Fi. Never try remote/proprietary diagnostic bypass |
-| EV instrument cluster / vehicle-control stack | **Explicitly OUT OF SCOPE for this customization concept** | No disabling/changing speedometer, speed warnings, crash detection, braking, steering, ADAS, battery management (BMS), charging safety, high-voltage controls, thermal protection or vehicle gateway/OTA security |
+| EV digital instrument cluster **visual personalization** | Owner-selectable themes and restrained layout styling for an instrument panel: gauge dial graphics, fonts/colors of non-regulated elements, backgrounds, noncritical widgets, navigation/map, energy-flow or trip views | **Only OEM-supported/display-authorized APIs or themes.** Keep actual speed/gear/battery readings, calibration, readability, legally required indicators, safety warnings, brightness and priority visible and accurate; no safety-renderer changes. Design in simulator first |
+| EV center dashboard / infotainment display personalization | Custom home screen styling, wallpapers, ambient themes, app cards, media/navigation panels, charge-session history visualization and personalized widgets | Manufacturer-approved personalization/API scope, in-motion UX restrictions, driver/passenger distinctions, backup-camera and climate access unaffected; no OEM launcher removal/root bypass |
+| EV multi-display coordinated theme | One cohesive visual brand across supported cluster non-safety area and center display; adaptable by driver profile, parked/driving state and display format | Coordinate themes only using OEM-authorized interfaces, prohibit obscuring or moving required telltales/overlays; verify fallback after reboot, OTA update and lost network |
+| EV dashboard mockup / simulator-first prototype | Build a fully simulated interactive cockpit preview with independently rendered accurate *sample* speed/charge data, user-selectable themes, motion and screen layout | Mockup must be clearly labeled **simulation**, never connected to vehicle CAN/gateway, OEM firmware, live controls or nonpublic telemetry without future separately approved authority |
+| Vehicle functional-control / firmware alterations | **OUT OF SCOPE** | No sensor calibration or speed value manipulation, safety-system alerts, braking/steering/ADAS/BMS/charging protections, vehicle network access, key/security bypass, diagnostic write, root, OTA modification or unauthorized firmware flashing |
 
-A display may visually combine entertainment and safety-critical controls. **Never assume an infotainment screen is physically or logically isolated from vehicle-critical functions.** Connection over Wi-Fi proves nothing about permission or approved software interfaces. Replacing a launcher or removing OEM packages can break HVAC controls, backup camera views, telltales, key/remote control, OTA updates, warranty or regulatory compliance even if the car still drives.
+**Founder's precise scope clarification (2026-10-24):** **EV DASHBOARD DISPLAY PERSONALIZATION**, including **the instrument cluster's presentation** and the center infotainment dashboard, is an intended future project. The founder does **not** request vehicle behavior changes. The previous blanket "EV instrument cluster out of scope" was too broad and is superseded: **non-safety graphical styling is IN SCOPE when the vehicle OEM allows it**, while safety/regulated content, measurement correctness and vehicle command/control paths remain out of scope.
+
+A display may visually combine entertainment and safety-critical controls. **Never assume the non-safety visuals are isolated from vehicle-critical functions or that display styling is authorized on a retail EV.** Connection over Wi-Fi proves nothing about permission or approved software interfaces. Replacing a launcher or disabling OEM packages can break climate controls, backup camera views, warning telltales, remotes, OTA updates, warranty or regulatory compliance. **Preferred path: OEM theme settings, published extension APIs, or an entirely offline simulated dashboard; no production vehicle hacking.**
+
+**Technical reference:** Android Automotive open-source documentation distinguishes non-safety cluster **DriverUI** content (media, maps and other UI) from safety-critical overlays handled by a high-availability renderer, and describes scalable multi-panel infotainment layouts. These are examples of *OEM/reference architectures*, **not third-party modification access**: https://source.android.com/docs/automotive/scalableui and https://source.android.com/docs/automotive/sdv/display-safety/driverui.
 
 ## Sources and design principles for a later approved study
 
@@ -49,12 +53,12 @@ A display may visually combine entertainment and safety-critical controls. **Nev
 
 ## Revisit requirements — before ANY active work
 
-1. User identifies a device owned/authorized for modification, **exact make/model/year/firmware/OS** and intended non-driving features.
+1. User identifies the exact EV brand/model/year/trim/firmware/OS and specifies the intended dashboard *visual* theme, cluster area, center screen and supported features; until then, design only on a simulator.
 2. Verify capabilities from OEM manual, supported developer APIs, community issue history, warranty/insurance/legal limits, and current patch level.
-3. Prefer manufacturer-supported settings and apps; test a simulator/bench/non-roadgoing unit before any physical vehicle.
+3. Prefer manufacturer-provided appearance settings, documented OEM APIs and non-safety theme extension points. Begin with a fully synthetic/simulated dashboard, never a live vehicle.
 4. Prepare read-only baseline and a realistically demonstrated restore/recovery plan; some failure modes may require authorized dealer service.
-5. Separate safety-relevant screens, controllers, CAN/vehicle networks, BMS and OTA infrastructure; no direct modification or bypass.
+5. Keep legally required cluster data and warnings legible and original: the *drawing/style* of permitted widgets may change, **never the source, calibration, correctness, visibility or timing** of speed, gear, battery/charge, safety icons or warnings. No CAN, BMS, control or OTA modifications.
 6. Confirm explicit new task authorization, safety/security owner review, operational risk acceptance and rollout method.
 7. This reference cannot be promoted to a requirement, installed tool or commercial offering merely because it exists in GitHub. **Status remains DEFERRED.**
 
-**FDG disposition:** Knowledge captured; future possibility only. No app, collaborator installation, automotive interface modification, ADB session, tool activation or commercial commitment.
+**FDG disposition:** Future **EV dashboard visual customization** idea retained, with separate CleanYourTV personal trial reference. No app, prototype, collaborator installation, vehicle modification, ADB session, device activation or commercial commitment.
