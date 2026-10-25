@@ -50,3 +50,7 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 
 - [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-GROWTH-001 - Founder Leverage and Capability Scaling Transcript Review|Founder Leverage Source Review]] — source-bounded review of an 817-line four-growth-barrier transcript, including skill monetization, founder time-back, decision transfer, second-brain security limits and small-team improvement sprints. Claims of earnings, time savings and vendor abilities are **not externally verified**.
 - Linked practical use: [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-002_Build_Demonstrate_Sell_and_Decision_Transfer_Playbook|FDG Build–Demonstrate–Sell–Transfer Playbook]] — an unlaunched operator plan, not a new business system, verified customer or software build.
+
+## Fleet and Logistics benchmark — 2026-10-25
+
+- [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-FLEETBASE-001 - Fleetbase Logistics Operations Reference|Fleetbase Logistics Operations — Benchmark and Missing-FDG-Workflow Audit]] — founder-shared Fleetbase screenshot checked against current official fleet/driver/dispatch/POD documentation; identifies unverified FDG logistics functionality and AGPL/commercial licensing decision. **Research only; no Fleetbase deployment or proprietary-code reuse approved.**
