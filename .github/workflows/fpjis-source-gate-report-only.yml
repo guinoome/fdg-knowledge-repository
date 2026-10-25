@@ -13,6 +13,11 @@ jobs:
           fetch-depth: 0
       - name: Run source-gate unit tests
         run: python -m unittest discover -s tools -p 'test_fpjis_*.py' -v
+      - name: Run existing FMIS service core regression
+        run: |
+          python -m unittest discover \
+            -s '16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/tests' \
+            -p 'test_fmis_core.py' -v
       - name: Existing approved-status manifests (advisory structural scan)
         continue-on-error: true
         env:
