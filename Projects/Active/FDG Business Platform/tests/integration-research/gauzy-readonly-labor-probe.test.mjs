@@ -138,3 +138,17 @@ test("empty log set makes no paid/project-complete claim", () => {
   assert.equal(output.laborCostCentavos, 0);
   assert.equal(output.status, "PROPOSED_READ_ONLY_COST");
 });
+
+test("half-cent rounds to one cent by exact positive integer policy", () => {
+  const f = fixture();
+  f.logs = [{ ...f.logs[0], stoppedAt: "2026-10-01T00:00:01Z" }];
+  f.mapping.approvedEmployeeRates[0].rateCentavosPerHour = 1800;
+  const out = evaluateGauzyLaborSnapshot(f);
+  assert.equal(out.laborCostCentavos, 1);
+});
+test("large approved rate cannot overflow intermediate money calculations", () => {
+  const f = fixture();
+  f.logs = [f.logs[0]];
+  f.mapping.approvedEmployeeRates[0].rateCentavosPerHour = Number.MAX_SAFE_INTEGER;
+  reject(f, "monetary_overflow");
+});
