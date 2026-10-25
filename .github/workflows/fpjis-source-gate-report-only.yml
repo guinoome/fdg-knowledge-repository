@@ -1,11 +1,7 @@
-name: FPJIS source gate (report only)
+name: FPJIS source-to-build scoped preflight
 on:
   pull_request:
-    paths:
-      - 'tools/fpjis_source_gate.py'
-      - 'tools/test_fpjis_source_gate.py'
-      - 'Projects/Active/**/fdg-fpjis-gate.json'
-      - '.github/workflows/fpjis-source-gate-report-only.yml'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -16,14 +12,28 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run source-gate unit tests
-        run: python -m unittest discover -s tools -p 'test_fpjis_source_gate.py' -v
-      - name: Check opted-in project manifests (advisory only)
+        run: python -m unittest discover -s tools -p 'test_fpjis_*.py' -v
+      - name: Existing approved-status manifests (advisory structural scan)
         continue-on-error: true
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
+          if [[ -z "$BASE_SHA" || -z "$HEAD_SHA" ]]; then
+            echo "Manual run: no PR base/head SHA; scan skipped."
+            exit 0
+          fi
           find Projects/Active -name fdg-fpjis-gate.json -print0 | while IFS= read -r -d '' manifest; do
-            echo "Validating $manifest against current GitHub PR base/head"
+            echo "Inspecting $manifest"
             python tools/fpjis_source_gate.py "$manifest" --base "$BASE_SHA" --head "$HEAD_SHA" || exit $?
           done
+      - name: Enforce opted-in code scopes against reviewed baseline
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [[ -z "$BASE_SHA" || -z "$HEAD_SHA" ]]; then
+            echo "Manual run: no PR; scoped enforcement cannot be inferred."
+            exit 0
+          fi
+          python tools/fpjis_pr_preflight.py --base "$BASE_SHA" --head "$HEAD_SHA"
