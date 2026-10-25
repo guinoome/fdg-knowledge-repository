@@ -208,3 +208,28 @@ Once a customer upgrades to the full platform, exported XLSX/DOCX/PDF files beco
 The corresponding platform experience projection is:
 
 [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0008 - FDG Project Control Console Experience Map|FDG Project Control Console]].
+
+---
+
+## External learning-visualization benchmark — Animagraffs (2026-10-25)
+
+**Founder intent:** The reference [Animagraffs](https://animagraffs.com/) is useful for **FEIS student-facing engineering understanding and visual learning**, not a request to replace FEIS, install a third-party product, adopt its graphics, or start another module.
+
+**Disposition:** `EXTERNAL_EDUCATIONAL_REFERENCE / ADAPT_TEACHING_APPROACH / NO_ASSET_LICENSE_VERIFIED / NO_BUILD_AUTHORIZATION`.
+
+**Verified public examples:** [How a Car Engine Works](https://animagraffs.com/how-a-car-engine-works/), [Inside a Jet Engine](https://animagraffs.com/inside-a-jet-engine/), [How City Water Purification Works: Drinking and Wastewater](https://animagraffs.com/how-city-water-purification-works-drinking-and-wastewater/), [Solar Cell & Module](https://animagraffs.com/solar-cell-module/), and [Disc vs. Drum Brake](https://animagraffs.com/disc-vs-drum-brake/). The site presents animated technical illustrations and names Jacob O'Neal as its creator; see [About](https://animagraffs.com/about/). Consulted 2026-10-25. These are *visual/educational references*, not verified FDG engineering calculations, manufacturer manuals, approved codes, or student curriculum accreditation.
+
+**Transferable FEIS teaching pattern (original implementation only):**
+- Begin with a student's practical question and clearly defined learning objective.
+- Reveal equipment anatomy using original labelled sectional/exploded/transparent 3D visuals, followed by stepwise motion, flow and energy paths; show normal and fault states where technically supportable.
+- Pair each visual with vetted deterministic engineering relationships, input units, assumptions, operating limits, graphs, and references; do not invent CFD/FEA or physics from animations.
+- Invite learner interaction: change a safe simulation parameter, predict the outcome, inspect the result, answer a short diagnostic question, and receive evidence-linked feedback.
+- Support mobile-first/offline learning with accessible captions, a static diagram/transcript alternative, clear source/licensing notices, and performance budgets for low-end student devices.
+
+**Best-fit initial FEIS study scenarios:** centrifugal-pump impeller/system curve and cavitation; AHU/fan airflow and duct static pressure; chiller refrigeration cycle; generator/transformer energy paths; solar PV energy conversion; WTP/STP process stages; fire-pump water path and verified operational sequence. Each needs qualified FEIS domain review and scoped acceptance before student release.
+
+**Ownership:** Keep original engineering source and visualization specifications in existing FEIS discipline modules; DCKL catalogs the reusable learning object, metadata, provenance, and education delivery. The existing [[08_FEIS_Engineering_Intelligence_Systems/FEIP-STD-006_ENGINEERING_CALCULATION_ENGINE_MODULE_STANDARD|FEIS calculation standard]] governs numerical results. No separate animation intelligence engine, content store, or copied third-party modeling pipeline.
+
+**Rights/security boundary:** Animagraffs explicitly displays copyright. Linking learners to its official public pages is distinct from rehosting its videos, downloading/reusing animation assets, reproducing models, using its artwork as product UI, or commercial embedding. Obtain documented permission/license for protected assets before such uses; otherwise create FDG-owned assets independently. Do not treat observation of publicly accessible graphics as a grant of reuse. Treat performance/accuracy as to-be-measured, not established.
+
+**Next controlled pilot, only when authorized:** One original **pump-system explainer** → labelled cutaway + physically grounded flow/pressure animation + reproducible pump affinity-law example + one comprehension test; review engineering fidelity, learner comprehension, performance/offline behavior and asset provenance. No video extraction, asset replication, purchase, installation or implementation was performed by this research intake.
