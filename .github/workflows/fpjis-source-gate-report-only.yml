@@ -1,0 +1,29 @@
+name: FPJIS source gate (report only)
+on:
+  pull_request:
+    paths:
+      - 'tools/fpjis_source_gate.py'
+      - 'tools/test_fpjis_source_gate.py'
+      - 'Projects/Active/**/fdg-fpjis-gate.json'
+      - '.github/workflows/fpjis-source-gate-report-only.yml'
+permissions:
+  contents: read
+jobs:
+  source-gate-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run source-gate unit tests
+        run: python -m unittest discover -s tools -p 'test_fpjis_source_gate.py' -v
+      - name: Check opted-in project manifests (advisory only)
+        continue-on-error: true
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          find Projects/Active -name fdg-fpjis-gate.json -print0 | while IFS= read -r -d '' manifest; do
+            echo "Validating $manifest against current GitHub PR base/head"
+            python tools/fpjis_source_gate.py "$manifest" --base "$BASE_SHA" --head "$HEAD_SHA" || exit $?
+          done
