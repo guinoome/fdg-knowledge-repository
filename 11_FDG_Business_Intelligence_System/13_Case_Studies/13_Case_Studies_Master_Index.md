@@ -54,3 +54,8 @@ Evidence and remaining candidates: [[docs/audits/2026-09-30-architecture-critica
 ## Fleet and Logistics benchmark — 2026-10-25
 
 - [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-FLEETBASE-001 - Fleetbase Logistics Operations Reference|Fleetbase Logistics Operations — Benchmark and Missing-FDG-Workflow Audit]] — founder-shared Fleetbase screenshot checked against current official fleet/driver/dispatch/POD documentation; identifies unverified FDG logistics functionality and AGPL/commercial licensing decision. **Research only; no Fleetbase deployment or proprietary-code reuse approved.**
+
+
+## Business operations, workforce and agent-tool benchmark — 2026-10-26
+
+- [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-GAUZY-001 - Ever Gauzy Business Operations Reference|Ever Gauzy — business operations, payroll authorization, project-costing, offline queue and MCP reference]] — pinned source-code review of organization scoping, payroll run lifecycle, transactional outbox and desktop offline queues, including explicit self-approval verification gap and AGPL/commercial licensing boundaries. **External research only; not an FDG module, imported source or build authorization.**
