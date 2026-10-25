@@ -82,8 +82,13 @@ export function evaluateGauzyLaborSnapshot({ principal, scope, mapping, policy, 
       deny("rate_not_effective_for_full_interval");
     }
     const seconds = ms / 1000;
-    const lineCost = Math.round(seconds * rate.rateCentavosPerHour / 3600);
-    if (!goodMoney(lineCost) || !goodMoney(cost + lineCost)) deny("monetary_overflow");
+    // Convert only at the checked output boundary. Exact BigInt intermediates
+    // avoid floating-point loss for large centavo-per-hour values.
+    const numerator = BigInt(seconds) * BigInt(rate.rateCentavosPerHour);
+    const lineCostBig = (numerator + 1800n) / 3600n; // positive half-up centavo
+    if (lineCostBig > BigInt(Number.MAX_SAFE_INTEGER)
+      || BigInt(cost) + lineCostBig > BigInt(Number.MAX_SAFE_INTEGER)) deny("monetary_overflow");
+    const lineCost = Number(lineCostBig);
     cost += lineCost;
     const list = intervals.get(log.employeeId) || [];
     list.push({ start, stop });
