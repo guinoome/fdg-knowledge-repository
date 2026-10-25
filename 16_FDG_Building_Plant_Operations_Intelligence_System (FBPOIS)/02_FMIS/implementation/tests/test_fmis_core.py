@@ -359,8 +359,8 @@ class FMISCoreTests(unittest.TestCase):
         self.assertEqual(self.service.get_work_order(work_order_id)["source"], "PM")
 
     def test_issue11_rejects_both_terminal_aliases_and_preserves_status(self):
-        plant_id = self.service.create_plant("Example", "E11", "HVAC")
-        eq_id = self.service.create_equipment(plant_id, "Supply Pump", "Pump")
+        plant_id = self.service.create_plant("Example", "E11", "HVAC", "Basement", "Running", "Low")
+        eq_id = self.service.create_equipment(plant_id, "Supply Pump", "Pump", "Basement", "Running", "Low")
         work_id = self.service.create_work_order(eq_id, "Check", "Low", "Tech", "Open")
         pm_id = self.service.create_pm_plan(eq_id, "PM", "Monthly", "Technician")
         for status in ["Closed", " closed ", "COMPLETED", "Verified", "Approved", "Other Custom"]:
@@ -372,8 +372,8 @@ class FMISCoreTests(unittest.TestCase):
         self.assertEqual(self.service.get_pm_plan(pm_id)["status"], "Scheduled")
 
     def test_issue11_rejects_preclosed_creation_and_pm_occurrence(self):
-        plant_id = self.service.create_plant("Pumps", "P11", "HVAC")
-        eq_id = self.service.create_equipment(plant_id, "Standby Pump", "Pump")
+        plant_id = self.service.create_plant("Pumps", "P11", "HVAC", "Basement", "Running", "Low")
+        eq_id = self.service.create_equipment(plant_id, "Standby Pump", "Pump", "Basement", "Running", "Low")
         with self.assertRaises(PermissionError):
             self.service.create_work_order(eq_id, "Inspection", "Low", "Tech", "Closed")
         pm_id = self.service.create_pm_plan(eq_id, "Monthly PM", "Monthly", "Technician")
@@ -383,8 +383,8 @@ class FMISCoreTests(unittest.TestCase):
         self.assertEqual(self.service.list_pm_occurrences(), [])
 
     def test_issue11_existing_non_terminal_edits_still_work(self):
-        plant_id = self.service.create_plant("Equipment", "EQ11", "HVAC")
-        eq_id = self.service.create_equipment(plant_id, "Pump", "Pump")
+        plant_id = self.service.create_plant("Equipment", "EQ11", "HVAC", "Basement", "Running", "Low")
+        eq_id = self.service.create_equipment(plant_id, "Pump", "Pump", "Basement", "Running", "Low")
         work_id = self.service.create_work_order(eq_id, "Investigate", "Low", "Tech", "Open")
         self.service.update_work_order_status(work_id, "In Progress")
         self.assertEqual(self.service.get_work_order(work_id)["status"], "In Progress")
