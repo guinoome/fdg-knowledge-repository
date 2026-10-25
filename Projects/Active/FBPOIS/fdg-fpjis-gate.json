@@ -1,0 +1,28 @@
+{
+  "schema_version": "fpjis-source-gate/0.1-report-only",
+  "work_package_id": "FMIS-AUTH-DECISION-01",
+  "state": "NEEDS_REVIEW",
+  "source_revision": "bd8db7def1eee4c033c9bbc93d4e122490ceb1a9",
+  "source_path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0004 - Workflow Authorization Matrix.md",
+  "decision_path": "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS_FMIS_FIRST_INTEGRATION_CONTRACT_2026-10-18.md",
+  "decision_source_state": "BRANCH_ONLY",
+  "decision_source_branch": "fbpois-fmis-first-delivery-contract-2026-10-18",
+  "requirement_path": "20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard.md",
+  "approval_path": "",
+  "approval_status": "NEEDS_REVIEW",
+  "acceptance_ids": [
+    "FMIS-WO-AUTH-01",
+    "FMIS-WO-AUTH-02",
+    "FMIS-WO-AUTH-03",
+    "FMIS-WO-AUTH-04"
+  ],
+  "acceptance_summary": [
+    "Independent competent approver within property and assigned asset scope",
+    "No self-approval, no evidence-free approval, unknown actions denied",
+    "Critical or safety/statutory/cost exceptions escalate per approved facility thresholds",
+    "FMIS WO completion does not automatically release FWIS OOO/OOS restrictions"
+  ],
+  "owner": "FMIS engineering domain owner / founder approval pending",
+  "implementation_refs": [],
+  "note": "A source-linked review marker only. This is NOT approved authority, source on main, verified implementation, or acceptable evidence of UAT. Preserve current production behavior and stop the affected high-risk task until decision and independent review."
+}
