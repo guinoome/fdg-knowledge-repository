@@ -6,6 +6,7 @@ const scope = {fdgTenantId:'fdg-A', providerOrganizationId:'gauzy-org-A'};
 const row = {id:'project-1', name:'Pump Maintenance', organizationId:'gauzy-org-A', isActive:true};
 const remote = (options = {}) => createGauzyReadOnlyProvider({
   baseUrl:'https://example.invalid/api',
+  allowedHosts:['example.invalid'],
   tokenProvider:()=>'read-only-token',
   transport:async()=>({status:200,json:async()=>({items:[row],total:1})}),
   ...options,
@@ -29,6 +30,14 @@ test('maps Gauzy GET response into provider-neutral FDG project view', async () 
   assert.equal(request.init.headers.Authorization,'Bearer read-only-token');
   assert.ok(!Object.hasOwn(request.init.headers,'Tenant-Id'));
   assert.equal(result.readOnly,true);
+});
+test('rejects unapproved target host even with otherwise valid HTTPS URL',()=> {
+  assert.throws(()=>createGauzyReadOnlyProvider({
+    baseUrl:'https://untrusted.invalid/api',
+    allowedHosts:['example.invalid'],
+    tokenProvider:()=>'token',
+    transport:async()=>({status:200,json:async()=>({items:[],total:0})})
+  }),/allowlist/);
 });
 test('rejects another organization record; never returns partial unauthorized results',async()=>{
   const a=remote({transport:async()=>({status:200,json:async()=>({
