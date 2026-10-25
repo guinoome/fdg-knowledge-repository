@@ -68,6 +68,26 @@ def preflight(repo, base, head):
         except (TypeError, ValueError):
             errors.append(f"{manifest_path}: invalid_base_manifest")
             continue
+        # A manifest-only PR must not silently de-scope protected code. A promotion
+        # to BUILD_AUTHORIZED must carry structurally valid authoritative refs on
+        # the already-approved base, and still requires real independent review.
+        if manifest_path in changed:
+            changed_raw = object_at(repo, head, manifest_path)
+            if changed_raw is None:
+                errors.append(f"{manifest_path}: guard_manifest_deleted")
+                continue
+            try:
+                changed_policy = json.loads(changed_raw)
+                if not isinstance(changed_policy, dict):
+                    raise ValueError("not an object")
+            except (TypeError, ValueError):
+                errors.append(f"{manifest_path}: invalid_head_manifest")
+                continue
+            if changed_policy.get("affected_paths") != data.get("affected_paths"):
+                errors.append(f"{manifest_path}: guard_scope_change_requires_review")
+            if data.get("state") not in ENFORCED and changed_policy.get("state") in ENFORCED:
+                for error in validate(changed_policy, repo, base, head):
+                    errors.append(f"{manifest_path}: proposed_authorization_{error}")
         prefixes = data.get("affected_paths", [])
         if not isinstance(prefixes, list) or not prefixes or any(
             not isinstance(p, str) or not safe_path(p.rstrip("/")) or not p.strip("/")
