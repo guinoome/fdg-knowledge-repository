@@ -28,12 +28,14 @@ FDG owns its account, subscription/branch, customer, project, cost and billing t
 | AC | How checked | State |
 | --- | --- | --- |
 | P1: real Gauzy path and page shape source verified | public API documentation | SOURCE_VERIFIED |
-| P2: zero external package imports, read-only transport | inspect local module / asserted GET tests | PENDING_EXACT_GITHUB_CI |
-| P3: identical fixture and Gauzy project read contract | original unit tests with synthetic data | PENDING_EXACT_GITHUB_CI |
-| P4: unauthorized tenant/organization, malformed results, missing credentials and 401/403/429 fail closed | negative unit tests | PENDING_EXACT_GITHUB_CI |
+| P2: zero external package imports, read-only transport | inspect local module / asserted GET tests | PASS_ON_REVIEW_BRANCH_2026-10-26 |
+| P3: identical fixture and Gauzy project read contract | original unit tests with synthetic data | PASS_ON_REVIEW_BRANCH_2026-10-26 |
+| P4: unauthorized tenant/organization, malformed results, missing credentials and 401/403/429 fail closed | negative unit tests | PASS_ON_REVIEW_BRANCH_2026-10-26 |
 | P5: approved FDG session and scoped provider mapping | authenticated server integration | NOT_IMPLEMENTED |
 | P6: actual supported Gauzy instance & OpenAPI schema comparison | authorized staged HTTPS smoke | NOT_TESTED |
 | P7: independent legal/security reviewer approval and commercial use rights | FLIS/FSIS human review | NOT_ACCEPTED |
 | P8: authorized user receives useful read-only project list in FDG app, provider can be switched off | measured app-level UAT | NOT_TESTED |
+
+**Exact executable evidence:** [GitHub Actions run 40244833091](https://github.com/guinoome/fdg-knowledge-repository/actions/runs/40244833091), PR #19 branch HEAD `75402768f87898f1a342c22079e0e610e2fafaea`: original Node.js 22 tests passed, including explicit egress host allowlisting, expected GET shape, provider replacement, FDG org mismatch rejection, invalid credentials, 401/403/429 and malformed provider responses. The previous intermediate run [40244817423](https://github.com/guinoome/fdg-knowledge-repository/actions/runs/40244817423) failed because the initial test fixture lacked the newly required approved host list; it was fixed by updating the fixture. This is mock-transport proof, not a live Gauzy API smoke, and is not an authenticated FDG tenant test.
 
 **Stop:** Maintain `RESEARCH_PILOT / NO_RUNTIME_INTEGRATION` until all production-specific gates are met. Do not claim 100% integration or customer acceptance because synthetic tests pass. Issue #11 on FMIS/FPJIS must be addressed separately with approved engineering authority and reviews.
