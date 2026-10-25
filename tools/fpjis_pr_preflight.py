@@ -6,8 +6,6 @@ An opted-in manifest becomes authoritative only AFTER it is merged into the PR b
 """
 import argparse
 import json
-from pathlib import PurePosixPath
-import re
 import subprocess
 import sys
 
@@ -39,13 +37,13 @@ def object_at(repo, sha, path):
 
 def repo_paths(repo, sha):
     return [x.decode("utf-8", "surrogateescape") for x in
-            git_bytes(repo, "ls-tree", "-r", "--name-only", "-z", sha).split(b"\\0") if x]
+            git_bytes(repo, "ls-tree", "-r", "--name-only", "-z", sha).split(bytes([0])) if x]
 
 
 def diff_paths(repo, base, head):
     # --no-renames includes both the old and new path for moves out of a guarded directory.
     return [x.decode("utf-8", "surrogateescape") for x in
-            git_bytes(repo, "diff", "--name-only", "--no-renames", "-z", base, head).split(b"\\0") if x]
+            git_bytes(repo, "diff", "--name-only", "--no-renames", "-z", base, head).split(bytes([0])) if x]
 
 
 def is_in_scope(path, prefixes):
