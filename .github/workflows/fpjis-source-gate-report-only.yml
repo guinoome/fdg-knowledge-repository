@@ -21,11 +21,11 @@ jobs:
       - name: Run FMIS desktop UI regression under virtual display
         run: |
           set -euo pipefail
-          if ! command -v xvfb-run >/dev/null 2>&1; then
-            sudo apt-get update -qq
-            sudo apt-get install -y xvfb
-          fi
-          xvfb-run -a python -m unittest discover \
+          sudo apt-get update -qq
+          sudo apt-get install -y xvfb python3-tk
+          # Hosted toolcache Python can lack the tkinter extension; use the
+          # distro interpreter paired with the installed python3-tk package.
+          xvfb-run -a /usr/bin/python3 -m unittest discover \
             -s '16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/tests' \
             -p 'test_fmis_ui.py' -v
 
