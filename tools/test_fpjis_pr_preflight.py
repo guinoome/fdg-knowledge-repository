@@ -138,6 +138,24 @@ class PRPreflightTests(unittest.TestCase):
         self.commit_change(CODE, "initial opt-in in same PR")
         self.assertEqual(self.errors(), ([], []))
 
+    def test_manifest_only_scope_removal_is_blocked(self):
+        self.manifest["affected_paths"] = []
+        self.commit_change(MANIFEST, json.dumps(self.manifest))
+        self.assertIn("guard_scope_change_requires_review", "|".join(self.errors()[0]))
+
+    def test_manifest_only_promotion_missing_authority_is_blocked(self):
+        self.manifest["state"] = "BUILD_AUTHORIZED"
+        self.manifest["approval_status"] = "APPROVED"
+        self.manifest["approval_path"] = "not_on_main.md"
+        self.commit_change(MANIFEST, json.dumps(self.manifest))
+        self.assertIn("proposed_authorization_approval_path_not_on_main", "|".join(self.errors()[0]))
+
+    def test_manifest_only_deletion_is_blocked(self):
+        (self.repo / MANIFEST).unlink()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "delete only policy")
+        self.assertIn("guard_manifest_deleted", "|".join(self.errors()[0]))
+
     def test_invalid_sha_fails(self):
         self.commit_change("README.md", "new overview")
         errs, _ = preflight(self.repo, "unknown", self.rev())
