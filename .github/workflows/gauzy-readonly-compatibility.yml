@@ -1,0 +1,29 @@
+name: FDG Gauzy read-only compatibility research
+on:
+  pull_request:
+    paths:
+      - 'Projects/Active/FDG Business Platform/tests/integration-research/**'
+      - '.github/workflows/gauzy-readonly-compatibility.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-contract-and-existing-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Confirm original independent FDG read-only adapter tests
+        working-directory: 'Projects/Active/FDG Business Platform'
+        run: node --test tests/integration-research/gauzy-readonly-labor-probe.test.mjs
+      - name: Install existing FDG lockfile dependencies for regression only
+        working-directory: 'Projects/Active/FDG Business Platform'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run existing FDG Business Platform tests
+        working-directory: 'Projects/Active/FDG Business Platform'
+        run: npm test
+      - name: Run existing FDG Business Platform source checks
+        working-directory: 'Projects/Active/FDG Business Platform'
+        run: npm run check
