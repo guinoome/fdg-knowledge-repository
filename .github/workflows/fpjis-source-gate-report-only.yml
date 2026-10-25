@@ -18,6 +18,17 @@ jobs:
           python -m unittest discover \
             -s '16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/tests' \
             -p 'test_fmis_core.py' -v
+      - name: Run FMIS desktop UI regression under virtual display
+        run: |
+          set -euo pipefail
+          if ! command -v xvfb-run >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y xvfb
+          fi
+          xvfb-run -a python -m unittest discover \
+            -s '16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/tests' \
+            -p 'test_fmis_ui.py' -v
+
       - name: Existing approved-status manifests (advisory structural scan)
         continue-on-error: true
         env:
