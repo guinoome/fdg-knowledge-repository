@@ -18,6 +18,9 @@ jobs:
       - name: Confirm original independent FDG read-only adapter tests
         working-directory: 'Projects/Active/FDG Business Platform'
         run: node --test tests/integration-research/gauzy-readonly-labor-probe.test.mjs
+      - name: Install existing FDG lockfile dependencies for regression only
+        working-directory: 'Projects/Active/FDG Business Platform'
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Run existing FDG Business Platform tests
         working-directory: 'Projects/Active/FDG Business Platform'
         run: npm test
