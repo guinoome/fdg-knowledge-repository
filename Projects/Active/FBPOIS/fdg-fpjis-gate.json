@@ -1,5 +1,5 @@
 {
-  "schema_version": "fpjis-source-gate/0.1-report-only",
+  "schema_version": "fpjis-source-gate/0.2-opt-in",
   "work_package_id": "FMIS-AUTH-DECISION-01",
   "state": "NEEDS_REVIEW",
   "source_revision": "bd8db7def1eee4c033c9bbc93d4e122490ceb1a9",
@@ -24,5 +24,8 @@
   ],
   "owner": "FMIS engineering domain owner / founder approval pending",
   "implementation_refs": [],
-  "note": "A source-linked review marker only. This is NOT approved authority, source on main, verified implementation, or acceptable evidence of UAT. Preserve current production behavior and stop the affected high-risk task until decision and independent review."
+  "note": "A source-linked review marker only. This is NOT approved authority, source on main, verified implementation, or acceptable evidence of UAT. Preserve current production behavior and stop the affected high-risk task until decision and independent review. Scoped FMIS code changes will fail the opted-in PR guard while this manifest is NEEDS_REVIEW after it is incorporated into the baseline main branch. This is an approval stop, not product acceptance.",
+  "affected_paths": [
+    "16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/implementation/"
+  ]
 }
