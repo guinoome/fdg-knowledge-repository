@@ -65,7 +65,7 @@ export function createGauzyReadOnlyProvider({baseUrl, tokenProvider, transport =
   const base = new URL(baseUrl);
   if (base.protocol !== 'https:' || base.username || base.password ||
       base.search || base.hash || !base.hostname ||
-      base.pathname.replace(/\\/$/, '') !== '/api') {
+      (base.pathname.endsWith('/') ? base.pathname.slice(0, -1) : base.pathname) !== '/api') {
     throw new Error('a clean HTTPS /api URL is required');
   }
   return Object.freeze({
@@ -74,7 +74,7 @@ export function createGauzyReadOnlyProvider({baseUrl, tokenProvider, transport =
       const scope = scoped(context);
       const {offset, limit} = paging(options);
       const token = await tokenProvider(scope);
-      if (typeof token !== 'string' || !token || /[\\r\\n]/.test(token)) {
+      if (typeof token !== 'string' || !token || token.includes(String.fromCharCode(10)) || token.includes(String.fromCharCode(13))) {
         throw new Error('integration authorization unavailable');
       }
       const url = new URL(base.toString());
