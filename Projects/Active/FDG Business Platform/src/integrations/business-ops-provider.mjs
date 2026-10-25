@@ -58,7 +58,7 @@ function result(items, total, offset) {
  * requires independently verified FDG tenant -> Gauzy org mapping and
  * a dedicated minimal-permission token; these are NOT implemented here.
  */
-export function createGauzyReadOnlyProvider({baseUrl, tokenProvider, transport = globalThis.fetch} = {}) {
+export function createGauzyReadOnlyProvider({baseUrl, allowedHosts = [], tokenProvider, transport = globalThis.fetch} = {}) {
   if (typeof tokenProvider !== 'function' || typeof transport !== 'function') {
     throw new TypeError('tokenProvider and transport functions required');
   }
@@ -67,6 +67,9 @@ export function createGauzyReadOnlyProvider({baseUrl, tokenProvider, transport =
       base.search || base.hash || !base.hostname ||
       (base.pathname.endsWith('/') ? base.pathname.slice(0, -1) : base.pathname) !== '/api') {
     throw new Error('a clean HTTPS /api URL is required');
+  }
+  if (!Array.isArray(allowedHosts) || !allowedHosts.includes(base.hostname)) {
+    throw new Error('provider hostname requires explicit egress allowlist approval');
   }
   return Object.freeze({
     kind: 'gauzy-rest-readonly',
