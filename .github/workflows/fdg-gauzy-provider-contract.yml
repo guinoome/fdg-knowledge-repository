@@ -1,0 +1,20 @@
+name: FDG-owned Gauzy provider port contract (no network)
+on:
+  pull_request:
+    paths:
+      - 'Projects/Active/FDG Business Platform/src/integrations/business-ops-provider.mjs'
+      - 'Projects/Active/FDG Business Platform/tests/business-ops-adapter.test.mjs'
+      - '.github/workflows/fdg-gauzy-provider-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  provider-neutral-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate read-only provider interchange and negative boundaries
+        run: node --test 'Projects/Active/FDG Business Platform/tests/business-ops-adapter.test.mjs'
