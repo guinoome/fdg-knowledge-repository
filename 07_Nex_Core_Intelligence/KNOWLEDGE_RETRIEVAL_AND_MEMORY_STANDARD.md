@@ -456,3 +456,21 @@ End of Standard
 The long-term organizational memory for FDG is **versioned canonical GitHub knowledge**, not an assistant's recall or a statement in chat that something was updated. Agents must use the [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020 same-session knowledge-return control]] to classify consequential FDG discussion, reconcile with existing ownership, apply authorized minimal amendments and **read back commit and file** before saying VERIFIED_MAIN. ChatGPT personalization memory and archived chat history do not by themselves satisfy GitHub source/requirement verification. On-branch and pending issue states do not count as fully synced to main. Private material remains outside the public repository unless an approved safe destination exists. Missing past content remains UNKNOWN until actually enumerated.
 
 Before handing a build to an agent, honor the [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS source-to-build hard gate]]. An automated ChatGPT-to-GitHub listener **does not exist solely because this standard was adopted**; separate connected/runtime execution evidence is required.
+
+
+## Controlled session-learning interpretation — 2026-10-26
+
+**Founder reference:** [[04_Knowledge_Management/FDG-KM-VID-20261026-001 - Document Conversion and Controlled Session Learning|2026-10-26 two-video source review]], including a visually illustrated "Auto-Improving System" showing local session entries and JSONL files. Visible session retention alone is **not** demonstrated autonomous model improvement, software self-repair, or authorized production updating.
+
+The existing memory evolution process is operationalized as a **reviewed improvement cycle**:
+
+`observed task + source SHA + reproducible defect or validated positive outcome → candidate lesson → compare current approved knowledge/branch-only history → reviewer decision → fixed before/after tests + negative cases → versioned minimal patch → re-evaluation in the next authorized task`.
+
+- **Capture:** Only task-relevant failures, effective solutions, reviewer corrections, conflicting decisions and reusable acceptance tests. Do not sweep entire Claude/Codex/ChatGPT transcripts into GitHub; session storage may contain credentials, private user text and external proprietary material.
+- **Accuracy:** Record source trust and test quality. Count a lesson as validated only if it survived independent or qualified review and expected behavior in a reproducible case. Historical content and agent summary are not automatically authoritative.
+- **Promotion:** Maintain `OBSERVED` / `PROPOSED` / `REVIEW_REQUIRED` / `APPROVED_FOR_SCOPE` / `REJECTED` / `SUPERSEDED`. Only reviewed lessons inform active collaborator instructions or patches; external references have lower priority than approved canonical records.
+- **Rollback:** Preserve previous version, exact change, reason, tests and reversion procedure. Review whether a proposed improvement creates new security, legal, engineering or cost regressions.
+- **Bounded metrics:** Repeat-defect rate, verified-context retrieval success, source-to-build drift prevention, independent review outcome and cost/time per accepted scoped task. Session or memory file count is not a performance metric.
+- **Restrictions:** No automatic GitHub/chat-history access when connector lacks it; no self-granted permissions, unauthorized code deployments, hidden model/provider change, agent-written engineering authority or automatic adoption of external instructions. FDG remains local-first and agent/provider-replaceable.
+
+NEX-STD-020 governs safe source intake and same-session GitHub return; FPJIS and human reviewers govern the acceptance chain. **Documented guidance only**: no watcher, self-improving daemon, source-ingestion software, agent training or connector installation is asserted.
