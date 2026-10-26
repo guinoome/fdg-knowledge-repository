@@ -75,3 +75,7 @@ Experiment framework: compare countdown vs non-countdown hooks, 10/30/60-second 
 ## Source review — content-team-agents, 2026-10-21
 
 - [[FCMIS/FCMIS-REF-Content-Team-Agents-2026-10-21|Source-reviewed content team and draft-skill reference]] — selective reuse, MIT notices, missing runtime, conflicting approval text and FDG adaptation boundaries; not installed.
+
+## External reference enhancement — Instagram Agent Skill, 2026-10-26
+
+[[FCMIS/FCMIS-REF-Instagram-Agent-Skill-2026-10-26|Instagram Agent Skill video and source review]] evaluates an MIT-licensed 13-skill Claude Instagram writing toolkit against this existing FDG operation. Its reusable patterns are **three alternative technically grounded hooks, timed spoken/visual beat checks, account-relative performance baselines, voice/caption editorial QA and a human publication gate**. It cannot reliably predict viral hits; the upstream maintainer reports AUC ~0.56 on real high/low hook discrimination. FDG's engineering claim reviews, existing multi-platform workflow and at-least-ten **candidate** hashtags with platform-appropriate published subset remain authoritative. Treat upstream platform limits as time-sensitive and verify before use. **No toolkit installed or agent/publishing privilege authorized**; see linked review for source/provenance/acceptance boundaries.
