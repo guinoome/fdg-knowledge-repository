@@ -6,7 +6,7 @@ directive_status: FOUNDER_PRIORITY_DIRECTIVE
 implementation_status: DOCUMENTED / RUNTIME_AND_MULTI_AGENT_ACCEPTANCE_NOT_VERIFIED
 date: 2026-10-26
 owner: FMCIS — Nex orchestration / all collaborator entrypoints
-related_issue: "11 (separate higher-priority source-to-build reconciliation)"
+related_issues: "#20 (harness runtime acceptance); #11 (separate higher-priority source-to-build reconciliation)"
 private_evidence: "1000012221.mp4 (not published)"
 ---
 
@@ -97,6 +97,6 @@ This is an **exchange contract**: it may be stored in existing project handovers
 
 **Owner:** FMCIS/Nex orchestrator. **Preferred worker:** capable available Sol/Upos-equivalent with appropriate GitHub/runtime access; independent review when feasible. **Task:** For one current FDG implementation, instrument/start a short preflight harness in *existing* Codex/Claude entry behavior; pin current repo state and demonstrate H-01 through H-03 and H-08 on synthetic project references. Extend to H-04..H-09 as tool and test scopes permit. Do not build a replacement memory platform, auto-install upstream scripts, or change agent permissions. Link runtime receipts to this document and Issue #11 when a source-drift blocker actually applies.
 
-**Current state at intake:** `SOURCE_VISUALLY_REVIEWED / PRIORITY_TAG_DOCUMENTED / RUNTIME_UNTESTED / CROSS-PROVIDER_EXECUTION_UNVERIFIED`. **No new persistent event listener, autonomous self-improvement system, independent AI grading worker, completed multi-provider evaluation, or continuous chat→GitHub sync is asserted.** This directive is ready for connected collaborators *when they actually read it*; ChatGPT sessions do not automatically inherit repository instructions without retrieval.
+**Runtime acceptance tracker:** [GitHub P0 Issue #20](https://github.com/guinoome/fdg-knowledge-repository/issues/20). This is a future worker assignment, **not** evidence of dispatched agents or executed runtime tests.\n\n**Current state at intake:** `SOURCE_VISUALLY_REVIEWED / PRIORITY_TAG_DOCUMENTED / RUNTIME_UNTESTED / CROSS-PROVIDER_EXECUTION_UNVERIFIED`. **No new persistent event listener, autonomous self-improvement system, independent AI grading worker, completed multi-provider evaluation, or continuous chat→GitHub sync is asserted.** This directive is ready for connected collaborators *when they actually read it*; ChatGPT sessions do not automatically inherit repository instructions without retrieval.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS]] → this P0 operating contract.
