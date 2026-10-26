@@ -1,5 +1,9 @@
 # Nex Core v1.0
 
+## 2026-10-26 — P0 Founder Instruction: Nex and All Collaborators Must Not Repeat Settled FDG Discovery
+
+Start a resumed material FDG task with the current authoritative GitHub handover and verified prior result, **not a request for the founder to retell an answered decision**. Use [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-P0-HARNESS-001 - Context Memory Execution Evaluation Continuity Gate|FMCIS-P0-HARNESS-001]] for context, semantic/episodic/procedural memory, bounded tool execution and independent evidence-based evaluation. This **extends** [[07_Nex_Core_Intelligence/KNOWLEDGE_RETRIEVAL_AND_MEMORY_STANDARD|NEX-STD-054]] and [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020]], without claiming continuous conversation access or any new memory agent. [P0 runtime proof is tracked in issue #20](https://github.com/guinoome/fdg-knowledge-repository/issues/20); [source-to-build Issue #11](https://github.com/guinoome/fdg-knowledge-repository/issues/11) remains separate/higher-priority. Status: priority documented, real cross-provider runtime regression acceptance pending.
+
 > The Engineering Standard Manual of the FDG Ecosystem
 
 ---
