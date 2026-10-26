@@ -234,11 +234,27 @@ Examples:
 | Daily Operations | Technician | Supervisor | Duty Engineer | Engineering Manager |
 | Shift Turnover | Duty Engineer | Engineering Manager | Chief Engineer | - |
 | Incident Report | Technician | Supervisor | Duty Engineer | Chief Engineer |
-| Work Order | Technician | Supervisor | Engineering Manager | Chief Engineer |
+| Work Order — routine, verified low-risk corrective maintenance | Assigned Technician | Independent assigned Supervisor | Assigned Supervisor with explicit property/asset approval grant; eligible Duty Engineer / Engineering Service Manager only where delegated | No automatic Chief Engineer step unless a documented exception applies |
+| Preventive Maintenance — routine evidence-complete occurrence | Assigned Technician | Independent assigned Supervisor | Assigned Supervisor with explicit property/asset approval grant; eligible Duty Engineer / Engineering Service Manager only where delegated | No automatic Chief Engineer step unless a documented exception applies |
+| Work Order — unclassified, critical or policy-exception case | Technician | Supervisor | Engineering Manager / qualified delegated engineering authority | Chief Engineer or separately required qualified statutory signatory per applicable policy |
 | Asset Registration | Supervisor | Engineering Manager | Chief Engineer | Director (Optional) |
 | Utility Adjustment | Supervisor | Engineering Manager | Chief Engineer | Director (Optional) |
 
 The approval matrix shall be configurable by organization.
+
+### FMIS routine-maintenance authority reconciliation — bounded founder direction, October 18–25, 2026
+
+**Source and status:** The earlier founder-approved *management-by-exception* direction delegates routine PM, low-risk corrective work and minor concerns to qualified, explicitly assigned Supervisors/Duty Engineers instead of placing every action in a Chief Engineer queue. The October 18 [FMIS-first integration contract](https://github.com/guinoome/fdg-knowledge-repository/blob/fbpois-fmis-first-delivery-contract-2026-10-18/16_FDG_Building_Plant_Operations_Intelligence_System%20(FBPOIS)/00_Architecture/FBPOIS_FMIS_FIRST_INTEGRATION_CONTRACT_2026-10-18.md) records this direction **on an unmerged branch**, not as an approved installed policy. This section clarifies the preceding matrix at the level of **proposed canonical requirements**. The document remains `Draft` until independent engineering/site approval; no system grant or operating privilege is created by this edit.
+
+- **Classification gate:** A work order qualifies as routine only if its property, asset, assigned responsible person, risk tier, compliance/safety relevance, cost category and required evidence are resolved from authenticated records and the facility's approved limits. Unknown, omitted, conflicting or unreviewed classifications **do not** qualify for delegated final approval.
+- **Human and scope gate:** Distinguish the actor who submits or executes the work from the independently authenticated, competent approver. Require explicit active property/asset permission, valid scoped delegation (if used), approval reason and auditable evidence. A higher user role or platform administrator status **alone** must not bypass scope or self-approval prohibitions.
+- **Exception gate:** Life safety/fire protection, statutory/sign-and-seal, unknown or high criticality, cost exceeding a separately documented facility-authorized threshold, prolonged outage, repeated failure, disputed or missing evidence, out-of-property request, expired/revoked delegation and return-to-service risks require escalation or denial. **No numerical cost, risk or outage limits are invented here.** Applicable statutory approvals remain independent of the software role matrix.
+- **Workflow separation:** FMIS may record maintenance work completed and independently verified; **FWIS owns any operational concern, equipment-availability restriction, room/plant OOO/OOS and separate authorization to release it**. FMIS work-order or PM closure must never automatically clear FWIS restrictions.
+- **Offline gate:** A device may queue an approval request offline with provenance and evidence; **final authorization remains pending** until authoritative revalidation against current assignments, delegation, risk and record revision. Invalid or conflicting sync results stay `Review Required`.
+- **Required test set before changing live FMIS:** (1) a qualified independent Supervisor can approve a confirmed routine case in an authorized property; (2) a technician or work author cannot self-approve; (3) another property's user, unassigned reviewer, administrator, or expired/revoked delegate is rejected; (4) missing/failed evidence, safety/statutory or over-limit cases cannot finalize at routine level; (5) a stale offline queued approval cannot finalize after revocation; (6) FMIS completion cannot clear FWIS OOO/OOS; (7) actual SQLite/service, UI, API/sync and engineering-user review demonstrate outcomes on pinned code.
+- **Release stop:** Real FMIS `services.py` still permits actorless `update_work_order_status(..., "Closed")` and `complete_pm(...)` calls. Treat that as `SPECIFIED_NOT_IMPLEMENTED` for protected approval. This text does **not** authorize a silent behavioral change or certify any production process. Require separately recorded qualified owner decision, authorized code PR, negative/integration tests and human acceptance before activation.
+
+
 
 ---
 
