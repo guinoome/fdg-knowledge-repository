@@ -1,5 +1,11 @@
 # FDG Claude Code Repository Entry Protocol
 
+## P0 — ALL FDG COLLABORATORS: stop repeated discovery; verify the harness (2026-10-26)
+
+**FOUNDER PRIORITY (applies to Nex, Codex, Claude Code, connected workers and future providers):** Read [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-P0-HARNESS-001 - Context Memory Execution Evaluation Continuity Gate|FMCIS-P0-HARNESS-001]] **at the start of each material FDG task or resumed project**. Reuse current approved repository knowledge, recent verified project outcomes and active task context before asking the founder to repeat a known decision or source. Assemble semantic (approved facts/decisions), episodic (actual prior outcomes/defects), procedural (approved playbooks/tests), plus only the current task delta. Query exact current main/branch, project handover, source-to-build status and relevant tools; identify what is *truly* missing. **Never pretend all prior conversations are accessible.**
+
+Then follow bounded **act → tool → check → correct/stop**, real worker dispatch where supported, deterministic tests, risk-appropriate independent review, and verified same-session knowledge return (or explicit blocker). Required receipt: source commit + handover, reused decisions, delta, unresolved source, actual dispatch/test/reviewer outcome, whether an avoidable question was repeated, and knowledge-return commit. **Priority tag/documentation != runtime enforcement:** do not report HARNESS VERIFIED until controlled Codex and Claude Code resume/negative tests in the canonical document actually pass. Issue #11 remains the separate **higher-priority source-to-build** defect/reconciliation gate; do not replace or dilute it. No unauthorized skill install, sensitive media upload, production action or claim that a second model's score proves correctness.
+
 
 ## Founder video memory: legal launch gate and evidence-linked one-page visuals (2026-10-25)
 
