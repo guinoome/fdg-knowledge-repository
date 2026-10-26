@@ -133,3 +133,17 @@ The current document is a research-derived reference and portable task specifica
 ## Client data breach risk and recovery extension — 2026-10-23
 
 The founder's video 1000011718.mp4 about an unverified third-party data-loss story highlights a missing acceptance dimension: actual client-data recovery evidence. Retain S01–S17; apply additional [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Data Breach Prevention and Recovery Release Gate|FSIS-0804 Client Data Security Gate]] CDB-01–10 for real private/paid customer releases, including backup isolated restore, verified session/key revocation, cross-tenant DB/storage rejection and independent reviewer. Activate [[12_FDG_Security_Intelligence_System/11_Incident_Response/FSIS-1102 - Client Data Exposure Containment and Restoration Playbook|FSIS-1102 Incident Response]] only for credible suspected/confirmed FDG incident. Never declare security solved from a checklist or AI review.
+
+## 2026-10-26 — Cloudflare independent-verification and coverage-ledger enhancement
+
+**Source:** [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0806 - Cloudflare Security Audit Skill Reference and Evidence-Gated Audit Workflow|FSIS-0806 Cloudflare source-pinned security-audit methodology]], from founder-supplied video `1000012171.mp4` and actual MIT-licensed Cloudflare repository. The external **six-phase method** complements rather than duplicates or supersedes this pack's S01–S17 test matrix.
+
+For an **explicitly authorized full application security audit**:
+1. Produce a SHA-pinned reconnaissance and trust-boundary map with actual in-scope principals, protected resources, read/write/export/deletion pathways and test limitations.
+2. Use a coverage ledger per subsystem/trust boundary. Mark gaps, deferred units and prior findings separately; never claim full coverage from one pass or from automated-check counts.
+3. Assign an independent verifier who did not originate each candidate; they must reopen source and attempt to disprove it using the narrowest authorized sandboxed fixture. Unsupported environment/runtime assumptions remain `NEEDS_VALIDATION`.
+4. Permit only `CONFIRMED` with complete affected-boundary trace, observed bounded effect and justified impact severity; `REJECTED` for disproved leads; `NEEDS_VALIDATION` for exact evidence gaps **without fabricated severity**. A video audit screenshot or a scanner warning does not prove an FDG vulnerability.
+5. Retain redacted source/test/reviewer/coverage evidence through existing FAIS/FPJIS ownership; fix only authorized code, then rerun both deny and legitimate-use regressions. Existing FSIS-0804/0805, signed release and human-acceptance gates remain intact.
+6. Do not run target-controlled code outside OS-enforced no-network, sanitized-environment, read-only-target, scratch-only, resource-limited isolation. Without it, **perform source-only review and stop runtime claims**. No automatic Cloudflare skill install or GitHub Actions activation is implied.
+
+For **focused security questions or normal feature PR reviews**, select only relevant checklist controls rather than launching a full six-phase multi-agent audit. Agent-specific commands/availability must be confirmed by actual executor. No private client data or attack payload reports in public GitHub.
