@@ -34,3 +34,9 @@ No new knowledge system was created. Source-content approval and implementation 
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS source-to-build gate]]: affected implementation blocked on material unresolved source-to-requirement edges; no function marked complete without real tested user/human acceptance.
 - [GitHub PR source/acceptance checklist](https://github.com/guinoome/fdg-knowledge-repository/blob/main/.github/PULL_REQUEST_TEMPLATE.md): reviewer-facing control, **not** configured CI branch protection.
 - [GitHub issue #11](https://github.com/guinoome/fdg-knowledge-repository/issues/11): unresolved historic source recovery, branch decision reconciliation and any actual end-to-end automatic chat-event connector need separate authorized executor/tests.
+
+
+## 2026-10-26 — Founder video references: verified extraction and reviewed improvement
+
+- [[04_Knowledge_Management/FDG-KM-VID-20261026-001 - Document Conversion and Controlled Session Learning|Document Conversion + Controlled Session Learning (two video review)]] — extracted and enhanced from privately reviewed `1000012013.mp4` and `1000012028.mp4`. Distinguishes Microsoft's MarkItDown from unverified token-savings claims, engineering diagram/measurement fidelity risks, and a controlled session-learning feedback cycle from unproven autonomous self-modification. **SOURCE_REVIEWED / ADAPT_IN_EXISTING_STANDARDS / NOT_IMPLEMENTED**.
+- Integration points: [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020]] and [[07_Nex_Core_Intelligence/KNOWLEDGE_RETRIEVAL_AND_MEMORY_STANDARD|NEX-STD-054]]. Existing source-to-build and qualified acceptance controls remain unchanged. No raw copyrighted videos or private JSONL session archives were published.
