@@ -871,3 +871,43 @@ Record **campaign/content/version/channel/date; offer ID; exact claim text; targ
 ## Search and qualified inquiry integration — 2026-10-22
 
 Organic website technical health is governed by [[18_FDG_External_Intelligence_System/04_Search_Intelligence/FEXIS-SEO-0001 - FDG Website SEO Conversion Readiness Blueprint|FEXIS-SEO-0001 — SEO & Conversion Readiness]]. The website lead-to-quote interface is [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-003_Search_to_Qualified_Inquiry_and_Quotation_Playbook|FBIS-PLB-003 — Search-to-Qualified-Inquiry]]. Social content and organic search can both lead to the same approved, mobile-ready customer inquiry path, but traffic, inquiries, accepted quotes and verified receipts remain distinct; do not convert impressions to invented customers or automatically publish claims. No change to this draft blueprint's authority or rollout status.
+
+
+## 2026-10-26 — Public FDG Social Studio launch slice inspired by Instagram agent-skill video
+
+**Founder intent:** “I need mine like this to be online. Soon.” The founder shared privately `1000012205.mp4` (44.0 s, SHA-256 `b20fea7ec4eefdda9656164c69614ea39cc092af1ee1e834bdab835f5693503a`) with a slick vertical explainer of an Instagram content-skill collection. Product priority: publish a **working FDG-owned, mobile-first, publicly reachable creative-operations experience soon**, rather than keeping social capability exclusively in documents. A public website can expose marketing and sample content; **drafts, scheduling, accounts and publishing must be authenticated**.
+
+**Exact verified external source:** [Jake Schincariol's `instagram-agent-skill`](https://github.com/Jakeschincariol/instagram-agent-skill), main `d03c56bb598be770c60b201f94237e5d1a4268a6`, [MIT license](https://github.com/Jakeschincariol/instagram-agent-skill/blob/main/LICENSE). Thirteen Claude skills cover Reel hooks/timing, caption lint, carousel/story, profile, weekly plan, topic research, writing quality, replies/DM draft, repurposing and post-performance review. The video shows commercial-style visual cards and slash-command examples; **the source README explicitly says it does not publish posts, log in or connect to Instagram**. Its hook classifier is a screening heuristic (author-reported same-creator hit/miss AUC **0.56**) rather than reliable viral prediction. No verified Instagram automation, 2.3k-star count, growth guarantee or revenue follows from a marketing clip. Do not copy its graphic cards/characters/branding. MIT code reuse is possible only after scoped source and dependency review with required notice; prefer FDG-original implementations compatible with Claude/Codex/provider-neutral collaborators.
+
+**No new intelligence system.** Reuse:
+- **FPIS FDG Creative Studio:** signed-in responsive workspace, content assets, original engineering visuals, FDG brand rules and a source-linked claim review.
+- **FWAIS:** existing capability registry, review queue, jobs and **replaceable official channel adapters**; no browser bot, cookie/session scraping or unsolicited mass DM.
+- **FCMIS:** approved MEP/social campaign cadence, formats and performance metrics.
+- **FBIS:** owned accounts and subscriptions, customer/lead conversion, FDG service/product attribution.
+- **FSIS/FLIS:** token security, application permissions, third-party rights and marketing claims; engineering domain reviewer independently validates formulas/equipment behavior.
+- **FPJIS:** work package, actual site checks, acceptance receipts and launch authority; no speculative “built” status.
+
+### Online MVP — six small capabilities, not 13 duplicated systems
+
+1. **Public branded entry:** lightweight FDG Creative Studio / Engineering Learning marketing page linked from existing FDG websites, clear samples and demo CTA; responsive fast mobile performance and no private data exposed.
+2. **Private workspace:** FDG sign-in, owner/brand context, scoped campaign/topic backlog, 1–3 content archetypes for engineering Reels and education; draft states and proof-based asset provenance. Reuse actual accounts instead of fake demo identities.
+3. **Content composer:** source-backed technical claim → short Hook A/B → 30-second beat sheet → caption/on-screen text/storyboard → original graphic or approved video media. Add language/voice rules; do not blindly run an “AI humanizer” that corrupts technical terms or evidence references.
+4. **Engineering and marketing approval:** engineer sees formula/source/units, marketing sees brand and CTA, owner sees publish-ready asset; `Draft → Engineering Review → Creative Review → Approved → Scheduled/Exported → Published/Failed`. Approved content cannot silently change after sign-off (revision+hash binding).
+5. **First-channel delivery:** initially one owned **Instagram professional account** and Facebook Reels (or export/manual publishing until permission established). Official Meta Instagram content publishing requires eligible professional account and the permissions/authentication for the chosen Meta integration flow; some flows require linked Facebook Page. Verify actual account eligibility, app review/permissions, media specs, refresh/revocation, scheduling restrictions, webhooks and rate limits **before enabling an API publish button**. Publishing can start manually without pretending the API is connected.
+6. **Actual evidence loop:** store scheduled date/time, publish receipt/post URL, failure reason and retry guard; import only account-authorized metrics and separate organic engagement from qualified leads, trial/demo entry and attributed revenue. Initial content acceptance requires a working signed-in mobile experience and **one actually posted** technically reviewed original FDG Reel with link/evidence, not a static screenshot.
+
+### Staged delivery: quick online visibility, then validated automation
+
+| Slice | Deliverable | Acceptance before advancing |
+| --- | --- | --- |
+| S0 source/permission discovery | existing repo and deployment inventory, FDG login/branch mapping, owned brand account and page eligibility, secrets/hosting constraints | no conflicting/new app core, authorization path resolved |
+| S1 first public experience | FDG-branded live landing/demo + signed-in draft workspace; manual/export post action | HTTPS reachable on real domain, responsive Android, authorization/cross-tenant negative checks, approved technical content |
+| S2 useful content engine | one 30-second MEP Reel script, storyboard, captions, original media, QA queue, editable reusable skill | actual editing/review, stored revision and successful public manual post receipt |
+| S3 channel automation | one approved official Meta adapter with schedule, publish, retry, idempotency, token revocation and receipts | real account eligibility and permissions, sandbox/live restricted tests, authorized publish and recoverable failures |
+| S4 commercial iteration | seven-day calendar, retention/outlier experiment, lead CTA and one measurable inbound interest | demonstrable content-to-site/lead path, platform-safe analytics, no fabricated follower claims |
+
+**First candidate example:** 30-second fire-pump churn-test misconception (or equivalent owner-approved practical engineering issue), two factual hooks, one verified source/calculation, original cutaway, readable on-screen labels and compliant CTA for a legitimate engineering checklist. No stolen Animagraffs/other creators' artwork or unsupported real-fluid simulation claim.
+
+**Release constraints:** Never equate FDG's historic proposal of **five posts/day/platform** with an already functioning publisher or a safe MVP demand. Validate **one** approved Reel + one publish receipt before scaling. Avoid a new generic site, duplicate FCMIS/FPIS app or “always allow” external publishing. Keep video demos interactive and evidence-real. Technical approval and copyrighted media rights are mandatory.
+
+**State:** `FOUNDER_LAUNCH_INTENT_CAPTURED / SOURCE_VERIFIED / IMPLEMENTATION_SCOPE_PROPOSED / NO_DEPLOYMENT`. This is a documented next slice. No live portal, Instagram token, backend, scheduled job, automated post, actual API call or end-to-end acceptance was created by adding this note.
