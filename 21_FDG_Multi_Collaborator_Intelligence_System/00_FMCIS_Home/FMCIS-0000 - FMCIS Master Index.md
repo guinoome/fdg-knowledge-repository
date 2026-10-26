@@ -1,5 +1,9 @@
 # FMCIS-0000 — FMCIS Master Index
 
+## 2026-10-26 — P0 founder collaborator continuity / no-repeat harness
+
+**ALL COLLABORATORS — PRIORITY P0:** [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-P0-HARNESS-001 - Context Memory Execution Evaluation Continuity Gate|FMCIS-P0-HARNESS-001 — Context, Memory, Execution, Evaluation]] is the mandatory operating/retrieval receipt for material FDG project work. Read it from the root `AGENTS.md`/`CLAUDE.md` entrypoints, reuse approved knowledge and actual prior outcomes before asking settled questions, bound tool loops, check evidence and return verified knowledge. [[07_Nex_Core_Intelligence/KNOWLEDGE_RETRIEVAL_AND_MEMORY_STANDARD|NEX-STD-054]] retains memory authority; [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-005_Loop_Termination_Criteria|FMCIS-005]] retains stop criteria. [GitHub P0 harness runtime acceptance #20](https://github.com/guinoome/fdg-knowledge-repository/issues/20) remains **OPEN / NOT VERIFIED**. [Issue #11](https://github.com/guinoome/fdg-knowledge-repository/issues/11) is separate and **higher priority for source-to-build**. Documentation is not a passing runtime test.
+
 **System:** 21_FDG_Multi_Collaborator_Intelligence_System (FMCIS)
 
 **Status:** Architecture Foundation — Draft
