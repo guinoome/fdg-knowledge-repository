@@ -43,4 +43,10 @@ No new knowledge system was created. Source-content approval and implementation 
 
 ## 2026-10-26 — Security audit video reference
 
-- [[04_Knowledge_Management/FDG-KM-VID-20261026-002 - Independent Security Audit Skill Reference|Independent security-audit skill video review]] — video-extracted audit phases, safe multi-tenant/RLS tests, severity and evidence records, independently verified remediation and source-to-build acceptance. External skill unverified; documentation only, no scanner installed or security audit executed.
+- [[04_Knowledge_Management/FDG-KM-VID-20261026-002 - Independent Security Audit Skill Reference|Independent security-audit skill video review]] — video-extracted audit phases, safe multi-tenant/RLS tests, severity and evidence records, independently verified remediation and source-to-build acceptance. Cloudflare/security-audit-skill and SnailSploit/claude-red repository identities and MIT license files independently verified in a dated follow-up; **technical adoption and runtime still unverified**. Documentation only: no scanner installed, offensive skill enabled, or security audit executed.
+
+
+## 2026-10-26 — Agent operating model, workflow and outcome-loop media intake
+
+- [[04_Knowledge_Management/FDG-KM-VID-20261026-003 - Agent Operations Workflow and Loop Engineering References|Specialist agents, practical-AI onboarding, loop engineering, workflow adapters and occupancy-status semantics]] — nonduplicative evidence intake for videos `1000012193.mp4`, `1000012215.mp4`, `1000012217.mp4`, `1000012218.mp4` and the **privacy-filtered interpretation** of a facility occupancy screenshot. Cross-references previously captured `1000012171.mp4`, `1000012205.mp4`, plus a new `1000012170.mp4` addendum in the security note. No private video/screenshot, staff identity, email, telephone or facility occupancy detail was uploaded.
+- **Adoption boundary:** the source register documents `EXTEND` candidates for existing FMCIS, FWAIS, FCMIS, FEXIS, FBIS, FBPOIS, FSIS/FAIS and FPJIS ownership; it neither changes their canonical specifications nor asserts live specialist employees, security tests, workflows, customer outcomes, deployment or approvals. Before an implementation use the referenced system-owner standard and FPJIS acceptance tests.
