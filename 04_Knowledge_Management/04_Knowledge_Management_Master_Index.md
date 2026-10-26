@@ -40,3 +40,7 @@ No new knowledge system was created. Source-content approval and implementation 
 
 - [[04_Knowledge_Management/FDG-KM-VID-20261026-001 - Document Conversion and Controlled Session Learning|Document Conversion + Controlled Session Learning (two video review)]] — extracted and enhanced from privately reviewed `1000012013.mp4` and `1000012028.mp4`. Distinguishes Microsoft's MarkItDown from unverified token-savings claims, engineering diagram/measurement fidelity risks, and a controlled session-learning feedback cycle from unproven autonomous self-modification. **SOURCE_REVIEWED / ADAPT_IN_EXISTING_STANDARDS / NOT_IMPLEMENTED**.
 - Integration points: [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|NEX-STD-020]] and [[07_Nex_Core_Intelligence/KNOWLEDGE_RETRIEVAL_AND_MEMORY_STANDARD|NEX-STD-054]]. Existing source-to-build and qualified acceptance controls remain unchanged. No raw copyrighted videos or private JSONL session archives were published.
+
+## 2026-10-26 — Security audit video reference
+
+- [[04_Knowledge_Management/FDG-KM-VID-20261026-002 - Independent Security Audit Skill Reference|Independent security-audit skill video review]] — video-extracted audit phases, safe multi-tenant/RLS tests, severity and evidence records, independently verified remediation and source-to-build acceptance. External skill unverified; documentation only, no scanner installed or security audit executed.
