@@ -291,3 +291,14 @@ End of Standard
 **If GitHub cannot be written:** issue a ready-to-apply short handover and mark `SYNC_BLOCKED`; do not say "remembered" or "saved" as a substitute. If a subagent dispatcher exists, follow [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|FMCIS-DISP-001]] and send this bounded task to a capable worker. Lead agents must report direct administrative edits honestly if no subagent tool exists.
 
 **Provenance/verification and acceptance owners are unchanged.** Supporting operational reconciliation: [[04_Knowledge_Management/FDG-HIST-0001 - Historical Conversation and Reference Reconciliation Handover 2026-10-19|historical source register]] and [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS requirement traceability]].
+
+
+## Visual/document intake loss-control enhancement — 2026-10-26
+
+**Founder reference:** [[04_Knowledge_Management/FDG-KM-VID-20261026-001 - Document Conversion and Controlled Session Learning|Video-derived MarkItDown and controlled session-learning review]]. This is a bounded interpretation of the existing approved standard, not a replacement.
+
+For any agent/worker ingesting PDF, Office documents, screenshots, videos or extracted Markdown: preserve an authorized original file ID/SHA, rights/access class, source page/section/time locator, extraction tool/version and processing mode. Treat Markdown as a **retrieval derivative** and explicitly mark omitted diagram-only facts, broken tables, unread formulas/units and loss of labels or drawing revisions. Before converting a long input to agent context, scope to the approved requirement and carry the source reference in every cited conclusion.
+
+No conversion success, Markdown token reduction, exact engineering interpretation or automatic memory update is accepted without content-level comparison and appropriate visual/engineering verification. Converters and MCP tools must not inherit unrestricted filesystem/network access; any cloud OCR or multimodal route needs a separate privacy, fee and rights decision. Raw private session JSONL and proprietary/unlicensed media do not go to the public repository.
+
+A structured extract can **propose** a lesson; it cannot authorize changes to engineering acceptance rules, safety/approval states, agent permissions, or finished code. Keep same-session `FDG-SYNC`, source→build evidence and independent human acceptance gates unchanged.
