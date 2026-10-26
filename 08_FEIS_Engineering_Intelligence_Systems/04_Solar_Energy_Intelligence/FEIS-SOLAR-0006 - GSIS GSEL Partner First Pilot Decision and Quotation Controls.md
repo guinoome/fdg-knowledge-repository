@@ -119,6 +119,27 @@ Do not treat review status as GSIS regulatory approval. The engineering change-h
 - Current user reports existing partners have complete permits; **permit and license copies, license scope, expiry and contracting entity identity not yet independently inspected**. Do not imply verification completed.
 
 
+## 10. Partner Desk and Royalty-Licensing Extension (2026-10-27)
+**User directive:** Partner companies already have their own permits. FDG Solar Visayas is not registered as an installation contractor. Partner company details are entered manually; the dashboard permits manual upload and review of the actual company's DTI/SEC, BIR, LGU, PCAB, professional-authorization and warranty documents. Uploaded data are not evidence of an official registry verification. Preserve FDG lead attribution, proprietary solar calculator/template IP, brand credit and independently negotiated compensation.
+
+**REUSE / EXTEND:** Extend existing FDG partner agreement **v2**, not a new agreement, with the following two mutually documented project scenarios in Annex F:
+- **Option A — Genuine partner supply and installation:** Partner is actual supplier/installer, issues quote, contract, invoice/receipt as appropriate. If FDG-originator later purchases equipment to resell, seller-of-record change and lawful business/tax registration are prerequisites. Do not imply an unregistered FDG reseller or an undocumented pass-through.
+- **Option B — Client-sourced equipment + genuine installer services:** Homeowner purchases equipment from the actual supplier with authentic supplier documents, and installation partner quotes/invoices only its real services and genuinely supplied goods. Prohibit "quotation/receipt only" if this means renting the installer's tax invoice for another seller's transaction. The partner must not certify installation it did not perform or authorize.
+
+**Distinct commercial rights:** Annex B controls documented lead/referral compensation (subject to business/tax compliance). A new Annex G controls royalty/license payment **only for evidenced use of identified proprietary FDG calculator, approved quotation templates, outputs or brand**, with separate scope, pricing basis, audit/reporting, taxes, license duration, quality control and non-transferability. A label "royalty" does not replace actual IP usage or remove registration obligations. Preserve software/source ownership; don't imply legal registration of the FDG brand or an unverified copyright chain.
+
+**Dashboard output available as portable local HTML, separate editable DOCX template:**
+- Multiple partner profiles, company fields manually editable, PCAB scope/expiry, authorizing officers.
+- File uploads backed by IndexedDB on the executing user's browser; PDF/image/Word accepted; data not automatically shared with GitHub/cloud.
+- Proposed arrangement A/B, actual equipment seller, scope, lead payment terms and royalty terms; quote terms remain inactive until compliance/annex signatures.
+- Populated draft DOCX produced by applying field values into the amended v2 legal Word template, preserving the partner's own signature authority. No forged signature.
+- Local backup ZIP export/import with document files; delete and status notes. Browser storage not encrypted; device protections, restricted device access and user-controlled backups are essential.
+- Limits: proof-of-concept local dashboard, not embedded in live production FDG solar website; no OCR or automatic permit checks, no server authentication, no signature service, no GSIS integration, no issued customer quotation, no live independent IndexedDB browser persistence test completed in execution environment.
+- QA: browser UI and DOCX/ZIP path smoke tested under simulated persistence; actual browser IndexedDB persistence and user acceptance remain open.
+- **Code custody:** Portable HTML and revised editable template delivered to user as downloadable artifacts in this conversation. Not committed to live solar app and not deployed. Next integration must inspect active implementation repository and current tests first, avoid conflicting with ongoing collaborator work.
+
+**Acceptance gates before pilot:** Legal entity/PCAB credentials independently inspected; genuine supplier/payment chain proven; business development and royalty tax activation verified; signed Annexes B/F/G where applicable; confidentiality/privacy roles accepted; partner-approved quotation and GSIS-compliant truthful invoices; R1/R2/R3 scope reconciliation unchanged.
+
 Cross-links:
 - [[FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint]]
 - [[FEIS-SOLAR-0003 - Solar Calculation Kernel Data Contract and Acceptance Tests]]
