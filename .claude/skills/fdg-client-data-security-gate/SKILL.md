@@ -15,3 +15,9 @@ Read 12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0804 - Client Dat
 6. No live Supabase migrations, secret rotation, client notifications, external security scans or production deployment without separate explicit approval. If an incident is suspected, follow FSIS-1102 with approved responders.
 
 Return scoped evidence and blocked next actions. Never claim an app is unhackable.
+
+## Full security audit coordination (Cloudflare-inspired, FDG-owned)
+
+When the user explicitly requests a **full audited repository** or report, read [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0806 - Cloudflare Security Audit Skill Reference and Evidence-Gated Audit Workflow|FSIS-0806]], not merely the checklist. Build a source-SHA-pinned coverage ledger and trust-boundary map, dispatch separately assigned hunters and independent candidate verifiers through real available workers, and report `CONFIRMED` / `NEEDS_VALIDATION` / `REJECTED` with exact evidence; give severity only to an established boundary failure. For a scoped security question or feature review, continue using selective FSIS-0803/0804 checks; do not automatically initiate a multi-agent audit.
+
+Never run target-controlled builds or probes without an OS-enforced, no-network, sanitized-environment, read-only target and scratch-only filesystem with resource quotas. If unavailable, do source-only analysis and mark missing runtime proof `NEEDS_VALIDATION`. Never contact production websites, client systems or paid providers without explicit authority. This instruction adapts the public MIT-source approach, **does not install or copy Cloudflare skill code**, and does not certify FDG as secure.
