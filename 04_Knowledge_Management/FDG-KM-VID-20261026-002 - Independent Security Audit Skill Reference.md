@@ -1,6 +1,6 @@
 # FDG video reference — independent security audit skill (2026-10-26)
 
-**Status:** VIDEO_VISUALLY_REVIEWED / EXTERNAL_TOOL_UNVERIFIED / ADAPT_AUDIT_PATTERN / DOCUMENTATION_ONLY
+**Status:** VIDEO_VISUALLY_REVIEWED / EXTERNAL_REPOS_AND_LICENSES_VERIFIED / SKILL_RUNTIME_UNVERIFIED / ADAPT_AUDIT_PATTERN / DOCUMENTATION_ONLY
 **Private source:** user-provided `1000012171.mp4`, ~49.8 seconds. Video frames examined; no complete verified audio transcript. Do not publish original video, any illustrated tokens, user identities, or sample secrets.
 **Visible lead:** GitHub screenshot of `cloudflare/security-audit-skill` described as a coding-agent skill for multi-phase security audits with independently verified, machine-readable findings. **Repository identity, code, license, actual effectiveness and compatibility are NOT independently verified in this intake.** No source code copied, package installed, external scanner executed, or FDG app scanned.
 
@@ -34,3 +34,21 @@ A demonstration of a coding agent using a security-audit skill to inspect an exa
 - Keep local-first/offline-capable, agent-neutral, provider-replaceable operation and FDG ownership of evidence.
 
 **Acceptance:** REFERENCE_CAPTURED only. No security audit run, no verified findings, no code remediation, no real user data touched, no application acceptance. A verified security assessment requires separate authorized execution and review.
+
+
+## 2026-10-26 follow-up — independent upstream verification and the second security video
+
+**Additional founder-provided source:** `1000012170.mp4`, 24.73 seconds, SHA-256 `ddb57bb810f708159beb602cb1d5ae39731b3453c85e4d4e2d66f92ffb40796a`; visual frames show the `claude-red` offensive-security SKILL.md collection on GitHub and sample vulnerability categories. The on-screen skill count and popularity are promotional/volatile, **not** an FDG inventory or effectiveness metric. No complete audio transcription, runtime audit or skills installation was performed.
+
+**Upstream code and license independently checked via GitHub (2026-10-26):**
+- [Cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill): repository exists, public, not archived; official README at inspected blob `c80305c88cd5087db37f76a0d230c1fc092c864c`; MIT LICENSE at blob `6dbc9ecb3a5b9080e95b962869e8c7ab16cfdc20` (Cloudflare, Inc. copyright). Its documented workflow has six phases: reconnaissance → coverage-led analysis → fresh validation → machine-readable findings with separate confirmed/needs-validation/rejected states → independent record check → target-neutral report. It supplies `report-schema.json`, `validate-findings.cjs` and `validate-coverage-ledger.cjs` (documented, **not executed** here). Its code, validators, tests, dependencies and actual tool privileges have **not been fully audited** for FDG adoption.
+- [SnailSploit/claude-red](https://github.com/SnailSploit/claude-red): repository exists, public, not archived; README at blob `0858a54b75c0a29021e4ca7b7d69fbbee40c3bce`; MIT LICENSE at blob `53e4674a3e91df7b85c74e1bbf9f0fe37f8b2c8b` (SnailSploit / Kai Aizen copyright). The repo identifies itself as an **offensive** Claude skill library with categories spanning web/auth, cloud, mobile and infrastructure. This is **not an appropriate FDG default project-start auto-install**; specialized skills may expand credentials/network/attack permissions and should not run on hotel, customer or public systems without separate explicit scope and authorization.
+- [OWASP ASVS 5.0.0](https://asvs.owasp.org/) is the verified stable application verification baseline for a future FDG security coverage ledger, not proof of compliance or certification.
+
+**REUSE/EXTEND decision:** Existing FSIS/FAIS and FPJIS remain owners. **ADAPT** the Cloudflare *method* (declared scope, coverage ledger, constrained findings schema, fresh independent verifier, regression receipts) and selectively use the Claude-Red *attack-class headings* as a defensive threat-model checklist only. **Do not merge/install either upstream skill library** or transfer private repositories, credentials, access tokens, proprietary media or personal/guest records. Before any tool adoption, inspect actual skill instructions and code at a pinned commit, dependencies, rights, network/file privileges, prompt-injection exposure, action boundary and test harness.
+
+**Specific proposed FDG defensive acceptance controls:** for a synthetic staging fixture, verify server-side authentication and role/tenant/branch access, RLS enforcement for each operation, session/token revocation, input/query parameterization, file/path restrictions, secret redaction, request limits, offline-sync conflict/replay and fail-closed approvals. Findings use `confirmed` only with independently reproducible safe evidence; `needs_validation` does not inherit a confirmed severity, and `rejected` preserves rationale. A finding is resolved only after approved remediation, negative/regression test execution and an independent read of the **patched** commit. Do not include weaponized payloads or live user data in public tickets.
+
+**Readiness:** `EXTERNAL_REPO_IDENTITY_AND_LICENSE_VERIFIED / TECHNICAL_COMPATIBILITY_NOT_TESTED / REFERENCE_ONLY`. Earlier source-intake text above correctly described the **earlier** unverified state; this dated addendum supersedes that one verification limitation without rewriting the historical review. All actual security scans, bug fixes, skill installs, incident actions and production acceptance remain **NOT EXECUTED**.
+
+**Related adjacent intake:** [[04_Knowledge_Management/FDG-KM-VID-20261026-003 - Agent Operations Workflow and Loop Engineering References|2026-10-26 multi-video agent/workflow extraction]].
