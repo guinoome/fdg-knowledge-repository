@@ -1,5 +1,7 @@
 # FDG Knowledge Repository
 
+> **P0 collaborator continuity (2026-10-26):** Nex, Codex, Claude Code and future agents must use the [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-P0-HARNESS-001 - Context Memory Execution Evaluation Continuity Gate|FMCIS harness no-repeat reliability gate]] when resuming FDG work. [Issue #20](https://github.com/guinoome/fdg-knowledge-repository/issues/20) tracks actual fresh-session runtime acceptance; the separate higher-priority [Issue #11](https://github.com/guinoome/fdg-knowledge-repository/issues/11) continues source-to-build reconciliation. Documentation alone is not proof of automated enforcement.
+
 > The governed organizational knowledge, engineering intelligence, and execution-memory repository of the FDG Ecosystem.
 
 This repository is not a collection of isolated notes and it is not owned by any single model, agent, application, or vendor. It is the persistent knowledge architecture through which FDG preserves standards, decisions, evidence, project learning, organizational capability, and the relationships between its intelligence systems.
