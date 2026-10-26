@@ -45,3 +45,7 @@ Technical controls should be selected after the governance requirements are vali
 ## FSIS-0805 Video Security Acceptance — 2026-10-25
 
 - [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0805 - JWT Session Revocation and Account Deletion Gate|FSIS-0805 JWT Revocation and Account Deletion Gate]] — video 1000011984.mp4 explains valid signed JWT persisting after deleted user or revoked session; official Supabase Auth docs corroborate. Adds 14 runnable future negative tests for deleted users, session revocation, stale branch roles and RLS. Not a finding or fix against a real FDG deployment.
+
+## Cloudflare audit methodology source reference — 2026-10-26
+
+- [[12_FDG_Security_Intelligence_System/08_Cybersecurity/FSIS-0806 - Cloudflare Security Audit Skill Reference and Evidence-Gated Audit Workflow|FSIS-0806 — Cloudflare Security Audit Skill / Evidence-Gated Vulnerability Review]] — founder video `1000012171.mp4`, SHA-pinned MIT external source, six-stage reconnaissance → coverage → hunting → fresh verifier → structured disposition → independently checked report. Bridges existing FSIS-0803 and FAIS/FPJIS audits without introducing another platform or claiming a live security scan. **REFERENCE_ADAPTED / NO_SKILL_INSTALL / NO_FDG_VULNERABILITY_CONFIRMED**.
