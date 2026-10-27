@@ -99,3 +99,8 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 
 - [[03_Agentic Framework/FDG_PROJECT_START_SKILLS_SECURITY_GATE_2026-10-25|Mandatory Project Start Skills and Security Preflight]] now requires GitHub/official-doc discovery, comparative evaluation, explicit REUSE / EXTEND / MERGE / REPLACE / NEW, pinned source evidence, tests and approval before integrating unfamiliar capabilities.
 - [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]] is the canonical local/cloud inference decision. It does not supersede Issue #11 or assert runtime readiness.
+
+
+## 2026-10-27 — Organization-wide open-source-first policy
+
+- [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]] applies to all existing and future FDG projects and collaborators. This is the cross-ecosystem governing rule; the Nex inference decision is one application, not the scope boundary.
