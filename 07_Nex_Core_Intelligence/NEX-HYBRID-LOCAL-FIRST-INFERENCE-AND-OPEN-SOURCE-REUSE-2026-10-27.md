@@ -109,3 +109,8 @@ Target hardware profile must be recorded (OS/version, CPU, physical RAM, storage
 - Issue #20: `OPEN / SEPARATE COLLABORATOR CONTINUITY WORK`
 
 > Governing principle: build a durable FDG intelligence capability around interchangeable inference engines, not a dependency on any single model.
+
+
+## Cross-ecosystem governing policy — 2026-10-27
+
+This project-specific rule implements, and does not limit, the organization-wide [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]]. Apply it to all existing and future FDG projects: inspect canonical prior work, search authoritative sources, verify licenses/security/maintenance, compare options, justify REUSE / EXTEND / MERGE / REPLACE / BUILD NEW, and record tested evidence and limitations before authorized integration.
