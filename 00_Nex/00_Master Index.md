@@ -358,3 +358,9 @@ Future Work Begins Here
 [[10_FDG_CORE_Intelligence/FDG-CORE-STD-013_MACHINE_LEARNING_AND_PREDICTIVE_INTELLIGENCE_STANDARD|FDG-CORE-STD-013 Machine Learning & Predictive Intelligence Standard]] defines the shared FDG capability for governed anomaly detection, forecasting, predictive modeling, model registry, validation, drift monitoring, confidence, and prediction-to-outcome learning.
 
 Architectural decision: predictive intelligence extends FDG CORE rather than creating a separate system mother. Domain systems retain authority, and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/01_Platform_Experience_Design_Intelligence|FPIS]] governs the FDG Predictive Intelligence Command Center experience.
+
+## Nex Hybrid Local-First Inference and Open-Source-First Reuse — 2026-10-27
+
+Founder-directed architecture for a local-first Nex that remains useful on 4 GB RAM / CPU-only hardware, with optional governed cloud escalation. The standing open-source-first rule applies across FDG projects and collaborators: inspect canonical prior work, search GitHub/official docs, compare viable implementations, pin and review licenses/security/tests, decide REUSE / EXTEND / MERGE / REPLACE / NEW, and benchmark before claiming acceptance.
+
+Canonical decision: [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]]. It distinguishes AirLLM's 4 GB GPU claim from the untested 4 GB system RAM / no-discrete-GPU target. This is architecture and initial research only; no runtime installation, benchmark or production routing is claimed. Issue #11 remains higher priority; Issue #20 remains separately open.
