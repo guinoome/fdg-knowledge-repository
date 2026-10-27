@@ -381,3 +381,8 @@ Every FDG collaborator receiving a task that involves an unfamiliar capability m
 A handoff must state: requirement and owner; existing FDG source consulted; candidate repository URLs and pinned revisions; license/security/maintenance findings; approach comparison; proposed decision; exact tests/evidence; unresolved approvals; next action. Preserve a single authoritative source and cross-link it rather than creating duplicate standards. Collaborators must not claim a search, tool execution, dispatch, benchmark, installation or test unless a receipt/evidence exists. Do not ask Francis to repeat context already accessible in the repository.
 
 For Nex local/cloud inference, follow [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|the hybrid inference decision and acceptance plan]]. Issue #11 remains higher priority than this future runtime work; Issue #20 remains a separate continuity issue. This standard alone authorizes neither external data transfer nor production changes.
+
+
+## Cross-ecosystem governing policy — 2026-10-27
+
+This project-specific rule implements, and does not limit, the organization-wide [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]]. Apply it to all existing and future FDG projects: inspect canonical prior work, search authoritative sources, verify licenses/security/maintenance, compare options, justify REUSE / EXTEND / MERGE / REPLACE / BUILD NEW, and record tested evidence and limitations before authorized integration.
