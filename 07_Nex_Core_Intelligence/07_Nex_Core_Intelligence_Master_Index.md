@@ -196,3 +196,8 @@ Additional validation pack:
 - [[07_Nex_Core_Intelligence/NEX_CORE_ADAPTIVE_CAPABILITY_ACCEPTANCE_CASES|Nex Adaptive Capability Acceptance Cases]]
 
 This pack converts the six capability areas into repeatable pass/fail cases so development can be validated rather than merely described.
+
+## Hybrid local-first inference and open-source reuse — 2026-10-27
+
+- [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]] — founder-directed local-first/hybrid architecture and mandatory open-source-first discovery; initial AirLLM / llama.cpp / Ollama / llmfit comparison, CPU-only 4 GB acceptance plan, provider-neutral routing and explicit security/installation boundaries. No runtime or benchmark is claimed as complete.
+- [[07_Nex_Core_Intelligence/NEX_CAPABILITY_DEVELOPMENT_LOG|Nex Capability Development Log]] — NEX-CAP-LOCAL-HYBRID-001 records this gap and its unexecuted acceptance cases.
