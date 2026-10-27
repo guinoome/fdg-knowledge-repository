@@ -117,3 +117,21 @@ Initial controlled cases cover:
 - combined FPJIS/FMCIS execution.
 
 These cases provide the first governed mechanism for testing the capability standard.
+
+## 2026-10-27 — NEX-CAP-LOCAL-HYBRID-001
+
+**Capability:** Local-first hybrid inference and evidence-based open-source reuse.
+
+**Trigger:** Founder directed Nex to target useful local operation on a 4 GB RAM laptop without a dedicated GPU, with optional cloud escalation, and directed all collaborators to search GitHub for existing open-source solutions before implementing unfamiliar features.
+
+**Observed gap:** A 70B model advertised for 4 GB GPU/VRAM can be mistaken for a 70B model that is useful on 4 GB system RAM with CPU-only compute. Model inference was also at risk of being treated as the agent architecture itself, encouraging duplicated systems.
+
+**Evidence:** Canonical decision [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]] compares AirLLM, llama.cpp, Ollama and llmfit from their public repository claims and licenses. AirLLM is a research candidate, not an accepted 4 GB CPU-only solution.
+
+**Improvement:** Treat Nex as provider-neutral orchestration plus durable FDG knowledge, deterministic tools, local inference adapter, optional policy-gated cloud adapters, and explicit provenance/evaluation. Mandate search → verify → compare → disposition → safe prototype → test → authorized integration.
+
+**Acceptance tests:** NEX-LOCAL-001..004; NEX-ROUTE-005..007; NEX-ADAPTER-008; NEX-AGENT-009; NEX-QUALITY-010 are proposed only.
+
+**Result:** `DOCUMENTED / INITIAL RESEARCH / NO BENCHMARK / NO INSTALLATION`.
+
+**Remaining risk:** Actual 4 GB target hardware not identified; throughput, quality, privacy/egress, compatibility and costs not measured. Issue #11 remains higher priority; Issue #20 remains open separately.
