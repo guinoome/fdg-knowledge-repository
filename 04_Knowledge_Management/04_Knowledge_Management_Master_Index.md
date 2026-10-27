@@ -59,3 +59,8 @@ No new knowledge system was created. Source-content approval and implementation 
 
 - [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]] — records founder-directed architecture and initial open-source comparison; acceptance is pending on real 4 GB RAM / CPU-only hardware.
 - The same decision establishes the standing discovery rule for Nex and all authorized collaborators: search existing GitHub projects and official docs, compare and verify before building unfamiliar features from scratch.
+
+
+## 2026-10-27 — Organization-wide open-source-first policy
+
+- [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]] applies to all existing and future FDG projects and collaborators. This is the cross-ecosystem governing rule; the Nex inference decision is one application, not the scope boundary.
