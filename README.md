@@ -183,3 +183,23 @@ Before changing architecture, pull/review the latest governed state. Before publ
 ## 2026-10-18 FDG audit-to-repair instruction
 
 [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Audit-to-Repair Directive]] **§10** adds the founder's controlled directive to repair verified defects and improve existing owned products when the patch is reversible, tested and does not regress accepted behavior. Root execution entrypoints: [[AGENTS|Codex agents]] and [[CLAUDE|Claude agents]]. FAIS audits independently; project/domain owners implement authorized changes through FPJIS; FMCIS preserves collaborator boundaries. The full repository audit and new product/customer/revenue verification remain **not executed** by this instruction update.
+
+## Universal Open-Source-First Project Rule
+
+**Founder-directed standing rule — applies to every current and future FDG project, system, product, workflow, and unfamiliar capability, not only Nex or AI/model infrastructure.**
+
+Before building an unfamiliar feature from scratch, every FDG collaborator must search GitHub and official upstream documentation, inspect credible existing implementations, compare fit and trade-offs, and record an explicit disposition: **REUSE / EXTEND / MERGE / REPLACE / NEW**. Prefer proven, maintainable components and narrow adapters where appropriate; “open source” alone does not establish quality, security, license compatibility, suitability, or permission to deploy.
+
+Minimum workflow: **SEARCH → VERIFY → COMPARE → DECIDE → PROTOTYPE → TEST → AUTHORIZE → INTEGRATE → DOCUMENT**.
+
+- Check maintenance/activity, source and release history, license and model/data terms where applicable, security posture, dependencies, compatibility, architecture, portability, cost, operational burden, and acceptance tests.
+- Evaluate against the actual project requirements and constraints; do not adopt a project merely because it is popular or has a convincing demo.
+- Prototype in an isolated, reversible environment with synthetic or approved data. Do not install globally, expose secrets, send restricted/client data to third parties, accept legal terms, modify production, or incur costs without the required authorization.
+- Test the relevant functionality, failure paths, security boundaries, offline behavior where required, and performance on the real target environment. Record evidence and limitations.
+- If verification or testing cannot be completed, mark the decision **UNVERIFIED / BLOCKED / PROPOSED** as appropriate. Never report research as implementation or an untested candidate as accepted.
+- Update the relevant canonical standard, project record, indexes and collaborator handover so the discovery compounds across FDG. Link to one authoritative decision instead of creating competing copies.
+- “Search first” is a mandatory discovery step, not an obligation to adopt third-party software. Build new only when existing options fail the requirements, introduce unacceptable risk, or are not viable; document the rationale.
+- This rule complements domain-specific engineering, legal/licensing, security, project lifecycle, owner approval and release gates; it does not override them.
+
+**Project-start execution reference:** [Mandatory Project-Start Preflight](03_Agentic%20Framework/FDG_PROJECT_START_SKILLS_SECURITY_GATE_2026-10-25.md). **Detailed inference-specific example:** [Nex Hybrid Local-First Inference and Open-Source Reuse](07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27.md).
+
