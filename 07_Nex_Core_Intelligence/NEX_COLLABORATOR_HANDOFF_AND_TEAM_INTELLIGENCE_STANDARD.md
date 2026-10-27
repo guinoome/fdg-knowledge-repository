@@ -373,3 +373,11 @@ FDG builds one connected engineering capability.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+## Open-source reuse before unfamiliar implementation
+
+Every FDG collaborator receiving a task that involves an unfamiliar capability must first consult the canonical knowledge repository for existing decisions and prior reviews. If unresolved, search GitHub and official documentation; compare credible projects, licenses, source/test evidence, maintenance, dependencies, hardware fit, data egress, security, interoperability and acceptance burden. Recommend REUSE / EXTEND / MERGE / REPLACE / NEW before implementation.
+
+A handoff must state: requirement and owner; existing FDG source consulted; candidate repository URLs and pinned revisions; license/security/maintenance findings; approach comparison; proposed decision; exact tests/evidence; unresolved approvals; next action. Preserve a single authoritative source and cross-link it rather than creating duplicate standards. Collaborators must not claim a search, tool execution, dispatch, benchmark, installation or test unless a receipt/evidence exists. Do not ask Francis to repeat context already accessible in the repository.
+
+For Nex local/cloud inference, follow [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|the hybrid inference decision and acceptance plan]]. Issue #11 remains higher priority than this future runtime work; Issue #20 remains a separate continuity issue. This standard alone authorizes neither external data transfer nor production changes.
