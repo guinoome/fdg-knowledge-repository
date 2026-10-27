@@ -54,3 +54,8 @@ No new knowledge system was created. Source-content approval and implementation 
 ## 2026-10-26 — Video watch and multimodal source-fidelity guide
 
 - [[FCMIS/FCMIS-REF-Video-Watch-Multimodal-2026-10-26|Watch multimodal video source-fidelity review]] — visually reviewed `1000012232.mp4` and verified the upstream Claude/Codex-compatible MIT video `watch` source. Captures a governed local-first visual+speech+timestamp provenance and loss-check pattern; optional Gemini whole-video analysis requires explicit privacy, fee and rights review. Editing/marketing/social specialists are proposed reusable role contracts, **not existing paid client deployments**. Existing NEX-STD-020 / FCMIS / FMCIS / FPJIS authorities are unchanged; no agent plugin installed or executed.
+
+## 2026-10-27 — Nex hybrid inference and open-source-first reuse
+
+- [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]] — records founder-directed architecture and initial open-source comparison; acceptance is pending on real 4 GB RAM / CPU-only hardware.
+- The same decision establishes the standing discovery rule for Nex and all authorized collaborators: search existing GitHub projects and official docs, compare and verify before building unfamiliar features from scratch.
