@@ -368,3 +368,8 @@ Canonical decision: [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-
 ## Organization-Wide Open-Source-First and Reuse Policy — 2026-10-27
 
 Mandatory for **all existing and future FDG projects, products, modules, workflows, and collaborators**—not only Nex or AI infrastructure. Before building unfamiliar capability, inspect canonical FDG work, search GitHub and authoritative domain sources, verify maintenance/license/security/compatibility, compare options, and document the justified disposition (REUSE / EXTEND / MERGE / REPLACE / BUILD NEW). Prototype and test before integration; distinguish proposed, implemented, and verified states; preserve human approval and project-specific safety controls. Capture evidence and update affected indexes. Full standard: [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]].
+
+
+## Cross-collaborator controlled learning — 2026-10-28
+
+All collaborators are governed by [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. AutoHarness is a design reference; no install or automatic self-modification is authorized. Capability remains documented only until runtime and acceptance tests prove otherwise.
