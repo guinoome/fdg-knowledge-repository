@@ -419,3 +419,8 @@ Organizational intelligence remains.
 End of Standard
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|07 Nex Core Intelligence Master Index]] → this document
+
+
+## Cross-provider learning and skill evolution (2026-10-28)
+
+The collaborator ecosystem should support a provider-neutral, controlled learning loop under [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. Reusable skills belong to FDG's governed knowledge layer, not exclusively to a specific model/plugin. Runtime-specific adapters must preserve authorization, privacy, evidence, validation and approval boundaries. No plugin is installed or authorized by the reference alone.
