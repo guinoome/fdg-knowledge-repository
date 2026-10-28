@@ -53,3 +53,8 @@ This policy applies to all collaborators and all current and future FDG initiati
 ## Relationship to Nex hybrid inference
 
 The Nex local-first / hybrid inference decision is one application of this global policy, not the boundary of its scope. Its model/runtime candidates and proposed acceptance tests remain subject to their own status and evidence records.
+
+
+## Cross-collaborator learning is governed separately
+
+The global open-source-first rule also applies when evaluating learning/skill frameworks. Before adoption, inspect source, license, maintenance, permissions, data capture/redaction, writes, test coverage and portability. The governing learning controls are in [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. Open source is not an automatic approval, and a benchmark or README claim is not FDG validation.
