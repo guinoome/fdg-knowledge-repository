@@ -299,3 +299,8 @@ This does not lower quality gates. It moves quality into architecture, context, 
 ## Coding collaborator skill candidates — 2026-10-21
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS_CODING_SKILL_CANDIDATES_2026-10-21|Five requested coding capabilities]] — session memory, context compression, setup recommendations, model routing and reviewed skill learning; candidates, not installed or integration-tested.
+
+
+## Cross-collaborator controlled learning — 2026-10-28
+
+- [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — organization-wide controlled learning standard for Nex, Claude Code, Codex and other collaborators. AutoHarness remains an unevaluated-for-installation design reference; no runtime deployment claimed.
