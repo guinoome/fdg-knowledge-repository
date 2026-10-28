@@ -271,3 +271,30 @@ reviewer_and_date:
 5. Do not overstate research: parked bench prototype proof is not on-road support. No car brands/OEMs validated; no local hardware/software installed; no sounds synthesized; no driving tests done.
 
 **Disposition:** FUTURE_PROJECT / DESIGN_CANDIDATE. Founder objective captured and architecture proposed; no device or build approval yet.
+
+
+## Reference Evidence — Tesla Model 3 sound-simulation interface video (2026-10-28)
+
+**Evidence ID:** FPJIS-REF-2026-10-28-TESLA-SOUND-001  
+**Source asset supplied by founder:** `1000012457.mp4` (26-second uploaded clip; retained in the originating ChatGPT conversation, not copied into this public repository).  
+**Observed content:** a Tesla Model 3 cabin/center-display view with a sound-simulation interface. The founder identifies the sample as an example of an EV sound perceived as tractor-like.  
+**Evidence status:** founder-supplied visual/audio reference; the exact sound-generation mechanism, app identity, telemetry source, and whether the sound is synthesized by the vehicle, an accessory, or an external system are **not verified from the clip alone**.
+
+### Applicability to FDG
+
+- Treat the sample as a **problem/reference signal**, not as proof of the Tesla's internal architecture or of an available integration API.
+- Explore whether FDG can replace an unwanted low/tractor-like EV sound character with selectable, original sports-car-like cabin audio.
+- Keep the existing requirements for natural-feeling response, authorized read-only telemetry where available, music coexistence, manual ON/OFF, independent sound-volume cap, call behavior configurable by the owner, and a safe mute/fail-closed path.
+- For EVs without authorized motor-RPM telemetry, use an explicitly labeled virtual/simulated RPM model; never imply that it is the vehicle's actual motor RPM.
+- The clip does **not** authorize Tesla API access, OBD/hardware attachment, OEM UI modification, a live-vehicle trial, or a production build.
+
+### Research questions before design selection
+
+1. Identify the interface/app only if evidence in the clip or a verifiable public source supports it; do not guess from appearance.
+2. Determine whether the reference audio is vehicle-native, external speaker hardware, phone/app playback, or a demonstration overlay.
+3. Search existing open-source audio synthesis, low-latency audio mixing, and authorized telemetry-adapter projects before implementing components from scratch; compare license, maintenance, security, platform support, and real-time behavior.
+4. Test candidate sound profiles and RPM-response curves in an offline simulator first. Evaluate perceptual smoothness, latency, clipping, volume limits, coexistence with music, and fail-safe mute.
+5. Keep this reference linked to [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/README|Project Reference Library]] and the separate visual personalization concept [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0001 - CleanYourTV and Connected Device Display Exploration|FPJIS-FUTURE-0001]]; do not conflate display styling with sound generation.
+
+**Disposition:** RESEARCH_REFERENCE / ADAPT_AS_PROBLEM_EVIDENCE / NO_BUILD_AUTHORIZATION.  
+**Safety boundary unchanged:** [[20_FPJIS_FDG_Project_Intelligence_System/24_Reference_Library/FPJIS-FUTURE-0002 - FDG RPM Synchronized Vehicle Sound Experience|FPJIS-FUTURE-0002]] remains future/deferred; all vehicle-origin data must remain authorized and read-only, and no control/write path is permitted.
