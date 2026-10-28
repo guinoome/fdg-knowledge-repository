@@ -386,3 +386,8 @@ For Nex local/cloud inference, follow [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCA
 ## Cross-ecosystem governing policy — 2026-10-27
 
 This project-specific rule implements, and does not limit, the organization-wide [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]]. Apply it to all existing and future FDG projects: inspect canonical prior work, search authoritative sources, verify licenses/security/maintenance, compare options, justify REUSE / EXTEND / MERGE / REPLACE / BUILD NEW, and record tested evidence and limitations before authorized integration.
+
+
+## Cross-collaborator controlled learning (2026-10-28)
+
+All collaborators must follow [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. Treat AutoHarness as a design reference, not an approved install. Lessons may be proposed from authorized work, but only validated, reviewed, versioned and reversible changes may be promoted. Preserve data minimization, provenance, scope, human approval and cross-provider portability. Do not imply autonomous learning is operational until tested.
