@@ -89,3 +89,8 @@ For Nex inference, use [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFEREN
 ## Cross-ecosystem governing policy — 2026-10-27
 
 This project-specific rule implements, and does not limit, the organization-wide [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]]. Apply it to all existing and future FDG projects: inspect canonical prior work, search authoritative sources, verify licenses/security/maintenance, compare options, justify REUSE / EXTEND / MERGE / REPLACE / BUILD NEW, and record tested evidence and limitations before authorized integration.
+
+
+## Cross-collaborator self-learning reference — 2026-10-28
+
+- [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] defines controlled session-derived learning for Claude Code, Codex, Nex and other collaborators. AutoHarness is a candidate design reference only; do not install or enable session capture without scoped security/privacy review and explicit approval. Runtime verification remains pending.
