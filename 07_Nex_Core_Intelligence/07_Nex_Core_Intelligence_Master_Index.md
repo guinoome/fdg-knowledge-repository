@@ -201,3 +201,8 @@ This pack converts the six capability areas into repeatable pass/fail cases so d
 
 - [[07_Nex_Core_Intelligence/NEX-HYBRID-LOCAL-FIRST-INFERENCE-AND-OPEN-SOURCE-REUSE-2026-10-27|Nex Hybrid Local-First Inference and Open-Source Reuse]] — founder-directed local-first/hybrid architecture and mandatory open-source-first discovery; initial AirLLM / llama.cpp / Ollama / llmfit comparison, CPU-only 4 GB acceptance plan, provider-neutral routing and explicit security/installation boundaries. No runtime or benchmark is claimed as complete.
 - [[07_Nex_Core_Intelligence/NEX_CAPABILITY_DEVELOPMENT_LOG|Nex Capability Development Log]] — NEX-CAP-LOCAL-HYBRID-001 records this gap and its unexecuted acceptance cases.
+
+
+## Cross-collaborator controlled learning — 2026-10-28
+
+- [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — provider-neutral controlled learning and skill evolution for all collaborators; AutoHarness is a design reference only. No installation, autonomous canonical writes, or cross-provider runtime is claimed.
