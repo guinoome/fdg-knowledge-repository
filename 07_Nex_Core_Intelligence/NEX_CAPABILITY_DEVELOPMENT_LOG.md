@@ -135,3 +135,18 @@ These cases provide the first governed mechanism for testing the capability stan
 **Result:** `DOCUMENTED / INITIAL RESEARCH / NO BENCHMARK / NO INSTALLATION`.
 
 **Remaining risk:** Actual 4 GB target hardware not identified; throughput, quality, privacy/egress, compatibility and costs not measured. Issue #11 remains higher priority; Issue #20 remains open separately.
+
+
+## 2026-10-28 — NEX-CAP-COLLAB-LEARN-001
+
+**Capability:** Cross-collaborator controlled learning and skill evolution.
+
+**Trigger:** Founder supplied an AutoHarness README screenshot and directed that the capability apply to all FDG collaborators.
+
+**Evidence:** Upstream README: [tigerless-labs/autoharness](https://github.com/tigerless-labs/autoharness) describes session-derived skill distillation, consolidation, proposal/promotion separation, provenance ledger and usage-based lifecycle. These are upstream claims, not independently tested FDG results.
+
+**Improvement:** Created [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] with provider-neutral design and privacy, scope, validation, human approval, audit and rollback gates.
+
+**Result:** `DOCUMENTED / DESIGN REFERENCE IDENTIFIED / NOT INSTALLED / NO CROSS-PROVIDER RUNTIME VERIFIED`.
+
+**Remaining:** Review source, release/license metadata, permissions, tests, session redaction and promotion/archive behavior; compare alternatives; build a bounded prototype only under a separately authorized work package. Acceptance cases CLL-001..010 are proposed and unexecuted.
