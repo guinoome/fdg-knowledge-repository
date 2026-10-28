@@ -64,3 +64,8 @@ No new knowledge system was created. Source-content approval and implementation 
 ## 2026-10-27 — Organization-wide open-source-first policy
 
 - [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First, Reuse, and Capability Development Standard]] applies to all existing and future FDG projects and collaborators. This is the cross-ecosystem governing rule; the Nex inference decision is one application, not the scope boundary.
+
+
+## Cross-collaborator controlled learning — 2026-10-28
+
+- [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — controlled skill learning and evolution with privacy, validation, provenance, cross-provider portability and human promotion gates.
