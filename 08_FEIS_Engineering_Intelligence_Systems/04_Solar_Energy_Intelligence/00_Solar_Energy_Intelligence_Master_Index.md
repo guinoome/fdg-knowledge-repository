@@ -18,6 +18,8 @@ The branch is intentionally broader than a single calculator. It is designed to 
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FEIS-SOLAR-0002 — FDG Solar Visayas Future Upgrade Blueprint]]
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0003 - Solar Calculation Kernel Data Contract and Acceptance Tests|FEIS-SOLAR-0003 — Solar Calculation Kernel, Data Contract & Acceptance Tests]]
 
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0006 - GSIS GSEL Partner First Pilot Decision and Quotation Controls|FEIS-SOLAR-0006 — GSEL Partner-First Pilot Decision and Quotation Controls]]
+
 ## Implementation Project
 
 - [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas Project Index]]
