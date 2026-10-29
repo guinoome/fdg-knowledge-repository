@@ -373,3 +373,10 @@ Mandatory for **all existing and future FDG projects, products, modules, workflo
 ## Cross-collaborator controlled learning — 2026-10-28
 
 All collaborators are governed by [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. AutoHarness is a design reference; no install or automatic self-modification is authorized. Capability remains documented only until runtime and acceptance tests prove otherwise.
+
+
+## FDG Creator Studio — 2026-10-29
+
+Founder-confirmed direction: establish an FDG-owned, provider-replaceable Creator Studio platform capability shared across the ecosystem. The automotive/trucking video workflow is the first template; future templates include FDG Engineering, FDG Solar Visayas, FBPOIS, and future products. The architecture proposal is documented as a Candidate and is **not yet approved for implementation**. Open-source candidate audit, technical selection, and acceptance tests remain pending.
+
+Proposal: [[Candidates/FDG-CREATOR-STUDIO-PLATFORM-ARCHITECTURE-PROPOSAL-2026-10-29|FDG Creator Studio Platform Architecture Proposal]].
