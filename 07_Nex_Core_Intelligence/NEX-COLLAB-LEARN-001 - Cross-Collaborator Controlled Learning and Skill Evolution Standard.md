@@ -91,3 +91,8 @@ Next step: review the upstream repository's code, license file, release, permiss
 - [[04_Knowledge_Management/KNOWLEDGE_CAPTURE_STANDARD|Knowledge Capture Standard]]
 - [[04_Knowledge_Management/KNOWLEDGE_REVIEW_STANDARD|Knowledge Review Standard]]
 - [[12_FDG_Security_Intelligence_System/README|FDG Security Intelligence System]]
+
+
+## Relationship to persistent role engineering — 2026-10-30
+
+Role definitions, SMART acceptance criteria, approved work examples, iterative feedback, SOP evolution, model benchmarks and cost controls are governed by [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]. This learning standard controls how proposed lessons or skill changes are captured, validated, approved, versioned and reversed. Feedback may improve FDG-owned procedures and role packages; it must not be described as base-model training or used for uncontrolled autonomous canonical writes.
