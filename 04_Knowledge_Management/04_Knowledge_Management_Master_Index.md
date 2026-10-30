@@ -78,3 +78,7 @@ No new knowledge system was created. Source-content approval and implementation 
 
 - [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|Evidence-Gated Iteration and Anti-Overengineering]] — reviewed the tutorial demonstrating 100 forced "make it better" coding iterations. Captures the observed risk of feature accumulation, regressions, and UI clutter; adopts bounded hypotheses, reference research, per-change testing, explicit retain/revert decisions, and stop conditions. Creator-reported model/version/cost/runtime figures remain unverified; ScrollCraft was not adopted.
 - Integrated into the existing [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064]]. This is documentation/governance only; no software, skills, or UI were installed or changed.
+
+## 2026-10-30 — Claude desktop, orchestration and artifact capability review
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Provider-neutral multi-session orchestration and artifact capability review]] — extracted from the supplied 11-feature tutorial and cross-checked with current official Claude Code/Anthropic docs. Separates sessions, subagents, project threads, cross-session messaging and cloud execution; corrects ephemeral side-chat and access/plan assumptions; maps useful patterns to FMCIS and Baby Nex. No skill/mod/plugin or runtime installed.
