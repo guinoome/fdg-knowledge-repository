@@ -175,11 +175,11 @@ These are defaults, not permanent identities.
 
 > **One primary builder, multiple independent reviewers.**
 
-## Candidate session orchestration and workbench experience — 2026-10-30
+## Cross-collaborator session orchestration and workbench experience — 2026-10-30
 
 **Status: additive architecture candidate derived from FMCIS capability review; not a build specification, runtime implementation, or new execution authority.**
 
-The review [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] identifies useful patterns for Baby Nex and FMCIS. Adopt the provider-neutral concepts, not Claude-specific session identity, memory, mods, UI or cloud project dependencies.
+The review [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration, Workspaces and Artifacts Capability Review]] uses a Claude tutorial as its source example, but its adaptation scope is **all current and future FDG collaborators**: Claude Code, Codex, ChatGPT agent/workspace capabilities, Gemini-based agents, local models/runtimes, and other compatible providers. Evaluate each capability against the actual collaborator, host application, runtime, version and permissions. Use native support, a reviewed adapter, or a safe manual fallback where compatible; otherwise mark it unsupported or unverified. Similar product terminology does not prove equivalent behavior. Adopt the provider-neutral concepts, not Claude-specific session identity, memory, mods, UI or cloud project dependencies.
 
 ### Experience and control-plane requirements to evaluate
 
@@ -243,7 +243,7 @@ First prove the core loop with one primary builder, one provider adapter, stable
 Baby Nex v1 architecture is acceptable when:
 
 - the FDG Knowledge Repository remains the organizational source of truth;
-- Claude Code can build the system without becoming a runtime dependency;
+- an approved primary builder from any qualified collaborator/provider (Claude Code may be selected for v1) can build the system without becoming a runtime dependency;
 - at least one model provider can be replaced through a bounded adapter change rather than core redesign;
 - core memory is FDG-controlled;
 - tool contracts are separated from provider-specific implementations;
