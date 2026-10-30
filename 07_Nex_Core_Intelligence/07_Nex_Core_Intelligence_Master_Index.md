@@ -216,3 +216,7 @@ This pack converts the six capability areas into repeatable pass/fail cases so d
 
 - [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064]] now includes bounded iteration, baseline inspection, research, testable hypotheses, per-change regression validation, explicit accept/revise/defer/reject/revert decisions, and stop conditions.
 - [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|FDG-KM-VID-20261030-001]] records the tutorial evidence and distinguishes useful lessons from unverified model/cost claims. No code or UI implementation was performed.
+
+## 2026-10-30 — Nex / FMCIS multi-session workbench capability review
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS capability review: sessions, projects and artifacts]] — current official-source review and provider-neutral adaptation candidate for Nex orchestration. Do not confuse a provider coordinator chat with FDG's authoritative project state or a model advisor with independent review.
