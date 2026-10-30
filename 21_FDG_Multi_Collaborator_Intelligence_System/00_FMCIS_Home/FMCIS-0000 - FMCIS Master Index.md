@@ -309,3 +309,8 @@ This does not lower quality gates. It moves quality into architecture, context, 
 ## Persistent collaborator role engineering — 2026-10-30
 
 - [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — governing role-contract and outcome-based delegation standard for Nex, external AI providers, specialist agents and human/tool collaborators. Use it with existing FMCIS dispatch, handoff, authority and controlled-learning rules; no unbounded autonomy or unverified model-training claim is authorized.
+
+## 2026-10-30 — Provider-neutral session orchestration and artifact workbench review
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] — extracts and verifies the useful concepts: engagement coordinator, bounded execution threads, session visibility, explicit local/cloud routing, context/resource diagnostics, artifact provenance and safe extension points. Dispositions are ADAPT / RESEARCH; no vendor UI, plugin or runtime is adopted.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] contains an additive candidate workbench section. It does not mark FMCIS-001–008 complete or authorize implementation.
