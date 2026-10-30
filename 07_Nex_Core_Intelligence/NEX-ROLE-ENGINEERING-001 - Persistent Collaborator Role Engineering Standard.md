@@ -53,6 +53,18 @@ Every persistent or recurring collaborator role must have a written, versioned r
 
 For one-off low-risk tasks, the work package may contain a compact role contract instead of a separately maintained role document. The same essentials still apply proportionately.
 
+### Cross-collaborator capability compatibility
+
+These role requirements apply to **all FDG collaborators**, not one model vendor or coding environment. When a workflow uses sessions, subagents, project threads, shared context, remote execution, artifacts, connectors, plugins, diagnostics, model escalation, or other provider features:
+
+- assess the actual collaborator, host, version, available permissions and supported interfaces;
+- map native equivalents to the same FDG role, work-package, evidence and approval contract;
+- use a reviewed provider adapter only when its behavior and data/permission boundaries are verified;
+- use a safe manual fallback when automation is unavailable; otherwise mark the capability UNSUPPORTED, UNVERIFIED or BLOCKED;
+- never infer feature parity from similar product terminology, and never grant extra authority merely because a provider exposes an automation feature.
+
+A collaborator does not need every capability to remain eligible for other work. FMCIS selects by verified task fit; FDG-owned contracts and organizational knowledge remain provider-neutral. See [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|the cross-collaborator session/workbench compatibility review]].
+
 ## 3. SMART and verifiable delegation
 
 Each material assignment must be framed as an outcome with a way to prove completion.
