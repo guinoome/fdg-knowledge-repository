@@ -391,3 +391,10 @@ This project-specific rule implements, and does not limit, the organization-wide
 ## Cross-collaborator controlled learning (2026-10-28)
 
 All collaborators must follow [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. Treat AutoHarness as a design reference, not an approved install. Lessons may be proposed from authorized work, but only validated, reviewed, versioned and reversible changes may be promoted. Preserve data minimization, provenance, scope, human approval and cross-provider portability. Do not imply autonomous learning is operational until tested.
+
+
+## Role-engineered handoff requirements — founder-directed extension (2026-10-30)
+
+For material or recurring assignments, extend the existing AI Collaborator Handoff package with the applicable fields from [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]: mission and responsibility; authority/tool/data boundaries; context, origin and rationale; SMART and verifiable outcome; approved examples and anti-examples; deliverable contract; acceptance tests/reviewer; checkpoint, stop and escalation conditions; and time/cost limits.
+
+Use a proportionate compact form for low-risk one-off work. Preserve the existing handoff requirements and human approval boundaries. A persistent assignment is not permission for unbounded background activity.
