@@ -161,7 +161,37 @@ The source is a founder-supplied video transcript (conversation file reference t
 
 The speaker's specific claims about other organizations' internal practices, code-generation percentages, model capability changes, pricing, caching savings, or projected future performance have not been independently verified here and are **not adopted as FDG facts or performance targets**. FDG adopts the general management practices only where they are consistent with its existing governance, evidence, security, privacy, and approval standards.
 
-## 12. Implementation status and next actions
+## 12. Role activation and ongoing management cycle
+
+Use this operational cycle to turn a written role into a dependable collaborator. It applies the source's management approach within FDG's existing controls.
+
+1. **Define the role before selecting the model.** Describe the durable responsibility, required capabilities, interfaces, authority, expected outputs and performance measures. Select a provider/model only after role requirements are clear.
+2. **Prepare an onboarding context pack.** Include the role contract, relevant canonical FDG knowledge links, decision history, project state, origin/rationale, active constraints, dependencies, approved examples, anti-examples, tool instructions and escalation route. Prefer links and retrieval from the canonical repository over copying large amounts of stale context into every task.
+3. **Connect only required work surfaces.** Identify which communication channels, repositories, files, APIs and business systems the role needs. Grant least-privilege access, scope it to the work package, record data-handling restrictions, and test that the role can retrieve and write only what it is authorized to access. A shared channel or agent interface may make a role easier to reach; it does not expand its authority.
+4. **Calibrate against real work.** Start with a bounded pilot using representative tasks. Where no approved exemplar exists, have a qualified human or domain owner produce or approve the first reference output. Review a useful sample of actual outputs, identify systematic failure modes, and revise the role contract, context, examples, procedure or tests. The source suggests repeating work several times (including five to ten examples); FDG treats this as a possible calibration sample, not a mandatory quota. Sample size must fit risk, variability and available evidence.
+5. **Promote only after evidence-based review.** Record pilot tasks, exact model/provider/version, configuration, permissions, results, reviewer, defects, corrective actions and residual limitations. The responsible approver decides whether the role is ready for operational use. A role document alone does not establish runtime readiness.
+6. **Manage by outcomes, not constant prompting.** For operational roles, use an agreed work queue or communication surface, periodic status/checkpoint reports, exception-based escalation and durable task records. The human manager should review completed work and exceptions rather than micromanage every intermediate action. Long-running work still requires explicit scope, time/budget limits, stop conditions and approval gates.
+7. **Institutionalize validated learning.** Convert recurring, verified feedback into versioned changes to role contracts, context packs, checklists, SOPs, acceptance tests or benchmark tasks. Follow NEX-COLLAB-LEARN-001. Keep the prior version and a rollback path; do not let a collaborator silently rewrite its own governing role or canonical knowledge.
+8. **Reassess role fit and retire safely.** Recheck capability, quality, cost, access, provider terms and operational need at defined intervals and after material model/tool changes. Suspend or revoke access when a role is no longer needed, fails its acceptance criteria, or presents unresolved security, privacy, cost or reliability risk. Preserve required records and hand off active work before retirement.
+
+### Role lifecycle states
+
+Use explicit lifecycle labels in role registries and handoffs:
+
+- **DRAFTED** — role contract is being prepared; no operational authority implied.
+- **APPROVED_FOR_PILOT** — scope and pilot permissions approved; limited test only.
+- **PILOTING** — representative tasks are being evaluated; outputs require review.
+- **OPERATIONAL** — acceptance evidence and applicable approvals exist; only documented permissions apply.
+- **SUSPENDED** — execution paused pending investigation, reapproval or remediation.
+- **RETIRED** — role no longer active; access revoked or reduced and records retained according to policy.
+
+Do not use "persistent", "staff member", "onboarded", "autonomous" or "operational" as evidence of continuous background execution. These terms describe the intended management model unless a specific runtime has been separately implemented and verified.
+
+### Manager's recurring review
+
+At an interval proportionate to role risk and workload, the role owner reviews completed deliverables and exceptions; first-pass acceptance and rework; recurring defects and root causes; changes in project context; access and data scope; cost per accepted output; provider/model changes; and whether the role remains relevant. Record decisions and assign corrective work with an owner, due date and verification method.
+
+## 13. Implementation status and next actions
 
 **Status:** DOCUMENTED / FOUNDER-DIRECTED / RUNTIME_ROLE_INVENTORY_PENDING / BENCHMARK_SUITE_PENDING / ACCEPTANCE_TESTS_NOT_RUN
 
