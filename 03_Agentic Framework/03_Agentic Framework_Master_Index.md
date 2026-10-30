@@ -109,3 +109,8 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## Cross-collaborator controlled learning — 2026-10-28
 
 - [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — controlled, evidence-backed learning across FDG collaborators; candidate reference only, not an approved installation.
+
+
+## Persistent Collaborator Role Engineering — 2026-10-30
+
+- [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — apply to all lead agents and specialist collaborators: durable role contracts, SMART/verifiable outcomes, context and exemplars, reviewed SOP evolution, role-fit benchmarking, cost controls and bounded autonomy. This does not grant new execution authority or imply background runtime capability.
