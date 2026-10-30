@@ -385,3 +385,8 @@ Proposal: [[Candidates/FDG-CREATOR-STUDIO-PLATFORM-ARCHITECTURE-PROPOSAL-2026-10
 ## Cross-collaborator role engineering — 2026-10-30
 
 All current and future FDG collaborators are governed by [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]: defined role contracts, canonical context and rationale, SMART/verifiable outcomes, quality examples, feedback-driven SOP improvement, model benchmarking, cost controls and bounded autonomy. It extends existing collaboration and controlled-learning standards; runtime implementation and acceptance evidence remain pending.
+
+## 2026-10-30 — Evidence-gated iteration and product quality
+
+- [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064 Continuous Improvement and Evolution]] — additive founder-directed controls for bounded, hypothesis-led iteration, reference research, regression validation, explicit accept/revise/defer/reject/revert decisions, and stop conditions. No forced change quota or unbounded agent loop.
+- [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|Video source review]] — records source observations, unverified claims, FDG adoption choices, and implementation status.
