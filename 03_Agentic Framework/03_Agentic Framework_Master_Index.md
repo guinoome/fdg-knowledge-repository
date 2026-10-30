@@ -114,3 +114,8 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 ## Persistent Collaborator Role Engineering — 2026-10-30
 
 - [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — apply to all lead agents and specialist collaborators: durable role contracts, SMART/verifiable outcomes, context and exemplars, reviewed SOP evolution, role-fit benchmarking, cost controls and bounded autonomy. This does not grant new execution authority or imply background runtime capability.
+
+## 2026-10-30 — Agent iteration quality gate
+
+- All coding/design collaborators must follow the evidence-gated iteration controls in [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064]]: inspect the actual baseline, define the user/domain outcome, research references, implement only a bounded hypothesis, test for regressions, and accept/revert based on evidence. A collaborator must not be forced to ship a change each round.
+- Source review: [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|FDG-KM-VID-20261030-001]]. Existing role contracts, project ownership, security and approval gates remain controlling.
