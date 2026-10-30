@@ -69,3 +69,7 @@ No new knowledge system was created. Source-content approval and implementation 
 ## Cross-collaborator controlled learning — 2026-10-28
 
 - [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — controlled skill learning and evolution with privacy, validation, provenance, cross-provider portability and human promotion gates.
+
+## Persistent collaborator role engineering — 2026-10-30
+
+- [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — role lifecycle and operational management: onboarding context packs, least-privilege work-surface access, representative-task calibration, reviewed promotion, periodic role reviews and safe retirement.
