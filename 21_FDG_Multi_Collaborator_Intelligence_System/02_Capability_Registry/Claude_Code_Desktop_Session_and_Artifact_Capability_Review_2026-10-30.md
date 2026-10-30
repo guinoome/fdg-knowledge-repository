@@ -1,6 +1,6 @@
 ---
 document_id: FMCIS-CAP-20261030-CLAUDE-SESSION-001
-title: Claude Code Desktop, Sessions, Projects, and Artifacts — Capability Review
+title: Cross-Collaborator Session Orchestration, Workspaces, and Artifacts — Claude Tutorial Reference Review
 created: 2026-10-30
 status: SOURCE_REVIEWED / OFFICIAL_DOCUMENTATION_CROSS_CHECKED / ADAPTATION_PROPOSED / NOT_IMPLEMENTED
 owner_domain: FMCIS, Nex Interface, FPIS, Knowledge Management, FSIS
@@ -10,7 +10,7 @@ source:
 decision: ADAPT_PROVIDER_NEUTRAL_PATTERNS_FOR_FMCIS_AND_BABY_NEX; NO_PROVIDER_SPECIFIC_RUNTIME_ADOPTION_AUTHORIZED
 ---
 
-# Claude Code Desktop, Sessions, Projects, and Artifacts — Capability Review
+# Cross-Collaborator Session Orchestration, Workspaces, and Artifacts — Claude Tutorial Reference Review
 
 > [[FDG Ecosystem|FDG Ecosystem]] → [[21_FDG_Multi_Collaborator_Intelligence_System/00_FMCIS_Home/FMCIS-0000 - FMCIS Master Index|FMCIS Master Index]] → [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/README|Capability Registry]] → this review.
 
@@ -40,7 +40,46 @@ The tutorial is useful because it shows a shift from a single chat window toward
 
 No Claude extension, mod, plugin, or skill has been installed. No Baby Nex or FMCIS runtime was changed or deployed.
 
-## 2. Evidence boundary and transcript corrections
+
+## 2. Organization-wide applicability and compatibility rule
+
+**This review applies to all FDG collaborators, not only Claude.** Claude is the environment demonstrated by the source tutorial and the starting point for the official-documentation fact-check. The reusable capabilities are organization-level patterns to be evaluated for every compatible collaborator environment, including Claude Code, Codex, ChatGPT agent/workspace capabilities, Gemini-based agents, local models and agent runtimes, and future providers.
+
+The scope is **capability-based, not vendor-based**:
+
+1. Inspect the actual capabilities of each collaborator, host application, model/runtime, and version using its current official documentation and, when permitted, a bounded hands-on compatibility test.
+2. Map equivalent capabilities to the FDG-owned common workflow. A provider may expose a feature natively, through an approved adapter, through a manual handoff, or not at all.
+3. Reuse a native capability when it meets FDG's functional, security, privacy, ownership, evidence and portability requirements.
+4. Use an adapter only when its behavior and permissions can be verified, its contract is documented, and it does not make core FDG state dependent on one provider.
+5. Use a manual or reduced-capability fallback when it is safer and practical. Mark the capability as unsupported or unverified when neither native support nor a safe adapter exists.
+6. Never claim feature parity merely because two products use similar terms. "Project", "session", "thread", "subagent", "artifact", "memory", "mod", "plugin", "connector" and "remote execution" may have different semantics across providers.
+7. Do not require every collaborator to expose every feature, and do not weaken FDG's common authority, work-package, privacy, evidence or acceptance rules to imitate a vendor feature.
+
+### Compatibility disposition model
+
+| Disposition | Meaning |
+|---|---|
+| NATIVE_COMPATIBLE | The collaborator provides the capability and has passed the relevant bounded tests under its current version and permissions |
+| ADAPTER_COMPATIBLE | A reviewed adapter implements the FDG contract; integration and security tests pass |
+| MANUAL_FALLBACK | The provider lacks automation, but a safe documented manual workflow preserves the required controls |
+| UNSUPPORTED | The capability is absent or incompatible; do not force its use |
+| UNVERIFIED | Documentation, version, permissions, or execution evidence is insufficient to make a compatibility claim |
+| BLOCKED | A required permission, security, privacy, approval or dependency is unavailable |
+
+### Initial compatibility status — do not infer support
+
+| Collaborator environment | Evidence in this review | Current disposition |
+|---|---|---|
+| Claude Code Desktop / Claude Code | Source tutorial and Anthropic documentation cross-check | DOCUMENTED_REFERENCE; no FDG runtime integration or acceptance test |
+| Codex | Existing FDG provider-neutral architecture and separate Codex workflows; this tutorial does not test equivalent session APIs | UNVERIFIED per individual capability |
+| ChatGPT agent/workspace environments | No feature-by-feature compatibility test performed for this tutorial | UNVERIFIED per individual capability |
+| Gemini-based agent environments | No feature-by-feature compatibility test performed for this tutorial | UNVERIFIED per individual capability |
+| Local models and local agent runtimes | Subject to available host/session/tool capabilities; no general feature parity assumed | UNVERIFIED per individual capability |
+| Future providers | Evaluate against the same FDG contracts and acceptance criteria | UNVERIFIED until assessed |
+
+This table is not a ranking of providers. A capability's absence in one environment does not disqualify that collaborator from other work. FMCIS should select a collaborator by task fit, verified capability, data boundary, cost and acceptance evidence.
+
+## 3. Evidence boundary and transcript corrections
 
 The source is a transcript, not a reproducible product test. It contains transcription errors ("Cloud" for Claude and "Andropic" for Anthropic), marketing framing, and feature descriptions that can age quickly. The speaker's phrase "Claude 2.0" is a comparison/metaphor for a major workflow change; it is not evidence of a model called Claude 2.0.
 
@@ -59,7 +98,7 @@ Official pages were checked on **2026-10-30**. The results support several conce
 
 The transcript's claims about account-tier access, prompt-cache savings, reduced video-generation cost, usage limits, and current feature rollout are not adopted as FDG facts. Plan entitlements and vendor interfaces must be rechecked when a concrete trial is proposed.
 
-## 3. What is useful for FDG
+## 4. What is useful for FDG
 
 ### A. An engagement control plane, not a "master chat"
 
@@ -183,7 +222,7 @@ The tutorial's Ribbon/Savvy Progress examples suggest a modular workbench can be
 
 Any extension mechanism must have a manifest, version/pinning, capability declaration, narrow permission scopes, auditable actions, compatibility tests, uninstall/rollback and owner approval. A plugin or mod that runs as the user can read or change any resource within that user's accessible permissions; treat it as executable code, not a cosmetic theme.
 
-## 4. Proposed provider-neutral Baby Nex / FMCIS workbench shape
+## 5. Proposed provider-neutral Baby Nex / FMCIS workbench shape
 
 **Status: candidate requirements for future FPJIS architecture work; not an approved build specification or implementation authorization.**
 
@@ -242,7 +281,7 @@ Candidate interface areas:
 
 Capabilities must be advertised, not assumed. A provider with no cross-session listing, usage telemetry, artifact endpoint or mobile control remains valid; FMCIS records the feature as unsupported and preserves the common FDG workflow.
 
-## 5. Required security, privacy and reliability controls
+## 6. Required security, privacy and reliability controls
 
 1. **Provider boundary:** model/session IDs, prompts, outputs, files, telemetry and artifacts must have a documented classification and data-flow path. No cross-provider transfer of confidential context without authorization.
 2. **Least privilege:** every worker/session/connector receives only necessary files, paths, tools, network access and duration. Do not use a vendor's broad permission-bypass mode as the FDG default.
@@ -255,7 +294,7 @@ Capabilities must be advertised, not assumed. A provider with no cross-session l
 9. **Fail-closed status:** unobservable session state, missing provenance, uncertain delivery, unsupported permission controls or missing test evidence must be shown as UNKNOWN/BLOCKED—not quietly rendered as complete.
 10. **No provider lock-in:** a provider's project memory, chat organization, session rail, plugins, mods, slash commands or artifact service cannot become the only home for FDG memory, approval, requirements or accepted deliverables.
 
-## 6. Proposed acceptance cases — not executed
+## 7. Proposed acceptance cases — not executed
 
 - **FMCIS-SESSION-001 — Provider-neutral identity:** session/task record can represent two different providers without provider-specific fields becoming mandatory for the common core.
 - **FMCIS-SESSION-002 — Work-package ownership:** every write-capable session is bound to one approved work package, owner and allowed path/module scope.
@@ -274,7 +313,7 @@ Capabilities must be advertised, not assumed. A provider with no cross-session l
 
 These are candidate tests for later work-package compilation, not passed tests and not a formal update to FMCIS-001–008 completion status.
 
-## 7. Official documentation cross-check (accessed 2026-10-30)
+## 8. Official documentation cross-check (accessed 2026-10-30)
 
 - [Claude Code Desktop — session details, sessions, local/SSH/cloud environments, side chats, cross-session operations and context usage](https://code.claude.com/docs/en/desktop)
 - [Claude Code Projects redesign announcement, 2026-09-17 — coordinator, worker threads, shared memory/library and beta rollout](https://claude.com/resources/articles/projects-redesigned)
@@ -283,7 +322,7 @@ These are candidate tests for later work-package compilation, not passed tests a
 - [Claude Code plugins and mods — components, runtime context/cost footprint, permissions and user-privilege execution](https://code.claude.com/docs/en/plugins)
 - [Claude artifacts — template and plan availability, dashboards, Motion, connected apps, storage and sharing](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)
 
-## 8. Relationship to existing FDG architecture
+## 9. Relationship to existing FDG architecture
 
 This review **extends candidate capability understanding**; it does not replace or reassign ownership:
 
@@ -298,8 +337,8 @@ This review **extends candidate capability understanding**; it does not replace 
 - [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS]] owns requirements, work packages, implementation evidence and acceptance traceability.
 - [[00_Nex/FDG_GLOBAL_OPEN_SOURCE_FIRST_AND_REUSE_STANDARD|FDG Global Open-Source-First Standard]] applies before building or integrating unfamiliar session, plugin, UI, artifact or workflow infrastructure.
 
-## 9. Implementation status
+## 10. Implementation status
 
 **SOURCE_REVIEWED / OFFICIAL_DOCS_CHECKED_2026-10-30 / PATTERNS_ADAPTED_AS_CANDIDATE_REQUIREMENTS / NOT_INSTALLED / NOT_PROTOTYPED / NOT_TESTED / NOT_DEPLOYED**
 
-Next step, when prioritized and authorized: compile a bounded FPJIS work package that compares the current Baby Nex/FMCIS implementation reality with these candidate requirements. Inspect existing session, task, event, worktree, artifact and permission capabilities first; do not start with a new UI or assume a specific provider must be used. Keep Issue #11 source-to-build continuity as the separate higher-priority constraint.
+Next step, when prioritized and authorized: compile a bounded FPJIS work package that compares current Baby Nex/FMCIS reality and the capabilities of each relevant collaborator against the common FDG contracts. Inspect session, task, event, worktree, artifact and permission support provider by provider. Keep an explicit compatibility matrix and tested fallback for unsupported features; do not start with a new UI or assume a specific provider must be used. Keep Issue #11 source-to-build continuity as the separate higher-priority constraint.
