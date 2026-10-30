@@ -380,3 +380,8 @@ All collaborators are governed by [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-00
 Founder-confirmed direction: establish an FDG-owned, provider-replaceable Creator Studio platform capability shared across the ecosystem. The automotive/trucking video workflow is the first template; future templates include FDG Engineering, FDG Solar Visayas, FBPOIS, and future products. The architecture proposal is documented as a Candidate and is **not yet approved for implementation**. Open-source candidate audit, technical selection, and acceptance tests remain pending.
 
 Proposal: [[Candidates/FDG-CREATOR-STUDIO-PLATFORM-ARCHITECTURE-PROPOSAL-2026-10-29|FDG Creator Studio Platform Architecture Proposal]].
+
+
+## Cross-collaborator role engineering — 2026-10-30
+
+All current and future FDG collaborators are governed by [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]: defined role contracts, canonical context and rationale, SMART/verifiable outcomes, quality examples, feedback-driven SOP improvement, model benchmarking, cost controls and bounded autonomy. It extends existing collaboration and controlled-learning standards; runtime implementation and acceptance evidence remain pending.
