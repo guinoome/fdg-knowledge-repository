@@ -424,3 +424,10 @@ End of Standard
 ## Cross-provider learning and skill evolution (2026-10-28)
 
 The collaborator ecosystem should support a provider-neutral, controlled learning loop under [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. Reusable skills belong to FDG's governed knowledge layer, not exclusively to a specific model/plugin. Runtime-specific adapters must preserve authorization, privacy, evidence, validation and approval boundaries. No plugin is installed or authorized by the reference alone.
+
+
+## Persistent role engineering — founder-directed extension (2026-10-30)
+
+All recurring FDG collaborators must be managed through defined role contracts rather than provider-specific prompts alone. Use [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] for role mission, responsibilities, authority, canonical context and rationale, SMART/verifiable objectives, deliverables, quality examples, procedures, review, performance and cost limits.
+
+This extends the existing capability interface and collaboration workflow; it does not replace them or grant new permissions. Iterative feedback may improve approved FDG role definitions and SOPs through the controlled process in [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]]. It does not imply base-model training, continuous background execution, or automatic canonical writes.
