@@ -122,4 +122,4 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 
 ## 2026-10-30 — Provider-neutral multi-session collaboration reference
 
-- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS session orchestration and artifact capability review]] — use as a reference for bounded specialist threads, cross-session communication, data-locality routing, context/resource visibility and safe extensions. FMCIS remains the canonical owner; provider-specific features are optional adapters, not generic agent requirements.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS cross-collaborator session orchestration and artifact capability review]] — applies to all FDG collaborators when compatible. Verify native features/adapters per provider; use safe manual fallback or mark unsupported. FMCIS remains canonical owner; no provider-specific feature is a universal agent requirement.
