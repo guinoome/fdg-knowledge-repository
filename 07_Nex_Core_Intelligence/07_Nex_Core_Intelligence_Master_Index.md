@@ -211,3 +211,8 @@ This pack converts the six capability areas into repeatable pass/fail cases so d
 ## Persistent Collaborator Role Engineering — 2026-10-30
 
 - [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — founder-directed, provider-neutral role contracts, SMART/verifiable delegation, canonical context and quality examples, feedback-to-SOP improvement, model benchmarking, cost controls and bounded autonomy. Runtime inventory, benchmark suite and acceptance tests remain pending.
+
+## 2026-10-30 — Evidence-gated iteration and anti-overengineering
+
+- [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064]] now includes bounded iteration, baseline inspection, research, testable hypotheses, per-change regression validation, explicit accept/revise/defer/reject/revert decisions, and stop conditions.
+- [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|FDG-KM-VID-20261030-001]] records the tutorial evidence and distinguishes useful lessons from unverified model/cost claims. No code or UI implementation was performed.
