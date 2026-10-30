@@ -219,4 +219,4 @@ This pack converts the six capability areas into repeatable pass/fail cases so d
 
 ## 2026-10-30 — Nex / FMCIS multi-session workbench capability review
 
-- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS capability review: sessions, projects and artifacts]] — current official-source review and provider-neutral adaptation candidate for Nex orchestration. Do not confuse a provider coordinator chat with FDG's authoritative project state or a model advisor with independent review.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS cross-collaborator capability review: sessions, projects and artifacts]] — Claude tutorial used as source example; evaluate equivalent capabilities across all collaborators where compatible. Do not confuse a provider coordinator chat with FDG's authoritative project state or a model advisor with independent review.
