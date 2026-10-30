@@ -304,3 +304,8 @@ This does not lower quality gates. It moves quality into architecture, context, 
 ## Cross-collaborator controlled learning — 2026-10-28
 
 - [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — organization-wide controlled learning standard for Nex, Claude Code, Codex and other collaborators. AutoHarness remains an unevaluated-for-installation design reference; no runtime deployment claimed.
+
+
+## Persistent collaborator role engineering — 2026-10-30
+
+- [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — governing role-contract and outcome-based delegation standard for Nex, external AI providers, specialist agents and human/tool collaborators. Use it with existing FMCIS dispatch, handoff, authority and controlled-learning rules; no unbounded autonomy or unverified model-training claim is authorized.
