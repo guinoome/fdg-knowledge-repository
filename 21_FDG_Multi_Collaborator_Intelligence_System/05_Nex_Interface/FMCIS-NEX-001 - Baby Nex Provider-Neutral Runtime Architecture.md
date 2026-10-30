@@ -175,6 +175,37 @@ These are defaults, not permanent identities.
 
 > **One primary builder, multiple independent reviewers.**
 
+## Candidate session orchestration and workbench experience — 2026-10-30
+
+**Status: additive architecture candidate derived from FMCIS capability review; not a build specification, runtime implementation, or new execution authority.**
+
+The review [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] identifies useful patterns for Baby Nex and FMCIS. Adopt the provider-neutral concepts, not Claude-specific session identity, memory, mods, UI or cloud project dependencies.
+
+### Experience and control-plane requirements to evaluate
+
+1. **Engagement home:** show approved objective, baseline, active work packages, blockers, approvals due, owner, next checkpoint and last verified update.
+2. **Session/work-thread rail:** show worker role, provider, actual model, session ID, execution environment, status, context/usage where available, changed files, tests, approvals and artifact/evidence receipts.
+3. **Coordinator with bounded threads:** Nex remains the organizational orchestrator; FMCIS owns engagement coordination. Each write-capable execution thread must map to an approved work package and explicit file/module ownership. Parallel code work should use isolated branches/worktrees or another tested boundary.
+4. **Provider-neutral session adapter:** consider create, list, inspect, message, stop, resume, receive-event and artifact-receipt operations. Every capability is optional and must be advertised by its adapter; unsupported cross-session listing, usage metrics, mobile control or artifact APIs must not break the common work process.
+5. **Local/remote routing:** choose local, approved private host, SSH or cloud based on data classification, egress, tools, hardware, offline constraints, network and authorization. Cloud execution is optional; it does not replace the local-first/offline requirement.
+6. **Side inquiry:** allow non-disruptive read-only exploration where supported. Side conversations may be ephemeral; promoted decisions and findings must be written into the durable FDG engagement/repository record.
+7. **Artifact register:** preserve versioned outputs with artifact ID, owner, requirement/work-package link, provenance, data source, freshness, classification, sharing permissions, review/approval status and export location. A rendered artifact is not the canonical source of data or engineering truth.
+8. **Diagnostics and routing:** expose actual provider/model identity, capability readiness, context footprint, cost/usage and routing rationale where measurable. Keep context, tokens, billed cost, elapsed time and progress distinct. Escalation to a second model is advice unless an independent evidence-based review is separately performed.
+9. **Extension boundary:** future panes, widgets, commands and integrations must use FDG-owned contracts and permissions. Provider-native plugins/mods remain replaceable adapters subject to security, license, scope, version, compatibility and rollback review.
+
+### Authority and safety constraints
+
+- A coordinator view is not a shared permission boundary. Every worker retains its approved role, scope, data access and stop conditions.
+- Session summaries and model memory do not supersede the FDG repository or an approved FPJIS baseline.
+- Cross-session messages preserve sender, recipient, engagement/work-package link, provenance and delivery status; respect recipient controls.
+- Do not transfer confidential/customer data to cloud providers or other collaborators without the relevant approved data path.
+- No automatic write, merge, publish, archive, payment, external message or production action follows merely from a coordinator recommendation.
+- This candidate does not mark FMCIS-003, FMCIS-005, FMCIS-006 or FMCIS-008 as designed or implemented. Existing work-package sequence, owner boundaries and Issue #11 remain controlling.
+
+### Candidate acceptance references
+
+Use proposed cases FMCIS-SESSION-001 through FMCIS-SESSION-014 in the capability review as inputs to a future bounded FPJIS work package. They are not executed tests. Before implementation, inspect current repository/runtime reality, reuse existing FMCIS/FWAIS/FPJIS/FSIS interfaces, and record the justified REUSE / EXTEND / MERGE / REPLACE / BUILD NEW decision.
+
 ## Integration Ownership
 
 Baby Nex should reuse existing FDG systems rather than duplicate them:
