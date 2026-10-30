@@ -119,3 +119,7 @@ All seller/marketing delegates must retrieve [[11_FDG_Business_Intelligence_Syst
 
 - All coding/design collaborators must follow the evidence-gated iteration controls in [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064]]: inspect the actual baseline, define the user/domain outcome, research references, implement only a bounded hypothesis, test for regressions, and accept/revert based on evidence. A collaborator must not be forced to ship a change each round.
 - Source review: [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|FDG-KM-VID-20261030-001]]. Existing role contracts, project ownership, security and approval gates remain controlling.
+
+## 2026-10-30 — Provider-neutral multi-session collaboration reference
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS session orchestration and artifact capability review]] — use as a reference for bounded specialist threads, cross-session communication, data-locality routing, context/resource visibility and safe extensions. FMCIS remains the canonical owner; provider-specific features are optional adapters, not generic agent requirements.
