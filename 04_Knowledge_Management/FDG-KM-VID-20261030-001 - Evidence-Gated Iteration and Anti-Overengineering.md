@@ -107,4 +107,4 @@ Suitable outcome measures depend on the product: task completion, time on task, 
 - [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064 — Continuous Improvement and Evolution]]
 - [[07_Nex_Core_Intelligence/NEX_QUALITY_ASSURANCE_AND_VALIDATION_STANDARD|NEX-STD-061 — Quality Assurance and Validation]]
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|FPIS — Platform Experience & Design Intelligence]]
-- [[20_FPJIS_FDG_Project_Intelligence_System/00_FPJIS_Home|FPJIS — Project Intelligence]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/17_Requirements_View_Compilation_and_Agent_Acceptance_Standard|FPJIS Requirements and Agent Acceptance]]
