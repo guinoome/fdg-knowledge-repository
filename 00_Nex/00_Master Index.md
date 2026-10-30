@@ -393,5 +393,5 @@ All current and future FDG collaborators are governed by [[07_Nex_Core_Intellige
 
 ## 2026-10-30 — FMCIS/Baby Nex session workbench capability review
 
-- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] — provider-neutral candidate requirements for project coordination, bounded worker sessions, environment/data-locality routing, artifacts, context/cost diagnostics and extension safety.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration and Artifact Capability Review]] — Claude-originated examples generalized to all compatible FDG collaborators; evaluate native support, reviewed adapters or safe manual fallback without assuming provider feature parity.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] updated with a proposal-only workbench experience section; provider independence and FDG knowledge/approval authority remain controlling. No implementation or runtime readiness claimed.
