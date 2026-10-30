@@ -73,3 +73,8 @@ No new knowledge system was created. Source-content approval and implementation 
 ## Persistent collaborator role engineering — 2026-10-30
 
 - [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — role lifecycle and operational management: onboarding context packs, least-privilege work-surface access, representative-task calibration, reviewed promotion, periodic role reviews and safe retirement.
+
+## 2026-10-30 — Video review: evidence-gated iteration and anti-overengineering
+
+- [[04_Knowledge_Management/FDG-KM-VID-20261030-001 - Evidence-Gated Iteration and Anti-Overengineering|Evidence-Gated Iteration and Anti-Overengineering]] — reviewed the tutorial demonstrating 100 forced "make it better" coding iterations. Captures the observed risk of feature accumulation, regressions, and UI clutter; adopts bounded hypotheses, reference research, per-change testing, explicit retain/revert decisions, and stop conditions. Creator-reported model/version/cost/runtime figures remain unverified; ScrollCraft was not adopted.
+- Integrated into the existing [[07_Nex_Core_Intelligence/NEX_CONTINUOUS_IMPROVEMENT_AND_EVOLUTION_STANDARD|NEX-STD-064]]. This is documentation/governance only; no software, skills, or UI were installed or changed.
