@@ -206,3 +206,8 @@ This pack converts the six capability areas into repeatable pass/fail cases so d
 ## Cross-collaborator controlled learning — 2026-10-28
 
 - [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] — provider-neutral controlled learning and skill evolution for all collaborators; AutoHarness is a design reference only. No installation, autonomous canonical writes, or cross-provider runtime is claimed.
+
+
+## Persistent Collaborator Role Engineering — 2026-10-30
+
+- [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] — founder-directed, provider-neutral role contracts, SMART/verifiable delegation, canonical context and quality examples, feedback-to-SOP improvement, model benchmarking, cost controls and bounded autonomy. Runtime inventory, benchmark suite and acceptance tests remain pending.
