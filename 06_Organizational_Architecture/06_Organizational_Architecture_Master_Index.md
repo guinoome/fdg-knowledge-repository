@@ -44,3 +44,8 @@
 ## 2026-09-30 architecture review addendum
 
 [[05_Knowledge_Architecture/FDG_ENTERPRISE_ARCHITECTURE_RECONCILIATION_2026-09-30|Proposed architecture reconciliation]] reuses NEX-STD-124–128 and distinguishes enterprise functions, knowledge-system ownership and deployed capability. [[07_Nex_Core_Intelligence/NEX_INTELLIGENCE_EXPANSION_BACKLOG_2026-09-30|The intelligence backlog]] adds measurable proof requirements without inventing departments, staff or legal entities.
+
+
+## Human Resources and Recruitment References
+
+- [[06_Organizational_Architecture/HR_RECRUITMENT_INTERVIEW_RESOURCE_55_ANSWERS|HR Recruitment Reference — The 55 Interview Answers That Get People Hired]] — external resource captured for evaluation; guide contents not yet inspected or adopted.
