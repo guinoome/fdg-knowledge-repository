@@ -34,5 +34,6 @@ The goal is not to prevent collaboration. The goal is to prevent unnecessary exp
 ## Active Control Validation
 
 - [[Projects/Active/FDG Business Platform/fuel-station/README|FDG Fuel Station Operations]] — demonstrates role-aware interfaces, anomaly visibility, safety evidence, and mutation audit events. Its local role selector is not production authorization; server-side enforcement remains a required FSIS gate.
+- [[12_FDG_Security_Intelligence_System/14_Integration/FSIS-1403 - AI CCTV Camera Integration and Local Surveillance Architecture|FSIS-1403 — AI CCTV Camera Integration]] — research baseline for vendor-neutral CCTV ingestion, Xiaomi/go2rtc compatibility, Clearcam/Frigate evaluation, local AI processing, evidence controls and a one-camera pilot. Not yet deployment-approved.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[12_FDG_Security_Intelligence_System/README|README]] → this document
