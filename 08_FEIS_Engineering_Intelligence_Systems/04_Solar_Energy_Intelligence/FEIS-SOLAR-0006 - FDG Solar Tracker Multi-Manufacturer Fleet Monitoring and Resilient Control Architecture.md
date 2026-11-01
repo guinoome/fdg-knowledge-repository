@@ -377,3 +377,12 @@ Do not fill these gaps by assumption. Record evidence and decisions as they beco
 ## Document control
 
 This is an additive architecture proposal based on founder direction and a public DeyeTrack feature-reference review. It does not assert that the product has been implemented, manufacturer APIs/control permissions are available, or any inverter supports offline timed restoration. Those claims require model-specific source evidence and tests. Promote requirements to approved implementation contracts only through applicable FEIS / FPJIS review and acceptance.
+
+
+## 23. Reference source and evidence boundary
+
+- **DeyeTrack public feature reference:** https://deyetrack.vercel.app/#features (reviewed as the source that initiated this product discussion on 2026-11-01).
+
+The DeyeTrack review informed the feature-discovery list in Section 14, including energy-flow visualization, battery telemetry, forecast-aware planning, operating presets, temperature, billing/savings, historical analytics and energy sufficiency. Treat these as publicly described product capabilities, not independently verified implementation details. The FDG architecture and requirements in this document are founder-directed design decisions and proposals, not evidence that FDG has implemented them.
+
+No APK reverse engineering, source-code inspection, authenticated behavior test, manufacturer API verification or live inverter control test is claimed by this reference review.
