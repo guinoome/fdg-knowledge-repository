@@ -583,3 +583,20 @@ New future architecture concepts include:
 - ClientReviewEvent for preserving why customer-facing design revisions occurred.
 
 These additions preserve all earlier Solset and Arka360-derived requirements.
+
+
+---
+
+# FDG Solar Tracker Additive Architecture Extension — 2026-11-01
+
+The solar engineering lifecycle is extended by a distinct fleet monitoring and operational-control product:
+
+[[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0006 - FDG Solar Tracker Multi-Manufacturer Fleet Monitoring and Resilient Control Architecture|FEIS-SOLAR-0006 — FDG Solar Tracker Multi-Manufacturer Fleet Monitoring and Resilient Control Architecture]].
+
+FDG Solar Tracker is separate from the FDG Solar Visayas design/calculation application. It provides one FDG application for authorized multi-manufacturer account connections, multi-site monitoring, normalized telemetry, analytics, centralized controls and evidence.
+
+Its defining control requirement is **disaster-resilient temporary policy restoration**: before applying a temporary policy (for example, typhoon battery-charge priority for 24 hours), FDG must capture each device's original settings and prepare a verified restoration mechanism that does not depend solely on a future cloud command. Prefer verified inverter-native local scheduling; otherwise evaluate a persistent local FDG edge controller. Cloud-only restoration is insufficient for the typhoon use case. If independent restoration cannot be guaranteed for a device, FDG must disclose and block guaranteed-policy execution for that device.
+
+The founder reports Huawei is currently working and Sungrow is upcoming. These are integration discovery targets; exact data scopes, write permissions and model-specific offline restoration remain subject to repository inspection, manufacturer evidence and acceptance testing.
+
+This extension preserves the existing solar calculation, design, proposal, commissioning and turnover architecture. Solar Tracker consumes shared FEIS / FDG CORE capabilities and links to canonical SolarProject and service records rather than creating competing engineering truths.
