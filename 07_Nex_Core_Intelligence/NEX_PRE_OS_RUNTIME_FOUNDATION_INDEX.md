@@ -132,3 +132,8 @@ For this vault, operating-model guidance is provided by [[03_Agentic Framework/A
 The packaged source remains preserved in the Downloads folder and recovery record. Status remains Proposed.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[07_Nex_Core_Intelligence/07_Nex_Core_Intelligence_Master_Index|Nex Core Intelligence Master Index]] → this document
+
+
+## Zero-new-recurring-cost runtime implementation — 2026-11-01
+
+- [[07_Nex_Core_Intelligence/NEX_ZERO_NEW_RECURRING_COST_RUNTIME_IMPLEMENTATION_PACKAGE_2026-11-01|Baby Nex Zero-New-Recurring-Cost Runtime Implementation Package]] — founder-directed implementation package. Initial route: existing Windows Task Scheduler + Python worker + SQLite; compare Dagu and Pynenc, keep llama.cpp/Qwen as optional local intelligence, use GitHub Actions only for repository CI. Defines restart recovery, session-independent state, cost guard, controlled learning and acceptance cases. **Proposed / not deployed; host inspection, implementation and tests remain pending.**

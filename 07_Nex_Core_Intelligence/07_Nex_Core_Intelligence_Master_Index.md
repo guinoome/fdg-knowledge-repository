@@ -220,3 +220,8 @@ This pack converts the six capability areas into repeatable pass/fail cases so d
 ## 2026-10-30 — Nex / FMCIS multi-session workbench capability review
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|FMCIS cross-collaborator capability review: sessions, projects and artifacts]] — Claude tutorial used as source example; evaluate equivalent capabilities across all collaborators where compatible. Do not confuse a provider coordinator chat with FDG's authoritative project state or a model advisor with independent review.
+
+
+## 2026-11-01 — Baby Nex zero-new-recurring-cost runtime implementation
+
+- [[07_Nex_Core_Intelligence/NEX_ZERO_NEW_RECURRING_COST_RUNTIME_IMPLEMENTATION_PACKAGE_2026-11-01|Baby Nex Zero-New-Recurring-Cost Runtime Implementation Package]] — compiles the proposed zero-new-recurring-cost execution path, reuse/extend decisions, scheduler/orchestrator/model alternatives, persistence/recovery design, controlled learning loop, authority boundaries and test gates. Native Windows Task Scheduler + Python + SQLite is the first prototype baseline; Dagu/Pynenc remain evaluation candidates. No deployment, benchmark or acceptance pass is claimed.

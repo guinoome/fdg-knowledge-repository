@@ -395,3 +395,8 @@ All current and future FDG collaborators are governed by [[07_Nex_Core_Intellige
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration and Artifact Capability Review]] — Claude-originated examples generalized to all compatible FDG collaborators; evaluate native support, reviewed adapters or safe manual fallback without assuming provider feature parity.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] updated with a proposal-only workbench experience section; provider independence and FDG knowledge/approval authority remain controlling. No implementation or runtime readiness claimed.
+
+
+## 2026-11-01 — Baby Nex persistent runtime and cost-minimization direction
+
+- [[07_Nex_Core_Intelligence/NEX_ZERO_NEW_RECURRING_COST_RUNTIME_IMPLEMENTATION_PACKAGE_2026-11-01|Baby Nex Zero-New-Recurring-Cost Runtime Implementation Package]] — implementation package for a session-independent Baby Nex runtime, using existing host resources and free/open-source components first. Starts with Windows Task Scheduler + Python + SQLite; benchmarks Dagu/Pynenc and local llama.cpp only when justified. The package is proposed and not deployed. Existing authority controls and open P0 Issues #11 and #20 remain unchanged.
