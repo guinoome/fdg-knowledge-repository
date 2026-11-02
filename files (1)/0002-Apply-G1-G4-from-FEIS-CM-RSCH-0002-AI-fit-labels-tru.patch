@@ -1,0 +1,161 @@
+From 2da7b02a7a5ba72f856773a0dee5083867b8fb8a Mon Sep 17 00:00:00 2001
+From: FDG Implementation Collaborator <noreply@fdg.invalid>
+Date: Mon, 2 Nov 2026 03:08:09 +0000
+Subject: [PATCH 2/2] Apply G1-G4 from FEIS-CM-RSCH-0002: AI-fit labels, trust
+ boundary rule, KB baseline WP0A, benchmark taxonomy
+
+---
+ ... Intelligence and Verification Standard.md | 10 +++++++
+ ... - Bidding to Turnover Template Catalog.md |  2 ++
+ ...erations OS Complete Detailed Blueprint.md | 23 ++++++++++++++++
+ ...raction and FDG Gap Analysis 2026-11-01.md |  6 +++--
+ ...Corpus Accuracy and Acceptance Standard.md | 27 +++++++++++++++++++
+ 5 files changed, 66 insertions(+), 2 deletions(-)
+
+diff --git a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard.md b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard.md
+index dc0fa6b..e0b27bd 100644
+--- a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard.md	
++++ b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0006 - Construction Document Intelligence and Verification Standard.md	
+@@ -212,6 +212,16 @@ The module should progressively support:
+ - closeout requirement matrix
+ - O&M completeness review
+ 
++## Trust Boundary Rule
++
++AI may: index, extract, structure, populate templates, draft, compare and cross-check, always with source pointers.
++
++Humans own: understanding project intent, measured quantities, percent complete, entitlement and notices, negotiation, award, acceptance and any approval.
++
++Unknown-value rule: when a rate, quantity, date or clause is not supported by source evidence, the system raises it as `Unknown / Missing Evidence`. It never invents, interpolates or silently defaults a governed value.
++
++Agent handover templates must repeat this rule. See AI-fit labels in FEIS-CM-0902 §5A.
++
+ ## Deterministic Boundary
+ 
+ Numerical calculations that affect engineering/commercial outcomes should use approved deterministic calculation services where feasible.
+diff --git a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md
+index 290a78b..fa724bf 100644
+--- a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md	
++++ b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0100 - Bidding to Turnover Template Catalog.md	
+@@ -30,6 +30,8 @@ Each future template/capability should define, where applicable:
+ - source/provenance
+ - related knowledge
+ - commercial package
++- AI-fit label (`AI_GOOD` / `AI_LIMITED` / `AI_NO_GO`) per FEIS-CM-0902 §5A
++- human-only decisions
+ 
+ ## 01 — Opportunity, Prequalification and Bid Decision
+ 
+diff --git a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint.md b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint.md
+index 236986e..c6b8601 100644
+--- a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint.md	
++++ b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint.md	
+@@ -151,6 +151,22 @@ COMMERCIALLY_VALIDATED
+ 
+ Blueprint existence never means implemented. Deployment never means commercially validated.
+ 
++## 5A. AI-Fit Label and Human-Only Boundary
++
++Every workflow step that uses an AI agent must also carry an AI-fit label, separate from maturity:
++
++~~~text
++AI_GOOD      Agent drafts/extracts/compares; reviewer verifies against evidence.
++AI_LIMITED   Agent assists with a named checkpoint; deterministic service or reviewer owns the result.
++AI_NO_GO     Agent must not produce the governed result.
++~~~
++
++Each step also lists its **human-only decisions** (for example: percent complete, entitlement, award, sequencing logic, measured quantities, acceptance).
++
++Defaults pending per-step review: reading/indexing documents, register population, RFI/report drafting and bid-comparison tables are `AI_GOOD`; programme logic and cost forecasting are `AI_LIMITED`; quantity measurement without calibrated deterministic geometry, entitlement decisions and award decisions are `AI_NO_GO`.
++
++Origin: benchmark comparison in [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ContractorOS Benchmark Extraction and FDG Gap Analysis 2026-11-01|FEIS-CM-RSCH-0002]]. Labels are FDG decisions; they are not copied from the benchmark source.
++
+ ## 6. Initial Roles
+ 
+ - Owner / Company Administrator
+@@ -1270,6 +1286,13 @@ Static screenshots or hardcoded metrics do not satisfy this test.
+ - ADRs;
+ - data dictionary.
+ 
++### WP0A — Project Knowledge Base Baseline (pilot rule)
++- before any pilot workflow, convert the pilot project's drawings, contracts and specifications into a searchable, revision-tagged knowledge base with source pointers (FEIS-CM-0006 intake and evidence-pointer rules);
++- one isolated workspace per project;
++- record baseline task timings (hours per RFI, register update, report) before automation so benefit is measurable;
++- acceptance: a reviewer can trace any answer to a source file, page and revision; unreadable or missing files are listed as `Unknown / Missing Evidence`;
++- no workflow may be marked `COMMERCIALLY_VALIDATED` without baseline timings.
++
+ ### WP1 — Company Core
+ - organization;
+ - user;
+diff --git a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ContractorOS Benchmark Extraction and FDG Gap Analysis 2026-11-01.md b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ContractorOS Benchmark Extraction and FDG Gap Analysis 2026-11-01.md
+index 09e4dca..8f73784 100644
+--- a/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ContractorOS Benchmark Extraction and FDG Gap Analysis 2026-11-01.md	
++++ b/08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ContractorOS Benchmark Extraction and FDG Gap Analysis 2026-11-01.md	
+@@ -9,7 +9,7 @@
+ **Source:** https://contractoros.build/ (public pages only)  
+ **Preservation Rule:** Additive only; do not delete or overwrite approved FDG knowledge solely because of this benchmark.
+ 
+-> **Naming warning.** ContractorOS (Tim Fairley, Josh Turner) is an external, third-party AI-training and workflow product. It is **not** FDG Construction OS / FDG Project Operations OS ([[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902]]). Do not merge identities, branding or claims.
++> **Relationship.** ContractorOS (Tim Fairley, Josh Turner) is an external, third-party, membership-based AI training and workflow product. It is a **benchmark reference** for FDG Construction OS / FDG Project Operations OS ([[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0902 - FDG Project Operations OS Complete Detailed Blueprint|FEIS-CM-0902]]). FDG Construction OS remains the FDG-owned product; no ContractorOS code, content or branding is incorporated.
+ 
+ ## 1. Research Boundary
+ 
+@@ -140,7 +140,7 @@ Jobs (documents): Estimate 31, Programme 54, Progress update 92, Procurement 68,
+ 5. *Single-run vendor benchmarks as selection criteria.* Re-run on FDG corpus before any model/harness choice.
+ 6. *Western contract vocabulary.* Jurisdiction pack for Philippine practice required; do not assume equivalence of terms such as variations, payment claims, departures.
+ 
+-## 9. Integration Targets (Proposed, Awaiting Approval)
++## 9. Integration Targets (G1–G4 Approved 2026-11-01 by Francis; G5–G11 Backlog)
+ 
+ 1. FEIS-QTO-0007: add category taxonomy, "knowing when to stop", declined/flagged scoring, harness-vs-raw reporting.
+ 2. FEIS-CM-0902 §5 and FEIS-CM-0100: add AI-fit column and human-only list per workflow step.
+@@ -148,6 +148,8 @@ Jobs (documents): Estimate 31, Programme 54, Progress update 92, Procurement 68,
+ 4. FEIS-CM-0902 §45: add onboarding sequence and baseline-timing step to pilot.
+ 5. Backlog: FDG CM benchmark (G5), subcontract loop coverage audit (G9).
+ 
++**Applied:** G1 → FEIS-CM-0902 §5A and FEIS-CM-0100 Template Design Rule; G2 → FEIS-CM-0006 Trust Boundary Rule; G3 → FEIS-CM-0902 WP0A; G4 → FEIS-QTO-0007 external-benchmark taxonomy and reporting rules. Maturity of each addition: DESIGNED.
++
+ ## 10. Open Verification Items
+ 
+ - Skills, templates and app content are behind membership; only a founder-authorized membership could verify what the 100+ skills and 120+ templates actually contain.
+diff --git a/08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0007 - Benchmark Corpus Accuracy and Acceptance Standard.md b/08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0007 - Benchmark Corpus Accuracy and Acceptance Standard.md
+index 2104440..73e49bb 100644
+--- a/08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0007 - Benchmark Corpus Accuracy and Acceptance Standard.md	
++++ b/08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0007 - Benchmark Corpus Accuracy and Acceptance Standard.md	
+@@ -153,6 +153,33 @@ L1 cannot claim validated QTO until it passes:
+ 
+ Advanced agent features have separate gates.
+ 
++## Question Category Taxonomy (Drawing Q&A Benchmarks)
++
++Drawing-question benchmarks should tag each question with one category so weaknesses are visible:
++- sheet reading (title block, notes, legend);
++- tagged-item counting;
++- element detail;
++- schedules;
++- scale and measurement;
++- cross-sheet references;
++- scope (in/out, supply, package);
++- sheet structure (revision, detail counts);
++- **knowing when to stop** (unanswerable from the evidence; correct response is withhold/review-required).
++
++## Rate Reporting Rule
++
++Never report a percentage without its sample size n. Do not rank on categories with very small n. Report counts and measured quantities separately; a total derived from counts must not be presented as measurement accuracy.
++
++State the tolerance convention for measured quantities (for example ±5%) and label it a chosen convention.
++
++## Harness vs Raw Reporting
++
++Report model-only and model-plus-tooling (harness) results separately for the same task, with tool list, version and cost. Harness effect is a measured result, not an assumption.
++
++## Run Variance
++
++Run each evaluated configuration more than once where cost permits and report spread. A single run is directional evidence only.
++
+ ## External Benchmark Principle
+ 
+ Open/public benchmarks may be used to compare tooling, but FDG should reproduce scores independently and disclose:
+-- 
+2.43.0
+
