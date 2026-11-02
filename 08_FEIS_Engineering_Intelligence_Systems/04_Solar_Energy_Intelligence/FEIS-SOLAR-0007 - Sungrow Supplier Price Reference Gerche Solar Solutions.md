@@ -1,7 +1,7 @@
 ---
 id: FEIS-SOLAR-0007
 title: Sungrow Supplier Price Reference — Gerche Solar Solutions
-status: Supplier Reference — Pending Historical Price Reconciliation
+status: Supplier Reference — Calculator Updated; Supplier Historical Comparison Pending
 owner: FDG Ecosystem
 system: FEIS
 branch: Solar Energy Intelligence
@@ -37,19 +37,21 @@ These are supplier reference prices, not FDG customer selling prices, approved l
 | Hybrid inverter | Sungrow MG12RL | 12 kW | ₱98,000 |
 | Battery | Sungrow MBL160 | Model shown; energy/capacity not stated in price list | ₱125,000 |
 
-## 3. Previous-price reconciliation
+## 3. Previous calculator price vs new supplier reference
 
-A search of the current FDG Knowledge Repository solar branch and the FDG Solar Visayas implementation repository did not locate an authoritative previous Gerche/Sungrow unit-price schedule for these exact models.
+The previous values below are the old default equipment prices in the Libo-WiFi live calculator hardware database, not verified historical Gerche supplier quotations. This comparison is useful for updating calculator costs, but must not be represented as a like-for-like supplier price history.
 
-| Model | Previous recorded price | New supplier price | Change (₱) | Change (%) | Status |
+| Model | Previous calculator price | New Gerche supplier price | Change | Change (%) | Calculator action |
 |---|---:|---:|---:|---:|---|
-| MG6RL | Not located | ₱52,000 | Pending | Pending | Historical baseline required |
-| MG8RL | Not located | ₱69,000 | Pending | Pending | Historical baseline required |
-| MG10RL | Not located | ₱89,000 | Pending | Pending | Historical baseline required |
-| MG12RL | Not located | ₱98,000 | Pending | Pending | Historical baseline required |
-| MBL160 | Not located | ₱125,000 | Pending | Pending | Historical baseline required |
+| MG6RL | ₱55,000 | ₱52,000 | −₱3,000 | −5.45% | Updated |
+| MG8RL | ₱73,000 | ₱69,000 | −₱4,000 | −5.48% | Updated |
+| MG10RL | ₱89,000 | ₱89,000 | ₱0 | 0.00% | Model label/source updated; price unchanged |
+| MG12RL | Not previously listed | ₱98,000 | New item | N/A | Added |
+| MBL160 | Not previously listed | ₱125,000 | New item | N/A | Added |
 
-Do not report an increase or decrease until a prior price for the same exact model, supplier basis, currency and tax/delivery treatment is evidenced.
+The previous values were retrieved from the guinoome/Libo-WiFi index.html default hardware database before this update. Changes are calculated as new price minus previous calculator price; percentage change is divided by previous calculator price.
+
+**Supplier-history qualification:** No previous dated Gerche price list, invoice or supplier quotation was located. Therefore, only the calculator baseline comparison is established. A historical supplier increase/decrease remains unverified.
 
 When a prior price is supplied, calculate:
 
@@ -60,10 +62,12 @@ Positive result = increase; negative result = decrease. Keep supplier price hist
 
 ## 4. Model identity and engineering verification notes
 
-- The supplier image identifies inverter models MG6RL, MG8RL, MG10RL and MG12RL. Exact datasheet revision, phase, electrical limits, regional variant and warranty conditions must be verified before equipment records are marked design-eligible.
-- The battery is labelled **MBL160** in the image. Do not silently normalize this to another model name (for example, SBR160), infer its nominal/usable kWh, or assume compatibility with MG-RL inverters.
-- Obtain the battery datasheet and written Sungrow compatibility evidence for the selected inverter model before using it in a design.
+- The supplier image identifies inverter models MG6RL, MG8RL, MG10RL and MG12RL. The calculator records these exact model codes. Electrical design eligibility still requires model/region-specific inverter datasheets and checks for voltage, current, MPPT, string and phase limits.
+- The battery is **Sungrow MBL160**, not SBR160. Sungrow's official datasheet identifies it as LiFePO4 with 16.08 kWh nominal energy, 51.2 V nominal voltage, 44.8–57.6 V operating range, 200 A maximum charge/discharge current and up to 8,000 cycles under stated test conditions.
+- Sungrow lists MBL160 compatibility with MG5/6/8/10/12RL. Confirm required inverter, battery and communication firmware versions before commissioning.
+- The MBL160 product is IP20 and specified for indoor installation; this is a material site-design constraint.
 - The price list does not include panels, installation, accessories, freight, taxes, permits or other balance-of-system components.
+- Official references: [Sungrow MBL050/120/160 product page](https://dl.sungrowpower.com/en/residential-energy-storage-system/mbl-050-120-160) and [Sungrow MBL050/120/160 datasheet](https://info-support.sungrowpower.com/datasheet-materials/128a9894-8cf7-47be-b436-60af212d61ba.pdf).
 
 ## 5. Calculator data handling
 
@@ -73,7 +77,7 @@ For FDG Solar Visayas:
 2. Keep supplier cost separate from FDG markup, customer selling price, installation labor and project-specific adjustments.
 3. Do not automatically change existing customer quotations or accepted commercial documents.
 4. Do not replace existing hardware records until exact model identity and technical fields are verified.
-5. When a verified supplier cost is adopted, recalculate downstream BOM/cost outputs and flag issued quotations for review rather than silently modifying them.
+5. The 2026-11-02 Gerche supplier reference has been loaded into the Libo-WiFi hardware database for Sungrow MG6RL, MG8RL, MG10RL, MG12RL and MBL160. Recalculate downstream BOM/cost outputs; do not silently modify previously issued quotations.
 6. Maintain prior prices as immutable historical observations for future increase/decrease analysis.
 
 ## 6. Evidence required to close reconciliation
