@@ -86,3 +86,10 @@ Implementation target remains [[Projects/Active/AI/FDG Practical Calculators/FDG
 This additive product direction establishes one FDG application for connected accounts and multi-site monitoring across Deye, LuxPower, Sungrow, Huawei and future manufacturers, plus authorized centralized controls. Its defining control requirement is a temporary operational policy with per-device original-state snapshots and restoration that does not depend solely on cloud connectivity after a typhoon. The founder reports Huawei is currently working and Sungrow is upcoming; exact implementation scope and model-specific capabilities require repository and device evidence.
 
 FDG Solar Tracker is distinct from the FDG Solar Visayas calculator. It shares FEIS engineering, evidence, security and analytics capabilities rather than creating a competing calculation authority.
+---
+
+## Sungrow Supplier Price Reference — Gerche Solar Solutions (2026-11-02)
+
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0007 - Sungrow Supplier Price Reference Gerche Solar Solutions|FEIS-SOLAR-0007 — Sungrow Supplier Price Reference: Gerche Solar Solutions]]
+
+This is an additive supplier-price observation for MG6RL, MG8RL, MG10RL, MG12RL and MBL160. Historical prices for the exact models were not located during reconciliation; increase/decrease values remain pending until an evidenced prior price is added. These are supplier unit prices, not FDG selling prices.
