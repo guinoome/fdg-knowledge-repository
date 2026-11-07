@@ -80,6 +80,6 @@ The first narrow FBPOIS baseline is:
 
 Target first baseline: `FBPOIS-L1A-R0.1.0`.
 
-This does **not** mean finishing all of FBPOIS. It composes the minimum reusable chain from existing FWIS/FM​IS knowledge and implementation, freezes a working local baseline, then evolves through [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-PATCH-0000 - Patch Register|traceable patches]].
+This does **not** mean finishing all of FBPOIS. It composes the minimum reusable chain from existing FWIS/FMIS knowledge and implementation, freezes a working local baseline, then evolves through [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-PATCH-0000 - Patch Register|traceable patches]].
 
-External workflow UX benchmark: [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]. This is a research reference only; it does not alter FBPOIS/FM​IS authority or authorize a new interface.
+External workflow UX benchmark: [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]. This is a research reference only; it does not alter FBPOIS/FMIS authority or authorize a new interface.
