@@ -218,4 +218,4 @@ FWAIS shall not infer high-consequence technical readiness, waive safety/permit 
 
 - [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study for FDG Engineering Operations]]
 
-Disposition: research reference only. Reuse selected interaction patterns through FBPOIS/FM​​IS/FWIS; no new operational platform, authority policy or implementation is approved by this study. Issue #11 remains the source-to-build and FMIS approval-authority gate.
+Disposition: research reference only. Reuse selected interaction patterns through FBPOIS/FMIS/FWIS; no new operational platform, authority policy or implementation is approved by this study. Issue #11 remains the source-to-build and FMIS approval-authority gate.
