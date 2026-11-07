@@ -103,7 +103,8 @@ class FMISCoreTests(unittest.TestCase):
             assigned_personnel="Tech A",
             status="Open",
         )
-        self.service.update_work_order_status(work_order_id, "Closed")
+        with self.assertRaises(PermissionError):
+            self.service.update_work_order_status(work_order_id, "Closed")
 
         pm_id = self.service.create_pm_plan(
             equipment_id=equipment_id,
@@ -111,10 +112,11 @@ class FMISCoreTests(unittest.TestCase):
             frequency="Monthly",
             responsible_role="Technician",
         )
-        self.service.complete_pm(pm_id)
+        with self.assertRaises(PermissionError):
+            self.service.complete_pm(pm_id)
 
-        self.assertEqual(self.service.get_work_order(work_order_id)["status"], "Closed")
-        self.assertEqual(self.service.get_pm_plan(pm_id)["status"], "Completed")
+        self.assertEqual(self.service.get_work_order(work_order_id)["status"], "Open")
+        self.assertEqual(self.service.get_pm_plan(pm_id)["status"], "Scheduled")
 
     def test_richer_plant_equipment_forms_and_audit_log(self):
         plant_id = self.service.create_plant(
@@ -201,12 +203,13 @@ class FMISCoreTests(unittest.TestCase):
         self.assertEqual(equipment["name"], "Boiler Feed Pump")
 
         self.service.update_work_order_status(work_order_id, "In Progress")
-        self.service.complete_pm(pm_id)
+        with self.assertRaises(PermissionError):
+            self.service.complete_pm(pm_id)
 
         updated_work_order = self.service.get_work_order(work_order_id)
         updated_pm = self.service.get_pm_plan(pm_id)
         self.assertEqual(updated_work_order["status"], "In Progress")
-        self.assertEqual(updated_pm["status"], "Completed")
+        self.assertEqual(updated_pm["status"], "Scheduled")
 
     def test_failure_history_and_inspection_workflow(self):
         plant_id = self.service.create_plant(
@@ -354,6 +357,38 @@ class FMISCoreTests(unittest.TestCase):
         self.assertEqual(self.service.get_parameter(parameter_id)["name"], "vibration")
         self.assertEqual(self.service.get_pm_occurrence(pm_occurrence_id)["status"], "Scheduled")
         self.assertEqual(self.service.get_work_order(work_order_id)["source"], "PM")
+
+    def test_issue11_rejects_both_terminal_aliases_and_preserves_status(self):
+        plant_id = self.service.create_plant("Example", "E11", "HVAC", "Basement", "Running", "Low")
+        eq_id = self.service.create_equipment(plant_id, "Supply Pump", "Pump", "Basement", "Running", "Low")
+        work_id = self.service.create_work_order(eq_id, "Check", "Low", "Tech", "Open")
+        pm_id = self.service.create_pm_plan(eq_id, "PM", "Monthly", "Technician")
+        for status in ["Closed", " closed ", "COMPLETED", "Verified", "Approved", "Other Custom"]:
+            with self.subTest(status=status), self.assertRaises(PermissionError):
+                self.service.update_work_order_status(work_id, status)
+        with self.assertRaises(PermissionError):
+            self.service.complete_pm(pm_id)
+        self.assertEqual(self.service.get_work_order(work_id)["status"], "Open")
+        self.assertEqual(self.service.get_pm_plan(pm_id)["status"], "Scheduled")
+
+    def test_issue11_rejects_preclosed_creation_and_pm_occurrence(self):
+        plant_id = self.service.create_plant("Pumps", "P11", "HVAC", "Basement", "Running", "Low")
+        eq_id = self.service.create_equipment(plant_id, "Standby Pump", "Pump", "Basement", "Running", "Low")
+        with self.assertRaises(PermissionError):
+            self.service.create_work_order(eq_id, "Inspection", "Low", "Tech", "Closed")
+        pm_id = self.service.create_pm_plan(eq_id, "Monthly PM", "Monthly", "Technician")
+        with self.assertRaises(PermissionError):
+            self.service.create_pm_occurrence(pm_id, status="Completed")
+        self.assertEqual(self.service.list_work_orders(), [])
+        self.assertEqual(self.service.list_pm_occurrences(), [])
+
+    def test_issue11_existing_non_terminal_edits_still_work(self):
+        plant_id = self.service.create_plant("Equipment", "EQ11", "HVAC", "Basement", "Running", "Low")
+        eq_id = self.service.create_equipment(plant_id, "Pump", "Pump", "Basement", "Running", "Low")
+        work_id = self.service.create_work_order(eq_id, "Investigate", "Low", "Tech", "Open")
+        self.service.update_work_order_status(work_id, "In Progress")
+        self.assertEqual(self.service.get_work_order(work_id)["status"], "In Progress")
+        self.service.create_pm_plan(eq_id, "Check", "Monthly", "Technician")
 
     def test_materials_and_procurement_flow(self):
         item_id = self.service.create_material(
