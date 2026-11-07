@@ -212,3 +212,10 @@ T&C / Turnover Evidence
 ~~~
 
 FWAIS shall not infer high-consequence technical readiness, waive safety/permit controls, authorize material substitution, approve failed post-maintenance tests, or return critical equipment to service without the required domain authority.
+
+
+## KANNA Competitive Workflow and Field UX Study — 2026-11-08
+
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study for FDG Engineering Operations]]
+
+Disposition: research reference only. Reuse selected interaction patterns through FBPOIS/FM​​IS/FWIS; no new operational platform, authority policy or implementation is approved by this study. Issue #11 remains the source-to-build and FMIS approval-authority gate.
