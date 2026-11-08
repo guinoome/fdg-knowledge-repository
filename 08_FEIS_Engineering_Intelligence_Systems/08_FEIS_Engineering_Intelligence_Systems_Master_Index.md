@@ -199,6 +199,6 @@ The proposal establishes shared problem definition, geometry/property/boundary-c
 
 The architecture also establishes the proposed FDG Engineering Benchmark & Validation Library, explicit distinction between verification and validation, agent-generated engineering as untrusted candidate work, CORE evidence lineage and a phased acceptance-gated roadmap.
 
-**External monitoring research:** AInovaph is included as a user-requested watchlist entry; its exact identity and official URL remain unverified. AINAV (https://ainav.id/) is recorded only as a potentially relevant but unconfirmed research lead. Do not conflate the names or treat either as an approved dependency.
+**External monitoring research:** **Correction:** The intended reference is **AInovaph**, a Facebook presence/page identified by the user. It is not AINAV. The exact Facebook page URL and technical scope remain to be confirmed; monitor its actual public content once identified. Do not attribute capabilities or treat it as an approved FEIS dependency without evidence.
 
 **Status boundary:** this is an additive proposal and collaborator handover. No solver has been adopted or qualified, no benchmark has been approved, and no implementation or production readiness is claimed. Existing FEIP standards remain authoritative until controlled reconciliation and approval.
