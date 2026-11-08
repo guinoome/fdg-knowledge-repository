@@ -234,7 +234,10 @@ Examples:
 | Daily Operations | Technician | Supervisor | Duty Engineer | Engineering Manager |
 | Shift Turnover | Duty Engineer | Engineering Manager | Chief Engineer | - |
 | Incident Report | Technician | Supervisor | Duty Engineer | Chief Engineer |
-| Work Order | Technician | Supervisor | Engineering Manager | Chief Engineer |
+| Work Order — routine, positively classified and policy-authorized | Technician | Supervisor | Duty Engineer / ESM with explicit property/asset grant | No automatic management stage; escalate when a policy exception applies |
+| Work Order — unclassified, critical or policy exception | Technician | Supervisor | Duty Engineer / ESM | Engineering Manager / Chief Engineer or required statutory signatory |
+| PM — routine, evidence-complete and policy-authorized | Technician | Supervisor | Duty Engineer / ESM with explicit property/asset grant | No automatic management stage; escalate when a policy exception applies |
+| PM — failed evidence, unclassified or policy exception | Technician | Supervisor | Duty Engineer / ESM | Engineering Manager / Chief Engineer or required statutory signatory |
 | Asset Registration | Supervisor | Engineering Manager | Chief Engineer | Director (Optional) |
 | Utility Adjustment | Supervisor | Engineering Manager | Chief Engineer | Director (Optional) |
 
@@ -452,7 +455,7 @@ Exceptions include, at minimum, life-safety/fire protection, statutory or sign-a
 
 ### Release and implementation gate
 
-The generic Work Order row above is insufficient by itself to encode routine and exception authority. Do not activate it as a runtime grant until this matrix is independently reviewed and approved for the applicable organization/property.
+The classification-specific Work Order and PM rows above express the founder-directed E2C routing pattern only. This matrix remains Draft; no routine or exception row becomes a runtime grant until the applicable organization/property policy, qualifications, delegation and thresholds are independently reviewed and approved.
 
 Required acceptance before implementation is promoted: qualified facility owner approval of work classes and numerical thresholds; independent reviewer acceptance; server-side actor/property/asset/delegation checks; self-approval and wrong-property denial tests; stale/offline revocation tests; failed/missing evidence tests; audit verification; and proof that FMIS closure does not release FWIS OOO/OOS.
 
