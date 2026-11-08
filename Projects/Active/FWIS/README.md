@@ -345,3 +345,16 @@ Closed by this work: attachment bytes, administrative builders, offline referenc
 Earlier implementation/test-count statements are preserved. They do not prove the described role matrix in this snapshot. The mismatch already appears in the August history; this review does not establish a recent deletion or the state of any live database.
 
 [[22_FDG_Audit_Intelligence_System/04_Engineering_Audit/FAIS_ENGINEERING_CRITICAL_FINDINGS_2026-09-30|ACR-04 evidence and recovery package]] requires recovery of the actual source or explicit capability reconciliation, followed by real positive/negative database permission tests. No FWIS application source was changed in this knowledge-review package.
+
+
+---
+
+## Engineering Evidence-to-Clearance Handover — 2026-11-08
+
+FWIS participates in the founder-directed [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance (E2C)]] product as the operational system of record. FMIS owns maintenance work orders and technical maintenance history; FWIS continues to own operational concerns, room/plant operating context, restrictions and OOO/OOS release.
+
+**Hard boundary:** FMIS Work Complete, Verified or Closed does not automatically release an FWIS OOO/OOS restriction. E2C must show the continuing restriction until an independently authorized FWIS release event is recorded.
+
+For UX cross-checks on field capture, evidence presentation, returns/resubmission and approval queues, read [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]. KANNA is a reference only. Do not introduce a parallel reporting interface or transfer FWIS operational authority to FMIS, KANNA or Nex.
+
+Before any E2C-related implementation, retrieve E2C-0001, the current FBPOIS workflow/authority matrix and Issue #11. Current database-side role enforcement and other FWIS deviations documented earlier in this README remain separate acceptance items; this handover does not mark them resolved.
