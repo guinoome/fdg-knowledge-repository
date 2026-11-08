@@ -83,3 +83,14 @@ Target first baseline: `FBPOIS-L1A-R0.1.0`.
 This does **not** mean finishing all of FBPOIS. It composes the minimum reusable chain from existing FWIS/FMIS knowledge and implementation, freezes a working local baseline, then evolves through [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-PATCH-0000 - Patch Register|traceable patches]].
 
 External workflow UX benchmark: [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]. This is a research reference only; it does not alter FBPOIS/FMIS authority or authorize a new interface.
+
+
+## Engineering Evidence-to-Clearance — Founder Product Direction, 2026-11-08
+
+**Next FBPOIS product:** [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance]].
+
+The existing [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/06_Incremental_Release_and_Patch_Governance/FBPOIS-L1A-0001 - Concern-to-Clearance First Working Baseline|Concern-to-Clearance L1A baseline]] remains the first bounded workflow inside this product. E2C composes FMIS maintenance records, FWIS operational/restriction records and the shared workflow engine. Do not create a separate maintenance-reporting application.
+
+For reusable field-workflow and reporting UX patterns, consult the [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA competitive study]]. KANNA is a benchmark only, not a dependency or source of FDG engineering authority.
+
+**Status:** product direction and canonical references recorded on main; site approval matrix, actor-bound implementation, tests and facility acceptance remain open under Issue #11.
