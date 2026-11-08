@@ -25,3 +25,12 @@
 - [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/FWIS-SPEC-0015 - Analytics|FWIS-SPEC-0015 – Analytics]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|16 FDG Building Plant Operations Intelligence System (FBPOIS) Master Index]] → this document
+
+
+## Engineering Evidence-to-Clearance Relationship — 2026-11-08
+
+FWIS contributes operational concerns, plant/room context, restrictions and OOO/OOS records to [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance]].
+
+FMIS work completion or maintenance closure does not independently release a FWIS restriction. FWIS remains the operational record owner and the relevant release action must be separately authorized and audited.
+
+For the external field-report UX benchmark, see [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]].
