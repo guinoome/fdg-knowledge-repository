@@ -415,3 +415,49 @@ Related:
 | 1.0 | Initial Draft | Workflow Authorization Matrix |
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/04_User_Roles_Master_Index|04 User Roles Master Index]] → this document
+
+
+---
+
+## Founder-Directed E2C Approval Responsibilities — 2026-11-08
+
+**Classification: FOUNDER-DIRECTED PRODUCT REQUIREMENT / PROPOSED AUTHORITY MATRIX / SITE APPROVAL PENDING.** This addendum captures the intended Engineering Evidence-to-Clearance responsibility sequence and the earlier founder management-by-exception direction so collaborators no longer rely on a branch-only handover or conversation recollection. It does not convert this Draft matrix into an approved facility/site policy or grant a live user permission.
+
+### Responsibility sequence
+
+1. **Technician — submit and execute.** Records observed facts, readings, corrective action and evidence. Cannot approve their own work.
+2. **Supervisor — first review.** Reviews assignment, completeness, workmanship and evidence presence. May accept the review stage, return a field/evidence-specific correction or escalate.
+3. **Duty Engineer / Engineering Service Manager — technical verification.** Reviews technical findings, acceptance criteria, measurements, test result, residual risk and operating impact. Records the engineering verification basis and recommendation. May exercise final routine authority only where an approved policy explicitly grants it.
+4. **Engineering Manager / Chief Engineer — management decision.** Decides cases reserved by policy, including exceptions, high-impact operational matters and matters outside delegated authority. Statutory or professionally reserved sign-off remains with the legally/technically qualified signatory.
+
+The chain defines responsibility and escalation; it does not require an unnecessary management signature on every routine work order. A shorter routine route is permitted only where the relevant facility policy defines the work class and authorizes the competent independent decision-maker. The earlier founder management-by-exception direction identifies routine PM, minor corrective work and minor concerns as candidates for delegated handling; it does not supply numerical limits or site-specific grants.
+
+### Routine versus exception classification
+
+A routine case must be positively classified from authenticated and current information: property, asset, assignment, asset criticality, safety/compliance relevance, risk class, required evidence and all applicable facility-approved limits.
+
+Unknown, missing, stale, conflicting or unreviewed classifications are **not routine**. They are routed to the authorized management level or held for a qualified decision.
+
+Exceptions include, at minimum, life-safety/fire protection, statutory or sign-and-seal obligations, critical or unknown asset/risk classification, repeated failure, disputed/missing/failed evidence, out-of-scope property/asset, prolonged outage, unapproved cost/risk category, invalid/expired/revoked delegation and return-to-service concerns. Numerical thresholds must be supplied by an authorized facility policy; none are invented here.
+
+### Authority and evidence controls
+
+- Approval authority is separate from UI access or generic RBAC.
+- The actor must be authenticated and competent, independently assigned, and authorized for the exact organization/property/asset and workflow action.
+- The system records the authority-policy version, delegation basis/effective window, actor/role/scope, reason, timestamp and linked record/evidence revision.
+- Self-approval is denied; default is deny unless a separately approved policy defines a lawful and risk-appropriate exception.
+- Offline approval remains pending until server-side revalidation against current actor access, delegation, policy and record revision.
+- Administrator/Super Administrator status alone does not confer engineering approval.
+- FMIS maintenance verification/closure never releases a FWIS operational restriction or OOO/OOS record automatically.
+
+### Release and implementation gate
+
+The generic Work Order row above is insufficient by itself to encode routine and exception authority. Do not activate it as a runtime grant until this matrix is independently reviewed and approved for the applicable organization/property.
+
+Required acceptance before implementation is promoted: qualified facility owner approval of work classes and numerical thresholds; independent reviewer acceptance; server-side actor/property/asset/delegation checks; self-approval and wrong-property denial tests; stale/offline revocation tests; failed/missing evidence tests; audit verification; and proof that FMIS closure does not release FWIS OOO/OOS.
+
+The current main FMIS service still allows actorless terminal status mutation. Draft PR #18 denies those terminal calls but does not yet provide the legitimate actor-bound closure path. Do not merge, deploy or claim resolution until the approved policy and working closeout path coexist.
+
+Canonical product flow: [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FBPOIS-E2C-0001]].
+
+For source-to-build review and KANNA UX cross-check, see Issue #11 and [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA study]].
