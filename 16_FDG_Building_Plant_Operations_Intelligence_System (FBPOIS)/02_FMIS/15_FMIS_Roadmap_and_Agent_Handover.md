@@ -74,3 +74,21 @@ Engineering rules:
 [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|FEIS Maintenance & Reliability Intelligence]].
 
 Do not jump directly to predictive maintenance while basic work-readiness and planning data remains unreliable.
+
+
+---
+
+## Engineering Evidence-to-Clearance Priority — 2026-11-08
+
+The next FBPOIS product direction is [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance]]. Reuse the Concern-to-Clearance baseline and current FMIS/FWIS architecture; do not start a separate reporting interface.
+
+Before new FMIS implementation on the affected terminal-transition/closeout path:
+
+1. Resolve Issue #11's main/branch authority conflict using the main [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0004 - Workflow Authorization Matrix|FBPOIS-ROLE-0004]] addendum as the founder-directed baseline. Obtain the applicable qualified facility/site approval and its thresholds.
+2. Review PR #14, #16 and #18 on their exact current heads. None is accepted or merged by this handover.
+3. Implement only the approved actor/property/asset/delegation/evidence-bound transition package under an FPJIS-scoped work package.
+4. Test positive and negative service/UI/offline/sync behavior; prove self-approval, wrong-property, expired/revoked delegation, missing/failed evidence and stale revision are denied.
+5. Preserve separate FWIS restriction/OOO/OOS release authority.
+6. Pilot with an authorized anonymized real work order and qualified users; synthetic tests alone are not operational acceptance.
+
+Cross-check KANNA interaction patterns in [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|the KANNA study]]. Use it as a replaceable reference for field UX, not as a runtime dependency.
