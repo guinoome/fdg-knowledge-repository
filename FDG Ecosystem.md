@@ -159,3 +159,10 @@ The FLIS baseline/admission labels remain conflicting authority claims until a s
 ## FDG Historical Conversation Coverage — 2026-10-19
 
 [[04_Knowledge_Management/FDG-HIST-0001 - Historical Conversation and Reference Reconciliation Handover 2026-10-19|Historical Conversation & Reference Coverage Handover]] is the controlled knowledge-capture handover for earlier FDG decisions, shared videos/repositories and references. It gives pinned 2026-10-19 main-tree inventory facts and **partial** source-to-GitHub evidence; important FMIS/FBPOIS documents are branch-only, and some private uploaded references have not been inspected. This is not complete recovery of every historical conversation. Remaining enumeration and source comparison must be delegated under [[21_FDG_Multi_Collaborator_Intelligence_System/01_Architecture/FMCIS-DISP-001 - Delegation First Agent Execution Rule|Delegation-First Rule]] and validated by domain owners; no one should claim that a memory issue is fully solved merely by creating this register.
+
+
+## FEIS Computational Engineering & Validation Handover — 2026-11-08
+
+[[08_FEIS_Engineering_Intelligence_Systems/08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS Master Index]] now links the proposed [[08_FEIS_Engineering_Intelligence_Systems/08_Computational_Engineering_Simulation_and_Validation/FEIS-CESV-0000 - Computational Engineering Simulation and Validation Architecture|FEIS Computational Engineering, Simulation & Validation Architecture]]. This establishes a shared, solver-neutral computational capability and the proposed FDG Engineering Benchmark & Validation Library for cross-FEIS use. It is an architecture proposal only; implementation and engineering acceptance are not claimed.
+
+The handover includes a monitoring research watchlist entry for **AInovaph**. Its identity remains unverified; the potentially related AINAV site is explicitly recorded as an unconfirmed lead, not an assumed match. Continue from the FEIS handover and preserve the existing FEIP standards pending controlled reconciliation.
