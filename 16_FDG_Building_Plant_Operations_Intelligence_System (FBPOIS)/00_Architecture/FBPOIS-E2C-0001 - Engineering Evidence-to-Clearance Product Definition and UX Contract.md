@@ -337,3 +337,32 @@ Do not change these open items to resolved because a design is documented, a bra
 - [PR #18 — actorless terminal-transition safety correction](https://github.com/guinoome/fdg-knowledge-repository/pull/18)
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|FBPOIS Master Index]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/00_Architecture_Master_Index|FBPOIS Architecture]] → this product contract.
+
+
+## 16. Source-to-build acceptance identifiers
+
+These identifiers make the founder-directed product requirements addressable by FPJIS work packages. They are **acceptance requirements, not claims that executable tests or features already exist**. Each implementation must map the IDs to exact code paths, executed tests, evidence and qualified human acceptance.
+
+| Requirement ID | Required behavior | Acceptance ID | Acceptance condition |
+|---|---|---|---|
+| E2C-UX-01 | Technician My Work pre-fills known assignment, property/location/asset, priority and next action; no duplicate data entry | E2C-AC-01 | Technician completes a bounded synthetic work order using only task-specific new inputs; saved draft resumes after restart |
+| E2C-EVD-02 | Evidence is attached to the correct work-order revision and contextual Before/Findings/Work/After/Test categories | E2C-AC-02 | Original bytes/reference, category, caption, capture method and timestamps survive save, return, revision and reload |
+| E2C-REV-03 | Supervisor reviews a frozen submission, returns a field/evidence-specific deficiency and preserves all revisions | E2C-AC-03 | Return creates a correction task; original snapshot and return reason remain inspectable; resubmission creates a new revision |
+| E2C-TECH-04 | Duty Engineer verifies actual test result against a criterion/reference and records the verification basis | E2C-AC-04 | Missing, failed or out-of-range mandatory test cannot be marked verified; valid result records criterion, units, actor, time and evidence |
+| E2C-AUTH-05 | Approval routes through authenticated, competent, independent authority under current property/asset scope and policy version | E2C-AC-05 | Self-approval, wrong-property/asset, unassigned reviewer, invalid/expired/revoked delegation and unknown classification are denied server-side |
+| E2C-OPS-06 | FMIS maintenance closure and FWIS operational restriction release are separate decisions | E2C-AC-06 | Work order may be verified/closed without clearing OOO/OOS; restriction remains until separate authorized FWIS release |
+| E2C-SYNC-07 | Offline capture and queued actions synchronize idempotently with explicit conflict handling and authority revalidation | E2C-AC-07 | Reconnect/retry produces no duplicate work or evidence; conflicting revision is visible; stale/offline approval cannot finalize after authority revocation |
+| E2C-OUT-08 | Work-order closeout dossier is generated from an immutable source snapshot with linked evidence and approval history | E2C-AC-08 | Each key fact, photo and decision drills through to its exact source record/revision; reopened approved snapshot remains stable |
+| E2C-MGT-09 | Monthly engineering brief derives verified metrics and exceptions from FMIS/FWIS records | E2C-AC-09 | Independently recalculated counts/percentages reconcile to source records; period, denominator, freshness and coverage gaps are visible |
+| E2C-NEX-10 | Nex produces read-only, evidence-linked engineering and management drafts for authorized records | E2C-AC-10 | Each claim identifies source records, calculation/method, limitations and action owner; unauthorized data is denied; no approval/closure/release write is performed |
+| E2C-GOV-11 | Workflow decisions and report snapshots preserve actor, role/scope, policy/delegation version, reason, time, revision and evidence links | E2C-AC-11 | Audit history is complete, immutable for accepted decisions, and independently reconstructs who did what under which authority |
+
+### Traceability state
+
+- Product intent and acceptance identifiers: **RESOLVED_IN_MAIN** in this document.
+- Facility-approved authority limits and named approver grants: **OPEN / APPROVAL_PENDING**.
+- Implementation source references: **NOT YET MAPPED TO AN AUTHORIZED E2C BUILD PACKAGE**.
+- Executable test references and exact-build evidence: **NOT YET RUN / NOT CLAIMED**.
+- Qualified facility-user acceptance: **PENDING**.
+
+An FPJIS work package must bind each selected requirement to an approved source/decision, exact current-main specification revision, owned implementation files, test identifier and actual execution output. Missing or unresolved items block only the affected E2C implementation slice. Documentation completeness must never be reported as functional acceptance.
