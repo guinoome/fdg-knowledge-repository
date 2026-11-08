@@ -477,3 +477,14 @@ A room may return to sellable hospitality inventory only after all applicable ga
 
 Detailed contract:
 [[20_FPJIS_FDG_Project_Intelligence_System/34_Hospitality_Operations_and_Hotel_Management_Blueprints/25_Hotel_PMS_to_FBPOIS_Interface_Blueprint|Hotel PMS ↔ FBPOIS Interface Blueprint]].
+
+
+---
+
+## Engineering Evidence-to-Clearance Boundary — 2026-11-08
+
+FWIS OOO/OOS remains the operational system of record for availability restrictions and their release. It contributes this state to [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance]].
+
+An FMIS work order reaching Work Complete, Verified or Closed does not automatically release an FWIS restriction. The applicable inspection/verification evidence must be linked; the authorized FWIS release action must be separately performed and audited under the relevant operational authority. E2C must display a continuing restriction prominently until that separate release is recorded.
+
+The cross-domain workflow and management-report UX may be benchmarked against [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA]], but KANNA does not define FDG restriction policy or release authority.
