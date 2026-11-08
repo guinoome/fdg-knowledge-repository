@@ -250,3 +250,18 @@ and
 [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/16_Exist_First_Enhance_by_Traceable_Patches_Standard|Exist First, Enhance by Traceable Patches Standard]].
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)_Master_Index|FBPOIS]] → this baseline definition.
+
+
+---
+
+## Founder Product Direction — Engineering Evidence-to-Clearance, 2026-11-08
+
+The product containing this first working slice is now named **FDG Engineering Evidence-to-Clearance (E2C)**. Concern-to-Clearance remains the first bounded workflow; this baseline is not replaced.
+
+**Core promise:** Technicians capture once. Supervisors review easily. Engineers verify technically. Management decides confidently. Nex produces the intelligence automatically.
+
+The product UX and acceptance contract is [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FBPOIS-E2C-0001]]. The design must be card-, timeline- and evidence-led, mobile-friendly and contextual—not an Excel-like reporting interface. Closeout and monthly reports are generated from the same authoritative records; they are not a separate reporting application.
+
+Cross-check external interaction patterns in [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]. Reuse suitable patterns without importing KANNA's data model, vendor dependency or authority rules.
+
+This addendum clarifies the product direction only. The baseline's original R0.1.0 scope, local-first requirement, acceptance gate and separate build authorization remain in force. Facility-specific approval thresholds and runtime closure authority remain unresolved under Issue #11.
