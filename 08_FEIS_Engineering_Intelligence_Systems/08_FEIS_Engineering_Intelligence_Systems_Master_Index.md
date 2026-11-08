@@ -185,3 +185,20 @@ FEIS now includes a canonical multidiscipline quantity-takeoff and drawing-measu
 Boundary: QTO is a FEIS capability pack. It is not the Construction OS. Construction OS consumes governed quantities/BOQ lineage while QTO retains drawing, calibration, geometry, provenance and technical review authority.
 
 Implementation rule: independently authored FDG kernel; no upstream AGPL source import without explicit FLIS/legal and technical authorization.
+
+
+---
+
+## Computational Engineering, Simulation & Validation Extension — 2026-11-08
+
+FEIS now has a proposed shared computational engineering capability architecture:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/08_Computational_Engineering_Simulation_and_Validation/FEIS-CESV-0000 - Computational Engineering Simulation and Validation Architecture|FEIS Computational Engineering, Simulation & Validation (CESV)]]
+
+The proposal establishes shared problem definition, geometry/property/boundary-condition contracts, solver gateway, execution orchestration, result semantics, verification, validation, uncertainty, engineering model registry and benchmark interfaces. CFD, FEA, thermal, dynamics, hydraulics, HVAC/psychrometrics, energy and multiphysics are domain adapters over shared services—not separate platforms.
+
+The architecture also establishes the proposed FDG Engineering Benchmark & Validation Library, explicit distinction between verification and validation, agent-generated engineering as untrusted candidate work, CORE evidence lineage and a phased acceptance-gated roadmap.
+
+**External monitoring research:** AInovaph is included as a user-requested watchlist entry; its exact identity and official URL remain unverified. AINAV (https://ainav.id/) is recorded only as a potentially relevant but unconfirmed research lead. Do not conflate the names or treat either as an approved dependency.
+
+**Status boundary:** this is an additive proposal and collaborator handover. No solver has been adopted or qualified, no benchmark has been approved, and no implementation or production readiness is claimed. Existing FEIP standards remain authoritative until controlled reconciliation and approval.
