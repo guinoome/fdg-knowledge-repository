@@ -226,3 +226,26 @@ FBPOIS §5.2 requires a Master Index per folder and §5.3 requires it to link bo
 The `implementation/` subfolder is named in plain text rather than linked: it holds code, not knowledge, and §5.4 forbids linking what does not resolve as a document.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document
+
+
+---
+
+## Register Entry — 2026-11-08
+
+### D-2026-11-08-01 — FDG Engineering Evidence-to-Clearance product direction
+
+**Classification:** Founder-directed product direction; UX/domain requirements documented; facility authority and implementation acceptance remain open.
+
+The next FBPOIS product is **FDG Engineering Evidence-to-Clearance (E2C)**. The existing Concern-to-Clearance L1A baseline is its first bounded workflow. The product composes FMIS maintenance records, FWIS operational/restriction records and the shared workflow engine; it is not a separate reporting application.
+
+**Core promise:** Technicians capture once. Supervisors review easily. Engineers verify technically. Management decides confidently. Nex produces the intelligence automatically.
+
+**Canonical UX/product contract:** [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FBPOIS-E2C-0001]].
+
+**External benchmark:** [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA competitive workflow and field UX study]]. Reuse selected interaction patterns only; no vendor dependency.
+
+**Resolved in main:** product identity, initial workflow relationship, UX principles, source ownership boundaries, status separation and the fact that generated reports are derived outputs.
+
+**Still open:** site-approved work-class thresholds and authority grants; actor-bound service/API terminal transitions; independent reviewer/maintainer decisions on PR #14/#16/#18; negative/offline/sync regression evidence on the accepted main build; actual facility pilot and qualified-user acceptance.
+
+Issue #11 remains open. Current main FMIS code and draft PR states must be checked before implementation; no PR is treated as merged or accepted by this register entry.
