@@ -35,7 +35,7 @@ Use these Obsidian wiki links as the primary navigation map.
 ## Agentic engineering
 
 - [[FWAIS Workflow Generation]]
-- [[FWAIS Workflow-as-Code / Reproducibility]]
+- [[19_FWAIS — FDG Workflow Automation Intelligence System/05_Agentic_Workflow_Engineering/02_Workflow_as_Code/FWAIS_Workflow_as_Code|FWAIS Workflow-as-Code / Reproducibility]]
 - [[FWAIS Agent Tool Selection]]
 - [[FWAIS Human-in-the-Loop Pattern]]
 - [[FWAIS Self-Healing Workflow Pattern]]
