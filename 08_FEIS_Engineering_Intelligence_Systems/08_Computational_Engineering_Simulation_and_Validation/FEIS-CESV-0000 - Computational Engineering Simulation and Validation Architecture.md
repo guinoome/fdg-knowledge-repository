@@ -134,7 +134,7 @@ CESV does not replace domain authority in FEIS standards or execution authority 
 
 Add **AInovaph** as a user-requested external research watchlist entry for monitoring-related ideas relevant to FEIS. Its exact identity, official URL and product scope remain **unverified**. Do not silently substitute another similarly named vendor.
 
-A potentially related but unconfirmed discovery is **AINAV** at https://ainav.id/. Its public website describes infrastructure observability/monitoring, fleet metrics, power-supply health, physical monitoring, inventory/rack/server visibility, self-hosted execution agents, sandboxing, human approval and auditability. This is a research lead only; it is not evidence that AINAV is AInovaph, not a procurement recommendation and not an approved FEIS dependency.
+**Correction:** The intended reference is **AInovaph**, a Facebook presence/page identified by the user. It is not AINAV and must not be substituted with AINAV or similarly named services. The exact Facebook page URL and independently verifiable product details have not yet been supplied/confirmed. Keep AInovaph on the FEIS external-reference monitoring watchlist; review its actual posts, products, demonstrations and technical claims once the exact page is identified. Until then, do not attribute capabilities, recommend procurement or treat it as an approved dependency.
 
 Once the exact reference is confirmed, investigate:
 - physical/system telemetry, sampling rates and supported protocols;
