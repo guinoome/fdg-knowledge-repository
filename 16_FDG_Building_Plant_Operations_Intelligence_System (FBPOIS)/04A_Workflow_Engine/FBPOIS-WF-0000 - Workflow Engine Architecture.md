@@ -386,3 +386,41 @@ Related:
 | 1.0 | Initial Draft | Workflow Engine Architecture |
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04A_Workflow_Engine/04A_Workflow_Engine_Master_Index|04A Workflow Engine Master Index]] → this document
+
+
+---
+
+## Engineering Evidence-to-Clearance Workflow Profile — 2026-11-08
+
+The shared Workflow Engine executes the founder-directed [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|Engineering Evidence-to-Clearance (E2C)]] workflow. It coordinates FMIS maintenance records with FWIS operational restrictions without taking ownership of either domain's records.
+
+### Standard responsibility sequence
+
+**Technician submission → Supervisor review → Duty Engineer technical verification → Engineering Manager / Chief Engineer decision when required by policy.**
+
+The Workflow Engine must distinguish:
+- submission and work execution;
+- completeness/workmanship review;
+- technical verification against a criterion;
+- management approval or exception decision;
+- FMIS maintenance closure;
+- separate FWIS operational restriction release.
+
+A routine work class may use a shorter approval route only when an approved authority policy explicitly provides the eligible role, competency, property/asset scope, conditions and delegation. Unknown, conflicting, expired or missing policy inputs fail closed and escalate. Do not invent cost/risk/downtime thresholds.
+
+### Required workflow behavior
+
+- Route each stage to an authenticated person with current record/property scope and the applicable policy version.
+- Prevent self-approval and enforce separation of duties.
+- Return to a named earlier stage with a reason linked to the deficient field/evidence item; preserve the submitted revision and decision history.
+- Freeze the submitted snapshot during review; resubmission creates a new revision.
+- Keep priority, readiness, work lifecycle, review lifecycle and operational restriction as separate dimensions.
+- Record actor, role/scope, timestamp, previous/new state, action, reason, record revision, evidence references and authority/delegation basis for every consequential transition.
+- Treat offline approvals as pending until the server revalidates current authority, delegation, record revision and policy.
+- Never translate FMIS Work Complete/Closed into a FWIS OOO/OOS release automatically.
+
+### Resolution status
+
+This profile records the founder-directed product flow and its system boundaries. The Workflow Engine specification remains Draft; facility authority thresholds, approved policy publication, actor-bound service implementation, negative/offline tests and operational acceptance remain open under Issue #11.
+
+Use [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]] as an external UX cross-check only. It does not define FDG transitions or authority.
