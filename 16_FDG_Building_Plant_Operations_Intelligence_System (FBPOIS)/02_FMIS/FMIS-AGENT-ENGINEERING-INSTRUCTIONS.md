@@ -1414,3 +1414,25 @@ The current local FMIS is the foundation.
 The later FBPOIS integration is an expansion, not a reason to compromise the local system.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/02_FMIS/00_FMIS_Master_Index|00 FMIS Master Index]] → this document
+
+
+---
+
+# 44. Engineering Evidence-to-Clearance Product Handover — 2026-11-08
+
+**Founder-directed next product:** FDG Engineering Evidence-to-Clearance (E2C). The first bounded workflow remains FBPOIS-L1A Concern-to-Clearance. Read the canonical [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FBPOIS-E2C-0001 Product Definition and UX Contract]] before changing FMIS work-order, inspection, evidence, testing, closure or report behavior.
+
+**External UX reference:** [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]. Collaborators should cross-check its published template, camera-first photo, send-back/resubmission, approval and offline patterns whenever they work on field capture or review UX. KANNA is a benchmark only. Do not copy its data model, authority, SaaS dependencies or visual layout, and do not make FDG dependent on a KANNA account or MCP connection.
+
+**Product experience rule:** build a guided, card/timeline/evidence-led experience, not an Excel-like maintenance report interface. Technicians see assigned work and capture once; Supervisors review completeness/workmanship; Duty Engineers verify technically; Engineering Managers/Chief Engineers decide matters reserved by the approved authority policy. Closeout and monthly management reports are generated outputs of the same underlying FMIS/FWIS records, not a second data-entry process.
+
+**Preserve existing FMIS architecture:** the approved local FMIS implementation decision retains Python/Tkinter over SQLite for the existing local milestone. E2C does not authorize replacing that desktop implementation with a browser/PWA or adding cloud dependencies to the local milestone. Cross-system mobile UX and later integration are separate, scoped work packages.
+
+**Current blockers — do not mark resolved from documentation alone:**
+- FBPOIS-ROLE-0004 now records the founder-directed sequence and management-by-exception requirement on main, but remains Draft pending qualified facility/site approval and numerical thresholds.
+- Current-main FMIS service still permits actorless terminal work-order/PM transitions. Draft PR #18 fail-closes those operations but has no complete actor-bound closeout path and is not merged.
+- PR #14 source-to-build preflight remains unmerged; no required main-branch enforcement is established.
+- Real property/asset-scoped authorization, stale/offline delegation denial, evidence and audit integration tests, and facility-user acceptance remain outstanding.
+- Issue #11 remains OPEN.
+
+Before any affected implementation, read Issue #11, the current main role matrix, E2C-0001, FMIS-0006, FBPOIS-WF-0000 and the latest exact PR/branch state. Follow existing FPJIS source-to-build and project-start/security preflights. Do not merge PR #14/#16/#18, authorize a facility policy, deploy, or claim a production workflow from this handover.
