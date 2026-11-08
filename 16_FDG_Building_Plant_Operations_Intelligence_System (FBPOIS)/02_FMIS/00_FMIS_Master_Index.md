@@ -87,3 +87,14 @@ FMIS consumes the FEIS maintenance-readiness standards for planning quality, Rea
 - [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/FEIS-MNT-0003 - Maintenance Readiness Data Model KPI and Acceptance Tests|Data Model, KPI & Acceptance Tests]]
 
 FMIS remains the operational system for facility work orders, PM occurrences, backlog, assignments, maintenance history and plant/equipment status. FEIS does not replace FMIS execution ownership.
+
+
+## Engineering Evidence-to-Clearance Relationship — 2026-11-08
+
+FMIS remains the maintenance system of record within the founder-directed [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance product]].
+
+FMIS owns work orders, maintenance findings, corrective action, materials, testing, verification and maintenance closure. The shared workflow engine routes reviews and enforces the approved authority policy. FWIS independently owns operational restrictions and OOO/OOS release.
+
+For field capture, evidence presentation, send-back/resubmission and mobile/offline UX patterns, consult the [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA benchmark study]]. Do not create a separate FMIS reporting interface or copy KANNA's domain model.
+
+**Authority state:** FBPOIS-ROLE-0004 remains Draft; Issue #11 remains open. The current-main actorless terminal-transition defect must not be represented as resolved.
