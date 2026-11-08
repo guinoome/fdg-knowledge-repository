@@ -411,3 +411,26 @@ Related:
 | 1.0 | Initial Draft | Reports Functional Specification |
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/01_FWIS/01_FWIS_Master_Index|01 FWIS Master Index]] → this document
+
+
+---
+
+## Engineering Evidence-to-Clearance Output Boundary — 2026-11-08
+
+FWIS Reports participates in [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FDG Engineering Evidence-to-Clearance]] as an output and operational-context consumer. This does **not** make FWIS the owner of FMIS maintenance records or create a second reporting product.
+
+E2C closeout and monthly engineering outputs are generated from authoritative records:
+- FMIS supplies work orders, PM occurrences, findings, corrective actions, materials, test/verification results and maintenance history.
+- FWIS supplies concerns, plant/room operational context, incidents, logbook/shift events, restrictions and OOO/OOS state.
+- Shared Data Platform supplies organization/property/location/asset references.
+- The Workflow Engine supplies review, decision, escalation and audit events.
+
+The output is a versioned snapshot with source record IDs/revisions, evidence references, approval history, reporting period, data-as-of time, synchronization freshness and known coverage gaps. Regeneration from changed sources creates a new report revision; it does not mutate an already approved snapshot.
+
+The primary experience is a readable engineering dossier or monthly management brief: clear hierarchy, narrative findings, visual evidence panels, trend views, exception cards and source drill-through. Avoid spreadsheet-like rows as the default interface. CSV/Excel remain optional export formats for users who need secondary analysis.
+
+Reports must not invent or silently infer asset health, downtime, MTTR, MTBF, PM compliance, costs or energy performance. Each metric requires an authoritative source, a defined period and denominator, and visible data coverage. Missing values are Unknown / Not Reported, not zero or normal.
+
+Nex may prepare source-linked report drafts from records the current user is authorized to access. The report module does not grant Nex approval, work-order closure or restriction-release authority.
+
+Cross-check the KANNA interaction benchmark at [[19_FWAIS — FDG Workflow Automation Intelligence System/03_Industry_Intelligence/03_Global/KANNA_COMPETITIVE_WORKFLOW_UX_STUDY_2026-11-08|KANNA Competitive Workflow and Field UX Study]]; use it for selected UX patterns, not as an FDG data or approval authority.
