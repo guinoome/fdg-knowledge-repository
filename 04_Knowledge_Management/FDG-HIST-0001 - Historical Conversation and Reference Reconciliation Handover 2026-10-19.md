@@ -126,3 +126,50 @@ These are **source leads or private Library filenames**, NOT verified extracted 
 5. **Readback and signoff:** GitHub main/branch evidence receipts, source/checklist hashes, real test environment and legitimate facility-user approval; Issue #11 remains **OPEN** until its original criteria pass.
 
 **No real subagent dispatch was possible in this chat; this was direct connector-based evidence reconciliation and a non-code, additive knowledge record.** No production code/migrations, permissions, policy approvals, public deployment or persistent chat listener changed. Issue #20 collaborator harness stays separate; Issue #11 remains the **higher-priority source-to-build** task.
+
+
+---
+
+## 2026-11-08 — E2C product, authority and source-to-build reconciliation update
+
+**Pinned main at entry:** `15def7d15d06516a8a7baf6b6d854e75da99c32c`.  
+**Current E2C acceptance-contract follow-up:** `c03a7d512820833ad47c7af70bbacda4dfd71c9a`.
+
+This is an additive status update to the existing source-to-build register. It does not replace the 2026-10-26 I11-F01..F11 historical findings or claim a whole-history/source audit has been repeated.
+
+### Mainline facts now resolved or materially reconciled
+
+- **Product decision:** founder-directed next FBPOIS product is **FDG Engineering Evidence-to-Clearance (E2C)**. Canonical product/UX contract: [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/00_Architecture/FBPOIS-E2C-0001 - Engineering Evidence-to-Clearance Product Definition and UX Contract|FBPOIS-E2C-0001]]. It explicitly reuses the current Concern-to-Clearance L1A baseline and existing FMIS/FWIS ownership.
+- **Acceptance trace:** E2C-0001 now contains stable E2C-UX/EVD/REV/TECH/AUTH/OPS/SYNC/OUT/MGT/NEX/GOV requirement IDs and E2C-AC-01..11 acceptance conditions. These are requirement identifiers only; implementation refs, executable tests and human acceptance remain unpopulated/open.
+- **KANNA reference:** the competitive UX study is now a canonical FWAIS source and linked into FBPOIS, FMIS, FWIS, root AGENTS.md/CLAUDE.md, FMIS engineering instructions and active FWIS project README. KANNA is an external UX benchmark, not an FDG dependency or authority.
+- **Authority direction:** current-main [[16_FDG_Building_Plant_Operations_Intelligence_System (FBPOIS)/04_User_Roles/FBPOIS-ROLE-0004 - Workflow Authorization Matrix|FBPOIS-ROLE-0004]] now has separate routine vs unclassified/critical/exception Work Order and PM rows, with the founder-directed Technician → Supervisor → Duty Engineer / ESM → Engineering Manager / Chief Engineer responsibility chain. It records positive classification, independent actor, property/asset scope, delegation validity, separation of duties, offline revalidation and separate FWIS OOO/OOS release. **The matrix remains Draft and site approval pending.** No numerical thresholds or live grants were invented.
+- **Cross-domain boundary:** current-main FMIS-0006, FWIS OOO/OOS, FWIS Reports and FBPOIS-WF-0000 cross-reference E2C and preserve separate maintenance, technical verification, closure and operational release.
+
+### Revised I11 disposition
+
+| Gap | 2026-11-08 status | Remaining acceptance |
+|---|---|---|
+| I11-F01 — routine vs exception approval conflict | **MAINLINE REQUIREMENT RECONCILED / SITE AUTHORITY OPEN**. Generic single Work Order row replaced with class-specific Work Order and PM routine/exception rows in main. | Qualified facility/site owner approval of work classes, competency, scope, delegation and numerical thresholds; independent review before runtime grant. |
+| I11-F02 — actorless terminal writes | **OPEN**. Current-main FMIS `services.py` still permits actorless terminal transitions. | Actor/property/asset/delegation/evidence-bound service path, legitimate successful closeout, denial tests and qualified acceptance. PR #18 only fail-closes the reviewed branch and is unmerged. |
+| I11-F03 — demo credentials / unsalted SHA-256 | **OPEN / NOT FIXED BY E2C DOCUMENTATION**. | Security owner review, maintained password hashing/migration and actual negative tests on the distributable application. |
+| I11-F04 — FWIS README/authz/schema mismatch | **OPEN / NOT RE-AUDITED IN THIS UPDATE**. Earlier verified source drift remains controlling. | Resolve actual code-vs-documentation discrepancy, execute database/RLS/grant positive/negative tests and update implementation record. |
+| I11-F05 — source-to-build gate PR #14 | **OPEN / NOT MERGED OR ENFORCED**. | Maintainer/FSIS review, current-head CI, selective merge if approved, and separate authorized required-check/branch protection. |
+| I11-F06 — FMIS core workflow and implementation map | **PARTIAL / OPEN**. E2C requirement and acceptance IDs are now explicit; existing local FMIS prototype remains distinct from the unbuilt E2C acceptance chain. | FPJIS work package maps each accepted ID to exact current-main service/UI/data, executed test and facility acceptance. |
+| I11-F07 — FMIS vs FWIS operational restriction release | **BOUNDARY CLARIFIED IN MAIN / RUNTIME TEST OPEN**. | Cross-system integration and denied implicit release test on exact accepted build. |
+| I11-F08 — offline identity/migration | **OPEN / SOURCE AND RUNTIME NOT VERIFIED**. | Original authorized AppSheet/export source, migration dry run, restore, duplicate/replay/conflict tests and local/offline role proof. |
+| I11-F09 — distinct role dashboards | **PRODUCT UX SPECIFIED / IMPLEMENTATION AND UAT OPEN**. | Exact role query/source mapping, permission tests, empty/stale/error states and qualified field UAT. |
+| I11-F10 — historical test/export/backup claims | **HISTORICAL EVIDENCE NOT CURRENT BUILD; OPEN**. | Recover exact historical branch/commit or classify stale claims; verify current backup/restore/export functionality before any readiness claim. |
+| I11-F11 — original conversations/media completeness | **OPEN / SOURCE COVERAGE PARTIAL**. | Accessible authorized sources only; no complete historic export or private media review claimed. |
+
+### Current PR state at time of this update
+
+- [PR #14](https://github.com/guinoome/fdg-knowledge-repository/pull/14): open, not merged, not required/enforced on main.
+- [PR #16](https://github.com/guinoome/fdg-knowledge-repository/pull/16): open draft; its branch proposal must be reconciled against current main; it is not a site policy approval.
+- [PR #18](https://github.com/guinoome/fdg-knowledge-repository/pull/18): open draft; terminal guard only, no accepted actor-bound completion path.
+- [Issue #11](https://github.com/guinoome/fdg-knowledge-repository/issues/11): **OPEN**.
+
+### Execution truth
+
+The 2026-11-08 work in this session was additive documentation, handover and wikilink reconciliation. **No application code, database migration, role grant, branch protection, PR merge, deployment, live KANNA trial, external MCP connection, facility work order or user acceptance was performed.** No subagent was dispatched. The main recursive tree and changed E2C/FBPOIS/FMIS/FWIS/FWAIS/collaborator links were checked; no broken full-path wikilinks were found in the scoped updated documents.
+
+The next authorized work remains: qualified site authority decision → independent review of PR #14/#18 → a bounded actor/evidence-bound FMIS closeout work package with real positive/negative/offline tests → authorized facility pilot. Do not build another report interface or mark Issue #11 closed.
