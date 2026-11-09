@@ -248,3 +248,29 @@ Do not start a solver or CAD integration before that candidate passes the engine
 
 [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems_Master_Index|FEIS Master Index]] → [[00_Mechanical Engineering Intelligence_Master_Index|Mechanical Engineering Intelligence]] → this handover.
 
+## 11. Strategic direction and verification record
+
+### Collaborator investigation priority
+
+The most important proposed activity is **WP-B: Deterministic Calculation and Benchmark Pilot**.
+
+Start with an actual mechanical engineering problem, establish its authoritative inputs, independently derive the expected result, and create a benchmark that can test both engineering calculations and AI-generated solutions.
+
+This turns the video from an AI learning reference into a potential contribution to FEIS's reusable engineering validation capability.
+
+### Verification record at handover preparation
+
+| Item | Recorded state |
+|---|---|
+| Wikilink validation | 0 broken targets in the two new documents |
+| Repository comparison | 6 files changed and verified against the target branch |
+| Engineering implementation | Not performed |
+| Engineering approval | Pending |
+
+These are repository/documentation checks only. They do not establish engineering-method validity, calculation correctness, solver validation, implementation readiness or professional approval.
+
+### Strategic direction
+
+**FEIS should become an engineering intelligence system that can challenge, calculate, simulate, validate and learn—not merely generate engineering answers.**
+
+This direction is an architectural objective. Each capability must still be demonstrated through controlled implementation, independent verification, appropriate physical validation and assigned engineering approval.
