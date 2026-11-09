@@ -141,3 +141,10 @@ No capability advances by implication. New methods are additive; conflicting or 
 [[FDG Ecosystem|FDG Ecosystem]] → [[17_FDG_Platform_Intelligence_System/00_FPI_Home|FPIS Home]] → [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/00_Index|Platform Experience & Design Intelligence]] → this master.
 
 Related governance: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENCE_ARCHITECTURE_STANDARD|FDG CORE]], [[04_Knowledge_Management/00_KNOWLEDGE_MODEL|Knowledge Management]], [[05_Knowledge_Architecture/00_ARCHITECTURE_MODEL|Knowledge Architecture]], [[07_Nex_Core_Intelligence/NEX_OPERATING_CONSTITUTION|Nex Operating Constitution]].
+
+## 12. Course research and collaborator handover — 2026-11-09
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001 — ContentCreator AI Creator Course Public Source Review]] — public syllabus review, existing FDG comparison, evidence boundary and pending lesson-level intake.
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|Cross-Collaborator Research and Build Handover]] — roles, review assignments, source links, response format, research gates and first integrated pilot.
+
+**Current status:** public landing page source-reviewed; paid curriculum not ingested. The next milestone is authorized lesson-level review, cross-domain gap analysis and one measured end-to-end production pilot.
