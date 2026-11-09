@@ -269,3 +269,12 @@ Related authorities:
 - [[08_FEIS_Engineering_Intelligence_Systems/05_Multidiscipline_Engineering_Intelligence/00_Multidiscipline_Engineering_Intelligence_Master_Index|Multidiscipline Engineering Intelligence]]
 - [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/00_QTO_and_Drawing_Measurement_Intelligence_Master_Index|QTO & Drawing Measurement Intelligence]]
 - [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|Maintenance & Reliability Intelligence]]
+
+
+## Mechanical Engineering Workflow Reference Cross-Link — 2026-11-09
+
+The source-derived mechanical workflow themes in [[FEIS-MECH-RSCH-0001 - AI-Assisted Mechanical Engineering Workflow - Esign Hub Reference Extraction|FEIS-MECH-RSCH-0001]] are a domain-level input to CESV research, not a competing computational architecture.
+
+Reuse CESV for typed problem definition, calculation/simulation orchestration, result semantics, verification, validation, uncertainty and benchmark interfaces. Mechanical-domain collaborators should additionally examine requirements decomposition, failure-hypothesis workflows, constrained CAD automation, drawing pre-checks, sensor-to-physics interpretation and engineering-change impact.
+
+The collaborator execution brief is [[FEIS-MECH-0900 - AI-Assisted Mechanical Engineering Collaborator Handover]]. The source reference does not qualify a solver, approve a benchmark, establish an engineering method or authorize an autonomous engineering decision.
