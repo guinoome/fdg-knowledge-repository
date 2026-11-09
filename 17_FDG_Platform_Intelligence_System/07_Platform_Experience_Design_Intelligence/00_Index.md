@@ -50,3 +50,9 @@
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Production_Playbook|Production Playbook]] — repeatable brief-to-release workflow, story/shot design, continuity, QA and outcome measurement.
 
 Existing source-reviewed capabilities remain authoritative references: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/08_Visual_Craft_Collaborator_Skills_and_Tooling_2026-10-23|Visual Craft Skills]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/09_Huashu_Motion_Cinematic_Product_Film_Adapter_2026-10-23|Huashu Motion Adapter]]. No workstation installation or production runtime is implied.
+
+### FDG Filmmaking Intelligence — course review and collaborator handover (2026-11-09)
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001 — ContentCreator AI Creator Course Public Source Review]]
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|FDG Filmmaking Intelligence — Cross-Collaborator Handover]]
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence Master]]
