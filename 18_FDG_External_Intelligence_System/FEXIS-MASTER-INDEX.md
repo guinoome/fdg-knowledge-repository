@@ -76,3 +76,14 @@ The current tracked folder is `18_FDG_External_Intelligence_System`; the earlier
 
 - [[18_FDG_External_Intelligence_System/04_Search_Intelligence/FEXIS-SEO-0001 - FDG Website SEO Conversion Readiness Blueprint|FEXIS-SEO-0001 — SEO & Conversion Readiness]] — Video-discovered 18-point SEO checklist reconciled with Google Search Central; project-level draft for technical indexing, truthful structured metadata, private-route protection, mobile field metrics and real lead conversion. Existing [[18_FDG_External_Intelligence_System/04_Search_Intelligence/FEXIS-SEO-0000 - Search Intelligence|FEXIS-SEO-0000]] retains system ownership.
 - [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-003_Search_to_Qualified_Inquiry_and_Quotation_Playbook|FBIS-PLB-003 — Search-to-Qualified-Inquiry]] — FBIS buyer-to-quotation operational handoff; no live release or customer data implied.
+
+
+---
+
+## Filmmaking / creator-economy research boundary — 2026-11-09
+
+FEXIS may identify and monitor relevant public sources, topics, creator methods, platform changes and external signals where these activities fit its approved external-intelligence scope. FEXIS does **not** own FDG filmmaking craft, production workflows or creative acceptance.
+
+The downstream domain knowledge and production methods are maintained by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence]], under FPIS and consumed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|FDG Creative Studio]]. Relevant business strategy and campaign outcomes remain with FBIS; approved publishing automation remains with FWAIS.
+
+External-source monitoring, transcript extraction and channel automation are not claimed to be operational by this link. They require source authorization, provenance, timestamp retention, verification, cost/security controls and runtime acceptance under the [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Research_and_Learning_Standard|Filmmaking Research and Learning Standard]].
