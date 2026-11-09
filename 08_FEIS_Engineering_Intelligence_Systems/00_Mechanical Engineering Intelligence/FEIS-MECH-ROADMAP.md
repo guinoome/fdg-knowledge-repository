@@ -364,6 +364,18 @@ Research items shall not be implemented until technical feasibility has been val
 
 ---
 
+## AI-Assisted Mechanical Engineering Workflow Reference — 2026-11-09
+
+Research reference: [[FEIS-MECH-RSCH-0001 - AI-Assisted Mechanical Engineering Workflow - Esign Hub Reference Extraction|Esign Hub - Heavy Machinery reference extraction]].
+
+Collaborator continuation: [[FEIS-MECH-0900 - AI-Assisted Mechanical Engineering Collaborator Handover|AI-Assisted Mechanical Engineering Collaborator Handover]].
+
+Research themes include engineering problem decomposition, measurable requirements, missing-input analysis, repeatable calculation pipelines, design-space exploration, surrogate-model limits, parametric CAD constraints, drawing pre-checks, controlled standards retrieval, failure hypotheses/FMEA, sensor analytics, digital-twin evidence, engineering-change impact and bounded agents.
+
+**Disposition:** research backlog/reference only. No new implementation, platform, CAD adapter, solver, calculation method or engineering authority is approved by this entry. Reuse the existing FEIS Mechanical branch, FEIP standards and proposed [[FEIS-CESV-0000 - Computational Engineering Simulation and Validation Architecture|CESV]] architecture. Do not conflate the video's four AI-adoption levels with FEIS's existing engineering-module maturity model (Levels 0–5).
+
+---
+
 # 8. Deferred Features
 
 The following capabilities are intentionally deferred.

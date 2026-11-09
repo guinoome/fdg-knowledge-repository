@@ -202,3 +202,15 @@ The architecture also establishes the proposed FDG Engineering Benchmark & Valid
 **External monitoring research:** **Correction:** The intended reference is **AInovaph**, a Facebook presence/page identified by the user. It is not AINAV. The exact Facebook page URL and technical scope remain to be confirmed; monitor its actual public content once identified. Do not attribute capabilities or treat it as an approved FEIS dependency without evidence.
 
 **Status boundary:** this is an additive proposal and collaborator handover. No solver has been adopted or qualified, no benchmark has been approved, and no implementation or production readiness is claimed. Existing FEIP standards remain authoritative until controlled reconciliation and approval.
+
+
+---
+
+## Mechanical Engineering AI-Assisted Workflow Reference — 2026-11-09
+
+FEIS Mechanical now has a source-backed research extraction and collaborator handover based on the user-supplied Esign Hub - Heavy Machinery video transcript:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-RSCH-0001 - AI-Assisted Mechanical Engineering Workflow - Esign Hub Reference Extraction|AI-Assisted Mechanical Engineering Workflow — Reference Extraction]]
+- [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-0900 - AI-Assisted Mechanical Engineering Collaborator Handover|AI-Assisted Mechanical Engineering Collaborator Handover]]
+
+This is an additive research reference under the existing Mechanical Engineering branch. It maps problem decomposition, calculation automation, design-space exploration, CAD rules, drawing pre-checks, failure investigation, sensor analytics and bounded engineering agents to existing FEIS/FEIP/CESV authorities. It does not create a new AI engineering platform or approve any implementation, solver, calculation method or design workflow.
