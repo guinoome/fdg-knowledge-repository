@@ -607,3 +607,11 @@ Ownership remains distributed:
 - FLIS / FSIS govern rights, privacy and security; FAIS audits material approvals; FPJIS governs implementation and acceptance.
 
 See [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Research_and_Learning_Standard|Research and Learning Standard]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Production_Playbook|Production Playbook]]. The master is a documented domain structure, not an operational autonomous monitor or proven video-generation pipeline.
+
+## Filmmaking Intelligence handoff and production pilot — 2026-11-09
+
+FDG Creative Studio is the production layer in the governed chain: **FEXIS discovers. Filmmaking Intelligence understands. Creative Studio produces. FBIS measures commercial value.**
+
+Use [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence]] for research-derived methods, briefs, scripts, visual bibles, shot lists, continuity standards and production QA. The ContentCreator.com source review is [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001]]. Collaborator review and pilot acceptance are governed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|the FFI handover]].
+
+Creative Studio should remain provider-neutral and own the creation experience, asset provenance and production workflow. FFI owns domain understanding; Creative Studio does not absorb the FEXIS discovery or FBIS commercial measurement mandates.
