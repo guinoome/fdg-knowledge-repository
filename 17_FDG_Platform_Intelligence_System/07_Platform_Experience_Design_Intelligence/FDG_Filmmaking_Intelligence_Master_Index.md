@@ -111,7 +111,7 @@ Generative video is not a source of physical law, engineering topology, product 
 | Reference-led cinematic lesson workflow | Existing Creative Studio addendum documents brief → visual bible → editable shot list → per-scene generation → continuity review → edit and QA | Adopt as a proposed workflow; no pilot accepted |
 | Visual craft skills and tools | Existing source review covers seven resources and installation/rights boundaries | Reuse existing record; no blanket install |
 
-Raw prompt source: [[Projects/Active/AI/Youtube Prompt|YouTube Prompt Collection]].
+Raw prompt source: [[Projects/Active/AI/Youtube Prompt.txt|YouTube Prompt Collection]].
 
 ## 9. First research priorities
 
