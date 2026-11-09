@@ -178,7 +178,7 @@ The repository already contains a YouTube prompt collection with six useful star
 5. Visual Storyboarder (three-second scene intervals).
 6. Viral Title & Thumbnail Duo.
 
-Source: [[Projects/Active/AI/Youtube Prompt|YouTube Prompt Collection]].
+Source: [[Projects/Active/AI/Youtube Prompt.txt|YouTube Prompt Collection]].
 
 These prompts are raw references, not proven formulas. Adapt them to the brief, test them, remove misleading clickbait and record measured results before promoting any pattern.
 
