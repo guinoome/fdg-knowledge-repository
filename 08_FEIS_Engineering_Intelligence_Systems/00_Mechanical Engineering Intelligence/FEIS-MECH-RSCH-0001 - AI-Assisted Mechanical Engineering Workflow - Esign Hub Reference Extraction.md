@@ -236,7 +236,7 @@ The competencies to protect are engineering fundamentals, free-body diagrams, fi
 | Parametric CAD and hard design constraints | FEIS Mechanical branch; shared FEIP integration/workflow standards | Research replaceable CAD adapters and explicit rule evaluation before selecting tools. |
 | Drawing and standards pre-check | [[FEIP-STD-007_ENGINEERING_REPORT_AND_DOCUMENT_INTELLIGENCE_MODULE_STANDARD]]; controlled engineering standards sources | Keep pre-check separate from formal approval. Confirm standard edition, clause and applicability. |
 | Engineering memory and historical retrieval | [[FEIP-STD-009_KNOWLEDGE_INTEGRATION_AND_ENGINEERING_MEMORY_MODULE_STANDARD]] | Retrieve approved, revision-aware evidence; preserve source lineage and superseded states. |
-| Failure investigation, FMEA and reliability | [[06_Maintenance_and_Reliability_Intelligence_Master_Index]] | Use evidence-backed competing hypotheses; preserve human risk classification and failure approval. |
+| Failure investigation, FMEA and reliability | [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|Maintenance & Reliability Intelligence Master Index]] | Use evidence-backed competing hypotheses; preserve human risk classification and failure approval. |
 | Sensor trends and digital-twin evidence | FEIS Maintenance & Reliability; FBPOIS/FMIS operational records | Share telemetry and asset context through governed interfaces; do not duplicate maintenance execution records. |
 | Engineering-change impact | FDG CORE evidence/decision lineage; FPJIS project control | Build traceable dependency traversal and an engineer-verified impact record. |
 | Agent orchestration and authority boundaries | [[FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP]]; [[FEIP-STD-012_ENGINEERING_WORKFLOW_AND_AUTOMATION_MODULE_STANDARD]]; [[FEIS-CESV-0000 - Computational Engineering Simulation and Validation Architecture]] | Orchestrate bounded tasks; preserve independent verification and human approval. |
@@ -284,7 +284,7 @@ This transcript does not establish that:
 - [[FEIS-CESV-0000 - Computational Engineering Simulation and Validation Architecture]]
 - [[08_FEIS_Engineering_Intelligence_Systems_Master_Index]]
 - [[00_Multidiscipline_Engineering_Intelligence_Master_Index]]
-- [[06_Maintenance_and_Reliability_Intelligence_Master_Index]]
+- [[08_FEIS_Engineering_Intelligence_Systems/06_Maintenance_and_Reliability_Intelligence/00_Maintenance_and_Reliability_Intelligence_Master_Index|Maintenance & Reliability Intelligence Master Index]]
 - [[FDG_CORE_ENGINEERING_REASONING_EXECUTION_CONTRACT_2026-09-30]]
 - [[FMCIS_CROSS_PROVIDER_ENGINEERING_REVIEW_LOOP]]
 
