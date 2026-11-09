@@ -87,3 +87,11 @@ FEXIS may identify and monitor relevant public sources, topics, creator methods,
 The downstream domain knowledge and production methods are maintained by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence]], under FPIS and consumed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|FDG Creative Studio]]. Relevant business strategy and campaign outcomes remain with FBIS; approved publishing automation remains with FWAIS.
 
 External-source monitoring, transcript extraction and channel automation are not claimed to be operational by this link. They require source authorization, provenance, timestamp retention, verification, cost/security controls and runtime acceptance under the [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Research_and_Learning_Standard|Filmmaking Research and Learning Standard]].
+
+## Filmmaking research handoff — 2026-11-09
+
+FEXIS discovers external sources, trends, creator methods and platform/tool changes. The domain interpretation, method validation and reusable production knowledge are owned by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence]]; production is owned by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/06_FDG_Creative_and_Communication_Studio|FDG Creative Studio]]; commercial objectives and outcomes are owned by FBIS.
+
+Current source intake: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|ContentCreator AI Creator Course — Public Source Review]]. Collaborator tasks and source-integrity boundaries: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|Filmmaking Intelligence Collaborator Handover]].
+
+The course landing page is reviewed; enrolled lessons are not ingested. FEXIS monitoring, transcript extraction and channel automation must not be represented as operational until execution, logs, failure recovery and repository output are verified.
