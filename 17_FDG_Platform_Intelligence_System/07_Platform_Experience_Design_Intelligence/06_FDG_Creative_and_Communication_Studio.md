@@ -590,3 +590,20 @@ Source analysis:
 **Smallest proposed bounded pilot:** one **45–60 second original centrifugal-pump learning sequence**: (A) real problem/hook, (B) labeled components, (C) flow path and impeller movement, (D) change speed and show independently validated affinity-law results, (E) fault/constraint overlay, (F) student prediction/question. Deliver source-linked shot list, editable scene files where feasible, physics-verified values, captioned MP4 and a short assessment. Compare learning comprehension and total cost per accepted lesson against a conventional static diagram. All execution still requires authorized work package, tool compatibility and engineering reviewer.
 
 **Disposition:** `ADOPT_AS_ENHANCEMENT / SOURCE_REVIEWED_ONLY`. Existing FDG Creative Studio is the delivery capability; FEIS DCKL catalogs educational knowledge. **No creative software installed, no FDG clip rendered, no student app changed, no lesson accepted and no video copied**. Direct GitHub administrative knowledge return (not delegated worker execution).
+
+
+---
+
+## FDG Filmmaking Intelligence relationship — 2026-11-09
+
+The Studio remains the shared creation experience and asset workflow. The new [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence Master]] is its domain knowledge layer: it maintains research, reusable storytelling/production methods, continuity rules, quality criteria and measured learning.
+
+Ownership remains distributed:
+- FEXIS supplies relevant public trend/topic and external-source intelligence within its remit; it does not own film production methods.
+- FBIS / Marketing & Growth owns audience, positioning, campaign objective, offer and commercial outcomes.
+- FDG Creative Studio owns governed creation, assets and production experience.
+- FWAIS owns approved scheduling/distribution workflows.
+- FEIS and responsible domain owners validate engineering or other specialist claims.
+- FLIS / FSIS govern rights, privacy and security; FAIS audits material approvals; FPJIS governs implementation and acceptance.
+
+See [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Research_and_Learning_Standard|Research and Learning Standard]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Production_Playbook|Production Playbook]]. The master is a documented domain structure, not an operational autonomous monitor or proven video-generation pipeline.
