@@ -911,3 +911,17 @@ Organic website technical health is governed by [[18_FDG_External_Intelligence_S
 **Release constraints:** Never equate FDG's historic proposal of **five posts/day/platform** with an already functioning publisher or a safe MVP demand. Validate **one** approved Reel + one publish receipt before scaling. Avoid a new generic site, duplicate FCMIS/FPIS app or “always allow” external publishing. Keep video demos interactive and evidence-real. Technical approval and copyrighted media rights are mandatory.
 
 **State:** `FOUNDER_LAUNCH_INTENT_CAPTURED / SOURCE_VERIFIED / IMPLEMENTATION_SCOPE_PROPOSED / NO_DEPLOYMENT`. This is a documented next slice. No live portal, Instagram token, backend, scheduled job, automated post, actual API call or end-to-end acceptance was created by adding this note.
+
+---
+
+## FDG Filmmaking Intelligence integration — 2026-11-09
+
+The content engine uses the shared intelligence-to-production chain:
+
+**FEXIS discovers. Filmmaking Intelligence understands. Creative Studio produces. FBIS measures commercial value.**
+
+FBIS retains authority for audience, positioning, offer, campaign objective, CTA, funnel attribution and commercial outcome measurement. Filmmaking Intelligence owns reusable story, script, visual development and production methods. Creative Studio remains the production experience; FWAIS remains the approved orchestration/distribution capability.
+
+Reference: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence Master]], [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|ContentCreator Course Source Review]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|Cross-Collaborator Handover]].
+
+Commercial success must be measured beyond views and engagement: qualified inquiries, lead-to-opportunity progression, quotations, paid conversion, collected revenue and acquisition/production cost. No course testimonial or promotional performance claim is a forecast or FDG result.
