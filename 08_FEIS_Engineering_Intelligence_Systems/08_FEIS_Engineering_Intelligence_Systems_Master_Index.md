@@ -214,3 +214,19 @@ FEIS Mechanical now has a source-backed research extraction and collaborator han
 - [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-0900 - AI-Assisted Mechanical Engineering Collaborator Handover|AI-Assisted Mechanical Engineering Collaborator Handover]]
 
 This is an additive research reference under the existing Mechanical Engineering branch. It maps problem decomposition, calculation automation, design-space exploration, CAD rules, drawing pre-checks, failure investigation, sensor analytics and bounded engineering agents to existing FEIS/FEIP/CESV authorities. It does not create a new AI engineering platform or approve any implementation, solver, calculation method or design workflow.
+
+
+---
+
+## External Engineering Research Intelligence Extension — 2026-11-09
+
+FEIS now has a proposed provider-neutral research-intake capability for extracting traceable ideas and claims from public engineering videos and other external sources:
+
+- [[08_FEIS_Engineering_Intelligence_Systems/09_External_Engineering_Research_Intelligence/00_External_Engineering_Research_Intelligence_Master_Index|External Engineering Research Intelligence Master Index]]
+- [[08_FEIS_Engineering_Intelligence_Systems/09_External_Engineering_Research_Intelligence/FEIS-ERI-0000 - External Engineering Research Intelligence Architecture|External Engineering Research Intelligence Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/09_External_Engineering_Research_Intelligence/FEIS-ERI-0001 - Research Extraction Contract and Acceptance Tests|Research Extraction Contract and Acceptance Tests]]
+- [[08_FEIS_Engineering_Intelligence_Systems/09_External_Engineering_Research_Intelligence/FEIS-ERI-0900 - YouTube Research Intake Pilot Handover|YouTube Research Intake Pilot Handover]]
+
+The first provider candidate is the official Gemini API public-YouTube video input path. The provider adapter is replaceable; FEIS owns the normalized evidence contract, source lineage, FEIS mapping and human review. This is a research-intake capability, not a second engineering platform.
+
+**Status boundary:** architecture and documentation are proposed. The Gemini credential is not connected, the direct YouTube API call has not been executed, and channel monitoring is deferred. No live extraction or production readiness is claimed.
