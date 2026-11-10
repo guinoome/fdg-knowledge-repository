@@ -56,3 +56,8 @@ Existing source-reviewed capabilities remain authoritative references: [[17_FDG_
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001 — ContentCreator AI Creator Course Public Source Review]]
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|FDG Filmmaking Intelligence — Cross-Collaborator Handover]]
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence Master]]
+
+
+## FDG Filmmaking Intelligence — additional source review (2026-11-10)
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurZZo_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing page and indexed course catalogue review; member-only lessons and AI assistant internals not ingested.
