@@ -615,3 +615,12 @@ FDG Creative Studio is the production layer in the governed chain: **FEXIS disco
 Use [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence]] for research-derived methods, briefs, scripts, visual bibles, shot lists, continuity standards and production QA. The ContentCreator.com source review is [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001]]. Collaborator review and pilot acceptance are governed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|the FFI handover]].
 
 Creative Studio should remain provider-neutral and own the creation experience, asset provenance and production workflow. FFI owns domain understanding; Creative Studio does not absorb the FEXIS discovery or FBIS commercial measurement mandates.
+
+
+## Creative Studio production responsibility and evidence handoff — 2026-11-10
+
+Creative Studio is the **actual production layer** in the FDG operating chain. It executes approved creative packages and produces real deliverables: images, video, audio, edits, renders, captions, thumbnails and asset packages. It preserves editable source files where feasible, asset provenance, revisions, rejected takes, provider/version information, production time, retries and actual cost.
+
+FFI owns filmmaking understanding and reusable methods; it supplies the brief, script/story structure, visual bible, storyboard, shot plan, evidence references and acceptance criteria. Creative Studio owns production execution and output receipts. FBIS owns audience, campaign, CTA, funnel attribution and commercial measurement. FBIS results return to FFI for controlled learning; they do not make Creative Studio the commercial authority.
+
+Canonical interface and artifact contracts: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001]]. Production execution remains governed by [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Production_Playbook|FFI Production Playbook]].
