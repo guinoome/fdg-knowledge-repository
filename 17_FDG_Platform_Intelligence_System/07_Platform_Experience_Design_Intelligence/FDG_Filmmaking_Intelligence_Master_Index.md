@@ -162,3 +162,10 @@ Related governance: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENC
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001 — FDG Intelligence-to-Commercial Creative Operating Model]] is the canonical interface and lifecycle document for **FEXIS discovers → FFI understands → Creative Studio produces → FBIS measures → measured outcomes return to FFI**. It defines stage ownership, handoff contracts, production receipts, FBIS measurement layers, evidence-based learning and a bounded pilot.
 - This extends, rather than replaces, the Research and Learning Standard and Production Playbook. Those remain authoritative for source intake/method evaluation and production execution respectively.
+
+
+## 15. Additional creator-education source — AI Creatives Mastery (2026-11-10)
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-003_Ai_Creatives_Mastery_Public_Source_Review|FFI-SRC-003 — AI Creatives Mastery Public Source Review]] — seven-module public curriculum covering persuasion/storytelling, scripting/creative direction, shot design, continuity, AI motion, editing/sound/pacing, and distribution/measurement. Public landing page only; paid lessons and advertised tools remain unverified.
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-10|FFI Collaborator Handover — AI Creatives Mastery]] — cross-functional assignments and a controlled A/B method test.
+- Preliminary disposition: REUSE the current FFI Production Playbook and FFI-ARCH-001; EXTEND the next pilot with an audience-psychology hypothesis, shot-to-shot continuity matrix and sound/pacing intent map. No new system or mandatory tool stack.
