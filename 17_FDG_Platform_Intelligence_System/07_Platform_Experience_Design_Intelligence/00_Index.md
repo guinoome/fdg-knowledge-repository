@@ -66,3 +66,9 @@ Existing source-reviewed capabilities remain authoritative references: [[17_FDG_
 ## FDG Filmmaking Intelligence — operating model (2026-11-10)
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001 — FDG Intelligence-to-Commercial Creative Operating Model]] — canonical stage ownership and interfaces: FEXIS discovers, FFI understands, Creative Studio produces actual creative outputs, FBIS measures commercial value, and measured outcomes feed back into FFI.
+
+
+## AI Creatives Mastery source review — 2026-11-10
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-003_Ai_Creatives_Mastery_Public_Source_Review|FFI-SRC-003 — AI Creatives Mastery Public Source Review]] — public seven-module curriculum review and FDG disposition.
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-10|AI Creatives Mastery Collaborator Handover]] — assignments for FEXIS, FFI, Creative Studio, FBIS, FEIS, FLIS/FSIS, FWAIS and governance collaborators.
