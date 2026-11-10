@@ -156,3 +156,9 @@ Related governance: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENC
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing-page and indexed catalogue review covering image/video/audio generation, editing, marketing, specialized AI assistants, monetization and Magnific Spaces node automation. Member lessons, assistant internals and reproducible workflows remain unreviewed.
 
 **Architecture remains:** FEXIS discovers. Filmmaking Intelligence understands. Creative Studio produces. FBIS measures commercial value. This source is an input to the existing architecture, not a new system or adopted tool stack.
+
+
+## 14. Intelligence-to-commercial production operating model — 2026-11-10
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001 — FDG Intelligence-to-Commercial Creative Operating Model]] is the canonical interface and lifecycle document for **FEXIS discovers → FFI understands → Creative Studio produces → FBIS measures → measured outcomes return to FFI**. It defines stage ownership, handoff contracts, production receipts, FBIS measurement layers, evidence-based learning and a bounded pilot.
+- This extends, rather than replaces, the Research and Learning Standard and Production Playbook. Those remain authoritative for source intake/method evaluation and production execution respectively.
