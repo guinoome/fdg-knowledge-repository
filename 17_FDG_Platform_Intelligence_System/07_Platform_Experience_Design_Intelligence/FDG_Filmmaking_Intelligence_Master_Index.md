@@ -106,7 +106,7 @@ Generative video is not a source of physical law, engineering topology, product 
 |---|---|---|
 | YouTube short-form prompt set | Existing repository file contains hook, curiosity-retention script, contrarian take, infinite-loop closer, visual storyboarder, and title/thumbnail prompt patterns | Preserve as raw prompt reference; evaluate and adapt through this master |
 | ContentCreator.com AI Creator Course | Public landing-page syllabus reviewed; paid lessons not ingested | [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001]] — source reviewed only |
-| Curzzo AI Creators Simplified | Public landing page and indexed classroom catalogue reviewed; member lessons and assistants not inspected | [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_Curzzo_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002]] — source reviewed only |
+| Curzzo AI Creators Simplified | Public landing page and indexed classroom catalogue reviewed; member lessons and assistants not inspected | [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002]] — source reviewed only |
 | Gemini / Google Flow video workflow | Previously identified as a possible video generation / research workflow; exact API capability, terms, cost, access and ingestion path require verification | Research candidate only |
 | Huashu Motion | Source-reviewed candidate adapter with pinned upstream SHA and explicit runtime/rights gates | Not installed or production-tested |
 | Reference-led cinematic lesson workflow | Existing Creative Studio addendum documents brief → visual bible → editable shot list → per-scene generation → continuity review → edit and QA | Adopt as a proposed workflow; no pilot accepted |
@@ -153,6 +153,6 @@ Related governance: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENC
 
 ## 13. Additional creator-education source — 2026-11-10
 
-- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_Curzzo_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing-page and indexed catalogue review covering image/video/audio generation, editing, marketing, specialized AI assistants, monetization and Magnific Spaces node automation. Member lessons, assistant internals and reproducible workflows remain unreviewed.
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing-page and indexed catalogue review covering image/video/audio generation, editing, marketing, specialized AI assistants, monetization and Magnific Spaces node automation. Member lessons, assistant internals and reproducible workflows remain unreviewed.
 
 **Architecture remains:** FEXIS discovers. Filmmaking Intelligence understands. Creative Studio produces. FBIS measures commercial value. This source is an input to the existing architecture, not a new system or adopted tool stack.
