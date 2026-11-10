@@ -230,3 +230,9 @@ Collaborators should work in their owning domain first, then add reciprocal wiki
 ## 12. Knowledge path
 
 [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|Filmmaking Intelligence Master]] · [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|Course Public Source Review]] · [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Research_and_Learning_Standard|Research Standard]] · [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Production_Playbook|Production Playbook]].
+
+
+## Additional source intake — 2026-11-10
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing page and indexed classroom catalogue review. Collaborators should compare its image/video/audio pipeline, six advertised creator assistants, marketing/monetization modules and Magnific Spaces node automation against existing FDG capabilities. Do not assume member lessons, assistant internals, node graphs or tool performance have been verified.
+- Suggested review owners: FEXIS (source/tool verification), FFI/Creative Studio (production workflow and visual craft), FWAIS (node automation portability/recovery), FBIS (commercial conversion and unit economics), FLIS/FSIS (likeness, voice, music, privacy and security), FEIS (technical truth in engineering content).
