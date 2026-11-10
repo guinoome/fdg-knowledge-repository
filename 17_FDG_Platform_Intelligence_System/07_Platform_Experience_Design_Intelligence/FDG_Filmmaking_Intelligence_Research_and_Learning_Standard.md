@@ -153,3 +153,10 @@ Do not claim monitoring is operational until scheduled execution, logs, failure 
 ## 10. Knowledge path
 
 [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|Filmmaking Intelligence Master]] · [[18_FDG_External_Intelligence_System/FEXIS-MASTER-INDEX|FEXIS]] · [[04_Knowledge_Management/00_KNOWLEDGE_MODEL|Knowledge Management]] · [[05_Knowledge_Architecture/00_ARCHITECTURE_MODEL|Knowledge Architecture]].
+
+
+## Research-to-production and outcome feedback interface — 2026-11-10
+
+Research outputs are not finished creative work. A source/method record becomes an FFI production package only after source classification, comparison with existing FDG knowledge, a defined hypothesis, and testable acceptance criteria. Creative Studio returns actual production receipts; FBIS returns objective-linked outcome evidence. FFI uses both to promote, adapt or reject methods through controlled review.
+
+See [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001]] for the canonical interface contracts, feedback loop and evidence maturity boundaries.
