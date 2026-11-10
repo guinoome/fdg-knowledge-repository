@@ -153,6 +153,6 @@ Related governance: [[10_FDG_CORE_Intelligence/FDG-CORE-STD-001_CORE_INTELLIGENC
 
 ## 13. Additional creator-education source — 2026-11-10
 
-- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurZZo_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing-page and indexed catalogue review covering image/video/audio generation, editing, marketing, specialized AI assistants, monetization and Magnific Spaces node automation. Member lessons, assistant internals and reproducible workflows remain unreviewed.
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_Curzzo_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing-page and indexed catalogue review covering image/video/audio generation, editing, marketing, specialized AI assistants, monetization and Magnific Spaces node automation. Member lessons, assistant internals and reproducible workflows remain unreviewed.
 
 **Architecture remains:** FEXIS discovers. Filmmaking Intelligence understands. Creative Studio produces. FBIS measures commercial value. This source is an input to the existing architecture, not a new system or adopted tool stack.
