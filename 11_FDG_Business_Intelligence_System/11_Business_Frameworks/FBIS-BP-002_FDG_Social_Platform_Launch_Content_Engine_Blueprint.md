@@ -925,3 +925,12 @@ FBIS retains authority for audience, positioning, offer, campaign objective, CTA
 Reference: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Master_Index|FDG Filmmaking Intelligence Master]], [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|ContentCreator Course Source Review]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|Cross-Collaborator Handover]].
 
 Commercial success must be measured beyond views and engagement: qualified inquiries, lead-to-opportunity progression, quotations, paid conversion, collected revenue and acquisition/production cost. No course testimonial or promotional performance claim is a forecast or FDG result.
+
+
+## FBIS commercial measurement and FFI learning return — 2026-11-10
+
+FBIS owns the commercial side of the filmmaking lifecycle: audience/segment, positioning, offer, campaign objective, CTA, funnel stages, attribution and commercial outcomes. Measurement must extend beyond views and engagement to qualified inquiries, lead-to-opportunity progression, quotations, paid conversion, collected revenue and acquisition/production economics. Preserve metric definitions, denominators, observation windows, baselines and attribution limitations.
+
+Creative Studio supplies the actual asset and production receipt; FFI supplies its creative intent, script/storyboard references and revision identity. FBIS binds outcome data to the exact published asset revision and campaign, then returns measured findings to FFI. FFI—not FBIS—owns the interpretation of results as reusable filmmaking methods. Observational performance does not establish causation, and a view, demo or quotation is not a paid customer outcome.
+
+Canonical handoff, measurement layers and controlled learning loop: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001]]. The governing domain master remains [[11_FDG_Business_Intelligence_System/11_FDG_Business_Intelligence_System_Master_Index|FBIS Master]].
