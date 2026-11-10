@@ -236,3 +236,16 @@ Collaborators should work in their owning domain first, then add reciprocal wiki
 
 - [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002 — Curzzo AI Creators Simplified]] — public landing page and indexed classroom catalogue review. Collaborators should compare its image/video/audio pipeline, six advertised creator assistants, marketing/monetization modules and Magnific Spaces node automation against existing FDG capabilities. Do not assume member lessons, assistant internals, node graphs or tool performance have been verified.
 - Suggested review owners: FEXIS (source/tool verification), FFI/Creative Studio (production workflow and visual craft), FWAIS (node automation portability/recovery), FBIS (commercial conversion and unit economics), FLIS/FSIS (likeness, voice, music, privacy and security), FEIS (technical truth in engineering content).
+
+
+## Canonical operating model consolidation — 2026-11-10
+
+All collaborators should use [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001 — FDG Intelligence-to-Commercial Creative Operating Model]] as the canonical cross-system interface. It clarifies the responsibilities and handoffs:
+
+- FEXIS discovers external sources and preserves provenance.
+- Filmmaking Intelligence interprets sources, defines creative/production methods and learns from outcomes.
+- Creative Studio executes production and returns actual assets plus production evidence.
+- FBIS defines commercial objectives and measures the audience-to-revenue funnel.
+- Measured production and commercial outcomes return to FFI as evidence for controlled improvement.
+
+This operating model consolidates the two public course reviews without treating either course as validated training. Source reviews remain [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002]]. The production playbook, research standard and each owning system's governance remain in force.
