@@ -249,3 +249,9 @@ All collaborators should use [[17_FDG_Platform_Intelligence_System/07_Platform_E
 - Measured production and commercial outcomes return to FFI as evidence for controlled improvement.
 
 This operating model consolidates the two public course reviews without treating either course as validated training. Source reviews remain [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002]]. The production playbook, research standard and each owning system's governance remain in force.
+
+
+## Additional source intake — AI Creatives Mastery (2026-11-10)
+
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-003_Ai_Creatives_Mastery_Public_Source_Review|FFI-SRC-003 — AI Creatives Mastery]] — public landing page review only; paid lessons and tools not inspected.
+- [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-10|Dedicated collaborator handover]] — review assignments and a bounded experiment to compare the baseline workflow against audience-psychology, continuity-matrix and sound/pacing additions.
