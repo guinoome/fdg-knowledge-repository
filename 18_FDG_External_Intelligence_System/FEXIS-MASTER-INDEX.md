@@ -95,3 +95,10 @@ FEXIS discovers external sources, trends, creator methods and platform/tool chan
 Current source intake: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|ContentCreator AI Creator Course — Public Source Review]]. Collaborator tasks and source-integrity boundaries: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FDG_Filmmaking_Intelligence_Collaborator_Handover_2026-11-09|Filmmaking Intelligence Collaborator Handover]].
 
 The course landing page is reviewed; enrolled lessons are not ingested. FEXIS monitoring, transcript extraction and channel automation must not be represented as operational until execution, logs, failure recovery and repository output are verified.
+
+
+## Filmmaking intelligence stage interface — 2026-11-10
+
+FEXIS owns external discovery and source provenance, not the downstream interpretation or production of FDG films. Its handoff to FFI should preserve exact source identity, dates/versions, timestamp/page anchors, extraction method and completeness, direct observations versus publisher claims, primary-source verification state and rights/access limitations.
+
+Canonical lifecycle and interface: [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-ARCH-001_FDG_Intelligence_to_Commercial_Creative_Operating_Model|FFI-ARCH-001 — FEXIS discovers → FFI understands → Creative Studio produces → FBIS measures]]. The source reviews [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-001_ContentCreator_AI_Creator_Course_Public_Page_Review|FFI-SRC-001]] and [[17_FDG_Platform_Intelligence_System/07_Platform_Experience_Design_Intelligence/FFI-SRC-002_CurTHOOK_AI_Creators_Simplified_Public_Source_Review|FFI-SRC-002]] remain public-page/catalogue reviews only; member lessons are not ingested.
