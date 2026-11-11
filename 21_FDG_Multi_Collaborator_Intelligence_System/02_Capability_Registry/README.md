@@ -26,3 +26,12 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — multi-specialist platform/model research, benchmark and skill-development work package. No subscription purchase required; research and collaborator dispatch pending.
 - [[.agents/skills/fdg-ai-filmmaking/SKILL|FDG AI Filmmaking and Media Production Skill]] — provider-neutral master skill. Provider-specific adapters and specialist sub-skills are to be created only after source-backed evaluation and testing.
+
+
+
+## AI Filmmaking and Media Production — 2026-11-11
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001]] — canonical FDG media production capability, training, lifecycle and acceptance.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|Platform/model landscape]] — dated official-source research and provider/model distinctions; no benchmark or adoption claim.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — specialist research and benchmark work package; dispatch and tests pending.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]] — provider-neutral master skill. Provider-specific adapters and specialist sub-skills require source-backed evaluation, tests and controlled promotion.
