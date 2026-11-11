@@ -324,3 +324,16 @@ Founder-directed capability development: Nex may assemble FMCIS human and AI spe
 - [[.agents/skills/fdg-ai-filmmaking/SKILL|FDG AI Filmmaking and Media Production Skill]] — provider-neutral production lifecycle, specialist roles, continuity, model routing, editing, rights and unit economics. Draft skill; platform adapters are not yet validated.
 
 NEX-COLLAB-LEARN-001 and NEX-ROLE-ENGINEERING-001 govern skill promotion and collaborator capability development. This addition does not alter FMCIS-001–008 readiness.
+
+
+
+## FDG Media Production System and AI Filmmaking — 2026-11-11
+
+Founder-directed capability: develop Nex and the FMCIS collaborator team in filmmaking, cinematography, generative-media engineering, editing, commercial production and media economics. The organization owns its skills and methods; platforms/models are replaceable. No subscription purchase is required.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001 — FDG Media Production System]] — canonical capability, production lifecycle, dynamic specialist roles, training plan, commercial pilot, acceptance and governance.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001 — Research and specialist work package]] — bounded collaborator assignments, evidence method, benchmark tasks, skill promotion gates and rights/privacy controls.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|AI Filmmaking Platform and Model Landscape]] — dated official-source research on OpenArt, Higgsfield, Google Flow, Veo, Gemini Omni, Nano Banana and Runway.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]] — provider-neutral master skill for directing, production, visual continuity, editing, QA and economics.
+
+Reuse [[FCMIS/FCMIS-REF-Video-Watch-Multimodal-2026-10-26|video source-fidelity review]], [[FCMIS/FCMIS-Social-Publishing-Routine-Growth-Operations|existing social publishing operation]], [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] and [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]. This addition does not alter FMCIS-001–008 readiness and does not claim specialist dispatch, runtime tests, platform adoption or media production.
