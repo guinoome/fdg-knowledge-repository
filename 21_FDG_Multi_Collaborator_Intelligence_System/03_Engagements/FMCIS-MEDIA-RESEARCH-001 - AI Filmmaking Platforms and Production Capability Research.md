@@ -125,7 +125,7 @@ Nex consolidates results, checks conflicts and duplicates, commissions independe
 
 ## Current execution state
 
-WORK_PACKAGE_CREATED / MASTER_SKILL_DRAFTED / PLATFORM_DOSSIERS_NOT_YET_RESEARCHED / SPECIALIST_DISPATCH_NOT_EXECUTED / NO_PAID_SUBSCRIPTIONS_REQUIRED / NO_PLATFORM_TESTS_CLAIMED
+WORK_PACKAGE_CREATED / MASTER_SKILL_DRAFTED / PLATFORM_DOSSIERS_SOURCE_RESEARCHED / NO_RUNTIME_TESTS / SPECIALIST_DISPATCH_NOT_EXECUTED / NO_PAID_SUBSCRIPTIONS_REQUIRED / NO_PLATFORM_TESTS_CLAIMED
 
 ## Related canonical knowledge
 
@@ -136,3 +136,42 @@ WORK_PACKAGE_CREATED / MASTER_SKILL_DRAFTED / PLATFORM_DOSSIERS_NOT_YET_RESEARCH
 - [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|Persistent Role Engineering]]
 - [[AGENTS|Repository agent entry protocol]]
 
+
+
+## Official-source research return — 2026-11-11
+
+The initial platform research snapshot is now recorded in [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11]]. The canonical capability and training framework is [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001]]. The provider-neutral master skill is [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]].
+
+### Findings incorporated
+- OpenArt: Director, multi-model catalog, MCP/CLI, Smart Shot, character library, commercial-use tier distinction and broad user-content license/privacy implications.
+- Higgsfield: Cinema Studio, Marketing Studio, Canvas, Supercomputer and MCP/CLI; credit behavior differs between website and automated interfaces.
+- Google Flow: Agent, text/frames/ingredients/video inputs, Scenebuilder and free-credit access; model feature matrix and announced model retirements require version-aware routing.
+- Veo and Gemini Omni: model families exposed through workspaces; distinguish model identity from Flow/Higgsfield/Runway as host platforms.
+- Nano Banana: Google image generation/editing family, not a video model.
+- Runway: Gen-4.5 generation/credit details and a separate developer API catalog with multi-provider model routing.
+
+### Source set (official; accessed 2026-11-11)
+- OpenArt Director: https://openart.ai/features/director/
+- OpenArt Director announcement: https://openart.ai/blog/openart-director-press-release/
+- OpenArt MCP: https://openart.ai/mcp/
+- OpenArt terms: https://openart.ai/terms/
+- OpenArt pricing: https://openart.ai/pricing
+- Higgsfield product overview: https://higgsfield.ai/creator-hub/help-center/getting-started/what-is-higgsfield
+- Higgsfield Cinema Studio: https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-cinema-studio
+- Higgsfield workflow selection: https://higgsfield.ai/enterprise-help-center/platform/tools-creative-workflow
+- Higgsfield credit policy: https://higgsfield.ai/creator-hub/help-center/credits/how-credits-work
+- Google Flow: https://labs.google/fx/tools/flow
+- Google Flow create-video help: https://support.google.com/flow/answer/16353334
+- Google Flow model support: https://support.google.com/flow/answer/16352836
+- Google Flow scene builder: https://support.google.com/flow/answer/16935718
+- Google Nano Banana model family: https://deepmind.google/models/gemini-image/
+- Google Nano Banana model card: https://deepmind.google/models/model-cards/nano-banana-2-1/
+- Runway Gen-4.5: https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5
+- Runway credits: https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work
+- Runway developer model catalog: https://docs.dev.runwayml.com/guides/models/
+
+These are vendor sources. They establish what vendors document, not output quality, consistency, privacy adequacy or FDG acceptance. The platform landscape retains details, category distinctions and unresolved test questions.
+
+## Updated execution state
+
+WORK_PACKAGE_CREATED / MASTER_CAPABILITY_CREATED / MASTER_SKILL_DRAFTED / OFFICIAL_PLATFORM_SOURCE_RESEARCH_RECORDED / PROVIDER_ADAPTERS_NOT_CREATED / SPECIALIST_DISPATCH_NOT_EXECUTED / BENCHMARK_NOT_RUN / NO_PAID_SUBSCRIPTIONS_REQUIRED / PILOT_NOT_PRODUCED
