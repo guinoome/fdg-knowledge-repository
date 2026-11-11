@@ -101,3 +101,14 @@ AI-generated engineering scenes are illustrative unless independently checked ag
 ## Status discipline
 
 Use explicit states: PROPOSED, RESEARCHED, SOURCE-VERIFIED, TESTED, INDEPENDENTLY-REVIEWED, APPROVED, DEPLOYED, BLOCKED. Documentation is not execution; a model feature description is not a successful test; a rendered demo is not client acceptance or revenue.
+
+
+
+## Canonical FDG context
+
+Before production work, consult:
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001 — FDG Media Production System]] for organizational ownership, training, lifecycle, benchmark and distribution integration.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|Dated platform/model landscape]] for current researched vendor/model distinctions and source links; recheck official sources because capabilities change.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] for collaborator work packages and skill acceptance gates.
+- [[FCMIS/FCMIS-REF-Video-Watch-Multimodal-2026-10-26|Video source-fidelity review]] and [[FCMIS/FCMIS-Social-Publishing-Routine-Growth-Operations|existing publishing operation]] for source evidence and downstream distribution.
+- [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] and [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]] for controlled learning and collaborator role contracts.
