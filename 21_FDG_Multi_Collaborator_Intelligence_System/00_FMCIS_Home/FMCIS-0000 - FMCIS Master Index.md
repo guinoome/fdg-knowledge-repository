@@ -314,3 +314,13 @@ This does not lower quality gates. It moves quality into architecture, context, 
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration, Workspaces and Artifacts Review]] — Claude is the source example; the reusable patterns are evaluated for all FDG collaborators where native support, a verified adapter or safe manual fallback exists. Includes a provider compatibility model and rejects assumed feature parity, vendor lock-in and unreviewed privileged extensions. No vendor UI, plugin or runtime is adopted.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] contains an additive candidate workbench section. It does not mark FMCIS-001–008 complete or authorize implementation.
+
+
+## AI Filmmaking and Media Production Capability — 2026-11-11
+
+Founder-directed capability development: Nex may assemble FMCIS human and AI specialists to research, challenge, test and teach filmmaking and commercial media production. No platform subscription is required as a precondition; prioritize public documentation, existing authorized integrations, free access/credits, open-source alternatives and synthetic test assets. Purchases, trials, terms acceptance and sensitive-data egress remain approval-gated.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — specialist research work package covering OpenArt, Higgsfield/Omni, Google Flow/Veo, Nano Banana, Runway and other relevant tools/models; includes benchmark, rights/privacy, economics, delegation and acceptance requirements. Research and specialist dispatch remain pending.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|FDG AI Filmmaking and Media Production Skill]] — provider-neutral production lifecycle, specialist roles, continuity, model routing, editing, rights and unit economics. Draft skill; platform adapters are not yet validated.
+
+NEX-COLLAB-LEARN-001 and NEX-ROLE-ENGINEERING-001 govern skill promotion and collaborator capability development. This addition does not alter FMCIS-001–008 readiness.
