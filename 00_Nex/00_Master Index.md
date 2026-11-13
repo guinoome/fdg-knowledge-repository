@@ -400,3 +400,8 @@ All current and future FDG collaborators are governed by [[07_Nex_Core_Intellige
 ## 2026-11-01 — Baby Nex persistent runtime and cost-minimization direction
 
 - [[07_Nex_Core_Intelligence/NEX_ZERO_NEW_RECURRING_COST_RUNTIME_IMPLEMENTATION_PACKAGE_2026-11-01|Baby Nex Zero-New-Recurring-Cost Runtime Implementation Package]] — implementation package for a session-independent Baby Nex runtime, using existing host resources and free/open-source components first. Starts with Windows Task Scheduler + Python + SQLite; benchmarks Dagu/Pynenc and local llama.cpp only when justified. The package is proposed and not deployed. Existing authority controls and open P0 Issues #11 and #20 remain unchanged.
+
+
+## 2026-11-13 — PCSO historical lottery analysis and prediction trial
+
+Nex's PCSO analysis is recorded in [[Projects/PCSO_Historical_Lottery_Analysis|PCSO Historical Lottery Analysis & Nex–Francis Prediction Trial]]. Use the complete verifiable history from each game's first draw; preserve provenance; test all-time frequency, pair/triple co-occurrence, momentum, recency and era stability as hypotheses. The provisional feature weights are unvalidated and must not be presented as winning probabilities. Predictions require chronological walk-forward testing, random baselines and pre-draw immutable logging. A 10-draw Nex–Francis comparison is a small tracking experiment, not proof of predictive edge.
