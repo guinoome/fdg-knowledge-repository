@@ -176,3 +176,8 @@ This direction does not claim existing external application repositories have al
 ## Functional Product Evidence Audit — 2026-10-17
 
 [[22_FDG_Audit_Intelligence_System/05_Project_Audit/FAIS-PRJ-0501 - Functional Product Evidence Audit 2026-10-17|FAIS Functional Product Evidence Audit — 2026-10-17]] compares selected working projects with source implementations, prior test evidence and earlier decisions. Specific reviewed scope: [[Projects/Active/FDG QTO BOQ Estimate Toolkit/README|QTO/BOQ Toolkit]], [[Projects/Active/FDG Construction Lifecycle Workspace/README|Construction Lifecycle Workspace]], [[Projects/Active/FDG Business Platform/README|Business Platform/Fuel]] and [[Projects/Active/FBPOIS/README|FBPOIS spatial interface]]. **Source inspection is not current test execution**; no full project-completion claim is made. Governance: [[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|Functional Product Completion Gate]].
+
+
+## PCSO Historical Lottery Analysis — 2026-11-13
+
+- [[Projects/PCSO_Historical_Lottery_Analysis|PCSO Historical Lottery Analysis & Nex–Francis Prediction Trial]] — full-history PCSO results research, source provenance, data-quality gates, proposed statistical features, leakage-free validation protocol, and a pre-registered 10-draw head-to-head scorecard. Experimental only; no predictive advantage is claimed.
