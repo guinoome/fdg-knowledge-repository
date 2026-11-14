@@ -221,3 +221,7 @@ Every major build work package must leave:
 - repository knowledge updates.
 
 Do not create a separate top-level Project Operations OS repository folder unless governed architecture explicitly authorizes it.
+
+
+## External construction platform review — Restruct.PH — 2026-11-14
+Before proposing construction workflow or commercial-packaging changes, collaborators should review [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-REF-0001 - Restruct PH Construction Platform Reference Review|FEIS-CM-REF-0001 — Restruct.PH Construction Platform Reference Review]]. Treat it as a product-learning reference, not an endorsed solution. Verify demonstrated features and current pricing; compare against FEIS-CM, QTO integration and Project Operations OS. Preserve REUSE / EXTEND / MERGE / REPLACE / NEW discipline and existing authority. Do not claim dispatch or testing without evidence.
