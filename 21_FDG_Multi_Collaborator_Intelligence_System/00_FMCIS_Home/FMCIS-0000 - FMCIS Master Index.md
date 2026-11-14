@@ -337,3 +337,8 @@ Founder-directed capability: develop Nex and the FMCIS collaborator team in film
 - [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]] — provider-neutral master skill for directing, production, visual continuity, editing, QA and economics.
 
 Reuse [[FCMIS/FCMIS-REF-Video-Watch-Multimodal-2026-10-26|video source-fidelity review]], [[FCMIS/FCMIS-Social-Publishing-Routine-Growth-Operations|existing social publishing operation]], [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] and [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]. This addition does not alter FMCIS-001–008 readiness and does not claim specialist dispatch, runtime tests, platform adoption or media production.
+
+
+## Video editing reference submitted — 2026-11-14
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002 — Ecom Ads Editor video editing webinar review]] — founder-submitted external webinar reference for timestamped editing, storytelling and direct-response ad technique review. Landing page retrieval failed; contents are unverified and collaborator review remains pending. No endorsement, purchase or adoption implied.
