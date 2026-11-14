@@ -175,3 +175,8 @@ These are vendor sources. They establish what vendors document, not output quali
 ## Updated execution state
 
 WORK_PACKAGE_CREATED / MASTER_CAPABILITY_CREATED / MASTER_SKILL_DRAFTED / OFFICIAL_PLATFORM_SOURCE_RESEARCH_RECORDED / PROVIDER_ADAPTERS_NOT_CREATED / SPECIALIST_DISPATCH_NOT_EXECUTED / BENCHMARK_NOT_RUN / NO_PAID_SUBSCRIPTIONS_REQUIRED / PILOT_NOT_PRODUCED
+
+
+## Additional founder-submitted editing reference — 2026-11-14
+
+Review [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002 — Ecom Ads Editor video editing webinar review]] as an additional source alongside the platform/model research. Assign a suitable editor/post-production specialist, commercial creative strategist and independent reviewer where available. Return timestamped observations, an editing workflow, story/ad beat analysis, confirmed tool inventory, transferable methods, critique, and a reproducible practice exercise. Do not infer the webinar's contents from its campaign URL; automated page retrieval failed and the content remains unverified. Do not claim collaborator dispatch without an actual invocation receipt. No purchase or adoption is implied.
