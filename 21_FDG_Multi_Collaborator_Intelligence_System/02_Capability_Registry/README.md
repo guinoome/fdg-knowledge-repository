@@ -35,3 +35,8 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|Platform/model landscape]] — dated official-source research and provider/model distinctions; no benchmark or adoption claim.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — specialist research and benchmark work package; dispatch and tests pending.
 - [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]] — provider-neutral master skill. Provider-specific adapters and specialist sub-skills require source-backed evaluation, tests and controlled promotion.
+
+
+## Video editing reference — 2026-11-14
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002]] — submitted webinar for collaborator review of editing workflow, story-led ad structure, pacing, transitions, captions, sound and platform exports. Source content not yet verified; no technique adopted.
