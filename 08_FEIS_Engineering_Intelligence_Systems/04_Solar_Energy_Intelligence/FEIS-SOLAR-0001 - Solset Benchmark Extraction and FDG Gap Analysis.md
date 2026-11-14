@@ -495,3 +495,116 @@ The goal is an FDG-owned Solar Engineering Intelligence capability, not a cloned
 - [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|Social Platform Launch Engine]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/00_Solar_Energy_Intelligence_Master_Index|Solar Energy Intelligence Master Index]] → this document
+
+
+---
+
+# 21. Current Solset Re-Review and Collaborator Extraction — 2026-11-14
+
+This section is an additive refresh to the original 2026-10-04 benchmark. It does not replace the earlier observations or authorize adoption.
+
+## 21.1 Current official source set
+
+The following Solset pages were accessible during this refresh:
+
+- https://solset.ai/
+- https://solset.ai/features
+- https://solset.ai/ph
+- https://solset.ai/solar-software/philippines
+- https://solset.ai/features/projects
+- https://solset.ai/download
+
+The original research remains useful, but the product and Philippines-specific positioning have evolved. Revalidate material claims against the live product or recorded demonstrations before treating them as implemented behavior.
+
+## 21.2 New public claims and observations
+
+Solset currently markets a seven-stage solar-business workflow:
+
+```text
+Capture → Design → Quote → Procure → Install → Get Paid → Service
+```
+
+Its current public pages describe:
+- lead capture from ad forms, WhatsApp, CSV and manual entry, with deduplication, assignment rules and lead-level communication history;
+- a 3D Design Studio with satellite roof tracing, AI-assisted geometry, module placement, coordinate-based yield, shading views, structure/steel takeoff and PDF design reports;
+- structural analysis outputs and a STAAD.Pro file for engineer verification;
+- quotation generation from the design/BOM record and customer-facing share links;
+- procurement, stock, project stages, crew scheduling, site updates, customer tracking, invoicing and service/AMC records;
+- AI assistant functions including bill reading, roof tracing, quote auditing and workspace queries;
+- role-based permissions, approvals, CSV export, daily backups and Google Cloud hosting claims;
+- a stated 78-module product catalogue on the features page.
+
+These are vendor-published descriptions, not independent proof of technical correctness, security, uptime, engineering validity or actual workflow behavior.
+
+## 21.3 Philippines-specific observations and verification flags
+
+The Philippines pages currently advertise workspace defaults including PHP, VAT 12%, TIN, Sales Invoice, A4, metric units and 230/400 V at 60 Hz. They also describe EWT/Form 2307 tracking and Philippine address fields.
+
+Important unresolved items for collaborator verification:
+
+1. **Tax and accounting scope:** distinguish document preparation, recordkeeping, export and actual statutory filing. The Philippines page says direct tax-authority filing is not built. Do not treat a generated document or SAWT-style export as BIR compliance certification.
+2. **QuickBooks Online inconsistency:** one Philippines-facing page describes QuickBooks integration as available on Growth and above; another says the integration is built but not switched on. Capture the exact page, plan, date and actual observed behavior.
+3. **Structural method:** the page says ASCE 7 is used as the method NSCP uses. This is a vendor statement, not proof of NSCP compliance or a substitute for project-specific code selection, load combinations, material checks and a licensed engineer's review.
+4. **Local utility/interconnection:** the page says utility-specific automatic rules are not built and applications are tracked through configurable project stages. Verify actual Philippine DU/net-metering workflow coverage.
+5. **Pricing and allowances:** current public monthly prices shown are Free $0, Starter $19, Professional $39 and Growth $79, with stated seats, quotation limits, monthly credits and design allowances. The Philippines page states prices are in USD and paid by card; verify billing currency, taxes, actual limits, promotions, annual pricing and pay-per-design before comparison.
+6. **Mobile/offline:** the download page says Android is available while iPhone, Mac and Windows native apps are coming; browser access is presented as the cross-device route. Determine what works offline in the browser/Android app rather than assuming offline capability.
+7. **Data security and portability:** vendor claims include encryption in transit/at rest, daily backups, point-in-time recovery, an external nightly copy and CSV export. Verify retention, restore evidence, export completeness, tenant isolation, access logs, deletion, data residency and contractual terms.
+
+## 21.4 Collaborator review and extraction assignment
+
+Review Solset as a product and architecture benchmark for FEIS Solar / FDG Solar Visayas. Do not create a second Solset handover; this document is the canonical review record.
+
+Required workstreams:
+
+- **Product/workflow:** map the complete lead-to-service lifecycle, records, transitions, actors, approval gates, exception paths and customer-visible events.
+- **Solar engineering:** inspect roof geometry, module packing, shading, irradiance/yield, mounting structures, wind analysis, electrical design, BOM derivation, design reports and limitations. Identify which outputs are demonstrably calculated versus illustrative.
+- **Philippines localization:** assess VAT, TIN, EWT/Form 2307, local addresses, utility/interconnection workflow, electrical conventions and structural-code claims against authoritative Philippine requirements.
+- **Commercial and operations:** extract plan limits, quotation/credit/design allowances, inventory, procurement, job costing, billing, retention/receivables, project stages, crews and service/AMC.
+- **AI and automation:** identify each AI function, its input/output, human approval point, deterministic engine dependency, failure behavior and whether it changes authoritative records.
+- **Data and architecture:** infer the record model and lifecycle lineage; inspect roles, approvals, audit history, integrations, export, backup, recovery, tenant boundaries and provider dependencies.
+- **UX and field use:** inspect mobile workflows, customer share links, offline behavior, responsive design, onboarding and the handoff between office and site.
+- **Commercial viability:** compare advertised tiers and limits against realistic Philippine installer/EPC workflows; calculate cost per active seat, design, project and useful transaction where evidence permits.
+
+For each finding, capture:
+- source URL and page/section;
+- date reviewed;
+- screenshot or timestamp where available;
+- observed fact versus vendor claim versus inference;
+- workflow/module and user role;
+- FDG equivalent/current state;
+- customer value and operational impact;
+- evidence confidence and unresolved questions.
+
+## 21.5 Required collaborator deliverable
+
+Return a concise, source-linked extraction package containing:
+
+1. lifecycle/workflow map;
+2. feature and plan/limit matrix;
+3. solar engineering capability matrix with calculation evidence and limitations;
+4. Philippines localization and compliance gap register;
+5. AI/automation boundary map;
+6. inferred entity/record model and integration map;
+7. security, portability and offline assessment;
+8. FDG reuse/gap matrix;
+9. prioritized opportunities with value, effort, risk and acceptance criteria;
+10. explicit **REUSE / EXTEND / MERGE / REPLACE / NEW / REJECT** recommendation for each material capability.
+
+Compare findings against:
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0000 - Solar Engineering Intelligence Architecture|FEIS-SOLAR-0000 — Solar Engineering Intelligence Architecture]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FEIS-SOLAR-0002 — FDG Solar Visayas Future Upgrade Blueprint]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0003 - Solar Calculation Kernel Data Contract and Acceptance Tests|FEIS-SOLAR-0003 — Solar Calculation Kernel and Acceptance Tests]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0004 - Arka360 Philippines Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0004 — Arka360 Benchmark]]
+- [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0005 - Photonik Benchmark and Incremental Enhancement Register|FEIS-SOLAR-0005 — Photonik Benchmark]]
+- [[Projects/Active/AI/FDG Practical Calculators/FDG Solar/FDG_Solar_Visayas_Project_Index|FDG Solar Visayas Project Index]]
+
+## 21.6 Review controls and current status
+
+- No Solset account, trial, paid plan, demo booking, contact or data upload is authorized by this review.
+- Do not submit FDG, employee, customer or project data to Solset.
+- Do not copy protected source code, UI assets, text, templates or proprietary engineering methods.
+- Do not treat vendor marketing statements as validated engineering or compliance evidence.
+- No FEIS architecture or production implementation change is approved by this benchmark alone.
+- Collaborator review is **requested by this handover**, but no external collaborator dispatch or review completion is claimed here.
+
+**Status:** EXISTING BENCHMARK EXTENDED / CURRENT PUBLIC SOURCES REFRESHED / COLLABORATOR EXTRACTION SPECIFIED / PRODUCT TESTING NOT PERFORMED / ADOPTION DECISION PENDING.

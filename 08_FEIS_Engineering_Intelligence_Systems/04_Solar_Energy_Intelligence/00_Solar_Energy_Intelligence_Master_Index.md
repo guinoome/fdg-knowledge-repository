@@ -15,6 +15,7 @@ The branch is intentionally broader than a single calculator. It is designed to 
 
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0000 - Solar Engineering Intelligence Architecture|FEIS-SOLAR-0000 — Solar Engineering Intelligence Architecture]]
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0001 - Solset Benchmark Extraction and FDG Gap Analysis|FEIS-SOLAR-0001 — Solset Benchmark Extraction and FDG Gap Analysis]]
+  - Updated 2026-11-14 with current Solset Philippines pages, pricing/feature claims, verification flags and collaborator extraction requirements.
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0002 - FDG Solar Visayas Future Upgrade Blueprint|FEIS-SOLAR-0002 — FDG Solar Visayas Future Upgrade Blueprint]]
 - [[08_FEIS_Engineering_Intelligence_Systems/04_Solar_Energy_Intelligence/FEIS-SOLAR-0003 - Solar Calculation Kernel Data Contract and Acceptance Tests|FEIS-SOLAR-0003 — Solar Calculation Kernel, Data Contract & Acceptance Tests]]
 
