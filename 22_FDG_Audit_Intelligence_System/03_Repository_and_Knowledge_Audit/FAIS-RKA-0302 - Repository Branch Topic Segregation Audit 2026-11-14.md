@@ -41,7 +41,7 @@ Ahead/behind values are against `main` at the audit snapshot. “Focused” mean
 
 | Branch | Ahead / behind | Topic classification | PR / disposition |
 |---|---:|---|---|
-| `audit/repository-branch-topic-segregation-2026-11-14` | 3 / 0 | FAIS repository branch/topic governance audit | PR #29 open draft; this audit's own topic branch |
+| `audit/repository-branch-topic-segregation-2026-11-14` | 4 / 0 | FAIS repository branch/topic governance audit | PR #29 open draft; this audit's own topic branch |
 | `build/fexis-l0-intake-2026-10-17` | 4 / 298 | FEXIS source intake | PR #7 open draft; stale base requires reconciliation |
 | `codex/nex-local-runtime` | 5 / 298 | Baby Nex local runtime | No PR found; focused project branch |
 | `decision/gsis-solar-partner-first-pilot-20261024` | 5 / 207 | FEIS Solar / GSIS partner-first pilot | PR #13 open draft |
