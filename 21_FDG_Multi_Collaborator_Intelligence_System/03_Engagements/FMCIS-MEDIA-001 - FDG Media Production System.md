@@ -169,3 +169,8 @@ Current state: MASTER_CAPABILITY_DEFINED / PROVIDER_LANDSCAPE_SOURCE_RESEARCHED 
 - [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|Controlled learning standard]]
 - [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|Role engineering standard]]
 - [[AGENTS|Repository entry protocol]]
+
+
+## External editing reference — Ecom Ads Editor webinar — 2026-11-14
+
+Founder-submitted webinar reference and bounded collaborator review: [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002 — Ecom Ads Editor video editing webinar review]]. The page could not be retrieved by the automated reader on 2026-11-14; webinar contents and vendor claims remain unverified. Reviewers must inspect the actual webinar, return timestamped evidence and transferable editing methods, and distinguish observed techniques from marketing claims. No purchase, endorsement, adoption, collaborator dispatch or test is implied.
