@@ -55,3 +55,8 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 ## Controlled Audit-to-Repair Addendum — 2026-10-18
 
 For actionable founder-directed audits, use [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Audit-to-Repair Directive]] **§10** as the scoped repair-and-enhancement execution instruction. This retains FAIS's independent finding and verification role; the affected domain/project owner implements authorized patches and FPJIS tracks acceptance. Repair only demonstrably broken/missing items within defined reversible low-risk authority; escalate uncertain/high-impact cases. Validate before/after evidence, regression tests, existing index and wikilinks. This update is guidance; not an executed full audit.
+
+
+## Repository branch topic segregation audit — 2026-11-14
+
+[[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0302 - Repository Branch Topic Segregation Audit 2026-11-14|FAIS-RKA-0302 Repository Branch Topic Segregation Audit]] records the all-branch inventory, topic classification, one confirmed mixed-topic branch, topic-specific extraction PRs #26–#28, and a proposed branch/PR topic-isolation standard. It is a snapshot audit, not a full code/security/merge-readiness audit; the proposed standard requires governance adoption.
