@@ -314,3 +314,16 @@ This does not lower quality gates. It moves quality into architecture, context, 
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration, Workspaces and Artifacts Review]] — Claude is the source example; the reusable patterns are evaluated for all FDG collaborators where native support, a verified adapter or safe manual fallback exists. Includes a provider compatibility model and rejects assumed feature parity, vendor lock-in and unreviewed privileged extensions. No vendor UI, plugin or runtime is adopted.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] contains an additive candidate workbench section. It does not mark FMCIS-001–008 complete or authorize implementation.
+
+
+## FDG Media Production System and AI Filmmaking — 2026-11-14
+
+Founder-directed capability: develop Nex and the FMCIS collaborator team in filmmaking, cinematography, generative-media engineering, editing, commercial production and media economics. FDG owns its skills and methods; platforms and models remain replaceable. No subscription purchase is required.
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001 — FDG Media Production System]] — canonical capability, production lifecycle, specialist roles, training, commercial pilot and acceptance.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — collaborator research, benchmark tasks, rights/privacy and skill promotion gates.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|FMCIS Media Platform and Model Landscape]] — official-source platform/model research.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002]] — submitted editing webinar reference; landing page content not verified.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]] — provider-neutral master skill.
+
+Reuse [[FCMIS/FCMIS-REF-Video-Watch-Multimodal-2026-10-26|video source-fidelity review]], [[FCMIS/FCMIS-Social-Publishing-Routine-Growth-Operations|existing social publishing operation]], [[07_Nex_Core_Intelligence/NEX-COLLAB-LEARN-001 - Cross-Collaborator Controlled Learning and Skill Evolution Standard|NEX-COLLAB-LEARN-001]] and [[07_Nex_Core_Intelligence/NEX-ROLE-ENGINEERING-001 - Persistent Collaborator Role Engineering Standard|NEX-ROLE-ENGINEERING-001]]. This addition does not alter FMCIS-001–008 readiness and does not claim specialist dispatch, runtime tests, platform adoption or media production.
