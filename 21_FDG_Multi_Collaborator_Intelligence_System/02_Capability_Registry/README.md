@@ -20,3 +20,23 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] — Claude is the source example, but the capability mapping applies to every FDG collaborator when native support, a verified adapter, or a safe manual fallback exists. Evaluate Claude Code, Codex, ChatGPT, Gemini, local runtimes and future providers individually; do not infer feature parity. Official Anthropic documentation was used only to verify Claude-specific semantics. No installation or runtime test claimed.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] now includes the proposal-only experience requirements. FMCIS-002 registry architecture and FMCIS-003/005/006/008 sequential design status remain unchanged.
+
+
+## AI Filmmaking and Media Production — 2026-11-11
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — multi-specialist platform/model research, benchmark and skill-development work package. No subscription purchase required; research and collaborator dispatch pending.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|FDG AI Filmmaking and Media Production Skill]] — provider-neutral master skill. Provider-specific adapters and specialist sub-skills are to be created only after source-backed evaluation and testing.
+
+
+
+## AI Filmmaking and Media Production — 2026-11-11
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001]] — canonical FDG media production capability, training, lifecycle and acceptance.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|Platform/model landscape]] — dated official-source research and provider/model distinctions; no benchmark or adoption claim.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — specialist research and benchmark work package; dispatch and tests pending.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]] — provider-neutral master skill. Provider-specific adapters and specialist sub-skills require source-backed evaluation, tests and controlled promotion.
+
+
+## Video editing reference — 2026-11-14
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002]] — submitted webinar for collaborator review of editing workflow, story-led ad structure, pacing, transitions, captions, sound and platform exports. Source content not yet verified; no technique adopted.
