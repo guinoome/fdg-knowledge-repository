@@ -14,7 +14,7 @@ authority: Audit finding and proposed governance standard; does not authorize me
 
 Inspect every Git branch in the repository, compare each non-main branch against `main`, classify its changed paths by canonical FDG owner/topic, identify mixed-topic branches, review pull-request state, and propose topic-isolated branch/PR naming.
 
-Snapshot: 29 branches total (28 non-main plus `main`) were returned by GitHub at the time of review. All 28 non-main branches were compared against `main`. Comparison counts are relative to the current `main` SHA at audit time; they are not a substitute for reviewing each branch's complete commit history or acceptance evidence.
+Snapshot: 31 branches total (30 non-main plus `main`) were returned by GitHub at the time of final verification. All 30 non-main branches were compared against `main`. Comparison counts are relative to the current `main` SHA at audit time; they are not a substitute for reviewing each branch's complete commit history or acceptance evidence.
 
 This is a branch/topic hygiene audit, not a full code, security, engineering or merge-readiness audit.
 
@@ -41,6 +41,7 @@ Ahead/behind values are against `main` at the audit snapshot. “Focused” mean
 
 | Branch | Ahead / behind | Topic classification | PR / disposition |
 |---|---:|---|---|
+| `audit/repository-branch-topic-segregation-2026-11-14` | 3 / 0 | FAIS repository branch/topic governance audit | PR #29 open draft; this audit's own topic branch |
 | `build/fexis-l0-intake-2026-10-17` | 4 / 298 | FEXIS source intake | PR #7 open draft; stale base requires reconciliation |
 | `codex/nex-local-runtime` | 5 / 298 | Baby Nex local runtime | No PR found; focused project branch |
 | `decision/gsis-solar-partner-first-pilot-20261024` | 5 / 207 | FEIS Solar / GSIS partner-first pilot | PR #13 open draft |
