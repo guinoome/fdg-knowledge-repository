@@ -174,3 +174,7 @@ Canonical interface:
 [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract|QTO → BOQ → Budget → Procurement → Progress → Billing Contract]].
 
 A BOQ quantity imported from QTO must preserve its source quantity-item ID and drawing revision rather than becoming an untraceable copied number.
+
+
+## External construction platform reference — 2026-11-14
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-REF-0001 - Restruct PH Construction Platform Reference Review|FEIS-CM-REF-0001 — Restruct.PH Construction Platform Reference Review]] — founder-submitted competitor/product reference for collaborators to evaluate construction workflows, field capture, estimating, procurement, materials, cost control, progress billing, pricing/packaging, offline behavior and data portability. Direct pricing page retrieval failed; product features and exact prices remain unverified. No adoption decision.
