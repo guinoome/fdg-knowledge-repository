@@ -92,3 +92,8 @@ Use FDG-owned **synthetic** 20–40 second test clips, reviewed in original form
 **Disposition:** `VIDEO_VISUALLY_REVIEWED / PRIMARY_REPO_LICENSE_VERIFIED / ADAPT_EXISTING_OWNER / INSTALLATION_NOT_APPROVED / PILOT_NOT_RUN / NOT_LIVE`. This does not close historical source-to-build Issue #11 or the P0 collaborator runtime Issue #20. If a real downstream product requirement is raised, trace source → accepted requirement → implementation → executed tests → qualified acceptance under existing FPJIS gates.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[FCMIS/FCMIS-Social-Publishing-Routine-Growth-Operations|FCMIS content operation]] → this source review.
+
+
+## FDG Media Production System integration — 2026-11-14
+
+This source-fidelity review is an upstream input to [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001]] and [[.agents/skills/fdg-ai-filmmaking/SKILL|fdg-ai-filmmaking]]. Video intake evidence, timecodes, modality, provenance and loss flags must survive into script, storyboard, production and claims review. The master capability reuses this work; it does not replace or weaken VIS-001..007 or approve installation of the upstream watch tool.

@@ -20,3 +20,12 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] — Claude is the source example, but the capability mapping applies to every FDG collaborator when native support, a verified adapter, or a safe manual fallback exists. Evaluate Claude Code, Codex, ChatGPT, Gemini, local runtimes and future providers individually; do not infer feature parity. Official Anthropic documentation was used only to verify Claude-specific semantics. No installation or runtime test claimed.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] now includes the proposal-only experience requirements. FMCIS-002 registry architecture and FMCIS-003/005/006/008 sequential design status remain unchanged.
+
+
+## AI Filmmaking and Media Production — 2026-11-14
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-001 - FDG Media Production System|FMCIS-MEDIA-001 — FDG Media Production System]] — canonical capability, lifecycle, specialist roles, training and acceptance.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/FMCIS-MEDIA-PLATFORM-LANDSCAPE-2026-11-11|FMCIS Media Platform and Model Landscape]] — dated official-source research; no runtime benchmark or adoption claim.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-RESEARCH-001 - AI Filmmaking Platforms and Production Capability Research|FMCIS-MEDIA-RESEARCH-001]] — collaborator research, evidence and benchmark assignment.
+- [[21_FDG_Multi_Collaborator_Intelligence_System/03_Engagements/FMCIS-MEDIA-REF-002 - Ecom Ads Editor Video Editing Webinar Review|FMCIS-MEDIA-REF-002]] — submitted video-editing reference; source content and techniques remain unverified pending review.
+- [[.agents/skills/fdg-ai-filmmaking/SKILL|FDG AI Filmmaking and Media Production Skill]] — provider-neutral master skill; platform adapters require separate evaluation and testing.
