@@ -32,3 +32,8 @@ Choose the mechanism that best satisfies capability fit, evidence, security, rel
 - [[FEXIS External Intelligence System]]
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[19_FWAIS — FDG Workflow Automation Intelligence System/FWAIS_Wiki_Index|FWAIS Wiki Index]] → this document
+
+
+## External CAD/BIM MCP adapter candidate — 2026-11-16
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/OmniBridge_CAD_BIM_MCP_Capability_Assessment_2026-11-16|OmniBridge CAD/BIM MCP Capability Assessment]] — example candidate for assessing MCP against vendor APIs/SDKs/CLIs and local adapters. FWAIS reviews mechanism fit and replaceability; the candidate remains unadopted and uninstalled pending engineering and security evaluation.
