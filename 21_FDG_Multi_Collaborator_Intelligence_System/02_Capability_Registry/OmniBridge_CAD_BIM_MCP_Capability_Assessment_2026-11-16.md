@@ -2,7 +2,7 @@
 document_id: FMCIS-CAP-OMNIBRIDGE-001
 title: OmniBridge CAD/BIM MCP Capability Assessment and Collaborator Handover
 date: 2026-11-16
-status: CANDIDATE / SOURCE-REVIEWED / NOT-ADOPTED / NOT-INSTALLED
+status: CANDIDATE / SOURCE-REVIEWED / COLLABORATOR-REVIEW-AND-CONTROLLED-INSTALL-AUTHORIZED
 owner: FMCIS
 authority: Francis — final approval; Nex — architecture and orchestration
 source_repository: https://github.com/ayoubmep/omnibridge-mcp
@@ -16,7 +16,7 @@ source_commit: a1a41030a1beab36525e3fcaa33601b78205627d
 
 Record the founder-supplied OmniBridge setup reference as a candidate capability for FDG engineering collaborators. OmniBridge is a third-party, provider-neutral MCP server intended to let AI clients inspect and operate supported CAD, BIM and 3D applications on a Windows PC.
 
-**Disposition: REVIEW / EVALUATE; NOT ADOPTED.** This document is a research and handover record, not an installation authorization, security approval, production-use approval, or claim that any FDG workstation has OmniBridge installed.
+**Disposition: COLLABORATOR REVIEW AND CONTROLLED TEST INSTALLATION AUTHORIZED; PRODUCTION ADOPTION NOT APPROVED.** Founder instruction on 2026-11-16 authorizes FDG collaborators to review the upstream project and perform a controlled installation on the designated FDG test workstation, subject to the prerequisites, security controls and staged acceptance criteria in this handover. This does not authorize public/network exposure, cloud tunneling, access to live client models, unrestricted write operations or production use. If the designated workstation is not available to the collaborator, they must report the blocker rather than install on an unrelated machine or assume access.
 
 The image supplied on 2026-11-16 showed this proposed sequence:
 
@@ -144,8 +144,8 @@ Any output affecting design intent, calculations, dimensions, code compliance, q
 ## 7. Evaluation work package for collaborators
 
 **Work package:** FMCIS-CAP-OMNIBRIDGE-EVAL-001  
-**Status:** Proposed / not dispatched  
-**Suggested roles:** Mechanical/CAD domain reviewer; software/security reviewer; independent QA reviewer; Nex as orchestrator. Francis retains final approval.
+**Status:** Authorized for collaborator review and controlled test installation; execution evidence pending.  
+**Suggested roles:** Mechanical/CAD domain reviewer; software/security reviewer; independent QA reviewer; Nex as orchestrator. Francis retains final production-adoption approval.
 
 ### Phase A — Fit and source review
 
@@ -155,9 +155,9 @@ Any output affecting design intent, calculations, dimensions, code compliance, q
 - Compare OmniBridge with official vendor APIs/SDKs/CLIs and existing dedicated MCP integrations under the FWAIS capability-over-tool principle.
 - Record REUSE / EXTEND / MERGE / REPLACE / NEW recommendation for each intended workflow.
 
-### Phase B — Controlled installation and discovery (requires separate approval)
+### Phase B — Controlled installation and discovery (authorized within this handover)
 
-- Install only on the approved test workstation, at a reviewed and pinned source revision.
+- Collaborators are authorized to install on the designated FDG test workstation after completing Phase A source/dependency/security review. Use a reviewed and pinned source revision; do not silently substitute another workstation.
 - Run `omnibridge apps`; record exact detected application names, versions, running/connected state and errors.
 - Install only the required bridge, if the target application requires one.
 - Capture configuration diff and confirm no unrelated global/client settings were changed.
@@ -208,9 +208,10 @@ This candidate does not change FMCIS-001 through FMCIS-008 readiness, Baby Nex a
 
 - Source screenshot supplied by Founder: 2026-11-16.
 - Upstream source review: completed 2026-11-16 (read-only).
-- Repository integration: proposed in a dedicated branch/PR; merge pending.
-- Workstation installation: NOT PERFORMED.
-- CAD/BIM application discovery on an FDG workstation: NOT PERFORMED.
-- MCP client configuration: NOT PERFORMED.
-- Security approval: NOT GRANTED.
+- Repository integration: dedicated branch/PR open for collaborator review; merge pending.
+- Collaborator review and controlled test installation: AUTHORIZED; execution not yet evidenced.
+- Workstation installation: NOT YET VERIFIED.
+- CAD/BIM application discovery on the designated FDG workstation: NOT YET VERIFIED.
+- MCP client configuration: NOT YET VERIFIED.
+- Security review: required before installation; production security approval not granted.
 - Runtime/engineering acceptance: NOT TESTED.
