@@ -1,5 +1,10 @@
 # C24 pre-repair construction continuation — 2026-10-24
 
+## Mandatory defect assurance — FAIS-SSA-1001 v1.1
+
+Any defect diagnosis or repair arising from this handover MUST follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — mandatory FDG defect-diagnosis and software assurance standard]] before code modification. Preserve the pinned baseline and original failing evidence; keep diagnosis read-only; establish and evidence root cause; assess severity and dependent/mirrored/generated artifacts; obtain the authorized owner’s exact repair-scope approval; then make the smallest correction and prove it with Red–Green–Regression and impact checks where feasible. Apply risk-triggered independent review, qualified engineering/security/data-integrity controls and rollback requirements as applicable. Do not claim a repair or test result that was not executed. This requirement does not override this handover’s existing P0, build, deployment, data-storage or owner-approval gates; it adds the common defect-assurance method. FAIS governs evidence/assurance/verification; FPJIS governs project execution/acceptance; FMCIS governs collaborator allocation/coordination. Project controls may be stricter, never weaker.
+
+
 **State: read-only verification complete; candidate defects unresolved; P0 blocks implementation.** This is not full-construction completion or new acceptance. Canonical baseline `99db9f36cd4fee28553360db94a3161e2ccd228d`; GitHub remains authoritative. All four prior project handovers, accepted source/build/distribution and historical evidence are preserved. No local project files/checkouts/downloads/installs, repairs, browser tests, native OS save/open, deployments or provider/config changes occurred in this continuation.
 
 ## Actual dispatched execution
