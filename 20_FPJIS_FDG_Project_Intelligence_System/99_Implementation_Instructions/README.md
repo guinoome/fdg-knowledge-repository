@@ -13,6 +13,10 @@
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[20_FPJIS_FDG_Project_Intelligence_System/README|README]] → this document
 
+## Mandatory software defect diagnosis
+
+All software defect work packages and receiving collaborators must follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1]] before diagnosing or modifying code. See the collaborator-neutral requirements in [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/Codex_Claude_Other_Collaborator_Instructions|Implementation Collaborator Instructions]] and include the protocol in every project handover. FPJIS continues to govern project execution and acceptance.
+
 ## Direct Child Documents
 
 - [[20_FPJIS_FDG_Project_Intelligence_System/99_Implementation_Instructions/Codex_Claude_Other_Collaborator_Instructions|Codex Claude Other Collaborator Instructions]]
