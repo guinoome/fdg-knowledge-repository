@@ -1,5 +1,22 @@
 # FDG Business Platform — Current Agent Handover
 
+## Mandatory defect-diagnosis and repair control — FAIS-SSA-1001 v1.1
+
+**Required for every collaborator receiving this handover:** [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — Enhanced Evidence-First Defect Diagnosis and Software Assurance Protocol]] is the approved, mandatory FDG standard whenever the assigned work investigates or corrects a bug, regression, unexpected behavior, failed test/acceptance, calculation/data discrepancy, or runtime/integration defect. Read the canonical protocol before diagnosing or modifying code. This applies regardless of model, provider, IDE, coding agent or environment.
+
+- Start with evidence and a pinned source/build baseline. Capture observed versus expected behavior, exact reproduction/input, relevant environment, logs and impact. Mark unavailable facts UNKNOWN.
+- Keep defect diagnosis read-only. Do not patch, refactor, rename, reformat, upgrade dependencies, migrate data or experiment destructively in production before the causal diagnosis is supported and the authorized project/domain owner approves a bounded repair scope.
+- Separate symptom, proximate cause, contributing condition and demonstrated root cause. Rank and test hypotheses; compare last-known-good/first-known-bad revisions when relevant; trace exact data to the first divergence.
+- Classify P0–P3 and apply the protocol's risk-triggered safety, security, data-integrity, independent-review, numerical/engineering, release and rollback controls where triggered. Do not impose high-risk ceremony on low-risk cosmetic defects, and do not waive mandatory baseline controls.
+- After approval, make the smallest scoped correction. Demonstrate RED on the defective baseline and GREEN on the corrected revision where feasible, then run relevant regression/impact checks. Search for the same defect pattern elsewhere without performing unauthorized bulk edits.
+- Report actual commands and test results only. Distinguish executed, passed, failed, skipped, blocked and not run. Include exact commits, changed files/lines, evidence, remaining unknowns and protocol version in the handover.
+- The diagnostician/implementer/verifier roles and production-release controls are separated according to consequence and risk. The implementer is not sole acceptance authority for high-consequence work.
+
+**Trigger boundary:** This standard governs defect diagnosis and repair; it does not replace the approved feature work package or authorize new feature scope. If a defect is discovered during feature work, pause the affected change and enter this protocol for that defect. Resume only under the authorized scope. FPJIS governs project execution and acceptance; FMCIS governs collaborator allocation and coordination; FAIS governs audit evidence, defect assurance and verification. Project-specific controls may be stricter, never weaker.
+
+**Receiving-collaborator acknowledgement:** Record FAIS-SSA-1001 v1.1 in the task-start/preflight record and identify any access, evidence or authority blocker before work. Do not claim compliance based only on reading this short summary; the canonical protocol governs.
+
+
 Latest continuation (2026-09-29): [[HANDOVER_SMTP_Callback_Billing_2026-09-29]]. Replacement SMTP key submitted directly and user confirmed saved; actual recovery failed with unauthorized-IP evidence. IP protection unchanged. Same-origin callback correction and unavailable-billing control guard implemented/tested. User now approved isolated FDG LIVE PayMongo setup in Production, with a separate webhook and client launch gated on payment/branch-access tests. ML Printing remains out of scope. Read the new handover before older test-only permission/status notes.
 
 Client release validation (2026-09-29): [[HANDOVER_Client_Release_Validation_2026-09-29]]. Published clear expired-email-link feedback; reran actual billing database tests including independent-branch cancellation, no trial restart and no new invoice after stopping renewals. Signup/recovery delivery is still blocked on secure SMTP setup. The former browser session/key is unavailable; do not claim it remains accessible. Live billing and secure paid Fuel entitlements are not implemented/released. Do not invite paying operational clients yet.
