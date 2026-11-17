@@ -1,5 +1,16 @@
 # Implementation Collaborator Instructions
 
+## Mandatory defect assurance requirement
+
+For any assigned defect, bug, regression, unexpected behavior, failed test/acceptance, calculation/data discrepancy or runtime/integration failure, the receiving collaborator MUST follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — Enhanced Evidence-First Defect Diagnosis and Software Assurance Protocol]] before diagnosing or modifying code. The canonical standard governs; this summary does not replace it.
+
+**Mandatory gate:** capture exact observed/expected behavior, reproduction/input, environment, pinned source/build revision, evidence and impact; preserve the baseline; diagnose read-only; distinguish symptom from demonstrated root cause; rank/falsify hypotheses; compare revisions and trace data where relevant; classify severity; assess affected dependencies; obtain authorized owner approval for an exact bounded repair scope; implement minimally; prove correction with Red–Green–Regression where feasible; inspect the final diff, run relevant impact checks, and report actual test evidence and unknowns.
+
+Apply risk-triggered controls proportionately, including independent verification, qualified engineering review, security/safety containment, data recovery, release/rollback and monitoring where consequence requires them. Do not perform destructive production experiments or claim tests/reviews that were not executed. If a defect is discovered during feature work, pause the affected change and use this procedure for the defect; it does not authorize additional feature scope. Project controls may be stricter, never weaker.
+
+Record protocol version FAIS-SSA-1001 v1.1, baseline commit, approval reference, changed files/lines and test disposition in the work-package/handback record. FAIS owns assurance evidence and verification; FPJIS owns project execution and acceptance; FMCIS owns collaborator allocation and coordination.
+
+
 This package is collaborator-neutral.
 
 Use the provided blueprints as the source of project intent.
