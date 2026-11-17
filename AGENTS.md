@@ -1,5 +1,14 @@
 # FDG Codex Repository Entry Protocol
 
+## FAIS-SSA-1001 v1.1 — mandatory defect-diagnosis gate for every FDG collaborator (2026-11-17)
+
+**FOUNDER-APPROVED COMMON STANDARD.** Every human/AI collaborator, model, coding environment and provider working on any FDG software project MUST follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — Enhanced Evidence-First Defect Diagnosis and Software Assurance Protocol]] whenever diagnosing or repairing a bug, regression, unexpected behavior, failed test/acceptance, calculation/data discrepancy or runtime/integration defect.
+
+Before defect work, read the canonical protocol and the project's current handover/work package. Pin and preserve the source/build baseline and evidence; diagnose read-only; establish the causal root cause; assess severity and impact; obtain authorized owner approval for a bounded repair scope; then make the minimal correction and verify it with appropriate Red–Green–Regression and risk-triggered controls. No speculative patching, invented test results, unauthorized production experiments, silent scope expansion or symptom suppression as a false fix. If a defect emerges during feature work, pause the affected change and apply the protocol to that defect. Routine feature work remains governed by its authorized FPJIS package.
+
+The protocol is provider/model/tool neutral. Project-local handovers and collaborator prompts may impose stricter controls, never weaker ones. Receiving collaborators must record protocol version, baseline commit, approval, changed files/lines, executed test results and residual unknowns. FAIS governs assurance evidence and verification; FPJIS governs project execution and acceptance; FMCIS governs collaborator allocation and coordination. A short handover summary never supersedes the canonical standard.
+
+
 **VIDEO INPUT — TASK-SPECIFIC SOURCE FIDELITY (2026-10-26):** For any FDG video-derived requirement, demonstration, media skill or editing task, consult [[FCMIS/FCMIS-REF-Video-Watch-Multimodal-2026-10-26|FCMIS Watch multimodal source-fidelity review]]. Use source hash + timestamped visual/audio evidence and loss checks, not transcript-only assumptions. External `watch` is an **evaluated candidate, not installed**. Never permit automatic Gemini/cloud upload of confidential engineering/client media, leaked API keys, automatic publishing or unverified professional acceptance. This does not change Issue #11 source-to-build or the P0 harness gate.
 
 ## P0 — ALL FDG COLLABORATORS: stop repeated discovery; verify the harness (2026-10-26)
