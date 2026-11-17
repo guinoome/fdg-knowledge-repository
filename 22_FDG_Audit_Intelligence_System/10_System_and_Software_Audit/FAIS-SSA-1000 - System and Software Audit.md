@@ -32,6 +32,10 @@ FAIS documentation does not authorize software construction. Automation follows 
 
 Assess lock-in, portability, stable data formats, replaceable interfaces, local operation, synchronization boundaries, and recoverability.
 
+## Direct Child Documents
+
+- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 — Evidence-First Software Defect Diagnosis and Minimal Repair Protocol]] — proposed collaborator protocol for read-only diagnosis, ranked hypotheses, root-cause evidence, minimal authorized repair and regression verification.
+
 ## Control Note
 
 This document is part of the initial FAIS baseline. It may be expanded through controlled future milestones. Recommendations do not become FDG policy until approved through the applicable governance authority.
