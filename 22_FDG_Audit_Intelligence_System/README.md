@@ -62,3 +62,8 @@ This package is an initial organizational baseline and is intentionally technolo
 ## Audit-to-Repair Execution Directive — 2026-10-18
 
 The founder's incremental **find → reproduce → repair safely → test regression → update evidence and links → deliver useful outcome** instruction now appears in [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Audit-to-Repair Directive]] **§10**. This is an extension of the existing FAIS full-repository audit handover, **not** a second independent audit authority or evidence of full-audit completion. Audit findings remain FAIS-owned; authorized changes belong to the relevant domain/project owner under FPJIS/FMCIS controls. No new app repair, runtime validation, production change or commercial result is claimed by this documentation update.
+
+
+## FAIS-RKA-0302 execution record — 2026-11-17
+
+[[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0302-B01 - FBPOIS FMIS Issue 11 Source-to-Build Audit Batch 2026-11-17|FAIS-RKA-0302-B01 — FBPOIS/FMIS Issue #11 audit batch]] records a scoped, read-only FBPOIS/FMIS Issue #11 audit batch against main commit a5ba8ed2a4f15f8bedb0ffcde28750bdfac32410. It is explicitly a **partial audit**, with four preliminary findings, branch-only CI evidence, open owner decisions and independent review pending. It does not claim whole-repository audit completion or authorize code/PR changes.
