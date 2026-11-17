@@ -1130,6 +1130,20 @@ class FMISService:
             for row in rows
         ]
 
+    # Temporary safety gate pending engineering authority reconciliation (Issue #11).
+    # Approved roles/thresholds remain undefined; no terminal status may be
+    # asserted from user-provided strings until approved, actor-bound API exists.
+    @staticmethod
+    def _reject_unapproved_terminal_status(status: str, kind: str) -> None:
+        if not isinstance(status, str) or not status.strip():
+            raise ValueError(f"{kind} status must be a nonempty string")
+        # Known non-terminal states only. Unknown and terminal-looking aliases
+        # must fail closed rather than evade checks via casing or whitespace.
+        if status.strip().casefold() not in {"open", "in progress", "scheduled", "pending verification"}:
+            raise PermissionError(
+                f"{kind} status '{status}' requires approved and authenticated transition; Issue #11"
+            )
+
     def create_work_order(
         self,
         equipment_id: int,
@@ -1148,6 +1162,7 @@ class FMISService:
         verification: Optional[str] = None,
         closure: Optional[str] = None,
     ) -> int:
+        self._reject_unapproved_terminal_status(status, "work order")
         conn = self._connect()
         cursor = conn.execute(
             """
@@ -1208,6 +1223,7 @@ class FMISService:
         }
 
     def update_work_order_status(self, work_order_id: int, status: str) -> None:
+        self._reject_unapproved_terminal_status(status, "work order")
         conn = self._connect()
         conn.execute("UPDATE work_orders SET status = ? WHERE id = ?", (status, work_order_id))
         conn.commit()
@@ -1270,6 +1286,7 @@ class FMISService:
         evidence: Optional[str] = None,
         linked_work_order_id: Optional[int] = None,
     ) -> int:
+        self._reject_unapproved_terminal_status(status, "PM occurrence")
         conn = self._connect()
         cursor = conn.execute(
             """
@@ -1330,6 +1347,7 @@ class FMISService:
         }
 
     def complete_pm(self, pm_id: int) -> None:
-        conn = self._connect()
-        conn.execute("UPDATE pm_plans SET status = ? WHERE id = ?", ("Completed", pm_id))
-        conn.commit()
+        # The current prototype has no authenticated approver, property-scoped
+        # delegation, evidence verification, or approved risk-tier decision.
+        # A terminal PM update cannot be represented as an authorized action.
+        raise PermissionError("PM completion requires reviewed, actor-bound approval; Issue #11")
