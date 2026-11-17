@@ -45,6 +45,7 @@ This package is an initial organizational baseline and is intentionally technolo
 ## Direct Child Documents
 
 - [[22_FDG_Audit_Intelligence_System/FAIS-MANIFEST|FAIS-MANIFEST]]
+- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 — Evidence-First Software Defect Diagnosis and Minimal Repair Protocol]]
 
 ## Functional Product Source-and-Evidence Audit — 2026-10-17
 
@@ -56,4 +57,4 @@ This package is an initial organizational baseline and is intentionally technolo
 
 ## Audit-to-Repair Execution Directive — 2026-10-18
 
-The founder's incremental **find → reproduce → repair safely → test regression → update evidence and links → deliver useful outcome** instruction now appears in [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Audit-to-Repair Directive]] **§10**. This is an extension of the existing FAIS full-audit handover, **not** a second independent audit authority or evidence of full-audit completion. Audit findings remain FAIS-owned; authorized changes belong to the relevant domain/project owner under FPJIS/FMCIS controls. No new app repair, runtime validation, production change or commercial result is claimed by this documentation update.
+The founder's incremental **find → reproduce → repair safely → test regression → update evidence and links → deliver useful outcome** instruction now appears in [[22_FDG_Audit_Intelligence_System/03_Repository_and_Knowledge_Audit/FAIS-RKA-0301 - Full Repository Product Reality Audit and Agent Handover|FAIS-RKA-0301 Audit-to-Repair Directive]] **§10**. This is an extension of the existing FAIS full-repository audit handover, **not** a second independent audit authority or evidence of full-audit completion. Audit findings remain FAIS-owned; authorized changes belong to the relevant domain/project owner under FPJIS/FMCIS controls. No new app repair, runtime validation, production change or commercial result is claimed by this documentation update.
