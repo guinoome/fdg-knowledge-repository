@@ -34,10 +34,10 @@ Assess lock-in, portability, stable data formats, replaceable interfaces, local 
 
 ## Direct Child Documents
 
-- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 — Evidence-First Software Defect Diagnosis and Minimal Repair Protocol]] — proposed collaborator protocol for read-only diagnosis, ranked hypotheses, root-cause evidence, minimal authorized repair and regression verification.
+- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — Enhanced Evidence-First Defect Diagnosis and Software Assurance Protocol]] — approved mandatory common defect-diagnosis standard for every FDG software project, collaborator, model, coding environment and provider.
 
 ## Control Note
 
-This document is part of the initial FAIS baseline. It may be expanded through controlled future milestones. Recommendations do not become FDG policy until approved through the applicable governance authority.
+This document is part of the initial FAIS baseline. It may be expanded through controlled future milestones. Recommendations do not become FDG policy until approved through the applicable governance authority. FAIS-SSA-1001 v1.1 is separately founder-approved and mandatory as the common FDG software defect-diagnosis and assurance standard.
 
 > **Knowledge path:** [[FDG Ecosystem|FDG Ecosystem]] → [[22_FDG_Audit_Intelligence_System/00_FAIS_CORE/FAIS-0000 - FDG Audit Intelligence System|FAIS-0000 - FDG Audit Intelligence System]] → this document
