@@ -24,6 +24,10 @@ This package corresponds to:
 
 20_FPJIS — FDG Project Intelligence System
 
+## Mandatory Software Defect Assurance Interface
+
+All FDG software-project defect diagnosis and repair work must follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1]]. FPJIS remains responsible for project requirements, bounded implementation work packages, execution controls, validation and project acceptance. FAIS independently governs audit evidence, defect assurance and verification; FMCIS governs collaborator allocation and coordination. FPJIS work packages must reference the current canonical protocol and may impose stricter project controls, never weaker ones.
+
 ## Important distinction
 
 Reference ≠ Requirement ≠ Blueprint ≠ Final Design
