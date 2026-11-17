@@ -13,6 +13,12 @@ The existing FDG repository uses vault-relative Obsidian wikilinks and section M
 
 ### Governance
 
+### FDG defect assurance interface
+
+- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — mandatory evidence-first defect diagnosis and software assurance]]
+- [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS — project execution and acceptance]]
+- [[21_FDG_Multi_Collaborator_Intelligence_System/README|FMCIS — collaborator allocation and coordination]]
+
 - [[01_Governance/NEX-STD-002_DOCUMENT_CONTROL|Document Control]]
 - [[01_Governance/NEX-STD-003_DECISION_EVOLUTION_STANDARD|Decision Evolution Standard]]
 - [[01_Governance/NEX-STD-005_CONSTITUTION|Constitution]]
