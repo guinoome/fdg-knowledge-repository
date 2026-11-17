@@ -14,6 +14,11 @@ deployment_authorization: None
 
 # Client-First Activation & Agent Handover — FDG Construction Lifecycle Workspace
 
+## Mandatory defect assurance — FAIS-SSA-1001 v1.1
+
+Any defect diagnosis or repair arising from this handover MUST follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — mandatory FDG defect-diagnosis and software assurance standard]] before code modification. Preserve the pinned baseline and original failing evidence; keep diagnosis read-only; establish and evidence root cause; assess severity and dependent/mirrored/generated artifacts; obtain the authorized owner’s exact repair-scope approval; then make the smallest correction and prove it with Red–Green–Regression and impact checks where feasible. Apply risk-triggered independent review, qualified engineering/security/data-integrity controls and rollback requirements as applicable. Do not claim a repair or test result that was not executed. This requirement does not override this handover’s existing P0, build, deployment, data-storage or owner-approval gates; it adds the common defect-assurance method. FAIS governs evidence/assurance/verification; FPJIS governs project execution/acceptance; FMCIS governs collaborator allocation/coordination. Project controls may be stricter, never weaker.
+
+
 > Work from the existing **working application**, not from a new chat, empty scaffolding, or a new generic architecture. `[[Projects/Active/FDG Construction Lifecycle Workspace/README|Project README]]` → this handover → `[[Projects/Active/FDG Construction Lifecycle Workspace/CURRENT_HANDOVER|Current project handover]]` → acceptance evidence. The reusable framework already exists at `[[20_FPJIS_FDG_Project_Intelligence_System/35_Core_Completion_and_Roadmap/02_Module_Roadmap_and_Finished_Session_Standard|FPJIS Finished-Session Standard]]`.
 
 ## 1. Founder intent — preserved literally in implementation terms
