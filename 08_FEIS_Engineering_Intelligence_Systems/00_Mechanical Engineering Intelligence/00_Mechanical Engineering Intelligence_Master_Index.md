@@ -13,3 +13,8 @@
 - [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-ROADMAP|FEIS-MECH-ROADMAP]]
 - [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-RSCH-0001 - AI-Assisted Mechanical Engineering Workflow - Esign Hub Reference Extraction|AI-Assisted Mechanical Engineering Workflow — Reference Extraction]]
 - [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-0900 - AI-Assisted Mechanical Engineering Collaborator Handover|AI-Assisted Mechanical Engineering Collaborator Handover]]
+
+
+## CAD/BIM automation capability candidate — 2026-11-16
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/OmniBridge_CAD_BIM_MCP_Capability_Assessment_2026-11-16|OmniBridge CAD/BIM MCP Capability Assessment and Collaborator Handover]] — candidate bridge for AI-assisted CAD/BIM inspection and bounded authoring. FEIS Mechanical owns domain use cases and engineering acceptance; upstream application status and security limitations are recorded in the assessment. Not adopted or tested by FDG.

@@ -314,3 +314,8 @@ This does not lower quality gates. It moves quality into architecture, context, 
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration, Workspaces and Artifacts Review]] — Claude is the source example; the reusable patterns are evaluated for all FDG collaborators where native support, a verified adapter or safe manual fallback exists. Includes a provider compatibility model and rejects assumed feature parity, vendor lock-in and unreviewed privileged extensions. No vendor UI, plugin or runtime is adopted.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] contains an additive candidate workbench section. It does not mark FMCIS-001–008 complete or authorize implementation.
+
+
+## CAD/BIM application bridge candidate — 2026-11-16
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/OmniBridge_CAD_BIM_MCP_Capability_Assessment_2026-11-16|OmniBridge CAD/BIM MCP Capability Assessment and Collaborator Handover]] — proposed provider-neutral MCP bridge for supported CAD/BIM/3D applications; source-reviewed only. Evaluation is split across FMCIS (collaborator capability), FEIS Mechanical (engineering use cases), FWAIS (integration method) and FSIS (security). **No installation or production-use authorization is granted.**

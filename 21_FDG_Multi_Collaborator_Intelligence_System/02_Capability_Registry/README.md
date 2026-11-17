@@ -20,3 +20,8 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] — Claude is the source example, but the capability mapping applies to every FDG collaborator when native support, a verified adapter, or a safe manual fallback exists. Evaluate Claude Code, Codex, ChatGPT, Gemini, local runtimes and future providers individually; do not infer feature parity. Official Anthropic documentation was used only to verify Claude-specific semantics. No installation or runtime test claimed.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] now includes the proposal-only experience requirements. FMCIS-002 registry architecture and FMCIS-003/005/006/008 sequential design status remain unchanged.
+
+
+## CAD/BIM application bridge candidate — 2026-11-16
+
+- [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/OmniBridge_CAD_BIM_MCP_Capability_Assessment_2026-11-16|OmniBridge CAD/BIM MCP Capability Assessment and Collaborator Handover]] — source-reviewed candidate for connecting AI collaborators to scriptable CAD/BIM/3D applications through MCP. Upstream claims 28 application integrations but reports only a subset as end-to-end tested. **Not adopted, installed, security-approved or runtime-tested by FDG.** The handover includes client-specific setup, strict write-approval controls and a staged evaluation plan.
