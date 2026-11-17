@@ -55,6 +55,10 @@ Every material conclusion should distinguish verified fact, repository evidence,
 
 FAIS is local-first where practical, technology-independent, vendor-independent, evidence-driven, reviewable, reproducible, auditable, modular, and designed for long-term organizational capability.
 
+## Software Defect Assurance Standard
+
+[[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1]] is the founder-approved mandatory common defect-diagnosis standard for all FDG software projects, regardless of collaborator, model, coding environment or provider. FAIS owns independent evidence and assurance; FPJIS owns project execution and acceptance; FMCIS owns collaborator allocation and coordination. No project-local procedure may weaken the standard.
+
 ## Success Condition
 
 FAIS succeeds when FDG can explain what was audited, against which requirement, using what evidence, by whom or what, what was found, what action occurred, whether closure was verified, and what organizational learning was retained.
@@ -81,6 +85,7 @@ This document is part of the initial FAIS baseline. It may be expanded through c
 - [[22_FDG_Audit_Intelligence_System/08_Legal_and_Compliance_Audit/FAIS-LCA-0800 - Legal and Compliance Audit|FAIS-LCA-0800 - Legal and Compliance Audit]]
 - [[22_FDG_Audit_Intelligence_System/09_Security_and_Data_Governance_Audit/FAIS-SDA-0900 - Security and Data Governance Audit|FAIS-SDA-0900 - Security and Data Governance Audit]]
 - [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1000 - System and Software Audit|FAIS-SSA-1000 - System and Software Audit]]
+- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — Mandatory Evidence-First Defect Diagnosis and Software Assurance Protocol]]
 - [[22_FDG_Audit_Intelligence_System/11_AI_Agent_and_Collaborator_Audit/FAIS-AIA-1100 - AI Agent and Collaborator Audit|FAIS-AIA-1100 - AI Agent and Collaborator Audit]]
 - [[22_FDG_Audit_Intelligence_System/12_Process_and_Workflow_Audit/FAIS-PWA-1200 - Process and Workflow Audit|FAIS-PWA-1200 - Process and Workflow Audit]]
 - [[22_FDG_Audit_Intelligence_System/13_Quality_and_Conformance_Audit/FAIS-QCA-1300 - Quality and Conformance Audit|FAIS-QCA-1300 - Quality and Conformance Audit]]
