@@ -26,6 +26,10 @@ FAIS is the independent assurance, verification, and continuous audit intelligen
 
 FAIS audits; domain systems own their domains. FAIS does not silently remediate audited material.
 
+## Mandatory Software Defect Standard
+
+[[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1]] is the approved mandatory common procedure across all FDG software projects and all human/AI collaborators, models, coding environments and providers. FAIS governs evidence, defect assurance and verification; [[20_FPJIS_FDG_Project_Intelligence_System/README|FPJIS]] governs project execution and acceptance; [[21_FDG_Multi_Collaborator_Intelligence_System/README|FMCIS]] governs collaborator allocation and coordination. Project-specific controls may be stricter, never weaker.
+
 ## Audit Chain
 
 **Requirement → Control → Evidence → Audit Test → Finding → Authorized Corrective Action → Verification → Closure → Learning**
@@ -45,7 +49,7 @@ This package is an initial organizational baseline and is intentionally technolo
 ## Direct Child Documents
 
 - [[22_FDG_Audit_Intelligence_System/FAIS-MANIFEST|FAIS-MANIFEST]]
-- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 — Evidence-First Software Defect Diagnosis and Minimal Repair Protocol]]
+- [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1 — mandatory FDG defect-diagnosis and software assurance standard]]
 
 ## Functional Product Source-and-Evidence Audit — 2026-10-17
 
