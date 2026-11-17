@@ -10,6 +10,10 @@ This is the local working package for the 21st FDG Intelligence System.
 
 Architecture foundation established. The eight architecture work packages are intentionally sequenced and will be designed one at a time.
 
+### Mandatory defect-diagnosis standard
+
+Every collaborator, model, coding environment and provider working on any FDG software project must follow [[22_FDG_Audit_Intelligence_System/10_System_and_Software_Audit/FAIS-SSA-1001 - Evidence-First Software Defect Diagnosis and Minimal Repair Protocol|FAIS-SSA-1001 v1.1]]. FMCIS assigns and coordinates the people/agents and preserves handovers; it does not waive the FAIS read-only diagnosis gate, root-cause evidence, owner authorization or verification requirements. FPJIS governs project execution and acceptance. Collaborators must use the current canonical repository version; project-local instructions may strengthen but never downgrade it.
+
 ### Core principle
 
 > **Nex is always on top, but Nex is never above learning.**
