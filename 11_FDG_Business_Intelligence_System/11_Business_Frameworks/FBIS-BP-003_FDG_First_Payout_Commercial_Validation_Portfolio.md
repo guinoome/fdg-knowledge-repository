@@ -446,3 +446,35 @@ Select **one narrow customer segment / painful recurring task / verifiable offer
 **Cross-domain links:** [[03_Agentic Framework/FDG_BUSINESS_SPECIALIST_AGENT_CAPABILITY_PROFILES_2026-10-09|CMO/Commercial agent roles]] · [[11_FDG_Business_Intelligence_System/11_Business_Frameworks/FBIS-BP-002_FDG_Social_Platform_Launch_Content_Engine_Blueprint|campaign production]] · [[14_FDG_Service_Intelligence_System/08_Service_Economics/FSvIS-ECO-0002 - Cost Pricing and Margin Model|FSvIS service economics]] · [[13_FDG_Legal_Intelligence_System/09_Procurement_and_Commercial_Law/FLIS-0900 - Procurement and Commercial Law|FLIS customer claims/legal checks]].
 
 **Status:** reference-based **sales strategy and draft copy boundary only**. No sales leads contacted, revenue earned, live campaigns published, customer ROI proven or sales agent provisioned by this documentation update.
+
+
+---
+
+## Founder Commercial Direction Update — 2026-11-18
+
+This dated addendum records the founder's revised first-customer pricing and customer-acquisition execution direction. It is additive and does not delete the earlier pricing experiment history.
+
+### Pilot 001 launch price
+
+For the current Pilot 001 launch campaign only, the founder has superseded the prior PHP 4,999 / Founding Five PHP 2,499.50 hypotheses with:
+
+- **PHP 499 for the first 10 qualifying paying customers.**
+- Count only distinct customers with independently verified qualifying payments.
+- Maintain one global counter for this launch offer/version; no reset by channel, campaign or operator.
+- The exact contracted service scope, exclusions, delivery capacity, payment and acceptance terms remain mandatory.
+- No invented reference/list price or percentage discount. Advertise the factual PHP 499 launch offer unless a genuine standard price is separately established and approved.
+- Price after the first ten remains undecided. Review after a few months or when sufficient delivery, conversion, support and cost evidence exists. Any increase must be staged, approved and versioned; no future amount is pre-authorized.
+
+The old pricing figures remain historical hypotheses only and must not be reused as the current Pilot 001 launch price.
+
+### Agent-operated acquisition direction
+
+Use available AI agents and the existing OpenAI and Anthropic subscriptions to execute research, prospect intelligence, offer/positioning support, creative production, campaign preparation, lead qualification support and performance analysis. Nex coordinates bounded work packages and validates evidence. Existing FBIS, FWAIS, FPIS, FSvIS and FPJIS capabilities are reused; do not create a duplicate marketing platform, CRM or sales funnel.
+
+Paid advertising is a possible acquisition channel, not an assumed requirement. No media budget, paid campaign activation, external message sending, financial transaction, new subscription, hardware purchase or production change is authorized by this addendum. Founder approval is required for specific external activation and spend.
+
+High-memory local AI hardware remains a future parallel capability track. Reconsider only when measured workload, privacy/offline needs, inference cost, utilization and customer revenue justify capital expenditure.
+
+Operational handover: [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/23_Agent_Operated_Customer_Acquisition_Execution_Plan|FPJIS-FPCV-2300 — Agent-Operated Customer Acquisition Execution Plan]].
+
+**Evidence status:** this direction is recorded; it does not establish that campaigns ran, prospects were contacted, agents were commissioned, customers paid or revenue was earned.
