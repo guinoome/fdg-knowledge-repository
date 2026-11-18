@@ -20,3 +20,9 @@ Working area for FMCIS. Detailed structure will be defined by the relevant archi
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Claude Code Desktop, Sessions, Projects and Artifacts Capability Review]] — Claude is the source example, but the capability mapping applies to every FDG collaborator when native support, a verified adapter, or a safe manual fallback exists. Evaluate Claude Code, Codex, ChatGPT, Gemini, local runtimes and future providers individually; do not infer feature parity. Official Anthropic documentation was used only to verify Claude-specific semantics. No installation or runtime test claimed.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] now includes the proposal-only experience requirements. FMCIS-002 registry architecture and FMCIS-003/005/006/008 sequential design status remain unchanged.
+
+
+## External product research method — 2026-11-19
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0903 - External Product Benchmark Research and Extraction Handover|FEIS-CM-0903 — External Product Benchmark Research and Extraction Handover]] — reusable cross-collaborator research protocol for studying external products, validating claims, extracting capabilities and comparing them with canonical FDG architecture.
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ConstructPRO Product Benchmark Extraction 2026-11-19|ConstructPRO Product Benchmark Extraction]] — first worked construction-product benchmark; source-reviewed desk study, not product-validated or adopted.
