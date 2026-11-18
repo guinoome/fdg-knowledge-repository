@@ -12,7 +12,7 @@ document_type: Roadmap
 parent: FEIS-MECH-0000
 author: FDG Ecosystem
 created: 2026-08-01
-last_updated: 2026-08-01
+last_updated: 2026-11-18
 review_status: Ongoing
 approval: Living Document
 ---
@@ -376,6 +376,14 @@ Research themes include engineering problem decomposition, measurable requiremen
 
 ---
 
+## Engine and ECU Intelligence — 2026-11-18
+
+Research plan: [[08_FEIS_Engineering_Intelligence_Systems/00_Mechanical Engineering Intelligence/FEIS-MECH-ECU-0001 - BRT JUKEN 5+ TFX150 Read-Only ECU Integration Plan|BRT JUKEN 5+ / TFX150 Read-Only ECU Integration Plan]].
+
+Initial bounded candidate: read-only data acquisition and validation from a physical programmable ECU, starting with the owner's TFX150/JUKEN 5+ setup. USB is the documented first Windows connection route; Bluetooth is a conditional secondary transport. Preserve raw signals, validate units/scaling against instruments and expose only read-only data to AI collaborators.
+
+**Disposition:** research plan only. No gateway/driver/protocol implementation or ECU tuning operation is approved by this entry. Keep firmware update, factory reset, calibration writes and actuator/control paths out of scope. Reuse existing FEIS Mechanical, FEIS-MECH-0900 sensor-data/WP-F guidance and FEIP data/integration/security structures.
+
 # 8. Deferred Features
 
 The following capabilities are intentionally deferred.
@@ -430,6 +438,7 @@ Only validated concepts shall progress into planned milestones.
 | Version | Date | Description |
 |----------|------------|-------------|
 | 0.1.0 | 2026-08-01 | Initial Mechanical Engineering Intelligence roadmap established. |
+| 0.2.0 | 2026-11-18 | Added bounded JUKEN 5+ / TFX150 read-only ECU research candidate; no implementation approval. |
 
 ---
 
@@ -438,6 +447,7 @@ Only validated concepts shall progress into planned milestones.
 | Change ID | Version | Summary | Status |
 |------------|---------|----------|--------|
 | CHG-0001 | 0.1.0 | Initial roadmap created. | Approved |
+| CHG-0002 | 0.2.0 | Added read-only ECU telemetry research candidate. | Research |
 
 ---
 
