@@ -246,3 +246,11 @@ The corresponding platform experience projection is:
 **Suggested lesson object fields:** approved engineering learning objective; original equipment reference geometry; component/state/color identity; source and revision; Markdown storyboard and per-shot metadata; visualization confidence (`ILLUSTRATIVE` / `CALCULATED` / `SIMULATED`); linked computation and operating limits; assessment question with verifiable expected answer; technical/creative review status; licensing and accessibility metadata. Do not conflate a cinematic visual with measured plant behavior or an authorized engineering calculation.
 
 **Proposed first pilot, not built:** Original 45–60-second centrifugal-pump lesson with labeled impeller, evidence-linked flow/head relationships, speed-change prediction, operational limits, and one scored learner question; verify geometry fidelity, deterministic calculations, learning comprehension, mobile/offline usability and cost per accepted lesson before broad adoption. **Disposition: ADOPT_AS_ENHANCEMENT / DOCUMENTED_ONLY**. No software installation, lesson rendering, tests, student release or qualified-user acceptance occurred.
+
+
+## External product benchmark learning — 2026-11-19
+
+External product research is a source of workflow and market intelligence, not permission to copy protected implementation. Preserve source provenance, distinguish vendor claims from observed/corroborated behavior, and return only reviewed, original FDG capability improvements to the DCKL.
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ConstructPRO Product Benchmark Extraction 2026-11-19|ConstructPRO benchmark extraction]] — subcontract work order, WBS, deliverable/inspection and commercial workflow patterns.
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0903 - External Product Benchmark Research and Extraction Handover|External Product Benchmark Research Handover]] — reusable research and extraction protocol for collaborators.
