@@ -174,3 +174,9 @@ Canonical interface:
 [[08_FEIS_Engineering_Intelligence_Systems/07_QTO_and_Drawing_Measurement_Intelligence/FEIS-QTO-0006 - Construction OS BOQ Cost Procurement Progress and Billing Integration Contract|QTO → BOQ → Budget → Procurement → Progress → Billing Contract]].
 
 A BOQ quantity imported from QTO must preserve its source quantity-item ID and drawing revision rather than becoming an untraceable copied number.
+
+
+## External Product Benchmark Research — 2026-11-19
+
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ConstructPRO Product Benchmark Extraction 2026-11-19|FEIS-CM-RSCH-0002 — ConstructPRO Product Benchmark Extraction]] — desk-research extraction of subcontractor WBS/work-order linkage, work execution master, deliverables, inspection gates, completion claims, progress billing, retention, equipment utilization and earned-value reporting. Vendor claims are separated from FDG recommendations; no product demo or hands-on test is claimed.
+- [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0903 - External Product Benchmark Research and Extraction Handover|FEIS-CM-0903 — External Product Benchmark Research and Extraction Handover]] — reusable collaborator method for studying external construction products, reconstructing workflows, extracting useful capabilities, comparing against existing FDG architecture and proposing evidence-backed REUSE / EXTEND / MERGE / REPLACE / NEW / NO ACTION decisions.
