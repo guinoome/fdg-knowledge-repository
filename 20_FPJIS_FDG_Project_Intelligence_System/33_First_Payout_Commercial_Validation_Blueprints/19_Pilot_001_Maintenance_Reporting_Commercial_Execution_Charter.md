@@ -209,3 +209,31 @@ Pilot operations and software release are different test scopes: the FPCV-AC-01.
 6. At completion, return a de-identified audit-ready synopsis and continue/revise/stop decision; no silent implementation or deployment.
 
 **Document completion means the pilot is prepared at knowledge level, not launched, paid, delivered, accepted, profitable, agent-enabled or build-authorized.**
+
+
+---
+
+## Founder Launch Pricing and Agent-Assisted Acquisition Amendment — 2026-11-18
+
+This amendment is additive. It preserves the original charter and its execution, professional, payment, privacy and release controls while recording a new founder-directed launch-price decision.
+
+### Revised Pilot 001 launch offer
+
+For the current launch campaign, the founder supersedes the PHP 4,999 list-price and PHP 2,499.50 Founding Five hypotheses in Section 2 with **PHP 499 for the first 10 qualifying paying customers**.
+
+- Only distinct customers with independently verified qualifying payments count toward the first ten.
+- The counter is global to the offer/version, not per campaign, channel or agent.
+- Exact service scope, facility/asset limits, client inputs, delivery period, exclusions, acceptance and payment terms must be stated before payment.
+- Do not invent a reference price or advertise a percentage discount without a genuine, approved standard price.
+- Pricing after the first ten is undecided. Any staged increase requires actual delivery, support, conversion and unit-economic evidence plus founder approval.
+- If the PHP 499 scope is not deliverable safely and acceptably, stop new sales and seek a revised offer decision. Do not alter an accepted customer's terms.
+
+The older amounts remain visible as historical hypotheses, not the current launch price.
+
+### Agent-assisted acquisition
+
+The founder has directed use of available AI agents and existing OpenAI and Anthropic subscriptions for research, prospect intelligence, creative production, campaign preparation, lead qualification support and performance analysis. This is not evidence that agents have been commissioned or connected to external accounts. Agent roles, work packages, boundaries, approvals and acceptance criteria are defined in [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/23_Agent_Operated_Customer_Acquisition_Execution_Plan|FPJIS-FPCV-2300]].
+
+Agents may prepare internal work products. Public posting, external messaging, paid campaign activation, budget changes, price/contract commitments, payment actions, engineering approvals and production deployment remain subject to the existing authority and explicit approval gates.
+
+No media budget, hardware purchase, new subscription, software build, production deployment or agent commissioning is authorized by this amendment. Existing Pilot 001 acceptance criteria and manual/assisted service-first approach remain in force.
