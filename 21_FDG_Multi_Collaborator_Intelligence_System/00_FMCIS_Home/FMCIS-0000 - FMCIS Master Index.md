@@ -314,3 +314,8 @@ This does not lower quality gates. It moves quality into architecture, context, 
 
 - [[21_FDG_Multi_Collaborator_Intelligence_System/02_Capability_Registry/Claude_Code_Desktop_Session_and_Artifact_Capability_Review_2026-10-30|Cross-Collaborator Session Orchestration, Workspaces and Artifacts Review]] — Claude is the source example; the reusable patterns are evaluated for all FDG collaborators where native support, a verified adapter or safe manual fallback exists. Includes a provider compatibility model and rejects assumed feature parity, vendor lock-in and unreviewed privileged extensions. No vendor UI, plugin or runtime is adopted.
 - [[21_FDG_Multi_Collaborator_Intelligence_System/05_Nex_Interface/FMCIS-NEX-001 - Baby Nex Provider-Neutral Runtime Architecture|FMCIS-NEX-001]] contains an additive candidate workbench section. It does not mark FMCIS-001–008 complete or authorize implementation.
+
+
+## External product benchmark research — 2026-11-19
+
+Collaborators may study external products and extract useful, evidence-backed capabilities using [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-0903 - External Product Benchmark Research and Extraction Handover|FEIS-CM-0903 — External Product Benchmark Research and Extraction Handover]]. First worked example: [[08_FEIS_Engineering_Intelligence_Systems/02_Construction_Management/FEIS-CM-RSCH-0002 - ConstructPRO Product Benchmark Extraction 2026-11-19|ConstructPRO Product Benchmark Extraction]]. Research must reuse canonical FDG architecture, distinguish claims from observed evidence, preserve IP boundaries and return additive, wikilinked knowledge.
