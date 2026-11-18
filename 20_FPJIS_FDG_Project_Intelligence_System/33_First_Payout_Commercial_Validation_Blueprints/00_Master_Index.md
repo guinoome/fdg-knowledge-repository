@@ -131,3 +131,12 @@ The user-supplied “Vibe Coding Reality Check” podcast transcript was reviewe
 - [[11_FDG_Business_Intelligence_System/12_Business_Playbooks/FBIS-PLB-002_Build_Demonstrate_Sell_and_Decision_Transfer_Playbook|FDG Build–Demonstrate–Sell–Transfer Playbook]] — operational extension to the existing FPCV demand-first protocol and Pilot 001, not a replacement project package. Adds capability-to-buyer mapping, service demonstration, quality-adjusted founder time-back, transferable work packages, authorized decision cases and separate gates for automation/software productization.
 - [[11_FDG_Business_Intelligence_System/13_Case_Studies/FBIS-CASE-GROWTH-001 - Founder Leverage and Capability Scaling Transcript Review|Founder Leverage Source Review]] — source extraction and limitations of the supplied founder leverage/“second brain” video transcript.
 - Agent read-order: **this index → 21 Demand-First Protocol → 22 Operator Card → relevant current FBIS/FSvIS/Pilot authority → playbook**. Skip unchanged scopes already audited by the same agent unless a trigger appears. **No change to Not Build Authorized, conditional pilot execution, G6–G10 or deployment permissions.**
+
+
+## Agent-Operated Customer Acquisition Execution Addendum — 2026-11-18
+
+23. [[20_FPJIS_FDG_Project_Intelligence_System/33_First_Payout_Commercial_Validation_Blueprints/23_Agent_Operated_Customer_Acquisition_Execution_Plan|23 Agent-Operated Customer Acquisition Execution Plan]] — founder-directed commercial execution plan reusing existing FBIS/FSvIS/FPJIS/FWAIS/FPIS capabilities; records the PHP 499 first-10-paying-customer Pilot 001 launch offer, agent work packages, campaign preparation, approval boundaries, performance measures, hardware deferral and next execution action.
+
+**Pricing precedence:** For the current Pilot 001 launch campaign, the 2026-11-18 PHP 499 / first 10 qualifying paying customers direction supersedes earlier PHP 4,999 / PHP 2,499.50 hypotheses in the portfolio and original Pilot 001 charter. Those older figures remain historical only. Future pricing remains undecided pending evidence and founder approval.
+
+**Execution state:** plan and handover recorded; no campaign activation, paid media spend, external message sending, agent commissioning, customer payment, delivery or revenue is evidenced by this addendum. Existing build, deployment, professional review, privacy and financial approval gates remain unchanged.
